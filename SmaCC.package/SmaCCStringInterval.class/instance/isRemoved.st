@@ -1,0 +1,3 @@
+private
+isRemoved
+	^isRemoved
