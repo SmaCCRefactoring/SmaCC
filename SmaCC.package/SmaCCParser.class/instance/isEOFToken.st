@@ -1,3 +1,3 @@
-testing
+private
 isEOFToken
-	^currentToken id first = self emptySymbolTokenId
+	^currentToken ids first = self emptySymbolTokenId

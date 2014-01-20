@@ -1,0 +1,23 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"=" : "",
+		"beList" : "",
+		"beNode" : "",
+		"beToken" : "",
+		"beTokenOrNode" : "",
+		"buildStructure" : "",
+		"copyInContext:" : "",
+		"hash" : "",
+		"isListMatch" : "",
+		"isNode" : "",
+		"isPattern" : "",
+		"isToken" : "",
+		"match:inContext:" : "",
+		"name" : "",
+		"nodeClassName" : "",
+		"nodeClassName:" : "",
+		"testBlock" : "",
+		"testBlock:" : "",
+		"value:start:ids:" : "" } }

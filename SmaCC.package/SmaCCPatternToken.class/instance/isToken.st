@@ -1,0 +1,3 @@
+private
+isToken
+	^isToken

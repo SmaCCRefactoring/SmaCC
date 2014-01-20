@@ -1,4 +1,4 @@
-private-error handling
+error
 dismissErrorToken
 	currentToken := nil.
 	self getNextToken

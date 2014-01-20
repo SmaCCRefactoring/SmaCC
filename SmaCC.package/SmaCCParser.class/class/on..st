@@ -1,4 +1,4 @@
-instance creation
+instance
 on: aStream 
 	| parser scanner |
 	scanner := self scannerClass on: aStream.

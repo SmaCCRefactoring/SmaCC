@@ -1,3 +1,3 @@
-class initialization
+class
 initialize
 	self initializeKeywordMap

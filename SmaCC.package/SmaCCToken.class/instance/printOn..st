@@ -1,5 +1,5 @@
 printing
-printOn: aStream 
+printOn: aStream
 	aStream
 		nextPut: ${;
 		nextPutAll: self value;
@@ -8,5 +8,5 @@ printOn: aStream
 		nextPut: $,;
 		nextPutAll: self stopPosition printString;
 		nextPut: $,;
-		nextPutAll: self id printString;
+		nextPutAll: self ids printString;
 		nextPutAll: ')}'

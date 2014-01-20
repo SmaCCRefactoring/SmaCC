@@ -1,7 +1,3 @@
-instance creation
-value: aString start: anInteger id: anObject 
-	^(self new)
-		value: aString
-			start: anInteger
-			id: anObject;
-		yourself
+public
+value: aString start: anInteger id: anObject
+	^self value: aString start: anInteger ids: anObject

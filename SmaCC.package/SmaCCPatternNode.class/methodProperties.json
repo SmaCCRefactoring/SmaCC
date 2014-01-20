@@ -1,0 +1,13 @@
+{
+	"class" : {
+		"onToken:" : "" },
+	"instance" : {
+		"=" : "",
+		"copyInContext:" : "",
+		"hash" : "",
+		"isListMatch" : "",
+		"match:inContext:" : "",
+		"name" : "",
+		"patternToken" : "",
+		"patternToken:" : "",
+		"tokenVariables" : "" } }

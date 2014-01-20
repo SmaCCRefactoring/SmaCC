@@ -15,7 +15,8 @@
 		"lastOutputStreamMatchPosition",
 		"lastMatchWasEmpty",
 		"returnMatchBlock",
-		"state" ],
+		"state",
+		"comments" ],
 	"name" : "SmaCCScanner",
 	"pools" : [
 		 ],

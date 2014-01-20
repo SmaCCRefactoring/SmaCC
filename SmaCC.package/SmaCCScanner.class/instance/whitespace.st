@@ -1,4 +1,4 @@
-default token handling
+default
 whitespace
 	"By default, eat the whitespace"
 

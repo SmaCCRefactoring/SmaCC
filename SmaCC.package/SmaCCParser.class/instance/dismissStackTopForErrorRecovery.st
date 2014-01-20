@@ -1,4 +1,4 @@
-private-error handling
+error
 dismissStackTopForErrorRecovery
 	stateStack removeLast.
 	^nodeStack removeLast

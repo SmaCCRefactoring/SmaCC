@@ -7,7 +7,7 @@
 	"commentStamp" : "<historical>",
 	"instvars" : [
 		"start",
-		"id",
+		"ids",
 		"value" ],
 	"name" : "SmaCCToken",
 	"pools" : [

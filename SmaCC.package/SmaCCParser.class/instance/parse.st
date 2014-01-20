@@ -1,5 +1,8 @@
 accessing
 parse
+	| result |
 	self setDefaultStartingStateIfNone.
 	self performParsingLoop.
-	^nodeStack last
+	result := nodeStack last.
+	(result respondsTo: #comments:) ifTrue: [result comments: scanner comments].
+	^result

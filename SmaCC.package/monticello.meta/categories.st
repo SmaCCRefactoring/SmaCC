@@ -1,1 +1,2 @@
-SystemOrganization addCategory: #'SmaCC-Runtime'!
+SystemOrganization addCategory: #SmaCC!
+SystemOrganization addCategory: 'SmaCC-Runtime'!

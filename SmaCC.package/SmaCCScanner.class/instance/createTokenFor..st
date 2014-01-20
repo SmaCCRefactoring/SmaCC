@@ -1,9 +1,9 @@
 private
-createTokenFor: string 
+createTokenFor: string
 	| token |
-	token := self tokenClass 
-				value: string
-				start: start + 1
-				id: matchActions.
+	token := self tokenClass
+		value: string
+		start: start + 1
+		ids: matchActions.
 	outputStream reset.
 	^token

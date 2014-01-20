@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Runtime",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"patternToken" ],
+	"name" : "SmaCCPatternNode",
+	"pools" : [
+		 ],
+	"super" : "SmaCCParseNode",
+	"type" : "normal" }

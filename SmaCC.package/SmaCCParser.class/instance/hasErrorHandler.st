@@ -1,3 +1,3 @@
-private-error handling
+error
 hasErrorHandler
 	^self errorHandlerStates anySatisfy: [:each | each ~~ 0]

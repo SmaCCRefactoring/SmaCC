@@ -1,0 +1,8 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"accept:" : "",
+		"acceptNode:" : "",
+		"acceptNodes:" : "",
+		"visitSmaCCParseNode:" : "" } }

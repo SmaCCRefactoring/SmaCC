@@ -1,3 +1,3 @@
-testing
+private
 atEnd
 	^sourceStream atEnd

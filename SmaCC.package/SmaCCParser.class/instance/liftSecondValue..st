@@ -1,3 +1,3 @@
-standard reduction rules
+private
 liftSecondValue: aCollection 
 	^aCollection at: 2

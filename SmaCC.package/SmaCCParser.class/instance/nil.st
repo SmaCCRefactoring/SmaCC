@@ -1,3 +1,3 @@
-standard reduction rules
+as yet unclassified
 nil
 	^nil

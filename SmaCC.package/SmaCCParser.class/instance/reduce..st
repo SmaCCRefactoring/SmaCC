@@ -1,10 +1,14 @@
 private
-reduce: anInteger 
+reduce: anInteger
 	| reduceEntry items size |
 	reduceEntry := self reduceTable at: anInteger.
-	items := OrderedCollection new: (size := reduceEntry at: 2).
-	size timesRepeat: 
-			[items addFirst: nodeStack removeLast.
+	items := Array new: (size := reduceEntry at: 2).
+	size
+		to: 1
+		by: -1
+		do:
+			[:i | 
+			items at: i put: self popNodeStack.
 			stateStack removeLast].
-	nodeStack add: (self performReduceMethod: (reduceEntry at: 3) with: items).
-	stateStack add: ((self actionFor: (reduceEntry at: 1)) bitShift: -2)
+	nodeStack addLast: (self performReduceMethod: (reduceEntry at: 3) with: items).
+	stateStack addLast: ((self actionFor: (reduceEntry at: 1)) bitShift: -2)

@@ -1,5 +1,5 @@
 private
-shift: stateIndex 
-	stateStack add: stateIndex.
-	nodeStack add: currentToken.
+shift: stateIndex
+	stateStack addLast: stateIndex.
+	nodeStack addLast: currentToken.
 	currentToken := nil

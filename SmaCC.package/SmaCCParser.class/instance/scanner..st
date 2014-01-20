@@ -1,3 +1,3 @@
-initialize-release
+initialize
 scanner: aScanner 
 	scanner := aScanner

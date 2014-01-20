@@ -1,5 +1,4 @@
-default token handling
+default
 comment
-	"In case someone wants to record the comments"
-
+	comments add: (Array with: start + 1 with: matchEnd).
 	^self whitespace

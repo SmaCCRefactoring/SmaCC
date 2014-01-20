@@ -1,10 +1,21 @@
 {
 	"class" : {
-		"value:start:id:" : " 6/1/07 20:34" },
+		"value:" : "",
+		"value:start:id:" : "",
+		"value:start:ids:" : "" },
 	"instance" : {
-		"id" : " 6/1/07 20:34",
-		"printOn:" : " 6/1/07 20:34",
-		"startPosition" : " 6/1/07 20:34",
-		"stopPosition" : " 6/1/07 20:34",
-		"value" : " 6/1/07 20:34",
-		"value:start:id:" : " 6/1/07 20:34" } }
+		"=" : "",
+		"copyInContext:" : "",
+		"hash" : "",
+		"id" : "",
+		"ids" : "",
+		"ids:" : "",
+		"isListMatch" : "",
+		"isPattern" : "",
+		"match:inContext:" : "",
+		"printOn:" : "",
+		"startPosition" : "",
+		"stopPosition" : "",
+		"value" : "",
+		"value:start:id:" : " 6/1/07 20:34",
+		"value:start:ids:" : "" } }

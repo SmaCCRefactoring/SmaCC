@@ -1,3 +1,3 @@
-initialize-release
+initialize
 setStartingState: startingState 
 	stateStack := OrderedCollection with: startingState

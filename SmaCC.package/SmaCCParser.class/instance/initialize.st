@@ -1,3 +1,4 @@
-initialize-release
 initialize
+initialize
+	super initialize.
 	nodeStack := OrderedCollection new

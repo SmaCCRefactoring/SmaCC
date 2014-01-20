@@ -1,4 +1,4 @@
-instance creation
+instance
 on: aStream 
 	^(self new)
 		on: (self needsLineNumbers 
