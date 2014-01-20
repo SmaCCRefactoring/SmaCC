@@ -1,0 +1,3 @@
+accessing
+markAccepted
+	isAccepted := true

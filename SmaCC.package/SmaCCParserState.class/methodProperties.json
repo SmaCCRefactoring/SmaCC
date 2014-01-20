@@ -1,0 +1,19 @@
+{
+	"class" : {
+		"stateStack:nodeStack:" : "",
+		"stateStack:nodeStack:scannerState:position:" : "" },
+	"instance" : {
+		"=" : "",
+		"canBeMergedWith:" : "",
+		"hash" : "",
+		"isAccepted" : "",
+		"markAccepted" : "",
+		"mergeWith:" : "",
+		"nodeStack" : "",
+		"position" : "",
+		"position:" : "",
+		"runDeferredActionsFor:" : "",
+		"scannerState" : "",
+		"scannerState:" : "",
+		"stateStack" : "",
+		"stateStack:nodeStack:" : "" } }

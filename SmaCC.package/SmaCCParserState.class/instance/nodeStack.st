@@ -1,0 +1,3 @@
+accessing
+nodeStack
+	^nodeStack

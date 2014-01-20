@@ -1,0 +1,3 @@
+accessing
+possibleItems: aSequenceableCollection
+	possibleItems := aSequenceableCollection
