@@ -1,0 +1,3 @@
+generated-starting states
+startingStateFortranslationUnit
+	^1

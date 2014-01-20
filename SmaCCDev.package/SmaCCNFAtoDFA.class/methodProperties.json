@@ -1,0 +1,12 @@
+{
+	"class" : {
+		"convertToDFA:" : " 6/1/07 21:19" },
+	"instance" : {
+		"commonTransitionObjectsForEdges:" : " 6/1/07 21:19",
+		"convertToDFA:" : " 6/1/07 21:19",
+		"createEdgeMerging:" : " 6/1/07 21:19",
+		"eliminateDuplicateTransitionsIn:" : " 6/1/07 21:19",
+		"initialize" : " 6/1/07 21:19",
+		"mergedNodeFor:" : " 6/1/07 21:19",
+		"setTransitionsOn:to:" : " 6/1/07 21:19",
+		"someDuplicateIn:" : " 6/1/07 21:19" } }

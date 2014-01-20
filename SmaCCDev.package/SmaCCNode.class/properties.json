@@ -1,0 +1,17 @@
+{
+	"category" : "SmaCCDev-ScannerGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"MaxSubNodesInMethod",
+		"NextId" ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"transitions",
+		"action",
+		"id" ],
+	"name" : "SmaCCNode",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,19 @@
+{
+	"category" : "SmaCCDev-ParserGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"IgnoreCase",
+		"MaximumCharacterValue" ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"type",
+		"shiftReduceTable",
+		"symbols",
+		"scannerDefinition",
+		"otherStartingSymbols" ],
+	"name" : "SmaCCGrammar",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

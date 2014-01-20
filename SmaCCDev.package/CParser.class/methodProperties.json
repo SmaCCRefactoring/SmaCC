@@ -1,0 +1,13 @@
+{
+	"class" : {
+		"parserDefinitionComment" : "lr 4/12/2010 17:49",
+		"scannerClass" : "lr 4/12/2010 17:49",
+		"startingStateFortranslationUnit" : "lr 4/12/2010 17:49" },
+	"instance" : {
+		"addTypeName:" : " 6/1/07 21:19",
+		"reduceActionForenumXspecifier2:" : "lr 4/12/2010 17:49",
+		"reduceActionForenumXspecifier3:" : "lr 4/12/2010 17:49",
+		"reduceActionForstructXorXunionXspecifier1:" : "lr 4/12/2010 17:49",
+		"reduceActionForstructXorXunionXspecifier3:" : "lr 4/12/2010 17:49",
+		"reduceTable" : "lr 4/12/2010 17:49",
+		"transitionTable" : "lr 4/12/2010 17:49" } }

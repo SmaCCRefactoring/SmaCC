@@ -1,0 +1,3 @@
+precedence
+nonAssociativePrecedenceFor: aSmaCCSymbol 
+	shiftReduceTable at: aSmaCCSymbol put: SmaCCRejectAction

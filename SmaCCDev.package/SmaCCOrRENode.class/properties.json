@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCCDev-ScannerGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "jmb",
+	"instvars" : [
+		"nodes" ],
+	"name" : "SmaCCOrRENode",
+	"pools" : [
+		 ],
+	"super" : "SmaCCRegularExpressionNode",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+testing
+isEpsilonTransition
+	^transitionObjects isNil

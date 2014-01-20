@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCCDev-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "StParser",
+	"pools" : [
+		 ],
+	"super" : "SmaCCParser",
+	"type" : "normal" }

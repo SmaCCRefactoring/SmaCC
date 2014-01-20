@@ -1,0 +1,8 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testDuplicateLoop" : " 6/1/07 21:20",
+		"testNoDuplicates" : " 6/1/07 21:20",
+		"testSimpleDuplicateWithEdges" : " 6/1/07 21:20",
+		"testSimpleTerminalDuplicate" : " 6/1/07 21:20" } }

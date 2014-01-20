@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCCDev-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TestParser",
+	"pools" : [
+		 ],
+	"super" : "SmaCCParser",
+	"type" : "normal" }

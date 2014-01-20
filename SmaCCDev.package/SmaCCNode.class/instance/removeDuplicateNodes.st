@@ -1,0 +1,3 @@
+private
+removeDuplicateNodes
+	^SmaCCDuplicateNodeEliminator removeDuplicateNodesIn: self

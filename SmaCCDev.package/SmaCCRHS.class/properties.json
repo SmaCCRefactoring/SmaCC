@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCCDev-ParserGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "jmb",
+	"instvars" : [
+		"collection",
+		"reduceAction",
+		"variableNames" ],
+	"name" : "SmaCCRHS",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

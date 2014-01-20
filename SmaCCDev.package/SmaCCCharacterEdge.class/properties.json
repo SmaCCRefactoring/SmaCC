@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCCDev-ScannerGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"IsExpressions" ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "SmaCCCharacterEdge",
+	"pools" : [
+		 ],
+	"super" : "SmaCCEdge",
+	"type" : "normal" }

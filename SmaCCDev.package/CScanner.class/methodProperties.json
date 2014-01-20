@@ -1,0 +1,25 @@
+{
+	"class" : {
+		"initializeKeywordMap" : "lr 4/12/2010 17:49",
+		"needsLineNumbers" : " 6/1/07 21:19",
+		"scannerDefinitionComment" : "lr 4/12/2010 17:49" },
+	"instance" : {
+		"CONSTANTId" : "lr 4/12/2010 17:49",
+		"IDENTIFIER" : " 6/1/07 21:19",
+		"IDENTIFIERId" : "lr 4/12/2010 17:49",
+		"TypeNameId" : "lr 4/12/2010 17:49",
+		"addTypeName:" : " 6/1/07 21:19",
+		"comment" : " 6/1/07 21:19",
+		"emptySymbolTokenId" : "lr 4/12/2010 17:49",
+		"errorTokenId" : "lr 4/12/2010 17:49",
+		"initialize" : " 6/1/07 21:19",
+		"scan1" : "lr 4/12/2010 17:49",
+		"scan2" : "lr 4/12/2010 17:49",
+		"scan3" : "lr 4/12/2010 17:49",
+		"scan4" : "lr 4/12/2010 17:49",
+		"scan5" : "lr 4/12/2010 17:49",
+		"scan6" : "lr 4/12/2010 17:49",
+		"scan7" : "lr 4/12/2010 17:49",
+		"scan8" : "lr 4/12/2010 17:49",
+		"scan9" : "lr 4/12/2010 17:49",
+		"scanForToken" : "lr 4/12/2010 17:49" } }

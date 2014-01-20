@@ -1,0 +1,29 @@
+{
+	"category" : "SmaCCDev-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"ShowPrecedenceConflicts" ],
+	"commentStamp" : "jmb 1/23/2003 15:59",
+	"instvars" : [
+		"tabList",
+		"parserClassMorph",
+		"scannerClassMorph",
+		"findScannerClassButton",
+		"findParserClassButton",
+		"conflicts",
+		"generateDefinitionComments",
+		"generateSymbolComments",
+		"generateItemSetComments",
+		"ignoreCase",
+		"mainWindow",
+		"parserCodeHolder",
+		"scannerCodeHolder",
+		"testCodeHolder",
+		"tutorialTextHolder",
+		"conflictTextMorph" ],
+	"name" : "SmaCCParserGenerator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

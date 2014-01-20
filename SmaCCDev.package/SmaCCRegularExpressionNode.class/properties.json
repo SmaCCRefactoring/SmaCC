@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCCDev-ScannerGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"action",
+		"position",
+		"states" ],
+	"name" : "SmaCCRegularExpressionNode",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

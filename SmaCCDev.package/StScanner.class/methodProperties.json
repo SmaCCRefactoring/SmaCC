@@ -1,0 +1,22 @@
+{
+	"class" : {
+		"frequencyTable" : " 6/1/07 21:19",
+		"initializeKeywordMap" : "lr 4/12/2010 17:50",
+		"scannerDefinitionComment" : "lr 4/12/2010 17:50" },
+	"instance" : {
+		"binarySymbolId" : "lr 4/12/2010 17:50",
+		"emptySymbolTokenId" : "lr 4/12/2010 17:50",
+		"errorTokenId" : "lr 4/12/2010 17:50",
+		"nameId" : "lr 4/12/2010 17:50",
+		"negativeNumber" : "lr 6/28/2007 12:06",
+		"negativeNumberId" : "lr 4/12/2010 17:50",
+		"number" : "lr 6/28/2007 12:06",
+		"numberId" : "lr 4/12/2010 17:50",
+		"scan1" : "lr 4/12/2010 17:50",
+		"scan2" : "lr 4/12/2010 17:50",
+		"scan3" : "lr 4/12/2010 17:50",
+		"scan4" : "lr 4/12/2010 17:50",
+		"scan5" : "lr 4/12/2010 17:50",
+		"scanForToken" : "lr 4/12/2010 17:50",
+		"scanNumber:" : " 6/1/07 21:19",
+		"variableAssignment" : " 6/1/07 21:19" } }

@@ -1,0 +1,12 @@
+{
+	"class" : {
+		"initializeKeywordMap" : "lr 4/12/2010 17:49",
+		"needsLineNumbers" : " 6/1/07 21:19",
+		"scannerDefinitionComment" : "lr 4/12/2010 17:49" },
+	"instance" : {
+		"emptySymbolTokenId" : "lr 4/12/2010 17:49",
+		"errorTokenId" : "lr 4/12/2010 17:49",
+		"scan1" : "lr 4/12/2010 17:49",
+		"scan2" : "lr 4/12/2010 17:49",
+		"scan3" : "lr 4/12/2010 17:49",
+		"scanForToken" : "lr 4/12/2010 17:49" } }

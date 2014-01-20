@@ -1,0 +1,3 @@
+initialize-release
+scannerDefinition: aSmaCCScannerDefinition
+	scannerDefinition := aSmaCCScannerDefinition

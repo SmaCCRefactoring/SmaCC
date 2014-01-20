@@ -1,0 +1,3 @@
+initialize-release
+openInWorld
+	self mainWindow openInWorld

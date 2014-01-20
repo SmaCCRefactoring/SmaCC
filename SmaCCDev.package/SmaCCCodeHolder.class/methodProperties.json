@@ -1,0 +1,18 @@
+{
+	"class" : {
+		"owner:" : "apl 2/18/2003 13:44",
+		"owner:ownerAcceptSelector:" : "apl 2/17/2003 11:26" },
+	"instance" : {
+		"contents:notifying:" : "apl 2/18/2003 12:39",
+		"contentsMenu:shifted:" : "ThierryGoubier 3/18/2013 16:13",
+		"contentsMorph" : "lr 11/25/2009 18:30",
+		"hasUnacceptedEdits" : "apl 2/18/2003 10:25",
+		"okToChange" : "apl 2/17/2003 11:39",
+		"owner" : "apl 2/17/2003 11:23",
+		"owner:" : "apl 2/17/2003 11:23",
+		"owner:ownerAcceptSelector:" : "apl 2/17/2003 12:30",
+		"ownerAcceptSelector" : "apl 2/17/2003 11:26",
+		"ownerAcceptSelector:" : "apl 2/17/2003 11:26",
+		"perform:orSendTo:" : "apl 2/17/2003 11:16",
+		"readContentsFromFile" : "ThierryGoubier 3/18/2013 14:31",
+		"saveContentsInFile" : "ThierryGoubier 3/18/2013 16:07" } }

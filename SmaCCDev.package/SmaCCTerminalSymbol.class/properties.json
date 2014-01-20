@@ -1,0 +1,15 @@
+{
+	"category" : "SmaCCDev-ParserGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "jmb",
+	"instvars" : [
+		"regularExpression",
+		"createIdMethod" ],
+	"name" : "SmaCCTerminalSymbol",
+	"pools" : [
+		 ],
+	"super" : "SmaCCSymbol",
+	"type" : "normal" }

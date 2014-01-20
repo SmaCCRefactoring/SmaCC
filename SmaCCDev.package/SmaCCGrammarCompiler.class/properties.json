@@ -1,0 +1,22 @@
+{
+	"category" : "SmaCCDev-ParserGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "jmb",
+	"instvars" : [
+		"shiftTable",
+		"itemSets",
+		"startingStateMap",
+		"actions",
+		"parserClass",
+		"parserDefinitionString",
+		"scannerCompiler",
+		"grammar",
+		"model" ],
+	"name" : "SmaCCGrammarCompiler",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

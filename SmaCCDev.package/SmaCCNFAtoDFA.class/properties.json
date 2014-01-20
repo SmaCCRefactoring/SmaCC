@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCCDev-ScannerGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"mergedStates" ],
+	"name" : "SmaCCNFAtoDFA",
+	"pools" : [
+		 ],
+	"super" : "SmaCCGraphAlgorithm",
+	"type" : "normal" }

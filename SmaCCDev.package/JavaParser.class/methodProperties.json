@@ -1,0 +1,8 @@
+{
+	"class" : {
+		"parserDefinitionComment" : "lr 4/12/2010 17:50",
+		"scannerClass" : "lr 4/12/2010 17:50",
+		"startingStateForgoal" : "lr 4/12/2010 17:50" },
+	"instance" : {
+		"reduceTable" : "lr 4/12/2010 17:50",
+		"transitionTable" : "lr 4/12/2010 17:50" } }

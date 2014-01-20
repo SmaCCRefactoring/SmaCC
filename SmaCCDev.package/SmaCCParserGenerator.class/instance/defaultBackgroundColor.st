@@ -1,0 +1,3 @@
+private
+defaultBackgroundColor
+	^ Color tan

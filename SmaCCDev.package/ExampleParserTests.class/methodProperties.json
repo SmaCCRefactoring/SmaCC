@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"testApplet" : "lr 1/8/2007 22:30",
+		"testEcho" : "lr 1/8/2007 22:30",
+		"testHello" : "lr 1/8/2007 22:30",
+		"testSelfParsing" : "lr 1/8/2007 22:34",
+		"testServlet" : "lr 1/8/2007 22:30",
+		"testStandAlone" : "lr 1/8/2007 22:30",
+		"testSwing" : "lr 1/8/2007 22:30",
+		"testTranscript" : "lr 1/8/2007 22:32" } }

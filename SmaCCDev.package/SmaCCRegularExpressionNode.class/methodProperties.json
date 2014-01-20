@@ -1,0 +1,26 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"," : " 6/1/07 21:19",
+		"action" : " 6/1/07 21:19",
+		"action:" : " 6/1/07 21:19",
+		"addState:" : " 6/1/07 21:19",
+		"addStateTransitionsTo:" : " 6/1/07 21:19",
+		"addStates:" : " 6/1/07 21:19",
+		"asDFA" : " 6/1/07 21:19",
+		"asNFAStartingWith:" : " 6/1/07 21:19",
+		"initialize" : " 6/1/07 21:19",
+		"isKeywordLiteral" : " 6/1/07 21:19",
+		"position" : " 6/1/07 21:19",
+		"position:" : " 6/1/07 21:19",
+		"possibleMatches" : " 6/1/07 21:19",
+		"possibleMatchesDo:" : " 6/1/07 21:19",
+		"possibleMatchesDo:on:" : " 6/1/07 21:19",
+		"possibleMatchesSize" : " 6/1/07 21:19",
+		"postCopy" : " 6/1/07 21:19",
+		"repeat" : " 6/1/07 21:19",
+		"repeatFor:to:" : " 6/1/07 21:19",
+		"repeatForAtLeast:" : " 6/1/07 21:19",
+		"states" : " 6/1/07 21:19",
+		"|" : " 6/1/07 21:19" } }

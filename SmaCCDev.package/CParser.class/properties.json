@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCCDev-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "CParser",
+	"pools" : [
+		 ],
+	"super" : "SmaCCParser",
+	"type" : "normal" }

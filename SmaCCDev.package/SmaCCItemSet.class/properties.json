@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCCDev-ParserGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "jmb",
+	"instvars" : [
+		"type" ],
+	"name" : "SmaCCItemSet",
+	"pools" : [
+		 ],
+	"super" : "Set",
+	"type" : "variable" }

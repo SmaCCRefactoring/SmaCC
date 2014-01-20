@@ -1,0 +1,15 @@
+{
+	"class" : {
+		"characters:" : " 6/1/07 21:19",
+		"sortedCharactersFor:" : "lr 1/6/2007 22:50" },
+	"instance" : {
+		"asNFAStartingWith:" : " 6/1/07 21:19",
+		"canMergeWith:" : " 6/1/07 21:19",
+		"characters" : " 6/1/07 21:19",
+		"characters:" : " 6/1/07 21:19",
+		"matchingCharacters" : " 6/1/07 21:19",
+		"possibleMatchesDo:on:" : " 6/1/07 21:19",
+		"possibleMatchesSize" : " 6/1/07 21:19",
+		"printCharacter:on:" : "lr 11/25/2009 18:29",
+		"printOn:" : " 6/1/07 21:19",
+		"|" : " 6/1/07 21:19" } }

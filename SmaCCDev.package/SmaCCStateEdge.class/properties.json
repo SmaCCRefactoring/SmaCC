@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCCDev-ScannerGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "SmaCCStateEdge",
+	"pools" : [
+		 ],
+	"super" : "SmaCCEdge",
+	"type" : "normal" }

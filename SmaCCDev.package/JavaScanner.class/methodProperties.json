@@ -1,0 +1,16 @@
+{
+	"class" : {
+		"initializeKeywordMap" : "lr 4/12/2010 17:50",
+		"scannerDefinitionComment" : "lr 4/12/2010 17:50" },
+	"instance" : {
+		"emptySymbolTokenId" : "lr 4/12/2010 17:50",
+		"errorTokenId" : "lr 4/12/2010 17:50",
+		"multipleLineComment" : " 6/1/07 21:19",
+		"scan1" : "lr 4/12/2010 17:50",
+		"scan2" : "lr 4/12/2010 17:50",
+		"scan3" : "lr 4/12/2010 17:50",
+		"scan4" : "lr 4/12/2010 17:50",
+		"scan5" : "lr 4/12/2010 17:50",
+		"scan6" : "lr 4/12/2010 17:50",
+		"scan7" : "lr 4/12/2010 17:50",
+		"scanForToken" : "lr 4/12/2010 17:50" } }

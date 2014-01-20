@@ -1,0 +1,22 @@
+{
+	"class" : {
+		"generateCharacterSetFor:" : "lr 1/6/2007 22:50",
+		"initializeIsExpressions" : "lr 1/8/2007 23:30" },
+	"instance" : {
+		"<=" : " 6/1/07 21:19",
+		"closestIsExpression" : " 6/1/07 21:19",
+		"does:include:" : " 6/1/07 21:19",
+		"edgeFrequencyUsingTable:" : " 6/1/07 21:19",
+		"edgeLabel" : " 6/1/07 21:19",
+		"expression" : " 6/1/07 21:19",
+		"isCharacterTransition" : " 6/1/07 21:19",
+		"mergeWith:" : " 6/1/07 21:19",
+		"minMaxPairsWithout:" : " 6/1/07 21:19",
+		"outputClosestIsMethodOn:" : " 6/1/07 21:19",
+		"outputExpressionFor:on:" : " 6/1/07 21:19",
+		"outputExpressionOn:without:" : " 6/1/07 21:19",
+		"outputInvertedMatchOn:" : "lr 1/7/2007 11:16",
+		"outputMatchGreaterThan:on:" : " 6/1/07 21:19",
+		"outputMatchLessThan:on:" : " 6/1/07 21:19",
+		"outputMatchRange:on:" : " 6/1/07 21:19",
+		"outputMatchSingleCharacter:on:" : "lr 1/7/2007 11:16" } }

@@ -1,0 +1,3 @@
+accessing
+regularExpression: aSmaCCRegularExpressionNode
+	regularExpression := aSmaCCRegularExpressionNode

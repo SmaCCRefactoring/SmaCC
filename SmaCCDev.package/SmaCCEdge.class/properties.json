@@ -1,0 +1,15 @@
+{
+	"category" : "SmaCCDev-ScannerGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"toNode",
+		"transitionObjects" ],
+	"name" : "SmaCCEdge",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+accessing
+possibleMatchesSize
+	^self subclassResponsibility

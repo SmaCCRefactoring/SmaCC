@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCCDev-ParserGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "jmb",
+	"instvars" : [
+		 ],
+	"name" : "SmaCCCompilationNotification",
+	"pools" : [
+		 ],
+	"super" : "Notification",
+	"type" : "normal" }

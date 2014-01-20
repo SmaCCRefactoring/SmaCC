@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCCDev-ParserGenerator",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Reject" ],
+	"commentStamp" : "jmb",
+	"instvars" : [
+		 ],
+	"name" : "SmaCCRejectAction",
+	"pools" : [
+		 ],
+	"super" : "SmaCCAction",
+	"type" : "normal" }

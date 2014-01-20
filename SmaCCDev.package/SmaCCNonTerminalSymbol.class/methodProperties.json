@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addProduction:" : " 6/1/07 21:19",
+		"calculateFirstTerminals" : " 6/1/07 21:19",
+		"isEmpty" : " 6/1/07 21:19",
+		"isTerminal" : " 6/1/07 21:19",
+		"name:" : " 6/1/07 21:19",
+		"positionOf:" : " 6/1/07 21:19",
+		"productionsDo:" : " 6/1/07 21:19",
+		"size" : " 6/1/07 21:19" } }
