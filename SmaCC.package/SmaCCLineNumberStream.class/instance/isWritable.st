@@ -1,0 +1,3 @@
+testing
+isWritable
+	^sourceStream isWritable

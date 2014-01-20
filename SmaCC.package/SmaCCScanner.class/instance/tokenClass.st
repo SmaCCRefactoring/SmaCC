@@ -1,0 +1,3 @@
+private
+tokenClass
+	^SmaCCToken

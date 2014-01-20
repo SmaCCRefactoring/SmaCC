@@ -1,0 +1,3 @@
+private
+defaultStartingState
+	^1

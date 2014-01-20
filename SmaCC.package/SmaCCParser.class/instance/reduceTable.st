@@ -1,0 +1,3 @@
+accessing
+reduceTable
+	^self subclassResponsibility

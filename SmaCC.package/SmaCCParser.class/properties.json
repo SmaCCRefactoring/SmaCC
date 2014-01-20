@@ -1,0 +1,18 @@
+{
+	"category" : "SmaCC-Runtime",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"scanner",
+		"currentToken",
+		"errorToken",
+		"stateStack",
+		"nodeStack" ],
+	"name" : "SmaCCParser",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+accessing
+position
+	^sourceStream position
