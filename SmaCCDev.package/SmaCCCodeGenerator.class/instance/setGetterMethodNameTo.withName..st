@@ -1,0 +1,3 @@
+compiling
+setGetterMethodNameTo: aSmaCCVariableDefinition withName: variableName
+	aSmaCCVariableDefinition getterMethodName: (self methodNameFor: variableName)

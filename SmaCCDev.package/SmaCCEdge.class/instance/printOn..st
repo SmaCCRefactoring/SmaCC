@@ -1,5 +1,5 @@
 printing
-printOn: aStream 
+printOn: aStream
 	aStream
 		nextPutAll: '---';
 		nextPutAll: self edgeLabel;

@@ -1,13 +1,16 @@
 accessing
 asLRItemSet
 	| itemSet |
-	itemSet := SmaCCItemSet new.
-	productions do: 
+	itemSet := self grammar newItemSet.
+	productions
+		do:
 			[:each | 
-			itemSet add: (SmaCCLR1Item 
-						symbol: self
+			itemSet
+				add:
+					(SmaCCLR1Item
 						rhs: each
-						follow: ((SmaCCSymbolSet new)
-								add: self class empty;
+						follow:
+							((SmaCCSymbolSet new)
+								add: grammar emptySymbol;
 								yourself))].
 	^itemSet

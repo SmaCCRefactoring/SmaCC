@@ -1,5 +1,10 @@
-SmaCCEdge represents a transition in a Finite Automata (directed graph). It is labeled with the characters or states (possibly none, indicating an epsilon transition) that cause the transition.
+SmaCCEdge is an edge in the DFA/NFA for the scanner. It contains the objects (characters or symbols) that we transition on and the node we transition to.
+
+Subclasses must implement the following messages:
+	private
+		dispatchTo:seen:
 
 Instance Variables:
-	toNode	<SmaCCNode>	The node that this is transitioning to.
-	transitionObjects	<SortedCollection of: (Character | Symbol)>	The characters or symbols that cause the transition. Note that there are no duplicates and all characters/symbols are sorted.
+	toNode	<SmaCCNode>	the next node in the graph
+	transitionObjects	<Collection of: (Character | Symbol))>	the characters or states that we transition on
+

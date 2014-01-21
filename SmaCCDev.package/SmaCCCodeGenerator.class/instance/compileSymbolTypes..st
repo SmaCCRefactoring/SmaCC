@@ -1,0 +1,2 @@
+compiling
+compileSymbolTypes: anArray

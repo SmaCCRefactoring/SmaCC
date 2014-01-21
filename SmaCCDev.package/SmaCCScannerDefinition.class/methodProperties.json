@@ -1,16 +1,16 @@
 {
 	"class" : {
-		 },
+		"new" : "" },
 	"instance" : {
-		"addExcludeState:" : " 6/1/07 21:19",
-		"addState:" : " 6/1/07 21:19",
-		"addToken:withName:" : " 6/1/07 21:19",
-		"defaultState" : " 6/1/07 21:19",
-		"includesTokenNamed:" : " 6/1/07 21:19",
-		"initialize" : " 6/1/07 21:19",
-		"isExcludeState:" : " 6/1/07 21:19",
-		"nonExcludeStates" : " 6/1/07 21:19",
-		"states" : " 6/1/07 21:19",
-		"tokenNamed:" : " 6/1/07 21:19",
-		"tokenNamed:ifAbsentPut:" : " 6/1/07 21:19",
-		"tokens" : " 6/1/07 21:19" } }
+		"addExcludeState:" : "",
+		"addState:" : "",
+		"addToken:withName:" : "",
+		"defaultState" : "",
+		"includesTokenNamed:" : "",
+		"initialize" : "",
+		"isExcludeState:" : "",
+		"nonExcludeStates" : "",
+		"states" : "",
+		"tokenNamed:" : "",
+		"tokenNamed:ifAbsentPut:" : "",
+		"tokens" : "" } }

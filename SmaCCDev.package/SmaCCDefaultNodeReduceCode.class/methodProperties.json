@@ -1,5 +1,10 @@
 {
 	"class" : {
-		 },
+		"initialize" : "" },
 	"instance" : {
-		 } }
+		"=" : "",
+		"basicModelTypes:" : "",
+		"index" : "",
+		"modelTypes:" : "",
+		"returnedNodeIndex" : "",
+		"source" : "" } }

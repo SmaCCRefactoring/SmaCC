@@ -1,6 +1,6 @@
 compiling
-compileInto: sClass andParser: pClass 
+compileInto: sClass andParser: pClass
 	self scannerClass: sClass.
 	self parserClass: pClass.
 	self createChanges.
-	self compileChanges
+	self codeGenerator compileChanges

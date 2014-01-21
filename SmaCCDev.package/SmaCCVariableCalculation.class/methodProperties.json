@@ -1,5 +1,23 @@
 {
 	"class" : {
-		 },
+		"calculateVariablesForGrammar:" : "" },
 	"instance" : {
-		 } }
+		"addDependent:to:" : "",
+		"addExternallyDefinedVariablesFrom:" : "",
+		"addLocallyDefinedVariable:" : "",
+		"addRHS:" : "",
+		"addVariableNamed:" : "",
+		"assignVariables" : "",
+		"calculateNewVariables" : "",
+		"calculateVariables" : "",
+		"calculateVariablesFor:" : "",
+		"calculateVariablesForGrammar:" : "",
+		"hasVariableChanges" : "",
+		"hasVariableNamed:" : "",
+		"processUnnamedSymbol:" : "",
+		"recalculateDependents" : "",
+		"rhsDo:" : "",
+		"setupVariableDependents" : "",
+		"setupVariableDependentsFor:" : "",
+		"shouldAddVariablesFrom:" : "",
+		"variableNamed:" : "" } }

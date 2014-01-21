@@ -1,0 +1,3 @@
+private
+defaultReductionSource
+	self subclassResponsibility

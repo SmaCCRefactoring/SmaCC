@@ -1,5 +1,5 @@
-instance creation
-characters: aString 
+instance
+characters: aString
 	^(self new)
-		characters: (self sortedCharactersFor: aString);
+		assignCharacters: aString;
 		yourself

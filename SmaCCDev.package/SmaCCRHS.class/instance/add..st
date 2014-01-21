@@ -1,3 +1,3 @@
 accessing
-add: aSmaCCSymbol 
+add: aSmaCCSymbol
 	collection add: aSmaCCSymbol

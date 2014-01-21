@@ -1,0 +1,3 @@
+private
+annotateTokenVariables: aBlock
+	self subclassResponsibility

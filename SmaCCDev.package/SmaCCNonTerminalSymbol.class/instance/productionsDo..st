@@ -1,3 +1,3 @@
 accessing
-productionsDo: aBlock 
+productionsDo: aBlock
 	productions do: aBlock

@@ -1,0 +1,3 @@
+private
+firstTerminals
+	^self subclassResponsibility

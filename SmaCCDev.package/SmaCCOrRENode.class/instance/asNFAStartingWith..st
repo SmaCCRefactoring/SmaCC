@@ -1,10 +1,11 @@
 private
-asNFAStartingWith: aSmaCCNode 
+asNFAStartingWith: aSmaCCNode
 	| endNode startNode |
 	startNode := self addStateTransitionsTo: aSmaCCNode.
 	endNode := SmaCCNode new.
 	endNode action: action.
-	nodes do: 
+	nodes
+		do:
 			[:each | 
 			| componentStart |
 			componentStart := SmaCCNode new.

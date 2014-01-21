@@ -1,3 +1,3 @@
 precedence
-leftPrecedenceFor: aSmaCCSymbol 
+leftPrecedenceFor: aSmaCCSymbol
 	shiftReduceTable at: aSmaCCSymbol put: SmaCCReduceAction

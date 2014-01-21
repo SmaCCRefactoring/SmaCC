@@ -1,4 +1,5 @@
 accessing
-mergeWith: aSmaCCItemSet 
+mergeWith: aSmaCCItemSet
 	self == aSmaCCItemSet ifTrue: [^self].
-	aSmaCCItemSet do: [:each | self add: each]
+	self addAll: aSmaCCItemSet.
+	previousItemSets addAll: aSmaCCItemSet previousItemSets

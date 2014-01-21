@@ -1,5 +1,9 @@
 {
 	"class" : {
-		 },
+		"new" : "" },
 	"instance" : {
-		 } }
+		"add:" : "",
+		"do:" : "",
+		"includes:" : "",
+		"initialize" : "",
+		"remove:ifAbsent:" : "" } }

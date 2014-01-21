@@ -1,5 +1,12 @@
 {
 	"class" : {
-		 },
+		"on:" : "" },
 	"instance" : {
-		 } }
+		"asNFAStartingWith:" : "",
+		"characterNode" : "",
+		"characters" : "",
+		"makeCaseInsensitive" : "",
+		"node:" : "",
+		"possibleMatchesDo:on:" : "",
+		"possibleMatchesSize" : "",
+		"printOn:" : "" } }

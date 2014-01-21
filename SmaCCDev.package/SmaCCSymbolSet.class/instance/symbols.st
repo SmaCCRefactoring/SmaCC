@@ -1,3 +1,3 @@
-private
+accessing
 symbols
 	^symbols

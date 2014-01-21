@@ -1,3 +1,3 @@
-initialize-release
+initialize
 grammar: aGrammar
 	grammar := aGrammar

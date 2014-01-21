@@ -1,5 +1,5 @@
 nodes
-createMergedNodeFrom: nodeCollection 
+createMergedNodeFrom: nodeCollection
 	| newNode |
 	newNode := SmaCCNode new.
 	self mergeTransitionsFrom: nodeCollection into: newNode.

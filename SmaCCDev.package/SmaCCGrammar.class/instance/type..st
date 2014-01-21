@@ -1,3 +1,3 @@
-initialize-release
+initialize
 type: aSmaCCSymbol
 	type := aSmaCCSymbol

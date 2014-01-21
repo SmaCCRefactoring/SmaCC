@@ -1,5 +1,5 @@
 private
-addStateTransitionsTo: aSmaCCNode 
+addStateTransitionsTo: aSmaCCNode
 	| endNode |
 	states isEmpty ifTrue: [^aSmaCCNode].
 	endNode := SmaCCNode new.

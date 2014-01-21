@@ -1,3 +1,3 @@
 algorithm
-convertToDFA: aSmaCCNode 
+convertToDFA: aSmaCCNode
 	^self mergedNodeFor: (Array with: aSmaCCNode)

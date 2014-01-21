@@ -1,3 +1,3 @@
-testing
+private
 includesTokenNamed: aString
 	^tokens includesKey: aString

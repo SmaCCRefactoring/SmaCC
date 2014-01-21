@@ -1,3 +1,3 @@
-testing
+private
 isStartingSymbol
 	^false

@@ -1,12 +1,13 @@
-action table
-multipleActionTableRow: row 
+action
+multipleActionTableRow: row
 	| stream |
 	stream := self compressedRowStream.
-	stream nextPut: 1 + self arrayTypeMask.
-	row keysAndValuesDo: 
+	stream nextPut: 1.
+	row
+		keysAndValuesDo:
 			[:index :each | 
-			each ~= 3 
-				ifTrue: 
+			each ~= 3
+				ifTrue:
 					[self writeInteger: each on: stream.
 					self writeInteger: index on: stream]].
 	^stream contents

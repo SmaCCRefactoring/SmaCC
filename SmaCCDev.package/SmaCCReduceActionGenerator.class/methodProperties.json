@@ -1,5 +1,12 @@
 {
 	"class" : {
-		 },
+		"generate:pullUp:on:" : "" },
 	"instance" : {
-		 } }
+		"compileAddToVariable:from:collection:" : "",
+		"connectChild" : "",
+		"generate:pullUp:on:" : "",
+		"getSubIndex:ofType:" : "",
+		"pullUpChildren" : "",
+		"pullUpNodeVariables" : "",
+		"pullUpPotentialNodeVariables" : "",
+		"pullUpVariableArray" : "" } }

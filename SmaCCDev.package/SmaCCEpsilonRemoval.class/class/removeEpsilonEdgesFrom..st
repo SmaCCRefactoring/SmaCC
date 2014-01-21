@@ -1,4 +1,4 @@
-accessing
+algorithm
 removeEpsilonEdgesFrom: aSmaCCNode 
 	"Returns an equivalent graph to aSmaCCNode that doesn't contain any epsilon transitions"
 

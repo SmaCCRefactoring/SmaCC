@@ -1,6 +1,5 @@
-compiling-scanner
+private
 addSpecialSymbols
-	grammar tokens keysDo: 
-			[:each | 
-			(self scannerActionFor: each) notNil 
-				ifTrue: [grammar terminalSymbolNamed: each]]
+	grammar tokens
+		keysDo:
+			[:each | (codeGenerator scannerActionFor: each) notNil ifTrue: [grammar terminalSymbolNamed: each]]

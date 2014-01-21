@@ -1,5 +1,9 @@
 {
 	"class" : {
-		 },
+		"forClassDefinitions:" : "" },
 	"instance" : {
-		 } }
+		"compileMethodsAndVariables" : "",
+		"compileVisitMethodFor:" : "",
+		"name" : "",
+		"nodeClassDefinitions:" : "",
+		"rootClassName" : "" } }

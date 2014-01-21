@@ -1,3 +1,3 @@
 printing
-printOn: aStream 
+printOn: aStream
 	nodes do: [:each | each printOn: aStream] separatedBy: [aStream space]

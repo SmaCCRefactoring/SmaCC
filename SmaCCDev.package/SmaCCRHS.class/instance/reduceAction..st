@@ -1,3 +1,3 @@
-accessing
-reduceAction: anObject
-	reduceAction := anObject
+private
+reduceAction: aSmaCCReduceCode
+	reduceAction := aSmaCCReduceCode

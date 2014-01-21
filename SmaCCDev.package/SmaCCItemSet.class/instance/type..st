@@ -1,3 +1,3 @@
-initialize-release
-type: aSmaCCSymbol 
-	type := aSmaCCSymbol
+initialize
+type: aSymbol
+	type := aSymbol

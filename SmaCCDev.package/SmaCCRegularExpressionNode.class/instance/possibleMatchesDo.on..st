@@ -1,3 +1,3 @@
 private
-possibleMatchesDo: aBlock on: aStream 
+possibleMatchesDo: aBlock on: aStream
 	self subclassResponsibility

@@ -1,3 +1,3 @@
 accessing
-addStates: aCollection 
+addStates: aCollection
 	states addAll: aCollection

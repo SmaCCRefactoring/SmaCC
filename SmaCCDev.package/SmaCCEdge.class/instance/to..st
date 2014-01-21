@@ -1,3 +1,3 @@
-initialize-release
-to: aSmaCCNode 
+initialize
+to: aSmaCCNode
 	toNode := aSmaCCNode

@@ -1,4 +1,4 @@
-private
+accessing
 allStates
 	| nodes |
 	nodes := Set new.

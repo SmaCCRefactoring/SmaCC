@@ -1,0 +1,3 @@
+public
+reduceExpressionParseTree
+	^SmalltalkParser parseExpression: self source

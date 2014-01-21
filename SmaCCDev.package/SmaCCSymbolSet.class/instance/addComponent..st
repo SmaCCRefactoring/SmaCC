@@ -1,6 +1,6 @@
-private
-addComponent: each 
-	(each = self or: [components includes: each]) ifTrue: [^self].
-	components add: each.
-	each addDependent: self.
-	self addAll: each symbols
+accessing
+addComponent: aSmaCCSymbolSet
+	(aSmaCCSymbolSet = self or: [components includes: aSmaCCSymbolSet]) ifTrue: [^self].
+	components add: aSmaCCSymbolSet.
+	aSmaCCSymbolSet addDependent: self.
+	self addAll: aSmaCCSymbolSet symbols

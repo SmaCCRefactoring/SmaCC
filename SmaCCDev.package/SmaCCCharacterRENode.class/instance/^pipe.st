@@ -1,8 +1,7 @@
-accessing
-| aSmaCCRegularExpressionNode 
-	(self canMergeWith: aSmaCCRegularExpressionNode) 
-		ifFalse: [^super | aSmaCCRegularExpressionNode].
-	characters := String 
-				withAll: ((characters , aSmaCCRegularExpressionNode characters) asSet 
-						asSortedCollection: [:a :b | a asInteger < b asInteger]).
+constructing
+| aSmaCCRegularExpressionNode
+	| newCharacters |
+	(self canMergeWith: aSmaCCRegularExpressionNode) ifFalse: [^super | aSmaCCRegularExpressionNode].
+	newCharacters := (characters , aSmaCCRegularExpressionNode characters) asSet.
+	self assignCharacters: newCharacters.
 	^self

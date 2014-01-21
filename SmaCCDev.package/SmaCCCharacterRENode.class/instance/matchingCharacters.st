@@ -1,5 +1,3 @@
-private
+accessing
 matchingCharacters
-	^SmaCCGrammar ignoreCase 
-		ifTrue: [characters reject: [:each | each isLowercase]]
-		ifFalse: [characters]
+	^ignoreCase ifTrue: [characters reject: [:each | each isLowercase]] ifFalse: [characters]

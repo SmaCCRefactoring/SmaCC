@@ -1,4 +1,4 @@
-instance creation
+instance
 nodes: aCollection 
 	^(self new)
 		nodes: aCollection;

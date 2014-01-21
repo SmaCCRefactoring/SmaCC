@@ -1,3 +1,3 @@
-initialize-release
-characters: aString 
+initialize
+characters: aString
 	characters := aString

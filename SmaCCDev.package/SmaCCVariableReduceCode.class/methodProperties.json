@@ -2,4 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"basicModelTypes:" : "",
+		"returnsVariableCollection" : "",
+		"source" : "" } }

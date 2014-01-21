@@ -1,4 +1,4 @@
-private-merging nodes
+merging
 mergedNodeFor: nodeCollection 
 	| mergedNodes |
 	mergedNodes := nodeCollection asSortedCollection asArray.

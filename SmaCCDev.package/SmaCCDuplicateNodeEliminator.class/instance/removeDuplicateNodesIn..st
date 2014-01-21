@@ -1,5 +1,6 @@
 algorithm
-removeDuplicateNodesIn: aSmaCCNode 
+removeDuplicateNodesIn: aSmaCCNode
 	root := aSmaCCNode.
 	self removeDuplicates.
+	self copyGraph.
 	^root

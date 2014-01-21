@@ -1,3 +1,3 @@
-initialize-release
-location: anInteger 
+initialize
+location: anInteger
 	location := anInteger

@@ -1,9 +1,10 @@
-compiling-scanner
+private
 computeSelectorMap
 	| selectorMap |
 	selectorMap := Dictionary new.
-	self symbols keysAndValuesDo: 
+	self symbols
+		keysAndValuesDo:
 			[:index :each | 
-			(self scannerActionFor: each name) 
-				ifNotNilDo: [:selector | selectorMap at: index put: selector]].
+			(codeGenerator scannerActionFor: each name)
+				ifNotNil: [:selector | selectorMap at: index put: selector]].
 	^selectorMap

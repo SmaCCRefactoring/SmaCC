@@ -1,3 +1,3 @@
-accessing
+initialize
 position: anInteger
 	position := anInteger

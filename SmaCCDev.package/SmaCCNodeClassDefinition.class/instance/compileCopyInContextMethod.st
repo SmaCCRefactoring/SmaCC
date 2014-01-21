@@ -1,0 +1,3 @@
+compiling
+compileCopyInContextMethod
+	self codeGenerator compileCopyInContextMethod: self

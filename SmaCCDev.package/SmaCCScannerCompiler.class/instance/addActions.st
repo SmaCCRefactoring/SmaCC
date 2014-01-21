@@ -1,4 +1,5 @@
-compiling-scanner
+private
 addActions
-	self symbols keysAndValuesDo: [:index :each | 
-		each regularExpression ifNotNilDo: [:eachRegex | eachRegex action: index ]]
+	self symbols
+		keysAndValuesDo:
+			[:index :each | each regularExpression ifNotNil: [:eachRegex | eachRegex action: index]]

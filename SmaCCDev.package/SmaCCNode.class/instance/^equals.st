@@ -1,3 +1,3 @@
 comparing
-= anObject 
+= anObject
 	^self class = anObject class and: [self id = anObject id]

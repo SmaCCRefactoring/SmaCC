@@ -1,14 +1,15 @@
-regular expression construction
-computeKeywordMapFor: dfa 
+private
+computeKeywordMapFor: dfa
 	| keywordmap |
 	keywordmap := Dictionary new.
-	self specificRegularExpressionsDo: 
+	self
+		specificRegularExpressionsDo:
 			[:each | 
 			| actions |
 			actions := dfa actionForSpecificRegularExpression: each.
-			actions isNil 
-				ifFalse: 
-					[self 
+			actions isNil
+				ifFalse:
+					[self
 						addActionsFrom: each
 						to: keywordmap
 						at: actions]].

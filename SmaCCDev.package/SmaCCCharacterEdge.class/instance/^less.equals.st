@@ -1,4 +1,3 @@
 comparing
-<= aSmaCCEdge 
-	^self class = aSmaCCEdge class 
-		and: [self transitionObjects <= aSmaCCEdge transitionObjects]
+<= aSmaCCEdge
+	^self class = aSmaCCEdge class and: [self transitionObjects <= aSmaCCEdge transitionObjects]

@@ -1,5 +1,17 @@
 {
 	"class" : {
-		 },
+		"compileForGrammar:" : "" },
 	"instance" : {
-		 } }
+		"calculateReduceActions" : "",
+		"calculateSymbolVariables" : "",
+		"calculateSymbolVariablesFor:" : "",
+		"calculateVariables" : "",
+		"codeGenerator" : "",
+		"compileMethodsAndVariables" : "",
+		"compileNodeClasses" : "",
+		"compileTypes" : "",
+		"compileVisitor" : "",
+		"defineNodeClasses" : "",
+		"grammar:" : "",
+		"hasVariables:seen:" : "",
+		"sortedClasses" : "" } }

@@ -1,0 +1,3 @@
+compiling
+writeMatchingCodeFor: aSmaCCNode
+	self subclassResponsibility

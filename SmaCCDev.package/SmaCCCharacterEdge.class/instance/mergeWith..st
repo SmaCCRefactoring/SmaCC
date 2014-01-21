@@ -1,5 +1,5 @@
-accessing
-mergeWith: aSmaCCEdge 
+merging
+mergeWith: aSmaCCEdge
 	super mergeWith: aSmaCCEdge.
-	transitionObjects := String withAll: (transitionObjects 
-						asSortedCollection: [:a :b | a asInteger < b asInteger])
+	transitionObjects := String
+		withAll: (transitionObjects asSortedCollection: [:a :b | a asInteger < b asInteger])

@@ -2,4 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"actions" : "",
+		"addAction:" : "",
+		"addActions:" : "",
+		"errorType" : "",
+		"id" : "",
+		"initialize" : "",
+		"lr1Item" : "",
+		"preferredAction" : "",
+		"printPathOn:" : "",
+		"raiseXReduceNotification" : "",
+		"signalAllWarnings" : "" } }

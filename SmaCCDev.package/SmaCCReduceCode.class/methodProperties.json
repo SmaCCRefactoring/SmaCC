@@ -1,5 +1,20 @@
 {
 	"class" : {
-		 },
+		"onRHS:" : "" },
 	"instance" : {
-		 } }
+		"=" : "",
+		"baseClassType" : "",
+		"basicModelTypes:" : "",
+		"basicModelTypes:forIndex:" : "",
+		"codeGenerator" : "",
+		"hasReduceAction" : "",
+		"hash" : "",
+		"model" : "",
+		"modelTypes:" : "",
+		"nodeType:" : "",
+		"reduceExpressionParseTree" : "",
+		"returnedNodeIndex" : "",
+		"returnsVariableCollection" : "",
+		"rhs" : "",
+		"rhs:" : "",
+		"source" : "" } }

@@ -1,8 +1,9 @@
-private-edges
-someDuplicateIn: edgeCollection 
+edges
+someDuplicateIn: edgeCollection
 	| objects |
-	objects := Set new.
-	edgeCollection do: 
+	objects := SmaCCSet new.
+	edgeCollection
+		do:
 			[:edge | 
 			edge transitionObjects do: [:each | (objects includes: each) ifTrue: [^each]].
 			objects addAll: edge transitionObjects].

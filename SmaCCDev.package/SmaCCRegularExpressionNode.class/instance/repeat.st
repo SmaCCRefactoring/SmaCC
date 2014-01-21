@@ -1,3 +1,3 @@
-accessing
+constructing
 repeat
 	^SmaCCRepeatingRENode component: self

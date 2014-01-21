@@ -1,4 +1,5 @@
-initialize-release
 initialize
-	id := NextId := NextId + 1.
+initialize
+	super initialize.
+	id := self getId.
 	transitions := SortedCollection new

@@ -1,5 +1,27 @@
 {
 	"class" : {
-		 },
+		"new" : "" },
 	"instance" : {
-		 } }
+		"annotateTokenVariables:" : "",
+		"basicModelTypesForVariable:into:seen:" : "",
+		"collectionVariableDefinitions" : "",
+		"computeVariableDefinitions" : "",
+		"firstTerminals" : "",
+		"grammar" : "",
+		"grammar:" : "",
+		"hasVariableNamed:" : "",
+		"indexOfVariable:" : "",
+		"isCollection:" : "",
+		"isNode" : "",
+		"isSubtypeOf:" : "",
+		"model" : "",
+		"modelType" : "",
+		"modelType:" : "",
+		"modelTypes" : "",
+		"modelTypes:" : "",
+		"modelTypesForVariable:" : "",
+		"modelTypesForVariable:seen:" : "",
+		"nodeType" : "",
+		"nodeType:" : "",
+		"returnsVariableCollection" : "",
+		"variableDefinitions" : "" } }

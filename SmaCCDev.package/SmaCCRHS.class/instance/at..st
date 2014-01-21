@@ -1,3 +1,3 @@
 accessing
-at: anInteger 
+at: anInteger
 	^collection at: anInteger

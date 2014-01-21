@@ -1,8 +1,8 @@
 {
 	"class" : {
-		"removeEpsilonEdgesFrom:" : " 6/1/07 21:19" },
+		"removeEpsilonEdgesFrom:" : "" },
 	"instance" : {
-		"createNodeWithoutEpsilonEdges:" : " 6/1/07 21:19",
-		"epsilonReachableNodesFrom:" : " 6/1/07 21:19",
-		"initialize" : " 6/1/07 21:19",
-		"removeEpsilonEdgesFrom:" : " 6/1/07 21:19" } }
+		"createNodeWithoutEpsilonEdges:" : "",
+		"epsilonReachableNodesFrom:" : "",
+		"initialize" : "",
+		"removeEpsilonEdgesFrom:" : "" } }

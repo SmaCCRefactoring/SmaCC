@@ -1,3 +1,3 @@
-initialize-release
-followers: aSmaCCSymbolSet 
+initialize
+followers: aSmaCCSymbolSet
 	followers := aSmaCCSymbolSet

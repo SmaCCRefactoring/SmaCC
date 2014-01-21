@@ -1,3 +1,3 @@
 accessing
 isEmptySymbol
-	^self = self class empty
+	^self = grammar emptySymbol

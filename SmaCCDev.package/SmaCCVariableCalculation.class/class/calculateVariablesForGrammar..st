@@ -1,0 +1,3 @@
+accessing
+calculateVariablesForGrammar: aSmaCCGrammar
+	self new calculateVariablesForGrammar: aSmaCCGrammar

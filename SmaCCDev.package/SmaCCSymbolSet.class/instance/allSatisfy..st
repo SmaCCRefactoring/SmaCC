@@ -1,3 +1,3 @@
-testing
-allSatisfy: aBlock 
+private
+allSatisfy: aBlock
 	^symbols allSatisfy: aBlock

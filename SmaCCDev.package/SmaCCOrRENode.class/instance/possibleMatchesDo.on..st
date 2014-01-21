@@ -1,6 +1,7 @@
 private
-possibleMatchesDo: aBlock on: aStream 
-	nodes do: 
+possibleMatchesDo: aBlock on: aStream
+	nodes
+		do:
 			[:each | 
 			| pos |
 			pos := aStream position.

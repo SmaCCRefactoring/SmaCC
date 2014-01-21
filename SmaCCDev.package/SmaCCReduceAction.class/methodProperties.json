@@ -1,6 +1,9 @@
 {
 	"class" : {
+		"rhs:" : "",
 		"symbol:rhs:" : " 6/1/07 21:19" },
 	"instance" : {
-		"id" : " 6/1/07 21:19",
-		"isReduce" : " 6/1/07 21:19" } }
+		"id" : "",
+		"isReduce" : "",
+		"mergeWith:prefer:" : "",
+		"mergeWithReduceAction:" : "" } }

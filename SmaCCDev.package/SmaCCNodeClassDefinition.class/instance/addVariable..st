@@ -1,0 +1,3 @@
+compiling
+addVariable: aSmaCCVariableDefinition
+	self codeGenerator addVariable: aSmaCCVariableDefinition forDefinition: self

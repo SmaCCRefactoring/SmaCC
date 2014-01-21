@@ -1,9 +1,9 @@
-action table
-indexOfState: newState 
+action
+indexOfState: newState
 	| newStateIndex |
 	newStateIndex := itemSets indexOf: newState.
-	newStateIndex = 0 
-		ifTrue: 
+	newStateIndex = 0
+		ifTrue:
 			[itemSets add: newState.
 			newStateIndex := itemSets size]
 		ifFalse: [(itemSets at: newStateIndex) mergeWith: newState].

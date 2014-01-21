@@ -2,4 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"basicModelTypes:" : "",
+		"hasReduceAction" : "",
+		"source" : "" } }

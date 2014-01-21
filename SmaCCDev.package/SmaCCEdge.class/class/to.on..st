@@ -1,4 +1,4 @@
-instance creation
+instance
 to: aSmaCCNode on: aCollectionOrNil 
 	| edge |
 	edge := self new.

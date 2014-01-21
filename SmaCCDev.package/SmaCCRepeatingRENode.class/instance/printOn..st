@@ -1,8 +1,8 @@
 printing
-printOn: aStream 
+printOn: aStream
 	node printOn: aStream.
-	maximumMatches = (1 bitShift: 31) 
-		ifTrue: 
+	maximumMatches = (1 bitShift: 31)
+		ifTrue:
 			[minimumMatches = 0 ifTrue: [^aStream nextPut: $*].
 			minimumMatches = 1 ifTrue: [^aStream nextPut: $+].
 			^aStream

@@ -2,4 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"addAction:" : "",
+		"errorType" : "",
+		"isAmbiguous" : "",
+		"mergeWith:prefer:" : "",
+		"preferredAction" : "",
+		"sortedActions" : "" } }

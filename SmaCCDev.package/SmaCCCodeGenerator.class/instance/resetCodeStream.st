@@ -1,0 +1,3 @@
+private
+resetCodeStream
+	codeStream := nil

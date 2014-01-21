@@ -1,8 +1,8 @@
 {
 	"class" : {
-		 },
+		"new" : "" },
 	"instance" : {
-		"createMergedNodeFrom:" : " 6/1/07 21:19",
+		"createMergedNodeFrom:" : "",
 		"initialize" : " 6/1/07 21:19",
-		"mergeActionsFrom:into:" : " 6/1/07 21:19",
-		"mergeTransitionsFrom:into:" : " 6/1/07 21:19" } }
+		"mergeActionsFrom:into:" : "",
+		"mergeTransitionsFrom:into:" : "" } }

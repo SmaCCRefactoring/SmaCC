@@ -1,0 +1,3 @@
+compiling
+compileInitializeMethod
+	self codeGenerator compileInitializeMethod: self

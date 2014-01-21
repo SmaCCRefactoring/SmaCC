@@ -1,7 +1,8 @@
 private
-terminalSymbolNamed: aString 
-	^symbols detect: [:each | each name = aString]
-		ifNone: 
-			[symbols add: ((SmaCCTerminalSymbol name: aString)
-						regularExpression: (scannerDefinition tokenNamed: aString);
-						yourself)]
+terminalSymbolNamed: aString
+	^self
+		findSymbolNamed: aString
+		ifAbsentAdd:
+			[(self newTerminalSymbolNamed: aString)
+				regularExpression: (scannerDefinition tokenNamed: aString);
+				yourself]

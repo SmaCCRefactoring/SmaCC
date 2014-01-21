@@ -1,3 +1,3 @@
 edges
-addEdgeTo: aSmaCCNode 
+addEdgeTo: aSmaCCNode
 	transitions add: (SmaCCEdge to: aSmaCCNode on: nil)

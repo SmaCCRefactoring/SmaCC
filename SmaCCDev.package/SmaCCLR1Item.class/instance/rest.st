@@ -1,6 +1,6 @@
 accessing
 rest
 	| newRHS |
-	newRHS := SmaCCRHS new.
+	newRHS := self grammar newRHS.
 	location + 1 to: rhs size do: [:each | newRHS add: (rhs at: each)].
 	^newRHS

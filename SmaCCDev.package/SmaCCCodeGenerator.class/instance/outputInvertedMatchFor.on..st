@@ -1,0 +1,3 @@
+compiling
+outputInvertedMatchFor: aSmaCCCharacterEdge on: stream
+	self subclassResponsibility

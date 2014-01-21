@@ -1,0 +1,3 @@
+class
+initialize
+	IsCaching := false

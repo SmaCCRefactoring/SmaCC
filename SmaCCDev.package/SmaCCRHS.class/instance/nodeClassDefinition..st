@@ -1,0 +1,3 @@
+accessing
+nodeClassDefinition: aSmaCCNodeClassDefinition
+	nodeClassDefinition := aSmaCCNodeClassDefinition

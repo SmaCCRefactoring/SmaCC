@@ -1,0 +1,3 @@
+initialize
+assignVariables
+	currentRHS variableDefinitions: newVariables

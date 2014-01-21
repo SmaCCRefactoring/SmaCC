@@ -2,10 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
-		"calculateFirstTerminals" : " 6/1/07 21:19",
-		"createIdMethod" : " 6/1/07 21:19",
-		"createIdMethod:" : " 6/1/07 21:19",
-		"isTerminal" : " 6/1/07 21:19",
-		"regularExpression" : " 6/1/07 21:19",
-		"regularExpression:" : " 6/1/07 21:19",
-		"unsafeMethodName" : " 6/1/07 21:19" } }
+		"calculateFirstTerminals" : "",
+		"createIdMethod" : "",
+		"createIdMethod:" : "",
+		"initialize" : "",
+		"isTerminal" : "",
+		"makeCaseInsensitive" : "",
+		"modelTypes:" : "",
+		"regularExpression" : "",
+		"regularExpression:" : "",
+		"unsafeMethodName" : "" } }

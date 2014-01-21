@@ -1,4 +1,4 @@
 accessing
-addExcludeState: aSymbol 
+addExcludeState: aSymbol
 	excludeStates add: aSymbol.
 	self addState: aSymbol

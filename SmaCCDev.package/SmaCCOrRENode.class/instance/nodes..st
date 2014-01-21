@@ -1,3 +1,3 @@
-initialize-release
-nodes: aCollection 
+initialize
+nodes: aCollection
 	nodes := aCollection

@@ -1,6 +1,5 @@
 printing
 edgeLabel
-	^transitionObjects isNil 
+	^transitionObjects isNil
 		ifTrue: ['epsilon']
-		ifFalse: 
-			[transitionObjects inject: '' into: [:sum :each | sum , each printString]]
+		ifFalse: [transitionObjects inject: '' into: [:sum :each | sum , each printString]]

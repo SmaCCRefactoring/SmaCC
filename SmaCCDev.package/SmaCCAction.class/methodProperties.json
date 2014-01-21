@@ -1,7 +1,19 @@
 {
 	"class" : {
-		 },
+		"new" : "" },
 	"instance" : {
-		"id" : " 6/1/07 21:19",
-		"isReduce" : " 6/1/07 21:19",
-		"isShift" : " 6/1/07 21:19" } }
+		"=" : "",
+		"hash" : "",
+		"id" : "",
+		"isAmbiguous" : "",
+		"isReduce" : "",
+		"isReject" : "",
+		"isShift" : "",
+		"lr1Item" : "",
+		"mergeWith:prefer:" : "",
+		"precedence" : "",
+		"preferredAction" : "",
+		"rhs" : "",
+		"signalAllWarnings" : "",
+		"size" : "",
+		"symbol" : "" } }

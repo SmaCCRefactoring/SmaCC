@@ -6,12 +6,14 @@ allStartingSymbols
 	default := self startSymbol.
 	startingSymbols := otherStartingSymbols copy.
 	startingSymbols remove: default ifAbsent: [].
-	startingSymbols := startingSymbols collect: 
-					[:each | 
-					(SmaCCStartingSymbol name: 'B e g i n' , each name)
-						addProduction: ((SmaCCRHS new)
-									add: each;
-									yourself);
-						yourself].
+	startingSymbols := startingSymbols
+		collect:
+			[:each | 
+			(self newStartingSymbolNamed: each name)
+				addProduction:
+						((self newRHS)
+								add: each;
+								yourself);
+				yourself].
 	startingSymbols addFirst: default.
 	^startingSymbols

@@ -1,6 +1,9 @@
 compiling
 compileParser
-	self compileTransitionTable.
-	self compileStartingStateIds.
-	self compileReductionTable.
-	self compileScannerClassIntoParser
+	self compileNodeClasses.
+	(self codeGenerator)
+		compileTransitionTable: self transitionTable;
+		compileStartingStateIds: startingStateMap;
+		compileReductionTable: self reduceTable;
+		compileReductionActions;
+		compileScannerClassIntoParser

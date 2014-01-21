@@ -1,4 +1,4 @@
-private
+accessing
 startingNodeWithoutUnnecessaryDefaultTransition
 	| edge |
 	self transitions size = 1 ifFalse: [^self].

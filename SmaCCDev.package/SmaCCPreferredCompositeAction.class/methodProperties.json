@@ -2,4 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"errorType" : "",
+		"mergeWith:prefer:" : "",
+		"preferredAction" : "",
+		"preferredAction:" : "",
+		"reduceAction" : "" } }

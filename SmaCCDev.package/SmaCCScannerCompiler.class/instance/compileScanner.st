@@ -1,9 +1,6 @@
-compiling-scanner
+compiling
 compileScanner
 	| regex |
-	self addSpecialSymbols.
-	self addNormalSymbols.
-	self addActions.
+	regex := self createRegex.
 	self compileTokenIdMethods.
-	regex := self addSpecificREsWithoutActionsTo: self combinedGeneralRegexes.
-	self compileMethodsFor: regex withSelectors: self computeSelectorMap
+	self compileMethodsFor: regex

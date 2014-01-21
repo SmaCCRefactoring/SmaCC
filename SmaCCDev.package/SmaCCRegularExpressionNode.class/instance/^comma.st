@@ -1,4 +1,3 @@
-accessing
-, aSmaCCRegularExpressionNode 
-	^SmaCCSequenceRENode 
-		nodes: (OrderedCollection with: self with: aSmaCCRegularExpressionNode)
+constructing
+, aSmaCCRegularExpressionNode
+	^SmaCCSequenceRENode nodes: (OrderedCollection with: self with: aSmaCCRegularExpressionNode)

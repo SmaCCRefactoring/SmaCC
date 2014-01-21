@@ -1,4 +1,4 @@
-instance creation
+instance
 component: aSmaCCRegularExpressionNode minimum: anInteger 
 	^self 
 		component: aSmaCCRegularExpressionNode

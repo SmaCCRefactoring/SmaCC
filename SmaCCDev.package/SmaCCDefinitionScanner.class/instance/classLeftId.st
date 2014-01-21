@@ -1,0 +1,3 @@
+generated
+classLeftId
+	^39

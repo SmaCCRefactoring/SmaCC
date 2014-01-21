@@ -1,0 +1,3 @@
+compiling
+initializeResultForReduceAction: aSmaCCRHS
+	^self newArrayOfSize: aSmaCCRHS productionSymbol variableDefinitions size

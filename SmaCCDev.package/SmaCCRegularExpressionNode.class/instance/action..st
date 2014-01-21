@@ -1,3 +1,3 @@
-initialize-release
+initialize
 action: aString
 	action := aString

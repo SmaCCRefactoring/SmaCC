@@ -1,9 +1,7 @@
 accessing
-makeTokenIdMethodFor: aString 
+makeTokenIdMethodFor: aString
 	| token |
-	token := (scannerDefinition includesTokenNamed: aString) 
-				ifTrue: [self terminalSymbolNamed: aString]
-				ifFalse: 
-					[symbols detect: [:each | each name = aString]
-						ifNone: [symbols add: (SmaCCTerminalSymbol name: aString)]].
+	token := (scannerDefinition includesTokenNamed: aString)
+		ifTrue: [self terminalSymbolNamed: aString]
+		ifFalse: [self findSymbolNamed: aString ifAbsentAdd: [self newTerminalSymbolNamed: aString]].
 	token createIdMethod: true

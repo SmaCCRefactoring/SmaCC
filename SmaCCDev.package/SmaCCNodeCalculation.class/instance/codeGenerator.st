@@ -1,0 +1,3 @@
+private
+codeGenerator
+	^grammar codeGenerator

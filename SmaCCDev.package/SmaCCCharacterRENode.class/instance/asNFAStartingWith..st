@@ -1,5 +1,5 @@
 private
-asNFAStartingWith: aSmaCCNode 
+asNFAStartingWith: aSmaCCNode
 	| endNode startNode |
 	startNode := self addStateTransitionsTo: aSmaCCNode.
 	endNode := SmaCCNode new.
