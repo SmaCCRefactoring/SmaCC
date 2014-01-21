@@ -1,5 +1,5 @@
 {
-	"category" : "SmaCCDev-ParserGenerator",
+	"category" : "SmaCCDev-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -10,5 +10,5 @@
 	"name" : "SmaCCAcceptAction",
 	"pools" : [
 		 ],
-	"super" : "SmaCCAction",
+	"super" : "SmaCCPrimitiveAction",
 	"type" : "normal" }

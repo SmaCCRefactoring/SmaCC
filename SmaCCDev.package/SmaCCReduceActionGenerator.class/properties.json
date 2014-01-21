@@ -1,0 +1,19 @@
+{
+	"category" : "SmaCCDev-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"rhs",
+		"index",
+		"generator",
+		"variableName",
+		"currentIndex",
+		"currentSymbol" ],
+	"name" : "SmaCCReduceActionGenerator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

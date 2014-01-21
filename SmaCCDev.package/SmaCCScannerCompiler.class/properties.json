@@ -1,5 +1,5 @@
 {
-	"category" : "SmaCCDev-ParserGenerator",
+	"category" : "SmaCCDev-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -7,8 +7,7 @@
 	"commentStamp" : "jmb",
 	"instvars" : [
 		"grammar",
-		"scannerClass",
-		"scannerDefinitionString" ],
+		"codeGenerator" ],
 	"name" : "SmaCCScannerCompiler",
 	"pools" : [
 		 ],

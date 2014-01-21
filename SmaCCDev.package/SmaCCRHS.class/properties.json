@@ -1,5 +1,5 @@
 {
-	"category" : "SmaCCDev-ParserGenerator",
+	"category" : "SmaCCDev-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -8,9 +8,11 @@
 	"instvars" : [
 		"collection",
 		"reduceAction",
-		"variableNames" ],
+		"variableNameMap",
+		"nodeClassDefinition",
+		"productionSymbol" ],
 	"name" : "SmaCCRHS",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "SmaCCGrammarItem",
 	"type" : "normal" }

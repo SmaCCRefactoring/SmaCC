@@ -1,17 +1,29 @@
 {
-	"category" : "SmaCCDev-ParserGenerator",
+	"category" : "SmaCCDev-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"IgnoreCase",
-		"MaximumCharacterValue" ],
+		"MaximumCharacterValue",
+		"TokenNameBlock",
+		"TokenNameMap" ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
 		"type",
 		"shiftReduceTable",
 		"symbols",
 		"scannerDefinition",
-		"otherStartingSymbols" ],
+		"otherStartingSymbols",
+		"classDefinitions",
+		"prefix",
+		"suffix",
+		"codeGenerator",
+		"isGLR",
+		"ignoreCase",
+		"ignoredVariables",
+		"annotateTokens",
+		"errorSymbol",
+		"emptySymbol",
+		"sentinelSymbol" ],
 	"name" : "SmaCCGrammar",
 	"pools" : [
 		 ],

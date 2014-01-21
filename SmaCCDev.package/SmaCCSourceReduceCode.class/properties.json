@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCCDev-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"source" ],
+	"name" : "SmaCCSourceReduceCode",
+	"pools" : [
+		 ],
+	"super" : "SmaCCReduceCode",
+	"type" : "normal" }

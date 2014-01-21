@@ -1,12 +1,13 @@
 {
-	"category" : "SmaCCDev-ScannerGenerator",
+	"category" : "SmaCCDev-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "jmb",
 	"instvars" : [
-		"characters" ],
+		"characters",
+		"ignoreCase" ],
 	"name" : "SmaCCCharacterRENode",
 	"pools" : [
 		 ],

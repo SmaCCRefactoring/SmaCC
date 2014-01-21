@@ -1,0 +1,19 @@
+{
+	"category" : "SmaCCDev-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name",
+		"subclasses",
+		"grammar",
+		"class",
+		"superclass",
+		"isRoot" ],
+	"name" : "SmaCCClassDefinition",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

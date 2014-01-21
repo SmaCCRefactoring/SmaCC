@@ -1,9 +1,8 @@
 {
-	"category" : "SmaCCDev-ScannerGenerator",
+	"category" : "SmaCCDev-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"MaxSubNodesInMethod",
 		"NextId" ],
 	"commentStamp" : "<historical>",
 	"instvars" : [

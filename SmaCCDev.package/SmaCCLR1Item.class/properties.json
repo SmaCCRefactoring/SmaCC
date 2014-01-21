@@ -1,5 +1,5 @@
 {
-	"category" : "SmaCCDev-ParserGenerator",
+	"category" : "SmaCCDev-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -7,9 +7,9 @@
 	"commentStamp" : "jmb",
 	"instvars" : [
 		"rhs",
-		"symbol",
 		"location",
-		"followers" ],
+		"followers",
+		"itemSet" ],
 	"name" : "SmaCCLR1Item",
 	"pools" : [
 		 ],

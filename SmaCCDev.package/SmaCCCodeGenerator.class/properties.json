@@ -1,0 +1,20 @@
+{
+	"category" : "SmaCCDev-Core",
+	"classinstvars" : [
+		"codeTemplates" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"parserClass",
+		"scannerClass",
+		"model",
+		"codeStream",
+		"reduceActionCache",
+		"ambiguousActions",
+		"grammar" ],
+	"name" : "SmaCCCodeGenerator",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

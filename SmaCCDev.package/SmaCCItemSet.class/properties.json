@@ -1,12 +1,14 @@
 {
-	"category" : "SmaCCDev-ParserGenerator",
+	"category" : "SmaCCDev-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "jmb",
 	"instvars" : [
-		"type" ],
+		"type",
+		"previousItemSets",
+		"grammar" ],
 	"name" : "SmaCCItemSet",
 	"pools" : [
 		 ],

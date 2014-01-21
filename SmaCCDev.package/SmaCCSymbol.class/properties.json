@@ -1,18 +1,16 @@
 {
-	"category" : "SmaCCDev-ParserGenerator",
+	"category" : "SmaCCDev-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"EmptySymbol",
-		"ErrorSymbol",
-		"SentinelSymbol" ],
+		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
 		"name",
 		"precedence",
-		"firstItems" ],
+		"firstTerminals" ],
 	"name" : "SmaCCSymbol",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "SmaCCGrammarItem",
 	"type" : "normal" }

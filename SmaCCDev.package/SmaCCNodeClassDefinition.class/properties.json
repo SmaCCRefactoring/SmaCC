@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCCDev-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"productions",
+		"variables",
+		"extraAttributes" ],
+	"name" : "SmaCCNodeClassDefinition",
+	"pools" : [
+		 ],
+	"super" : "SmaCCClassDefinition",
+	"type" : "normal" }

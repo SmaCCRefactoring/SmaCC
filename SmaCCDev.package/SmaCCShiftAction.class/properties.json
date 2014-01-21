@@ -1,14 +1,14 @@
 {
-	"category" : "SmaCCDev-ParserGenerator",
+	"category" : "SmaCCDev-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"Shift" ],
+		 ],
 	"commentStamp" : "jmb",
 	"instvars" : [
 		 ],
 	"name" : "SmaCCShiftAction",
 	"pools" : [
 		 ],
-	"super" : "SmaCCAction",
+	"super" : "SmaCCPrimitiveAction",
 	"type" : "normal" }
