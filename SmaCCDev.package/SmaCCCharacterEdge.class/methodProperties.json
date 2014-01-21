@@ -1,10 +1,8 @@
 {
 	"class" : {
-		"generateCharacterSetFor:" : "lr 1/6/2007 22:50",
-		"initializeIsExpressions" : "lr 1/8/2007 23:30" },
+		"generateCharacterSetFor:" : "lr 1/6/2007 22:50" },
 	"instance" : {
 		"<=" : " 6/1/07 21:19",
-		"closestIsExpression" : " 6/1/07 21:19",
 		"does:include:" : " 6/1/07 21:19",
 		"edgeFrequencyUsingTable:" : " 6/1/07 21:19",
 		"edgeLabel" : " 6/1/07 21:19",

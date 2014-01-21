@@ -1,8 +1,6 @@
 {
 	"class" : {
-		"initialize" : " 6/1/07 21:19",
-		"maxSubNodesInMethod" : " 6/1/07 21:19",
-		"maxSubNodesInMethod:" : " 6/1/07 21:19" },
+		 },
 	"instance" : {
 		"<=" : " 6/1/07 21:19",
 		"=" : " 6/1/07 21:19",
@@ -29,7 +27,6 @@
 		"mergeTransitions" : " 6/1/07 21:19",
 		"mergeWith:" : " 6/1/07 21:19",
 		"methodNameMapFor:" : " 6/1/07 21:19",
-		"needsSeparateMethod" : " 6/1/07 21:19",
 		"optimizationRewriter" : "lr 11/25/2009 18:01",
 		"optimizedParseTreeFor:" : " 6/1/07 21:19",
 		"printOn:" : " 6/1/07 21:19",

@@ -1,19 +1,13 @@
 {
 	"class" : {
-		"empty" : " 6/1/07 21:19",
-		"error" : " 6/1/07 21:19",
-		"name:" : " 6/1/07 21:19",
-		"releaseObjects" : " 6/1/07 21:19",
-		"sentinel" : " 6/1/07 21:19" },
+		"name:" : " 6/1/07 21:19" },
 	"instance" : {
 		"calculateFirstTerminals" : " 6/1/07 21:19",
 		"createIdMethod" : " 6/1/07 21:19",
-		"firstTerminals" : " 6/1/07 21:19",
 		"isEmptySymbol" : " 6/1/07 21:19",
 		"isStartingSymbol" : " 6/1/07 21:19",
 		"isTerminal" : " 6/1/07 21:19",
 		"name" : " 6/1/07 21:19",
-		"name:" : " 6/1/07 21:19",
 		"precedence" : " 6/1/07 21:19",
 		"precedence:" : " 6/1/07 21:19",
 		"printOn:" : " 6/1/07 21:19",
