@@ -1,3 +1,3 @@
 public
 pluralVariablesMap
-	^ {(Dictionary new)}
+	^ Dictionary new
