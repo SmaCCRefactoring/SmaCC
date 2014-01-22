@@ -19,13 +19,13 @@ addImplementationSpecificRewritesTo: rewriter
 				'``@.Stmts1.
 				`{:dictionary | RBMessageNode receiver: `@a selector: #ifTrue: arguments: (Array with: (RBBlockNode body: (RBSequenceNode statements: (``@.Stmts2 copyFrom: 1 to: (dictionary at: #size)))))}.
 				``@.Stmts3';
-		replace: 'currentCharacter == `#l1 or: [currentCharacter == `#l2]'
+		replace: 'currentCharacter = `#l1 or: [currentCharacter = `#l2]'
 			with: '`{RBLiteralNode value: (String with: `#l1 value with: `#l2 value)} includes: currentCharacter';
-		replace: 'currentCharacter == `#l1 or: [currentCharacter == `#l2 or: `@a]'
+		replace: 'currentCharacter = `#l1 or: [currentCharacter = `#l2 or: `@a]'
 			with: '(`{RBLiteralNode value: (String with: `#l1 value with: `#l2 value)} includes: currentCharacter) or: `@a';
-		replace: '(`#l1 includes: currentCharacter) or: [currentCharacter == `#l2]'
+		replace: '(`#l1 includes: currentCharacter) or: [currentCharacter = `#l2]'
 			with: '`{RBLiteralNode value: `#l1 value , (String with: `#l2 value)} includes: currentCharacter';
-		replace: '(`#l1 includes: currentCharacter) or: [currentCharacter == `#l2 or: `@a]'
+		replace: '(`#l1 includes: currentCharacter) or: [currentCharacter = `#l2 or: `@a]'
 			with: '(`{RBLiteralNode value: `#l1 value , (String with: `#l2 value)} includes: currentCharacter) or: `@a';
 		replace:
 				'`@.Stmts1.

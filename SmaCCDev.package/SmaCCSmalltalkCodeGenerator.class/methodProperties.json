@@ -5,7 +5,7 @@
 		"typeName" : "ThierryGoubier 1/22/2014 14:34:17" },
 	"instance" : {
 		"acceptStateEdge:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"addImplementationSpecificRewritesTo:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"addImplementationSpecificRewritesTo:" : "ThierryGoubier 1/22/2014 16:47",
 		"addTimesRepeatOptimizationTo:" : "ThierryGoubier 1/22/2014 14:34:17",
 		"addVariable:forDefinition:" : "ThierryGoubier 1/22/2014 14:34:17",
 		"basicCompileSourceFor:" : "ThierryGoubier 1/22/2014 14:55",
@@ -51,7 +51,7 @@
 		"outputMatchFor:on:without:" : "ThierryGoubier 1/22/2014 14:34:17",
 		"outputMatchForTransition:on:" : "ThierryGoubier 1/22/2014 14:34:17",
 		"outputRangeMatch:on:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"outputSingleCharacterMatch:on:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"outputSingleCharacterMatch:on:" : "ThierryGoubier 1/22/2014 16:48",
 		"outputStreamClass" : "ThierryGoubier 1/22/2014 14:34:17",
 		"parseTreeRewriterFor:" : "ThierryGoubier 1/22/2014 14:34:17",
 		"parserParseTreeFor:" : "ThierryGoubier 1/22/2014 14:34:17",

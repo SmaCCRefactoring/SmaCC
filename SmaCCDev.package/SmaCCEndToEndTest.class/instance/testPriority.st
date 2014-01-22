@@ -6,7 +6,7 @@ testPriority
 		instanceVariableNames: ''
 		classVariableNames: ''
 		poolDictionaries: ''
-		classInstanceVariableNames: ''.
+		category: 'SmaCCDev-Tests'.
 	(self lookupType: #TestScanner) compile: 'all ^self recordAndReportMatch: (Array with: self _allId)'.
 	parserCompiler := SmaCCGrammarCompiler new.
 	parserCompiler

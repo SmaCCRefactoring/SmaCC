@@ -1,3 +1,3 @@
 private
 itemFor: anObject
-	^self basicAt: (self findElementOrNil: anObject)
+	^array at: (self findElementOrNil: anObject)

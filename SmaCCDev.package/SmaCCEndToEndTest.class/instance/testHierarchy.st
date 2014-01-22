@@ -6,25 +6,25 @@ testHierarchy
 		instanceVariableNames: ''
 		classVariableNames: ''
 		poolDictionaries: ''
-		classInstanceVariableNames: ''.
+		category: 'SmaCCDev-Tests'.
 	(Smalltalk at: #FooScanner)
 		subclass: #TestScanner
 		instanceVariableNames: ''
 		classVariableNames: ''
 		poolDictionaries: ''
-		classInstanceVariableNames: ''.
+		category: 'SmaCCDev-Tests'.
 	SmaCCParser
 		subclass: #FooParser
 		instanceVariableNames: ''
 		classVariableNames: ''
 		poolDictionaries: ''
-		classInstanceVariableNames: ''.
+		category: 'SmaCCDev-Tests'.
 	(Smalltalk at: #FooParser)
 		subclass: #TestParser
 		instanceVariableNames: ''
 		classVariableNames: ''
 		poolDictionaries: ''
-		classInstanceVariableNames: ''.
+		category: 'SmaCCDev-Tests'.
 	parserCompiler := SmaCCGrammarCompiler new.
 	parserCompiler
 		buildDefinition:

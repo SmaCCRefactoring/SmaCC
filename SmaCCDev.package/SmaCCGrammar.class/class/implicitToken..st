@@ -5,5 +5,5 @@ implicitToken: aString
 	(Character canUnderstand: symbol) ifFalse: [^nil].
 	node := SmaCCCharacterRENode 
 				characters: (self allCharacters select: [:each | each perform: symbol]).
-	node position: SmallInteger maximum.	"Implicit nodes have least precedence"
+	node position: SmallInteger maxVal.	"Implicit nodes have least precedence"
 	^node

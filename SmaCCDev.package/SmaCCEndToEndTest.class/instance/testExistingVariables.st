@@ -6,13 +6,13 @@ testExistingVariables
 		instanceVariableNames: 'scanner1 scanner2'
 		classVariableNames: ''
 		poolDictionaries: ''
-		classInstanceVariableNames: ''.
+		category: 'SmaCCDev-Tests'.
 	SmaCCParser
 		subclass: #TestParser
 		instanceVariableNames: 'parser1 parser2'
 		classVariableNames: ''
 		poolDictionaries: ''
-		classInstanceVariableNames: ''.
+		category: 'SmaCCDev-Tests'.
 	parserCompiler := SmaCCGrammarCompiler new.
 	parserCompiler
 		buildDefinition:
