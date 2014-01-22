@@ -1,7 +1,7 @@
 compiling
 optimizationRewriter
 	| rewriter |
-	rewriter := ParseTreeRewriter new.
+	rewriter := RBParseTreeRewriter new.
 	self addTimesRepeatOptimizationTo: rewriter.
 	rewriter
 		replace:
@@ -83,4 +83,4 @@ optimizationRewriter
 				'`@.Stmts1.
 				[`@.Stmts2] repeat'.
 	self addImplementationSpecificRewritesTo: rewriter.
-	^rewriter
+	^ rewriter

@@ -1,8 +1,8 @@
 private
 parserParseTreeFor: aSelector
-	^parseTreeCache
+	^ parseTreeCache
 		at: aSelector
-		ifAbsentPut:
-			[| definingClass |
+		ifAbsentPut: [ 
+			| definingClass |
 			definingClass := self parserClass whoDefinesMethod: aSelector.
-			definingClass parseTreeFor: aSelector]
+			definingClass parseTreeFor: aSelector ]

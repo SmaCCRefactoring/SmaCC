@@ -1,5 +1,5 @@
 public
 supportsOptimizedExpressions
-	"Do we support ##() expressions"
+	"Do we support ##() expressions? No."
 
-	^true
+	^ false
