@@ -1,3 +1,3 @@
 code
 comment: aString
-	^'"' , (aString trimBlanks copyReplaceAll: '"' with: '""') , '"'
+	^'"' , (aString trimBoth copyReplaceAll: '"' with: '""') , '"'

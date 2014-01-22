@@ -1,8 +1,8 @@
 {
 	"class" : {
-		"new" : "" },
+		"new" : "ThierryGoubier 1/22/2014 14:34:17" },
 	"instance" : {
-		"createMergedNodeFrom:" : "",
-		"initialize" : " 6/1/07 21:19",
-		"mergeActionsFrom:into:" : "",
-		"mergeTransitionsFrom:into:" : "" } }
+		"createMergedNodeFrom:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"initialize" : "ThierryGoubier 1/22/2014 14:34:17",
+		"mergeActionsFrom:into:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"mergeTransitionsFrom:into:" : "ThierryGoubier 1/22/2014 14:34:17" } }

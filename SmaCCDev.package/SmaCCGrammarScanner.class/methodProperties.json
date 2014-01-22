@@ -1,12 +1,12 @@
 {
 	"class" : {
-		"initializeKeywordMap" : "lr 4/12/2010 17:49",
-		"needsLineNumbers" : " 6/1/07 21:19",
-		"scannerDefinitionComment" : "lr 4/12/2010 17:49" },
+		"initializeKeywordMap" : "ThierryGoubier 1/22/2014 14:34:17",
+		"needsLineNumbers" : "ThierryGoubier 1/22/2014 14:34:17",
+		"scannerDefinitionComment" : "ThierryGoubier 1/22/2014 14:34:17" },
 	"instance" : {
-		"emptySymbolTokenId" : "lr 4/12/2010 17:49",
-		"errorTokenId" : "lr 4/12/2010 17:49",
-		"scan1" : "lr 4/12/2010 17:49",
-		"scan2" : "lr 4/12/2010 17:49",
-		"scan3" : "lr 4/12/2010 17:49",
-		"scanForToken" : "lr 4/12/2010 17:49" } }
+		"emptySymbolTokenId" : "ThierryGoubier 1/22/2014 14:34:17",
+		"errorTokenId" : "ThierryGoubier 1/22/2014 14:34:17",
+		"scan1" : "ThierryGoubier 1/22/2014 14:34:17",
+		"scan2" : "ThierryGoubier 1/22/2014 14:34:17",
+		"scan3" : "ThierryGoubier 1/22/2014 14:34:17",
+		"scanForToken" : "ThierryGoubier 1/22/2014 14:34:17" } }

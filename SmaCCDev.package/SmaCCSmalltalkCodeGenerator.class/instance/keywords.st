@@ -5,7 +5,7 @@ keywords
 	^ SmaCCParseNode allSelectors
 		inject: #('self' 'super' 'nil' 'true' 'false') asSet
 		into: [ :sum :each | 
-			(each argumentCount <= 1 and: [ each isInfix not ])
+			(each numArgs and: [ each isInfix not ])
 				ifTrue: [ 
 					sum
 						add:

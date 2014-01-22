@@ -2,14 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"addProduction:" : "",
-		"calculateFirstTerminals" : "",
-		"initialize" : "",
-		"isEmpty" : "",
-		"isTerminal" : "",
-		"modelTypes:" : "",
-		"name:" : " 6/1/07 21:19",
-		"positionOf:" : "",
-		"productionsDo:" : "",
-		"returnsVariableCollection" : "",
-		"size" : "" } }
+		"addProduction:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"calculateFirstTerminals" : "ThierryGoubier 1/22/2014 14:34:17",
+		"initialize" : "ThierryGoubier 1/22/2014 14:34:17",
+		"isEmpty" : "ThierryGoubier 1/22/2014 14:34:17",
+		"isTerminal" : "ThierryGoubier 1/22/2014 14:34:17",
+		"modelTypes:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"name:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"positionOf:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"productionsDo:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"returnsVariableCollection" : "ThierryGoubier 1/22/2014 14:34:17",
+		"size" : "ThierryGoubier 1/22/2014 14:34:17" } }

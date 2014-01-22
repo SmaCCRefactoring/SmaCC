@@ -1,11 +1,11 @@
 {
 	"class" : {
-		"scannerDefinitionComment" : "lr 4/12/2010 17:49" },
+		"scannerDefinitionComment" : "ThierryGoubier 1/22/2014 14:34:17" },
 	"instance" : {
-		"emptySymbolTokenId" : "lr 4/12/2010 17:49",
-		"errorTokenId" : "lr 4/12/2010 17:49",
-		"scan1" : "lr 4/12/2010 17:49",
-		"scan2" : "lr 4/12/2010 17:49",
-		"scan3" : "lr 4/12/2010 17:49",
-		"scan4" : "lr 4/12/2010 17:49",
-		"scanForToken" : "lr 4/12/2010 17:49" } }
+		"emptySymbolTokenId" : "ThierryGoubier 1/22/2014 14:34:17",
+		"errorTokenId" : "ThierryGoubier 1/22/2014 14:34:17",
+		"scan1" : "ThierryGoubier 1/22/2014 14:34:17",
+		"scan2" : "ThierryGoubier 1/22/2014 14:34:17",
+		"scan3" : "ThierryGoubier 1/22/2014 14:34:17",
+		"scan4" : "ThierryGoubier 1/22/2014 14:34:17",
+		"scanForToken" : "ThierryGoubier 1/22/2014 14:34:17" } }

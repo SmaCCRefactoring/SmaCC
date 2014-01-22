@@ -3,9 +3,7 @@ basicCompileSourceFor: aSmaCCReduceAction
 	| parseTree rewriter methodName existing |
 	parseTree := RBParser parseExpression: aSmaCCReduceAction rhs reduceAction source.
 	(parseTree isLiteralNode
-		and: [ 
-			parseTree value isSymbol
-				and: [ parseTree value argumentCount <= 1 and: [ self parserClass definesMethod: parseTree value ] ] ])
+		and: [ parseTree value isSymbol and: [ parseTree value numArgs <= 1 and: [ self parserClass definesMethod: parseTree value ] ] ])
 		ifTrue: [ ^ parseTree value ].
 	rewriter := self parseTreeRewriterFor: aSmaCCReduceAction rhs.
 	rewriter executeTree: parseTree.

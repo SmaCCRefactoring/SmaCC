@@ -1,18 +1,18 @@
 {
 	"class" : {
-		"characters:" : "",
-		"sortedCharactersFor:" : "lr 1/6/2007 22:50" },
+		"characters:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"sortedCharactersFor:" : "ThierryGoubier 1/22/2014 14:34:17" },
 	"instance" : {
-		"asNFAStartingWith:" : "",
-		"assignCharacters:" : "",
-		"canMergeWith:" : "",
-		"characters" : "",
-		"characters:" : "",
-		"initialize" : "",
-		"makeCaseInsensitive" : "",
-		"matchingCharacters" : "",
-		"possibleMatchesDo:on:" : "",
-		"possibleMatchesSize" : "",
-		"printCharacter:on:" : "",
-		"printOn:" : "",
-		"|" : "" } }
+		"asNFAStartingWith:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"assignCharacters:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"canMergeWith:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"characters" : "ThierryGoubier 1/22/2014 14:34:17",
+		"characters:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"initialize" : "ThierryGoubier 1/22/2014 14:34:17",
+		"makeCaseInsensitive" : "ThierryGoubier 1/22/2014 14:34:17",
+		"matchingCharacters" : "ThierryGoubier 1/22/2014 14:34:17",
+		"possibleMatchesDo:on:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"possibleMatchesSize" : "ThierryGoubier 1/22/2014 14:34:17",
+		"printCharacter:on:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"printOn:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"|" : "ThierryGoubier 1/22/2014 14:34:17" } }
