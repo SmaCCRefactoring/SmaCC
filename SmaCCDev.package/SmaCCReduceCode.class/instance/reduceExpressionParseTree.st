@@ -1,3 +1,3 @@
 public
 reduceExpressionParseTree
-	^SmalltalkParser parseExpression: self source
+	^ RBParser parseExpression: self source

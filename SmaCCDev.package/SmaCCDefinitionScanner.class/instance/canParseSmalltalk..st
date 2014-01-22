@@ -1,4 +1,4 @@
 public
 canParseSmalltalk: aString
-	SmalltalkParser parseExpression: aString onError: [:error :pos | ^false].
-	^true
+	RBParser parseExpression: aString onError: [ :error :pos | ^ false ].
+	^ true

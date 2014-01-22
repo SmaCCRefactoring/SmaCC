@@ -2,12 +2,11 @@ private
 verifyCodeToken: codeToken for: aSmaCCRHS
 	| code |
 	code := codeToken value copyFrom: 2 to: codeToken value size - 1.
-	SmalltalkParser
+	RBParser
 		parseExpression: code
-		onError:
-			[:string :position | 
+		onError: [ :string :position | 
 			currentToken := nil.
 			self position: codeToken startPosition + position.
-			self reportErrorMessage: string].
+			self reportErrorMessage: string ].
 	aSmaCCRHS reduceActionSource: code.
-	^aSmaCCRHS
+	^ aSmaCCRHS
