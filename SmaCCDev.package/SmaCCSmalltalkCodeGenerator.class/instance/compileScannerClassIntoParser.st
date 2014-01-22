@@ -8,4 +8,4 @@ compileScannerClassIntoParser
 		tab;
 		nextPutAll: '^';
 		nextPutAll: scannerClass name.
-	parserClass metaclass compile: stream contents classified: #'generated-accessing'
+	parserClass theMetaClass compile: stream contents classified: #'generated-accessing'

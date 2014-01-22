@@ -13,4 +13,4 @@
 	"pools" : [
 		 ],
 	"super" : "Set",
-	"type" : "variable" }
+	"type" : "normal" }

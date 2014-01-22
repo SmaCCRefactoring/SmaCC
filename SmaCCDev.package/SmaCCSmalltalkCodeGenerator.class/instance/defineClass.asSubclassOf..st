@@ -17,5 +17,5 @@ defineClass: aString asSubclassOf: aBehavior
 	model
 		defineClass:
 			aBehavior name , ' subclass: #' , aString , ' instanceVariableNames: ''' , variables
-				, ''' classVariableNames: '''' poolDictionaries: '''' '.
+				, ''' classVariableNames: '''' poolDictionaries: '''' category: ''SmaCCDev'''.
 	^model classNamed: aString asSymbol

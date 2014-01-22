@@ -5,4 +5,4 @@ compileDefinitionComment: aString
 		nextPutLine: (self method: #definitionComment type: self voidType);
 		nextPutLine: (self comment: aString);
 		endMethod.
-	self compileMethodWithoutFormattingIn: parserClass metaclass
+	self compileMethodWithoutFormattingIn: parserClass theMetaClass

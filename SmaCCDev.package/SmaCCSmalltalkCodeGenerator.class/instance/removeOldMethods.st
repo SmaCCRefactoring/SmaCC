@@ -2,6 +2,6 @@ compiling
 removeOldMethods
 	self
 		removeOldMethodsFrom: scannerClass;
-		removeOldMethodsFrom: scannerClass metaclass;
+		removeOldMethodsFrom: scannerClass theMetaClass;
 		removeOldMethodsFrom: parserClass;
-		removeOldMethodsFrom: parserClass metaclass
+		removeOldMethodsFrom: parserClass theMetaClass

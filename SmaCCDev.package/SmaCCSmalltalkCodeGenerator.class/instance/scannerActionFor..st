@@ -5,6 +5,6 @@ scannerActionFor: aString
 		ifFalse: [ ^ nil ].
 	selector := (aString copyFrom: 2 to: aString size - 1) asSymbol.
 	^ (scannerClass notNil
-		and: [ (scannerClass definesMethod: selector) and: [ (Object canUnderstand: selector) not and: [ selector argumentCount = 0 ] ] ])
+		and: [ (scannerClass definesMethod: selector) and: [ (Object canUnderstand: selector) not and: [ selector isUnary ] ] ])
 		ifTrue: [ selector ]
 		ifFalse: [ nil ]

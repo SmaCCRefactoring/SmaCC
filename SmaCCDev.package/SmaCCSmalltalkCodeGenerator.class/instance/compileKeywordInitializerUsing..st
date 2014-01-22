@@ -22,6 +22,6 @@ compileKeywordInitializerUsing: keywordMapDictionary
 	stream
 		nextPutAll:
 			' do: [:each | (keywordMap at: each first ifAbsentPut: [Dictionary new]) at: (each at: 2) put: each last]. ^keywordMap'.
-	scannerClass metaclass
+	scannerClass theMetaClass
 		compile: (RBParser parseMethod: stream contents) formattedCode
 		classified: #'generated-initialization'

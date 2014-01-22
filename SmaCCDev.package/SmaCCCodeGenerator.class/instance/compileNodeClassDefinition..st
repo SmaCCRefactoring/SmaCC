@@ -6,4 +6,4 @@ compileNodeClassDefinition: aSmaCCClassDefinition
 		asSubclassOf: (self model classNamed: aSmaCCClassDefinition superclassName asSymbol).
 	aSmaCCClassDefinition modelClass: class.
 	self removeOldMethodsFrom: class.
-	self removeOldMethodsFrom: class metaclass
+	self removeOldMethodsFrom: class theMetaClass

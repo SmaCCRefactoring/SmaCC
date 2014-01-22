@@ -5,7 +5,7 @@ compileVisitor
 		defineClass: grammar rootDefinition fullName , 'Visitor'
 		asSubclassOf: (self codeGenerator model classFor: SmaCCParseNodeVisitor).
 	self codeGenerator removeOldMethodsFrom: class.
-	self codeGenerator removeOldMethodsFrom: class metaclass.
+	self codeGenerator removeOldMethodsFrom: class theMetaClass.
 	(SmaCCVisitorClassDefinition forClassDefinitions: classes)
 		grammar: grammar;
 		modelClass: class;
