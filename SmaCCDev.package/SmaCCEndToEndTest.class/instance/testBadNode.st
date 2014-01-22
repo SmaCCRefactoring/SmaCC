@@ -12,5 +12,5 @@ testBadNode
 		andParser: 'TestParser'.
 	node := self parserClass parse: 'c a  a a'.
 	self assert: node c startPosition = 1.
-	self assert: node as size = 3.
-	self checkTokensAreInOrder: node as
+	self assert: node _as size = 3.
+	self checkTokensAreInOrder: node _as

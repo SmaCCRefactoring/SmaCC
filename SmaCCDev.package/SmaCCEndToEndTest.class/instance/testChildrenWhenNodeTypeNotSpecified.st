@@ -24,4 +24,4 @@ testChildrenWhenNodeTypeNotSpecified
 	node := self parserClass parse: '1 + 2;'.
 	self assert: node children size = 2.
 	values := #('1' '2') asSet.
-	node children do: [:each | values remove: each value value]
+	node children do: [:each | values remove: each _value value]
