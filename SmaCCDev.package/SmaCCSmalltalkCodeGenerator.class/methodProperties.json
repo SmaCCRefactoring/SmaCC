@@ -5,7 +5,7 @@
 		"typeName" : "" },
 	"instance" : {
 		"acceptStateEdge:" : "",
-		"addImplementationSpecificRewritesTo:" : "",
+		"addImplementationSpecificRewritesTo:" : "ThierryGoubier 1/22/2014 13:24",
 		"addTimesRepeatOptimizationTo:" : "",
 		"addVariable:forDefinition:" : "",
 		"basicCompileSourceFor:" : "ThierryGoubier 1/22/2014 10:38",
@@ -37,7 +37,7 @@
 		"generatedMethodsIn:" : "",
 		"hasLiteralByteArrays" : "",
 		"initialize" : "",
-		"initializeIsExpressions" : "",
+		"initializeIsExpressions" : "ThierryGoubier 1/22/2014 13:37",
 		"keywords" : "ThierryGoubier 1/22/2014 10:42",
 		"method:type:" : "",
 		"method:type:argumentName:argumentType:" : "",

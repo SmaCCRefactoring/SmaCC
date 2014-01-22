@@ -7,7 +7,7 @@ initializeIsExpressions
 	isExpressions := Dictionary new.
 	selectors := Character selectors
 		select:
-			[:each | ('is*' match: each) and: [each argumentCount = 0 and: [(each at: 3) isUppercase]]].
+			[:each | ('is*' match: each) and: [each isUnary and: [(each at: 3) isUppercase]]].
 	selectors
 		do:
 			[:sel | 

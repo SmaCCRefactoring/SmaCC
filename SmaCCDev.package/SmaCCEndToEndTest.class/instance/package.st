@@ -1,3 +1,3 @@
 private
 package
-	^ RPackageOrganizer current packageOfClass: self class
+	^ RPackageOrganizer default packageOf: self class
