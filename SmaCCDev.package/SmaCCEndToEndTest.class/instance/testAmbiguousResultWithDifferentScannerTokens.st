@@ -3,17 +3,18 @@ testAmbiguousResultWithDifferentScannerTokens
 	| parserCompiler results result |
 	parserCompiler := SmaCCGrammarCompiler new.
 	parserCompiler
-		buildDefinition: '%id <a> <aa>;
+		buildDefinition:
+			'%id <a> <aa>;
 			<a> : a ; <aa> : aa;
 			%glr;
 			List : Item {''1''} | List Item {''1'' + ''2''} ;
 			Item : <a> {1} | <aa> {1.5};
 			'.
-	parserCompiler compileInto: 'TestScanner'
-		andParser: 'TestParser'.
+	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
 	self parserClass compile: 'alwaysPerformReduceAction ^true'.
 	self parserClass
-		compile: 'actionsForCurrentToken 
+		compile:
+			'actionsForCurrentToken 
 		| oldToken oldPosition |
 		(currentToken ids includes: scanner aaId) ifTrue: [
 			oldToken := currentToken.
@@ -26,12 +27,11 @@ testAmbiguousResultWithDifferentScannerTokens
 		].
 		^super actionsForCurrentToken'.
 	self assert: (self parserClass parse: 'a') = 1.
-	[result := self parserClass parse: 'aa'] on: SmaCCAmbiguousResultNotification
-		do: 
-			[:ex |
-			results := ex tag
-						collect: [:each | each performOnSmaCCParser: ex parser].
-			ex resume: 0].
+	[ result := self parserClass parse: 'aa' ]
+		on: SmaCCAmbiguousResultNotification
+		do: [ :ex | 
+			results := ex tag collect: [ :each | each performOnSmaCCParser: ex parser ].
+			ex resume: 0 ].
 	self assert: result = 0.
 	self assert: results size = 2.
 	self assert: (results includes: 2).
