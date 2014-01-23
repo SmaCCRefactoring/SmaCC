@@ -1,5 +1,3 @@
 signalling
 signal: aTag with: aText
-	^ self new
-		tag: aText;
-		signal: aTag
+	^ (self new tag: aText) signal: aTag
