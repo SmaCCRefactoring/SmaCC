@@ -1,3 +1,0 @@
-private
-hasNamedVariable
-	^variableNameMap notEmpty

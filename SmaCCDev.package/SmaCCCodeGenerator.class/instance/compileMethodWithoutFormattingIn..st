@@ -1,3 +1,0 @@
-compiling
-compileMethodWithoutFormattingIn: modelClass
-	self subclassResponsibility

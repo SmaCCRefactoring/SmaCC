@@ -1,3 +1,0 @@
-compiling
-compileMethodIn: modelClass
-	self compileMethodWithoutFormattingIn: modelClass

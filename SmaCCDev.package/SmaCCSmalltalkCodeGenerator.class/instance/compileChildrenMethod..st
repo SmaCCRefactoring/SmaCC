@@ -1,2 +1,0 @@
-compiling
-compileChildrenMethod: aSmaCCNodeClassDefinition

@@ -1,3 +1,0 @@
-private
-isTerminal
-	^self subclassResponsibility

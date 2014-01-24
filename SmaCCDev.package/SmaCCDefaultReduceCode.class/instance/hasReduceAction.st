@@ -1,3 +1,0 @@
-private
-hasReduceAction
-	^false

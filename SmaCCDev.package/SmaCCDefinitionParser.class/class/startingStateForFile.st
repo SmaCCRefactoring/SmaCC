@@ -1,3 +1,0 @@
-generated
-startingStateForFile
-	^1

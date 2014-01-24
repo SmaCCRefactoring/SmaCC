@@ -1,3 +1,0 @@
-private
-returnsVariableCollection
-	^reduceAction returnsVariableCollection

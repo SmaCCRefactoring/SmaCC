@@ -1,3 +1,0 @@
-private
-hasNodeClassDefinition
-	^self nodeClassDefinition notNil

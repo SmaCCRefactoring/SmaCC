@@ -1,3 +1,0 @@
-code
-endIteratorString
-	^self endConditionalString

@@ -1,3 +1,0 @@
-compiling
-compilePostCopyMethod
-	self codeGenerator compilePostCopyMethod: self

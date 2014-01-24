@@ -1,3 +1,0 @@
-private
-basicCompileSourceFor: aSmaCCReduceAction
-	self subclassResponsibility

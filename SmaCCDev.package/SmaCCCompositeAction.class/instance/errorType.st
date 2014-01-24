@@ -1,3 +1,0 @@
-error
-errorType
-	self subclassResponsibility

@@ -1,3 +1,0 @@
-compiling
-compileChanges
-	self subclassResponsibility

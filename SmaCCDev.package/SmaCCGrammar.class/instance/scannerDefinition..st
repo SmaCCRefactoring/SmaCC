@@ -1,3 +1,0 @@
-initialize
-scannerDefinition: aSmaCCScannerDefinition
-	scannerDefinition := aSmaCCScannerDefinition

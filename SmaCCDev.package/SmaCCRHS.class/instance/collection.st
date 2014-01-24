@@ -1,3 +1,0 @@
-private
-collection
-	^collection

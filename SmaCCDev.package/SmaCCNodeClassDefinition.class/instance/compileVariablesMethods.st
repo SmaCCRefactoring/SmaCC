@@ -1,3 +1,0 @@
-compiling
-compileVariablesMethods
-	self codeGenerator compileVariablesMethods: self

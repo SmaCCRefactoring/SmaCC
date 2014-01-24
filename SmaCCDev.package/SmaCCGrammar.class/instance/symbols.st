@@ -1,3 +1,0 @@
-private
-symbols
-	^symbols

@@ -1,3 +1,0 @@
-private
-isRoot
-	^isRoot

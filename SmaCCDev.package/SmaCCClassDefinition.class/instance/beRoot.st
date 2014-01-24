@@ -1,3 +1,0 @@
-accessing
-beRoot
-	isRoot := true

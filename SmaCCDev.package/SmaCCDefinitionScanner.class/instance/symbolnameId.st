@@ -1,3 +1,0 @@
-generated
-symbolnameId
-	^26

@@ -1,3 +1,0 @@
-code
-variableReference: aSmaCCVariableDefinition in: aString
-	self subclassResponsibility

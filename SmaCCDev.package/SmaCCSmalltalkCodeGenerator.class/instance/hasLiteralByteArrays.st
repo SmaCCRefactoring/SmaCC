@@ -1,3 +1,0 @@
-private
-hasLiteralByteArrays
-	^true

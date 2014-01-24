@@ -1,3 +1,0 @@
-private
-rootClassName
-	^SmaCCParseNode name

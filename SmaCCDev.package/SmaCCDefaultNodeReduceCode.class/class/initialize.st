@@ -1,3 +1,0 @@
-class
-initialize
-	IsCaching := false

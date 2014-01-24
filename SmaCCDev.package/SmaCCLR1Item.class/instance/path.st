@@ -1,3 +1,0 @@
-accessing
-path
-	^itemSet path

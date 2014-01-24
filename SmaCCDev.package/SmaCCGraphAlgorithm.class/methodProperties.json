@@ -1,8 +1,0 @@
-{
-	"class" : {
-		"new" : "ThierryGoubier 1/22/2014 14:34:17" },
-	"instance" : {
-		"createMergedNodeFrom:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"initialize" : "ThierryGoubier 1/22/2014 14:34:17",
-		"mergeActionsFrom:into:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"mergeTransitionsFrom:into:" : "ThierryGoubier 1/22/2014 14:34:17" } }

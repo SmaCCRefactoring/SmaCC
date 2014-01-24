@@ -1,3 +1,0 @@
-private
-ignoreCase
-	^ignoreCase

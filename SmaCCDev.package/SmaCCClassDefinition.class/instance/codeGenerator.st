@@ -1,3 +1,0 @@
-accessing
-codeGenerator
-	^grammar codeGenerator

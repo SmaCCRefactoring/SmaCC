@@ -1,3 +1,0 @@
-private
-isEmpty
-	^productions isEmpty

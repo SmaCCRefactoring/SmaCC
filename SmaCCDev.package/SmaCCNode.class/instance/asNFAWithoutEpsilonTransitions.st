@@ -1,3 +1,0 @@
-converting
-asNFAWithoutEpsilonTransitions
-	^SmaCCEpsilonRemoval removeEpsilonEdgesFrom: self

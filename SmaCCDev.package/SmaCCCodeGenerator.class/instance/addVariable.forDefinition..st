@@ -1,3 +1,0 @@
-private
-addVariable: aSmaCCVariableDefinition forDefinition: aSmaCCNodeClassDefinition
-	self subclassResponsibility
