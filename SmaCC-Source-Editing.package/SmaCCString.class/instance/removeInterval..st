@@ -1,0 +1,3 @@
+editing
+removeInterval: startInterval
+	^startInterval convertToRemoved
