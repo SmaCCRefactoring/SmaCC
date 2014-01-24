@@ -1,0 +1,3 @@
+accessing
+scannerClass
+	^self subclassResponsibility

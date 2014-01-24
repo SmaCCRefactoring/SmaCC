@@ -1,0 +1,3 @@
+private
+isWritable
+	^sourceStream isWritable

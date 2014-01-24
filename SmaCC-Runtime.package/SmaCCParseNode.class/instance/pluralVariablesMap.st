@@ -1,0 +1,3 @@
+public
+pluralVariablesMap
+	^ Dictionary new

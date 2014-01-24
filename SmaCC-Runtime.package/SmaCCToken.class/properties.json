@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-Runtime",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"start",
+		"ids",
+		"value" ],
+	"name" : "SmaCCToken",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

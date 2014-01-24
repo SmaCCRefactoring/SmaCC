@@ -1,0 +1,3 @@
+accessing
+scanForToken
+	^self subclassResponsibility

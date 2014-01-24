@@ -1,0 +1,3 @@
+private
+atEnd
+	^stream atEnd

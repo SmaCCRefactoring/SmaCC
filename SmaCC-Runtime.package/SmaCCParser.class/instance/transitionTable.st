@@ -1,0 +1,3 @@
+accessing
+transitionTable
+	^self subclassResponsibility

@@ -1,0 +1,3 @@
+private
+isListMatch
+	^patternToken isListMatch
