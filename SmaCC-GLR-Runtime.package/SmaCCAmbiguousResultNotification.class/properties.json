@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-GLR-Runtime",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"parser" ],
+	"name" : "SmaCCAmbiguousResultNotification",
+	"pools" : [
+		 ],
+	"super" : "Notification",
+	"type" : "normal" }

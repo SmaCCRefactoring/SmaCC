@@ -1,0 +1,15 @@
+{
+	"category" : "SmaCC-GLR-Runtime",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"selector",
+		"arguments" ],
+	"name" : "SmaCCDeferredReduceAction",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
