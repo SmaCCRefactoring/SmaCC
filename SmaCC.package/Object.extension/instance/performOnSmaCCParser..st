@@ -1,3 +1,0 @@
-*smacc
-performOnSmaCCParser: aSmaCCParser
-	^self
