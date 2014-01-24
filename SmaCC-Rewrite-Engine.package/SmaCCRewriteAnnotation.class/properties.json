@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-Rewrite-Engine",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"nodeClass",
+		"nodeInterval",
+		"rewrite" ],
+	"name" : "SmaCCRewriteAnnotation",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

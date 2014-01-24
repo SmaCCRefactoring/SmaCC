@@ -1,0 +1,22 @@
+{
+	"category" : "SmaCC-Rewrite-Engine",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Debug",
+		"HaltBlock" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"rules",
+		"parserClass",
+		"inputDirectory",
+		"outputDirectory",
+		"files",
+		"validationParserClass",
+		"rewriteEngine",
+		"baseDirectory" ],
+	"name" : "SmaCCRewriteProcessor",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

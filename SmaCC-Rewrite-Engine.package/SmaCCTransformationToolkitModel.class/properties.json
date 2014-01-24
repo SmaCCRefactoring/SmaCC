@@ -1,0 +1,22 @@
+{
+	"category" : "SmaCC-Rewrite-Engine",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"modified",
+		"files",
+		"inputParserClass",
+		"validationParserClass",
+		"rewrites",
+		"outputDirectory",
+		"server",
+		"runOnServer",
+		"createSubdirectories" ],
+	"name" : "SmaCCTransformationToolkitModel",
+	"pools" : [
+		 ],
+	"super" : "Model",
+	"type" : "normal" }
