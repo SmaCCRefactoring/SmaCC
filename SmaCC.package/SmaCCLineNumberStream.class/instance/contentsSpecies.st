@@ -1,3 +1,0 @@
-private
-contentsSpecies
-	^sourceStream contentsSpecies

@@ -1,3 +1,0 @@
-accessing
-flush
-	^sourceStream flush

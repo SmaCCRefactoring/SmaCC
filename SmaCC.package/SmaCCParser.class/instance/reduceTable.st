@@ -1,3 +1,0 @@
-accessing
-reduceTable
-	^self subclassResponsibility

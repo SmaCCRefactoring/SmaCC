@@ -1,3 +1,0 @@
-accessing
-frequencyTable
-	^#(1)

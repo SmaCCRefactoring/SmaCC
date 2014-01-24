@@ -1,3 +1,0 @@
-file
-fileExtensionType
-	^'All files'

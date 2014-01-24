@@ -1,3 +1,0 @@
-accessing
-errorTokenId
-	^scanner errorTokenId

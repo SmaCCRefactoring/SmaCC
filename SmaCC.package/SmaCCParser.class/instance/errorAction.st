@@ -1,3 +1,0 @@
-private
-errorAction
-	^3

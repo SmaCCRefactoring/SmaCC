@@ -1,3 +1,0 @@
-private
-popNodeStack
-	^nodeStack removeLast

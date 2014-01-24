@@ -1,3 +1,0 @@
-private
-isAccepted
-	^isAccepted

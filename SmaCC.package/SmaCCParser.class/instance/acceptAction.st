@@ -1,3 +1,0 @@
-private
-acceptAction
-	^0

@@ -1,3 +1,0 @@
-class
-initialize
-	self initializeKeywordMap

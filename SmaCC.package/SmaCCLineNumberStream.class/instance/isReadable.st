@@ -1,3 +1,0 @@
-private
-isReadable
-	^sourceStream isReadable

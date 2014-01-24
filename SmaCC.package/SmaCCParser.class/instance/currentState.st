@@ -1,3 +1,0 @@
-private
-currentState
-	^stateStack last
