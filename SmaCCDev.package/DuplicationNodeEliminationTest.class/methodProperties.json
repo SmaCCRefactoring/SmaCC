@@ -1,8 +1,0 @@
-{
-	"class" : {
-		 },
-	"instance" : {
-		"testDuplicateLoop" : "ThierryGoubier 1/22/2014 14:34:17",
-		"testNoDuplicates" : "ThierryGoubier 1/22/2014 14:34:17",
-		"testSimpleDuplicateWithEdges" : "ThierryGoubier 1/22/2014 14:34:17",
-		"testSimpleTerminalDuplicate" : "ThierryGoubier 1/22/2014 14:34:17" } }
