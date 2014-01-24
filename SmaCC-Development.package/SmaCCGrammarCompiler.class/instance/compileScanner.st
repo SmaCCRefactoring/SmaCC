@@ -1,0 +1,3 @@
+compiling
+compileScanner
+	scannerCompiler compileScanner

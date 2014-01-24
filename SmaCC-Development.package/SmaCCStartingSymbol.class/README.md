@@ -1,0 +1,1 @@
+SmaCCStartingSymbol is the starting symbol in the grammar. A grammar can only have one starting symbol, but it can have may different starting item sets.

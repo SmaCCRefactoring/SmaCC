@@ -1,0 +1,3 @@
+private
+hasReduceAction
+	^reduceAction hasReduceAction

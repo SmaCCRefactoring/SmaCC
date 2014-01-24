@@ -1,0 +1,3 @@
+private
+isReduce
+	^true

@@ -1,0 +1,17 @@
+{
+	"category" : "SmaCC-Development",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "jmb",
+	"instvars" : [
+		"rhs",
+		"location",
+		"followers",
+		"itemSet" ],
+	"name" : "SmaCCLR1Item",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

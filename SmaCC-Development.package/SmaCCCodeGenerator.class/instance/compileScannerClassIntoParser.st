@@ -1,0 +1,3 @@
+compiling
+compileScannerClassIntoParser
+	self subclassResponsibility

@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-Development",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "jmb",
+	"instvars" : [
+		"node",
+		"minimumMatches",
+		"maximumMatches" ],
+	"name" : "SmaCCRepeatingRENode",
+	"pools" : [
+		 ],
+	"super" : "SmaCCRegularExpressionNode",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+private
+isEpsilonTransition
+	^transitionObjects isNil

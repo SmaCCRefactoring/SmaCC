@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-Development",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "jmb",
+	"instvars" : [
+		"type",
+		"previousItemSets",
+		"grammar" ],
+	"name" : "SmaCCItemSet",
+	"pools" : [
+		 ],
+	"super" : "Set",
+	"type" : "normal" }

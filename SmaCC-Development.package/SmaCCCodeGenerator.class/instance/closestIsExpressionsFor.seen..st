@@ -1,0 +1,3 @@
+compiling
+closestIsExpressionsFor: aSmaCCCharacterEdge seen: anObject
+	self subclassResponsibility

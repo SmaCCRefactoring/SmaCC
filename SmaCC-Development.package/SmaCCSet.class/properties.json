@@ -1,0 +1,15 @@
+{
+	"category" : "SmaCC-Development",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"characters",
+		"objects" ],
+	"name" : "SmaCCSet",
+	"pools" : [
+		 ],
+	"super" : "Collection",
+	"type" : "normal" }

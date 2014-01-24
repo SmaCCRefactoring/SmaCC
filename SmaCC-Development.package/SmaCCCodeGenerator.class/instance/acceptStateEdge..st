@@ -1,0 +1,3 @@
+compiling
+acceptStateEdge: aSmaCCStateEdge
+	self subclassResponsibility

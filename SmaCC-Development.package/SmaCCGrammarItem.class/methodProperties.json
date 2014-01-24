@@ -1,0 +1,27 @@
+{
+	"class" : {
+		"new" : "ThierryGoubier 1/22/2014 14:34:17" },
+	"instance" : {
+		"annotateTokenVariables:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"basicModelTypesForVariable:into:seen:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"collectionVariableDefinitions" : "ThierryGoubier 1/22/2014 14:34:17",
+		"computeVariableDefinitions" : "ThierryGoubier 1/22/2014 14:34:17",
+		"firstTerminals" : "ThierryGoubier 1/22/2014 14:34:17",
+		"grammar" : "ThierryGoubier 1/22/2014 14:34:17",
+		"grammar:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"hasVariableNamed:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"indexOfVariable:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"isCollection:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"isNode" : "ThierryGoubier 1/22/2014 14:34:17",
+		"isSubtypeOf:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"model" : "ThierryGoubier 1/22/2014 14:34:17",
+		"modelType" : "ThierryGoubier 1/22/2014 14:34:17",
+		"modelType:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"modelTypes" : "ThierryGoubier 1/22/2014 14:34:17",
+		"modelTypes:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"modelTypesForVariable:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"modelTypesForVariable:seen:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"nodeType" : "ThierryGoubier 1/22/2014 14:34:17",
+		"nodeType:" : "ThierryGoubier 1/22/2014 14:34:17",
+		"returnsVariableCollection" : "ThierryGoubier 1/22/2014 14:34:17",
+		"variableDefinitions" : "ThierryGoubier 1/22/2014 14:34:17" } }

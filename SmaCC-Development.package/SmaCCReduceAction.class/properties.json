@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Development",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "jmb",
+	"instvars" : [
+		 ],
+	"name" : "SmaCCReduceAction",
+	"pools" : [
+		 ],
+	"super" : "SmaCCPrimitiveAction",
+	"type" : "normal" }

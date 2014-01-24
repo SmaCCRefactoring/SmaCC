@@ -1,0 +1,1 @@
+SmaCCCharacterEdge is a SmaCCEdge for Character transitions

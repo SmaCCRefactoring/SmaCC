@@ -1,0 +1,3 @@
+compiling
+compileMatchInContextMethod
+	self codeGenerator compileMatchInContextMethod: self

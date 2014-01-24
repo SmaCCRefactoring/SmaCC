@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-Development",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"action",
+		"position",
+		"states" ],
+	"name" : "SmaCCRegularExpressionNode",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

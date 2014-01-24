@@ -1,0 +1,2 @@
+compiling
+compileEqualMethod: aSmaCCNodeClassDefinition

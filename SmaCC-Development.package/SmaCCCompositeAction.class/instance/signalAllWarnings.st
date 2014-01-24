@@ -1,0 +1,3 @@
+error
+signalAllWarnings
+	self raiseXReduceNotification

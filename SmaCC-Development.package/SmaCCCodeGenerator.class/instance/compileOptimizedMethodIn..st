@@ -1,0 +1,3 @@
+compiling
+compileOptimizedMethodIn: modelClass
+	self compileMethodIn: modelClass

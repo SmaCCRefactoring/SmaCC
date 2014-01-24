@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-Development",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"grammar",
+		"classes",
+		"variableSymbols" ],
+	"name" : "SmaCCNodeCalculation",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

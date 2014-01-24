@@ -1,0 +1,3 @@
+private
+isEmpty
+	^productions isEmpty

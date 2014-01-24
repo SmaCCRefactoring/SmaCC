@@ -1,0 +1,3 @@
+compiling
+compileInitializeMethod: aSmaCCNodeClassDefinition
+	self subclassResponsibility

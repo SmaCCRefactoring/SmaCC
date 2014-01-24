@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-Development",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"NextId" ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"transitions",
+		"action",
+		"id" ],
+	"name" : "SmaCCNode",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

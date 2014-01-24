@@ -1,0 +1,3 @@
+constructing
+makeCaseInsensitive
+	node makeCaseInsensitive

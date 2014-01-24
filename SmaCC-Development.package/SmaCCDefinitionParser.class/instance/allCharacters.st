@@ -1,0 +1,3 @@
+private
+allCharacters
+	^SmaCCGrammar allCharacters

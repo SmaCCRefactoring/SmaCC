@@ -1,0 +1,4 @@
+compiling
+compileDefinitionComments
+	scannerCompiler compileScannerDefinitionComment.
+	self compileParserDefinitionComment

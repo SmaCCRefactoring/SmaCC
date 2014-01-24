@@ -1,0 +1,3 @@
+compiling
+outputStreamClass
+	^WriteStream

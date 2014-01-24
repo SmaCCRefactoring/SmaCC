@@ -1,0 +1,15 @@
+{
+	"category" : "SmaCC-Development",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "jmb",
+	"instvars" : [
+		"characters",
+		"ignoreCase" ],
+	"name" : "SmaCCCharacterRENode",
+	"pools" : [
+		 ],
+	"super" : "SmaCCRegularExpressionNode",
+	"type" : "normal" }

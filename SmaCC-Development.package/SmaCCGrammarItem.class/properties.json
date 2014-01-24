@@ -1,0 +1,15 @@
+{
+	"category" : "SmaCC-Development",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"variableDefinitions",
+		"grammar" ],
+	"name" : "SmaCCGrammarItem",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

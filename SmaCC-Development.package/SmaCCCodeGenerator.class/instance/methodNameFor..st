@@ -1,0 +1,3 @@
+private
+methodNameFor: aString
+	^aString

@@ -1,0 +1,12 @@
+compiling
+compileMethodsAndVariables
+	self
+		compileVariablesAndAccessors;
+		compileInitializeMethod;
+		compileHashMethod;
+		compileEqualMethod;
+		compilePostCopyMethod;
+		compileChildrenMethod;
+		compileCopyInContextMethod;
+		compileMatchInContextMethod;
+		compileVariablesMethods

@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Development",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "jmb",
+	"instvars" : [
+		"productions" ],
+	"name" : "SmaCCNonTerminalSymbol",
+	"pools" : [
+		 ],
+	"super" : "SmaCCSymbol",
+	"type" : "normal" }

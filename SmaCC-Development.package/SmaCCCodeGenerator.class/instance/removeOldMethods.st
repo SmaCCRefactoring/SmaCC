@@ -1,0 +1,3 @@
+compiling
+removeOldMethods
+	self subclassResponsibility
