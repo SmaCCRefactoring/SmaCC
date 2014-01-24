@@ -1,2 +1,2 @@
-(name 'SmaCC-GLR-Runtime-ThierryGoubier.1' message 'SmaCC GLR Runtime ported from SmaCC-Dolphin-2.0.3
-' id 'eb43ed09-62f2-48ef-89ab-441e1facd0cf' date '24 January 2014' time '10:04:36.333816 am' author 'ThierryGoubier' ancestors () stepChildren ())
+(name 'SmaCC-GLR-Runtime-ThierryGoubier.2' message 'Added extension' id '40a02f6a-fdc4-4dc9-8a0c-2f422d6a69d8' date '24 January 2014' time '10:09:16.559018 am' author 'ThierryGoubier' ancestors ((name 'SmaCC-GLR-Runtime-ThierryGoubier.1' message 'SmaCC GLR Runtime ported from SmaCC-Dolphin-2.0.3
+' id 'eb43ed09-62f2-48ef-89ab-441e1facd0cf' date '24 January 2014' time '10:04:36.333816 am' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
