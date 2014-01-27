@@ -1,0 +1,21 @@
+{
+	"class" : {
+		"initializeKeywordMap" : "" },
+	"instance" : {
+		"binarySymbolId" : "",
+		"emptySymbolTokenId" : "",
+		"errorTokenId" : "",
+		"nameId" : "",
+		"negativeNumber" : "",
+		"negativeNumberId" : "",
+		"number" : "",
+		"numberId" : "",
+		"scan1" : "",
+		"scan2" : "",
+		"scan3" : "",
+		"scan4" : "",
+		"scan5" : "",
+		"scanForToken" : "",
+		"scanNumber:" : "",
+		"tokenActions" : "",
+		"variableAssignment" : "" } }
