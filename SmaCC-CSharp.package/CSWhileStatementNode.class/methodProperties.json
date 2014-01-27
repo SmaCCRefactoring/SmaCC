@@ -1,0 +1,17 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"expression" : "",
+		"expression:" : "",
+		"leftParenToken" : "",
+		"leftParenToken:" : "",
+		"nodeVariables" : "",
+		"rightParenToken" : "",
+		"rightParenToken:" : "",
+		"statement" : "",
+		"statement:" : "",
+		"tokenVariables" : "",
+		"whileToken" : "",
+		"whileToken:" : "" } }

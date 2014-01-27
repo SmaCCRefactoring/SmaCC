@@ -1,0 +1,3 @@
+generated
+visitIndexerDeclaration: anIndexerDeclaration
+	^self visitDeclaration: anIndexerDeclaration

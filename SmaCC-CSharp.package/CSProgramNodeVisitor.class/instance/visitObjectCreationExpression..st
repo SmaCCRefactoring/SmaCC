@@ -1,0 +1,3 @@
+generated
+visitObjectCreationExpression: anObjectCreationExpression
+	^self visitExpression: anObjectCreationExpression

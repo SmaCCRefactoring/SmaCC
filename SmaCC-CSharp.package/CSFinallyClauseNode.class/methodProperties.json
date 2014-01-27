@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"block" : "",
+		"block:" : "",
+		"finallyToken" : "",
+		"finallyToken:" : "",
+		"nodeVariables" : "",
+		"tokenVariables" : "" } }

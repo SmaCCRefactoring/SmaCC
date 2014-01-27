@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"lhs",
+		"operator",
+		"rhs" ],
+	"name" : "CSAssignmentNode",
+	"pools" : [
+		 ],
+	"super" : "CSExpressionNode",
+	"type" : "normal" }

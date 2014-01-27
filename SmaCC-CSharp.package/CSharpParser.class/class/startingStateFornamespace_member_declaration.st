@@ -1,0 +1,3 @@
+generated
+startingStateFornamespace_member_declaration
+	^3

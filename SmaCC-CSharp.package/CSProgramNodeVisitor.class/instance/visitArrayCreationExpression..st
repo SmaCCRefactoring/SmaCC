@@ -1,0 +1,3 @@
+generated
+visitArrayCreationExpression: anArrayCreationExpression
+	^self visitExpression: anArrayCreationExpression

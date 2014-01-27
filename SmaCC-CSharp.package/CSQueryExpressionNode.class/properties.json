@@ -1,0 +1,34 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"fromTokens",
+		"types",
+		"identifierTokens",
+		"inTokens",
+		"lhses",
+		"operators",
+		"rhses",
+		"letTokens",
+		"equalTokens",
+		"whereTokens",
+		"joinTokens",
+		"onTokens",
+		"equalsTokens",
+		"intoTokens",
+		"orderbyTokens",
+		"ascendingTokens",
+		"descendingTokens",
+		"commaTokens",
+		"selectTokens",
+		"groupTokens",
+		"byTokens" ],
+	"name" : "CSQueryExpressionNode",
+	"pools" : [
+		 ],
+	"super" : "CSExpressionNode",
+	"type" : "normal" }

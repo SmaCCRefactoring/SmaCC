@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"expression" : "",
+		"expression:" : "",
+		"ignoredTokenVariables" : "",
+		"nodeVariables" : "",
+		"semicolonToken" : "",
+		"semicolonToken:" : "" } }

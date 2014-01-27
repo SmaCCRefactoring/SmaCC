@@ -1,0 +1,3 @@
+generated
+visitInterfacePropertyDeclaration: anInterfacePropertyDeclaration
+	^self visitDeclaration: anInterfacePropertyDeclaration

@@ -1,0 +1,15 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"type",
+		"timesToken" ],
+	"name" : "CSPointerTypeNode",
+	"pools" : [
+		 ],
+	"super" : "CSTypeNode",
+	"type" : "normal" }

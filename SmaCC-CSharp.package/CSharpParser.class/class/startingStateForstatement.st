@@ -1,0 +1,3 @@
+generated
+startingStateForstatement
+	^4

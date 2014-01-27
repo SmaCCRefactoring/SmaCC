@@ -1,0 +1,3 @@
+generated
+visitInterfaceMethodDeclaration: anInterfaceMethodDeclaration
+	^self visitDeclaration: anInterfaceMethodDeclaration

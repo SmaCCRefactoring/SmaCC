@@ -1,0 +1,24 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"_attributes" : "",
+		"_attributes:" : "",
+		"acceptVisitor:" : "",
+		"compositeNodeVariables" : "",
+		"compositeTokenVariables" : "",
+		"declarators" : "",
+		"declarators:" : "",
+		"fixedToken" : "",
+		"fixedToken:" : "",
+		"ignoredTokenVariables" : "",
+		"initialize" : "",
+		"modifiers" : "",
+		"modifiers:" : "",
+		"nodeVariables" : "",
+		"pluralVariablesMap" : "",
+		"semicolonToken" : "",
+		"semicolonToken:" : "",
+		"tokenVariables" : "",
+		"type" : "",
+		"type:" : "" } }

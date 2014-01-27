@@ -1,0 +1,20 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"colonToken",
+		"baseToken",
+		"leftParenToken",
+		"arguments",
+		"commaTokens",
+		"rightParenToken",
+		"thisToken" ],
+	"name" : "CSConstructorInitializerNode",
+	"pools" : [
+		 ],
+	"super" : "CSProgramNode",
+	"type" : "normal" }

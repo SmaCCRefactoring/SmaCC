@@ -1,0 +1,22 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"doToken" : "",
+		"doToken:" : "",
+		"expression" : "",
+		"expression:" : "",
+		"ignoredTokenVariables" : "",
+		"leftParenToken" : "",
+		"leftParenToken:" : "",
+		"nodeVariables" : "",
+		"rightParenToken" : "",
+		"rightParenToken:" : "",
+		"semicolonToken" : "",
+		"semicolonToken:" : "",
+		"statement" : "",
+		"statement:" : "",
+		"tokenVariables" : "",
+		"whileToken" : "",
+		"whileToken:" : "" } }

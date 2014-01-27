@@ -1,0 +1,26 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"_attributes",
+		"modifiers",
+		"enumToken",
+		"name",
+		"colonToken",
+		"type",
+		"leftBrace",
+		"declarations",
+		"commas",
+		"rightBrace",
+		"semicolon",
+		"equal",
+		"value" ],
+	"name" : "CSEnumDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "CSDeclarationNode",
+	"type" : "normal" }

@@ -1,0 +1,15 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"declaration",
+		"semicolonToken" ],
+	"name" : "CSDeclarationStatementNode",
+	"pools" : [
+		 ],
+	"super" : "CSStatementNode",
+	"type" : "normal" }

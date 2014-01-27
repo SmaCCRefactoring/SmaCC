@@ -1,0 +1,27 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"arrayInitializer" : "",
+		"arrayInitializer:" : "",
+		"commaTokens" : "",
+		"commaTokens:" : "",
+		"compositeNodeVariables" : "",
+		"expressions" : "",
+		"expressions:" : "",
+		"ignoredCompositeTokenVariables" : "",
+		"initialize" : "",
+		"leftBracketToken" : "",
+		"leftBracketToken:" : "",
+		"newToken" : "",
+		"newToken:" : "",
+		"nodeVariables" : "",
+		"pluralVariablesMap" : "",
+		"rankSpecifiers" : "",
+		"rankSpecifiers:" : "",
+		"rightBracketToken" : "",
+		"rightBracketToken:" : "",
+		"tokenVariables" : "",
+		"type" : "",
+		"type:" : "" } }

@@ -1,0 +1,23 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"expression" : "",
+		"expression:" : "",
+		"foreachToken" : "",
+		"foreachToken:" : "",
+		"inToken" : "",
+		"inToken:" : "",
+		"leftParenToken" : "",
+		"leftParenToken:" : "",
+		"name" : "",
+		"name:" : "",
+		"nodeVariables" : "",
+		"rightParenToken" : "",
+		"rightParenToken:" : "",
+		"statement" : "",
+		"statement:" : "",
+		"tokenVariables" : "",
+		"type" : "",
+		"type:" : "" } }

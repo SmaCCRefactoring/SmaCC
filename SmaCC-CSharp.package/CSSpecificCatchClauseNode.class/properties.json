@@ -1,0 +1,19 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"catchToken",
+		"leftParenToken",
+		"type",
+		"name",
+		"rightParenToken",
+		"block" ],
+	"name" : "CSSpecificCatchClauseNode",
+	"pools" : [
+		 ],
+	"super" : "CSProgramNode",
+	"type" : "normal" }

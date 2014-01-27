@@ -1,0 +1,18 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"yieldToken",
+		"returnToken",
+		"expression",
+		"semicolonToken",
+		"breakToken" ],
+	"name" : "CSYieldStatementNode",
+	"pools" : [
+		 ],
+	"super" : "CSStatementNode",
+	"type" : "normal" }

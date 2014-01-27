@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "CSProgramNodeVisitor",
+	"pools" : [
+		 ],
+	"super" : "SmaCCParseNodeVisitor",
+	"type" : "normal" }

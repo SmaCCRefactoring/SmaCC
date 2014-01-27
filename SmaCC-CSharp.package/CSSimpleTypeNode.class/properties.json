@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"token" ],
+	"name" : "CSSimpleTypeNode",
+	"pools" : [
+		 ],
+	"super" : "CSTypeNode",
+	"type" : "normal" }

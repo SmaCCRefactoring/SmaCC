@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"caseToken" : "",
+		"caseToken:" : "",
+		"colonToken" : "",
+		"colonToken:" : "",
+		"defaultToken" : "",
+		"defaultToken:" : "",
+		"expression" : "",
+		"expression:" : "",
+		"nodeVariables" : "",
+		"tokenVariables" : "" } }

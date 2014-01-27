@@ -1,0 +1,18 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"_attributes",
+		"modifiers",
+		"setToken",
+		"body",
+		"semicolonToken" ],
+	"name" : "CSSetAccessorDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "CSProgramNode",
+	"type" : "normal" }

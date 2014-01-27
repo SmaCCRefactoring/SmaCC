@@ -1,0 +1,3 @@
+generated
+visitSetAccessorDeclaration: aSetAccessorDeclaration
+	^self visitProgram: aSetAccessorDeclaration

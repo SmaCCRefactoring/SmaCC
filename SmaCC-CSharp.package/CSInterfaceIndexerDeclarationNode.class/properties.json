@@ -1,0 +1,25 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"_attributes",
+		"modifier",
+		"type",
+		"thisToken",
+		"leftBracket",
+		"parameters",
+		"commas",
+		"rightBracket",
+		"leftBrace",
+		"getAccessor",
+		"setAccessor",
+		"rightBrace" ],
+	"name" : "CSInterfaceIndexerDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "CSDeclarationNode",
+	"type" : "normal" }

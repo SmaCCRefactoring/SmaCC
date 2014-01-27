@@ -1,0 +1,21 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"colonColonToken" : "",
+		"colonColonToken:" : "",
+		"commas" : "",
+		"commas:" : "",
+		"compositeTokenVariables" : "",
+		"gtTokens" : "",
+		"gtTokens:" : "",
+		"identifierTokens" : "",
+		"identifierTokens:" : "",
+		"initialize" : "",
+		"lessThanTokens" : "",
+		"lessThanTokens:" : "",
+		"periodTokens" : "",
+		"periodTokens:" : "",
+		"pluralVariablesMap" : "",
+		"tokenVariables" : "" } }

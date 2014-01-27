@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"leftParenToken" : "",
+		"leftParenToken:" : "",
+		"newToken" : "",
+		"newToken:" : "",
+		"rightParenToken" : "",
+		"rightParenToken:" : "",
+		"tokenVariables" : "" } }

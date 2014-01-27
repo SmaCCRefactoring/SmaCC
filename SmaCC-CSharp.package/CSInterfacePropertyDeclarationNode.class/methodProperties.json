@@ -1,0 +1,26 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"_attributes" : "",
+		"_attributes:" : "",
+		"acceptVisitor:" : "",
+		"compositeNodeVariables" : "",
+		"getAccessor" : "",
+		"getAccessor:" : "",
+		"initialize" : "",
+		"leftBrace" : "",
+		"leftBrace:" : "",
+		"modifier" : "",
+		"modifier:" : "",
+		"name" : "",
+		"name:" : "",
+		"nodeVariables" : "",
+		"pluralVariablesMap" : "",
+		"rightBrace" : "",
+		"rightBrace:" : "",
+		"setAccessor" : "",
+		"setAccessor:" : "",
+		"tokenVariables" : "",
+		"type" : "",
+		"type:" : "" } }

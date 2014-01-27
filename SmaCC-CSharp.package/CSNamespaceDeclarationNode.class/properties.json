@@ -1,0 +1,20 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"namespaceToken",
+		"identifier",
+		"leftBraceToken",
+		"directives",
+		"declarations",
+		"rightBraceToken",
+		"semicolon" ],
+	"name" : "CSNamespaceDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "CSDeclarationNode",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+generated
+iterator
+	^iterator

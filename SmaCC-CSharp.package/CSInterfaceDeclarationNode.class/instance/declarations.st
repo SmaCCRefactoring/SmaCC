@@ -1,0 +1,3 @@
+generated
+declarations
+	^declarations

@@ -1,0 +1,19 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"identifierTokens",
+		"lessThanTokens",
+		"commas",
+		"gtTokens",
+		"colonColonToken",
+		"periodTokens" ],
+	"name" : "CSUnboundTypeNameNode",
+	"pools" : [
+		 ],
+	"super" : "CSProgramNode",
+	"type" : "normal" }

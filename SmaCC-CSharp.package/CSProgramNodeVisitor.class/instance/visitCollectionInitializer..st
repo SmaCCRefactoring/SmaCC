@@ -1,0 +1,3 @@
+generated
+visitCollectionInitializer: aCollectionInitializer
+	^self visitProgram: aCollectionInitializer

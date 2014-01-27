@@ -1,0 +1,20 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"caseToken" : "",
+		"caseToken:" : "",
+		"defaultToken" : "",
+		"defaultToken:" : "",
+		"expression" : "",
+		"expression:" : "",
+		"gotoToken" : "",
+		"gotoToken:" : "",
+		"identifierToken" : "",
+		"identifierToken:" : "",
+		"ignoredTokenVariables" : "",
+		"nodeVariables" : "",
+		"semicolonToken" : "",
+		"semicolonToken:" : "",
+		"tokenVariables" : "" } }

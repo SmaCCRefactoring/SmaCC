@@ -1,0 +1,3 @@
+generated
+visitFixedSizeBufferDeclaration: aFixedSizeBufferDeclaration
+	^self visitDeclaration: aFixedSizeBufferDeclaration

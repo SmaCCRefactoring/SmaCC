@@ -1,0 +1,3 @@
+generated
+removeToken
+	^removeToken

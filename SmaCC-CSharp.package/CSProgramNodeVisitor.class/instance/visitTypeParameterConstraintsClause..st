@@ -1,0 +1,3 @@
+generated
+visitTypeParameterConstraintsClause: aTypeParameterConstraintsClause
+	^self visitProgram: aTypeParameterConstraintsClause

@@ -1,0 +1,20 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"switchToken",
+		"leftParenToken",
+		"expression",
+		"rightParenToken",
+		"leftBraceToken",
+		"sections",
+		"rightBraceToken" ],
+	"name" : "CSSwitchStatementNode",
+	"pools" : [
+		 ],
+	"super" : "CSStatementNode",
+	"type" : "normal" }

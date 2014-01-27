@@ -1,0 +1,23 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"_attributes",
+		"modifiers",
+		"type",
+		"name",
+		"interface",
+		"periodToken",
+		"leftBraceToken",
+		"getAccessor",
+		"setAccessor",
+		"rightBraceToken" ],
+	"name" : "CSPropertyDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "CSDeclarationNode",
+	"type" : "normal" }

@@ -1,0 +1,26 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"_attributes",
+		"modifiers",
+		"partialToken",
+		"returnType",
+		"name",
+		"interface",
+		"periodToken",
+		"typeParameters",
+		"leftParenToken",
+		"parameters",
+		"commas",
+		"rightParenToken",
+		"constraintClauses" ],
+	"name" : "CSMethodHeaderNode",
+	"pools" : [
+		 ],
+	"super" : "CSProgramNode",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+generated
+visitExplicitAnonymousFunctionSignature: anExplicitAnonymousFunctionSignature
+	^self visitProgram: anExplicitAnonymousFunctionSignature

@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"equalToken" : "",
+		"equalToken:" : "",
+		"ignoredTokenVariables" : "",
+		"name" : "",
+		"name:" : "",
+		"namespace" : "",
+		"namespace:" : "",
+		"nodeVariables" : "",
+		"semicolonToken" : "",
+		"semicolonToken:" : "",
+		"tokenVariables" : "",
+		"usingToken" : "",
+		"usingToken:" : "" } }

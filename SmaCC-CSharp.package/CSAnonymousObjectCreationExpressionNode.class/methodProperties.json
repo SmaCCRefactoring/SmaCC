@@ -1,0 +1,20 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"commaTokens" : "",
+		"commaTokens:" : "",
+		"compositeNodeVariables" : "",
+		"declarators" : "",
+		"declarators:" : "",
+		"ignoredCompositeTokenVariables" : "",
+		"initialize" : "",
+		"leftBraceToken" : "",
+		"leftBraceToken:" : "",
+		"newToken" : "",
+		"newToken:" : "",
+		"pluralVariablesMap" : "",
+		"rightBraceToken" : "",
+		"rightBraceToken:" : "",
+		"tokenVariables" : "" } }

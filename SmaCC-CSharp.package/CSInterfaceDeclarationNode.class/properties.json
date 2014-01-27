@@ -1,0 +1,27 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"_attributes",
+		"modifiers",
+		"partialToken",
+		"interfaceToken",
+		"name",
+		"typeParameters",
+		"colon",
+		"supertypes",
+		"commas",
+		"constraintClauses",
+		"leftBrace",
+		"declarations",
+		"rightBrace",
+		"semicolon" ],
+	"name" : "CSInterfaceDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "CSDeclarationNode",
+	"type" : "normal" }

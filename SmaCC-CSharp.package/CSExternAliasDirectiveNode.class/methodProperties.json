@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"aliasToken" : "",
+		"aliasToken:" : "",
+		"externToken" : "",
+		"externToken:" : "",
+		"identifierToken" : "",
+		"identifierToken:" : "",
+		"ignoredTokenVariables" : "",
+		"semicolonToken" : "",
+		"semicolonToken:" : "",
+		"tokenVariables" : "" } }

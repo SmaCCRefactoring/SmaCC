@@ -1,0 +1,3 @@
+generated
+compositeTokenVariables
+	^#(#names #periodTokens)

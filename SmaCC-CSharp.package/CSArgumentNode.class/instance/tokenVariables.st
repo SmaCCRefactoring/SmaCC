@@ -1,0 +1,3 @@
+generated
+tokenVariables
+	^#(#refToken #outToken)

@@ -1,0 +1,19 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"block" : "",
+		"block:" : "",
+		"catchToken" : "",
+		"catchToken:" : "",
+		"leftParenToken" : "",
+		"leftParenToken:" : "",
+		"name" : "",
+		"name:" : "",
+		"nodeVariables" : "",
+		"rightParenToken" : "",
+		"rightParenToken:" : "",
+		"tokenVariables" : "",
+		"type" : "",
+		"type:" : "" } }

@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"expression" : "",
+		"expression:" : "",
+		"identifier" : "",
+		"identifier:" : "",
+		"nodeVariables" : "",
+		"periodToken" : "",
+		"periodToken:" : "",
+		"tokenVariables" : "",
+		"typeArguments" : "",
+		"typeArguments:" : "" } }

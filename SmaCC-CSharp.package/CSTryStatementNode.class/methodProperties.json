@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"block" : "",
+		"block:" : "",
+		"clauses" : "",
+		"clauses:" : "",
+		"compositeNodeVariables" : "",
+		"finally" : "",
+		"finally:" : "",
+		"initialize" : "",
+		"nodeVariables" : "",
+		"pluralVariablesMap" : "",
+		"tokenVariables" : "",
+		"tryToken" : "",
+		"tryToken:" : "" } }

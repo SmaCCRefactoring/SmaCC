@@ -1,0 +1,3 @@
+generated
+startingStateForblock
+	^6

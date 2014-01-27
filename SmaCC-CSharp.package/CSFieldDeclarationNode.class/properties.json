@@ -1,0 +1,29 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"_attributes",
+		"newTokens",
+		"publicTokens",
+		"protectedTokens",
+		"internalTokens",
+		"privateTokens",
+		"staticTokens",
+		"readonlyTokens",
+		"volatileTokens",
+		"unsafeTokens",
+		"name",
+		"type",
+		"timesToken",
+		"declarators",
+		"commaTokens",
+		"semicolonToken" ],
+	"name" : "CSFieldDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "CSDeclarationNode",
+	"type" : "normal" }

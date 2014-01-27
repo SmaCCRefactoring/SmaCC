@@ -1,0 +1,17 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name",
+		"typeArguments",
+		"namespace",
+		"periodToken" ],
+	"name" : "CSTypeNameNode",
+	"pools" : [
+		 ],
+	"super" : "CSTypeNode",
+	"type" : "normal" }

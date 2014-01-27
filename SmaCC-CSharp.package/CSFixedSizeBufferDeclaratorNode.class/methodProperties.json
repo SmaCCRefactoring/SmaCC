@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"expression" : "",
+		"expression:" : "",
+		"leftBracketToken" : "",
+		"leftBracketToken:" : "",
+		"name" : "",
+		"name:" : "",
+		"nodeVariables" : "",
+		"rightBracketToken" : "",
+		"rightBracketToken:" : "",
+		"tokenVariables" : "" } }

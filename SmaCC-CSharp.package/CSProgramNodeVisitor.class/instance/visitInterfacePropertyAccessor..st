@@ -1,0 +1,3 @@
+generated
+visitInterfacePropertyAccessor: anInterfacePropertyAccessor
+	^self visitProgram: anInterfacePropertyAccessor

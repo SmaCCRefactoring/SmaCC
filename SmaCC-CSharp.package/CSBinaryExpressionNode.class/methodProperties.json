@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"left" : "",
+		"left:" : "",
+		"nodeVariables" : "",
+		"operator" : "",
+		"operator:" : "",
+		"right" : "",
+		"right:" : "",
+		"tokenVariables" : "" } }

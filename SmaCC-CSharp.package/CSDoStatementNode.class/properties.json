@@ -1,0 +1,20 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"doToken",
+		"statement",
+		"whileToken",
+		"leftParenToken",
+		"expression",
+		"rightParenToken",
+		"semicolonToken" ],
+	"name" : "CSDoStatementNode",
+	"pools" : [
+		 ],
+	"super" : "CSStatementNode",
+	"type" : "normal" }

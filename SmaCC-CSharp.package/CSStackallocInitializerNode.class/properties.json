@@ -1,0 +1,18 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"stackallocToken",
+		"type",
+		"leftBracketToken",
+		"expression",
+		"rightBracketToken" ],
+	"name" : "CSStackallocInitializerNode",
+	"pools" : [
+		 ],
+	"super" : "CSProgramNode",
+	"type" : "normal" }

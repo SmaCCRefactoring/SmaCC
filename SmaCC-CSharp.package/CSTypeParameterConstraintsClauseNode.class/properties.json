@@ -1,0 +1,18 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"whereToken",
+		"parameter",
+		"colon",
+		"constraints",
+		"commaTokens" ],
+	"name" : "CSTypeParameterConstraintsClauseNode",
+	"pools" : [
+		 ],
+	"super" : "CSProgramNode",
+	"type" : "normal" }

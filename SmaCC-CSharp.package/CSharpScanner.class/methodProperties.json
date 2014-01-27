@@ -1,0 +1,24 @@
+{
+	"class" : {
+		"initializeKeywordMap" : "" },
+	"instance" : {
+		"IdentifierId" : "",
+		"emptySymbolTokenId" : "",
+		"errorTokenId" : "",
+		"gtId" : "",
+		"gtgtId" : "",
+		"scan1" : "",
+		"scan10" : "",
+		"scan11" : "",
+		"scan12" : "",
+		"scan13" : "",
+		"scan2" : "",
+		"scan3" : "",
+		"scan4" : "",
+		"scan5" : "",
+		"scan6" : "",
+		"scan7" : "",
+		"scan8" : "",
+		"scan9" : "",
+		"scanForToken" : "",
+		"tokenActions" : "" } }

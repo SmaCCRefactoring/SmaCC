@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"compositeNodeVariables" : "",
+		"initialize" : "",
+		"leftBraceToken" : "",
+		"leftBraceToken:" : "",
+		"pluralVariablesMap" : "",
+		"rightBraceToken" : "",
+		"rightBraceToken:" : "",
+		"statements" : "",
+		"statements:" : "",
+		"tokenVariables" : "" } }

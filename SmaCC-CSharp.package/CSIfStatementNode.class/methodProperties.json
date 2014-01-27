@@ -1,0 +1,21 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"elseStatement" : "",
+		"elseStatement:" : "",
+		"elseToken" : "",
+		"elseToken:" : "",
+		"expression" : "",
+		"expression:" : "",
+		"ifToken" : "",
+		"ifToken:" : "",
+		"leftParenToken" : "",
+		"leftParenToken:" : "",
+		"nodeVariables" : "",
+		"rightParenToken" : "",
+		"rightParenToken:" : "",
+		"thenStatement" : "",
+		"thenStatement:" : "",
+		"tokenVariables" : "" } }

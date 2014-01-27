@@ -1,0 +1,26 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"_attributes",
+		"modifiers",
+		"returnType",
+		"operatorToken",
+		"operator",
+		"leftParenToken",
+		"types",
+		"arguments",
+		"rightParenToken",
+		"commaToken",
+		"implicitToken",
+		"explicitToken",
+		"body" ],
+	"name" : "CSOperatorDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "CSDeclarationNode",
+	"type" : "normal" }

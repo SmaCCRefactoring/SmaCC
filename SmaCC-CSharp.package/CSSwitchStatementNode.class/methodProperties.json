@@ -1,0 +1,24 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"compositeNodeVariables" : "",
+		"expression" : "",
+		"expression:" : "",
+		"initialize" : "",
+		"leftBraceToken" : "",
+		"leftBraceToken:" : "",
+		"leftParenToken" : "",
+		"leftParenToken:" : "",
+		"nodeVariables" : "",
+		"pluralVariablesMap" : "",
+		"rightBraceToken" : "",
+		"rightBraceToken:" : "",
+		"rightParenToken" : "",
+		"rightParenToken:" : "",
+		"sections" : "",
+		"sections:" : "",
+		"switchToken" : "",
+		"switchToken:" : "",
+		"tokenVariables" : "" } }

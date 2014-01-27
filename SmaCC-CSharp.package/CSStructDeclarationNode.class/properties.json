@@ -1,0 +1,27 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"_attributes",
+		"modifiers",
+		"partialToken",
+		"structToken",
+		"identifierToken",
+		"typeParameters",
+		"colonToken",
+		"supertypes",
+		"commas",
+		"constraintClauses",
+		"leftBraceToken",
+		"declarations",
+		"rightBraceToken",
+		"semicolon" ],
+	"name" : "CSStructDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "CSDeclarationNode",
+	"type" : "normal" }

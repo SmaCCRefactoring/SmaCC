@@ -1,0 +1,3 @@
+generated
+visitInvocationExpression: anInvocationExpression
+	^self visitExpression: anInvocationExpression

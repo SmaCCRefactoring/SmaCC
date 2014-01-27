@@ -1,0 +1,3 @@
+generated
+tokenVariables
+	^#(#arrowToken #name)

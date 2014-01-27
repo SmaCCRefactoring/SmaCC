@@ -1,0 +1,21 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"forToken",
+		"leftParenToken",
+		"initializer",
+		"semicolonTokens",
+		"condition",
+		"iterator",
+		"rightParenToken",
+		"statement" ],
+	"name" : "CSForStatementNode",
+	"pools" : [
+		 ],
+	"super" : "CSStatementNode",
+	"type" : "normal" }

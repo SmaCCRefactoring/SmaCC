@@ -1,0 +1,3 @@
+generated
+visitPointerMemberAccess: aPointerMemberAccess
+	^self visitExpression: aPointerMemberAccess

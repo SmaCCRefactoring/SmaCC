@@ -1,0 +1,26 @@
+{
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"_attributes",
+		"modifiers",
+		"returnType",
+		"thisToken",
+		"leftBracketToken",
+		"parameters",
+		"commas",
+		"rightBracketToken",
+		"periodToken",
+		"leftBraceToken",
+		"getAccessor",
+		"setAccessor",
+		"rightBraceToken" ],
+	"name" : "CSIndexerDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "CSDeclarationNode",
+	"type" : "normal" }
