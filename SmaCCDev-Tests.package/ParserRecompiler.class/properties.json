@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCCDev-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ParserRecompiler",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
