@@ -1,0 +1,4 @@
+accessing
+mainWindow
+	
+	^mainWindow

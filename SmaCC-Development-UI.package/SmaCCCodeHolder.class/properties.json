@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-Development-UI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"contentsMorph",
+		"owner",
+		"ownerAcceptSelector" ],
+	"name" : "SmaCCCodeHolder",
+	"pools" : [
+		 ],
+	"super" : "StringHolder",
+	"type" : "normal" }

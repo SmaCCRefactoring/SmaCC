@@ -1,0 +1,3 @@
+actions
+toggleGenerateSymbolComments
+	generateSymbolComments:=self generateSymbolComments not

@@ -1,0 +1,3 @@
+actions
+toggleGenerateItemSetComments
+	generateItemSetComments:=self generateItemSetComments not
