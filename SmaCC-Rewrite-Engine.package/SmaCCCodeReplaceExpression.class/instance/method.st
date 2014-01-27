@@ -12,8 +12,10 @@ method
 				ifTrue: [ tree := RBParser parseMethod: 'code ^''''' ].
 			tree body addReturn.
 			source := tree formattedCode.
-			method := [ Compiler compile: source in: SmaCCRewriteMatchContext ]
-				on: ParserNotification
+			method := [ 
+			OpalCompiler new
+				class: SmaCCRewriteMatchContext;
+				compile: source ]
+				on: SyntaxErrorNotification , OCSemanticError
 				do: [ :ex | Error signal: ex errorMessage , ' (' , ex range printString , ')' ].
-			method sourceDescriptor: source.
 			method ]

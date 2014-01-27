@@ -6,4 +6,4 @@ transformUsingContext: aSmaCCRewriteMatchContext
 				debug: 'Debugging ' , rewrite displayString
 				topFrame: Processor activeProcess topFrame
 				resumable: true].
-	^self method value: aSmaCCRewriteMatchContext withArguments: #()
+	^self method valueWithReceiver: aSmaCCRewriteMatchContext arguments: #()
