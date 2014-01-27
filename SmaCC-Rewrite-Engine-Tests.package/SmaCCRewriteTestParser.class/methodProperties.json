@@ -1,0 +1,12 @@
+{
+	"class" : {
+		"definitionComment" : "",
+		"scannerClass" : "",
+		"startingStateForExpression" : "" },
+	"instance" : {
+		"reduceActionForExpression1:" : "",
+		"reduceActionForExpression2:" : "",
+		"reduceActionForExpression7:" : "",
+		"reduceTable" : "",
+		"symbolTypes" : "",
+		"transitionTable" : "" } }

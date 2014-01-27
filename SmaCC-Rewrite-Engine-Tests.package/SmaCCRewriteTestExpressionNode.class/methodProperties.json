@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "",
+		"ignoredCompositeTokenVariables" : "",
+		"initialize" : "",
+		"leftParens" : "",
+		"leftParens:" : "",
+		"pluralVariablesMap" : "",
+		"rightParens" : "",
+		"rightParens:" : "" } }

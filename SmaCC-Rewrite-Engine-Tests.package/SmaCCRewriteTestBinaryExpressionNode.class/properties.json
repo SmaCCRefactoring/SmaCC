@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-Rewrite-Engine-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"left",
+		"operator",
+		"right" ],
+	"name" : "SmaCCRewriteTestBinaryExpressionNode",
+	"pools" : [
+		 ],
+	"super" : "SmaCCRewriteTestExpressionNode",
+	"type" : "normal" }

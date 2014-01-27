@@ -1,0 +1,3 @@
+generated
+leftParens
+	^leftParens

@@ -1,0 +1,21 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"compareRewrite:isEqualTo:using:" : "",
+		"lispRewriter" : "",
+		"parserClass" : "",
+		"postfixRewriter" : "",
+		"testAddParens" : "",
+		"testCodeExpressionToRemoveParens" : "",
+		"testCodeToRemoveParens" : "",
+		"testExpressions" : "",
+		"testLispExpressions" : "",
+		"testMultipleInsertAfters" : "",
+		"testNoChanges" : "",
+		"testOneExpression" : "",
+		"testTwoExpressions" : "",
+		"testTypeAddParens" : "",
+		"testWhitespace" : "",
+		"testWithParens" : "",
+		"whitespacePostfixRewriter" : "" } }
