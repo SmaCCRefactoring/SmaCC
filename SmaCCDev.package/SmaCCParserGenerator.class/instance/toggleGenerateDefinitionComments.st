@@ -1,3 +1,0 @@
-actions
-toggleGenerateDefinitionComments
-	generateDefinitionComments:=self generateDefinitionComments not
