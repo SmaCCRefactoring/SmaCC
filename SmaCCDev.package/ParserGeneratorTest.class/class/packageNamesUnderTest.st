@@ -1,3 +1,0 @@
-accessing
-packageNamesUnderTest
-	^ #('SmaCC' 'SmaCCDev')
