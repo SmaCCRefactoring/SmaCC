@@ -1,0 +1,20 @@
+{
+	"category" : "SmaCC-Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"catchToken",
+		"left",
+		"modifiers",
+		"type",
+		"variable",
+		"right",
+		"block" ],
+	"name" : "JavaCatchClauseNode",
+	"pools" : [
+		 ],
+	"super" : "JavaProgramNode",
+	"type" : "normal" }

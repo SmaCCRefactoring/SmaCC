@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"declarations" ],
+	"name" : "JavaNewClassNode",
+	"pools" : [
+		 ],
+	"super" : "JavaNewNode",
+	"type" : "normal" }

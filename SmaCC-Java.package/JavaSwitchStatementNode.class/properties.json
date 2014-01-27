@@ -1,0 +1,18 @@
+{
+	"category" : "SmaCC-Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"switchToken",
+		"left",
+		"expression",
+		"right",
+		"block" ],
+	"name" : "JavaSwitchStatementNode",
+	"pools" : [
+		 ],
+	"super" : "JavaStatementNode",
+	"type" : "normal" }

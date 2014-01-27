@@ -1,0 +1,17 @@
+{
+	"category" : "SmaCC-Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"tryToken",
+		"block",
+		"catches",
+		"finally" ],
+	"name" : "JavaTryStatementNode",
+	"pools" : [
+		 ],
+	"super" : "JavaStatementNode",
+	"type" : "normal" }

@@ -1,0 +1,18 @@
+{
+	"category" : "SmaCC-Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"assertToken",
+		"testExpression",
+		"semicolon",
+		"colon",
+		"messageExpression" ],
+	"name" : "JavaAssertStatementNode",
+	"pools" : [
+		 ],
+	"super" : "JavaStatementNode",
+	"type" : "normal" }

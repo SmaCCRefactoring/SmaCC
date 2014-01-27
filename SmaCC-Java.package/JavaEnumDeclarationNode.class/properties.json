@@ -1,0 +1,24 @@
+{
+	"category" : "SmaCC-Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"modifiers",
+		"enumToken",
+		"name",
+		"implementsToken",
+		"interfaces",
+		"commas",
+		"left",
+		"constants",
+		"semicolon",
+		"declarations",
+		"right" ],
+	"name" : "JavaEnumDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "JavaProgramNode",
+	"type" : "normal" }

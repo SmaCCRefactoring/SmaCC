@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"throwToken",
+		"expression",
+		"semicolon" ],
+	"name" : "JavaThrowStatementNode",
+	"pools" : [
+		 ],
+	"super" : "JavaStatementNode",
+	"type" : "normal" }

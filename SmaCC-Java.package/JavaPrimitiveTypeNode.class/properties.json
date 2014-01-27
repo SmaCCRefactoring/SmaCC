@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"token" ],
+	"name" : "JavaPrimitiveTypeNode",
+	"pools" : [
+		 ],
+	"super" : "JavaTypeNode",
+	"type" : "normal" }
