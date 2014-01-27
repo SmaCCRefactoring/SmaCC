@@ -1,5 +1,15 @@
 {
 	"class" : {
-		 },
+		"initializeKeywordMap" : "" },
 	"instance" : {
-		 } }
+		"emptySymbolTokenId" : "",
+		"errorTokenId" : "",
+		"fixExpression:" : "",
+		"isValidSmalltalk:" : "ThierryGoubier 1/27/2014 11:30",
+		"scan1" : "",
+		"scan2" : "",
+		"scan3" : "",
+		"scanForToken" : "",
+		"scanSmalltalkExpression" : "",
+		"scanStringExpression" : "",
+		"tokenActions" : "" } }

@@ -1,0 +1,3 @@
+private
+processChild: aSmaCCParseNode
+	rewriteEngine rewriteNode: aSmaCCParseNode

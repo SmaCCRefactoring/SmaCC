@@ -1,0 +1,3 @@
+generated
+startingStateForFile
+	^1

@@ -2,4 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"addAllAnnotations:" : "",
+		"addAnnotation:" : "",
+		"annotations" : "",
+		"annotations:" : "",
+		"canBeMergedWith:" : "",
+		"postCopy" : "" } }

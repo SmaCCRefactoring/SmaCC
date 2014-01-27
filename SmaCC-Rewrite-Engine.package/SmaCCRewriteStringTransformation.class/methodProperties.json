@@ -1,5 +1,9 @@
 {
 	"class" : {
-		 },
+		"on:" : "" },
 	"instance" : {
-		 } }
+		"expression" : "",
+		"saveOn:" : "",
+		"string" : "",
+		"string:" : "",
+		"transformUsingContext:" : "" } }

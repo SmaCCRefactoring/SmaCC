@@ -1,5 +1,17 @@
 {
 	"class" : {
-		 },
+		"on:" : "" },
 	"instance" : {
-		 } }
+		"canMatch:" : "",
+		"code" : "",
+		"code:" : "",
+		"codeMatches:" : "",
+		"displayOn:" : "",
+		"enableDebug" : "",
+		"enableDebug:" : "",
+		"match:" : "",
+		"method" : "ThierryGoubier 1/27/2014 11:26",
+		"methodMatches:" : "",
+		"nodeClass" : "",
+		"nodeClass:" : "",
+		"saveOn:" : "" } }

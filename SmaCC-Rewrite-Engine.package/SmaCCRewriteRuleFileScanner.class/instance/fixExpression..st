@@ -1,0 +1,3 @@
+private
+fixExpression: expression
+	^expression

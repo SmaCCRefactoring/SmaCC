@@ -2,4 +2,22 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"addPostfixTo:inContext:" : "",
+		"addPrefixTo:inContext:" : "",
+		"afterPostfix" : "",
+		"afterPostfix:" : "",
+		"afterWhitespace" : "",
+		"afterWhitespace:" : "",
+		"beforePrefix" : "",
+		"beforePrefix:" : "",
+		"beforeWhitespace" : "",
+		"beforeWhitespace:" : "",
+		"evaluateInContext:" : "",
+		"name" : "",
+		"name:" : "",
+		"postfix" : "",
+		"postfix:" : "",
+		"prefix" : "",
+		"prefix:" : "",
+		"tokenVariables" : "" } }

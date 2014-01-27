@@ -1,0 +1,3 @@
+private
+scanSmalltalkExpression
+	^scanner scanSmalltalkExpression

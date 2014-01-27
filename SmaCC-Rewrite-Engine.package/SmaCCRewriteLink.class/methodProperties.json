@@ -2,4 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"next" : "",
+		"next:" : "",
+		"printOn:" : "",
+		"rewrite" : "",
+		"rewrite:" : "" } }

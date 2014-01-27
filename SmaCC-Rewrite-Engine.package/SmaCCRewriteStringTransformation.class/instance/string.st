@@ -1,0 +1,3 @@
+initialize
+string
+	^string ifNil: ['']

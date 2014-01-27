@@ -1,5 +1,30 @@
 {
 	"class" : {
-		 },
+		"new" : "" },
 	"instance" : {
-		 } }
+		"addRewrites:" : "",
+		"additionalFiles" : "",
+		"initialize" : "",
+		"markAsProcessed:" : "",
+		"processChildrenOf:" : "",
+		"properties" : "",
+		"properties:" : "",
+		"propertyAt:" : "",
+		"propertyAt:ifAbsent:" : "",
+		"propertyAt:ifAbsentPut:" : "",
+		"propertyAt:put:" : "",
+		"removeProperty:" : "",
+		"rewrite:" : "",
+		"rewriteNode:" : "",
+		"rewriteRule" : "",
+		"rewriteRule:" : "",
+		"rewriteTree:" : "",
+		"setPosition:in:" : "",
+		"setStartPositionForNode:to:" : "",
+		"setStopPositionForNode:to:" : "",
+		"source" : "",
+		"source:" : "",
+		"startPositionForNode:" : "",
+		"stopPositionForNode:" : "",
+		"updateStartPositionFor:to:whenEqualTo:" : "",
+		"updateStopPositionFor:to:whenEqualTo:" : "" } }

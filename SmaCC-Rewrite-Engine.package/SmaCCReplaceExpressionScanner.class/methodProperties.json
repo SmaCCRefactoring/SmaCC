@@ -2,4 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"codeExpressionId" : "",
+		"emptySymbolTokenId" : "",
+		"errorTokenId" : "",
+		"isValidCode" : "ThierryGoubier 1/27/2014 11:29",
+		"next" : "",
+		"scanCode" : "",
+		"scanForToken" : "" } }

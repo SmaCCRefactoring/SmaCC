@@ -1,5 +1,9 @@
 {
 	"class" : {
-		 },
+		"on:" : "" },
 	"instance" : {
-		 } }
+		"code" : "",
+		"code:" : "",
+		"method" : "ThierryGoubier 1/27/2014 11:27",
+		"saveOn:" : "",
+		"transformUsingContext:" : "" } }

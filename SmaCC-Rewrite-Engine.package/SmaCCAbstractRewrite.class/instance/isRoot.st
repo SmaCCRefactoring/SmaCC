@@ -1,0 +1,3 @@
+public
+isRoot
+	^parent isNil

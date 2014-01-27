@@ -1,0 +1,3 @@
+accessing
+startColumn
+	^startColumn

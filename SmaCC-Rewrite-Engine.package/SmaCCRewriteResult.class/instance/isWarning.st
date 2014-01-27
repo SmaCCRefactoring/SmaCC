@@ -1,0 +1,3 @@
+public
+isWarning
+	^type = #warning

@@ -1,0 +1,3 @@
+public
+transformedString
+	^SmaCCAnnotatedString on: ''

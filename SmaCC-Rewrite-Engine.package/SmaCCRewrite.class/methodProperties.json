@@ -1,5 +1,17 @@
 {
 	"class" : {
-		 },
+		"comment:match:transformation:" : "",
+		"newInstance" : "" },
 	"instance" : {
-		 } }
+		"comment" : "",
+		"comment:" : "",
+		"displayOn:" : "",
+		"engine:" : "",
+		"listForClass:into:" : "",
+		"localSaveOn:" : "",
+		"match" : "",
+		"match:" : "",
+		"performOn:continuation:" : "",
+		"postCopy" : "",
+		"transformation" : "",
+		"transformation:" : "" } }

@@ -1,0 +1,3 @@
+matching
+match: aSmaCCRewriteMatchContext
+	self subclassResponsibility

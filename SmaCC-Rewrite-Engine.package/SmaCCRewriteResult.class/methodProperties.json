@@ -1,5 +1,29 @@
 {
 	"class" : {
-		 },
+		"fromSocketString:" : "" },
 	"instance" : {
-		 } }
+		"asSocketString" : "",
+		"asTabDelimitedString" : "",
+		"errorString" : "",
+		"errorString:" : "",
+		"filename" : "",
+		"filename:" : "",
+		"inputSource" : "",
+		"inputSource:" : "",
+		"interval" : "",
+		"interval:" : "",
+		"isError" : "",
+		"isWarning" : "",
+		"outputSource" : "",
+		"outputSource:" : "",
+		"smaccStringClass" : "",
+		"startColumn" : "",
+		"startColumn:" : "",
+		"startLine" : "",
+		"startLine:" : "",
+		"transformation" : "",
+		"transformation:" : "",
+		"transformedString" : "",
+		"transformedString:" : "",
+		"type" : "",
+		"type:" : "" } }

@@ -1,0 +1,3 @@
+public
+isUpToDate
+	^true

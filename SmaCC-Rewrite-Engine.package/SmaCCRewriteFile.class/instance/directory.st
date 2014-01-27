@@ -1,0 +1,3 @@
+accessing
+directory
+	^ filename parent

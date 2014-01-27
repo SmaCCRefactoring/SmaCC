@@ -1,0 +1,2 @@
+accessing
+transformedString: aSmaCCAnnotatedString

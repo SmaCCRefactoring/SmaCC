@@ -1,0 +1,3 @@
+public
+isError
+	^type = #error

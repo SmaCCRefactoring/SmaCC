@@ -1,5 +1,13 @@
 {
 	"class" : {
-		 },
+		"onNode:rewrite:" : "" },
 	"instance" : {
-		 } }
+		"=" : "",
+		"hash" : "",
+		"nodeClass" : "",
+		"nodeClass:" : "",
+		"nodeInterval" : "",
+		"nodeInterval:" : "",
+		"printOn:" : "",
+		"rewrite" : "",
+		"rewrite:" : "" } }

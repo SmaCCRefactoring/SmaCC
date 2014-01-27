@@ -1,5 +1,22 @@
 {
 	"class" : {
-		 },
+		"definitionComment" : "",
+		"scannerClass" : "",
+		"startingStateForExpression" : "" },
 	"instance" : {
-		 } }
+		"reduceActionForCodeReplace1:" : "",
+		"reduceActionForExpression1:" : "",
+		"reduceActionForNodeReplace1:" : "",
+		"reduceActionForPostfixModifiers1:" : "",
+		"reduceActionForPrefixModifiers1:" : "",
+		"reduceActionForPrefixModifiers2:" : "",
+		"reduceActionForRewriteExpression1:" : "",
+		"reduceActionForRewriteExpressions1:" : "",
+		"reduceActionForRewriteExpressions2:" : "",
+		"reduceActionForStringReplace1:" : "",
+		"reduceActionForSwitchStateToCode1:" : "",
+		"reduceActionForSwitchStateToDefault1:" : "",
+		"reduceActionForSwitchStateToExpression1:" : "",
+		"reduceTable" : "",
+		"symbolTypes" : "",
+		"transitionTable" : "" } }

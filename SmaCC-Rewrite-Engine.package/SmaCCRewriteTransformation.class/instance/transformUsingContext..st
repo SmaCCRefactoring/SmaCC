@@ -1,0 +1,3 @@
+private
+transformUsingContext: aSmaCCRewriteMatchContext
+	self subclassResponsibility

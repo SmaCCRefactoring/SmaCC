@@ -2,4 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"addAnnotationTo:" : "",
+		"intervalClass" : "",
+		"newIntervalFor:" : "",
+		"node" : "",
+		"node:" : "",
+		"removeInterval:" : "",
+		"rule" : "",
+		"rule:" : "" } }

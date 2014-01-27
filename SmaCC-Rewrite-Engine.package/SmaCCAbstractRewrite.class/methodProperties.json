@@ -2,4 +2,22 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"displayOn:" : "",
+		"displayString" : "",
+		"engine:" : "",
+		"finishedLoading" : "",
+		"isComposite" : "",
+		"isRoot" : "",
+		"isUnder:" : "",
+		"isUpToDate" : "",
+		"listForClass:into:" : "",
+		"localSaveOn:" : "",
+		"modified" : "",
+		"parent" : "",
+		"parent:" : "",
+		"parserClass" : "",
+		"performOn:continuation:" : "",
+		"postCopy" : "",
+		"rewrites" : "",
+		"saveOn:" : "",
+		"topParent" : "" } }

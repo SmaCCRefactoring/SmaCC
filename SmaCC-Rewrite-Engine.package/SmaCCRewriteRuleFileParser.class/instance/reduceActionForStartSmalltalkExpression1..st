@@ -1,0 +1,3 @@
+generated
+reduceActionForStartSmalltalkExpression1: nodes
+	^self scanSmalltalkExpression

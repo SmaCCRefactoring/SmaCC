@@ -1,0 +1,3 @@
+initialize
+engine: aSmaCCRewriteEngine
+	self subclassResponsibility

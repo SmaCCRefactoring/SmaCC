@@ -1,0 +1,3 @@
+private
+scanStringExpression
+	^scanner scanStringExpression

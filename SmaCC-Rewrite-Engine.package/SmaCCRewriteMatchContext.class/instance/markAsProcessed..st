@@ -1,0 +1,3 @@
+processing
+markAsProcessed: aSmaCCParseNode
+	rewriteEngine markAsProcessed: aSmaCCParseNode

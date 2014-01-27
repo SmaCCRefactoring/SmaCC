@@ -2,4 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"canMatch:" : "",
+		"displayOn:" : "",
+		"match:" : "",
+		"saveOn:" : "",
+		"source" : "",
+		"source:" : "",
+		"startingState" : "",
+		"startingState:" : "",
+		"startingStateIndex" : "",
+		"trees" : "" } }

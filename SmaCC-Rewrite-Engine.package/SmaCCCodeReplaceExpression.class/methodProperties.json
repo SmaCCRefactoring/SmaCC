@@ -2,4 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"code" : "",
+		"code:" : "",
+		"evaluateInContext:" : "ThierryGoubier 1/27/2014 11:19",
+		"method" : "ThierryGoubier 1/27/2014 11:21",
+		"tokenVariables" : "" } }

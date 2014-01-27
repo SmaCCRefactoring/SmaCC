@@ -2,4 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"modified" : "",
+		"postCopy" : "",
+		"rewrite" : "",
+		"rewrite:" : "",
+		"saveOn:" : "",
+		"transformUsingContext:" : "" } }
