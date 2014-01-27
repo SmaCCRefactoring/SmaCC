@@ -1,0 +1,13 @@
+{
+	"class" : {
+		"definitionComment" : "",
+		"fileExtension" : "",
+		"fileExtensionType" : "",
+		"scannerClass" : "",
+		"startingStateFortranslationUnit" : "" },
+	"instance" : {
+		"addTypeName:" : "",
+		"reduceActionForenum_specifier3:" : "",
+		"reduceActionForinit_declaration1:" : "",
+		"reduceTable" : "",
+		"transitionTable" : "" } }

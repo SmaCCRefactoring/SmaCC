@@ -1,0 +1,25 @@
+{
+	"class" : {
+		"initializeKeywordMap" : "",
+		"needsLineNumbers" : "" },
+	"instance" : {
+		"CONSTANTId" : "",
+		"IDENTIFIER" : "",
+		"IDENTIFIERId" : "",
+		"TypeNameId" : "",
+		"addTypeName:" : "",
+		"emptySymbolTokenId" : "",
+		"errorTokenId" : "",
+		"initialize" : "",
+		"scan1" : "",
+		"scan10" : "",
+		"scan2" : "",
+		"scan3" : "",
+		"scan4" : "",
+		"scan5" : "",
+		"scan6" : "",
+		"scan7" : "",
+		"scan8" : "",
+		"scan9" : "",
+		"scanForToken" : "",
+		"tokenActions" : "" } }
