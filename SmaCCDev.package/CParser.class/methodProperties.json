@@ -1,13 +1,18 @@
 {
 	"class" : {
-		"parserDefinitionComment" : "ThierryGoubier 1/22/2014 14:34:17",
-		"scannerClass" : "ThierryGoubier 1/22/2014 14:34:17",
-		"startingStateFortranslationUnit" : "ThierryGoubier 1/22/2014 14:34:17" },
+		"definitionComment" : "",
+		"fileExtension" : "",
+		"fileExtensionType" : "",
+		"parserDefinitionComment" : "ThierryGoubier 1/27/2014 15:52:13",
+		"scannerClass" : "ThierryGoubier 1/27/2014 15:52:13",
+		"startingStateFortranslationUnit" : "ThierryGoubier 1/27/2014 15:52:13" },
 	"instance" : {
-		"addTypeName:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"reduceActionForenumXspecifier2:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"reduceActionForenumXspecifier3:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"reduceActionForstructXorXunionXspecifier1:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"reduceActionForstructXorXunionXspecifier3:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"reduceTable" : "ThierryGoubier 1/22/2014 14:34:17",
-		"transitionTable" : "ThierryGoubier 1/22/2014 14:34:17" } }
+		"addTypeName:" : "ThierryGoubier 1/27/2014 15:52:13",
+		"reduceActionForenumXspecifier2:" : "ThierryGoubier 1/27/2014 15:52:13",
+		"reduceActionForenumXspecifier3:" : "ThierryGoubier 1/27/2014 15:52:13",
+		"reduceActionForenum_specifier3:" : "",
+		"reduceActionForinit_declaration1:" : "",
+		"reduceActionForstructXorXunionXspecifier1:" : "ThierryGoubier 1/27/2014 15:52:13",
+		"reduceActionForstructXorXunionXspecifier3:" : "ThierryGoubier 1/27/2014 15:52:13",
+		"reduceTable" : "ThierryGoubier 1/27/2014 15:52:13",
+		"transitionTable" : "ThierryGoubier 1/27/2014 15:52:13" } }

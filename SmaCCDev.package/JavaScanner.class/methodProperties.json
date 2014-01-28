@@ -1,16 +1,16 @@
 {
 	"class" : {
-		"initializeKeywordMap" : "ThierryGoubier 1/22/2014 14:34:17",
-		"scannerDefinitionComment" : "ThierryGoubier 1/22/2014 14:34:17" },
+		"initializeKeywordMap" : "ThierryGoubier 1/27/2014 15:52:13",
+		"scannerDefinitionComment" : "ThierryGoubier 1/27/2014 15:52:13" },
 	"instance" : {
-		"emptySymbolTokenId" : "ThierryGoubier 1/22/2014 14:34:17",
-		"errorTokenId" : "ThierryGoubier 1/22/2014 14:34:17",
-		"multipleLineComment" : "ThierryGoubier 1/22/2014 14:34:17",
-		"scan1" : "ThierryGoubier 1/22/2014 14:34:17",
-		"scan2" : "ThierryGoubier 1/22/2014 14:34:17",
-		"scan3" : "ThierryGoubier 1/22/2014 14:34:17",
-		"scan4" : "ThierryGoubier 1/22/2014 14:34:17",
-		"scan5" : "ThierryGoubier 1/22/2014 14:34:17",
-		"scan6" : "ThierryGoubier 1/22/2014 14:34:17",
-		"scan7" : "ThierryGoubier 1/22/2014 14:34:17",
-		"scanForToken" : "ThierryGoubier 1/22/2014 14:34:17" } }
+		"emptySymbolTokenId" : "ThierryGoubier 1/27/2014 15:52:13",
+		"errorTokenId" : "ThierryGoubier 1/27/2014 15:52:13",
+		"multipleLineComment" : "ThierryGoubier 1/27/2014 15:52:13",
+		"scan1" : "ThierryGoubier 1/27/2014 15:52:13",
+		"scan2" : "ThierryGoubier 1/27/2014 15:52:13",
+		"scan3" : "ThierryGoubier 1/27/2014 15:52:13",
+		"scan4" : "ThierryGoubier 1/27/2014 15:52:13",
+		"scan5" : "ThierryGoubier 1/27/2014 15:52:13",
+		"scan6" : "ThierryGoubier 1/27/2014 15:52:13",
+		"scan7" : "ThierryGoubier 1/27/2014 15:52:13",
+		"scanForToken" : "ThierryGoubier 1/27/2014 15:52:13" } }
