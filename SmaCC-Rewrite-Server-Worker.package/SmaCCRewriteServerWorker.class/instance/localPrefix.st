@@ -1,0 +1,3 @@
+accessing
+localPrefix
+	^localPrefix ifNil: ['']

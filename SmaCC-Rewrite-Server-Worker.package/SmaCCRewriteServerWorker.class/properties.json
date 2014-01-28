@@ -1,0 +1,17 @@
+{
+	"category" : "SmaCC-Rewrite-Server-Worker",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"socket",
+		"rewriteFiles",
+		"remotePrefix",
+		"localPrefix" ],
+	"name" : "SmaCCRewriteServerWorker",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
