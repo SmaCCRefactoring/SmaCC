@@ -6,13 +6,13 @@ testMoveFromGLRHierarchy
 		instanceVariableNames: ''
 		classVariableNames: ''
 		poolDictionaries: ''
-		category: 'SmaCCDev-Tests'.
+		category: 'SmaCC-Tests'.
 	(Smalltalk at: #FooParser)
 		subclass: #TestParser
 		instanceVariableNames: ''
 		classVariableNames: ''
 		poolDictionaries: ''
-		category: 'SmaCCDev-Tests'.
+		category: 'SmaCC-Tests'.
 	parserCompiler := SmaCCGrammarCompiler new.
 	parserCompiler
 		buildDefinition:
