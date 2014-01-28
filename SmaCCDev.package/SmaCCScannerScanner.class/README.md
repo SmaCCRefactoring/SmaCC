@@ -1,1 +1,0 @@
-SmaCCScannerScanner is the scanner for the scanner definition

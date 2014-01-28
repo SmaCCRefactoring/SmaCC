@@ -1,1 +1,0 @@
-SmaCCGrammarScanner is the scanner for the grammar parser

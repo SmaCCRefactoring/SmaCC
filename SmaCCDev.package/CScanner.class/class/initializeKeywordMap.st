@@ -1,6 +1,0 @@
-generated-initialization
-initializeKeywordMap
-	keywordMap := Dictionary new.
-	#(#(#IDENTIFIER 'auto' 65) #(#IDENTIFIER 'break' 48) #(#IDENTIFIER 'case' 38) #(#IDENTIFIER 'char' 73) #(#IDENTIFIER 'const' 40) #(#IDENTIFIER 'continue' 47) #(#IDENTIFIER 'default' 39) #(#IDENTIFIER 'do' 54) #(#IDENTIFIER 'double' 70) #(#IDENTIFIER 'else' 46) #(#IDENTIFIER 'enum' 45) #(#IDENTIFIER 'extern' 58) #(#IDENTIFIER 'float' 67) #(#IDENTIFIER 'for' 49) #(#IDENTIFIER 'goto' 50) #(#IDENTIFIER 'if' 42) #(#IDENTIFIER 'int' 69) #(#IDENTIFIER 'long' 66) #(#IDENTIFIER 'register' 71) #(#IDENTIFIER 'return' 56) #(#IDENTIFIER 'short' 68) #(#IDENTIFIER 'signed' 51) #(#IDENTIFIER 'sizeof' 24) #(#IDENTIFIER 'static' 61) #(#IDENTIFIER 'struct' 43) #(#IDENTIFIER 'switch' 52) #(#IDENTIFIER 'typedef' 57) #(#IDENTIFIER 'union' 44) #(#IDENTIFIER 'unsigned' 55) #(#IDENTIFIER 'void' 72) #(#IDENTIFIER 'volatile' 41) #(#IDENTIFIER 'while' 53))
-		do: [ :each | (keywordMap at: each first ifAbsentPut: [ Dictionary new ]) at: (each at: 2) put: each last ].
-	^ keywordMap

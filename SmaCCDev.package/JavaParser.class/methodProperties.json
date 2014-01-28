@@ -1,8 +1,0 @@
-{
-	"class" : {
-		"parserDefinitionComment" : "ThierryGoubier 1/27/2014 15:52:13",
-		"scannerClass" : "ThierryGoubier 1/27/2014 15:52:13",
-		"startingStateForgoal" : "ThierryGoubier 1/27/2014 15:52:13" },
-	"instance" : {
-		"reduceTable" : "ThierryGoubier 1/27/2014 15:52:13",
-		"transitionTable" : "ThierryGoubier 1/27/2014 15:52:13" } }
