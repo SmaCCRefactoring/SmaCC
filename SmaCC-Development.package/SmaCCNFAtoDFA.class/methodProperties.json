@@ -1,12 +1,12 @@
 {
 	"class" : {
-		"convertToDFA:" : "ThierryGoubier 1/22/2014 14:34:17" },
+		"convertToDFA:" : "ThierryGoubier 1/28/2014 15:53:08" },
 	"instance" : {
-		"commonTransitionObjectsForEdges:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"convertToDFA:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"createEdgeMerging:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"eliminateDuplicateTransitionsIn:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"initialize" : "ThierryGoubier 1/22/2014 14:34:17",
-		"mergedNodeFor:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"setTransitionsOn:to:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"someDuplicateIn:" : "ThierryGoubier 1/22/2014 14:34:17" } }
+		"commonTransitionObjectsForEdges:" : "ThierryGoubier 1/28/2014 15:53:08",
+		"convertToDFA:" : "ThierryGoubier 1/28/2014 15:53:08",
+		"createEdgeMerging:" : "ThierryGoubier 1/28/2014 15:53:08",
+		"eliminateDuplicateTransitionsIn:" : "ThierryGoubier 1/28/2014 15:53:08",
+		"initialize" : "ThierryGoubier 1/28/2014 15:53:08",
+		"mergedNodeFor:" : "ThierryGoubier 1/28/2014 15:53:08",
+		"setTransitionsOn:to:" : "ThierryGoubier 1/28/2014 15:53:08",
+		"someDuplicateIn:" : "ThierryGoubier 1/28/2014 15:53:08" } }

@@ -2,13 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
-		"calculateFirstTerminals" : "ThierryGoubier 1/22/2014 14:34:17",
-		"createIdMethod" : "ThierryGoubier 1/22/2014 14:34:17",
-		"createIdMethod:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"initialize" : "ThierryGoubier 1/22/2014 14:34:17",
-		"isTerminal" : "ThierryGoubier 1/22/2014 14:34:17",
-		"makeCaseInsensitive" : "ThierryGoubier 1/22/2014 14:34:17",
-		"modelTypes:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"regularExpression" : "ThierryGoubier 1/22/2014 14:34:17",
-		"regularExpression:" : "ThierryGoubier 1/22/2014 14:34:17",
-		"unsafeMethodName" : "ThierryGoubier 1/22/2014 14:34:17" } }
+		"calculateFirstTerminals" : "ThierryGoubier 1/28/2014 15:53:08",
+		"createIdMethod" : "ThierryGoubier 1/28/2014 15:53:08",
+		"createIdMethod:" : "ThierryGoubier 1/28/2014 15:53:08",
+		"initialize" : "ThierryGoubier 1/28/2014 15:53:08",
+		"isTerminal" : "ThierryGoubier 1/28/2014 15:53:08",
+		"makeCaseInsensitive" : "ThierryGoubier 1/28/2014 15:53:08",
+		"modelTypes:" : "ThierryGoubier 1/28/2014 15:53:08",
+		"regularExpression" : "ThierryGoubier 1/28/2014 15:53:08",
+		"regularExpression:" : "ThierryGoubier 1/28/2014 15:53:08",
+		"unsafeMethodName" : "ThierryGoubier 1/28/2014 15:53:08" } }
