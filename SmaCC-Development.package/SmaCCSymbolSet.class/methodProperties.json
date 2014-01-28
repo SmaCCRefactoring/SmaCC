@@ -1,0 +1,22 @@
+{
+	"class" : {
+		"basedOn:" : "ThierryGoubier 1/27/2014 15:52:13",
+		"new" : "ThierryGoubier 1/27/2014 15:52:13" },
+	"instance" : {
+		"add:" : "ThierryGoubier 1/27/2014 15:52:13",
+		"addAll:" : "ThierryGoubier 1/27/2014 15:52:13",
+		"addComponent:" : "ThierryGoubier 1/27/2014 15:52:13",
+		"addComponentsFrom:" : "ThierryGoubier 1/27/2014 15:52:13",
+		"allSatisfy:" : "ThierryGoubier 1/27/2014 15:52:13",
+		"baseOn:" : "ThierryGoubier 1/27/2014 15:52:13",
+		"components" : "ThierryGoubier 1/27/2014 15:52:13",
+		"getDependents" : "ThierryGoubier 1/27/2014 15:52:13",
+		"includes:" : "ThierryGoubier 1/27/2014 15:52:13",
+		"initialize" : "ThierryGoubier 1/27/2014 15:52:13",
+		"mergeWith:" : "ThierryGoubier 1/27/2014 15:52:13",
+		"printOn:" : "ThierryGoubier 1/27/2014 15:52:13",
+		"setDependents:" : "ThierryGoubier 1/27/2014 15:52:13",
+		"size" : "ThierryGoubier 1/27/2014 15:52:13",
+		"symbols" : "ThierryGoubier 1/27/2014 15:52:13",
+		"update:" : "ThierryGoubier 1/27/2014 15:52:13",
+		"update:with:from:" : "ThierryGoubier 1/27/2014 15:52:13" } }
