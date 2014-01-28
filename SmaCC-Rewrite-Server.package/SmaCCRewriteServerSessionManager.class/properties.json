@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Rewrite-Server",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"port" ],
+	"name" : "SmaCCRewriteServerSessionManager",
+	"pools" : [
+		 ],
+	"super" : "SmaCCServerSessionManager",
+	"type" : "normal" }

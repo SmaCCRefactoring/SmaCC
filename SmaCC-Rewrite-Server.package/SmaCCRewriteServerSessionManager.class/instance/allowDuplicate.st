@@ -1,0 +1,3 @@
+public
+allowDuplicate
+	^false

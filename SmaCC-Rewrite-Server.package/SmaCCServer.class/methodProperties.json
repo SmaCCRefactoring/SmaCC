@@ -1,0 +1,12 @@
+{
+	"class" : {
+		"startOn:" : "" },
+	"instance" : {
+		"process:" : "",
+		"processRequest:" : "ThierryGoubier 1/28/2014 09:52",
+		"processRequest:on:notifying:canceled:" : "",
+		"readBytesFrom:" : "",
+		"register:" : "",
+		"run" : "",
+		"startOn:" : "ThierryGoubier 1/28/2014 09:52",
+		"writeBytes:on:" : "" } }
