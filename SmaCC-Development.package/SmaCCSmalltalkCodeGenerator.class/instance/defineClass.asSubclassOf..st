@@ -1,21 +1,20 @@
 compiling
 defineClass: aString asSubclassOf: aBehavior
 	| current variables |
-	current := Smalltalk at: aString asSymbol ifAbsent: [Object].
+	current := Smalltalk at: aString asSymbol ifAbsent: [ Object ].
 	variables := ''.
 	(current includesBehavior: SmaCCParser) | (current includesBehavior: SmaCCScanner)
-		ifTrue:
-			[| stream |
+		ifTrue: [ 
+			| stream |
 			stream := WriteStream on: String new.
 			current instVarNames
-				do:
-					[:each | 
+				do: [ :each | 
 					stream
 						nextPutAll: each;
-						space].
-			variables := stream contents].
+						space ].
+			variables := stream contents ].
 	model
 		defineClass:
 			aBehavior name , ' subclass: #' , aString , ' instanceVariableNames: ''' , variables
-				, ''' classVariableNames: '''' poolDictionaries: '''' category: ''SmaCCDev'''.
-	^model classNamed: aString asSymbol
+				, ''' classVariableNames: '''' poolDictionaries: '''' category: ''SmaCC-Tests'''.
+	^ model classNamed: aString asSymbol
