@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Examples-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "ParserRecompiler",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
