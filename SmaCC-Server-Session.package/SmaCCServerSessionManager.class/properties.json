@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Server-Session",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"notifyView" ],
+	"name" : "SmaCCServerSessionManager",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
