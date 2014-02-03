@@ -4,6 +4,7 @@ version203: spec
 	spec
 		for: #common
 		do: [ 
+			self class ensureGitFileTree.
 			spec
 				blessing: #development;
 				author: 'ThierryGoubier';
