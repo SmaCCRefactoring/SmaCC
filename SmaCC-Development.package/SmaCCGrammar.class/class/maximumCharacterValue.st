@@ -1,3 +1,3 @@
 accessing
 maximumCharacterValue
-	^MaximumCharacterValue
+	^ MaximumCharacterValue

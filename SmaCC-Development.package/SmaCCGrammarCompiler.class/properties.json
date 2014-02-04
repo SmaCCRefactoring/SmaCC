@@ -14,8 +14,7 @@
 		"scannerCompiler",
 		"grammar",
 		"codeGenerator",
-		"reduceTable",
-		"model" ],
+		"reduceTable" ],
 	"name" : "SmaCCGrammarCompiler",
 	"pools" : [
 		 ],

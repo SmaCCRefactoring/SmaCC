@@ -1,3 +1,3 @@
 accessing
 tokenNameMap
-	^TokenNameMap ifNil: [TokenNameMap := self defaultTokenNameMap]
+	^ TokenNameMap ifNil: [ TokenNameMap := self defaultTokenNameMap ]
