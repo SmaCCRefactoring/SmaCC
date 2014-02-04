@@ -1,4 +1,4 @@
 accessing
-owner: aSmaCCParserGenerator ownerAcceptSelector: aSymbol 
+owner: aSmaCCParserGenerator ownerAcceptSelector: aSymbol
 	self owner: aSmaCCParserGenerator.
-	self ownerAcceptSelector: aSymbol.
+	self ownerAcceptSelector: aSymbol

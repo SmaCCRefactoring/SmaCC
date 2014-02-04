@@ -1,5 +1,5 @@
 initialize-release
-addTextToTestPage: aTestPage 
+addTextToTestPage: aTestPage
 	| aTestText |
 	testCodeHolder := SmaCCCodeHolder owner: self ownerAcceptSelector: #acceptTestCode:notifying:.
 	aTestText := testCodeHolder contentsMorph.
@@ -9,6 +9,4 @@ addTextToTestPage: aTestPage
 		color: Color transparent.
 	aTestPage
 		addMorph: aTestText
-		fullFrame: (LayoutFrame
-				fractions: (0 @ 0 corner: 1 @ 1)
-				offsets: (0 @ 0 corner: 0 @ -25))
+		fullFrame: (LayoutFrame fractions: (0 @ 0 corner: 1 @ 1) offsets: (0 @ 0 corner: 0 @ -25))

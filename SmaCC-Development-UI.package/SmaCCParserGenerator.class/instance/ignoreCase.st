@@ -1,4 +1,5 @@
 accessing
 ignoreCase
-	ignoreCase isNil ifTrue: [ignoreCase:=false].
-	^ignoreCase
+	ignoreCase isNil
+		ifTrue: [ ignoreCase := false ].
+	^ ignoreCase

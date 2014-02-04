@@ -1,3 +1,3 @@
 accessing
 paneColorToUse
-	^Color blue muchLighter
+	^ Color blue muchLighter

@@ -1,4 +1,3 @@
 accessing
 mainWindow
-	
-	^mainWindow
+	^ mainWindow

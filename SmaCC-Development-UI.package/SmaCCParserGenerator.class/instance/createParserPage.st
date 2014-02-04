@@ -1,14 +1,14 @@
 initialize-release
 createParserPage
 	| aParserPage |
-	parserCodeHolder := SmaCCCodeHolder owner: self
-				ownerAcceptSelector: #acceptParserCode:notifying:.
-	aParserPage := parserCodeHolder contentsMorph.
+	definitionCodeHolder := SmaCCCodeHolder owner: self ownerAcceptSelector: #acceptDefinition:notifying:.
+	aParserPage := definitionCodeHolder contentsMorph.
 	aParserPage
 		hResizing: #spaceFill;
 		vResizing: #spaceFill.
-	self tabList 
-		addPage: (self tabList newContentMorph 
-			addMorph: aParserPage; 
-			yourself) 
-		label: 'Parser'.
+	self tabList
+		addPage:
+			(self tabList newContentMorph
+				addMorph: aParserPage;
+				yourself)
+		label: 'Definition'

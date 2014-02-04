@@ -6,10 +6,11 @@ createTutorialPage
 	tutorialTextHolder acceptContents: self tutorialText.
 	tutorialTextHolder changed: #contents.
 	aTutorialPage
-		 hResizing: #spaceFill;
-		 vResizing: #spaceFill.
-	self tabList 
-		addPage: (self tabList newContentMorph 
-			addMorph: aTutorialPage; 
-			yourself) 
+		hResizing: #spaceFill;
+		vResizing: #spaceFill.
+	self tabList
+		addPage:
+			(self tabList newContentMorph
+				addMorph: aTutorialPage;
+				yourself)
 		label: 'Tutorial'

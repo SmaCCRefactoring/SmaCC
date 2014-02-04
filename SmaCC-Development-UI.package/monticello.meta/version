@@ -1,1 +1,2 @@
-(name 'SmaCC-Development-UI-ThierryGoubier.1' message 'Move the UI of the previous SmaCC version in this package.' id '6b98b5f7-ced5-423e-9590-79f08c9910ed' date '27 January 2014' time '3:27:53.335067 pm' author 'ThierryGoubier' ancestors () stepChildren ())
+(name 'SmaCC-Development-UI-ThierryGoubier.2' message 'Cleaned the GUI, first step.' id '1387bd55-0deb-45fa-863e-ae8e20d0c7ec' date '4 February 2014' time '3:07:26.711972 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-Development-UI-ThierryGoubier.1' message 'Move the UI of the previous SmaCC version in this package.
+' id 'cf465337-55d3-5c3a-ad70-50231f20d0e5' date '27 January 2014' time '3:27:54 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
