@@ -24,7 +24,7 @@
 		"tutorialTextHolder",
 		"conflictTextMorph",
 		"isGLR" ],
-	"name" : "SmaCCParserGenerator",
+	"name" : "SmaCCDevelopmentUI",
 	"pools" : [
 		 ],
 	"super" : "Object",
