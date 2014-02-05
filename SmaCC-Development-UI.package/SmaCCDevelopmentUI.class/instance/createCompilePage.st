@@ -1,11 +1,12 @@
 initialize-release
 createCompilePage
 	| aCompilePage |
-	aCompilePage := Morph new
-		layoutPolicy: ProportionalLayout new;
+	aCompilePage := AlignmentMorph newColumn
 		hResizing: #spaceFill;
 		vResizing: #spaceFill;
-		color: Color transparent.
+		cellPositioning: #leftCenter;
+		color: Color transparent;
+		yourself.
 	self tabList
 		addPage:
 			(self tabList newContentMorph
@@ -13,7 +14,7 @@ createCompilePage
 				yourself)
 		label: 'Compile'.
 	self
-		addClassSelectorsToCompilePage: aCompilePage;
+		addMessageBoxToCompilePage: aCompilePage;
 		addCompileButtonsToCompilePage: aCompilePage;
 		addCheckBoxesToCompilePage: aCompilePage;
-		addMessageBoxToCompilePage: aCompilePage
+		addClassSelectorsToCompilePage: aCompilePage

@@ -1,14 +1,14 @@
 initialize-release
 createTestPage
 	| aTestPage |
-	aTestPage := Morph new
+	aTestPage := AlignmentMorph newColumn
 		hResizing: #spaceFill;
 		vResizing: #spaceFill;
-		layoutPolicy: ProportionalLayout new;
+		cellPositioning: #leftCenter;
 		color: Color transparent;
 		yourself.
-	self addTextToTestPage: aTestPage.
 	self addButtonsToTestPage: aTestPage.
+	self addTextToTestPage: aTestPage.
 	self tabList
 		addPage:
 			(self tabList newContentMorph

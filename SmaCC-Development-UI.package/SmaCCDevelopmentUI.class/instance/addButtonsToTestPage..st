@@ -17,9 +17,12 @@ addButtonsToTestPage: aTestPage
 		vResizing: #shrinkWrap;
 		label: 'Parse and explore'.
 	aTestPage
-		addMorph: aParserButton
-			fullFrame: (LayoutFrame fractions: (0 @ 1 corner: 0.33 @ 1) offsets: (0 @ (1 - 25) corner: 0 @ 0));
-		addMorph: aParserInspectButton
-			fullFrame: (LayoutFrame fractions: (0.33 @ 1 corner: 0.66 @ 1) offsets: (0 @ (1 - 25) corner: 0 @ 0));
-		addMorph: aParserExploreButton
-			fullFrame: (LayoutFrame fractions: (0.66 @ 1 corner: 1 @ 1) offsets: (0 @ (1 - 25) corner: 0 @ 0))
+		addMorph:
+			(AlignmentMorph newRow
+				vResizing: #shrinkWrap;
+				hResizing: #spaceFill;
+				color: Color transparent;
+				addMorph: aParserButton;
+				addMorph: aParserInspectButton;
+				addMorph: aParserExploreButton;
+				yourself)

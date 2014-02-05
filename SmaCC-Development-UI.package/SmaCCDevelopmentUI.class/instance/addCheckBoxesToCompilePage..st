@@ -1,5 +1,14 @@
 initialize-release
 addCheckBoxesToCompilePage: aCompilePage
+	| cMorph |
+	cMorph := AlignmentMorph newColumn
+		vResizing: #shrinkWrap;
+		 hResizing: #shrinkWrap;
+		 layoutInset: 1;
+		 wrapCentering: #center;
+		 cellPositioning: #leftCenter;
+		color: Color transparent;
+		 yourself.
 	#(
 		#(#toggleIgnoreCase #ignoreCase 'Ignore Case')
 		#(#toggleGenerateDefinitionComments #generateDefinitionComments 'Generate definition comments')
@@ -17,5 +26,5 @@ addCheckBoxesToCompilePage: aCompilePage
 				getEnabled: nil
 				label: each third
 				help: nil.
-			checkbox position: 10 @ 35 + (index * (0 @ 20)).
-			aCompilePage addMorph: checkbox ]
+			cMorph addMorph: checkbox ].
+	aCompilePage addMorph: cMorph
