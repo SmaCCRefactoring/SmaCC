@@ -7,7 +7,7 @@ baseline20: spec
 		for: #common
 		do: [ 
 			spec blessing: #baseline.
-			spec repository: 'gitfiletree://github.com/ThierryGoubier/Smacc.git?protocol=git'.
+			spec repository: 'gitfiletree://github.com/ThierryGoubier/SmaCC.git?protocol=git'.
 			spec
 				package: 'SmaCC-Source-Editing';
 				package: 'SmaCC-Runtime' with: [ spec requires: 'SmaCC-Source-Editing' ];
