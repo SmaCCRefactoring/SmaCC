@@ -1,11 +1,13 @@
 baselines
 baseline20: spec
 	<version: '2.0-baseline'>
+	
+	self class ensureGitFileTree.
 	spec
 		for: #common
 		do: [ 
 			spec blessing: #baseline.
-			spec repository: 'http://smalltalkhub.com/mc/PharoExtras/Smacc/main'.
+			spec repository: 'gitfiletree://github.com/ThierryGoubier/Smacc.git?protocol=git'.
 			spec
 				package: 'SmaCC-Source-Editing';
 				package: 'SmaCC-Runtime' with: [ spec requires: 'SmaCC-Source-Editing' ];
