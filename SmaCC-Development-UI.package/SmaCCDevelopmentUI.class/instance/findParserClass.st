@@ -14,7 +14,7 @@ findParserClass
 				newContents: className.
 			parserClassMorph changed: #updateWindowLabel.
 			class := Smalltalk at: className asSymbol.
-			(class class includesSelector: #parserDefinitionComment)
+			(class class includesSelector: #definitionComment)
 				ifTrue: [ 
-					text := self removeCommentedPartOf: (class class sourceCodeAt: #parserDefinitionComment).
+					text := self removeCommentedPartOf: (class class sourceCodeAt: #definitionComment).
 					self definition: text ] ]
