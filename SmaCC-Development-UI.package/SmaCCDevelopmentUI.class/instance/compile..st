@@ -25,10 +25,6 @@ compile: aSymbol
 			stream := WriteStream on: Text new.
 			[ 
 			parserCompiler createChanges.
-			self generateSymbolComments
-				ifTrue: [ parserCompiler compileSymbolComment ].
-			self generateItemSetComments
-				ifTrue: [ parserCompiler compileItemSetsComment ].
 			parserCompiler codeGenerator compileChanges ]
 				on: SmaCCCompilationNotification
 				do: [ :ex | 
