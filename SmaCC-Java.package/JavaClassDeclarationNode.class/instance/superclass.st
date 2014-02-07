@@ -1,0 +1,3 @@
+generated
+superclass
+	^superclass

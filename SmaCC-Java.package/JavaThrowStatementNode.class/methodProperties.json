@@ -2,4 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"expression" : "",
+		"expression:" : "",
+		"nodeVariables" : "",
+		"semicolon" : "",
+		"semicolon:" : "",
+		"throwToken" : "",
+		"throwToken:" : "",
+		"tokenVariables" : "" } }

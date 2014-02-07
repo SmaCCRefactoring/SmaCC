@@ -2,4 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"compositeTokenVariables" : "",
+		"initialize" : "",
+		"lefts" : "",
+		"lefts:" : "",
+		"pluralVariablesMap" : "",
+		"rights" : "",
+		"rights:" : "" } }

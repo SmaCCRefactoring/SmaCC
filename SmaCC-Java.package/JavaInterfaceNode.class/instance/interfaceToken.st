@@ -1,0 +1,3 @@
+generated
+interfaceToken
+	^interfaceToken

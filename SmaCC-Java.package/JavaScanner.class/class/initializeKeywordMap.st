@@ -1,0 +1,6 @@
+generated
+initializeKeywordMap
+	keywordMap := Dictionary new.
+	#(#(102 'abstract' 38) #(102 'assert' 79) #(102 'boolean' 33) #(102 'break' 81) #(102 'byte' 34) #(102 'case' 43) #(102 'catch' 74) #(102 'char' 26) #(102 'class' 9) #(102 'continue' 82) #(102 'default' 24) #(102 'do' 84) #(102 'double' 31) #(102 'else' 32) #(102 'enum' 15) #(102 'extends' 10) #(102 'false' 98) #(102 'final' 39) #(102 'finally' 75) #(102 'float' 27) #(102 'for' 80) #(102 'if' 14) #(102 'implements' 4) #(102 'import' 44) #(102 'instanceof' 56) #(102 'int' 29) #(102 'interface' 17) #(102 'long' 25) #(102 'native' 42) #(102 'new' 78) #(102 'null' 101) #(102 'package' 35) #(102 'private' 41) #(102 'protected' 40) #(102 'public' 46) #(102 'return' 76) #(102 'short' 28) #(102 'static' 37) #(102 'strictfp' 8) #(102 'super' 16) #(102 'switch' 72) #(102 'synchronized' 18) #(102 'this' 22) #(102 'throw' 77) #(102 'throws' 21) #(102 'transient' 12) #(102 'true' 98) #(102 'try' 73) #(102 'void' 11) #(102 'volatile' 19) #(102 'while' 36))
+		do: [:each | (keywordMap at: each first ifAbsentPut: [Dictionary new]) at: (each at: 2) put: each last].
+	^keywordMap

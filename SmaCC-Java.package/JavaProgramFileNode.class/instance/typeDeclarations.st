@@ -1,0 +1,3 @@
+generated
+typeDeclarations
+	^typeDeclarations

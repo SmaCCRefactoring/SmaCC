@@ -1,0 +1,3 @@
+file
+fileExtensionType
+	^'Java files'

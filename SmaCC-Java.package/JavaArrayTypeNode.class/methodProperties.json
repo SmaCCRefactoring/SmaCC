@@ -2,4 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"baseType" : "",
+		"baseType:" : "",
+		"compositeNodeVariables" : "",
+		"emptyDims" : "",
+		"emptyDims:" : "",
+		"initialize" : "",
+		"nodeVariables" : "",
+		"pluralVariablesMap" : "" } }

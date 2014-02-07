@@ -2,4 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"array" : "",
+		"array:" : "",
+		"expression" : "",
+		"expression:" : "",
+		"nodeVariables" : "" } }

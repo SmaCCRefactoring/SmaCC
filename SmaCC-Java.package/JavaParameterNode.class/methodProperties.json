@@ -2,4 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"compositeNodeVariables" : "",
+		"initialize" : "",
+		"modifiers" : "",
+		"modifiers:" : "",
+		"nodeVariables" : "",
+		"pluralVariablesMap" : "",
+		"type" : "",
+		"type:" : "",
+		"variable" : "",
+		"variable:" : "" } }

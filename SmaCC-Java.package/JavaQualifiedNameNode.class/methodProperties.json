@@ -2,4 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"nodeVariables" : "",
+		"nspace" : "",
+		"nspace:" : "",
+		"period" : "",
+		"period:" : "",
+		"tokenVariables" : "" } }

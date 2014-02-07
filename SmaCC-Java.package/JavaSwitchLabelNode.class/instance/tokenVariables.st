@@ -1,0 +1,3 @@
+generated
+tokenVariables
+	^#(#caseToken #colon)

@@ -1,0 +1,3 @@
+generated
+visitConstructorDeclaration: aConstructorDeclaration
+	^self visitProgram: aConstructorDeclaration

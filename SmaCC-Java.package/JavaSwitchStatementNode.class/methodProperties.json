@@ -2,4 +2,16 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"block" : "",
+		"block:" : "",
+		"expression" : "",
+		"expression:" : "",
+		"left" : "",
+		"left:" : "",
+		"nodeVariables" : "",
+		"right" : "",
+		"right:" : "",
+		"switchToken" : "",
+		"switchToken:" : "",
+		"tokenVariables" : "" } }

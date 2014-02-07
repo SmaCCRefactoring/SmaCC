@@ -1,0 +1,3 @@
+generated
+visitPreDecrementExpression: aPreDecrementExpression
+	^self visitExpression: aPreDecrementExpression

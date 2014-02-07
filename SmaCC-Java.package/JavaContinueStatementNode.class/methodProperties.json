@@ -2,4 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"continueToken" : "",
+		"continueToken:" : "",
+		"identifier" : "",
+		"identifier:" : "",
+		"semicolon" : "",
+		"semicolon:" : "",
+		"tokenVariables" : "" } }

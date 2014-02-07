@@ -1,0 +1,3 @@
+generated
+nspace
+	^nspace

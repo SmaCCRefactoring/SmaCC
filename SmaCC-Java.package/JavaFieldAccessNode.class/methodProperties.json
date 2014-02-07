@@ -2,4 +2,16 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"name" : "",
+		"name:" : "",
+		"nodeVariables" : "",
+		"period" : "",
+		"period:" : "",
+		"receiver" : "",
+		"receiver:" : "",
+		"superPeriod" : "",
+		"superPeriod:" : "",
+		"superToken" : "",
+		"superToken:" : "",
+		"tokenVariables" : "" } }

@@ -2,4 +2,19 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"commas" : "",
+		"commas:" : "",
+		"compositeNodeVariables" : "",
+		"compositeTokenVariables" : "",
+		"initialize" : "",
+		"left" : "",
+		"left:" : "",
+		"name" : "",
+		"name:" : "",
+		"parameters" : "",
+		"parameters:" : "",
+		"pluralVariablesMap" : "",
+		"right" : "",
+		"right:" : "",
+		"tokenVariables" : "" } }

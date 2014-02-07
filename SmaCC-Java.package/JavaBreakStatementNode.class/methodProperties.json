@@ -2,4 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"breakToken" : "",
+		"breakToken:" : "",
+		"identifier" : "",
+		"identifier:" : "",
+		"semicolon" : "",
+		"semicolon:" : "",
+		"tokenVariables" : "" } }

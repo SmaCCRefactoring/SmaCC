@@ -1,0 +1,3 @@
+generated
+visitLocalVariableDeclarationStatement: aLocalVariableDeclarationStatement
+	^self visitStatement: aLocalVariableDeclarationStatement

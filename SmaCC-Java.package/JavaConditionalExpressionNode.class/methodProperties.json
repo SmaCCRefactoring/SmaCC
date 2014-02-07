@@ -2,4 +2,16 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"colon" : "",
+		"colon:" : "",
+		"falseExpression" : "",
+		"falseExpression:" : "",
+		"nodeVariables" : "",
+		"questionMark" : "",
+		"questionMark:" : "",
+		"testExpression" : "",
+		"testExpression:" : "",
+		"tokenVariables" : "",
+		"trueExpression" : "",
+		"trueExpression:" : "" } }

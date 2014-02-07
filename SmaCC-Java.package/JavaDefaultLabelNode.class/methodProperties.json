@@ -2,4 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"colon" : "",
+		"colon:" : "",
+		"defaultToken" : "",
+		"defaultToken:" : "",
+		"tokenVariables" : "" } }

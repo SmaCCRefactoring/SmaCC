@@ -1,0 +1,3 @@
+generated
+visitInitializedVariableDeclaration: anInitializedVariableDeclaration
+	^self visitVariableDeclaration: anInitializedVariableDeclaration

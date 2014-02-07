@@ -2,4 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"period" : "",
+		"period:" : "",
+		"star" : "",
+		"star:" : "",
+		"tokenVariables" : "" } }

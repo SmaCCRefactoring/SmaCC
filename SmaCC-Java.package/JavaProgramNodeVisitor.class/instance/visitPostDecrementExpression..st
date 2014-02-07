@@ -1,0 +1,3 @@
+generated
+visitPostDecrementExpression: aPostDecrementExpression
+	^self visitExpression: aPostDecrementExpression

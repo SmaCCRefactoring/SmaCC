@@ -2,4 +2,16 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"assertToken" : "",
+		"assertToken:" : "",
+		"colon" : "",
+		"colon:" : "",
+		"messageExpression" : "",
+		"messageExpression:" : "",
+		"nodeVariables" : "",
+		"semicolon" : "",
+		"semicolon:" : "",
+		"testExpression" : "",
+		"testExpression:" : "",
+		"tokenVariables" : "" } }

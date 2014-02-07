@@ -2,4 +2,24 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"_update" : "",
+		"_update:" : "",
+		"acceptVisitor:" : "",
+		"firstSemicolon" : "",
+		"firstSemicolon:" : "",
+		"forToken" : "",
+		"forToken:" : "",
+		"initial" : "",
+		"initial:" : "",
+		"left" : "",
+		"left:" : "",
+		"nodeVariables" : "",
+		"right" : "",
+		"right:" : "",
+		"secondSemicolon" : "",
+		"secondSemicolon:" : "",
+		"statement" : "",
+		"statement:" : "",
+		"test" : "",
+		"test:" : "",
+		"tokenVariables" : "" } }

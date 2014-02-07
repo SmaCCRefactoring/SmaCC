@@ -1,0 +1,3 @@
+generated
+visitArrayMethodDeclarator: anArrayMethodDeclarator
+	^self visitProgram: anArrayMethodDeclarator

@@ -2,4 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"thisToken" : "",
+		"thisToken:" : "",
+		"tokenVariables" : "" } }

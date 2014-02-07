@@ -1,0 +1,3 @@
+generated
+firstSemicolon
+	^firstSemicolon

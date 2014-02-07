@@ -1,0 +1,3 @@
+generated
+packageDeclaration
+	^packageDeclaration

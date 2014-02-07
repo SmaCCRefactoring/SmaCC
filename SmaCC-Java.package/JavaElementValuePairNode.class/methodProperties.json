@@ -2,4 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"acceptVisitor:" : "",
+		"equals" : "",
+		"equals:" : "",
+		"name" : "",
+		"name:" : "",
+		"nodeVariables" : "",
+		"tokenVariables" : "",
+		"value" : "",
+		"value:" : "" } }
