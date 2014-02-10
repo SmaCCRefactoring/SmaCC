@@ -1,6 +1,6 @@
 compiling
 defineClass: aString asSubclassOf: aBehavior
-	| current variables |
+	| current variables aCategory |
 	current := Smalltalk at: aString asSymbol ifAbsent: [ Object ].
 	variables := ''.
 	(current includesBehavior: SmaCCParser) | (current includesBehavior: SmaCCScanner)
@@ -13,8 +13,9 @@ defineClass: aString asSubclassOf: aBehavior
 						nextPutAll: each;
 						space ].
 			variables := stream contents ].
+	aCategory := (Smalltalk at: aString asSymbol ifAbsent: [  ]) ifNil: [ #'SmaCC-Examples' ] ifNotNil: [ :c | c category ].
 	model
 		defineClass:
 			aBehavior name , ' subclass: #' , aString , ' instanceVariableNames: ''' , variables
-				, ''' classVariableNames: '''' poolDictionaries: '''' category: ''SmaCC-Tests'''.
+				, ''' classVariableNames: '''' poolDictionaries: '''' category: ''' , aCategory , ''''.
 	^ model classNamed: aString asSymbol
