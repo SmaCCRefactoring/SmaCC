@@ -2,27 +2,12 @@ generated
 scan12
 	self recordMatch: #(26).
 	self step.
-	currentCharacter == $r
-		ifTrue:
-			[self recordMatch: #(26).
+	currentCharacter = $r
+		ifTrue: [ ^ self scan13 ].
+	(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
+		ifTrue: [ 
+			[ 
+			self recordMatch: #(26).
 			self step.
-			currentCharacter == $o
-				ifTrue:
-					[self recordMatch: #(26).
-					self step.
-					currentCharacter == $r
-						ifTrue:
-							[self recordMatch: #(7 26).
-							self step].
-					(currentCharacter isLetter or: [currentCharacter isHexDigit or: [currentCharacter == $_]])
-						ifTrue:
-							[[self recordMatch: #(26).
-							self step.
-							currentCharacter isLetter or: [currentCharacter isHexDigit or: [currentCharacter == $_]]] whileTrue].
-					^self reportLastMatch]].
-	(currentCharacter isLetter or: [currentCharacter isHexDigit or: [currentCharacter == $_]])
-		ifTrue:
-			[[self recordMatch: #(26).
-			self step.
-			currentCharacter isLetter or: [currentCharacter isHexDigit or: [currentCharacter == $_]]] whileTrue].
-	^self reportLastMatch
+			currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
+	^ self reportLastMatch

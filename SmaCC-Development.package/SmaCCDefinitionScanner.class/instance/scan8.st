@@ -1,5 +1,7 @@
 generated
 scan8
+	self recordMatch: #(31).
 	self step.
-	currentCharacter == $= ifTrue: [^self recordAndReportMatch: #(31)].
-	^self reportLastMatch
+	currentCharacter = $:
+		ifTrue: [ ^ self scan9 ].
+	^ self reportLastMatch

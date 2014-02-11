@@ -1,5 +1,6 @@
 generated
 scan9
 	self step.
-	(currentCharacter isLetter or: [currentCharacter == $_]) ifTrue: [^self scan10].
-	^self reportLastMatch
+	currentCharacter = $=
+		ifTrue: [ ^ self recordAndReportMatch: #(31) ].
+	^ self reportLastMatch

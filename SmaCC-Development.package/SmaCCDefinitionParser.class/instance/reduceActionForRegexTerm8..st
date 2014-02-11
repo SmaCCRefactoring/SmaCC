@@ -1,5 +1,5 @@
-generated
+generated-reduction actions
 reduceActionForRegexTerm8: nodes
-	^SmaCCSequenceRENode
+	^ SmaCCSequenceRENode
 		nodes:
-			((nodes at: 1) value asOrderedCollection collect: [:each | SmaCCCharacterRENode characters: (String with: each)])
+			((nodes at: 1) value asOrderedCollection collect: [ :each | SmaCCCharacterRENode characters: (String with: each) ])

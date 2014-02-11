@@ -1,3 +1,3 @@
-generated
+generated-reduction actions
 reduceActionForRegex3: nodes
-	^(nodes at: 1) , (nodes at: 2)
+	^ (nodes at: 1) , (nodes at: 2)

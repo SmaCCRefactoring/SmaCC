@@ -1,3 +1,3 @@
-generated
+generated-reduction actions
 reduceActionForStartProduction1: nodes
-	^self state: #parser
+	^ self state: #parser

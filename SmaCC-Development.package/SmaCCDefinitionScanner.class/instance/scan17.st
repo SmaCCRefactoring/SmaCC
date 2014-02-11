@@ -1,161 +1,67 @@
 generated
 scan17
 	self step.
-	currentCharacter == $'
+	currentCharacter = $"
+		ifTrue: [ ^ self scan2 ].
+	currentCharacter = $#
 		ifTrue: [ 
-			self recordMatch: #(37).
+			[ 
+			self recordMatch: #(28).
 			self step.
-			(currentCharacter isLetter or: [ currentCharacter == $_ ])
-				ifTrue: [ ^ self scan2 ].
+			currentCharacter <= Character tab
+				or: [ (currentCharacter between: Character pageUp and: Character newPage) or: [ currentCharacter >= (Character value: 14) ] ] ]
+				whileTrue.
 			^ self reportLastMatch ].
-	currentCharacter == (Character value: 12)
-		ifTrue: [ 
-			self recordMatch: #(24 37).
-			self step.
-			currentCharacter isWhitespace
-				ifTrue: [ 
-					[ 
-					self recordMatch: #(24).
-					self step.
-					currentCharacter isWhitespace ] whileTrue ].
-			^ self reportLastMatch ].
-	currentCharacter == $"
-		ifTrue: [ 
-			self recordMatch: #(37).
-			self step.
-			currentCharacter == $"
-				ifTrue: [ ^ self scan4 ].
-			^ self scan3 ].
-	currentCharacter == $#
-		ifTrue: [ 
-			self recordMatch: #(28 37).
-			self step.
-			(currentCharacter <= (Character value: 9)
-				or: [ 
-					(currentCharacter between: (Character value: 11) and: (Character value: 12))
-						or: [ currentCharacter >= (Character value: 14) ] ])
-				ifTrue: [ 
-					[ 
-					self recordMatch: #(28).
-					self step.
-					currentCharacter <= (Character value: 9)
-						or: [ 
-							(currentCharacter between: (Character value: 11) and: (Character value: 12))
-								or: [ currentCharacter >= (Character value: 14) ] ] ] whileTrue ].
-			^ self reportLastMatch ].
-	currentCharacter == $%
-		ifTrue: [ ^ self recordAndReportMatch: #(32 37) ].
-	currentCharacter == $(
-		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
-	currentCharacter == $)
-		ifTrue: [ ^ self recordAndReportMatch: #(6 37) ].
-	currentCharacter == $*
-		ifTrue: [ ^ self recordAndReportMatch: #(3 37) ].
-	currentCharacter == $.
-		ifTrue: [ ^ self recordAndReportMatch: #(38) ].
-	currentCharacter == $/
-		ifTrue: [ 
-			self recordMatch: #(37).
-			self step.
-			currentCharacter == $*
-				ifTrue: [ ^ self scan6 ].
-			^ self reportLastMatch ].
-	currentCharacter == $:
-		ifTrue: [ 
-			self recordMatch: #(31 37).
-			self step.
-			currentCharacter == $:
-				ifTrue: [ ^ self scan8 ].
-			^ self reportLastMatch ].
-	currentCharacter == $;
-		ifTrue: [ ^ self recordAndReportMatch: #(33 37) ].
-	currentCharacter == $?
-		ifTrue: [ ^ self recordAndReportMatch: #(5 37) ].
-	currentCharacter == $[
-		ifTrue: [ 
-			self step.
-			currentCharacter == $\
-				ifTrue: [ ^ self scan14 ].
-			(currentCharacter <= $[ or: [ currentCharacter >= $^ ])
-				ifTrue: [ ^ self scan13 ].
-			^ self reportLastMatch ].
-	currentCharacter == $\
-		ifTrue: [ 
-			self step.
-			currentCharacter == $c
-				ifTrue: [ 
-					self step.
-					(currentCharacter between: $A and: $Z)
-						ifTrue: [ ^ self recordAndReportMatch: #(34) ].
-					^ self reportLastMatch ].
-			currentCharacter == $x
-				ifTrue: [ 
-					self step.
-					(currentCharacter isHexDigit or: [ currentCharacter between: $a and: $f ])
-						ifTrue: [ 
-							3
-								timesRepeat: [ 
-									self recordMatch: #(34).
-									self step.
-									(currentCharacter isHexDigit or: [ currentCharacter between: $a and: $f ])
-										ifFalse: [ ^ self reportLastMatch ] ].
-							^ self recordAndReportMatch: #(34) ].
-					^ self reportLastMatch ].
-			^ self recordAndReportMatch: #(34) ].
-	currentCharacter == ${
+	currentCharacter = $%
+		ifTrue: [ ^ self recordAndReportMatch: #(32) ].
+	currentCharacter = $'
+		ifTrue: [ ^ self scan4 ].
+	currentCharacter = $(
+		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
+	currentCharacter = $)
+		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
+	currentCharacter = $*
+		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
+	currentCharacter = $+
+		ifTrue: [ ^ self recordAndReportMatch: #(3) ].
+	currentCharacter = $/
+		ifTrue: [ ^ self scan6 ].
+	currentCharacter = $:
+		ifTrue: [ ^ self scan8 ].
+	currentCharacter = $;
+		ifTrue: [ ^ self recordAndReportMatch: #(33) ].
+	currentCharacter = $<
+		ifTrue: [ ^ self scan10 ].
+	currentCharacter = $?
+		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
+	currentCharacter = $e
+		ifTrue: [ ^ self scan12 ].
+	currentCharacter = ${
 		ifTrue: [ 
 			self recordMatch: #(29).
 			self step.
-			currentCharacter == $,
-				ifTrue: [ ^ self scan15 ].
-			currentCharacter isDigit
-				ifTrue: [ 
-					[ 
-					self step.
-					currentCharacter == $,
-						ifTrue: [ ^ self scan15 ].
-					currentCharacter isDigit ] whileTrue ].
+			currentCharacter = ${
+				ifTrue: [ ^ self recordAndReportMatch: #(39) ].
 			^ self reportLastMatch ].
-	currentCharacter == $|
-		ifTrue: [ ^ self recordAndReportMatch: #(1 37) ].
-	currentCharacter == $+
-		ifTrue: [ ^ self recordAndReportMatch: #(4 37) ].
-	currentCharacter == $<
+	currentCharacter = $|
+		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
+	currentCharacter = $}
 		ifTrue: [ 
-			self recordMatch: #(37).
 			self step.
-			(currentCharacter isLetter or: [ currentCharacter == $_ ])
-				ifTrue: [ ^ self scan10 ].
+			currentCharacter = $}
+				ifTrue: [ ^ self recordAndReportMatch: #(40) ].
 			^ self reportLastMatch ].
-	currentCharacter == $e
-		ifTrue: [ 
-			self recordMatch: #(26 37).
-			self step.
-			currentCharacter == $r
-				ifTrue: [ ^ self scan12 ].
-			(currentCharacter isLetter or: [ currentCharacter isHexDigit or: [ currentCharacter == $_ ] ])
-				ifTrue: [ 
-					[ 
-					self recordMatch: #(26).
-					self step.
-					currentCharacter isLetter or: [ currentCharacter isHexDigit or: [ currentCharacter == $_ ] ] ] whileTrue ].
-			^ self reportLastMatch ].
-	currentCharacter isWhitespace
+	(currentCharacter isSeparator or: [ currentCharacter = Character pageUp ])
 		ifTrue: [ 
 			[ 
 			self recordMatch: #(24).
 			self step.
-			currentCharacter isWhitespace ] whileTrue.
+			currentCharacter isSeparator or: [ currentCharacter = Character pageUp ] ] whileTrue.
 			^ self reportLastMatch ].
-	(currentCharacter isLetter or: [ currentCharacter == $_ ])
+	(currentCharacter isLetter or: [ currentCharacter = $_ ])
 		ifTrue: [ 
-			self recordMatch: #(26 37).
+			[ 
+			self recordMatch: #(26).
 			self step.
-			(currentCharacter isLetter or: [ currentCharacter isHexDigit or: [ currentCharacter == $_ ] ])
-				ifTrue: [ 
-					[ 
-					self recordMatch: #(26).
-					self step.
-					currentCharacter isLetter or: [ currentCharacter isHexDigit or: [ currentCharacter == $_ ] ] ] whileTrue ].
-			^ self reportLastMatch ].
-	^ self recordAndReportMatch: #(37)
+			currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
+	^ self reportLastMatch

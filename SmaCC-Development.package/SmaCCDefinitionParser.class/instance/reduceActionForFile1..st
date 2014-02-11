@@ -1,5 +1,5 @@
-generated
+generated-reduction actions
 reduceActionForFile1: nodes
-	^grammar
+	^ grammar
 		addExtraSymbols;
 		yourself

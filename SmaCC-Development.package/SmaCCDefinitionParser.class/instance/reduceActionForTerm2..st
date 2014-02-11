@@ -1,16 +1,16 @@
-generated
+generated-reduction actions
 reduceActionForTerm2: nodes
-	^grammar
+	^ grammar
 		findSymbolNamed: (nodes at: 1) value
-		ifAbsentAdd:
-			[| node symbol |
+		ifAbsentAdd: [ 
+			| node symbol |
 			symbol := grammar newTerminalSymbolNamed: (nodes at: 1) value.
 			(scannerDefinition includesTokenNamed: (nodes at: 1) value)
-				ifTrue: [symbol regularExpression: (scannerDefinition tokenNamed: (nodes at: 1) value)]
-				ifFalse:
-					[node := SmaCCGrammar implicitToken: (nodes at: 1) value.
+				ifTrue: [ symbol regularExpression: (scannerDefinition tokenNamed: (nodes at: 1) value) ]
+				ifFalse: [ 
+					node := SmaCCGrammar implicitToken: (nodes at: 1) value.
 					node notNil
-						ifTrue:
-							[node addStates: scannerDefinition nonExcludeStates.
-							symbol regularExpression: node]].
-			symbol]
+						ifTrue: [ 
+							node addStates: scannerDefinition nonExcludeStates.
+							symbol regularExpression: node ] ].
+			symbol ]

@@ -1,4 +1,7 @@
 generated
 scan3
-	[self step.
-	currentCharacter == $" ifTrue: [^self scan4]] repeat
+	self recordMatch: #(27).
+	self step.
+	currentCharacter = $"
+		ifTrue: [ ^ self scan2 ].
+	^ self reportLastMatch

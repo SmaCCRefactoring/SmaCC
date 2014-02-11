@@ -1,3 +1,3 @@
-generated
+generated-reduction actions
 reduceActionForStartDirective1: nodes
-	^self state: #directives
+	^ self state: #directives
