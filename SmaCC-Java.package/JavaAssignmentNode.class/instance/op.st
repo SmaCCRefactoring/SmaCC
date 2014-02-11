@@ -1,3 +1,3 @@
 generated
 op
-	^op
+	^ op

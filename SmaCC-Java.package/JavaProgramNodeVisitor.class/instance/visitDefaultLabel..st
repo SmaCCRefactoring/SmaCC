@@ -1,3 +1,3 @@
 generated
 visitDefaultLabel: aDefaultLabel
-	^self visitProgram: aDefaultLabel
+	^ self visitProgram: aDefaultLabel

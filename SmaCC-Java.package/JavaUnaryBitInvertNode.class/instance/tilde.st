@@ -1,3 +1,3 @@
 generated
 tilde
-	^tilde
+	^ tilde

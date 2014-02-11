@@ -1,3 +1,3 @@
 generated
 compositeNodeVariables
-	^#(#annotations #expressions #declarations)
+	^ #(#annotations #expressions #declarations)

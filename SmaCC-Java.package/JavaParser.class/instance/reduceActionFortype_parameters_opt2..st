@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFortype_parameters_opt2: nodes
 	| result |
 	result := JavaTypeParametersNode new.
@@ -6,4 +6,4 @@ reduceActionFortype_parameters_opt2: nodes
 	result addNodes: ((nodes at: 2) at: 1) to: result parameters.
 	result addTokens: ((nodes at: 2) at: 2) to: result commas.
 	result right: (nodes at: 3).
-	^result
+	^ result

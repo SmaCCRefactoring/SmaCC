@@ -1,3 +1,3 @@
 generated
 voidToken
-	^voidToken
+	^ voidToken

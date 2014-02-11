@@ -8,7 +8,7 @@
 	"instvars" : [
 		"modifiers",
 		"classToken",
-		"name",
+		"_name",
 		"typeParameters",
 		"extendsToken",
 		"superclass",

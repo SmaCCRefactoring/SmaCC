@@ -1,3 +1,3 @@
 generated
 visitAssertStatement: anAssertStatement
-	^self visitStatement: anAssertStatement
+	^ self visitStatement: anAssertStatement

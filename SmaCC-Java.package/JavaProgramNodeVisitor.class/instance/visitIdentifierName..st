@@ -1,3 +1,3 @@
 generated
 visitIdentifierName: anIdentifierName
-	^self visitProgram: anIdentifierName
+	^ self visitProgram: anIdentifierName

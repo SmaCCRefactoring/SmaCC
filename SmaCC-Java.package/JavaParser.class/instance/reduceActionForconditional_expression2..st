@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForconditional_expression2: nodes
 	| result |
 	result := JavaConditionalExpressionNode new.
@@ -7,4 +7,4 @@ reduceActionForconditional_expression2: nodes
 	result trueExpression: (nodes at: 3).
 	result colon: (nodes at: 4).
 	result falseExpression: (nodes at: 5).
-	^result
+	^ result

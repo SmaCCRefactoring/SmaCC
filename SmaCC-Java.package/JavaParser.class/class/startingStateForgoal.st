@@ -1,3 +1,3 @@
 generated
 startingStateForgoal
-	^2
+	^ 1

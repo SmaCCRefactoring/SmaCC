@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitPreIncrementExpression: self
+	^ aProgramVisitor visitPreIncrementExpression: self

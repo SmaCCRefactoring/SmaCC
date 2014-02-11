@@ -1,3 +1,3 @@
 generated
 visitVariableDeclaration: aVariableDeclaration
-	^self visitProgram: aVariableDeclaration
+	^ self visitProgram: aVariableDeclaration

@@ -1,3 +1,3 @@
 generated
 visitArrayVariableName: anArrayVariableName
-	^self visitProgram: anArrayVariableName
+	^ self visitProgram: anArrayVariableName

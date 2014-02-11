@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForcatch_clause1: nodes
 	| result |
 	result := JavaCatchClauseNode new.
@@ -9,4 +9,4 @@ reduceActionForcatch_clause1: nodes
 	result variable: (nodes at: 3) variable.
 	result right: (nodes at: 4).
 	result block: (nodes at: 5).
-	^result
+	^ result

@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForabstract_method_declaration1: nodes
 	| result |
 	result := JavaAbstractMethodDeclarationNode new.
@@ -7,4 +7,4 @@ reduceActionForabstract_method_declaration1: nodes
 	result declarator: ((nodes at: 1) at: 3).
 	result throws: ((nodes at: 1) at: 4).
 	result semicolon: (nodes at: 2).
-	^result
+	^ result

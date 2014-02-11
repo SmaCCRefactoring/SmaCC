@@ -1,3 +1,3 @@
 generated
 visitThrows: aThrows
-	^self visitProgram: aThrows
+	^ self visitProgram: aThrows

@@ -1,3 +1,3 @@
 generated
 visitClassDeclaration: aClassDeclaration
-	^self visitProgram: aClassDeclaration
+	^ self visitProgram: aClassDeclaration

@@ -1,3 +1,3 @@
 generated
 baseType
-	^baseType
+	^ baseType

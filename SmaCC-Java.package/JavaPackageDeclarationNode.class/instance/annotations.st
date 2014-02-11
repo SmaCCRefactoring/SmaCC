@@ -1,3 +1,3 @@
 generated
 annotations
-	^annotations
+	^ annotations

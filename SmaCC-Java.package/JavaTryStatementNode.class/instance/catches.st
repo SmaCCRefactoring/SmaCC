@@ -1,3 +1,3 @@
 generated
 catches
-	^catches
+	^ catches

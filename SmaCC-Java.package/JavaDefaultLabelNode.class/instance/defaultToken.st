@@ -1,3 +1,3 @@
 generated
 defaultToken
-	^defaultToken
+	^ defaultToken

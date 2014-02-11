@@ -1,3 +1,3 @@
 generated
 visitSwitchBlockStatementGroup: aSwitchBlockStatementGroup
-	^self visitProgram: aSwitchBlockStatementGroup
+	^ self visitProgram: aSwitchBlockStatementGroup

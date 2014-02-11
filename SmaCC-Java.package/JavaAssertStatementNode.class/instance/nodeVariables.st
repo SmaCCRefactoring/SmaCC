@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^#(#testExpression #messageExpression)
+	^ #(#testExpression #messageExpression)

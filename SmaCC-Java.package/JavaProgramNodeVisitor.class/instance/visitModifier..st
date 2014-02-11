@@ -1,3 +1,3 @@
 generated
 visitModifier: aModifier
-	^self visitProgram: aModifier
+	^ self visitProgram: aModifier

@@ -1,3 +1,3 @@
 generated
 colon
-	^colon
+	^ colon

@@ -8,7 +8,7 @@
 	"instvars" : [
 		"modifiers",
 		"enumToken",
-		"name",
+		"_name",
 		"implementsToken",
 		"interfaces",
 		"commas",

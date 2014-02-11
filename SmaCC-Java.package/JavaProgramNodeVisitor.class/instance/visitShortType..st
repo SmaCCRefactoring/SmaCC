@@ -1,3 +1,3 @@
 generated
 visitShortType: aShortType
-	^self visitPrimitiveType: aShortType
+	^ self visitPrimitiveType: aShortType

@@ -1,3 +1,3 @@
 generated
 declaration
-	^declaration
+	^ declaration

@@ -1,3 +1,3 @@
 generated
 left
-	^left
+	^ left

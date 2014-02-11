@@ -1,3 +1,3 @@
 generated
 implementsToken
-	^implementsToken
+	^ implementsToken

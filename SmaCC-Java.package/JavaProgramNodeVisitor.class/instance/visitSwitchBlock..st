@@ -1,3 +1,3 @@
 generated
 visitSwitchBlock: aSwitchBlock
-	^self visitProgram: aSwitchBlock
+	^ self visitProgram: aSwitchBlock

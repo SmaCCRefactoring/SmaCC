@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitUnarySubtraction: self
+	^ aProgramVisitor visitUnarySubtraction: self

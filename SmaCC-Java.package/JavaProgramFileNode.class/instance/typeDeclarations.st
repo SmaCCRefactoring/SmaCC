@@ -1,3 +1,3 @@
 generated
 typeDeclarations
-	^typeDeclarations
+	^ typeDeclarations

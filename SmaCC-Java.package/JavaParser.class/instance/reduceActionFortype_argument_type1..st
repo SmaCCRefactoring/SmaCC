@@ -1,7 +1,7 @@
-generated
+generated-reduction actions
 reduceActionFortype_argument_type1: nodes
 	| result |
 	result := Array new: 2.
 	result at: 1 put: (nodes at: 1).
 	result at: 2 put: (nodes at: 2).
-	^result
+	^ result

@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#name #leftParen #rightParen #left #right)
+	^ #(#_name #leftParen #rightParen #left #right)

@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitSwitchBlockStatementGroup: self
+	^ aProgramVisitor visitSwitchBlockStatementGroup: self

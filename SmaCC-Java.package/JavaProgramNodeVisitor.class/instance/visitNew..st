@@ -1,3 +1,3 @@
 generated
 visitNew: aNew
-	^self visitExpression: aNew
+	^ self visitExpression: aNew

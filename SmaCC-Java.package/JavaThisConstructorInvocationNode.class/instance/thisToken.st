@@ -1,3 +1,3 @@
 generated
 thisToken
-	^thisToken
+	^ thisToken

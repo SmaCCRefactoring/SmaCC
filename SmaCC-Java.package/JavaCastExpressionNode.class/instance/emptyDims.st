@@ -1,3 +1,3 @@
 generated
 emptyDims
-	^emptyDims
+	^ emptyDims

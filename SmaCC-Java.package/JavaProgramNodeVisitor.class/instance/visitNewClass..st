@@ -1,3 +1,3 @@
 generated
 visitNewClass: aNewClass
-	^self visitNew: aNewClass
+	^ self visitNew: aNewClass

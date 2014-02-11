@@ -1,3 +1,3 @@
 generated
 statements
-	^statements
+	^ statements

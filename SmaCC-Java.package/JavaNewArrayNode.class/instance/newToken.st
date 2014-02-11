@@ -1,3 +1,3 @@
 generated
 newToken
-	^newToken
+	^ newToken

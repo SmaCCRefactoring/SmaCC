@@ -1,3 +1,3 @@
 generated
 superPeriod
-	^superPeriod
+	^ superPeriod

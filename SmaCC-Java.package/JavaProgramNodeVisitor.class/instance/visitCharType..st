@@ -1,3 +1,3 @@
 generated
 visitCharType: aCharType
-	^self visitPrimitiveType: aCharType
+	^ self visitPrimitiveType: aCharType

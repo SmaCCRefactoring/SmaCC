@@ -1,3 +1,3 @@
 generated
 visitPostDecrementExpression: aPostDecrementExpression
-	^self visitExpression: aPostDecrementExpression
+	^ self visitExpression: aPostDecrementExpression

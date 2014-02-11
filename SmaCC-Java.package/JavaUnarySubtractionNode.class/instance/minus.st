@@ -1,3 +1,3 @@
 generated
 minus
-	^minus
+	^ minus

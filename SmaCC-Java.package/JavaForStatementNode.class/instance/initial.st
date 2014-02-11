@@ -1,3 +1,3 @@
 generated
 initial
-	^initial
+	^ initial

@@ -1,3 +1,3 @@
 generated
 extendsToken
-	^extendsToken
+	^ extendsToken

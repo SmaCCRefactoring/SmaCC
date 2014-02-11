@@ -1,3 +1,3 @@
 generated
 visitBooleanLiteral: aBooleanLiteral
-	^self visitLiteral: aBooleanLiteral
+	^ self visitLiteral: aBooleanLiteral

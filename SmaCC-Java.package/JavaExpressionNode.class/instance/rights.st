@@ -1,3 +1,3 @@
 generated
 rights
-	^rights
+	^ rights

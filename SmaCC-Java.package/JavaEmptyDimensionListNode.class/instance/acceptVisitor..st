@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitEmptyDimensionList: self
+	^ aProgramVisitor visitEmptyDimensionList: self

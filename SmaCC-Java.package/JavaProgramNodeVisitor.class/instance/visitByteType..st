@@ -1,3 +1,3 @@
 generated
 visitByteType: aByteType
-	^self visitPrimitiveType: aByteType
+	^ self visitPrimitiveType: aByteType

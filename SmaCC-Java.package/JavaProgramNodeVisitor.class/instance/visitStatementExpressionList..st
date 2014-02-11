@@ -1,3 +1,3 @@
 generated
 visitStatementExpressionList: aStatementExpressionList
-	^self visitProgram: aStatementExpressionList
+	^ self visitProgram: aStatementExpressionList

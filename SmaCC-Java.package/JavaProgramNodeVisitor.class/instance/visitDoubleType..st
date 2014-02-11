@@ -1,3 +1,3 @@
 generated
 visitDoubleType: aDoubleType
-	^self visitPrimitiveType: aDoubleType
+	^ self visitPrimitiveType: aDoubleType

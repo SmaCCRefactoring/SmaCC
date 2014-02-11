@@ -1,3 +1,3 @@
 generated
 doToken
-	^doToken
+	^ doToken

@@ -1,3 +1,3 @@
 generated
 visitConstructorDeclaration: aConstructorDeclaration
-	^self visitProgram: aConstructorDeclaration
+	^ self visitProgram: aConstructorDeclaration

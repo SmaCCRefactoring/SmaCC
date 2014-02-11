@@ -1,3 +1,3 @@
 generated
 compositeNodeVariables
-	^#(#statementGroups #labels)
+	^ #(#statementGroups #labels)

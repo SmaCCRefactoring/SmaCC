@@ -1,3 +1,3 @@
 generated
 compositeNodeVariables
-	^#(#modifiers #interfaces #declarations)
+	^ #(#modifiers #interfaces #declarations)

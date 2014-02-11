@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForclass_instance_creation_expression2: nodes
 	| result |
 	result := JavaNewClassNode new.
@@ -11,4 +11,4 @@ reduceActionForclass_instance_creation_expression2: nodes
 	result addToken: ((nodes at: 6) at: 1) to: result lefts.
 	result addNodes: ((nodes at: 6) at: 2) to: result declarations.
 	result addToken: ((nodes at: 6) at: 3) to: result rights.
-	^result
+	^ result

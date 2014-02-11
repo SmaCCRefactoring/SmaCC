@@ -1,3 +1,3 @@
 generated
 visitSwitchStatement: aSwitchStatement
-	^self visitStatement: aSwitchStatement
+	^ self visitStatement: aSwitchStatement

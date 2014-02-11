@@ -1,3 +1,3 @@
 generated
 visitVoidType: aVoidType
-	^self visitProgram: aVoidType
+	^ self visitProgram: aVoidType

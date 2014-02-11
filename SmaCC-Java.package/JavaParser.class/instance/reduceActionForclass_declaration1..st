@@ -1,10 +1,10 @@
-generated
+generated-reduction actions
 reduceActionForclass_declaration1: nodes
 	| result |
 	result := JavaClassDeclarationNode new.
 	result addNodes: ((nodes at: 1) at: 1) to: result modifiers.
 	result classToken: (nodes at: 2).
-	result name: (nodes at: 3).
+	result _name: (nodes at: 3).
 	result typeParameters: (nodes at: 4).
 	result extendsToken: ((nodes at: 5) at: 1).
 	result superclass: ((nodes at: 5) at: 2).
@@ -14,4 +14,4 @@ reduceActionForclass_declaration1: nodes
 	result left: ((nodes at: 7) at: 1).
 	result addNodes: ((nodes at: 7) at: 2) to: result declarations.
 	result right: ((nodes at: 7) at: 3).
-	^result
+	^ result

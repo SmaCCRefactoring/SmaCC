@@ -1,3 +1,3 @@
 generated
 testExpression
-	^testExpression
+	^ testExpression

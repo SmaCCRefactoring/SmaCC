@@ -1,3 +1,3 @@
 generated
 right
-	^right
+	^ right

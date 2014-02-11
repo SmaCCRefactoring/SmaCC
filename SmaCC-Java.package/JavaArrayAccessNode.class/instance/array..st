@@ -1,5 +1,7 @@
 generated
 array: aJavaExpressionNode
-	self array notNil ifTrue: [self array parent: nil].
+	self array notNil
+		ifTrue: [ self array parent: nil ].
 	array := aJavaExpressionNode.
-	self array notNil ifTrue: [self array parent: self]
+	self array notNil
+		ifTrue: [ self array parent: self ]

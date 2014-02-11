@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForextends_interfaces2: nodes
 	| result |
 	result := Array new: 3.
@@ -9,4 +9,4 @@ reduceActionForextends_interfaces2: nodes
 	self addAll: ((nodes at: 1) at: 3) to: (result at: 3).
 	self add: (nodes at: 2) to: (result at: 3).
 	self add: (nodes at: 3) to: (result at: 2).
-	^result
+	^ result

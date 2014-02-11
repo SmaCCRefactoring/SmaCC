@@ -1,3 +1,3 @@
 generated
 test
-	^test
+	^ test

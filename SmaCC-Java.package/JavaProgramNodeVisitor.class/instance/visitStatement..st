@@ -1,3 +1,3 @@
 generated
 visitStatement: aStatement
-	^self visitProgram: aStatement
+	^ self visitProgram: aStatement

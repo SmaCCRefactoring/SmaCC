@@ -1,3 +1,3 @@
 generated
 classTypes
-	^classTypes
+	^ classTypes

@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForforeach_statement1: nodes
 	| result |
 	result := JavaForEachStatementNode new.
@@ -10,4 +10,4 @@ reduceActionForforeach_statement1: nodes
 	result expression: (nodes at: 7).
 	result right: (nodes at: 8).
 	result statement: (nodes at: 9).
-	^result
+	^ result

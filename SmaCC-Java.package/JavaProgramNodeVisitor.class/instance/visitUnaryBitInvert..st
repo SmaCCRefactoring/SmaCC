@@ -1,3 +1,3 @@
 generated
 visitUnaryBitInvert: anUnaryBitInvert
-	^self visitExpression: anUnaryBitInvert
+	^ self visitExpression: anUnaryBitInvert

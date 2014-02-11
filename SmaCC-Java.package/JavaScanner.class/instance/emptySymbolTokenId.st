@@ -1,3 +1,3 @@
 generated
 emptySymbolTokenId
-	^293
+	^ 293

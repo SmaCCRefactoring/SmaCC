@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForassert_statement2: nodes
 	| result |
 	result := JavaAssertStatementNode new.
@@ -7,4 +7,4 @@ reduceActionForassert_statement2: nodes
 	result colon: (nodes at: 3).
 	result messageExpression: (nodes at: 4).
 	result semicolon: (nodes at: 5).
-	^result
+	^ result

@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForsynchronized_statement1: nodes
 	| result |
 	result := JavaSynchronizedStatementNode new.
@@ -7,4 +7,4 @@ reduceActionForsynchronized_statement1: nodes
 	result expression: (nodes at: 3).
 	result right: (nodes at: 4).
 	result block: (nodes at: 5).
-	^result
+	^ result

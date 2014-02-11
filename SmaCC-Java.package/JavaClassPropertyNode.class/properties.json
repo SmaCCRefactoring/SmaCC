@@ -9,7 +9,7 @@
 		"type",
 		"period",
 		"classToken",
-		"name",
+		"_name",
 		"thisToken" ],
 	"name" : "JavaClassPropertyNode",
 	"pools" : [

@@ -1,3 +1,3 @@
 generated
 packageToken
-	^packageToken
+	^ packageToken

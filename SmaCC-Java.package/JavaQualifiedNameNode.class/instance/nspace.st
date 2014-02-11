@@ -1,3 +1,3 @@
 generated
 nspace
-	^nspace
+	^ nspace

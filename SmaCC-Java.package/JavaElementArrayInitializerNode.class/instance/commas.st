@@ -1,3 +1,3 @@
 generated
 commas
-	^commas
+	^ commas

@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForif_then_else_statement1: nodes
 	| result |
 	result := JavaIfElseStatementNode new.
@@ -9,4 +9,4 @@ reduceActionForif_then_else_statement1: nodes
 	result trueStatement: (nodes at: 5).
 	result elseToken: (nodes at: 6).
 	result falseStatement: (nodes at: 7).
-	^result
+	^ result

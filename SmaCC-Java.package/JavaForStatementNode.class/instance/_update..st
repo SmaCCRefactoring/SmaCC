@@ -1,5 +1,7 @@
 generated
 _update: aJavaStatementExpressionListNode
-	self _update notNil ifTrue: [self _update parent: nil].
+	self _update notNil
+		ifTrue: [ self _update parent: nil ].
 	_update := aJavaStatementExpressionListNode.
-	self _update notNil ifTrue: [self _update parent: self]
+	self _update notNil
+		ifTrue: [ self _update parent: self ]

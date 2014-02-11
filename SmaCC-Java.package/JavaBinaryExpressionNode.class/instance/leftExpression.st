@@ -1,3 +1,3 @@
 generated
 leftExpression
-	^leftExpression
+	^ leftExpression

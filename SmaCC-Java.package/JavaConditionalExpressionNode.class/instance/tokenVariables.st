@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#questionMark #colon)
+	^ #(#questionMark #colon)

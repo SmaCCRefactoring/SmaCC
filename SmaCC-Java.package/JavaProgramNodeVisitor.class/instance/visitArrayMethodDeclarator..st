@@ -1,3 +1,3 @@
 generated
 visitArrayMethodDeclarator: anArrayMethodDeclarator
-	^self visitProgram: anArrayMethodDeclarator
+	^ self visitProgram: anArrayMethodDeclarator

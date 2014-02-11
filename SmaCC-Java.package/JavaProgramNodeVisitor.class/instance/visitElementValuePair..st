@@ -1,3 +1,3 @@
 generated
 visitElementValuePair: anElementValuePair
-	^self visitProgram: anElementValuePair
+	^ self visitProgram: anElementValuePair

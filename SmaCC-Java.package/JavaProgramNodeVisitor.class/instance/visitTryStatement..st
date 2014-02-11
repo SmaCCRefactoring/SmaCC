@@ -1,3 +1,3 @@
 generated
 visitTryStatement: aTryStatement
-	^self visitStatement: aTryStatement
+	^ self visitStatement: aTryStatement

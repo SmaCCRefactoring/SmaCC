@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForelementValueArrayInitializer1: nodes
 	| result |
 	result := JavaElementArrayInitializerNode new.
@@ -7,4 +7,4 @@ reduceActionForelementValueArrayInitializer1: nodes
 	result addTokens: ((nodes at: 2) at: 2) to: result commas.
 	result addToken: ((nodes at: 3) at: 1) to: result commas.
 	result right: (nodes at: 4).
-	^result
+	^ result

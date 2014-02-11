@@ -1,3 +1,3 @@
 generated
 visitFloatType: aFloatType
-	^self visitPrimitiveType: aFloatType
+	^ self visitPrimitiveType: aFloatType

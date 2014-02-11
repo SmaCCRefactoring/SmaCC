@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^#(#typeParameters #superclass)
+	^ #(#typeParameters #superclass)

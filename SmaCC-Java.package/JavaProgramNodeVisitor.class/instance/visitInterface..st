@@ -1,3 +1,3 @@
 generated
 visitInterface: anInterface
-	^self visitProgram: anInterface
+	^ self visitProgram: anInterface

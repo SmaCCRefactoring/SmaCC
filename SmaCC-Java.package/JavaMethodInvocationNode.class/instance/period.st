@@ -1,3 +1,3 @@
 generated
 period
-	^period
+	^ period

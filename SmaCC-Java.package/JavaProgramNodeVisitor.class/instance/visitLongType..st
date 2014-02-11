@@ -1,3 +1,3 @@
 generated
 visitLongType: aLongType
-	^self visitPrimitiveType: aLongType
+	^ self visitPrimitiveType: aLongType

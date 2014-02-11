@@ -1,3 +1,3 @@
 generated
 primary
-	^primary
+	^ primary

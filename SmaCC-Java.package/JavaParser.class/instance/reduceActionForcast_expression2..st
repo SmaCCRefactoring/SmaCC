@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForcast_expression2: nodes
 	| result |
 	result := JavaCastExpressionNode new.
@@ -6,4 +6,4 @@ reduceActionForcast_expression2: nodes
 	result type: (nodes at: 2).
 	result addToken: (nodes at: 3) to: result rights.
 	result expression: (nodes at: 4).
-	^result
+	^ result

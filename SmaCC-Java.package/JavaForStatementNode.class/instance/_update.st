@@ -1,3 +1,3 @@
 generated
 _update
-	^_update
+	^ _update

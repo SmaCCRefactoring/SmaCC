@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitConditionalExpression: self
+	^ aProgramVisitor visitConditionalExpression: self

@@ -1,3 +1,3 @@
 generated
 visitType: aType
-	^self visitProgram: aType
+	^ self visitProgram: aType

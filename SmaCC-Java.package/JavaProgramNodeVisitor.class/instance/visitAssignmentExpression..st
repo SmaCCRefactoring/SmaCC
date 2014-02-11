@@ -1,3 +1,3 @@
 generated
 visitAssignmentExpression: anAssignmentExpression
-	^self visitExpression: anAssignmentExpression
+	^ self visitExpression: anAssignmentExpression

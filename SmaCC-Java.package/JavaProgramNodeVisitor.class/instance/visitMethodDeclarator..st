@@ -1,3 +1,3 @@
 generated
 visitMethodDeclarator: aMethodDeclarator
-	^self visitProgram: aMethodDeclarator
+	^ self visitProgram: aMethodDeclarator

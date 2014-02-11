@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitDoubleType: self
+	^ aProgramVisitor visitDoubleType: self

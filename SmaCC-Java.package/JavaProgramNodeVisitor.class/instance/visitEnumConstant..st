@@ -1,3 +1,3 @@
 generated
 visitEnumConstant: anEnumConstant
-	^self visitProgram: anEnumConstant
+	^ self visitProgram: anEnumConstant

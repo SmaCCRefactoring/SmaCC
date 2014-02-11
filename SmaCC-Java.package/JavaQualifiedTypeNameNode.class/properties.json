@@ -8,7 +8,7 @@
 	"instvars" : [
 		"nspace",
 		"period",
-		"name",
+		"_name",
 		"left",
 		"arguments",
 		"commas",

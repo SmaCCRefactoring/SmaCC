@@ -1,3 +1,3 @@
 generated
 finallyToken
-	^finallyToken
+	^ finallyToken

@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#identifier #colon)
+	^ #(#identifier #colon)

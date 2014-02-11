@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#assertToken #semicolon #colon)
+	^ #(#assertToken #semicolon #colon)

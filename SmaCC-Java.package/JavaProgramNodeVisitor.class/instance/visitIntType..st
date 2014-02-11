@@ -1,3 +1,3 @@
 generated
 visitIntType: anIntType
-	^self visitPrimitiveType: anIntType
+	^ self visitPrimitiveType: anIntType

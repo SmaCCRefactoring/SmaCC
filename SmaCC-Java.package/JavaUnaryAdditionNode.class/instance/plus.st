@@ -1,3 +1,3 @@
 generated
 plus
-	^plus
+	^ plus

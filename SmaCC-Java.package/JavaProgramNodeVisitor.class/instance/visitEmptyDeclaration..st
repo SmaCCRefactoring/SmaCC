@@ -1,3 +1,3 @@
 generated
 visitEmptyDeclaration: anEmptyDeclaration
-	^self visitProgram: anEmptyDeclaration
+	^ self visitProgram: anEmptyDeclaration

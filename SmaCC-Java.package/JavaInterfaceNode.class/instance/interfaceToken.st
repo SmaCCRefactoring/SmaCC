@@ -1,3 +1,3 @@
 generated
 interfaceToken
-	^interfaceToken
+	^ interfaceToken

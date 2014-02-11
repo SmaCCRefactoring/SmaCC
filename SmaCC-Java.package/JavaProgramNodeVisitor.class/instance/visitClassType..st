@@ -1,3 +1,3 @@
 generated
 visitClassType: aClassType
-	^self visitType: aClassType
+	^ self visitType: aClassType

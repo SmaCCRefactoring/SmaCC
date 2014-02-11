@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForfor_statement1: nodes
 	| result |
 	result := JavaForStatementNode new.
@@ -11,4 +11,4 @@ reduceActionForfor_statement1: nodes
 	result _update: (nodes at: 7).
 	result right: (nodes at: 8).
 	result statement: (nodes at: 9).
-	^result
+	^ result

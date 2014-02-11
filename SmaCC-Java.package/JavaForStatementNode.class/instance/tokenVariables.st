@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#forToken #left #firstSemicolon #secondSemicolon #right)
+	^ #(#forToken #left #firstSemicolon #secondSemicolon #right)

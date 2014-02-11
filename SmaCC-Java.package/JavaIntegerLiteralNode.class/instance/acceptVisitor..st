@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitIntegerLiteral: self
+	^ aProgramVisitor visitIntegerLiteral: self

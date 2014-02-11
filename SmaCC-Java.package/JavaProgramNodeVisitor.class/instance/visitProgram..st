@@ -1,3 +1,3 @@
 generated
 visitProgram: aProgram
-	^self visitSmaCCParseNode: aProgram
+	^ self visitSmaCCParseNode: aProgram

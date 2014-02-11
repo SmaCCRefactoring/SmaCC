@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFordo_statement1: nodes
 	| result |
 	result := JavaDoWhileStatementNode new.
@@ -9,4 +9,4 @@ reduceActionFordo_statement1: nodes
 	result expression: (nodes at: 5).
 	result right: (nodes at: 6).
 	result semicolon: (nodes at: 7).
-	^result
+	^ result

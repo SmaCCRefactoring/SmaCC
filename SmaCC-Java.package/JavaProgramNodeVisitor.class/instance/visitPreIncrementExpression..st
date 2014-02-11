@@ -1,3 +1,3 @@
 generated
 visitPreIncrementExpression: aPreIncrementExpression
-	^self visitExpression: aPreIncrementExpression
+	^ self visitExpression: aPreIncrementExpression

@@ -1,3 +1,3 @@
 generated
 constant
-	^constant
+	^ constant

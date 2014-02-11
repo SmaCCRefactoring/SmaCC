@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitNewArray: self
+	^ aProgramVisitor visitNewArray: self

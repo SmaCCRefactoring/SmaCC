@@ -1,3 +1,3 @@
 generated
 _at
-	^_at
+	^ _at

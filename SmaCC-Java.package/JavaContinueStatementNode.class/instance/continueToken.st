@@ -1,3 +1,3 @@
 generated
 continueToken
-	^continueToken
+	^ continueToken

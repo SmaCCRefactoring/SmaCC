@@ -1,6 +1,6 @@
-generated
+generated-reduction actions
 reduceActionForidentifierName1: nodes
 	| result |
 	result := JavaIdentifierNameNode new.
-	result name: (nodes at: 1).
-	^result
+	result _name: (nodes at: 1).
+	^ result

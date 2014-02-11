@@ -1,3 +1,3 @@
 generated
 visitQualifiedName: aQualifiedName
-	^self visitName: aQualifiedName
+	^ self visitName: aQualifiedName

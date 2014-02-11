@@ -1,3 +1,3 @@
 generated
 trueStatement
-	^trueStatement
+	^ trueStatement

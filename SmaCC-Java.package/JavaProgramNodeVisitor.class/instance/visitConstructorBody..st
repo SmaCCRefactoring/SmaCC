@@ -1,3 +1,3 @@
 generated
 visitConstructorBody: aConstructorBody
-	^self visitProgram: aConstructorBody
+	^ self visitProgram: aConstructorBody

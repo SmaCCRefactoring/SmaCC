@@ -1,3 +1,3 @@
 generated
 visitLocalVariableDeclaration: aLocalVariableDeclaration
-	^self visitProgram: aLocalVariableDeclaration
+	^ self visitProgram: aLocalVariableDeclaration

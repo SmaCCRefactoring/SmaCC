@@ -1,3 +1,3 @@
 generated
 visitTypeParameters: aTypeParameters
-	^self visitProgram: aTypeParameters
+	^ self visitProgram: aTypeParameters

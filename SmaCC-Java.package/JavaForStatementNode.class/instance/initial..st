@@ -1,5 +1,7 @@
 generated
 initial: aJavaProgramNode
-	self initial notNil ifTrue: [self initial parent: nil].
+	self initial notNil
+		ifTrue: [ self initial parent: nil ].
 	initial := aJavaProgramNode.
-	self initial notNil ifTrue: [self initial parent: self]
+	self initial notNil
+		ifTrue: [ self initial parent: self ]

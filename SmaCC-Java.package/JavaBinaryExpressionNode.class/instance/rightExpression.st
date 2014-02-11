@@ -1,3 +1,3 @@
 generated
 rightExpression
-	^rightExpression
+	^ rightExpression

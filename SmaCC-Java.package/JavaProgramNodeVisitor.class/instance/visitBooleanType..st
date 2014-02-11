@@ -1,3 +1,3 @@
 generated
 visitBooleanType: aBooleanType
-	^self visitPrimitiveType: aBooleanType
+	^ self visitPrimitiveType: aBooleanType

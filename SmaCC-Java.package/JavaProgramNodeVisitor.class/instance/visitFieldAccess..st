@@ -1,3 +1,3 @@
 generated
 visitFieldAccess: aFieldAccess
-	^self visitExpression: aFieldAccess
+	^ self visitExpression: aFieldAccess

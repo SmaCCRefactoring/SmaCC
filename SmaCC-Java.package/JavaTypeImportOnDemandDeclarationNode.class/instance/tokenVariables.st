@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#period #star #importToken #staticToken #semicolon)
+	^ #(#period #star #importToken #staticToken #semicolon)

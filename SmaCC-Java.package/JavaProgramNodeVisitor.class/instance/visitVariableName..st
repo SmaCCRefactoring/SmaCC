@@ -1,3 +1,3 @@
 generated
 visitVariableName: aVariableName
-	^self visitProgram: aVariableName
+	^ self visitProgram: aVariableName

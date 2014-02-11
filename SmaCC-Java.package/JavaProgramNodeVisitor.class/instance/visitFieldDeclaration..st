@@ -1,3 +1,3 @@
 generated
 visitFieldDeclaration: aFieldDeclaration
-	^self visitProgram: aFieldDeclaration
+	^ self visitProgram: aFieldDeclaration

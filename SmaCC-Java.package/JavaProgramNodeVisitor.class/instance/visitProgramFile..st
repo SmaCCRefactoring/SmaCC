@@ -1,3 +1,3 @@
 generated
 visitProgramFile: aProgramFile
-	^self visitProgram: aProgramFile
+	^ self visitProgram: aProgramFile

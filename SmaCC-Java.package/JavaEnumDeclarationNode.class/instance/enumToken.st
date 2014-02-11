@@ -1,3 +1,3 @@
 generated
 enumToken
-	^enumToken
+	^ enumToken

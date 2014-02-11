@@ -1,3 +1,3 @@
 generated
 visitLabeledStatement: aLabeledStatement
-	^self visitStatement: aLabeledStatement
+	^ self visitStatement: aLabeledStatement

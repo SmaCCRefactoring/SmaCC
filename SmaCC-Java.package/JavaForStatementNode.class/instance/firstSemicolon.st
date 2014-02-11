@@ -1,3 +1,3 @@
 generated
 firstSemicolon
-	^firstSemicolon
+	^ firstSemicolon

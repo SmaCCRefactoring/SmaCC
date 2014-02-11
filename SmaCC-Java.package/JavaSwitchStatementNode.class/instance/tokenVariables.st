@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#switchToken #left #right)
+	^ #(#switchToken #left #right)

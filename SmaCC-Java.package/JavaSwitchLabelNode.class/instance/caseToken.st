@@ -1,3 +1,3 @@
 generated
 caseToken
-	^caseToken
+	^ caseToken

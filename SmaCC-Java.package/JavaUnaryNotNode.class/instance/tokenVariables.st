@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#bang)
+	^ #(#bang)

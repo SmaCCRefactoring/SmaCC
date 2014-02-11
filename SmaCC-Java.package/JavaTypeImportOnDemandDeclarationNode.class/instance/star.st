@@ -1,3 +1,3 @@
 generated
 star
-	^star
+	^ star

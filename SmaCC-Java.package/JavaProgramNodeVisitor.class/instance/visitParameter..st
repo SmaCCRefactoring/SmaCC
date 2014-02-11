@@ -1,3 +1,3 @@
 generated
 visitParameter: aParameter
-	^self visitProgram: aParameter
+	^ self visitProgram: aParameter

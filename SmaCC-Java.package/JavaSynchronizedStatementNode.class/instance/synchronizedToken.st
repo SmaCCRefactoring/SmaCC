@@ -1,3 +1,3 @@
 generated
 synchronizedToken
-	^synchronizedToken
+	^ synchronizedToken

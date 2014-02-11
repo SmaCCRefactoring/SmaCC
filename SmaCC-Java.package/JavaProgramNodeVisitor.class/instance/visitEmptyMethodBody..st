@@ -1,3 +1,3 @@
 generated
 visitEmptyMethodBody: anEmptyMethodBody
-	^self visitProgram: anEmptyMethodBody
+	^ self visitProgram: anEmptyMethodBody

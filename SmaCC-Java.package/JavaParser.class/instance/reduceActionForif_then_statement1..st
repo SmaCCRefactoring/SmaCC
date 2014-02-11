@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForif_then_statement1: nodes
 	| result |
 	result := JavaIfStatementNode new.
@@ -7,4 +7,4 @@ reduceActionForif_then_statement1: nodes
 	result expression: (nodes at: 3).
 	result right: (nodes at: 4).
 	result trueStatement: (nodes at: 5).
-	^result
+	^ result

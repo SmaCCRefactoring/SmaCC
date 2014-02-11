@@ -1,3 +1,3 @@
 generated
 interfaceTypes
-	^interfaceTypes
+	^ interfaceTypes

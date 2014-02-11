@@ -1,3 +1,3 @@
 generated
 visitIntegerLiteral: anIntegerLiteral
-	^self visitLiteral: anIntegerLiteral
+	^ self visitLiteral: anIntegerLiteral

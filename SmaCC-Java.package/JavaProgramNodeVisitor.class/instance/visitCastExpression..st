@@ -1,3 +1,3 @@
 generated
 visitCastExpression: aCastExpression
-	^self visitExpression: aCastExpression
+	^ self visitExpression: aCastExpression

@@ -1,3 +1,3 @@
 generated
 packageDeclaration
-	^packageDeclaration
+	^ packageDeclaration

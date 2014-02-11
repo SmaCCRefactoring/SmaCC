@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#period #classToken #thisToken)
+	^ #(#period #classToken #thisToken)

@@ -1,3 +1,3 @@
 generated
 messageExpression
-	^messageExpression
+	^ messageExpression

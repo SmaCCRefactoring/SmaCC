@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"name",
+		"_name",
 		"equals",
-		"value" ],
+		"_value" ],
 	"name" : "JavaElementValuePairNode",
 	"pools" : [
 		 ],

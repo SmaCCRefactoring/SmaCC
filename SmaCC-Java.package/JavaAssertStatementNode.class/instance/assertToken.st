@@ -1,3 +1,3 @@
 generated
 assertToken
-	^assertToken
+	^ assertToken

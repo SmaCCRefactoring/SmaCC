@@ -8,7 +8,7 @@
 	"instvars" : [
 		"modifiers",
 		"interfaceToken",
-		"name",
+		"_name",
 		"typeParameters",
 		"extendsToken",
 		"interfaceTypes",

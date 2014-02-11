@@ -1,3 +1,3 @@
 generated
 visitClassProperty: aClassProperty
-	^self visitExpression: aClassProperty
+	^ self visitExpression: aClassProperty

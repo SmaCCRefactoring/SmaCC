@@ -1,3 +1,3 @@
 generated
 labels
-	^labels
+	^ labels

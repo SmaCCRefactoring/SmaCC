@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitDefaultLabel: self
+	^ aProgramVisitor visitDefaultLabel: self

@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitEnumConstant: self
+	^ aProgramVisitor visitEnumConstant: self

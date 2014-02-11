@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForenum_body1: nodes
 	| result |
 	result := Array new: 6.
@@ -12,4 +12,4 @@ reduceActionForenum_body1: nodes
 	result at: 4 put: ((nodes at: 4) at: 1).
 	self addAll: ((nodes at: 4) at: 2) to: (result at: 5).
 	result at: 6 put: (nodes at: 5).
-	^result
+	^ result

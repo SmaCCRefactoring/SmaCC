@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForexplicit_constructor_invocation1: nodes
 	| result |
 	result := JavaThisConstructorInvocationNode new.
@@ -8,4 +8,4 @@ reduceActionForexplicit_constructor_invocation1: nodes
 	result addTokens: ((nodes at: 3) at: 2) to: result commas.
 	result right: (nodes at: 4).
 	result semicolon: (nodes at: 5).
-	^result
+	^ result

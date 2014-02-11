@@ -1,3 +1,3 @@
 generated
 visitExpressionStatement: anExpressionStatement
-	^self visitStatement: anExpressionStatement
+	^ self visitStatement: anExpressionStatement

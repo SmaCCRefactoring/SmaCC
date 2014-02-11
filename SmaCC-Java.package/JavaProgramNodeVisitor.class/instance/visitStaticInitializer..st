@@ -1,3 +1,3 @@
 generated
 visitStaticInitializer: aStaticInitializer
-	^self visitProgram: aStaticInitializer
+	^ self visitProgram: aStaticInitializer

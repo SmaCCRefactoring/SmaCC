@@ -1,3 +1,3 @@
 generated
 visitUnaryAddition: anUnaryAddition
-	^self visitExpression: anUnaryAddition
+	^ self visitExpression: anUnaryAddition

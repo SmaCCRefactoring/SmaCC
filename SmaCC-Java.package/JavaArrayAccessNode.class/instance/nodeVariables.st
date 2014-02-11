@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^#(#array #expression)
+	^ #(#array #expression)

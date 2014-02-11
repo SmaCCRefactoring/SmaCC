@@ -8,7 +8,7 @@
 	"instvars" : [
 		"variable",
 		"op",
-		"value" ],
+		"_value" ],
 	"name" : "JavaAssignmentNode",
 	"pools" : [
 		 ],

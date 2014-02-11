@@ -1,5 +1,7 @@
 generated
 baseType: aJavaProgramNode
-	self baseType notNil ifTrue: [self baseType parent: nil].
+	self baseType notNil
+		ifTrue: [ self baseType parent: nil ].
 	baseType := aJavaProgramNode.
-	self baseType notNil ifTrue: [self baseType parent: self]
+	self baseType notNil
+		ifTrue: [ self baseType parent: self ]

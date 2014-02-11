@@ -1,5 +1,6 @@
 generated
 pluralVariablesMap
-	^##((Dictionary new)
-			at: 'emptyDim' put: 'emptyDims';
-			yourself)
+	^ [ 
+	Dictionary new
+		at: 'emptyDim' put: 'emptyDims';
+		yourself ] once

@@ -1,3 +1,3 @@
 generated
 visitStringLiteral: aStringLiteral
-	^self visitLiteral: aStringLiteral
+	^ self visitLiteral: aStringLiteral

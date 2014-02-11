@@ -1,3 +1,3 @@
 generated
 visitCharacterLiteral: aCharacterLiteral
-	^self visitLiteral: aCharacterLiteral
+	^ self visitLiteral: aCharacterLiteral

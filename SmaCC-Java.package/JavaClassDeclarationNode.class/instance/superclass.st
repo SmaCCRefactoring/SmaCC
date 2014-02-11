@@ -1,3 +1,3 @@
 generated
 superclass
-	^superclass
+	^ superclass

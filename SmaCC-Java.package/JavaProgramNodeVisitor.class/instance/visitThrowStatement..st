@@ -1,3 +1,3 @@
 generated
 visitThrowStatement: aThrowStatement
-	^self visitStatement: aThrowStatement
+	^ self visitStatement: aThrowStatement

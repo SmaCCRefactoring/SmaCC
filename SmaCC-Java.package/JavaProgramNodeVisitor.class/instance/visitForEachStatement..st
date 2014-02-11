@@ -1,3 +1,3 @@
 generated
 visitForEachStatement: aForEachStatement
-	^self visitStatement: aForEachStatement
+	^ self visitStatement: aForEachStatement

@@ -1,3 +1,3 @@
 generated
 tryToken
-	^tryToken
+	^ tryToken

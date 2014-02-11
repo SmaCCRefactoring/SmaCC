@@ -1,3 +1,3 @@
 generated
 visitInitializedVariableDeclaration: anInitializedVariableDeclaration
-	^self visitVariableDeclaration: anInitializedVariableDeclaration
+	^ self visitVariableDeclaration: anInitializedVariableDeclaration

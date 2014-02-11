@@ -1,3 +1,3 @@
 generated
 visitArrayInitializer: anArrayInitializer
-	^self visitProgram: anArrayInitializer
+	^ self visitProgram: anArrayInitializer

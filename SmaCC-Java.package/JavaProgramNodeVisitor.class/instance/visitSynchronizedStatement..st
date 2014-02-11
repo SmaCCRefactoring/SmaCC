@@ -1,3 +1,3 @@
 generated
 visitSynchronizedStatement: aSynchronizedStatement
-	^self visitStatement: aSynchronizedStatement
+	^ self visitStatement: aSynchronizedStatement

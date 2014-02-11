@@ -1,3 +1,3 @@
-generated
+generated-reduction actions
 reduceActionForgoal1: nodes
-	^nodes at: 1
+	^ nodes at: 1

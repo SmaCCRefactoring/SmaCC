@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitUnaryBitInvert: self
+	^ aProgramVisitor visitUnaryBitInvert: self

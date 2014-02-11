@@ -1,3 +1,3 @@
 generated
 visitMethodInvocation: aMethodInvocation
-	^self visitExpression: aMethodInvocation
+	^ self visitExpression: aMethodInvocation

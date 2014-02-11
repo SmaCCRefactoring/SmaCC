@@ -1,3 +1,3 @@
 generated
 throws
-	^throws
+	^ throws

@@ -1,3 +1,3 @@
 generated
 visitThisConstructorInvocation: aThisConstructorInvocation
-	^self visitProgram: aThisConstructorInvocation
+	^ self visitProgram: aThisConstructorInvocation

@@ -1,3 +1,3 @@
 generated
 visitAbstractMethodDeclaration: anAbstractMethodDeclaration
-	^self visitProgram: anAbstractMethodDeclaration
+	^ self visitProgram: anAbstractMethodDeclaration

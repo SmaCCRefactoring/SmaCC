@@ -1,3 +1,3 @@
 generated
 visitNull: aNull
-	^self visitLiteral: aNull
+	^ self visitLiteral: aNull

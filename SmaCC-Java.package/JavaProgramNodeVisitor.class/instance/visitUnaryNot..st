@@ -1,3 +1,3 @@
 generated
 visitUnaryNot: anUnaryNot
-	^self visitExpression: anUnaryNot
+	^ self visitExpression: anUnaryNot

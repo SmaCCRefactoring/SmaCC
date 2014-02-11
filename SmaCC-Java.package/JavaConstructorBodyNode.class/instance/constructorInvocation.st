@@ -1,3 +1,3 @@
 generated
 constructorInvocation
-	^constructorInvocation
+	^ constructorInvocation

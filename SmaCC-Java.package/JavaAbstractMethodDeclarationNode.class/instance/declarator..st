@@ -1,5 +1,7 @@
 generated
 declarator: aJavaProgramNode
-	self declarator notNil ifTrue: [self declarator parent: nil].
+	self declarator notNil
+		ifTrue: [ self declarator parent: nil ].
 	declarator := aJavaProgramNode.
-	self declarator notNil ifTrue: [self declarator parent: self]
+	self declarator notNil
+		ifTrue: [ self declarator parent: self ]

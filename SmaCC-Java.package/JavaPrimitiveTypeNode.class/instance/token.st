@@ -1,3 +1,3 @@
 generated
 token
-	^token
+	^ token
