@@ -1,3 +1,3 @@
-generated
+generated-reduction actions
 reduceActionForBlockArgs1: nodes
-	^OrderedCollection with: (nodes at: 2)
+	^ OrderedCollection with: (nodes at: 2)

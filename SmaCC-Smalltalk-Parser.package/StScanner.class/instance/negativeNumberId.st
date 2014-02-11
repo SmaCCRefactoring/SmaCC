@@ -1,3 +1,3 @@
 generated
 negativeNumberId
-	^22
+	^ 22

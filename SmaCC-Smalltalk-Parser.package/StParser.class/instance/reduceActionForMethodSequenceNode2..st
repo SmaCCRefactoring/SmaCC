@@ -1,6 +1,6 @@
-generated
+generated-reduction actions
 reduceActionForMethodSequenceNode2: nodes
-	^Array
+	^ Array
 		with:
 			((nodes at: 1)
 				addAll: (nodes at: 3);

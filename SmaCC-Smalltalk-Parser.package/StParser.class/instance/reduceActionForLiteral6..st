@@ -1,3 +1,3 @@
-generated
+generated-reduction actions
 reduceActionForLiteral6: nodes
-	^(nodes at: 1) value at: 2
+	^ (nodes at: 1) value at: 2

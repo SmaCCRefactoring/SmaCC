@@ -1,3 +1,3 @@
-generated
+generated-reduction actions
 reduceActionForByteArray1: nodes
-	^WriteStream on: ByteArray new
+	^ WriteStream on: ByteArray new

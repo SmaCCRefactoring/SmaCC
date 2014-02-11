@@ -1,3 +1,3 @@
 generated
 startingStateForSequenceNode
-	^2
+	^ 2

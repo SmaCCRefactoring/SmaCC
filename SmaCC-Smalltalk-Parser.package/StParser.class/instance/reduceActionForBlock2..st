@@ -1,3 +1,3 @@
-generated
+generated-reduction actions
 reduceActionForBlock2: nodes
-	^RBBlockNode body: (nodes at: 2)
+	^ RBBlockNode body: (nodes at: 2)

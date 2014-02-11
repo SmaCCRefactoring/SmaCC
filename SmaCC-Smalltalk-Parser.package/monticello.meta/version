@@ -1,2 +1,2 @@
-(name 'SmaCC-Smalltalk-Parser-ThierryGoubier.1' message 'SmaCC Smalltalk Parser ported from SmaCC-Dolphin-2.0.3
-' id '4ceb62e0-f332-4a21-961c-0aea7093a197' date '27 January 2014' time '4:02:54.757935 pm' author 'ThierryGoubier' ancestors () stepChildren ())
+(name 'SmaCC-Smalltalk-Parser-ThierryGoubier.2' message 'Regenerated the Smalltalk parser' id '26c6be93-b18f-4fe9-88c8-2ba2ceb2eef0' date '11 February 2014' time '4:30:59.365112 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-Smalltalk-Parser-ThierryGoubier.1' message 'SmaCC Smalltalk Parser ported from SmaCC-Dolphin-2.0.3
+' id '764b5b46-eec3-5c72-881b-6f628ac999b2' date '27 January 2014' time '4:02:55 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
