@@ -1,1 +1,2 @@
-(name 'SmaCC-Examples-Tests-ThierryGoubier.1' message 'Add the example tests and bootstrap (regeneration) here.' id 'b1ae4fa4-c0d7-4d3f-983a-274ac358f79f' date '28 January 2014' time '5:29:43.011814 pm' author 'ThierryGoubier' ancestors () stepChildren ())
+(name 'SmaCC-Examples-Tests-ThierryGoubier.2' message 'Example tests are now green.' id 'b4a6e9e0-57b0-461c-94aa-70b96c301552' date '11 February 2014' time '4:31:25.501558 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-Examples-Tests-ThierryGoubier.1' message 'Add the example tests and bootstrap (regeneration) here.
+' id '3bedb3c3-735b-5b4a-92e7-d4785d4d0ed3' date '28 January 2014' time '5:29:43 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
