@@ -1,3 +1,3 @@
 private
 classesInPackage
-	^self package classes
+	^ self package classes

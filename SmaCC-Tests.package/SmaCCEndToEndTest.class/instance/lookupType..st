@@ -1,3 +1,3 @@
 private
-lookupType: className 
-	^self class environment at: className
+lookupType: className
+	^ self class environment at: className

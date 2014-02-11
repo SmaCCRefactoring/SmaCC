@@ -4,10 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "<historical>",
 	"instvars" : [
 		"currentClasses",
 		"currentPackage",
+		"currentModifiedStatus",
 		"manager" ],
 	"name" : "SmaCCEndToEndTest",
 	"pools" : [

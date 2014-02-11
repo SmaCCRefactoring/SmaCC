@@ -40,3 +40,4 @@ testSystemCategory
 	self assert: self scannerClass superclass name asString = 'FooScanner'.
 	self assert: self parserClass superclass name asString = 'FooParser'.
 	self assert: self parserClass category = '_UnpackagedPackage'.
+	self removeClass: self parserClass
