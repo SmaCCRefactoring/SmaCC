@@ -5,6 +5,6 @@ tearDown
 	self removeNewClasses.
 	MCWorkingCopy allManagers
 		do: [ :each | 
-			each package name = self name
+			each package name = self package name
 				ifTrue: [ each modified: currentModifiedStatus ] ].
 	super tearDown
