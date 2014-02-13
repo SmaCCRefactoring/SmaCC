@@ -1,10 +1,7 @@
 private
 addImplementationSpecificRewritesTo: rewriter
 	rewriter
-"		replace:
-				'`{:node :dict | (node isLiteralNode and: [(node value isKindOf: Character) and: [(node value codePoint between: 32 and: 126) not]]) ifTrue: [dict at: ''literal'' put: node. true] ifFalse: [false]}'
-			with: '##(Character value: `{:dict | RBLiteralNode value: (dict at: ''literal'') value codePoint})';
-"		replace:
+		replace:
 				'``@.Stmts1.
 				(`@a ifTrue: [``@.Stmts2]) `{:node :dictionary | | index myStatements |
 						index := node parent statements indexOf: node.
