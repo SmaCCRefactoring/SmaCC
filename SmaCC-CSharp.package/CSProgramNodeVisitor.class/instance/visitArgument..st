@@ -1,3 +1,3 @@
 generated
 visitArgument: anArgument
-	^self visitProgram: anArgument
+	^ self visitProgram: anArgument

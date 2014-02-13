@@ -1,3 +1,3 @@
 generated
 visitConstructorConstraint: aConstructorConstraint
-	^self visitProgram: aConstructorConstraint
+	^ self visitProgram: aConstructorConstraint

@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForpointer_element_access1: nodes
 	| result |
 	result := CSPointerElementAccessNode new.
@@ -6,4 +6,4 @@ reduceActionForpointer_element_access1: nodes
 	result leftBracketToken: (nodes at: 2).
 	result indexExpression: (nodes at: 3).
 	result rightBracketToken: (nodes at: 4).
-	^result
+	^ result

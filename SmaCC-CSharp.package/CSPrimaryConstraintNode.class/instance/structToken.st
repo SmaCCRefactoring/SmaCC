@@ -1,3 +1,3 @@
 generated
 structToken
-	^structToken
+	^ structToken

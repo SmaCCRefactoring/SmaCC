@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitSpecificCatchClause: self
+	^ aProgramVisitor visitSpecificCatchClause: self

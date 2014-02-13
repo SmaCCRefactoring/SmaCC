@@ -1,3 +1,3 @@
 generated
 delegateToken
-	^delegateToken
+	^ delegateToken

@@ -10,7 +10,7 @@
 		"modifiers",
 		"partialToken",
 		"classToken",
-		"name",
+		"_name",
 		"typeParameters",
 		"colonToken",
 		"supertypes",

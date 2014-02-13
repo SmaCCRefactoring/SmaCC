@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForindexer_declaration1: nodes
 	| result |
 	result := CSIndexerDeclarationNode new.
@@ -15,4 +15,4 @@ reduceActionForindexer_declaration1: nodes
 	result getAccessor: ((nodes at: 5) at: 1).
 	result setAccessor: ((nodes at: 5) at: 2).
 	result rightBraceToken: (nodes at: 6).
-	^result
+	^ result

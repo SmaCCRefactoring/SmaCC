@@ -1,3 +1,3 @@
 generated
 aliasToken
-	^aliasToken
+	^ aliasToken

@@ -1,5 +1,7 @@
 generated
 falseExpression: aCSExpressionNode
-	self falseExpression notNil ifTrue: [self falseExpression parent: nil].
+	self falseExpression notNil
+		ifTrue: [ self falseExpression parent: nil ].
 	falseExpression := aCSExpressionNode.
-	self falseExpression notNil ifTrue: [self falseExpression parent: self]
+	self falseExpression notNil
+		ifTrue: [ self falseExpression parent: self ]

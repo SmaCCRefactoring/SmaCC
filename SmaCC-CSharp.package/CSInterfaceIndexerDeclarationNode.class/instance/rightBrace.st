@@ -1,3 +1,3 @@
 generated
 rightBrace
-	^rightBrace
+	^ rightBrace

@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForunbound_type_name2: nodes
 	| result |
 	result := CSUnboundTypeNameNode new.
@@ -8,4 +8,4 @@ reduceActionForunbound_type_name2: nodes
 	result addToken: ((nodes at: 4) at: 1) to: result lessThanTokens.
 	result addTokens: ((nodes at: 4) at: 2) to: result commas.
 	result addToken: ((nodes at: 4) at: 3) to: result gtTokens.
-	^result
+	^ result

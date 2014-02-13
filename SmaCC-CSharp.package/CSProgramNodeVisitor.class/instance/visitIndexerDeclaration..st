@@ -1,3 +1,3 @@
 generated
 visitIndexerDeclaration: anIndexerDeclaration
-	^self visitDeclaration: anIndexerDeclaration
+	^ self visitDeclaration: anIndexerDeclaration

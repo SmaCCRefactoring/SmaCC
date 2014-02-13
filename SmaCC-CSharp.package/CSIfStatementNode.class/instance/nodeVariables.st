@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^#(#expression #thenStatement #elseStatement)
+	^ #(#expression #thenStatement #elseStatement)

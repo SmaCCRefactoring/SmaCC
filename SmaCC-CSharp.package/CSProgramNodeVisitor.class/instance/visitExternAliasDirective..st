@@ -1,3 +1,3 @@
 generated
 visitExternAliasDirective: anExternAliasDirective
-	^self visitProgram: anExternAliasDirective
+	^ self visitProgram: anExternAliasDirective

@@ -1,3 +1,3 @@
 generated
 visitConstDeclarator: aConstDeclarator
-	^self visitProgram: aConstDeclarator
+	^ self visitProgram: aConstDeclarator

@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitQueryExpression: self
+	^ aProgramVisitor visitQueryExpression: self

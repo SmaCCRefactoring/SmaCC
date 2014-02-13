@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitTypeParameterConstraintsClause: self
+	^ aProgramVisitor visitTypeParameterConstraintsClause: self

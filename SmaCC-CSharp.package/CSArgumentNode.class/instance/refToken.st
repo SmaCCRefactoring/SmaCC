@@ -1,3 +1,3 @@
 generated
 refToken
-	^refToken
+	^ refToken

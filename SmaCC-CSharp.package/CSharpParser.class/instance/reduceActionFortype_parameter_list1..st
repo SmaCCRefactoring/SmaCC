@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFortype_parameter_list1: nodes
 	| result |
 	result := CSTypeParameterListNode new.
@@ -7,4 +7,4 @@ reduceActionFortype_parameter_list1: nodes
 	result addTokens: ((nodes at: 2) at: 2) to: result names.
 	result addTokens: ((nodes at: 2) at: 3) to: result commaTokens.
 	result greaterThan: (nodes at: 3).
-	^result
+	^ result

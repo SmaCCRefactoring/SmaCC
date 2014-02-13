@@ -1,5 +1,7 @@
 generated
 access: aCSMemberAccessNode
-	self access notNil ifTrue: [self access parent: nil].
+	self access notNil
+		ifTrue: [ self access parent: nil ].
 	access := aCSMemberAccessNode.
-	self access notNil ifTrue: [self access parent: self]
+	self access notNil
+		ifTrue: [ self access parent: self ]

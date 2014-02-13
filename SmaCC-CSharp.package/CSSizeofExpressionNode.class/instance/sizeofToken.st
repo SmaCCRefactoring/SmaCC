@@ -1,3 +1,3 @@
 generated
 sizeofToken
-	^sizeofToken
+	^ sizeofToken

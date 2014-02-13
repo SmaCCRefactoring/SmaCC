@@ -1,3 +1,3 @@
 generated
 visitDefaultValueExpression: aDefaultValueExpression
-	^self visitExpression: aDefaultValueExpression
+	^ self visitExpression: aDefaultValueExpression

@@ -1,3 +1,3 @@
 generated
 lockToken
-	^lockToken
+	^ lockToken

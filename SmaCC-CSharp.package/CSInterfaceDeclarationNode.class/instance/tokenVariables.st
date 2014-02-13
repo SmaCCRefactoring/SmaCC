@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#partialToken #interfaceToken #name #colon #leftBrace #rightBrace #semicolon)
+	^ #(#partialToken #interfaceToken #_name #colon #leftBrace #rightBrace #semicolon)

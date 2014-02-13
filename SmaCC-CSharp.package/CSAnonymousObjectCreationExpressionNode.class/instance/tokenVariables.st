@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#newToken #leftBraceToken #rightBraceToken)
+	^ #(#newToken #leftBraceToken #rightBraceToken)

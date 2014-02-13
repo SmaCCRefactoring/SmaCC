@@ -1,3 +1,3 @@
 generated
 visitElementInitializer: anElementInitializer
-	^self visitProgram: anElementInitializer
+	^ self visitProgram: anElementInitializer

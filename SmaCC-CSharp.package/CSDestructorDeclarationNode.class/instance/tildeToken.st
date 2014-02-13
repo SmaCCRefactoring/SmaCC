@@ -1,3 +1,3 @@
 generated
 tildeToken
-	^tildeToken
+	^ tildeToken

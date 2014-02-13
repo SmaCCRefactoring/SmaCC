@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#enumToken #name #colonToken #type #leftBrace #rightBrace #semicolon #equal)
+	^ #(#enumToken #_name #colonToken #type #leftBrace #rightBrace #semicolon #equal)

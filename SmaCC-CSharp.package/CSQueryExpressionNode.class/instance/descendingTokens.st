@@ -1,3 +1,3 @@
 generated
 descendingTokens
-	^descendingTokens
+	^ descendingTokens

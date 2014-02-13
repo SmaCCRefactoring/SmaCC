@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForcast_expression1: nodes
 	| result |
 	result := CSCastExpressionNode new.
@@ -6,4 +6,4 @@ reduceActionForcast_expression1: nodes
 	result type: (nodes at: 2).
 	result rightParenToken: (nodes at: 3).
 	result expression: (nodes at: 4).
-	^result
+	^ result

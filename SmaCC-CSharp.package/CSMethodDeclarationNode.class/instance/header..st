@@ -1,5 +1,7 @@
 generated
 header: aCSMethodHeaderNode
-	self header notNil ifTrue: [self header parent: nil].
+	self header notNil
+		ifTrue: [ self header parent: nil ].
 	header := aCSMethodHeaderNode.
-	self header notNil ifTrue: [self header parent: self]
+	self header notNil
+		ifTrue: [ self header parent: self ]

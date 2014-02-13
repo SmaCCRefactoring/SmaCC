@@ -1,3 +1,3 @@
 generated
 visitPrefixExpression: aPrefixExpression
-	^self visitExpression: aPrefixExpression
+	^ self visitExpression: aPrefixExpression

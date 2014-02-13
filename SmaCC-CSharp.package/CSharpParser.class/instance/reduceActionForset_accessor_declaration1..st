@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForset_accessor_declaration1: nodes
 	| result |
 	result := CSSetAccessorDeclarationNode new.
@@ -7,4 +7,4 @@ reduceActionForset_accessor_declaration1: nodes
 	result setToken: (nodes at: 3).
 	result body: ((nodes at: 4) at: 1).
 	result semicolonToken: ((nodes at: 4) at: 2).
-	^result
+	^ result

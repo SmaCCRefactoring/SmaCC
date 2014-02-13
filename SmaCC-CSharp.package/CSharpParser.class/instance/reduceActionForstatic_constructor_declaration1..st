@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForstatic_constructor_declaration1: nodes
 	| result |
 	result := CSStaticConstructorDeclarationNode new.
@@ -13,4 +13,4 @@ reduceActionForstatic_constructor_declaration1: nodes
 	result addNodes: ((nodes at: 6) at: 2) to: result statements.
 	result rightBraceToken: ((nodes at: 6) at: 3).
 	result semicolonToken: ((nodes at: 6) at: 4).
-	^result
+	^ result

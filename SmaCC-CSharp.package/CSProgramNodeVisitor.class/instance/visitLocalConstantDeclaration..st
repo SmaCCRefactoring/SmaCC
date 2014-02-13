@@ -1,3 +1,3 @@
 generated
 visitLocalConstantDeclaration: aLocalConstantDeclaration
-	^self visitDeclaration: aLocalConstantDeclaration
+	^ self visitDeclaration: aLocalConstantDeclaration

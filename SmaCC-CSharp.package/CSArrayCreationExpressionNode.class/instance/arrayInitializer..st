@@ -1,5 +1,7 @@
 generated
 arrayInitializer: aCSArrayInitializerNode
-	self arrayInitializer notNil ifTrue: [self arrayInitializer parent: nil].
+	self arrayInitializer notNil
+		ifTrue: [ self arrayInitializer parent: nil ].
 	arrayInitializer := aCSArrayInitializerNode.
-	self arrayInitializer notNil ifTrue: [self arrayInitializer parent: self]
+	self arrayInitializer notNil
+		ifTrue: [ self arrayInitializer parent: self ]

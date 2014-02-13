@@ -2,14 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptVisitor:" : "",
-		"checkedToken" : "",
-		"checkedToken:" : "",
-		"expression" : "",
-		"expression:" : "",
-		"leftParenToken" : "",
-		"leftParenToken:" : "",
-		"nodeVariables" : "",
-		"rightParenToken" : "",
-		"rightParenToken:" : "",
-		"tokenVariables" : "" } }
+		"acceptVisitor:" : "ThierryGoubier 2/13/2014 10:02",
+		"checkedToken" : "ThierryGoubier 2/13/2014 10:00",
+		"checkedToken:" : "ThierryGoubier 2/13/2014 10:00",
+		"expression" : "ThierryGoubier 2/13/2014 10:00",
+		"expression:" : "ThierryGoubier 2/13/2014 10:00",
+		"leftParenToken" : "ThierryGoubier 2/13/2014 10:00",
+		"leftParenToken:" : "ThierryGoubier 2/13/2014 10:00",
+		"nodeVariables" : "ThierryGoubier 2/13/2014 10:00",
+		"rightParenToken" : "ThierryGoubier 2/13/2014 10:00",
+		"rightParenToken:" : "ThierryGoubier 2/13/2014 10:00",
+		"tokenVariables" : "ThierryGoubier 2/13/2014 10:00" } }

@@ -1,3 +1,3 @@
 generated
 colonColonToken
-	^colonColonToken
+	^ colonColonToken

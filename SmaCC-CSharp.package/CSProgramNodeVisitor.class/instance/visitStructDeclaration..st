@@ -1,3 +1,3 @@
 generated
 visitStructDeclaration: aStructDeclaration
-	^self visitDeclaration: aStructDeclaration
+	^ self visitDeclaration: aStructDeclaration

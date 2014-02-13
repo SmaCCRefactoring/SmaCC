@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitTypeArgumentList: self
+	^ aProgramVisitor visitTypeArgumentList: self

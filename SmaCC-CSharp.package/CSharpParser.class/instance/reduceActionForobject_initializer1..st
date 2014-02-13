@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForobject_initializer1: nodes
 	| result |
 	result := CSObjectInitializerNode new.
@@ -8,4 +8,4 @@ reduceActionForobject_initializer1: nodes
 	result addNodes: ((nodes at: 2) at: 3) to: result values.
 	result addTokens: ((nodes at: 2) at: 4) to: result commaTokens.
 	result rightBraceToken: (nodes at: 3).
-	^result
+	^ result

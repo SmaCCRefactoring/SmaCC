@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForselect_or_group_clause2: nodes
 	| result |
 	result := Array new: 8.
@@ -14,4 +14,4 @@ reduceActionForselect_or_group_clause2: nodes
 	self addAll: ((nodes at: 1) at: 5) to: (result at: 5).
 	self addAll: ((nodes at: 1) at: 6) to: (result at: 6).
 	result at: 8 put: ((nodes at: 1) at: 7).
-	^result
+	^ result

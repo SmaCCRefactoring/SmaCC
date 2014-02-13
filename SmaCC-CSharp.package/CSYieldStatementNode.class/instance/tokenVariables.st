@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#yieldToken #returnToken #breakToken)
+	^ #(#yieldToken #returnToken #breakToken)

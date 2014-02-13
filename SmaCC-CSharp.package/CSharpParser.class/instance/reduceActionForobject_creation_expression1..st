@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForobject_creation_expression1: nodes
 	| result |
 	result := CSObjectCreationExpressionNode new.
@@ -9,4 +9,4 @@ reduceActionForobject_creation_expression1: nodes
 	result addTokens: ((nodes at: 4) at: 2) to: result commaTokens.
 	result rightParenToken: (nodes at: 5).
 	result addVariablesFrom: (nodes at: 6).
-	^result
+	^ result

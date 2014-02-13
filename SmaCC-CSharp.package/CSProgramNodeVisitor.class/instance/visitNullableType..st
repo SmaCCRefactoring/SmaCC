@@ -1,3 +1,3 @@
 generated
 visitNullableType: aNullableType
-	^self visitType: aNullableType
+	^ self visitType: aNullableType

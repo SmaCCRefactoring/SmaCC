@@ -1,3 +1,3 @@
 generated
 outToken
-	^outToken
+	^ outToken

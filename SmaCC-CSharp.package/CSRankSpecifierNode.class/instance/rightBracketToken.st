@@ -1,3 +1,3 @@
 generated
 rightBracketToken
-	^rightBracketToken
+	^ rightBracketToken

@@ -9,7 +9,7 @@
 		"_attributes",
 		"modifiers",
 		"type",
-		"name",
+		"_name",
 		"interface",
 		"periodToken",
 		"leftBraceToken",

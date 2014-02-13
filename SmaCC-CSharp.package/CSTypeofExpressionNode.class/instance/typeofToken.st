@@ -1,3 +1,3 @@
 generated
 typeofToken
-	^typeofToken
+	^ typeofToken

@@ -1,3 +1,3 @@
 generated
 visitTypeofExpression: aTypeofExpression
-	^self visitExpression: aTypeofExpression
+	^ self visitExpression: aTypeofExpression

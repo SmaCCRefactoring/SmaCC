@@ -1,3 +1,3 @@
 generated
 type
-	^type
+	^ type

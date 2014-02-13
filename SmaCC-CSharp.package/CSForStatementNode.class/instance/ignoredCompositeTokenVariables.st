@@ -1,3 +1,3 @@
 generated
 ignoredCompositeTokenVariables
-	^#(#semicolonTokens)
+	^ #(#semicolonTokens)

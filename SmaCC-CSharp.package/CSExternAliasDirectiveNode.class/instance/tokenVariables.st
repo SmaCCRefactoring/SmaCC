@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#externToken #aliasToken #identifierToken)
+	^ #(#externToken #aliasToken #identifierToken)

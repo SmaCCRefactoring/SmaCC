@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForget_accessor_declaration1: nodes
 	| result |
 	result := CSGetAccessorDeclarationNode new.
@@ -7,4 +7,4 @@ reduceActionForget_accessor_declaration1: nodes
 	result getToken: (nodes at: 3).
 	result body: ((nodes at: 4) at: 1).
 	result semicolonToken: ((nodes at: 4) at: 2).
-	^result
+	^ result

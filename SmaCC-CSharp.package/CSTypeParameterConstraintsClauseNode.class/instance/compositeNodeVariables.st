@@ -1,3 +1,3 @@
 generated
 compositeNodeVariables
-	^#(#constraints)
+	^ #(#constraints)

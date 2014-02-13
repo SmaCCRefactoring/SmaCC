@@ -1,3 +1,3 @@
 generated
 fromTokens
-	^fromTokens
+	^ fromTokens

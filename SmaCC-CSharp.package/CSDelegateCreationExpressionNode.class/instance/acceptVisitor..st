@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitDelegateCreationExpression: self
+	^ aProgramVisitor visitDelegateCreationExpression: self

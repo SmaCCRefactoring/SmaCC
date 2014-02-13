@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForfixed_size_buffer_declaration1: nodes
 	| result |
 	result := CSFixedSizeBufferDeclarationNode new.
@@ -8,4 +8,4 @@ reduceActionForfixed_size_buffer_declaration1: nodes
 	result type: (nodes at: 4).
 	result addNodes: ((nodes at: 5) at: 1) to: result declarators.
 	result semicolonToken: (nodes at: 6).
-	^result
+	^ result

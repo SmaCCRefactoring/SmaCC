@@ -1,3 +1,3 @@
 generated
 compositeTokenVariables
-	^#(#identifiers #equalTokens)
+	^ #(#identifiers #equalTokens)

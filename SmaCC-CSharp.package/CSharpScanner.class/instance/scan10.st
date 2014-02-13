@@ -1,5 +1,7 @@
 generated
 scan10
+	self recordMatch: #(155).
 	self step.
-	currentCharacter isDigit ifTrue: [^self scan4].
-	^self reportLastMatch
+	('Uu' includes: currentCharacter)
+		ifTrue: [ ^ self recordAndReportMatch: #(155) ].
+	^ self reportLastMatch

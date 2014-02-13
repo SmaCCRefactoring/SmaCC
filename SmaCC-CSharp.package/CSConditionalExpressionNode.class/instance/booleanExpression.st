@@ -1,3 +1,3 @@
 generated
 booleanExpression
-	^booleanExpression
+	^ booleanExpression

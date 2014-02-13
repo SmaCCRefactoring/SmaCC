@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitForeachStatement: self
+	^ aProgramVisitor visitForeachStatement: self

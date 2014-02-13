@@ -1,3 +1,3 @@
 generated
 declarators
-	^declarators
+	^ declarators

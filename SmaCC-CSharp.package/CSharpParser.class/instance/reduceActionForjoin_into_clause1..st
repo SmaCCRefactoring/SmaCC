@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForjoin_into_clause1: nodes
 	| result |
 	result := Array new: 12.
@@ -13,112 +13,52 @@ reduceActionForjoin_into_clause1: nodes
 	self add: (nodes at: 3) to: (result at: 3).
 	result at: 4 put: (nodes at: 4).
 	self
-		addAll:
-			(SmaCCParseNode
-				collectionVariableIn: (nodes at: 5)
-				collectionGetter: #_leftParens
-				variableGetter: nil)
+		addAll: (SmaCCParseNode collectionVariableIn: (nodes at: 5) collectionGetter: #_leftParens variableGetter: nil)
 		to: (result at: 5).
 	self
-		addAll:
-			(SmaCCParseNode
-				collectionVariableIn: (nodes at: 5)
-				collectionGetter: #_rightParens
-				variableGetter: nil)
+		addAll: (SmaCCParseNode collectionVariableIn: (nodes at: 5) collectionGetter: #_rightParens variableGetter: nil)
 		to: (result at: 6).
 	self
-		addAll:
-			(SmaCCParseNode
-				collectionVariableIn: (nodes at: 5)
-				collectionGetter: #lhses
-				variableGetter: #lhs)
+		addAll: (SmaCCParseNode collectionVariableIn: (nodes at: 5) collectionGetter: #lhses variableGetter: #lhs)
 		to: (result at: 7).
 	self
-		addAll:
-			(SmaCCParseNode
-				collectionVariableIn: (nodes at: 5)
-				collectionGetter: #operators
-				variableGetter: #operator)
+		addAll: (SmaCCParseNode collectionVariableIn: (nodes at: 5) collectionGetter: #operators variableGetter: #operator)
 		to: (result at: 8).
 	self
-		addAll:
-			(SmaCCParseNode
-				collectionVariableIn: (nodes at: 5)
-				collectionGetter: #rhses
-				variableGetter: #rhs)
+		addAll: (SmaCCParseNode collectionVariableIn: (nodes at: 5) collectionGetter: #rhses variableGetter: #rhs)
 		to: (result at: 9).
 	result at: 10 put: (nodes at: 6).
 	self
-		addAll:
-			(SmaCCParseNode
-				collectionVariableIn: (nodes at: 7)
-				collectionGetter: #_leftParens
-				variableGetter: nil)
+		addAll: (SmaCCParseNode collectionVariableIn: (nodes at: 7) collectionGetter: #_leftParens variableGetter: nil)
 		to: (result at: 5).
 	self
-		addAll:
-			(SmaCCParseNode
-				collectionVariableIn: (nodes at: 7)
-				collectionGetter: #_rightParens
-				variableGetter: nil)
+		addAll: (SmaCCParseNode collectionVariableIn: (nodes at: 7) collectionGetter: #_rightParens variableGetter: nil)
 		to: (result at: 6).
 	self
-		addAll:
-			(SmaCCParseNode
-				collectionVariableIn: (nodes at: 7)
-				collectionGetter: #lhses
-				variableGetter: #lhs)
+		addAll: (SmaCCParseNode collectionVariableIn: (nodes at: 7) collectionGetter: #lhses variableGetter: #lhs)
 		to: (result at: 7).
 	self
-		addAll:
-			(SmaCCParseNode
-				collectionVariableIn: (nodes at: 7)
-				collectionGetter: #operators
-				variableGetter: #operator)
+		addAll: (SmaCCParseNode collectionVariableIn: (nodes at: 7) collectionGetter: #operators variableGetter: #operator)
 		to: (result at: 8).
 	self
-		addAll:
-			(SmaCCParseNode
-				collectionVariableIn: (nodes at: 7)
-				collectionGetter: #rhses
-				variableGetter: #rhs)
+		addAll: (SmaCCParseNode collectionVariableIn: (nodes at: 7) collectionGetter: #rhses variableGetter: #rhs)
 		to: (result at: 9).
 	result at: 11 put: (nodes at: 8).
 	self
-		addAll:
-			(SmaCCParseNode
-				collectionVariableIn: (nodes at: 9)
-				collectionGetter: #_leftParens
-				variableGetter: nil)
+		addAll: (SmaCCParseNode collectionVariableIn: (nodes at: 9) collectionGetter: #_leftParens variableGetter: nil)
 		to: (result at: 5).
 	self
-		addAll:
-			(SmaCCParseNode
-				collectionVariableIn: (nodes at: 9)
-				collectionGetter: #_rightParens
-				variableGetter: nil)
+		addAll: (SmaCCParseNode collectionVariableIn: (nodes at: 9) collectionGetter: #_rightParens variableGetter: nil)
 		to: (result at: 6).
 	self
-		addAll:
-			(SmaCCParseNode
-				collectionVariableIn: (nodes at: 9)
-				collectionGetter: #lhses
-				variableGetter: #lhs)
+		addAll: (SmaCCParseNode collectionVariableIn: (nodes at: 9) collectionGetter: #lhses variableGetter: #lhs)
 		to: (result at: 7).
 	self
-		addAll:
-			(SmaCCParseNode
-				collectionVariableIn: (nodes at: 9)
-				collectionGetter: #operators
-				variableGetter: #operator)
+		addAll: (SmaCCParseNode collectionVariableIn: (nodes at: 9) collectionGetter: #operators variableGetter: #operator)
 		to: (result at: 8).
 	self
-		addAll:
-			(SmaCCParseNode
-				collectionVariableIn: (nodes at: 9)
-				collectionGetter: #rhses
-				variableGetter: #rhs)
+		addAll: (SmaCCParseNode collectionVariableIn: (nodes at: 9) collectionGetter: #rhses variableGetter: #rhs)
 		to: (result at: 9).
 	result at: 12 put: (nodes at: 10).
 	self add: (nodes at: 11) to: (result at: 3).
-	^result
+	^ result

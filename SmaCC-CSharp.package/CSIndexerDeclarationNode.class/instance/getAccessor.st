@@ -1,3 +1,3 @@
 generated
 getAccessor
-	^getAccessor
+	^ getAccessor

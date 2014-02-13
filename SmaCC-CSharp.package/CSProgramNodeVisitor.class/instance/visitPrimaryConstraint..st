@@ -1,3 +1,3 @@
 generated
 visitPrimaryConstraint: aPrimaryConstraint
-	^self visitProgram: aPrimaryConstraint
+	^ self visitProgram: aPrimaryConstraint

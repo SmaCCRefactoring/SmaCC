@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForexplicit_anonymous_function_signature1: nodes
 	| result |
 	result := CSExplicitAnonymousFunctionSignatureNode new.
@@ -6,4 +6,4 @@ reduceActionForexplicit_anonymous_function_signature1: nodes
 	result addNodes: ((nodes at: 2) at: 1) to: result parameters.
 	result addTokens: ((nodes at: 2) at: 2) to: result commaTokens.
 	result rightParenToken: (nodes at: 3).
-	^result
+	^ result

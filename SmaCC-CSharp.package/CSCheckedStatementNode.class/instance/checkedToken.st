@@ -1,3 +1,3 @@
 generated
 checkedToken
-	^checkedToken
+	^ checkedToken

@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFor_struct_interfaces2: nodes
 	| result |
 	result := Array new: 3.
@@ -7,4 +7,4 @@ reduceActionFor_struct_interfaces2: nodes
 	result at: 1 put: ((nodes at: 1) at: 1).
 	self addAll: ((nodes at: 1) at: 2) to: (result at: 2).
 	self addAll: ((nodes at: 1) at: 3) to: (result at: 3).
-	^result
+	^ result

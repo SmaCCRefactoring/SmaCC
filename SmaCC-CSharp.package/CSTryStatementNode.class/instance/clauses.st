@@ -1,3 +1,3 @@
 generated
 clauses
-	^clauses
+	^ clauses

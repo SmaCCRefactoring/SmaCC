@@ -1,3 +1,3 @@
 generated
 iterator
-	^iterator
+	^ iterator

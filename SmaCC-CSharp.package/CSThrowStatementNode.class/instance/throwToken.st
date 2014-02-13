@@ -1,3 +1,3 @@
 generated
 throwToken
-	^throwToken
+	^ throwToken

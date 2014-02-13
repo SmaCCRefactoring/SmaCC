@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#arrowToken #name)
+	^ #(#arrowToken #_name)

@@ -1,3 +1,3 @@
 generated
 andToken
-	^andToken
+	^ andToken

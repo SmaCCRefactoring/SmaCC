@@ -1,3 +1,3 @@
 generated
 visitLockStatement: aLockStatement
-	^self visitStatement: aLockStatement
+	^ self visitStatement: aLockStatement

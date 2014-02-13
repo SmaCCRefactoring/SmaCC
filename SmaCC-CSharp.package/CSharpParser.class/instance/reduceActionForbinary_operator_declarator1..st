@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForbinary_operator_declarator1: nodes
 	| result |
 	result := Array new: 8.
@@ -14,4 +14,4 @@ reduceActionForbinary_operator_declarator1: nodes
 	self add: (nodes at: 8) to: (result at: 5).
 	self add: (nodes at: 9) to: (result at: 6).
 	result at: 8 put: (nodes at: 10).
-	^result
+	^ result

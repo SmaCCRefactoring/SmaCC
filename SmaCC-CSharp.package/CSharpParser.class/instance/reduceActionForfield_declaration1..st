@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForfield_declaration1: nodes
 	| result |
 	result := CSFieldDeclarationNode new.
@@ -15,4 +15,4 @@ reduceActionForfield_declaration1: nodes
 	result addNodes: ((nodes at: 4) at: 1) to: result declarators.
 	result addTokens: ((nodes at: 4) at: 2) to: result commaTokens.
 	result semicolonToken: (nodes at: 5).
-	^result
+	^ result

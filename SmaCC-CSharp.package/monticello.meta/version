@@ -1,1 +1,2 @@
-(name 'SmaCC-CSharp-ThierryGoubier.1' message 'SmaCC CSharp ported from Dolphin SmaCC 2.0.3' id 'c0f0da05-9218-4a79-9e07-2e624d106ef4' date '27 January 2014' time '4:39:38.48139 pm' author 'ThierryGoubier' ancestors () stepChildren ())
+(name 'SmaCC-CSharp-ThierryGoubier.2' message 'Regenerated, but not tested (not yet :) )' id 'af4714e9-0de7-440b-af89-f15938683c93' date '13 February 2014' time '10:11:57.62209 am' author 'ThierryGoubier' ancestors ((name 'SmaCC-CSharp-ThierryGoubier.1' message 'SmaCC CSharp ported from Dolphin SmaCC 2.0.3
+' id '0cc960ce-719e-5feb-b057-9c5e2b88c85f' date '27 January 2014' time '4:39:41 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())

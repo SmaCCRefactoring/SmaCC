@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitAnonymousMethodExpression: self
+	^ aProgramVisitor visitAnonymousMethodExpression: self

@@ -1,3 +1,3 @@
 generated
 compositeNodeVariables
-	^#(#_attributes #statements)
+	^ #(#_attributes #statements)

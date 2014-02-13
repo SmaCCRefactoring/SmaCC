@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForconstructor_declarator1: nodes
 	| result |
 	result := Array new: 6.
@@ -10,4 +10,4 @@ reduceActionForconstructor_declarator1: nodes
 	self addAll: ((nodes at: 3) at: 2) to: (result at: 4).
 	result at: 5 put: (nodes at: 4).
 	result at: 6 put: ((nodes at: 5) at: 1).
-	^result
+	^ result

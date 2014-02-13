@@ -1,3 +1,3 @@
 generated
 equalToken
-	^equalToken
+	^ equalToken

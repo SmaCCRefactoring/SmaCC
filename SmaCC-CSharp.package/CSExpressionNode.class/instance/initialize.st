@@ -1,4 +1,4 @@
-generated
+generated-initialize-release
 initialize
 	super initialize.
 	_leftParens := OrderedCollection new: 2.

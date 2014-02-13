@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitNamespaceDeclaration: self
+	^ aProgramVisitor visitNamespaceDeclaration: self

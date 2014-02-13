@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFortype_parameter_constraints5: nodes
 	| result |
 	result := Array new: 2.
@@ -7,4 +7,4 @@ reduceActionFortype_parameter_constraints5: nodes
 	self add: (nodes at: 1) to: (result at: 1).
 	self add: (nodes at: 2) to: (result at: 2).
 	self add: (nodes at: 3) to: (result at: 1).
-	^result
+	^ result

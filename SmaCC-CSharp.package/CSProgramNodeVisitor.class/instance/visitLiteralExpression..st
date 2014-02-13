@@ -1,3 +1,3 @@
 generated
 visitLiteralExpression: aLiteralExpression
-	^self visitExpression: aLiteralExpression
+	^ self visitExpression: aLiteralExpression

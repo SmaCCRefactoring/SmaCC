@@ -1,3 +1,3 @@
 generated
 visitDoStatement: aDoStatement
-	^self visitStatement: aDoStatement
+	^ self visitStatement: aDoStatement

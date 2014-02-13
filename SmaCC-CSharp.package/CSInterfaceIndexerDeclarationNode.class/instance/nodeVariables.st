@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^#(#type #getAccessor #setAccessor)
+	^ #(#type #getAccessor #setAccessor)

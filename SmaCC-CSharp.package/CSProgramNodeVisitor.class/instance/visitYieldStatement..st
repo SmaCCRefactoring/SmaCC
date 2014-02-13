@@ -1,3 +1,3 @@
 generated
 visitYieldStatement: aYieldStatement
-	^self visitStatement: aYieldStatement
+	^ self visitStatement: aYieldStatement

@@ -1,3 +1,3 @@
 generated
 modifier
-	^modifier
+	^ modifier

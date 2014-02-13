@@ -9,7 +9,7 @@
 		"foreachToken",
 		"leftParenToken",
 		"type",
-		"name",
+		"_name",
 		"inToken",
 		"expression",
 		"rightParenToken",

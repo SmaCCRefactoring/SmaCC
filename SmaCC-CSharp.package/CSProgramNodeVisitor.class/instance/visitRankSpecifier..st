@@ -1,3 +1,3 @@
 generated
 visitRankSpecifier: aRankSpecifier
-	^self visitProgram: aRankSpecifier
+	^ self visitProgram: aRankSpecifier

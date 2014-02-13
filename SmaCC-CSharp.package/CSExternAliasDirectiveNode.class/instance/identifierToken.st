@@ -1,3 +1,3 @@
 generated
 identifierToken
-	^identifierToken
+	^ identifierToken

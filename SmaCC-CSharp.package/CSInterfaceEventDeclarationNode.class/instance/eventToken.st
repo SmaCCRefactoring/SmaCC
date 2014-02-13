@@ -1,3 +1,3 @@
 generated
 eventToken
-	^eventToken
+	^ eventToken

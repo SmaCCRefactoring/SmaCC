@@ -1,3 +1,3 @@
 generated
 typeArguments
-	^typeArguments
+	^ typeArguments

@@ -1,3 +1,3 @@
 generated
 visitNamespaceDeclaration: aNamespaceDeclaration
-	^self visitDeclaration: aNamespaceDeclaration
+	^ self visitDeclaration: aNamespaceDeclaration

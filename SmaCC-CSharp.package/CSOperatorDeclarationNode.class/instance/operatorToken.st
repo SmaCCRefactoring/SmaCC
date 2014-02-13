@@ -1,3 +1,3 @@
 generated
 operatorToken
-	^operatorToken
+	^ operatorToken

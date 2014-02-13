@@ -1,3 +1,3 @@
 generated
 ignoredCompositeTokenVariables
-	^#(#commaTokens)
+	^ #(#commaTokens)

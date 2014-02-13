@@ -1,3 +1,3 @@
 generated
 compositeTokenVariables
-	^#(#modifiers #arguments)
+	^ #(#modifiers #arguments)

@@ -1,3 +1,3 @@
 generated
 greaterThanToken
-	^greaterThanToken
+	^ greaterThanToken

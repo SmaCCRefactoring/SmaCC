@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#catchToken #leftParenToken #name #rightParenToken)
+	^ #(#catchToken #leftParenToken #_name #rightParenToken)

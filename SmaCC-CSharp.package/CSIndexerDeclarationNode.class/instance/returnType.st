@@ -1,3 +1,3 @@
 generated
 returnType
-	^returnType
+	^ returnType

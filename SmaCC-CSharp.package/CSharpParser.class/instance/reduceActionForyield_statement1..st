@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForyield_statement1: nodes
 	| result |
 	result := CSYieldStatementNode new.
@@ -6,4 +6,4 @@ reduceActionForyield_statement1: nodes
 	result returnToken: (nodes at: 2).
 	result expression: (nodes at: 3).
 	result semicolonToken: (nodes at: 4).
-	^result
+	^ result

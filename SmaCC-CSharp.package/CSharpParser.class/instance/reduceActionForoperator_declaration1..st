@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForoperator_declaration1: nodes
 	| result |
 	result := CSOperatorDeclarationNode new.
@@ -15,4 +15,4 @@ reduceActionForoperator_declaration1: nodes
 	result implicitToken: ((nodes at: 3) at: 9).
 	result explicitToken: ((nodes at: 3) at: 10).
 	result body: (nodes at: 4).
-	^result
+	^ result

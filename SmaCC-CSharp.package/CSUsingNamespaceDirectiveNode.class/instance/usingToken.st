@@ -1,3 +1,3 @@
 generated
 usingToken
-	^usingToken
+	^ usingToken

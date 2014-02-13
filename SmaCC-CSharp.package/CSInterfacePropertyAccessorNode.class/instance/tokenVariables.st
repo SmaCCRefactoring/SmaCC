@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#accessorType #semicolon)
+	^ #(#accessorType #semicolon)

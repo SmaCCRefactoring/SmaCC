@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#global #colonColonToken #name)
+	^ #(#global #colonColonToken #_name)

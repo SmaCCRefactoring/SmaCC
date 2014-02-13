@@ -1,3 +1,3 @@
 generated
 visitCheckedExpression: aCheckedExpression
-	^self visitExpression: aCheckedExpression
+	^ self visitExpression: aCheckedExpression

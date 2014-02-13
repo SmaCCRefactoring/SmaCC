@@ -1,3 +1,3 @@
 generated
 readonlyTokens
-	^readonlyTokens
+	^ readonlyTokens

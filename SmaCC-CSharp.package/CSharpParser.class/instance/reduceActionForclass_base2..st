@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForclass_base2: nodes
 	| result |
 	result := Array new: 4.
@@ -7,4 +7,4 @@ reduceActionForclass_base2: nodes
 	result at: 1 put: (nodes at: 1).
 	self addAll: ((nodes at: 2) at: 1) to: (result at: 2).
 	self addAll: ((nodes at: 2) at: 2) to: (result at: 3).
-	^result
+	^ result

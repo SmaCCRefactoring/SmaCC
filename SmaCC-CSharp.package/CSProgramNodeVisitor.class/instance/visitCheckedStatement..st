@@ -1,3 +1,3 @@
 generated
 visitCheckedStatement: aCheckedStatement
-	^self visitStatement: aCheckedStatement
+	^ self visitStatement: aCheckedStatement

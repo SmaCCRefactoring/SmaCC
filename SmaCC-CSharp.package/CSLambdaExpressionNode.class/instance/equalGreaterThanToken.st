@@ -1,3 +1,3 @@
 generated
 equalGreaterThanToken
-	^equalGreaterThanToken
+	^ equalGreaterThanToken

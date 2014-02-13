@@ -1,3 +1,3 @@
 generated
 visitDeclarationStatement: aDeclarationStatement
-	^self visitStatement: aDeclarationStatement
+	^ self visitStatement: aDeclarationStatement

@@ -1,3 +1,3 @@
 generated
 visitArrayParameter: anArrayParameter
-	^self visitProgram: anArrayParameter
+	^ self visitProgram: anArrayParameter

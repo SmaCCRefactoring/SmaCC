@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^#(#returnType #body)
+	^ #(#returnType #body)

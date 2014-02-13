@@ -1,3 +1,3 @@
 generated
 switchToken
-	^switchToken
+	^ switchToken

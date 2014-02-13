@@ -1,3 +1,3 @@
 generated
 fixedToken
-	^fixedToken
+	^ fixedToken

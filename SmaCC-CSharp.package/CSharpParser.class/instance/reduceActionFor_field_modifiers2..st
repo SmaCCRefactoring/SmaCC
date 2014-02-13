@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFor_field_modifiers2: nodes
 	| result |
 	result := Array new: 9.
@@ -20,4 +20,4 @@ reduceActionFor_field_modifiers2: nodes
 	self addAll: ((nodes at: 1) at: 7) to: (result at: 7).
 	self addAll: ((nodes at: 1) at: 8) to: (result at: 8).
 	self addAll: ((nodes at: 1) at: 9) to: (result at: 9).
-	^result
+	^ result

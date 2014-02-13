@@ -1,3 +1,3 @@
 generated
 visitConstructorInitializer: aConstructorInitializer
-	^self visitProgram: aConstructorInitializer
+	^ self visitProgram: aConstructorInitializer

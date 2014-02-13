@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForarray_creation_expression1: nodes
 	| result |
 	result := CSArrayCreationExpressionNode new.
@@ -10,4 +10,4 @@ reduceActionForarray_creation_expression1: nodes
 	result rightBracketToken: (nodes at: 5).
 	result addNodes: ((nodes at: 6) at: 1) to: result rankSpecifiers.
 	result arrayInitializer: (nodes at: 7).
-	^result
+	^ result

@@ -1,3 +1,3 @@
 generated
 visitSpecificCatchClause: aSpecificCatchClause
-	^self visitProgram: aSpecificCatchClause
+	^ self visitProgram: aSpecificCatchClause

@@ -1,3 +1,3 @@
 generated
 elseStatement
-	^elseStatement
+	^ elseStatement

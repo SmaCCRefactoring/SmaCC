@@ -1,3 +1,3 @@
 generated
 supertypes
-	^supertypes
+	^ supertypes

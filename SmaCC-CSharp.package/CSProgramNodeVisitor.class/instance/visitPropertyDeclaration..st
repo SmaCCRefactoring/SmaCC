@@ -1,3 +1,3 @@
 generated
 visitPropertyDeclaration: aPropertyDeclaration
-	^self visitDeclaration: aPropertyDeclaration
+	^ self visitDeclaration: aPropertyDeclaration

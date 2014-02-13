@@ -1,3 +1,3 @@
 generated
 addDeclaration
-	^addDeclaration
+	^ addDeclaration

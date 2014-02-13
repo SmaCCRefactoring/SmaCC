@@ -1,3 +1,3 @@
 generated
 signature
-	^signature
+	^ signature

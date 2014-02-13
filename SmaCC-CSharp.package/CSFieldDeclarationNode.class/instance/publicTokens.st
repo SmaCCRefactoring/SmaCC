@@ -1,3 +1,3 @@
 generated
 publicTokens
-	^publicTokens
+	^ publicTokens

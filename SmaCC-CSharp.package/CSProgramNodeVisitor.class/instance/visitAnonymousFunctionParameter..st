@@ -1,3 +1,3 @@
 generated
 visitAnonymousFunctionParameter: anAnonymousFunctionParameter
-	^self visitProgram: anAnonymousFunctionParameter
+	^ self visitProgram: anAnonymousFunctionParameter

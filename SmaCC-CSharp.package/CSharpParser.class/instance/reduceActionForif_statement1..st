@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForif_statement1: nodes
 	| result |
 	result := CSIfStatementNode new.
@@ -7,4 +7,4 @@ reduceActionForif_statement1: nodes
 	result expression: (nodes at: 3).
 	result rightParenToken: (nodes at: 4).
 	result thenStatement: (nodes at: 5).
-	^result
+	^ result

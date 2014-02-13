@@ -1,3 +1,3 @@
 generated
 visitEnumDeclaration: anEnumDeclaration
-	^self visitDeclaration: anEnumDeclaration
+	^ self visitDeclaration: anEnumDeclaration

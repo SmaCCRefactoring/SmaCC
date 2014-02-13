@@ -1,3 +1,3 @@
 generated
 visitThisAccess: aThisAccess
-	^self visitExpression: aThisAccess
+	^ self visitExpression: aThisAccess

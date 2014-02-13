@@ -1,3 +1,3 @@
 generated
 semicolonTokens
-	^semicolonTokens
+	^ semicolonTokens

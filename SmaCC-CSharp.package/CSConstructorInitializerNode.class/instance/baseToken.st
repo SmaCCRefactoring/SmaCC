@@ -1,3 +1,3 @@
 generated
 baseToken
-	^baseToken
+	^ baseToken

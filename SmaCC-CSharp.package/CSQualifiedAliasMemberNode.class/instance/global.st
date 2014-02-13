@@ -1,3 +1,3 @@
 generated
 global
-	^global
+	^ global

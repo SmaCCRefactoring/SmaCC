@@ -1,3 +1,3 @@
 generated
 arrowToken
-	^arrowToken
+	^ arrowToken

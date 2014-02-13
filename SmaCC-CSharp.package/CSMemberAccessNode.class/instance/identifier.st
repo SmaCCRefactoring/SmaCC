@@ -1,3 +1,3 @@
 generated
 identifier
-	^identifier
+	^ identifier

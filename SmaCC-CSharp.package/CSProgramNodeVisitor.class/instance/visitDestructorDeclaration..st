@@ -1,3 +1,3 @@
 generated
 visitDestructorDeclaration: aDestructorDeclaration
-	^self visitDeclaration: aDestructorDeclaration
+	^ self visitDeclaration: aDestructorDeclaration

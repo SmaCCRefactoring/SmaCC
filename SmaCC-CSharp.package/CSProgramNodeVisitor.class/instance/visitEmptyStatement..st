@@ -1,3 +1,3 @@
 generated
 visitEmptyStatement: anEmptyStatement
-	^self visitStatement: anEmptyStatement
+	^ self visitStatement: anEmptyStatement

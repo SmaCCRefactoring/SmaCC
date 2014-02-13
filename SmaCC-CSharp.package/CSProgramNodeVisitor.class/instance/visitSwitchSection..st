@@ -1,3 +1,3 @@
 generated
 visitSwitchSection: aSwitchSection
-	^self visitProgram: aSwitchSection
+	^ self visitProgram: aSwitchSection

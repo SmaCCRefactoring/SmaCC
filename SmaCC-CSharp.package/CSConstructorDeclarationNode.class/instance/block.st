@@ -1,3 +1,3 @@
 generated
 block
-	^block
+	^ block

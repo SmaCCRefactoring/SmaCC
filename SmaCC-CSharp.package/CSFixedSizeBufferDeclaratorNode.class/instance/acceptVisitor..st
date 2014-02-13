@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitFixedSizeBufferDeclarator: self
+	^ aProgramVisitor visitFixedSizeBufferDeclarator: self

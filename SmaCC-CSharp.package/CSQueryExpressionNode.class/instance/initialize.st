@@ -1,4 +1,4 @@
-generated
+generated-initialize-release
 initialize
 	super initialize.
 	fromTokens := OrderedCollection new: 2.

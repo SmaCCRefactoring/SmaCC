@@ -1,3 +1,3 @@
 generated
 visitUncheckedExpression: anUncheckedExpression
-	^self visitExpression: anUncheckedExpression
+	^ self visitExpression: anUncheckedExpression

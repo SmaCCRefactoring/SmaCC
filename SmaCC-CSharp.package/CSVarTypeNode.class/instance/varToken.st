@@ -1,3 +1,3 @@
 generated
 varToken
-	^varToken
+	^ varToken

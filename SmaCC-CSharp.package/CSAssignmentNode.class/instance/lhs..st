@@ -1,5 +1,7 @@
 generated
 lhs: aCSExpressionNode
-	self lhs notNil ifTrue: [self lhs parent: nil].
+	self lhs notNil
+		ifTrue: [ self lhs parent: nil ].
 	lhs := aCSExpressionNode.
-	self lhs notNil ifTrue: [self lhs parent: self]
+	self lhs notNil
+		ifTrue: [ self lhs parent: self ]

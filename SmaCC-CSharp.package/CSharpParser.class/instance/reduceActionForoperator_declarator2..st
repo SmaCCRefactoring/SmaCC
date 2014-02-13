@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForoperator_declarator2: nodes
 	| result |
 	result := Array new: 10.
@@ -12,4 +12,4 @@ reduceActionForoperator_declarator2: nodes
 	self addAll: ((nodes at: 1) at: 6) to: (result at: 6).
 	result at: 8 put: ((nodes at: 1) at: 7).
 	result at: 7 put: ((nodes at: 1) at: 8).
-	^result
+	^ result

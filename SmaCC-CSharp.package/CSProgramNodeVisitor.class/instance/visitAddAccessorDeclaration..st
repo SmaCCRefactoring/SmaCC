@@ -1,3 +1,3 @@
 generated
 visitAddAccessorDeclaration: anAddAccessorDeclaration
-	^self visitProgram: anAddAccessorDeclaration
+	^ self visitProgram: anAddAccessorDeclaration

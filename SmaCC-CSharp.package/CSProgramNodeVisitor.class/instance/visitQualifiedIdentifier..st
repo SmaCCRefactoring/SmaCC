@@ -1,3 +1,3 @@
 generated
 visitQualifiedIdentifier: aQualifiedIdentifier
-	^self visitProgram: aQualifiedIdentifier
+	^ self visitProgram: aQualifiedIdentifier

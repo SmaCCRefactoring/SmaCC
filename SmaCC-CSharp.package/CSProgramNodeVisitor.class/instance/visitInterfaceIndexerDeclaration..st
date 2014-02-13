@@ -1,3 +1,3 @@
 generated
 visitInterfaceIndexerDeclaration: anInterfaceIndexerDeclaration
-	^self visitDeclaration: anInterfaceIndexerDeclaration
+	^ self visitDeclaration: anInterfaceIndexerDeclaration

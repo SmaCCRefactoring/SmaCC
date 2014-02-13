@@ -1,3 +1,3 @@
 generated
 compositeNodeVariables
-	^#(#expressions #rankSpecifiers)
+	^ #(#expressions #rankSpecifiers)

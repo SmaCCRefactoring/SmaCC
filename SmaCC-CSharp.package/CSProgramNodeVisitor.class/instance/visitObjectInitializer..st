@@ -1,3 +1,3 @@
 generated
 visitObjectInitializer: anObjectInitializer
-	^self visitProgram: anObjectInitializer
+	^ self visitProgram: anObjectInitializer

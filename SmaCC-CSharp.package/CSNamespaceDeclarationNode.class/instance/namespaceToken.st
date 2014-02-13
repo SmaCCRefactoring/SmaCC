@@ -1,3 +1,3 @@
 generated
 namespaceToken
-	^namespaceToken
+	^ namespaceToken

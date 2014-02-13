@@ -1,3 +1,3 @@
 generated
 lhs
-	^lhs
+	^ lhs

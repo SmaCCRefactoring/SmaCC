@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^#(#body)
+	^ #(#body)

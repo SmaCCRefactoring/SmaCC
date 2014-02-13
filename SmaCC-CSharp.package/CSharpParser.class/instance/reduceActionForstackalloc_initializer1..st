@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForstackalloc_initializer1: nodes
 	| result |
 	result := CSStackallocInitializerNode new.
@@ -7,4 +7,4 @@ reduceActionForstackalloc_initializer1: nodes
 	result leftBracketToken: (nodes at: 3).
 	result expression: (nodes at: 4).
 	result rightBracketToken: (nodes at: 5).
-	^result
+	^ result

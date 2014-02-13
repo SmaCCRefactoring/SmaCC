@@ -1,3 +1,3 @@
 generated
 visitQueryExpression: aQueryExpression
-	^self visitExpression: aQueryExpression
+	^ self visitExpression: aQueryExpression

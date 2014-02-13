@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForstruct_declaration1: nodes
 	| result |
 	result := CSStructDeclarationNode new.
@@ -16,4 +16,4 @@ reduceActionForstruct_declaration1: nodes
 	result addNodes: ((nodes at: 9) at: 2) to: result declarations.
 	result rightBraceToken: ((nodes at: 9) at: 3).
 	result semicolon: ((nodes at: 10) at: 1).
-	^result
+	^ result

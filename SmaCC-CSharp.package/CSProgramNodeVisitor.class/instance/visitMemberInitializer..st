@@ -1,3 +1,3 @@
 generated
 visitMemberInitializer: aMemberInitializer
-	^self visitProgram: aMemberInitializer
+	^ self visitProgram: aMemberInitializer

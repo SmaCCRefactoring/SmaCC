@@ -10,7 +10,7 @@
 		"modifiers",
 		"partialToken",
 		"returnType",
-		"name",
+		"_name",
 		"interface",
 		"periodToken",
 		"typeParameters",

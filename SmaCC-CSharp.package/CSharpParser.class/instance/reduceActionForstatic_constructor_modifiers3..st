@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForstatic_constructor_modifiers3: nodes
 	| result |
 	result := Array new: 3.
@@ -6,4 +6,4 @@ reduceActionForstatic_constructor_modifiers3: nodes
 	self add: ((nodes at: 1) at: 1) to: (result at: 1).
 	self add: ((nodes at: 2) at: 1) to: (result at: 1).
 	result at: 2 put: (nodes at: 3).
-	^result
+	^ result

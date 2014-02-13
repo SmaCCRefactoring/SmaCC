@@ -1,3 +1,3 @@
 generated
 visitForeachStatement: aForeachStatement
-	^self visitStatement: aForeachStatement
+	^ self visitStatement: aForeachStatement

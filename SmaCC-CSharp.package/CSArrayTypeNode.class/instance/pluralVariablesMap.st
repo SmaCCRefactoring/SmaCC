@@ -1,5 +1,6 @@
 generated
 pluralVariablesMap
-	^##((Dictionary new)
-			at: 'rankSpecifier' put: 'rankSpecifiers';
-			yourself)
+	^ [ 
+	Dictionary new
+		at: 'rankSpecifier' put: 'rankSpecifiers';
+		yourself ] once

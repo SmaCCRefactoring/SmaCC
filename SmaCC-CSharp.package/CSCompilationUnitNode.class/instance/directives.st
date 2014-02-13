@@ -1,3 +1,3 @@
 generated
 directives
-	^directives
+	^ directives

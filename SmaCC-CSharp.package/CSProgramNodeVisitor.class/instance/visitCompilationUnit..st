@@ -1,3 +1,3 @@
 generated
 visitCompilationUnit: aCompilationUnit
-	^self visitProgram: aCompilationUnit
+	^ self visitProgram: aCompilationUnit

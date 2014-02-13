@@ -1,3 +1,3 @@
 generated
 protectedTokens
-	^protectedTokens
+	^ protectedTokens

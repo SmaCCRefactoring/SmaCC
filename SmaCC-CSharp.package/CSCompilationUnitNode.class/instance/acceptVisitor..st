@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitCompilationUnit: self
+	^ aProgramVisitor visitCompilationUnit: self

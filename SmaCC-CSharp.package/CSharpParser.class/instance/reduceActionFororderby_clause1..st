@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFororderby_clause1: nodes
 	| result |
 	result := Array new: 9.
@@ -19,4 +19,4 @@ reduceActionFororderby_clause1: nodes
 	self addAll: ((nodes at: 2) at: 6) to: (result at: 7).
 	self addAll: ((nodes at: 2) at: 7) to: (result at: 8).
 	self addAll: ((nodes at: 2) at: 8) to: (result at: 9).
-	^result
+	^ result

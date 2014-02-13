@@ -1,3 +1,3 @@
 generated
 visitInvocationExpression: anInvocationExpression
-	^self visitExpression: anInvocationExpression
+	^ self visitExpression: anInvocationExpression

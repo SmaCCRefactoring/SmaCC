@@ -1,3 +1,3 @@
 generated
 visitPointerType: aPointerType
-	^self visitType: aPointerType
+	^ self visitType: aPointerType

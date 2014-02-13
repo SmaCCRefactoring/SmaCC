@@ -1,3 +1,3 @@
 generated
 leftBrace
-	^leftBrace
+	^ leftBrace

@@ -1,4 +1,4 @@
-generated
+generated-initialize-release
 initialize
 	super initialize.
 	directives := OrderedCollection new: 2.

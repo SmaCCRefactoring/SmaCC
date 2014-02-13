@@ -1,3 +1,3 @@
 generated
 uncheckedToken
-	^uncheckedToken
+	^ uncheckedToken

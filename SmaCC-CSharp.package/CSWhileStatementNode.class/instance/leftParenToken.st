@@ -1,3 +1,3 @@
 generated
 leftParenToken
-	^leftParenToken
+	^ leftParenToken

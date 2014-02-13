@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForinterface_indexer_declaration1: nodes
 	| result |
 	result := CSInterfaceIndexerDeclarationNode new.
@@ -14,4 +14,4 @@ reduceActionForinterface_indexer_declaration1: nodes
 	result getAccessor: ((nodes at: 9) at: 1).
 	result setAccessor: ((nodes at: 9) at: 2).
 	result rightBrace: (nodes at: 10).
-	^result
+	^ result

@@ -1,3 +1,3 @@
 generated
 removeDeclaration
-	^removeDeclaration
+	^ removeDeclaration

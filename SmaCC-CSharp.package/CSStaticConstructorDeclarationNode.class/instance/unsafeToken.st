@@ -1,3 +1,3 @@
 generated
 unsafeToken
-	^unsafeToken
+	^ unsafeToken

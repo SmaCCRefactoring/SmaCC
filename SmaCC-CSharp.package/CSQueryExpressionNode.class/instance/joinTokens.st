@@ -1,3 +1,3 @@
 generated
 joinTokens
-	^joinTokens
+	^ joinTokens

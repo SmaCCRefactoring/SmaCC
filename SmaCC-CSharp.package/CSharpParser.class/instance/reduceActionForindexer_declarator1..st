@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForindexer_declarator1: nodes
 	| result |
 	result := Array new: 7.
@@ -10,4 +10,4 @@ reduceActionForindexer_declarator1: nodes
 	self addAll: ((nodes at: 4) at: 1) to: (result at: 4).
 	self addAll: ((nodes at: 4) at: 2) to: (result at: 5).
 	result at: 6 put: (nodes at: 5).
-	^result
+	^ result

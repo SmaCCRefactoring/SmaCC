@@ -1,3 +1,3 @@
 generated
 visitQualifiedAliasMember: aQualifiedAliasMember
-	^self visitType: aQualifiedAliasMember
+	^ self visitType: aQualifiedAliasMember

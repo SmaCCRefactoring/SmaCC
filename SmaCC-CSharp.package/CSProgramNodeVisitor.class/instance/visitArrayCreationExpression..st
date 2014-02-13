@@ -1,3 +1,3 @@
 generated
 visitArrayCreationExpression: anArrayCreationExpression
-	^self visitExpression: anArrayCreationExpression
+	^ self visitExpression: anArrayCreationExpression

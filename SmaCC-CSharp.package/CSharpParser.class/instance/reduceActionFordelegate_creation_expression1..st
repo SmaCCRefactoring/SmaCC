@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFordelegate_creation_expression1: nodes
 	| result |
 	result := CSDelegateCreationExpressionNode new.
@@ -7,4 +7,4 @@ reduceActionFordelegate_creation_expression1: nodes
 	result leftParenToken: (nodes at: 3).
 	result expression: (nodes at: 4).
 	result rightParenToken: (nodes at: 5).
-	^result
+	^ result

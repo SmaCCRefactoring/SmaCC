@@ -1,3 +1,3 @@
 generated
 visitMemberDeclarator: aMemberDeclarator
-	^self visitProgram: aMemberDeclarator
+	^ self visitProgram: aMemberDeclarator

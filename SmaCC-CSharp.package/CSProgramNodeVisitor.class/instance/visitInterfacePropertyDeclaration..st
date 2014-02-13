@@ -1,3 +1,3 @@
 generated
 visitInterfacePropertyDeclaration: anInterfacePropertyDeclaration
-	^self visitDeclaration: anInterfacePropertyDeclaration
+	^ self visitDeclaration: anInterfacePropertyDeclaration

@@ -1,3 +1,3 @@
 generated
 staticTokens
-	^staticTokens
+	^ staticTokens

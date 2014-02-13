@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForelement_access1: nodes
 	| result |
 	result := CSElementAccessNode new.
@@ -7,4 +7,4 @@ reduceActionForelement_access1: nodes
 	result addNodes: ((nodes at: 3) at: 1) to: result expressions.
 	result addTokens: ((nodes at: 3) at: 2) to: result commaTokens.
 	result rightBracketToken: (nodes at: 4).
-	^result
+	^ result

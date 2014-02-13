@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitStructDeclaration: self
+	^ aProgramVisitor visitStructDeclaration: self

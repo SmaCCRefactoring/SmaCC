@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFor_member_initializer_list2: nodes
 	| result |
 	result := Array new: 4.
@@ -10,4 +10,4 @@ reduceActionFor_member_initializer_list2: nodes
 	self addAll: ((nodes at: 1) at: 2) to: (result at: 2).
 	self addAll: ((nodes at: 1) at: 3) to: (result at: 3).
 	self addAll: ((nodes at: 1) at: 4) to: (result at: 4).
-	^result
+	^ result

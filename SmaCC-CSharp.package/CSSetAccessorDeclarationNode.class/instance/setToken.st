@@ -1,3 +1,3 @@
 generated
 setToken
-	^setToken
+	^ setToken

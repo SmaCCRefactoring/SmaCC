@@ -1,3 +1,3 @@
 generated
 visitInterfaceEventDeclaration: anInterfaceEventDeclaration
-	^self visitDeclaration: anInterfaceEventDeclaration
+	^ self visitDeclaration: anInterfaceEventDeclaration

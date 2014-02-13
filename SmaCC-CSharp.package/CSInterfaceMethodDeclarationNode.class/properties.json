@@ -9,7 +9,7 @@
 		"_attributes",
 		"modifier",
 		"type",
-		"name",
+		"_name",
 		"typeParameters",
 		"leftParen",
 		"parameters",

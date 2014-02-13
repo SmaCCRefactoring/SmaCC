@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFortry_statement3: nodes
 	| result |
 	result := CSTryStatementNode new.
@@ -6,4 +6,4 @@ reduceActionFortry_statement3: nodes
 	result block: (nodes at: 2).
 	result addNodes: ((nodes at: 3) at: 1) to: result clauses.
 	result finally: (nodes at: 4).
-	^result
+	^ result

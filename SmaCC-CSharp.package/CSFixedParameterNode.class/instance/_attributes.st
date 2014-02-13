@@ -1,3 +1,3 @@
 generated
 _attributes
-	^_attributes
+	^ _attributes

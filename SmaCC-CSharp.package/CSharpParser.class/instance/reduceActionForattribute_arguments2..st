@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForattribute_arguments2: nodes
 	| result |
 	result := Array new: 4.
@@ -11,4 +11,4 @@ reduceActionForattribute_arguments2: nodes
 	self addAll: ((nodes at: 4) at: 1) to: (result at: 2).
 	self addAll: ((nodes at: 4) at: 2) to: (result at: 3).
 	result at: 4 put: (nodes at: 5).
-	^result
+	^ result

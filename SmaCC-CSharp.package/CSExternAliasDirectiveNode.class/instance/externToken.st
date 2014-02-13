@@ -1,3 +1,3 @@
 generated
 externToken
-	^externToken
+	^ externToken

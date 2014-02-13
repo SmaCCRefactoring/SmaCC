@@ -1,3 +1,3 @@
 generated
 commaToken
-	^commaToken
+	^ commaToken

@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#paramsToken #name)
+	^ #(#paramsToken #_name)

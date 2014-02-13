@@ -13,7 +13,7 @@
 		"declarators",
 		"commaTokens",
 		"semicolonToken",
-		"name",
+		"_name",
 		"interface",
 		"periodToken",
 		"leftBraceToken",

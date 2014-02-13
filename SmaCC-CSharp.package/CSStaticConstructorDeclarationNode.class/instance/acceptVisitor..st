@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitStaticConstructorDeclaration: self
+	^ aProgramVisitor visitStaticConstructorDeclaration: self

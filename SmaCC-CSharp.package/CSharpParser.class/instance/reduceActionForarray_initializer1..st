@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForarray_initializer1: nodes
 	| result |
 	result := CSArrayInitializerNode new.
@@ -6,4 +6,4 @@ reduceActionForarray_initializer1: nodes
 	result addNodes: ((nodes at: 2) at: 1) to: result initializers.
 	result addTokens: ((nodes at: 2) at: 2) to: result commaTokens.
 	result rightBraceToken: (nodes at: 3).
-	^result
+	^ result

@@ -1,3 +1,3 @@
 generated
 visitBlockStatement: aBlockStatement
-	^self visitStatement: aBlockStatement
+	^ self visitStatement: aBlockStatement

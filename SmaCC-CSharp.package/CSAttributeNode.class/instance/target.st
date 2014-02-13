@@ -1,3 +1,3 @@
 generated
 target
-	^target
+	^ target

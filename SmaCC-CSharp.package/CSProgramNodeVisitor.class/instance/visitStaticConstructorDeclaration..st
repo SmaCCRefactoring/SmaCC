@@ -1,3 +1,3 @@
 generated
 visitStaticConstructorDeclaration: aStaticConstructorDeclaration
-	^self visitDeclaration: aStaticConstructorDeclaration
+	^ self visitDeclaration: aStaticConstructorDeclaration

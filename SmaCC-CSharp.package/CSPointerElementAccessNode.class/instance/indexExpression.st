@@ -1,3 +1,3 @@
 generated
 indexExpression
-	^indexExpression
+	^ indexExpression

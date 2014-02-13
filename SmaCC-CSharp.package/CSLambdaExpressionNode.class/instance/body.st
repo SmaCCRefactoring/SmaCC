@@ -1,3 +1,3 @@
 generated
 body
-	^body
+	^ body

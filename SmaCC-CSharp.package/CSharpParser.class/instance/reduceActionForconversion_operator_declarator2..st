@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForconversion_operator_declarator2: nodes
 	| result |
 	result := Array new: 8.
@@ -9,4 +9,4 @@ reduceActionForconversion_operator_declarator2: nodes
 	result at: 5 put: (nodes at: 5).
 	result at: 6 put: (nodes at: 6).
 	result at: 7 put: (nodes at: 7).
-	^result
+	^ result

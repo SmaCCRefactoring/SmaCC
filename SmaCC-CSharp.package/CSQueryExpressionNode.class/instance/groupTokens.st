@@ -1,3 +1,3 @@
 generated
 groupTokens
-	^groupTokens
+	^ groupTokens

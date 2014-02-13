@@ -1,3 +1,3 @@
 generated
 visitImplicitAnonymousFunctionSignature: anImplicitAnonymousFunctionSignature
-	^self visitProgram: anImplicitAnonymousFunctionSignature
+	^ self visitProgram: anImplicitAnonymousFunctionSignature

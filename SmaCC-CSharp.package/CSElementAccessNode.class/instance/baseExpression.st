@@ -1,3 +1,3 @@
 generated
 baseExpression
-	^baseExpression
+	^ baseExpression

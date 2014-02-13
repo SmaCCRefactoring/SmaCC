@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitUsingAliasDirective: self
+	^ aProgramVisitor visitUsingAliasDirective: self

@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForconstructor_declaration1: nodes
 	| result |
 	result := CSConstructorDeclarationNode new.
@@ -12,4 +12,4 @@ reduceActionForconstructor_declaration1: nodes
 	result initializer: ((nodes at: 3) at: 6).
 	result block: ((nodes at: 4) at: 1).
 	result semicolonToken: ((nodes at: 4) at: 2).
-	^result
+	^ result

@@ -1,3 +1,3 @@
 generated
 visitElementAccess: anElementAccess
-	^self visitExpression: anElementAccess
+	^ self visitExpression: anElementAccess

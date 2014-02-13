@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitStackallocInitializer: self
+	^ aProgramVisitor visitStackallocInitializer: self

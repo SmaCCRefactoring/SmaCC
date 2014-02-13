@@ -1,9 +1,6 @@
 generated
 scan8
-	[self step.
-	currentCharacter == $"
-		ifTrue:
-			[self recordMatch: #(158).
-			self step.
-			currentCharacter == $" ifTrue: [^self scan8].
-			^self reportLastMatch]] repeat
+	self step.
+	currentCharacter isDigit
+		ifTrue: [ ^ self scan4 ].
+	^ self reportLastMatch

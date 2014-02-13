@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFororderings2: nodes
 	| result |
 	result := Array new: 8.
@@ -26,4 +26,4 @@ reduceActionFororderings2: nodes
 	self add: ((nodes at: 3) at: 5) to: (result at: 5).
 	self add: ((nodes at: 3) at: 6) to: (result at: 6).
 	self add: ((nodes at: 3) at: 7) to: (result at: 7).
-	^result
+	^ result

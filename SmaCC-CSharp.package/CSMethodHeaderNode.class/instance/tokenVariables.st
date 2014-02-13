@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#partialToken #name #periodToken #leftParenToken #rightParenToken)
+	^ #(#partialToken #_name #periodToken #leftParenToken #rightParenToken)

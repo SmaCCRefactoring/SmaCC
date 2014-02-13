@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitSwitchSection: self
+	^ aProgramVisitor visitSwitchSection: self

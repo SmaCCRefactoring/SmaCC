@@ -1,5 +1,7 @@
 generated
 interface: aCSTypeNode
-	self interface notNil ifTrue: [self interface parent: nil].
+	self interface notNil
+		ifTrue: [ self interface parent: nil ].
 	interface := aCSTypeNode.
-	self interface notNil ifTrue: [self interface parent: self]
+	self interface notNil
+		ifTrue: [ self interface parent: self ]

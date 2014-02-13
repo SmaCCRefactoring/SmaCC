@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#modifier #thisToken #leftBracket #rightBracket #leftBrace #rightBrace)
+	^ #(#modifier #thisToken #leftBracket #rightBracket #leftBrace #rightBrace)

@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForanonymous_object_initializer1: nodes
 	| result |
 	result := Array new: 4.
@@ -8,4 +8,4 @@ reduceActionForanonymous_object_initializer1: nodes
 	self addAll: ((nodes at: 2) at: 1) to: (result at: 2).
 	self addAll: ((nodes at: 2) at: 2) to: (result at: 3).
 	result at: 4 put: (nodes at: 3).
-	^result
+	^ result

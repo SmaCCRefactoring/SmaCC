@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#operatorToken #operator #leftParenToken #rightParenToken #implicitToken #explicitToken)
+	^ #(#operatorToken #operator #leftParenToken #rightParenToken #implicitToken #explicitToken)

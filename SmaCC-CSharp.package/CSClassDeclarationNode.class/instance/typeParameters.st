@@ -1,3 +1,3 @@
 generated
 typeParameters
-	^typeParameters
+	^ typeParameters

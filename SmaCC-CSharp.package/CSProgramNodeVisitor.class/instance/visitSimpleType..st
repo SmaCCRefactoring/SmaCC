@@ -1,3 +1,3 @@
 generated
 visitSimpleType: aSimpleType
-	^self visitType: aSimpleType
+	^ self visitType: aSimpleType

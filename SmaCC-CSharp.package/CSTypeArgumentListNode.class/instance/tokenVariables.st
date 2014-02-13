@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#lessThanToken #greaterThanToken)
+	^ #(#lessThanToken #greaterThanToken)

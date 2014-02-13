@@ -1,3 +1,3 @@
 generated
 visitDeclaration: aDeclaration
-	^self visitProgram: aDeclaration
+	^ self visitProgram: aDeclaration

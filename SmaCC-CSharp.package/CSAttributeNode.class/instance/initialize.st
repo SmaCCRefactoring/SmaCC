@@ -1,4 +1,4 @@
-generated
+generated-initialize-release
 initialize
 	super initialize.
 	attributeValues := OrderedCollection new: 2.

@@ -1,3 +1,3 @@
 generated
 implicitToken
-	^implicitToken
+	^ implicitToken

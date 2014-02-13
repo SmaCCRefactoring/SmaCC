@@ -1,3 +1,3 @@
 generated
 visitPointerElementAccess: aPointerElementAccess
-	^self visitExpression: aPointerElementAccess
+	^ self visitExpression: aPointerElementAccess

@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitImplicitAnonymousFunctionSignature: self
+	^ aProgramVisitor visitImplicitAnonymousFunctionSignature: self

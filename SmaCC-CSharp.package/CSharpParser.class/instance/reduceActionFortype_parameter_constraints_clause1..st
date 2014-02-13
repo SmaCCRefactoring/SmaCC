@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFortype_parameter_constraints_clause1: nodes
 	| result |
 	result := CSTypeParameterConstraintsClauseNode new.
@@ -7,4 +7,4 @@ reduceActionFortype_parameter_constraints_clause1: nodes
 	result colon: (nodes at: 3).
 	result addNodes: ((nodes at: 4) at: 1) to: result constraints.
 	result addTokens: ((nodes at: 4) at: 2) to: result commaTokens.
-	^result
+	^ result

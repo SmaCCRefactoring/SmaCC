@@ -1,3 +1,3 @@
 generated
 explicitToken
-	^explicitToken
+	^ explicitToken

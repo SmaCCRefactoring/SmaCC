@@ -1,3 +1,3 @@
 generated
 visitPostExpression: aPostExpression
-	^self visitExpression: aPostExpression
+	^ self visitExpression: aPostExpression

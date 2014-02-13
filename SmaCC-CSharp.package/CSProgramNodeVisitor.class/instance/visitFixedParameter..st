@@ -1,3 +1,3 @@
 generated
 visitFixedParameter: aFixedParameter
-	^self visitProgram: aFixedParameter
+	^ self visitProgram: aFixedParameter

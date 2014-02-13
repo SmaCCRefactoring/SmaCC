@@ -1,3 +1,3 @@
 generated
 inTokens
-	^inTokens
+	^ inTokens

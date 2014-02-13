@@ -1,3 +1,3 @@
 generated
 rightParenToken
-	^rightParenToken
+	^ rightParenToken

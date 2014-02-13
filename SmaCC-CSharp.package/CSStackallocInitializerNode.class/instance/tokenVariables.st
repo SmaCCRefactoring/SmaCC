@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#stackallocToken #leftBracketToken #rightBracketToken)
+	^ #(#stackallocToken #leftBracketToken #rightBracketToken)

@@ -1,3 +1,3 @@
 generated
 visitGotoStatement: aGotoStatement
-	^self visitStatement: aGotoStatement
+	^ self visitStatement: aGotoStatement

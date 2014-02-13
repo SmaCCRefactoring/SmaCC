@@ -1,3 +1,3 @@
 generated
 visitBreakStatement: aBreakStatement
-	^self visitStatement: aBreakStatement
+	^ self visitStatement: aBreakStatement

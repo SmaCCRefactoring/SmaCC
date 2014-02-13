@@ -1,3 +1,3 @@
 generated
 thenStatement
-	^thenStatement
+	^ thenStatement

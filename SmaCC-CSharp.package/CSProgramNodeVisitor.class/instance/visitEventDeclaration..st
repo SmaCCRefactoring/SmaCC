@@ -1,3 +1,3 @@
 generated
 visitEventDeclaration: anEventDeclaration
-	^self visitDeclaration: anEventDeclaration
+	^ self visitDeclaration: anEventDeclaration

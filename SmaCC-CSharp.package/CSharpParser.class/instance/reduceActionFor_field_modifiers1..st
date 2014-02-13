@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFor_field_modifiers1: nodes
 	| result |
 	result := Array new: 9.
@@ -11,4 +11,4 @@ reduceActionFor_field_modifiers1: nodes
 	result at: 7 put: (OrderedCollection new: 2).
 	result at: 8 put: (OrderedCollection new: 2).
 	result at: 9 put: (OrderedCollection new: 2).
-	^result
+	^ result

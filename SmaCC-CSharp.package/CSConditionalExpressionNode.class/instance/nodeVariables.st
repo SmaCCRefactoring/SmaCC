@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^#(#booleanExpression #trueExpression #falseExpression)
+	^ #(#booleanExpression #trueExpression #falseExpression)

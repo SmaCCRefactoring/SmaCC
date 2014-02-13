@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForsizeof_expression1: nodes
 	| result |
 	result := CSSizeofExpressionNode new.
@@ -6,4 +6,4 @@ reduceActionForsizeof_expression1: nodes
 	result leftParenToken: (nodes at: 2).
 	result type: (nodes at: 3).
 	result rightParenToken: (nodes at: 4).
-	^result
+	^ result

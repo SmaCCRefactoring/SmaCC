@@ -1,3 +1,3 @@
 generated
 visitMethodHeader: aMethodHeader
-	^self visitProgram: aMethodHeader
+	^ self visitProgram: aMethodHeader

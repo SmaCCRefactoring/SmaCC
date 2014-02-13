@@ -1,6 +1,11 @@
 generated
 scan12
-	self recordMatch: #(155).
+	[ 
 	self step.
-	('Uu' includes: currentCharacter) ifTrue: [^self recordAndReportMatch: #(155)].
-	^self reportLastMatch
+	currentCharacter = $"
+		ifTrue: [ 
+			self recordMatch: #(158).
+			self step.
+			currentCharacter = $"
+				ifTrue: [ ^ self scan12 ].
+			^ self reportLastMatch ] ] repeat

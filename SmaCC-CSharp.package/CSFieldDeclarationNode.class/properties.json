@@ -16,7 +16,7 @@
 		"readonlyTokens",
 		"volatileTokens",
 		"unsafeTokens",
-		"name",
+		"_name",
 		"type",
 		"timesToken",
 		"declarators",

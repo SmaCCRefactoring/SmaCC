@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^#(#signature #body)
+	^ #(#signature #body)

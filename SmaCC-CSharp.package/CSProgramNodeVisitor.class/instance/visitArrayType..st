@@ -1,3 +1,3 @@
 generated
 visitArrayType: anArrayType
-	^self visitType: anArrayType
+	^ self visitType: anArrayType

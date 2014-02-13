@@ -1,3 +1,3 @@
 generated
 namespace
-	^namespace
+	^ namespace

@@ -1,6 +1,7 @@
 generated
 pluralVariablesMap
-	^##((Dictionary new)
-			at: 'declarator' put: 'declarators';
-			at: 'commaToken' put: 'commaTokens';
-			yourself)
+	^ [ 
+	Dictionary new
+		at: 'declarator' put: 'declarators';
+		at: 'commaToken' put: 'commaTokens';
+		yourself ] once

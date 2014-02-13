@@ -1,3 +1,3 @@
 generated
 leftBraceToken
-	^leftBraceToken
+	^ leftBraceToken

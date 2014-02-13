@@ -1,3 +1,3 @@
 generated
 visitDelegateDeclaration: aDelegateDeclaration
-	^self visitDeclaration: aDelegateDeclaration
+	^ self visitDeclaration: aDelegateDeclaration

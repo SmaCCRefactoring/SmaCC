@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^#(#typeArguments #namespace)
+	^ #(#typeArguments #namespace)

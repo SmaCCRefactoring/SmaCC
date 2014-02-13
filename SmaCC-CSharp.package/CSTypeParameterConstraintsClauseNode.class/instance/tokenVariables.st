@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#whereToken #colon)
+	^ #(#whereToken #colon)

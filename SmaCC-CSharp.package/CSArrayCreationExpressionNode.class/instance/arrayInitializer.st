@@ -1,3 +1,3 @@
 generated
 arrayInitializer
-	^arrayInitializer
+	^ arrayInitializer

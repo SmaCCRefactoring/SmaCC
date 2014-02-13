@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForfixed_statement1: nodes
 	| result |
 	result := CSFixedStatementNode new.
@@ -9,4 +9,4 @@ reduceActionForfixed_statement1: nodes
 	result addTokens: ((nodes at: 4) at: 2) to: result commaTokens.
 	result rightParenToken: (nodes at: 5).
 	result statement: (nodes at: 6).
-	^result
+	^ result

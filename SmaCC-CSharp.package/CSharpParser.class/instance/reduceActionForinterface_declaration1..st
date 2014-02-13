@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForinterface_declaration1: nodes
 	| result |
 	result := CSInterfaceDeclarationNode new.
@@ -6,7 +6,7 @@ reduceActionForinterface_declaration1: nodes
 	result addTokens: ((nodes at: 2) at: 1) to: result modifiers.
 	result partialToken: ((nodes at: 3) at: 1).
 	result interfaceToken: (nodes at: 4).
-	result name: (nodes at: 5).
+	result _name: (nodes at: 5).
 	result typeParameters: ((nodes at: 6) at: 1).
 	result colon: ((nodes at: 7) at: 1).
 	result addNodes: ((nodes at: 7) at: 2) to: result supertypes.
@@ -16,4 +16,4 @@ reduceActionForinterface_declaration1: nodes
 	result addNodes: ((nodes at: 9) at: 2) to: result declarations.
 	result rightBrace: ((nodes at: 9) at: 3).
 	result semicolon: ((nodes at: 10) at: 1).
-	^result
+	^ result

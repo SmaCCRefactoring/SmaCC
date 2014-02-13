@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#modifier #name #leftParen #rightParen #semicolon)
+	^ #(#modifier #_name #leftParen #rightParen #semicolon)

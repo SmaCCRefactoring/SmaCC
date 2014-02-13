@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForquery_body1: nodes
 	| result |
 	result := Array new: 23.
@@ -76,4 +76,4 @@ reduceActionForquery_body1: nodes
 	self addAll: ((nodes at: 3) at: 21) to: (result at: 21).
 	self addAll: ((nodes at: 3) at: 22) to: (result at: 22).
 	self addAll: ((nodes at: 3) at: 23) to: (result at: 23).
-	^result
+	^ result

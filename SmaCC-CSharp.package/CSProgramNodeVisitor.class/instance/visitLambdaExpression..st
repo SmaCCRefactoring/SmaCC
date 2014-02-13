@@ -1,3 +1,3 @@
 generated
 visitLambdaExpression: aLambdaExpression
-	^self visitExpression: aLambdaExpression
+	^ self visitExpression: aLambdaExpression

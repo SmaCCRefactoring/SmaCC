@@ -1,3 +1,3 @@
 generated
 visitTypeParameterConstraintsClause: aTypeParameterConstraintsClause
-	^self visitProgram: aTypeParameterConstraintsClause
+	^ self visitProgram: aTypeParameterConstraintsClause

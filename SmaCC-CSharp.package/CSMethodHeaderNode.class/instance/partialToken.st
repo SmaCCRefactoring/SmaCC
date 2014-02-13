@@ -1,3 +1,3 @@
 generated
 partialToken
-	^partialToken
+	^ partialToken

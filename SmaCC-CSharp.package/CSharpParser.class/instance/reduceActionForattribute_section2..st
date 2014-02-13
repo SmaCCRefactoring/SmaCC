@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForattribute_section2: nodes
 	| result |
 	result := CSAttributeNode new.
@@ -9,4 +9,4 @@ reduceActionForattribute_section2: nodes
 	result addTokens: ((nodes at: 3) at: 2) to: result commas.
 	result addToken: (nodes at: 4) to: result commas.
 	result rightBracket: (nodes at: 5).
-	^result
+	^ result

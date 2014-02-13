@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFortype_parameters2: nodes
 	| result |
 	result := Array new: 3.
@@ -11,10 +11,6 @@ reduceActionFortype_parameters2: nodes
 	self add: (nodes at: 2) to: (result at: 3).
 	self addAll: ((nodes at: 3) at: 1) to: (result at: 1).
 	self
-		addAll:
-			(SmaCCParseNode
-				collectionVariableIn: (nodes at: 4)
-				collectionGetter: nil
-				variableGetter: #name)
+		addAll: (SmaCCParseNode collectionVariableIn: (nodes at: 4) collectionGetter: nil variableGetter: #_name)
 		to: (result at: 2).
-	^result
+	^ result

@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#gotoToken #identifierToken #caseToken #defaultToken)
+	^ #(#gotoToken #identifierToken #caseToken #defaultToken)

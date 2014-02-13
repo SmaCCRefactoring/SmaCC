@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#identifierToken #equalToken)
+	^ #(#identifierToken #equalToken)

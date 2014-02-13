@@ -1,3 +1,3 @@
 generated
 compositeNodeVariables
-	^#(#arguments #values #initializers)
+	^ #(#arguments #values #initializers)

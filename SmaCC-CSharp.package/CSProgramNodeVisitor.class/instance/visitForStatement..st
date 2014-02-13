@@ -1,3 +1,3 @@
 generated
 visitForStatement: aForStatement
-	^self visitStatement: aForStatement
+	^ self visitStatement: aForStatement

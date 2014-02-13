@@ -8,7 +8,7 @@
 	"instvars" : [
 		"expression",
 		"arrowToken",
-		"name" ],
+		"_name" ],
 	"name" : "CSPointerMemberAccessNode",
 	"pools" : [
 		 ],

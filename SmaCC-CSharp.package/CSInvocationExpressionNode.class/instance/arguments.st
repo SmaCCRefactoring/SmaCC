@@ -1,3 +1,3 @@
 generated
 arguments
-	^arguments
+	^ arguments

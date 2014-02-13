@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitUncheckedExpression: self
+	^ aProgramVisitor visitUncheckedExpression: self

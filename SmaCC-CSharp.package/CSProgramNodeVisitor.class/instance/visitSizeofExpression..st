@@ -1,3 +1,3 @@
 generated
 visitSizeofExpression: aSizeofExpression
-	^self visitExpression: aSizeofExpression
+	^ self visitExpression: aSizeofExpression

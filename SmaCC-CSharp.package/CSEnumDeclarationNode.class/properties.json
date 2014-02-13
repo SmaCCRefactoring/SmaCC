@@ -9,7 +9,7 @@
 		"_attributes",
 		"modifiers",
 		"enumToken",
-		"name",
+		"_name",
 		"colonToken",
 		"type",
 		"leftBrace",
@@ -18,7 +18,7 @@
 		"rightBrace",
 		"semicolon",
 		"equal",
-		"value" ],
+		"_value" ],
 	"name" : "CSEnumDeclarationNode",
 	"pools" : [
 		 ],

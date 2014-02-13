@@ -8,7 +8,7 @@
 	"instvars" : [
 		"modifier",
 		"type",
-		"name" ],
+		"_name" ],
 	"name" : "CSAnonymousFunctionParameterNode",
 	"pools" : [
 		 ],

@@ -6,11 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"name",
+		"_name",
 		"leftParen",
-		"rightParen",
 		"arguments",
-		"commas" ],
+		"commas",
+		"rightParen" ],
 	"name" : "CSAttributeValueNode",
 	"pools" : [
 		 ],

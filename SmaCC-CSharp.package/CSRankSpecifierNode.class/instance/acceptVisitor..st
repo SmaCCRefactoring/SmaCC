@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitRankSpecifier: self
+	^ aProgramVisitor visitRankSpecifier: self

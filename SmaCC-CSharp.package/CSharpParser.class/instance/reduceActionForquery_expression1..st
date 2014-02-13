@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForquery_expression1: nodes
 	| result |
 	result := CSQueryExpressionNode new.
@@ -34,4 +34,4 @@ reduceActionForquery_expression1: nodes
 	result addTokens: ((nodes at: 2) at: 21) to: result _rightParens.
 	result addTokens: ((nodes at: 2) at: 22) to: result groupTokens.
 	result addTokens: ((nodes at: 2) at: 23) to: result byTokens.
-	^result
+	^ result

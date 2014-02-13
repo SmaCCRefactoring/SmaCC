@@ -1,5 +1,7 @@
 generated
 iterator: aCSStatementListNode
-	self iterator notNil ifTrue: [self iterator parent: nil].
+	self iterator notNil
+		ifTrue: [ self iterator parent: nil ].
 	iterator := aCSStatementListNode.
-	self iterator notNil ifTrue: [self iterator parent: self]
+	self iterator notNil
+		ifTrue: [ self iterator parent: self ]

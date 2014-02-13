@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFormethod_header1: nodes
 	| result |
 	result := CSMethodHeaderNode new.
@@ -6,7 +6,7 @@ reduceActionFormethod_header1: nodes
 	result addTokens: ((nodes at: 2) at: 1) to: result modifiers.
 	result partialToken: ((nodes at: 3) at: 1).
 	result returnType: (nodes at: 4).
-	result name: ((nodes at: 5) at: 1).
+	result _name: ((nodes at: 5) at: 1).
 	result interface: ((nodes at: 5) at: 2).
 	result periodToken: ((nodes at: 5) at: 3).
 	result typeParameters: ((nodes at: 6) at: 1).
@@ -15,4 +15,4 @@ reduceActionFormethod_header1: nodes
 	result addTokens: ((nodes at: 8) at: 2) to: result commas.
 	result rightParenToken: (nodes at: 9).
 	result addNodes: ((nodes at: 10) at: 1) to: result constraintClauses.
-	^result
+	^ result

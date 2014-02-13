@@ -2,13 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptVisitor:" : "",
-		"ignoredTokenVariables" : "",
-		"namespace" : "",
-		"namespace:" : "",
-		"nodeVariables" : "",
-		"semicolonToken" : "",
-		"semicolonToken:" : "",
-		"tokenVariables" : "",
-		"usingToken" : "",
-		"usingToken:" : "" } }
+		"acceptVisitor:" : "ThierryGoubier 2/13/2014 10:02",
+		"ignoredTokenVariables" : "ThierryGoubier 2/13/2014 10:00",
+		"namespace" : "ThierryGoubier 2/13/2014 10:00",
+		"namespace:" : "ThierryGoubier 2/13/2014 10:00",
+		"nodeVariables" : "ThierryGoubier 2/13/2014 10:00",
+		"semicolonToken" : "ThierryGoubier 2/13/2014 10:00",
+		"semicolonToken:" : "ThierryGoubier 2/13/2014 10:00",
+		"tokenVariables" : "ThierryGoubier 2/13/2014 10:00",
+		"usingToken" : "ThierryGoubier 2/13/2014 10:00",
+		"usingToken:" : "ThierryGoubier 2/13/2014 10:00" } }

@@ -1,3 +1,3 @@
 generated
 setAccessor
-	^setAccessor
+	^ setAccessor

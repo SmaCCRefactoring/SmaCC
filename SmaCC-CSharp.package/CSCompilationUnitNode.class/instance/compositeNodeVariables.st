@@ -1,3 +1,3 @@
 generated
 compositeNodeVariables
-	^#(#directives #_attributes #declarations)
+	^ #(#directives #_attributes #declarations)

@@ -1,3 +1,3 @@
 generated
 visitRemoveAccessorDeclaration: aRemoveAccessorDeclaration
-	^self visitProgram: aRemoveAccessorDeclaration
+	^ self visitProgram: aRemoveAccessorDeclaration

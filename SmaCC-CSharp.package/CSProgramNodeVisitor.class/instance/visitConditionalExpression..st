@@ -1,3 +1,3 @@
 generated
 visitConditionalExpression: aConditionalExpression
-	^self visitExpression: aConditionalExpression
+	^ self visitExpression: aConditionalExpression

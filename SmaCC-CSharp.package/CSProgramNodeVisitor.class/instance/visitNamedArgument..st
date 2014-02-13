@@ -1,3 +1,3 @@
 generated
 visitNamedArgument: aNamedArgument
-	^self visitProgram: aNamedArgument
+	^ self visitProgram: aNamedArgument

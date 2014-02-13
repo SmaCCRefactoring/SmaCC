@@ -1,3 +1,3 @@
 generated
 visitInterfaceMethodDeclaration: anInterfaceMethodDeclaration
-	^self visitDeclaration: anInterfaceMethodDeclaration
+	^ self visitDeclaration: anInterfaceMethodDeclaration

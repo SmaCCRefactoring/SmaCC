@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitUsingNamespaceDirective: self
+	^ aProgramVisitor visitUsingNamespaceDirective: self

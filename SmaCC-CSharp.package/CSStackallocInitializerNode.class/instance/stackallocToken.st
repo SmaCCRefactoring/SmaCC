@@ -1,3 +1,3 @@
 generated
 stackallocToken
-	^stackallocToken
+	^ stackallocToken

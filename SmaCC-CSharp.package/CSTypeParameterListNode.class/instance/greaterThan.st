@@ -1,3 +1,3 @@
 generated
 greaterThan
-	^greaterThan
+	^ greaterThan

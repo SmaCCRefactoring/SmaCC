@@ -1,3 +1,3 @@
 generated
 visitUnboundTypeName: anUnboundTypeName
-	^self visitProgram: anUnboundTypeName
+	^ self visitProgram: anUnboundTypeName

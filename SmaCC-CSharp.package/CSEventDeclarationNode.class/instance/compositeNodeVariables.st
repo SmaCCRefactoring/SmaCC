@@ -1,3 +1,3 @@
 generated
 compositeNodeVariables
-	^#(#_attributes #declarators)
+	^ #(#_attributes #declarators)

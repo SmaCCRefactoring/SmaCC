@@ -1,3 +1,3 @@
 generated
 accessorType
-	^accessorType
+	^ accessorType

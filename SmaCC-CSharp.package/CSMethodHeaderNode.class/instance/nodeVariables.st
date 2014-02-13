@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^#(#returnType #interface #typeParameters)
+	^ #(#returnType #interface #typeParameters)

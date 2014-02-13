@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#name #timesToken)
+	^ #(#_name #timesToken)

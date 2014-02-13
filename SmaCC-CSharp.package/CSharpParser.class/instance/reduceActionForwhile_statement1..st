@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForwhile_statement1: nodes
 	| result |
 	result := CSWhileStatementNode new.
@@ -7,4 +7,4 @@ reduceActionForwhile_statement1: nodes
 	result expression: (nodes at: 3).
 	result rightParenToken: (nodes at: 4).
 	result statement: (nodes at: 5).
-	^result
+	^ result

@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^#(#type #interface #addDeclaration #removeDeclaration)
+	^ #(#type #interface #addDeclaration #removeDeclaration)

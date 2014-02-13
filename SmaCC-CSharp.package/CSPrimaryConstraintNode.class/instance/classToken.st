@@ -1,3 +1,3 @@
 generated
 classToken
-	^classToken
+	^ classToken

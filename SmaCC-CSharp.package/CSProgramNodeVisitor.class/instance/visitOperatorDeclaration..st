@@ -1,3 +1,3 @@
 generated
 visitOperatorDeclaration: anOperatorDeclaration
-	^self visitDeclaration: anOperatorDeclaration
+	^ self visitDeclaration: anOperatorDeclaration

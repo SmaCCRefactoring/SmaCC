@@ -1,3 +1,3 @@
 generated
 visitTypeConstraint: aTypeConstraint
-	^self visitProgram: aTypeConstraint
+	^ self visitProgram: aTypeConstraint

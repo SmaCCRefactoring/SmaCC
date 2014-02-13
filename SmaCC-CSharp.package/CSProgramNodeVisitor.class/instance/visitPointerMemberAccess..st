@@ -1,3 +1,3 @@
 generated
 visitPointerMemberAccess: aPointerMemberAccess
-	^self visitExpression: aPointerMemberAccess
+	^ self visitExpression: aPointerMemberAccess

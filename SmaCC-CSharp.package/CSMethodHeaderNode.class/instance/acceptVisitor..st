@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitMethodHeader: self
+	^ aProgramVisitor visitMethodHeader: self

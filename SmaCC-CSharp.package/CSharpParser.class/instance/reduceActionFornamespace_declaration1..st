@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFornamespace_declaration1: nodes
 	| result |
 	result := CSNamespaceDeclarationNode new.
@@ -9,4 +9,4 @@ reduceActionFornamespace_declaration1: nodes
 	result addNodes: ((nodes at: 3) at: 3) to: result declarations.
 	result rightBraceToken: ((nodes at: 3) at: 4).
 	result semicolon: ((nodes at: 4) at: 1).
-	^result
+	^ result

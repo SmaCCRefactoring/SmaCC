@@ -1,3 +1,3 @@
 generated
 visitTypeName: aTypeName
-	^self visitType: aTypeName
+	^ self visitType: aTypeName

@@ -1,5 +1,7 @@
 generated
 typeArguments: aCSTypeArgumentListNode
-	self typeArguments notNil ifTrue: [self typeArguments parent: nil].
+	self typeArguments notNil
+		ifTrue: [ self typeArguments parent: nil ].
 	typeArguments := aCSTypeArgumentListNode.
-	self typeArguments notNil ifTrue: [self typeArguments parent: self]
+	self typeArguments notNil
+		ifTrue: [ self typeArguments parent: self ]

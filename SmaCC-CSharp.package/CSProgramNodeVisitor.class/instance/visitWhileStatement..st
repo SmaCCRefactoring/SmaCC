@@ -1,3 +1,3 @@
 generated
 visitWhileStatement: aWhileStatement
-	^self visitStatement: aWhileStatement
+	^ self visitStatement: aWhileStatement

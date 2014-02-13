@@ -1,3 +1,3 @@
 generated
 visitAttributeValue: anAttributeValue
-	^self visitProgram: anAttributeValue
+	^ self visitProgram: anAttributeValue

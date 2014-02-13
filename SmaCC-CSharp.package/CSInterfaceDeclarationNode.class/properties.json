@@ -10,7 +10,7 @@
 		"modifiers",
 		"partialToken",
 		"interfaceToken",
-		"name",
+		"_name",
 		"typeParameters",
 		"colon",
 		"supertypes",

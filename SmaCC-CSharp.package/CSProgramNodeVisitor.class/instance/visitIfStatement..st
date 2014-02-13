@@ -1,3 +1,3 @@
 generated
 visitIfStatement: anIfStatement
-	^self visitStatement: anIfStatement
+	^ self visitStatement: anIfStatement

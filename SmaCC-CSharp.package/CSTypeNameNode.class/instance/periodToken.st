@@ -1,3 +1,3 @@
 generated
 periodToken
-	^periodToken
+	^ periodToken

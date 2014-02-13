@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForelement_initializer2: nodes
 	| result |
 	result := CSElementInitializerNode new.
@@ -6,4 +6,4 @@ reduceActionForelement_initializer2: nodes
 	result addNodes: ((nodes at: 2) at: 1) to: result expressions.
 	result addTokens: ((nodes at: 2) at: 2) to: result commaTokens.
 	result rightBraceToken: (nodes at: 3).
-	^result
+	^ result

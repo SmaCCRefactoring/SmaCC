@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFor_query_continuation2: nodes
 	| result |
 	result := Array new: 23.
@@ -48,4 +48,4 @@ reduceActionFor_query_continuation2: nodes
 	self addAll: ((nodes at: 1) at: 21) to: (result at: 21).
 	self addAll: ((nodes at: 1) at: 22) to: (result at: 22).
 	self addAll: ((nodes at: 1) at: 23) to: (result at: 23).
-	^result
+	^ result

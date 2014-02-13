@@ -1,3 +1,3 @@
 generated
 visitAnonymousObjectCreationExpression: anAnonymousObjectCreationExpression
-	^self visitExpression: anAnonymousObjectCreationExpression
+	^ self visitExpression: anAnonymousObjectCreationExpression

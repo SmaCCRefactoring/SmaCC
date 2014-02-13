@@ -1,3 +1,3 @@
 generated
 privateTokens
-	^privateTokens
+	^ privateTokens

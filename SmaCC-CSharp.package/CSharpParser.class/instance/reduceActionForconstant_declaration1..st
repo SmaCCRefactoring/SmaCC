@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForconstant_declaration1: nodes
 	| result |
 	result := CSConstantDeclarationNode new.
@@ -9,4 +9,4 @@ reduceActionForconstant_declaration1: nodes
 	result addNodes: ((nodes at: 5) at: 1) to: result declarators.
 	result addTokens: ((nodes at: 5) at: 2) to: result commaTokens.
 	result semicolonToken: (nodes at: 6).
-	^result
+	^ result

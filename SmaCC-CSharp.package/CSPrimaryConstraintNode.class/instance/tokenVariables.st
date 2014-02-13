@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#classToken #structToken)
+	^ #(#classToken #structToken)

@@ -1,3 +1,3 @@
 generated
 rankSpecifiers
-	^rankSpecifiers
+	^ rankSpecifiers

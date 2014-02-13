@@ -1,3 +1,3 @@
 generated
 lessThan
-	^lessThan
+	^ lessThan

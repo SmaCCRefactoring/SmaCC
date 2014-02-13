@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForlocal_variable_declarators2: nodes
 	| result |
 	result := Array new: 2.
@@ -8,4 +8,4 @@ reduceActionForlocal_variable_declarators2: nodes
 	self addAll: ((nodes at: 1) at: 2) to: (result at: 2).
 	self add: (nodes at: 2) to: (result at: 2).
 	self add: (nodes at: 3) to: (result at: 1).
-	^result
+	^ result

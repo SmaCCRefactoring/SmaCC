@@ -1,3 +1,3 @@
 generated
 visitDelegateCreationExpression: aDelegateCreationExpression
-	^self visitExpression: aDelegateCreationExpression
+	^ self visitExpression: aDelegateCreationExpression

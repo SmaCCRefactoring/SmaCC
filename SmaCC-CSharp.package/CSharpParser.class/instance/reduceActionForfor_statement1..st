@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionForfor_statement1: nodes
 	| result |
 	result := CSForStatementNode new.
@@ -11,4 +11,4 @@ reduceActionForfor_statement1: nodes
 	result iterator: ((nodes at: 7) at: 1).
 	result rightParenToken: (nodes at: 8).
 	result statement: (nodes at: 9).
-	^result
+	^ result

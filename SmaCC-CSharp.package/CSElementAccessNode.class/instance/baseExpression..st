@@ -1,5 +1,7 @@
 generated
 baseExpression: aCSExpressionNode
-	self baseExpression notNil ifTrue: [self baseExpression parent: nil].
+	self baseExpression notNil
+		ifTrue: [ self baseExpression parent: nil ].
 	baseExpression := aCSExpressionNode.
-	self baseExpression notNil ifTrue: [self baseExpression parent: self]
+	self baseExpression notNil
+		ifTrue: [ self baseExpression parent: self ]

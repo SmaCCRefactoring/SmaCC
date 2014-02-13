@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#newToken #leftParenToken #rightParenToken)
+	^ #(#newToken #leftParenToken #rightParenToken)

@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aProgramVisitor
-	^aProgramVisitor visitQualifiedAliasMember: self
+	^ aProgramVisitor visitQualifiedAliasMember: self

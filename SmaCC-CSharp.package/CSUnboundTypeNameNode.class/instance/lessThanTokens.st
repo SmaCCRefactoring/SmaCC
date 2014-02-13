@@ -1,3 +1,3 @@
 generated
 lessThanTokens
-	^lessThanTokens
+	^ lessThanTokens

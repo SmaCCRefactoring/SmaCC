@@ -1,3 +1,3 @@
 generated
 expression
-	^expression
+	^ expression

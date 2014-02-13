@@ -1,3 +1,3 @@
 generated
 visitContinueStatement: aContinueStatement
-	^self visitStatement: aContinueStatement
+	^ self visitStatement: aContinueStatement

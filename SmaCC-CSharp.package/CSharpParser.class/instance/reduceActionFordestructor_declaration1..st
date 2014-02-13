@@ -1,4 +1,4 @@
-generated
+generated-reduction actions
 reduceActionFordestructor_declaration1: nodes
 	| result |
 	result := CSDestructorDeclarationNode new.
@@ -10,4 +10,4 @@ reduceActionFordestructor_declaration1: nodes
 	result leftParenToken: (nodes at: 6).
 	result rightParenToken: (nodes at: 7).
 	result body: (nodes at: 8).
-	^result
+	^ result

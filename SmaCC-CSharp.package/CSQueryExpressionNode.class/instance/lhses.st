@@ -1,3 +1,3 @@
 generated
 lhses
-	^lhses
+	^ lhses

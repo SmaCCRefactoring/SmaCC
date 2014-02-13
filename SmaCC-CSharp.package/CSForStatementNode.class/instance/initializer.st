@@ -1,3 +1,3 @@
 generated
 initializer
-	^initializer
+	^ initializer

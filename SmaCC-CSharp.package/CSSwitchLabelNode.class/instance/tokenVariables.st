@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#caseToken #colonToken #defaultToken)
+	^ #(#caseToken #colonToken #defaultToken)
