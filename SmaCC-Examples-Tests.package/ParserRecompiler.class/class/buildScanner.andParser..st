@@ -3,13 +3,7 @@ buildScanner: aScannerClass andParser: aParserClass
 	| parserCompiler |
 	parserCompiler := SmaCCGrammarCompiler new.
 	parserCompiler buildDefinition: (self definitionFrom: aParserClass selector: #definitionComment).
-	parserCompiler
-		scannerClass: aScannerClass;
-		parserClass: aParserClass.
-	[ 
-	parserCompiler
-		createChanges;
-		compileDefinitionComments ]
+	[ parserCompiler compileInto: aScannerClass andParser: aParserClass ]
 		on: SmaCCCompilationNotification
 		do: [ :notification | 
 			Transcript
