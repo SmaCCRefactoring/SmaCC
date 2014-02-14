@@ -10,7 +10,4 @@ testOptionalToken
 			<whitespace>: \s+	;
 			begin : <IDENTIFIER> ":" ? begin {''1'' value , ''3''} | <IDENTIFIER> {''1'' value};'.
 	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
-	parserCompiler
-		compileItemSetsComment;
-		compileSymbolComment.
 	self assert: (self parserClass parse: 'a b : c') = 'abc'

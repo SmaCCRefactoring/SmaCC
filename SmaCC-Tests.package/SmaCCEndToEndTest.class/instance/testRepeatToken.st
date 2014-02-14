@@ -10,8 +10,5 @@ testRepeatToken
 			<whitespace>: \s+	;
 			begin : <IDENTIFIER> * ;'.
 	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
-	parserCompiler
-		compileItemSetsComment;
-		compileSymbolComment.
 	self assert: ((self parserClass parse: 'a b c') collect: [ :each | each value ]) asArray = #('a' 'b' 'c').
 	self assert: (self parserClass parse: '') size = 0
