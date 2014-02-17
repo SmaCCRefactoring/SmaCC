@@ -1,1 +1,2 @@
-(name 'SmaCC-Rewrite-Server-ThierryGoubier.1' message 'SmaCC Rewrite Server ported from Dolphin SmaCC 2.0.3' id '151f8864-2a03-4ab8-aa07-a3f6d4c4eae4' date '28 January 2014' time '9:54:57.000176 am' author 'ThierryGoubier' ancestors () stepChildren ())
+(name 'SmaCC-Rewrite-Server-ThierryGoubier.2' message 'Few changes. Need to look into ZnServer stuff.' id '90d6e2f2-fa78-482c-bbef-0401140c658e' date '17 February 2014' time '2:46:06.719915 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-Rewrite-Server-ThierryGoubier.1' message 'SmaCC Rewrite Server ported from Dolphin SmaCC 2.0.3
+' id 'bb807431-af5f-52b3-a80c-5f508c97570d' date '28 January 2014' time '9:54:57 am' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())

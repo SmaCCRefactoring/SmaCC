@@ -1,0 +1,1 @@
+A SmaCCServer handles rewritting commands on a socket
