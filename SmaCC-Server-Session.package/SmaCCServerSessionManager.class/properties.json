@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
-		"notifyView" ],
+		"notifyView",
+		"window" ],
 	"name" : "SmaCCServerSessionManager",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "Model",
 	"type" : "normal" }

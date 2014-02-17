@@ -1,3 +1,3 @@
 public
 notifyMessage
-	^'Running'
+	^ 'Running'

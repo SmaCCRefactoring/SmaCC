@@ -1,3 +1,3 @@
 public
 showTrayMenu
-	self menu showIn: notifyView position: Cursor position
+	self menu invokeAt: ActiveHand position in: ActiveWorld allowKeyboard: true

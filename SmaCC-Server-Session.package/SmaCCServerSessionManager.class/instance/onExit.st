@@ -1,4 +1,4 @@
 public
 onExit
-	notifyView notNil ifTrue: [notifyView notifyIcon: nil].
-	^super onExit
+	window notNil
+		ifTrue: [ window close ]

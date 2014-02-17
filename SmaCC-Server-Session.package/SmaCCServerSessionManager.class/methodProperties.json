@@ -2,13 +2,15 @@
 	"class" : {
 		 },
 	"instance" : {
-		"arguments" : "",
-		"keepAlive" : "",
-		"main" : "",
-		"menu" : "ThierryGoubier 1/28/2014 09:41",
-		"notifyIcon" : "",
-		"notifyMessage" : "",
-		"onExit" : "",
-		"showNotifyView" : "ThierryGoubier 1/28/2014 09:41",
-		"showTrayMenu" : "",
-		"startServer" : "" } }
+		"arguments" : "ThierryGoubier 2/14/2014 12:44",
+		"close" : "ThierryGoubier 2/17/2014 11:29",
+		"exit" : "ThierryGoubier 2/17/2014 11:27",
+		"keepAlive" : "ThierryGoubier 1/28/2014 09:47:09",
+		"main" : "ThierryGoubier 2/14/2014 11:33",
+		"menu" : "ThierryGoubier 2/17/2014 11:29",
+		"notifyMessage" : "ThierryGoubier 2/14/2014 11:34",
+		"onExit" : "ThierryGoubier 2/17/2014 11:28",
+		"showNotifyView" : "ThierryGoubier 2/17/2014 11:27",
+		"showTrayMenu" : "ThierryGoubier 2/14/2014 14:27",
+		"startServer" : "ThierryGoubier 1/28/2014 09:47:09",
+		"title" : "ThierryGoubier 2/14/2014 13:24" } }
