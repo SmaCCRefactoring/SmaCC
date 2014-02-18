@@ -1,7 +1,12 @@
 {
 	"class" : {
-		"bookName" : "ThierryGoubier 2/14/2014 11:16",
-		"pages" : "ThierryGoubier 2/14/2014 11:16",
-		"transformations" : "ThierryGoubier 2/14/2014 11:16" },
+		"asts" : "ThierryGoubier 2/18/2014 15:30",
+		"bookName" : "ThierryGoubier 2/18/2014 15:45",
+		"directives" : "ThierryGoubier 2/18/2014 15:35",
+		"pages" : "ThierryGoubier 2/18/2014 15:44",
+		"parser" : "ThierryGoubier 2/18/2014 15:44",
+		"scanner" : "ThierryGoubier 2/18/2014 15:40",
+		"transformations" : "ThierryGoubier 2/14/2014 11:26:23",
+		"tutorial" : "ThierryGoubier 2/18/2014 15:41" },
 	"instance" : {
 		 } }

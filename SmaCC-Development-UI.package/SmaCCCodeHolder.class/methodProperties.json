@@ -1,18 +1,18 @@
 {
 	"class" : {
-		"owner:" : "ThierryGoubier 2/5/2014 16:47:09",
-		"owner:ownerAcceptSelector:" : "ThierryGoubier 2/5/2014 16:47:09" },
+		"owner:" : "ThierryGoubier 2/14/2014 11:26:23",
+		"owner:ownerAcceptSelector:" : "ThierryGoubier 2/14/2014 11:26:23" },
 	"instance" : {
-		"contents:notifying:" : "ThierryGoubier 2/5/2014 16:47:09",
-		"contentsMenu:shifted:" : "ThierryGoubier 2/5/2014 16:47:09",
-		"contentsMorph" : "ThierryGoubier 2/5/2014 16:47:09",
-		"hasUnacceptedEdits" : "ThierryGoubier 2/5/2014 16:47:09",
-		"okToChange" : "ThierryGoubier 2/5/2014 16:47:09",
-		"owner" : "ThierryGoubier 2/5/2014 16:47:09",
-		"owner:" : "ThierryGoubier 2/5/2014 16:47:09",
-		"owner:ownerAcceptSelector:" : "ThierryGoubier 2/5/2014 16:47:09",
-		"ownerAcceptSelector" : "ThierryGoubier 2/5/2014 16:47:09",
-		"ownerAcceptSelector:" : "ThierryGoubier 2/5/2014 16:47:09",
-		"perform:orSendTo:" : "ThierryGoubier 2/5/2014 16:47:09",
-		"readContentsFromFile" : "ThierryGoubier 2/5/2014 16:47:09",
-		"saveContentsInFile" : "ThierryGoubier 2/5/2014 16:47:09" } }
+		"contents:notifying:" : "ThierryGoubier 2/14/2014 11:26:23",
+		"contentsMenu:shifted:" : "ThierryGoubier 2/14/2014 11:26:23",
+		"contentsMorph" : "ThierryGoubier 2/14/2014 11:26:23",
+		"hasUnacceptedEdits" : "ThierryGoubier 2/14/2014 11:26:23",
+		"okToChange" : "ThierryGoubier 2/14/2014 11:26:23",
+		"owner" : "ThierryGoubier 2/14/2014 11:26:23",
+		"owner:" : "ThierryGoubier 2/14/2014 11:26:23",
+		"owner:ownerAcceptSelector:" : "ThierryGoubier 2/14/2014 11:26:23",
+		"ownerAcceptSelector" : "ThierryGoubier 2/14/2014 11:26:23",
+		"ownerAcceptSelector:" : "ThierryGoubier 2/14/2014 11:26:23",
+		"perform:orSendTo:" : "ThierryGoubier 2/14/2014 11:26:23",
+		"readContentsFromFile" : "ThierryGoubier 2/14/2014 11:26:23",
+		"saveContentsInFile" : "ThierryGoubier 2/14/2014 11:26:23" } }

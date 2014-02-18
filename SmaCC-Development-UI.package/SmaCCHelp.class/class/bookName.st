@@ -1,3 +1,3 @@
 accessing
 bookName
-	^ 'SmaCC Help'
+	^ 'SmaCC'
