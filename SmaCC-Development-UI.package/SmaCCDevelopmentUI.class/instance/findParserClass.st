@@ -13,7 +13,7 @@ findParserClass
 				newContents: '';
 				newContents: className.
 			parserClassMorph changed: #updateWindowLabel.
-			class := Smalltalk at: className asSymbol.
+			class := Smalltalk at: className asSymbol ifAbsent: [ ^ self ].
 			(class class includesSelector: #definitionComment)
 				ifTrue: [ 
 					text := self removeCommentedPartOf: (class class sourceCodeAt: #definitionComment).

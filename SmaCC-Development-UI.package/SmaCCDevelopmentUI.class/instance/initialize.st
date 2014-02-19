@@ -2,10 +2,10 @@ initialize-release
 initialize
 	mainWindow := StandardWindow labelled: self defaultWindowLabelPrefix.
 	mainWindow model: self.
-	self createTabbedPalette.
+	self createDefinitionPage.
+"	self createTabbedPalette.
 	self createParserPage.
 	self createCompilePage.
-	self createTestPage.
-	self createTutorialPage.
+	self createTestPage."
 	self updateWindowLabel.
-	self tabList selectedPageIndex: 3
+"	self tabList selectedPageIndex: 3"

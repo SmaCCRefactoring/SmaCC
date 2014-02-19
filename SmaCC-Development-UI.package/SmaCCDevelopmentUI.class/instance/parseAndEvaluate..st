@@ -15,6 +15,6 @@ parseAndEvaluate: aBlock
 								displayError: aString
 								at: position
 								notifying: self testCodeHolder contentsMorph.
-							self testCodeHolder hasUnacceptedEdits: true.
+							self testCodeHolder contentsMorph hasUnacceptedEdits: true.
 							^ false])]].
 	^ true

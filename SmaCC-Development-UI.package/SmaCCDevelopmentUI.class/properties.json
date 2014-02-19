@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		"ShowPrecedenceConflicts" ],
-	"commentStamp" : "jmb 1/23/2003 15:59",
+	"commentStamp" : "<historical>",
 	"instvars" : [
 		"tabList",
 		"parserClassMorph",
@@ -16,9 +16,11 @@
 		"mainWindow",
 		"definitionCodeHolder",
 		"testCodeHolder",
-		"tutorialTextHolder",
 		"conflictTextMorph",
-		"isGLR" ],
+		"isGLR",
+		"itemsTextMorph",
+		"symbolsTextMorph",
+		"grammarCompiler" ],
 	"name" : "SmaCCDevelopmentUI",
 	"pools" : [
 		 ],

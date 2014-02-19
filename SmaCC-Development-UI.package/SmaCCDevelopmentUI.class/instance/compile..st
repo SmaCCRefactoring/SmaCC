@@ -1,6 +1,6 @@
 private
 compile: aSymbol
-	| grammar stream oldCharacterSize parserCompiler |
+	|  aGrammar stream oldCharacterSize parserCompiler |
 	(self scannerClassString isEmpty or: [ self parserClassString isEmpty ])
 		ifTrue: [ ^ UIManager default inform: 'Both classes are not specified' ].
 	Cursor read
@@ -17,11 +17,11 @@ compile: aSymbol
 				buildDefinition: self definition;
 				scannerClass: self scannerClassString;
 				parserClass: self parserClassString.
-			grammar := parserCompiler grammar.
-			grammar type: aSymbol.
-			grammar isGLR
+			aGrammar := parserCompiler grammar.
+			aGrammar type: aSymbol.
+			aGrammar isGLR
 				ifTrue: [ isGLR := true ]
-				ifFalse: [ grammar isGLR: isGLR ].
+				ifFalse: [ aGrammar isGLR: isGLR ].
 			stream := WriteStream on: Text new.
 			[ 
 			parserCompiler createChanges.
@@ -41,6 +41,9 @@ compile: aSymbol
 								cr ].
 					ex pass ].
 			self conflicts: stream contents.
+			grammarCompiler := parserCompiler.
+			self changed: #items.
+			self changed: #symbols.
 			self testText string trimBoth notEmpty
-				ifTrue: [ self testCodeHolder hasUnacceptedEdits: true ] ]
+				ifTrue: [ self testCodeHolder contentsMorph hasUnacceptedEdits: true ] ]
 				ensure: [ SmaCCGrammar maximumCharacterValue: oldCharacterSize ] ]
