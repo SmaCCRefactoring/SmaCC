@@ -6,6 +6,7 @@ addTestPageToDefinitionPage: aDefinitionPagePalette
 		vResizing: #spaceFill;
 		cellPositioning: #leftCenter;
 		color: Color transparent;
+		layoutInset: 0;
 		yourself.
 	self addButtonsToTestPage: aTestPage.
 	self addTextToTestPage: aTestPage.

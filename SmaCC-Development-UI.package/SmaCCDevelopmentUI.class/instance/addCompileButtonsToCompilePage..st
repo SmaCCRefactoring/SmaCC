@@ -13,6 +13,6 @@ addCompileButtonsToCompilePage: aCompilePage
 								label: 'Compile LR(1)';
 								onColor: self defaultBackgroundColor offColor: self defaultBackgroundColor lighter;
 								hResizing: #spaceFill);
-				color: Color transparent;
+				layoutInset: 0;
 				vResizing: #shrinkWrap;
 				yourself)

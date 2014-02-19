@@ -1,12 +1,14 @@
 initialize-release
 createDefinitionPage
 	| aDefinitionPage |
-	aDefinitionPage := AlignmentMorph newColumn
+	aDefinitionPage := PanelMorph new
 		hResizing: #spaceFill;
 		vResizing: #spaceFill;
+		fillStyle: Color transparent;
+		changeTableLayout;
+		cellInset: 0;
 		cellPositioning: #leftCenter;
-		color: self mainWindow defaultBackgroundColor;
-		yourself.
+		yourself.	"non pane color tracking"
 	self mainWindow addMorph: aDefinitionPage frame: (0 @ 0 corner: 1 @ 1).
 	self
 		addTabToDefinitionPage: aDefinitionPage;
@@ -14,7 +16,4 @@ createDefinitionPage
 		addCompileButtonsToCompilePage: aDefinitionPage;
 		addCheckBoxesToCompilePage: aDefinitionPage;
 		addClassSelectorsToCompilePage: aDefinitionPage.
-			"Now, force a cycle through all tabs to make sure the layout is OK."
-	self tabList
-		selectedPageIndex: 4;
-		selectedPageIndex: 1
+	self tabList selectedPageIndex: 1

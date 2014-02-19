@@ -4,7 +4,6 @@ addCheckBoxesToCompilePage: aCompilePage
 	cMorph := AlignmentMorph newColumn
 		vResizing: #shrinkWrap;
 		 hResizing: #shrinkWrap;
-		 layoutInset: 1;
 		 wrapCentering: #center;
 		 cellPositioning: #leftCenter;
 		color: Color transparent;

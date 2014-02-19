@@ -21,7 +21,7 @@ addButtonsToTestPage: aTestPage
 			(AlignmentMorph newRow
 				vResizing: #shrinkWrap;
 				hResizing: #spaceFill;
-				color: Color transparent;
+				layoutInset: 0;
 				addMorph: aParserButton;
 				addMorph: aParserInspectButton;
 				addMorph: aParserExploreButton;
