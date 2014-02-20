@@ -404,7 +404,35 @@ Terms
 				add: term; 
 				nameLastItem: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1); 
 				yourself}	
+	| Terms 'rhs' Term 'term' ""?""
+			{rhs
+				add: (grammar makeOptionalSymbolFor: term);
+				yourself}
+	| Terms 'rhs' Term 'term' ""?"" <variablename> 'variableNameToken'
+			{rhs
+				add: (grammar makeOptionalSymbolFor: term);
+				nameLastItem: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1);
+				yourself}	
+	| Terms 'rhs' Term 'term' ""*""
+			{rhs
+				add: (grammar makeRepeatSymbolFor: term);
+				yourself}
+	| Terms 'rhs' Term 'term' ""*"" <variablename> 'variableNameToken'
+			{rhs
+				add: (grammar makeRepeatSymbolFor: term);
+				nameLastItem: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1);
+				yourself}		
+	| Terms 'rhs' Term 'term' ""+""
+			{rhs
+				add: (grammar makeRepeatMultipleSymbolFor: term);
+				yourself}
+	| Terms 'rhs' Term 'term' ""+"" <variablename> 'variableNameToken'
+			{rhs
+				add: (grammar makeRepeatMultipleSymbolFor: term);
+				nameLastItem: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1);
+				yourself}	
 	;
+
 Term
 	: <keyword> 
 			{grammar keywordTerminalNamed: '1' value}
@@ -427,4 +455,37 @@ Term
 			{grammar nonTerminalSymbolNamed: '1' value}
 	| ""error"" 
 			{grammar errorSymbol}
+	| ""("" SimpleTerms "")""
+			{grammar makeGroupFor: '2'}
+	| ""<%"" SimpleTerms ""%>""
+			{grammar makeRepeatSymbolFor: (grammar makeGroupFor: '2')}
+	| ""["" SimpleTerms ""]""
+			{grammar makeOptionalSymbolFor: (grammar makeGroupFor: '2')}
+	;
+
+SimpleTerms
+	: SimpleTerm
+		{OrderedCollection with: '1'}
+	| SimpleTerms 'terms' ""|"" SimpleTerm 'term'
+		{terms add: term; yourself}
+	;
+
+SimpleTerm
+	: { grammar newRHS }
+	| SimpleTerm 'rhs' Term 'term'
+		{rhs
+			add: term;
+			yourself} 
+	| SimpleTerm 'rhs' Term 'term' ""?""
+		{rhs
+			add: (grammar makeOptionalSymbolFor: term);
+			yourself}
+	| SimpleTerm 'rhs' Term 'term' ""*""
+		{rhs
+			add: (grammar makeRepeatSymbolFor: term);
+			yourself}
+	| SimpleTerm 'rhs' Term 'term' ""+""
+		{rhs
+			add: (grammar makeRepeatMultipleSymbolFor: term);
+			yourself}	
 	;"

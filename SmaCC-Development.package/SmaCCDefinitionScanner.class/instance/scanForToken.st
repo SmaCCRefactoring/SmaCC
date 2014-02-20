@@ -1,11 +1,11 @@
 generated
 scanForToken
 	state == #parser
-		ifTrue: [ ^ self scan17 ].
+		ifTrue: [ ^ self scan18 ].
 	state == #directives
-		ifTrue: [ ^ self scan14 ].
+		ifTrue: [ ^ self scan15 ].
 	state == #default
 		ifTrue: [ ^ self scan1 ].
 	state == #scanner
-		ifTrue: [ ^ self scan18 ].
+		ifTrue: [ ^ self scan19 ].
 	^ self reportLastMatch

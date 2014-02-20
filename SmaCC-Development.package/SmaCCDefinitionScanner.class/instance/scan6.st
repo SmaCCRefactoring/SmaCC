@@ -1,6 +1,8 @@
 generated
 scan6
+	[ 
 	self step.
-	currentCharacter = $*
-		ifTrue: [ ^ self scan7 ].
+	currentCharacter = $'
+		ifTrue: [ ^ self recordAndReportMatch: #(34) ].
+	currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue.
 	^ self reportLastMatch
