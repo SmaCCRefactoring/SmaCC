@@ -1,6 +1,5 @@
 tests
 testBraceRepeatToken
-	<expectedFailure>
 	| parserCompiler |
 	parserCompiler := SmaCCGrammarCompiler new.
 	parserCompiler
