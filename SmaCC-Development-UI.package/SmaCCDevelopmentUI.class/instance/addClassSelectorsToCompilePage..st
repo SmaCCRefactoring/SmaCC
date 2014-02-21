@@ -2,19 +2,31 @@ initialize-release
 addClassSelectorsToCompilePage: aCompilePage
 	"The scanner class hasn't got the same meaning as before, since the definition is for both scanner and parser at the same time. Left it for now, since it allows the reuse of a scanner class later on."
 
-	| scLine psLine |
+	| scLine psLine paLine packageButton scannerClassButton parserClassButton |
+	paLine := AlignmentMorph newRow
+		color: Color transparent;
+		vResizing: #shrinkWrap.
 	scLine := AlignmentMorph newRow
 		color: Color transparent;
 		vResizing: #shrinkWrap.
 	psLine := AlignmentMorph newRow
 		color: Color transparent;
 		vResizing: #shrinkWrap.
+	paLine addMorphBack: ('Package:' asMorph hResizing: #spaceFill).
 	scLine addMorphBack: ('Scanner class:' asMorph hResizing: #spaceFill).
 	psLine addMorphBack: ('Parser class:' asMorph hResizing: #spaceFill).
-	findScannerClassButton := PluggableButtonMorph on: self getState: nil action: #findScannerClass.
-	findScannerClassButton label: ' ... '.
-	findParserClassButton := PluggableButtonMorph on: self getState: nil action: #findParserClass.
-	findParserClassButton label: ' ... '.
+	packageButton := PluggableButtonMorph on: self getState: nil action: #findPackage.
+	packageButton label: ' ... '.
+	scannerClassButton := PluggableButtonMorph on: self getState: nil action: #findScannerClass.
+	scannerClassButton label: ' ... '.
+	parserClassButton := PluggableButtonMorph on: self getState: nil action: #findParserClass.
+	parserClassButton label: ' ... '.
+	paLine
+		addMorphBack:
+			(packageMorph := TextMorph new
+				newContents: 'SmaCC-Tutorial';
+				extent: 300 @ 70).
+	packageMorph addDependent: self.
 	scLine
 		addMorphBack:
 			(scannerClassMorph := TextMorph new
@@ -29,12 +41,17 @@ addClassSelectorsToCompilePage: aCompilePage
 				extent: 300 @ 70).
 	parserClassMorph on: #keyStroke send: #updateWindowLabel to: self.
 	parserClassMorph addDependent: self.
+	paLine
+		addMorphBack: packageButton;
+		addMorphBack: AlignmentMorph newVariableTransparentSpacer.
+
 	scLine
-		addMorphBack: findScannerClassButton;
+		addMorphBack: scannerClassButton;
 		addMorphBack: AlignmentMorph newVariableTransparentSpacer.
 	psLine
-		addMorphBack: findParserClassButton;
+		addMorphBack: parserClassButton;
 		addMorphBack: AlignmentMorph newVariableTransparentSpacer.
 	aCompilePage
 		addMorph: psLine;
-		addMorph: scLine
+		addMorph: scLine;
+		addMorph: paLine

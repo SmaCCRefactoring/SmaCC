@@ -1,6 +1,6 @@
 private
 compile: aSymbol
-	|  aGrammar stream oldCharacterSize parserCompiler |
+	| aGrammar stream oldCharacterSize parserCompiler |
 	(self scannerClassString isEmpty or: [ self parserClassString isEmpty ])
 		ifTrue: [ ^ UIManager default inform: 'Both classes are not specified' ].
 	Cursor read
@@ -10,10 +10,12 @@ compile: aSymbol
 	Cursor wait
 		showWhile: [ 
 			oldCharacterSize := SmaCCGrammar maximumCharacterValue.
+			self ensurePackage.
 			[ 
 			SmaCCGrammar maximumCharacterValue: 255.
 			parserCompiler := SmaCCGrammarCompiler new.
 			parserCompiler
+				category: self packageString;
 				buildDefinition: self definition;
 				scannerClass: self scannerClassString;
 				parserClass: self parserClassString.
