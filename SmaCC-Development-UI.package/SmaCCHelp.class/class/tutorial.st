@@ -12,16 +12,16 @@ Our first calculator is going to be relatively simple. It is going to take two n
 <number>        :       [0-9]+ (\. [0-9]*) ? ;
 
 Let''s go over each part:
-Expression 	Description
-<number> 	Names the token. The name inside the <> must be a legal Smalltalk variable name.
-: 	Separates the name of the token from the token''s definition.
-[0-9] 	Matches any single character in the range ''0'' to ''9'' (a digit). We could also use \d or <isDigit> as these also match digits.
-+ 	Matches the previous expression one or more times. In this case, we are matching one or more digits.
-( ... ) 	Groups subexpressions. In this case we are grouping the decimal point and the numbers following the decimal point.
-\. 	Matches the ''.'' character (. has a special meaning in regular expressions, \ quotes it).
-* 	Matches the previous expression zero or more times.
-? 	Matches the previous expression zero or one time (i.e., it is optional).
-; 	Terminates a token specification.
+Expression 		Description
+<number> 		Names the token. The name inside the <> must be a legal Smalltalk variable name.
+: 				Separates the name of the token from the token''s definition.
+[0-9] 			Matches any single character in the range ''0'' to ''9'' (a digit). We could also use \d or <isDigit> as these also match digits.
++ 				Matches the previous expression one or more times. In this case, we are matching one or more digits.
+( ... ) 			Groups subexpressions. In this case we are grouping the decimal point and the numbers following the decimal point.
+\. 				Matches the ''.'' character (. has a special meaning in regular expressions, \ quotes it).
+* 				Matches the previous expression zero or more times.
+? 				Matches the previous expression zero or one time (i.e., it is optional).
+; 				Terminates a token specification.
 
 We don''t want to have to worry about whitespace in our language, so we need to define what a whitespace is and to ignore it. To do this, enter the following token specification on the next line:
 
@@ -43,11 +43,11 @@ Number
 
 This basically says that an expressions is either a number or an expression added to a number. You should now have something that looks like:
 
-We should be able to compile a parser now. First, we need to specify the scanner and parser classes to create. These are entered from the Compile Tab, Scanner Class and Parser Class buttons. Use CalculatorScanner and CalculatorParser respectively. Once the class names are entered, we are ready to compile the parser. Press Compile LR(1) or Compile LALR(1). This will create new Smalltalk classes for the CalculatorScanner and CalculatorParser and compile several methods in those classes. All methods that SmaCC compiles will go into a "generated-*" method protocol. You should not change those methods or add new methods to the "generated-*" method protocols since they are replaced or deleted each time you compile.
+We should be able to compile a parser now. First, we need to specify the scanner and parser classes to create. These are entered from the ... buttons for Scanner class and Parser class. Enter CalculatorScanner and CalculatorParser respectively. Once the class names are entered, we are ready to compile the parser. Press Compile LR(1) or Compile LALR(1). This will create new Smalltalk classes for the CalculatorScanner and CalculatorParser and compile several methods in those classes. All methods that SmaCC compiles will go into a "generated-*" method protocol. You should not change those methods or add new methods to the "generated-*" method protocols since they are replaced or deleted each time you compile.
 
-Whenever SmaCC creates new classes, they are compiled in the SmaCC-Tests package. You may wish to move them to another package after compilation.
+Whenever SmaCC creates new classes, they are compiled in the package (or package tag) named on the Package entry box. You may wish to select a different package by pressing ''...''.
 
-Now we are ready to test our parser. Go to the "test" pane, enter "3 + 4", and select "Evaluate" popup menu option; you will see that the parser correctly parses it. If you press "Inspect" you will see and inspector on an OrderedCollection that contains the parsed tokens. This is because we haven''t specified what the parser is supposed to do when it parses. You can also enter incorrect items. For example, try to parse "3 + + 4" or "3 + a". An error message should appear in the text.
+Now we are ready to test our parser. Go to the "test" pane, enter "3 + 4", and press "Parse"; you will see that the parser correctly parses it. If you press "Parse and explore"  or "Parse and inspect" you will see an explorer (respectively an inspector) on an OrderedCollection that contains the parsed tokens. This is because we haven''t specified what the parser is supposed to do when it parses. You can also enter incorrect items. For example, try to parse "3 + + 4" or "3 + a". An error message should appear in the text.
 
 If you are interested in the generated parser, you may wish to look at the output from compiling the parser in the Symbols or Item Sets tab. The Symbols tab lists all of the terminal and non-terminal symbols that were used in the parser. The number besides each is the internal id used by the parser. The Item Sets tab lists the LR item sets that were used in the parser. These are printed in a format that is similar to the format used by many text books. The Messages tab is used to display any warnings generated while the parser was compiled. The most common warning is for ambiguous actions.
 
@@ -61,7 +61,7 @@ Number
 	: <number> {''1'' value asNumber}
 	;
 
-The text between the braces is Smalltalk code that gets evaluated when the rule is applied. Strings with a number get replaced with the corresponding expression in the production. In the first Expression rule, the ''1'' will get replaced by the object that matches Expression and the ''3'' gets replaced by the object that matches Number. The second item in the rule is the "+" token. Since we already know what it is, it is not interesting. Compile the new parser. Now when you do a ''Inspect'' from the test pane containing "3 + 4", you should see the result: 7.
+The text between the braces is Smalltalk code that gets evaluated when the rule is applied. Strings with a number get replaced with the corresponding expression in the production. In the first Expression rule, the ''1'' will get replaced by the object that matches Expression and the ''3'' gets replaced by the object that matches Number. The second item in the rule is the "+" token. Since we already know what it is, it is not interesting. Compile the new parser. Now when you do a ''Parse and inspect'' from the test pane containing "3 + 4", you should see the result: 7.
 
 One problem with the previous example is that if you need to change a rule then you may also need to change the code for that rule. For example, suppose you inserted a new token at the beginning of a rule, then you would need to change all of your references in the Smalltalk code. We can alleviate this problem by using named expressions. After each part of a rule, we can specify its name. Names are specified with single quotes and must be legal Smalltalk variable names. Doing this for our grammar we get:
 
