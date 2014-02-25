@@ -9,7 +9,9 @@ addItemsBoxToDefinitionPage: aDefinitionPageTabPalette
 				readSelection: nil
 				menu: nil)
 				vResizing: #spaceFill;
-				hResizing: #spaceFill).
+				hResizing: #spaceFill;
+				enabled: false;
+				yourself).
 	aDefinitionPageTabPalette
 		addPage:
 			(aDefinitionPageTabPalette newContentMorph
