@@ -50,7 +50,7 @@ As an example, let''s rewrite addition expressions using reverse Polish notation
 
 	| rewriter compositeRewrite rewrite matcher transformation |
 	compositeRewrite := SmaCCRewriteFile new.
-	compositeRewrite parserClass: ExpressionParser.
+	compositeRewrite parserClass: CalculatorParser.
 	matcher := SmaCCRewriteTreeMatch new.
 	matcher source: ''`a` + `b`''.
 	transformation := SmaCCRewriteStringTransformation new.
@@ -62,7 +62,7 @@ As an example, let''s rewrite addition expressions using reverse Polish notation
 	compositeRewrite addTransformation: rewrite.
 	rewriter := SmaCCRewriteEngine new.
 	rewriter rewriteRule: compositeRewrite.
-	rewriter rewriteTree: (ExpressionParser parse: ''(3 + 4) + (4 + 3)'')
+	rewriter rewriteTree: (CalculatorParser parse: ''(3 + 4) + (4 + 3)'')
 
 This code rewrites "(3 + 4) + (4 + 3)" in RPN format and returns "3 4 + 4 3 + +". The first match that this finds is `a` = (3 + 4) and `b` = (4 + 3). Inside our replacement expression, we refer to `a` and `b`, so we first process those expression for more transformations. Since both contain other addition expressions, we rewrite both expressions to get `a` = 3 4 + and `b` = 4 3 +.
 
@@ -70,17 +70,17 @@ Here''s the same example, using SmaCC special rewrite syntax.
 
 	| rewriter rewriteExpression |
 	rewriteExpression := 
-		''Parser: ExpressionParser
+		''Parser: CalculatorParser
 		>>>`a` + `b`<<<
 		->
 		>>>`a` `b` +<<<''.
 	rewriter := SmaCCRewriteEngine new.
 	rewriter rewriteRule: (SmaCCRewriteRuleFileParser parse: rewriteExpression).
-	rewriter rewriteTree: (ExpressionParser parse: ''(3 + 4) + (4 + 3)'')
+	rewriter rewriteTree: (CalculatorParser parse: ''(3 + 4) + (4 + 3)'')
 
 Let''s extend our RPN rewriter to support other expressions besides addition. Now we could do that by providing rewrites for all possible operators (+, -, *, /, ^), but it would be better if we could do it with patterns. We may wish to do use "`a` `op` `b`", but the pattern `op` will only match AST nodes and not a token (+). We can tell SmaCC to match tokens by using "`a` `op{beToken}` `b`". Here''s the rewrite expression that works for all expressions:
 
-	Parser: ExpressionParser
+	Parser: CalculatorParser
 	>>>`a` `op{beToken}` `b`<<<
 	->
 	>>>`a` `b` `op`<<<

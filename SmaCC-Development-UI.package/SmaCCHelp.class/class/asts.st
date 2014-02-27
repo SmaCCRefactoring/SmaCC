@@ -157,7 +157,7 @@ Arguments
 
 Now, if we inspect "Add(3, 4)", we''ll get something that looks like an ASTFunctionNode.
 
-In addition to the generating the classes, SmaCC also generates the comparison methods for each AST node. For example, we can compare two parse nodes: "(ExpressionParser parse: ''3 + 4'') = (ExpressionParser parse: ''3+4'')". This returns true as whitespace is ignored. However, if we compare "(ExpressionParser parse: ''(3 + 4)'') = (ExpressionParser parse: ''3+4'')", we get false, since the first expression has parentheses. We can tell SmaCC to ignore these by adding the %ignore_variables directive:
+In addition to the generating the classes, SmaCC also generates the comparison methods for each AST node. For example, we can compare two parse nodes: "(CalculatorParser parse: ''3 + 4'') = (CalculatorParser parse: ''3+4'')". This returns true as whitespace is ignored. However, if we compare "(CalculatorParser parse: ''(3 + 4)'') = (CalculatorParser parse: ''3+4'')", we get false, since the first expression has parentheses. We can tell SmaCC to ignore these by adding the %ignore_variables directive:
 
 <number> : [0-9]+ (\. [0-9]*) ? ;
 <name> : [a-zA-Z]\w*;
@@ -197,46 +197,42 @@ Arguments
 	| Arguments "," Expression ''argument''
 	;
 
-Now, we get true when we compare "(ExpressionParser parse: ''(3 + 4)'') = (ExpressionParser parse: ''3+4'')".
+Now, we get true when we compare "(CalculatorParser parse: ''(3 + 4)'') = (CalculatorParser parse: ''3+4'')".
 
 Finally, let''s subclass the generated visitor to create a visitor that evaluates the expressions. Here''s the code for Pharo:
 
-ASTExpressionNodeVisitor subclass: #ExpressionEvaluator
+ASTExpressionNodeVisitor subclass: #ASTExpressionEvaluator
 	instanceVariableNames: ''functions''
-	classInstanceVariableNames: ''
-	category: ''!
+	classVariableNames: ''''
+	category: ''SmaCC-Tutorial''.
 
-!ExpressionEvaluator methodsFor: ''private''!
-
-functions
+ASTExpressionEvaluator compile: ''functions
 	^functions
 		ifNil: 
 			[functions := (Dictionary new)
-						at: ''Add'' put: [:a :b | a + b];
-						yourself]! !
+						at: ''''Add'''' put: [:a :b | a + b];
+						yourself]'' classified: ''private''.
 
-!ExpressionEvaluator methodsFor: ''visiting''!
-
-visitBinary: aBinary
+ASTExpressionEvaluator compile: ''visitBinary: aBinary
 	| left right operation |
 	left := self acceptNode: aBinary left.
 	right := self acceptNode: aBinary right.
 	operation := aBinary operator value.
-	operation = ''^'' ifTrue: [^left ** right].
-	^left perform: operation asSymbol with: right!
+	operation = ''''^'''' ifTrue: [^left ** right].
+	^left perform: operation asSymbol with: right'' classified: ''visiting''.
 
-visitFunction: aFunction
+ASTExpressionEvaluator compile:  ''visitFunction: aFunction
 	| function arguments |
 	function := self functions at: aFunction nameToken value
 				ifAbsent: 
-					[self error: ''Function '' , 
+					[self error: ''''Function '''' , 
 						aFunction nameToken value , 
-						'' is not defined''].
+						'''' is not defined''''].
 	arguments := aFunction arguments collect: [:each | self acceptNode: each].
-	^function valueWithArguments: arguments asArray!
+	^function valueWithArguments: arguments asArray'' classified: ''visiting''.
 
-visitNumber: aNumber
-	^aNumber numberToken value asNumber! !
+ASTExpressionEvaluator compile:  ''visitNumber: aNumber
+	^aNumber numberToken value asNumber'' classified: ''visiting''.
 
-Now we can evaluate "ExpressionEvaluator new accept: (ExpressionParser parse: ''Add(3,4) * 12 / 2 ^ (3 - 1) + 10'')" and get 31.'
+Now we can evaluate "ASTExpressionEvaluator new accept: (CalculatorParser parse: ''Add(3,4) * 12 / 2 ^ (3 - 1) + 10'')" and get 31.'
 		

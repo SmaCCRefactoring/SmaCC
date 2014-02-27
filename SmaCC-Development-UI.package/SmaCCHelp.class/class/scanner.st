@@ -12,6 +12,8 @@ The scanner is specified by a collection of token specifications. Each token is 
 TokenName    :    RegularExpression ;
 
 TokenName is a valid Smalltalk variable name that is surrounded by <>. For example, "<token>" is a valid TokenName, but "<token name>" is not since "token name" isn''t a valid Smalltalk variable name. The RegularExpression is a regular expression that matches a token. It should match one or more characters in the input stream. The colon character, ":", is used to separate the TokenName and the RegularExpression, and the semicolon character, ";", is used to terminate the token specification.
+
+
 Regular Expression Syntax
 
 While the rules are specified as regular expressions, there are many different syntaxes for regular expressions. We choose a relatively simple syntax that is specified below. If you wish to have a more rich syntax, you can modify the scanner''s parser: SmaCCDefinitionScanner & SmaCCDefinitionParser. These classes were created using SmaCC.
