@@ -2,8 +2,9 @@ versions
 version203: spec
 	<version: '2.0.3' imports: #('2.0-baseline')>
 	spec
-		for: #common
+		for: #'pharo3.x'
 		do: [ 
+			spec repository: 'gitfiletree://github.com/ThierryGoubier/SmaCC.git?protocol=git'.
 			spec
 				blessing: #development;
 				author: 'ThierryGoubier';

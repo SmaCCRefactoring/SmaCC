@@ -2,7 +2,7 @@ versions
 version02: spec
 	<version: '0.2' imports: #('0.1-baseline')>
 	
-	spec for: #common do: [
+	spec for: #'pharo1.4.x' do: [
 		spec
 			blessing: #stable;
 			author: 'ThierryGoubier';

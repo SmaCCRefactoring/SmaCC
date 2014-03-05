@@ -4,10 +4,9 @@ baseline20: spec
 	
 	self class ensureGitFileTree.
 	spec
-		for: #common
+		for: #'pharo3.x'
 		do: [ 
 			spec blessing: #baseline.
-			spec repository: 'gitfiletree://github.com/ThierryGoubier/SmaCC.git?protocol=git'.
 			spec
 				package: 'SmaCC-Source-Editing';
 				package: 'SmaCC-Runtime' with: [ spec requires: 'SmaCC-Source-Editing' ];
@@ -31,6 +30,7 @@ baseline20: spec
 			spec
 				group: 'default' with: #('Tools');
 				group: 'Runtime' with: #('SmaCC-GLR-Runtime');
-				group: 'Rewrite' with: #('SmaCC-Rewrite-Server-Worker' 'SmaCC-Rewrite-Server');
-				group: 'Tools' with: #('SmaCC-Development-UI' 'Examples');
+				group: 'Rewrite' with: #('SmaCC-Rewrite-Engine');
+				group: 'Rewrite-Server' with: #('SmaCC-Rewrite-Server-Worker' 'SmaCC-Rewrite-Server' 'Rewrite');
+				group: 'Tools' with: #('SmaCC-Development-UI' 'Examples' 'Rewrite');
 				group: 'Examples' with: #('SmaCC-Smalltalk-Parser' 'SmaCC-C-Parser' 'SmaCC-CSharp' 'SmaCC-Java') ]
