@@ -1,6 +1,6 @@
-generated
+generated-initialization
 initializeKeywordMap
 	keywordMap := Dictionary new.
-	#(#(76 'auto' 63) #(76 'break' 37) #(76 'case' 38) #(76 'char' 68) #(76 'const' 40) #(76 'continue' 48) #(76 'default' 45) #(76 'do' 49) #(76 'double' 55) #(76 'else' 44) #(76 'enum' 41) #(76 'extern' 64) #(76 'float' 73) #(76 'for' 50) #(76 'goto' 47) #(76 'if' 51) #(76 'int' 66) #(76 'long' 67) #(76 'register' 71) #(76 'return' 65) #(76 'short' 69) #(76 'signed' 46) #(76 'sizeof' 32) #(76 'static' 70) #(76 'struct' 43) #(76 'switch' 53) #(76 'typedef' 57) #(76 'union' 42) #(76 'unsigned' 52) #(76 'void' 72) #(76 'volatile' 39) #(76 'while' 54))
-		do: [:each | (keywordMap at: each first ifAbsentPut: [Dictionary new]) at: (each at: 2) put: each last].
-	^keywordMap
+	#(#(76 'auto' 70) #(76 'break' 48) #(76 'case' 38) #(76 'char' 71) #(76 'const' 40) #(76 'continue' 47) #(76 'default' 39) #(76 'do' 54) #(76 'double' 61) #(76 'else' 46) #(76 'enum' 45) #(76 'extern' 58) #(76 'float' 67) #(76 'for' 49) #(76 'goto' 50) #(76 'if' 42) #(76 'int' 69) #(76 'long' 66) #(76 'register' 72) #(76 'return' 19) #(76 'short' 68) #(76 'signed' 51) #(76 'sizeof' 24) #(76 'static' 65) #(76 'struct' 43) #(76 'switch' 52) #(76 'typedef' 57) #(76 'union' 44) #(76 'unsigned' 55) #(76 'void' 73) #(76 'volatile' 41) #(76 'while' 53))
+		do: [ :each | (keywordMap at: each first ifAbsentPut: [ Dictionary new ]) at: (each at: 2) put: each last ].
+	^ keywordMap

@@ -1,7 +1,10 @@
 generated
 scan1
+	[ 
 	self step.
-	currentCharacter == $\ ifTrue: [^self scan3].
-	(currentCharacter <= $! or: [(currentCharacter between: $# and: $[) or: [currentCharacter >= $]]])
-		ifTrue: [^self scan2].
-	^self reportLastMatch
+	currentCharacter = $"
+		ifTrue: [ ^ self recordAndReportMatch: #(78) ].
+	currentCharacter = $\
+		ifTrue: [ 
+			self step.
+			^ self scan1 ] ] repeat

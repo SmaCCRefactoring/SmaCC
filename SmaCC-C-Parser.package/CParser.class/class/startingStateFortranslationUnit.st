@@ -1,3 +1,3 @@
 generated
 startingStateFortranslationUnit
-	^1
+	^ 1
