@@ -9,6 +9,6 @@ version03: spec
 			description: 'SmaCC Smalltalk Compiler Compiler for Pharo 2.0'.
 		spec
 			package: 'SmaCC' with: 'SmaCC-lr.14';
-			package: 'SmaCCDev' with: 'SmaCCDev-ThierryGoubier.33'.
+			package: 'SmaCCDev' with: 'SmaCCDev-ThierryGoubier.34'.
 		
 	]
