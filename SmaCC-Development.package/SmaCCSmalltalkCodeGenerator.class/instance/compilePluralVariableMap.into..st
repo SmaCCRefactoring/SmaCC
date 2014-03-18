@@ -10,7 +10,7 @@ compilePluralVariableMap: allVariables into: aSmaCCNodeClassDefinition
 		nextPutAll:
 				(self supportsOptimizedExpressions
 						ifTrue: [ '##(' ]
-						ifFalse: [ '[' ]);
+						ifFalse: [ '' ]);
 		nextPutAll: '(Dictionary new) '.
 	allVariables
 		do: [ :each | 
@@ -25,7 +25,7 @@ compilePluralVariableMap: allVariables into: aSmaCCNodeClassDefinition
 		nextPutAll:
 				(self supportsOptimizedExpressions
 						ifTrue: [ ')' ]
-						ifFalse: [ '] once' ]).
+						ifFalse: [ '' ]).
 	self
 		startPublicOverrideMethod;
 		nextPutLine: (self method: 'pluralVariablesMap' type: self collectionType);
