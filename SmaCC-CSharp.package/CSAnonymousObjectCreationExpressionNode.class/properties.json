@@ -8,9 +8,9 @@
 	"instvars" : [
 		"newToken",
 		"leftBraceToken",
-		"rightBraceToken",
 		"declarators",
-		"commaTokens" ],
+		"commaTokens",
+		"rightBraceToken" ],
 	"name" : "CSAnonymousObjectCreationExpressionNode",
 	"pools" : [
 		 ],

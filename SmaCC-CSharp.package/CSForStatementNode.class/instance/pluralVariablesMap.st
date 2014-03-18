@@ -1,6 +1,5 @@
 generated
 pluralVariablesMap
-	^ [ 
-	Dictionary new
+	^ Dictionary new
 		at: 'semicolonToken' put: 'semicolonTokens';
-		yourself ] once
+		yourself

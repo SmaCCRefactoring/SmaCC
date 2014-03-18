@@ -1,7 +1,6 @@
 generated
 pluralVariablesMap
-	^ [ 
-	Dictionary new
+	^ Dictionary new
 		at: 'fromToken' put: 'fromTokens';
 		at: 'type' put: 'types';
 		at: 'identifierToken' put: 'identifierTokens';
@@ -25,4 +24,4 @@ pluralVariablesMap
 		at: 'byToken' put: 'byTokens';
 		at: '_leftParen' put: '_leftParens';
 		at: '_rightParen' put: '_rightParens';
-		yourself ] once
+		yourself

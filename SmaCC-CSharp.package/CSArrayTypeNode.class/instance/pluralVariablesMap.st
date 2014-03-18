@@ -1,6 +1,5 @@
 generated
 pluralVariablesMap
-	^ [ 
-	Dictionary new
+	^ Dictionary new
 		at: 'rankSpecifier' put: 'rankSpecifiers';
-		yourself ] once
+		yourself
