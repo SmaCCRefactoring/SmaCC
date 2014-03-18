@@ -1,6 +1,5 @@
 generated
 pluralVariablesMap
-	^ [ 
-	Dictionary new
+	^ Dictionary new
 		at: 'emptyDim' put: 'emptyDims';
-		yourself ] once
+		yourself

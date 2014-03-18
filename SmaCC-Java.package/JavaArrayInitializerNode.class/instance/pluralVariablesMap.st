@@ -1,7 +1,6 @@
 generated
 pluralVariablesMap
-	^ [ 
-	Dictionary new
+	^ Dictionary new
 		at: 'initializer' put: 'initializers';
 		at: 'comma' put: 'commas';
-		yourself ] once
+		yourself
