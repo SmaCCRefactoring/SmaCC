@@ -1,6 +1,6 @@
 versions
 version05: spec
-	<version: '0.5' imports: #('2.0-baseline')>
+	<version: '2.0.3-pre' imports: #('2.0-baseline')>
 	spec
 		for: #'pharo3.x'
 		do: [ 
