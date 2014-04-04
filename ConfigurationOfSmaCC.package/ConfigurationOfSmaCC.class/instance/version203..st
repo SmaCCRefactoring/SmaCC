@@ -4,7 +4,7 @@ version203: spec
 	spec
 		for: #'pharo3.x'
 		do: [ 
-			spec repository: 'gitfiletree://github.com/ThierryGoubier/SmaCC.git?protocol=git'.
+			spec repository: 'gitfiletree://github.com/ThierryGoubier/SmaCC.git?protocol=git&branch=pharo30-dev'.
 			spec
 				blessing: #development;
 				author: 'ThierryGoubier';
