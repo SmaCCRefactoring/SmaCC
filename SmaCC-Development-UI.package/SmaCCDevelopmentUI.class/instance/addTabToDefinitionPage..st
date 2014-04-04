@@ -1,11 +1,9 @@
 initialize-release
 addTabToDefinitionPage: aDefinitionPage
 	self tabList: (self theme newTabGroupIn: World for: #()).
-	self tabList
-		height: 200;
-		vResizing: #rigid;
-		hResizing: #spaceFill.
-	aDefinitionPage addMorph: self tabList.
+	aDefinitionPage
+		addMorph: self tabList
+		fullFrame: (LayoutFrame fractions: (0 @ 0.7 corner: 1 @ 1) offsets: (0 @ 4 corner: 0 @ 0)).
 	self
 		addConflictsBoxToDefinitionPage: self tabList;
 		addItemsBoxToDefinitionPage: self tabList;
