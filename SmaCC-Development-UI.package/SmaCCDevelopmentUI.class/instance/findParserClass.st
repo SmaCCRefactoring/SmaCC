@@ -17,4 +17,19 @@ findParserClass
 			(class class includesSelector: #definitionComment)
 				ifTrue: [ 
 					text := self removeCommentedPartOf: (class class sourceCodeAt: #definitionComment).
-					self definition: text ] ]
+					self definition: text ]
+				ifFalse: [ 
+					(class class includesSelector: #parserDefinitionComment)
+						ifTrue: [ 
+							| scannerText "Old style, force conversion." parserText |
+							(self scannerClass class includesSelector: #scannerDefinitionComment)
+								ifTrue: [ scannerText := self removeCommentedPartOf: (self scannerClass class sourceCodeAt: #scannerDefinitionComment) ]
+								ifFalse: [ scannerText := '' ].
+							parserText := self removeCommentedPartOf: (class class sourceCodeAt: #parserDefinitionComment).
+							self
+								definition:
+									'#Definition extracted from old style definition comments
+' , scannerText
+										,
+											'
+' , parserText ] ] ]
