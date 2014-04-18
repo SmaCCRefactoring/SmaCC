@@ -1,4 +1,6 @@
 generated
 scan5
 	self step.
-	^ self scan4
+	currentCharacter = $=
+		ifTrue: [ ^ self recordAndReportMatch: #(42) ].
+	^ self reportLastMatch

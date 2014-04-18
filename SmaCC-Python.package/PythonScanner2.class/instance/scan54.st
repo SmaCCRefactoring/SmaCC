@@ -1,28 +1,28 @@
 generated
 scan54
-	self recordMatch: #(77).
+	self recordMatch: #(71).
 	self step.
-	currentCharacter = $r
+	currentCharacter = $o
 		ifTrue: [ 
-			self recordMatch: #(77).
+			self recordMatch: #(71).
 			self step.
-			currentCharacter = $y
+			currentCharacter = $t
 				ifTrue: [ 
-					self recordMatch: #(62 77).
+					self recordMatch: #(67 71).
 					self step.
 					((currentCharacter between: $0 and: $9)
 						or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ])
-						ifTrue: [ ^ self scan34 ].
+						ifTrue: [ ^ self scan37 ].
 					^ self reportLastMatch ].
 			((currentCharacter between: $0 and: $9)
 				or: [ 
 					(currentCharacter between: $A and: $Z)
-						or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $x) or: [ currentCharacter = $z ] ] ] ])
-				ifTrue: [ ^ self scan34 ].
+						or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $s) or: [ currentCharacter between: $u and: $z ] ] ] ])
+				ifTrue: [ ^ self scan37 ].
 			^ self reportLastMatch ].
 	((currentCharacter between: $0 and: $9)
 		or: [ 
 			(currentCharacter between: $A and: $Z)
-				or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $q) or: [ currentCharacter between: $s and: $z ] ] ] ])
-		ifTrue: [ ^ self scan34 ].
+				or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $n) or: [ currentCharacter between: $p and: $z ] ] ] ])
+		ifTrue: [ ^ self scan37 ].
 	^ self reportLastMatch

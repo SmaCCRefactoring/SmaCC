@@ -41,19 +41,16 @@ definitionComment
 lineBegin <emptyLine> : \s* <cr> ;
 lineBegin <indent> : [ \t]* ;
 
-lineJoining <whitespace> : \s* ; # \s includes \n, \r and \f.
+<whitespace> : [ \t]+ | \\<cr>;
 
-line <whitespace> : [ \t]+ | \\<cr>;
+<NEWLINE> : <cr> ;
 
-line <NEWLINE> : <cr> ;
-
-<lparen>			: \(;
-<rparen>			: \);
-<lbrack>			: \[;
-<rbrack>			: \];
-<lcurly>			: \{;
-<rcurly>			: \};
-
+<lparen> : \(;
+<rparen> : \);
+<lbrack>	 : \[;
+<rbrack> : \];
+<lcurly> : \{;
+<rcurly>	: \};
 
 %id <INDENT> <DEDENT> <NEWLINE> ;
 
@@ -74,21 +71,22 @@ line <NEWLINE> : <cr> ;
 #       file_input is a module or sequence of commands read from an input file;
 #       eval_input is the input for the eval() and input() functions.
 # NB: compound_stmt in single_input is followed by extra <NEWLINE>!
+%start single_input file_input eval_input ;
 
 single_input: <NEWLINE> | simple_stmt | compound_stmt <NEWLINE> ;
 file_input: (<NEWLINE> | stmt)* <ENDMARKER> ;
 eval_input: testlist <NEWLINE>* <ENDMARKER> ;
 
-decorator: ""@"" dotted_name [ ""("" [arglist] "")"" ] <NEWLINE> ;
+decorator: ""@"" dotted_name [ <lparen> [arglist] <rparen> ] <NEWLINE> ;
 decorators: decorator+ ;
 decorated: decorators (classdef | funcdef) ;
 funcdef: ""def"" <name> parameters "":"" suite ;
-parameters: ""("" [varargslist] "")"" ;
-varargslist: ((fpdef [""="" test] "","")* 
-              (""*"" <name> ["","" ""**"" <name>] | ""**"" <name>) |
-              fpdef [""="" test] ("","" fpdef [""="" test])* ["",""]) ;
-fpdef: <name> | ""("" fplist "")"" ;
-fplist: fpdef ("","" fpdef)* ["",""] ;
+parameters: <lparen> [varargslist] <rparen> ;
+varargslist: (fpdef [""="" test] "","")* 
+              (""*"" <name> ["","" ""**"" <name>] | ""**"" <name> |
+              fpdef [""="" test] ["",""]) ;
+fpdef: <name> | <lparen> fplist <rparen> ;
+fplist: fpdef ("","" fpdef)* "",""? ;
 
 stmt: simple_stmt | compound_stmt ;
 simple_stmt: small_stmt ("";"" small_stmt)* ["";""] <NEWLINE> ;
@@ -111,8 +109,8 @@ yield_stmt: yield_expr ;
 raise_stmt: ""raise"" [test ["","" test ["","" test]]] ;
 import_stmt: import_name | import_from ;
 import_name: ""import"" dotted_as_names ;
-import_from: (""from"" ("".""* dotted_name | "".""+)
-              ""import"" (""*"" | ""("" import_as_names "")"" | import_as_names)) ;
+import_from: (""from"" (dotted_name | "".""+ dotted_name?)
+              ""import"" (""*"" | <lparen> import_as_names <rparen> | import_as_names)) ;
 import_as_name: <name> [""as"" <name>] ;
 dotted_as_name: dotted_name [""as"" <name>] ;
 import_as_names: import_as_name ("","" import_as_name)* ["",""] ;
@@ -160,15 +158,15 @@ arith_expr: term ((""+""|""-"") term)* ;
 term: factor ((""*""|""/""|""%""|""//"") factor)* ;
 factor: (""+""|""-""|""~"") factor | power ;
 power: atom trailer* [""**"" factor] ;
-atom: (""("" [yield_expr|testlist_comp] "")"" |
-       ""["" [listmaker] ""]"" |
-       ""{"" [dictorsetmaker] ""}"" |
+atom: (<lparen> [yield_expr|testlist_comp] <rparen> |
+       <lbrack> [listmaker] <rbrack> |
+       <lcurly> [dictorsetmaker] <rcurly> |
        ""`"" testlist1 ""`"" |
        <name> | <number> | <string>+) ;
 listmaker: test ( list_for | ("","" test)* ["",""] ) ;
 testlist_comp: test ( comp_for | ("","" test)* ["",""] ) ;
 lambdef: ""lambda"" [varargslist] "":"" test ;
-trailer: ""("" [arglist] "")"" | ""["" subscriptlist ""]"" | ""."" <name> ;
+trailer: <lparen> [arglist] <rparen> | <lbrack> subscriptlist <rbrack> | ""."" <name> ;
 subscriptlist: subscript ("","" subscript)* ["",""] ;
 subscript: ""."" ""."" ""."" | test | [test] "":"" [test] [sliceop] ;
 sliceop: "":"" [test] ;
@@ -177,7 +175,7 @@ testlist: test ("","" test)* ["",""] ;
 dictorsetmaker: ( (test "":"" test (comp_for | ("","" test "":"" test)* ["",""])) |
                   (test (comp_for | ("","" test)* ["",""])) ) ;
 
-classdef: ""class"" <name> [""("" [testlist] "")""] "":"" suite ;
+classdef: ""class"" <name> [<lparen> [testlist] <rparen>] "":"" suite ;
 
 arglist: (argument "","")* (argument ["",""]
                          |""*"" test ("","" argument)* ["","" ""**"" test] 
@@ -197,6 +195,6 @@ comp_if: ""if"" old_test [comp_iter] ;
 testlist1: test ("","" test)* ;
 
 # not used in grammar, but may appear in ""node"" passed from Parser to Compiler
-encoding_decl: <name> ;
+#encoding_decl: <name> ;
 
 yield_expr: ""yield"" [testlist] ;"

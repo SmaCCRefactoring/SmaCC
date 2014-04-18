@@ -1,16 +1,13 @@
 generated
 scan30
-	self recordMatch: #(76).
+	[ 
+	self recordMatch: #(73).
 	self step.
-	currentCharacter = $<
-		ifTrue: [ 
-			self recordMatch: #(43).
-			self step.
-			currentCharacter = $=
-				ifTrue: [ ^ self recordAndReportMatch: #(10) ].
-			^ self reportLastMatch ].
-	currentCharacter = $=
-		ifTrue: [ ^ self recordAndReportMatch: #(70) ].
-	currentCharacter = $>
-		ifTrue: [ ^ self recordAndReportMatch: #(63) ].
+	currentCharacter = $.
+		ifTrue: [ ^ self scan27 ].
+	currentCharacter isDigit ] whileTrue.
+	('Ee' includes: currentCharacter)
+		ifTrue: [ ^ self scan28 ].
+	('Ll' includes: currentCharacter)
+		ifTrue: [ ^ self recordAndReportMatch: #(73) ].
 	^ self reportLastMatch

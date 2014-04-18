@@ -1,9 +1,7 @@
 generated
 scan34
-	[ 
-	self recordMatch: #(77).
+	self recordMatch: #(22).
 	self step.
-	(currentCharacter between: $0 and: $9)
-		or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-		whileTrue.
+	currentCharacter = $=
+		ifTrue: [ ^ self recordAndReportMatch: #(61) ].
 	^ self reportLastMatch

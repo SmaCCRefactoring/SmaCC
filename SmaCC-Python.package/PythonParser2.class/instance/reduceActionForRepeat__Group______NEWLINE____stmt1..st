@@ -1,0 +1,3 @@
+generated-reduction actions
+reduceActionForRepeat__Group______NEWLINE____stmt1: nodes
+	^ OrderedCollection new
