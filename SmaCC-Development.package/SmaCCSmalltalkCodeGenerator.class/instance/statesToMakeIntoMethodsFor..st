@@ -2,7 +2,7 @@ compiling
 statesToMakeIntoMethodsFor: aSmaCCNode
 	"Adding a case to be able to cut methods which are too long for Pharo Smalltalk to handle."
 
-	| allStates incoming |
+	| allStates incoming selectedStates |
 	allStates := aSmaCCNode allStates.
 	incoming := Dictionary new.
 	allStates
@@ -11,8 +11,14 @@ statesToMakeIntoMethodsFor: aSmaCCNode
 				do: [ :edge | 
 					each ~= edge to
 						ifTrue: [ (incoming at: edge to ifAbsentPut: [ Set new ]) add: each ] ] ].
-	^ (allStates asOrderedCollection
+	selectedStates := allStates
 		select: [ :each | 
 			aSmaCCNode = each
-				or: [ each isTerminalNode not and: [ (incoming at: each ifAbsent: [ #() ]) size > 1 or: [ each needsSeparateMethod ] ] ] ])
-		asSortedCollection: [ :a :b | a id < b id ]
+				or: [ each isTerminalNode not and: [ (incoming at: each ifAbsent: [ #() ]) size > 1	"or: [ each needsSeparateMethod ] " ] ] ].
+	allStates
+		do: [ :each | 
+			(each allTransitionsWith: selectedStates) > 300
+				ifTrue: [ 
+					selectedStates add: each.
+					selectedStates addAll: (each transitions collect: [ :e | e to ]) ] ].
+	^ selectedStates asSortedCollection: [ :a :b | a id < b id ]

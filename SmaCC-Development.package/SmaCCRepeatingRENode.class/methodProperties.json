@@ -1,14 +1,14 @@
 {
 	"class" : {
-		"component:" : "ThierryGoubier 2/20/2014 10:45:25",
-		"component:minimum:" : "ThierryGoubier 2/20/2014 10:45:25",
-		"component:minimum:maximum:" : "ThierryGoubier 2/20/2014 10:45:25",
-		"finiteInfinity" : "ThierryGoubier 2/20/2014 10:45:25" },
+		"component:" : "ThierryGoubier 3/18/2014 10:53:00",
+		"component:minimum:" : "ThierryGoubier 3/18/2014 10:53:00",
+		"component:minimum:maximum:" : "ThierryGoubier 3/18/2014 10:53:00",
+		"finiteInfinity" : "ThierryGoubier 3/18/2014 10:53:00" },
 	"instance" : {
-		"asNFAStartingWith:" : "ThierryGoubier 2/20/2014 10:45:25",
-		"component:minimum:maximum:" : "ThierryGoubier 2/20/2014 10:45:25",
-		"makeCaseInsensitive" : "ThierryGoubier 2/20/2014 10:45:25",
-		"possibleMatchesDo:on:" : "ThierryGoubier 2/20/2014 10:45:25",
-		"possibleMatchesDo:on:startingAt:" : "ThierryGoubier 2/20/2014 10:45:25",
-		"possibleMatchesSize" : "ThierryGoubier 2/20/2014 10:45:25",
-		"printOn:" : "ThierryGoubier 2/20/2014 10:45:25" } }
+		"asNFAStartingWith:" : "ThierryGoubier 3/18/2014 10:53:00",
+		"component:minimum:maximum:" : "ThierryGoubier 3/18/2014 10:53:00",
+		"makeCaseInsensitive" : "ThierryGoubier 3/18/2014 10:53:00",
+		"possibleMatchesDo:on:" : "ThierryGoubier 3/18/2014 10:53:00",
+		"possibleMatchesDo:on:startingAt:" : "ThierryGoubier 3/18/2014 10:53:00",
+		"possibleMatchesSize" : "ThierryGoubier 3/18/2014 10:53:00",
+		"printOn:" : "ThierryGoubier 3/18/2014 10:53:00" } }

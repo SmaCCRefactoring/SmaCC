@@ -1,3 +1,3 @@
 private
 maxSubNodesInMethod
-	^ 20
+	^ 30

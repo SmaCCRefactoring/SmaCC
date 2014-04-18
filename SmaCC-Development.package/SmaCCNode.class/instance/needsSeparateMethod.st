@@ -1,3 +1,3 @@
 compiling
 needsSeparateMethod
-	^ self allStates size > self maxSubNodesInMethod
+	^ self transitions size > self maxSubNodesInMethod

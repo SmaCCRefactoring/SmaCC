@@ -1,18 +1,18 @@
 {
 	"class" : {
-		"characters:" : "ThierryGoubier 2/20/2014 10:45:25",
-		"sortedCharactersFor:" : "ThierryGoubier 2/20/2014 10:45:25" },
+		"characters:" : "ThierryGoubier 3/18/2014 10:53:00",
+		"sortedCharactersFor:" : "ThierryGoubier 3/18/2014 10:53:00" },
 	"instance" : {
-		"asNFAStartingWith:" : "ThierryGoubier 2/20/2014 10:45:25",
-		"assignCharacters:" : "ThierryGoubier 2/20/2014 10:45:25",
-		"canMergeWith:" : "ThierryGoubier 2/20/2014 10:45:25",
-		"characters" : "ThierryGoubier 2/20/2014 10:45:25",
-		"characters:" : "ThierryGoubier 2/20/2014 10:45:25",
-		"initialize" : "ThierryGoubier 2/20/2014 10:45:25",
-		"makeCaseInsensitive" : "ThierryGoubier 2/20/2014 10:45:25",
-		"matchingCharacters" : "ThierryGoubier 2/20/2014 10:45:25",
-		"possibleMatchesDo:on:" : "ThierryGoubier 2/20/2014 10:45:25",
-		"possibleMatchesSize" : "ThierryGoubier 2/20/2014 10:45:25",
-		"printCharacter:on:" : "ThierryGoubier 2/20/2014 10:45:25",
-		"printOn:" : "ThierryGoubier 2/20/2014 10:45:25",
-		"|" : "ThierryGoubier 2/20/2014 10:45:25" } }
+		"asNFAStartingWith:" : "ThierryGoubier 3/18/2014 10:53:00",
+		"assignCharacters:" : "ThierryGoubier 3/18/2014 10:53:00",
+		"canMergeWith:" : "ThierryGoubier 3/18/2014 10:53:00",
+		"characters" : "ThierryGoubier 3/18/2014 10:53:00",
+		"characters:" : "ThierryGoubier 3/18/2014 10:53:00",
+		"initialize" : "ThierryGoubier 3/18/2014 10:53:00",
+		"makeCaseInsensitive" : "ThierryGoubier 3/18/2014 10:53:00",
+		"matchingCharacters" : "ThierryGoubier 3/18/2014 10:53:00",
+		"possibleMatchesDo:on:" : "ThierryGoubier 3/18/2014 10:53:00",
+		"possibleMatchesSize" : "ThierryGoubier 3/18/2014 10:53:00",
+		"printCharacter:on:" : "ThierryGoubier 3/18/2014 10:53:00",
+		"printOn:" : "ThierryGoubier 3/18/2014 10:53:00",
+		"|" : "ThierryGoubier 3/18/2014 10:53:00" } }
