@@ -1,11 +1,23 @@
 generated
 scan13
 	[ 
-	self recordMatch: #(79).
 	self step.
-	currentCharacter = $.
-		ifTrue: [ ^ self scan11 ].
-	currentCharacter isDigit ] whileTrue.
-	('Ee' includes: currentCharacter)
-		ifTrue: [ ^ self scan12 ].
-	^ self reportLastMatch
+	currentCharacter = $'
+		ifTrue: [ 
+			2
+				timesRepeat: [ 
+					self step.
+					currentCharacter = $'
+						ifFalse: [ 
+							currentCharacter = $\
+								ifTrue: [ ^ self scan14 ].
+							^ self scan13 ] ].
+			[ 
+			self recordMatch: #(78).
+			self step.
+			currentCharacter = $' ] whileTrue.
+			currentCharacter = $\
+				ifTrue: [ ^ self scan14 ].
+			^ self scan13 ].
+	currentCharacter = $\
+		ifTrue: [ ^ self scan14 ] ] repeat

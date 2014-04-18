@@ -36,6 +36,24 @@ definitionComment
 #All number literals
 <number> : <longinteger> | <integer> | <floatnumber> | <imagnumber> ;
 
+#Modes
+<cr>	: \r | \n | \r\n ;
+lineBegin <emptyLine> : \s* <cr> ;
+lineBegin <indent> : [ \t]* ;
+
+lineJoining <whitespace> : \s* ; # \s includes \n, \r and \f.
+
+line <whitespace> : [ \t]+ | \\<cr>;
+
+line <NEWLINE> : <cr> ;
+
+<lparen>			: \(;
+<rparen>			: \);
+<lbrack>			: \[;
+<rbrack>			: \];
+<lcurly>			: \{;
+<rcurly>			: \};
+
 
 %id <INDENT> <DEDENT> <NEWLINE> ;
 
