@@ -1,3 +1,4 @@
-(name 'SmaCC-CSharp-ThierryGoubier.3' message 'Regenerated' id '96612c5d-b262-4171-b75a-61fd56ba1236' date '18 March 2014' time '12:44:54.12615 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-CSharp-ThierryGoubier.2' message 'Regenerated, but not tested (not yet :) )
+(name 'SmaCC-CSharp-ThierryGoubier.4' message 'Regenerated with new version of the code generator' id 'bf1a1003-e81e-4cae-9c24-53dfd3e850a0' date '19 April 2014' time '10:27:52.086232 am' author 'ThierryGoubier' ancestors ((name 'SmaCC-CSharp-ThierryGoubier.3' message 'Regenerated
+' id '7706f236-ac17-5052-ad83-9c367bb12092' date '18 March 2014' time '12:44:58 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-CSharp-ThierryGoubier.2' message 'Regenerated, but not tested (not yet :) )
 ' id '84a0181d-bfd9-5b51-a79e-3e59d62af1ab' date '13 February 2014' time '10:12:02 am' author 'ThierryGoubier' ancestors ((name 'SmaCC-CSharp-ThierryGoubier.1' message 'SmaCC CSharp ported from Dolphin SmaCC 2.0.3
-' id '0cc960ce-719e-5feb-b057-9c5e2b88c85f' date '27 January 2014' time '4:39:41 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())) stepChildren ())
+' id '0cc960ce-719e-5feb-b057-9c5e2b88c85f' date '27 January 2014' time '4:39:41 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())

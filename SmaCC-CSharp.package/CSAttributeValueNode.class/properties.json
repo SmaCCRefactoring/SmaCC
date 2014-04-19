@@ -8,9 +8,9 @@
 	"instvars" : [
 		"_name",
 		"leftParen",
+		"rightParen",
 		"arguments",
-		"commas",
-		"rightParen" ],
+		"commas" ],
 	"name" : "CSAttributeValueNode",
 	"pools" : [
 		 ],
