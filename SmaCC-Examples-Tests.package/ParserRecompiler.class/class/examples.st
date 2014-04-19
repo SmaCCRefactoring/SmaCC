@@ -4,4 +4,4 @@ examples
 	#(#CParser #JavaParser #StParser #CSharpParser)
 		do: [ :each | 
 			class := Smalltalk classNamed: each.
-			(self buildScanner: class scannerClass andParser: class) compileChanges ]
+			self buildScanner: class scannerClass andParser: class ]
