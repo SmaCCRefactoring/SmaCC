@@ -1,3 +1,0 @@
-private
-whitenewline
-	^ super whitespace

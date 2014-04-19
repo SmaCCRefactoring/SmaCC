@@ -1,3 +1,3 @@
 generated
 startingStateForfile_input
-	^ 3
+	^ 2

@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"lineJoiningStack",
+		"indentStack",
+		"tokenStack" ],
 	"name" : "PythonScanner2",
 	"pools" : [
 		 ],

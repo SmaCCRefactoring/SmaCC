@@ -18,7 +18,7 @@ definitionComment
 <string> : <stringprefix>?(<shortstring> | <longstring>);
 
 # Integer literals
-<decimalinteger> :  [1-9] [0-9]* | 0 ;
+<decimalinteger> :  [1-9] [0-9]* | 0 ; 
 <octinteger> :  0 (o | O) [0-7]+ | 0 [0-7]+;
 <hexinteger> :  0 (x | X) [0-9a-fA-F]+;
 <bininteger> :  0 (b | B) [01]+;
@@ -26,12 +26,12 @@ definitionComment
 <longinteger> : <integer> (l | L) ;
 
 #Float literals
-<pointfloat> :  [0-9]+ \. [0-9]* ; #Is that true that one can write 0000. ?
+<pointfloat> :  [0-9]+ \. [0-9]* ; #Is that true that one can write 0000. ? Yes.
 <exponentfloat> :  ([0-9]+ | <pointfloat>) (e | E) (\+|\-)? [0-9]+ ;
 <floatnumber> :  <pointfloat> | <exponentfloat> ;
 
 #Imaginary literals
-<imagnumber> : (<floatnumber> | [0-9]+) ; #Is that true that one can write 0000j ?
+<imagnumber> : (<floatnumber> | [0-9]+) ; #Is that true that one can write 0000j ? Yes.
 
 #All number literals
 <number> : <longinteger> | <integer> | <floatnumber> | <imagnumber> ;
@@ -39,20 +39,22 @@ definitionComment
 #Modes
 <cr>	: \r | \n | \r\n ;
 lineBegin <emptyLine> : \s* <cr> ;
-lineBegin <indent> : [ \t]* ;
+lineBegin <indent> : [ \t\f]* ;
+lineBegin <noindent>  : \S ;
 
 <whitespace> : [ \t]+ | \\<cr>;
 
 <NEWLINE> : <cr> ;
 
-<lparen> : \(;
-<rparen> : \);
-<lbrack>	 : \[;
-<rbrack> : \];
-<lcurly> : \{;
-<rcurly>	: \};
 
-%id <INDENT> <DEDENT> <NEWLINE> ;
+<lparen> : \( ;
+<rparen> : \) ;
+<lbrack>	 : \[ ;
+<rbrack> : \] ;
+<lcurly> : \{ ;
+<rcurly>	: \} ;
+
+%id <INDENT> <DEDENT> <NEWLINE> <lbrack> <lcurly> <lparen> <rbrack> <rcurly> <rparen> ;
 
 # Grammar for Python
 
@@ -71,11 +73,11 @@ lineBegin <indent> : [ \t]* ;
 #       file_input is a module or sequence of commands read from an input file;
 #       eval_input is the input for the eval() and input() functions.
 # NB: compound_stmt in single_input is followed by extra <NEWLINE>!
-%start single_input file_input eval_input ;
+%start file_input single_input eval_input ;
 
 single_input: <NEWLINE> | simple_stmt | compound_stmt <NEWLINE> ;
-file_input: (<NEWLINE> | stmt)* <ENDMARKER> ;
-eval_input: testlist <NEWLINE>* <ENDMARKER> ;
+file_input: (<NEWLINE> | stmt)* ;
+eval_input: testlist <NEWLINE>* ;
 
 decorator: ""@"" dotted_name [ <lparen> [arglist] <rparen> ] <NEWLINE> ;
 decorators: decorator+ ;
@@ -83,7 +85,7 @@ decorated: decorators (classdef | funcdef) ;
 funcdef: ""def"" <name> parameters "":"" suite ;
 parameters: <lparen> [varargslist] <rparen> ;
 varargslist: (fpdef [""="" test] "","")* 
-              (""*"" <name> ["","" ""**"" <name>] | ""**"" <name> |
+              (""*"" <name> ["","" ""**"" <name>] | ""**"" <name> 
               fpdef [""="" test] ["",""]) ;
 fpdef: <name> | <lparen> fplist <rparen> ;
 fplist: fpdef ("","" fpdef)* "",""? ;
