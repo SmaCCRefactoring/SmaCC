@@ -1,7 +1,7 @@
 accessing
 makeRepeatSymbolFor: aSmaCCSymbol
 	| symbol |
-	symbol := self nonTerminalSymbolNamed: 'Repeat: ' , aSmaCCSymbol printString.
+	symbol := self nonTerminalSymbolNamed: aSmaCCSymbol printString, '*'.
 	symbol isEmpty
 		ifTrue: [ 
 			symbol

@@ -1,7 +1,7 @@
 accessing
 makeOptionalSymbolFor: aSmaCCSymbol
 	| symbol |
-	symbol := self nonTerminalSymbolNamed: 'Optional: ' , aSmaCCSymbol printString.
+	symbol := self nonTerminalSymbolNamed: aSmaCCSymbol printString, '?'.
 	symbol isEmpty
 		ifTrue: [ 
 			symbol
