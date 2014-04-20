@@ -1,4 +1,3 @@
 actions
 parseAndExplore
-	^self
-			parseAndEvaluate: [:each | each explore]
+	^ self parseAndEvaluate: [ :each | each explore ]
