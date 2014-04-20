@@ -75,8 +75,8 @@ lineBegin <noindent>  : \S ;
 # NB: compound_stmt in single_input is followed by extra <NEWLINE>!
 %start file_input single_input eval_input ;
 
-single_input: <NEWLINE> | simple_stmt | compound_stmt <NEWLINE> ;
 file_input: (<NEWLINE> | stmt)* ;
+single_input: <NEWLINE> | simple_stmt | compound_stmt <NEWLINE> ;
 eval_input: testlist <NEWLINE>* ;
 
 decorator: ""@"" dotted_name [ <lparen> [arglist] <rparen> ] <NEWLINE> ;
