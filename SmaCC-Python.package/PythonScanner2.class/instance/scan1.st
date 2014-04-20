@@ -32,9 +32,9 @@ scan1
 	currentCharacter = $.
 		ifTrue: [ ^ self scan25 ].
 	currentCharacter = $/
-		ifTrue: [ ^ self scan26 ].
+		ifTrue: [ ^ self scan28 ].
 	currentCharacter = $0
-		ifTrue: [ ^ self scan27 ].
+		ifTrue: [ ^ self scan29 ].
 	currentCharacter = $:
 		ifTrue: [ ^ self scan32 ].
 	currentCharacter = $;

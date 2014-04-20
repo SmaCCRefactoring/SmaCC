@@ -6,12 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"lineJoiningStack",
-		"indentStack",
-		"tokenStack",
-		"lastLineStart" ],
-	"name" : "PythonScanner2",
+		 ],
+	"name" : "PythonParserTests",
 	"pools" : [
 		 ],
-	"super" : "SmaCCScanner",
+	"super" : "TestCase",
 	"type" : "normal" }

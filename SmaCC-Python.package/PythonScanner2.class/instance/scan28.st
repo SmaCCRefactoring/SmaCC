@@ -1,9 +1,14 @@
 generated
 scan28
-	[ 
-	self recordMatch: #(73).
+	self recordMatch: #(50).
 	self step.
-	currentCharacter isDigit ] whileTrue.
-	('Ee' includes: currentCharacter)
-		ifTrue: [ ^ self scan29 ].
+	currentCharacter = $/
+		ifTrue: [ 
+			self recordMatch: #(48).
+			self step.
+			currentCharacter = $=
+				ifTrue: [ ^ self recordAndReportMatch: #(6) ].
+			^ self reportLastMatch ].
+	currentCharacter = $=
+		ifTrue: [ ^ self recordAndReportMatch: #(30) ].
 	^ self reportLastMatch

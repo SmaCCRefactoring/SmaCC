@@ -6,5 +6,6 @@ NEWLINE
 		ifTrue: [ 
 			matchActions := Array with: self NEWLINEId.
 			self state: #lineBegin.
+			lastLineStart := self position.
 			^ self createTokenFor: '<cr>' ]
 		ifFalse: [ ^ self whitespace ]

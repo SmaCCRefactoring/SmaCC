@@ -4,4 +4,11 @@ noindent
 
 	self state: #default.
 	stream position: start.
+	lastLineStart = start
+		ifTrue: [ 
+			[ self indentStack last > 0 ]
+				whileTrue: [ 
+					matchActions := Array with: self DEDENTId.
+					self tokenStack add: (self createTokenFor: 'Dedent').
+					self indentStack removeLast ] ].
 	^ self next

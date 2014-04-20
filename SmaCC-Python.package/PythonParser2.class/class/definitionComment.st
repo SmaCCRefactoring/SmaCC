@@ -1,6 +1,7 @@
 generated
 definitionComment
 "# Python Grammar and Lexer extracted from Python2 documentation on 16/04/2014 (Python 2.7.6)
+# As seen from this grammar, the python doc and the implemented python scanner/parser diverge in several places
 # https://docs.python.org/2/reference/index.html
 
 #Identifiers
@@ -26,7 +27,7 @@ definitionComment
 <longinteger> : <integer> (l | L) ;
 
 #Float literals
-<pointfloat> :  [0-9]+ \. [0-9]* ; #Is that true that one can write 0000. ? Yes.
+<pointfloat> :  ([0-9]+ \. [0-9]*) | (\. [0-9]+) ; #Is that true that one can write 0000. ? Yes. Oh, and .50 is accepted in Python, not in the doc of Python.
 <exponentfloat> :  ([0-9]+ | <pointfloat>) (e | E) (\+|\-)? [0-9]+ ;
 <floatnumber> :  <pointfloat> | <exponentfloat> ;
 

@@ -4,10 +4,10 @@ scan31
 	self recordMatch: #(73).
 	self step.
 	currentCharacter = $.
-		ifTrue: [ ^ self scan28 ].
+		ifTrue: [ ^ self scan26 ].
 	currentCharacter isDigit ] whileTrue.
 	('Ee' includes: currentCharacter)
-		ifTrue: [ ^ self scan29 ].
+		ifTrue: [ ^ self scan27 ].
 	('Ll' includes: currentCharacter)
 		ifTrue: [ ^ self recordAndReportMatch: #(73) ].
 	^ self reportLastMatch
