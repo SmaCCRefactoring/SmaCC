@@ -1,20 +1,9 @@
 generated
 scan28
+	[ 
+	self recordMatch: #(73).
 	self step.
-	currentCharacter isDigit
-		ifTrue: [ 
-			[ 
-			self recordMatch: #(73).
-			self step.
-			currentCharacter isDigit ] whileTrue.
-			^ self reportLastMatch ].
-	('+-' includes: currentCharacter)
-		ifTrue: [ 
-			self step.
-			currentCharacter isDigit
-				ifTrue: [ 
-					[ 
-					self recordMatch: #(73).
-					self step.
-					currentCharacter isDigit ] whileTrue ] ].
+	currentCharacter isDigit ] whileTrue.
+	('Ee' includes: currentCharacter)
+		ifTrue: [ ^ self scan29 ].
 	^ self reportLastMatch

@@ -1,3 +1,4 @@
 generated
 scan18
-	^ self recordAndReportMatch: #(79)
+	self step.
+	^ self scan17

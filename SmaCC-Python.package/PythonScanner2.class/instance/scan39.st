@@ -5,8 +5,14 @@ scan39
 	currentCharacter = $"
 		ifTrue: [ ^ self scan6 ].
 	currentCharacter = $'
-		ifTrue: [ ^ self scan13 ].
+		ifTrue: [ ^ self scan14 ].
+	('Rr' includes: currentCharacter)
+		ifTrue: [ ^ self scan40 ].
 	((currentCharacter between: $0 and: $9)
-		or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ])
-		ifTrue: [ ^ self scan37 ].
+		or: [ 
+			(currentCharacter between: $A and: $Q)
+				or: [ 
+					(currentCharacter between: $S and: $Z)
+						or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $q) or: [ currentCharacter between: $s and: $z ] ] ] ] ])
+		ifTrue: [ ^ self scan38 ].
 	^ self reportLastMatch

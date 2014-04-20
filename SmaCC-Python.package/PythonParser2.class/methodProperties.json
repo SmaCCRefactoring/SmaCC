@@ -1,14 +1,14 @@
 {
 	"class" : {
-		"definitionComment" : "ThierryGoubier 4/20/2014 11:22",
+		"definitionComment" : "ThierryGoubier 4/20/2014 17:57",
 		"scannerClass" : "ThierryGoubier 4/16/2014 12:03",
 		"startingStateForeval_input" : "ThierryGoubier 4/18/2014 21:32",
-		"startingStateForfile_input" : "ThierryGoubier 4/20/2014 11:22",
+		"startingStateForfile_input" : "ThierryGoubier 4/20/2014 17:57",
 		"startingStateForsingle_input" : "ThierryGoubier 4/20/2014 00:04" },
 	"instance" : {
-		"reduceActionForGroup____________________1:" : "ThierryGoubier 4/16/2014 12:03",
-		"reduceActionForRepeat_Multiple___string_1:" : "ThierryGoubier 4/16/2014 12:03",
-		"reduceActionForRepeat__Group______NEWLINE____stmt1:" : "ThierryGoubier 4/18/2014 21:32",
-		"reduceActionForRepeat__Group______NEWLINE____stmt2:" : "ThierryGoubier 4/20/2014 11:22",
-		"reduceTable" : "ThierryGoubier 4/20/2014 11:22",
-		"transitionTable" : "ThierryGoubier 4/20/2014 11:22" } }
+		"reduceActionFor_____NEWLINE____stmt__1:" : "ThierryGoubier 4/20/2014 15:33",
+		"reduceActionFor_____NEWLINE____stmt__2:" : "ThierryGoubier 4/20/2014 15:33",
+		"reduceActionFor____________________1:" : "ThierryGoubier 4/20/2014 15:33",
+		"reduceActionFor_string__1:" : "ThierryGoubier 4/20/2014 15:33",
+		"reduceTable" : "ThierryGoubier 4/20/2014 17:51",
+		"transitionTable" : "ThierryGoubier 4/20/2014 17:51" } }

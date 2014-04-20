@@ -28,4 +28,4 @@ indent
 			self indentStack removeLast ].
 	count = self indentStack last
 		ifFalse: [ ^ self scannerError ].	"A bit crude, but shows an indentation error."
-	^ self tokenStack removeFirst
+	^ self next

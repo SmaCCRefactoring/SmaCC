@@ -9,100 +9,102 @@ scan1
 		ifTrue: [ ^ self scan5 ].
 	currentCharacter = $"
 		ifTrue: [ ^ self scan6 ].
-	currentCharacter = $%
+	currentCharacter = $#
 		ifTrue: [ ^ self scan11 ].
-	currentCharacter = $&
+	currentCharacter = $%
 		ifTrue: [ ^ self scan12 ].
-	currentCharacter = $'
+	currentCharacter = $&
 		ifTrue: [ ^ self scan13 ].
+	currentCharacter = $'
+		ifTrue: [ ^ self scan14 ].
 	currentCharacter = $(
-		ifTrue: [ ^ self scan18 ].
-	currentCharacter = $)
 		ifTrue: [ ^ self scan19 ].
-	currentCharacter = $*
+	currentCharacter = $)
 		ifTrue: [ ^ self scan20 ].
-	currentCharacter = $+
+	currentCharacter = $*
 		ifTrue: [ ^ self scan21 ].
-	currentCharacter = $,
+	currentCharacter = $+
 		ifTrue: [ ^ self scan22 ].
-	currentCharacter = $-
+	currentCharacter = $,
 		ifTrue: [ ^ self scan23 ].
-	currentCharacter = $.
+	currentCharacter = $-
 		ifTrue: [ ^ self scan24 ].
-	currentCharacter = $/
+	currentCharacter = $.
 		ifTrue: [ ^ self scan25 ].
-	currentCharacter = $0
+	currentCharacter = $/
 		ifTrue: [ ^ self scan26 ].
+	currentCharacter = $0
+		ifTrue: [ ^ self scan27 ].
 	currentCharacter = $:
-		ifTrue: [ ^ self scan31 ].
-	currentCharacter = $;
 		ifTrue: [ ^ self scan32 ].
-	currentCharacter = $<
+	currentCharacter = $;
 		ifTrue: [ ^ self scan33 ].
-	currentCharacter = $=
+	currentCharacter = $<
 		ifTrue: [ ^ self scan34 ].
-	currentCharacter = $>
+	currentCharacter = $=
 		ifTrue: [ ^ self scan35 ].
-	currentCharacter = $@
+	currentCharacter = $>
 		ifTrue: [ ^ self scan36 ].
+	currentCharacter = $@
+		ifTrue: [ ^ self scan37 ].
 	currentCharacter = $R
-		ifTrue: [ ^ self scan39 ].
-	currentCharacter = $[
 		ifTrue: [ ^ self scan40 ].
-	currentCharacter = $\
+	currentCharacter = $[
 		ifTrue: [ ^ self scan41 ].
-	currentCharacter = $]
+	currentCharacter = $\
 		ifTrue: [ ^ self scan42 ].
-	currentCharacter = $^
+	currentCharacter = $]
 		ifTrue: [ ^ self scan43 ].
-	currentCharacter = $`
+	currentCharacter = $^
 		ifTrue: [ ^ self scan44 ].
-	currentCharacter = $a
+	currentCharacter = $`
 		ifTrue: [ ^ self scan45 ].
-	currentCharacter = $b
+	currentCharacter = $a
 		ifTrue: [ ^ self scan46 ].
-	currentCharacter = $c
+	currentCharacter = $b
 		ifTrue: [ ^ self scan47 ].
-	currentCharacter = $d
+	currentCharacter = $c
 		ifTrue: [ ^ self scan48 ].
-	currentCharacter = $e
+	currentCharacter = $d
 		ifTrue: [ ^ self scan49 ].
-	currentCharacter = $f
+	currentCharacter = $e
 		ifTrue: [ ^ self scan50 ].
-	currentCharacter = $g
+	currentCharacter = $f
 		ifTrue: [ ^ self scan51 ].
-	currentCharacter = $i
+	currentCharacter = $g
 		ifTrue: [ ^ self scan52 ].
-	currentCharacter = $l
+	currentCharacter = $i
 		ifTrue: [ ^ self scan53 ].
-	currentCharacter = $n
+	currentCharacter = $l
 		ifTrue: [ ^ self scan54 ].
-	currentCharacter = $o
+	currentCharacter = $n
 		ifTrue: [ ^ self scan55 ].
-	currentCharacter = $p
+	currentCharacter = $o
 		ifTrue: [ ^ self scan56 ].
-	currentCharacter = $r
+	currentCharacter = $p
 		ifTrue: [ ^ self scan57 ].
-	currentCharacter = $t
+	currentCharacter = $r
 		ifTrue: [ ^ self scan58 ].
-	currentCharacter = $w
+	currentCharacter = $t
 		ifTrue: [ ^ self scan59 ].
-	currentCharacter = $y
+	currentCharacter = $w
 		ifTrue: [ ^ self scan60 ].
-	currentCharacter = ${
+	currentCharacter = $y
 		ifTrue: [ ^ self scan61 ].
-	currentCharacter = $|
+	currentCharacter = ${
 		ifTrue: [ ^ self scan62 ].
-	currentCharacter = $}
+	currentCharacter = $|
 		ifTrue: [ ^ self scan63 ].
-	currentCharacter = $~
+	currentCharacter = $}
 		ifTrue: [ ^ self scan64 ].
+	currentCharacter = $~
+		ifTrue: [ ^ self scan65 ].
 	currentCharacter isDigit
-		ifTrue: [ ^ self scan30 ].
+		ifTrue: [ ^ self scan31 ].
 	(currentCharacter = Character tab or: [ currentCharacter = Character space ])
 		ifTrue: [ ^ self scan2 ].
 	('BUu' includes: currentCharacter)
-		ifTrue: [ ^ self scan38 ].
+		ifTrue: [ ^ self scan39 ].
 	currentCharacter isSafeForHTTP
-		ifTrue: [ ^ self scan37 ].
+		ifTrue: [ ^ self scan38 ].
 	^ self reportLastMatch

@@ -1,7 +1,8 @@
 generated
-scan67
-	self recordMatch: #(75).
+scan68
+	[ 
 	self step.
 	currentCharacter = Character lf
 		ifTrue: [ ^ self recordAndReportMatch: #(75) ].
-	^ self reportLastMatch
+	currentCharacter = Character cr
+		ifTrue: [ ^ self scan67 ] ] repeat

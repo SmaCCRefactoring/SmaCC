@@ -38,10 +38,11 @@ definitionComment
 
 #Modes
 <cr>	: \r | \n | \r\n ;
-lineBegin <emptyLine> : \s* <cr> ;
-lineBegin <indent> : [ \t\f]* ;
-lineBegin <noindent>  : \S ;
-
+lineBegin <emptyLine> : <cr> ;
+lineBegin <blankLine> : [ \t\f]* (\# [^\r\n]* )? <cr> ;
+lineBegin <indent> : [ \t\f]+ ;
+lineBegin <noindent>  : [^ \t\f\#] ;
+<comment> : \#[^\r\n]* ;
 <whitespace> : [ \t]+ | \\<cr>;
 
 <NEWLINE> : <cr> ;
@@ -85,10 +86,10 @@ decorated: decorators (classdef | funcdef) ;
 funcdef: ""def"" <name> parameters "":"" suite ;
 parameters: <lparen> [varargslist] <rparen> ;
 varargslist: (fpdef [""="" test] "","")* 
-              (""*"" <name> ["","" ""**"" <name>] | ""**"" <name> 
-              fpdef [""="" test] ["",""]) ;
+              ((""*"" <name> ["","" ""**"" <name>]) | (""**"" <name>) 
+              | (fpdef [""="" test] ["",""])) ;
 fpdef: <name> | <lparen> fplist <rparen> ;
-fplist: fpdef ("","" fpdef)* "",""? ;
+fplist: fpdef ("","" fpdef)* ["",""] ;
 
 stmt: simple_stmt | compound_stmt ;
 simple_stmt: small_stmt ("";"" small_stmt)* ["";""] <NEWLINE> ;
@@ -111,8 +112,8 @@ yield_stmt: yield_expr ;
 raise_stmt: ""raise"" [test ["","" test ["","" test]]] ;
 import_stmt: import_name | import_from ;
 import_name: ""import"" dotted_as_names ;
-import_from: (""from"" (dotted_name | "".""+ dotted_name?)
-              ""import"" (""*"" | <lparen> import_as_names <rparen> | import_as_names)) ;
+import_from: (""from"" (dotted_name | ("".""+ dotted_name?))
+              ""import"" (""*"" | (<lparen> import_as_names <rparen>) | import_as_names)) ;
 import_as_name: <name> [""as"" <name>] ;
 dotted_as_name: dotted_name [""as"" <name>] ;
 import_as_names: import_as_name ("","" import_as_name)* ["",""] ;
@@ -127,15 +128,15 @@ if_stmt: ""if"" test "":"" suite (""elif"" test "":"" suite)* [""else"" "":"" su
 while_stmt: ""while"" test "":"" suite [""else"" "":"" suite] ;
 for_stmt: ""for"" exprlist ""in"" testlist "":"" suite [""else"" "":"" suite] ;
 try_stmt: (""try"" "":"" suite
-           ((except_clause "":"" suite)+
+           (((except_clause "":"" suite)+
             [""else"" "":"" suite]
-            [""finally"" "":"" suite] |
-           ""finally"" "":"" suite)) ;
+            [""finally"" "":"" suite]) |
+           (""finally"" "":"" suite))) ;
 with_stmt: ""with"" with_item ("","" with_item)*  "":"" suite ;
 with_item: test [""as"" expr] ;
 # NB compile.c makes sure that the default except clause is last
 except_clause: ""except"" [test [(""as"" | "","") test]] ;
-suite: simple_stmt | <NEWLINE> <INDENT> stmt+ <DEDENT> ;
+suite: simple_stmt | (<NEWLINE> <INDENT> stmt+ <DEDENT>) ;
 
 # Backward compatibility cruft to support:
 # [ x for x in lambda: True, lambda: False if x() ]
@@ -146,12 +147,12 @@ testlist_safe: old_test [("","" old_test)+ ["",""]] ;
 old_test: or_test | old_lambdef ;
 old_lambdef: ""lambda"" [varargslist] "":"" old_test ;
 
-test: or_test [""if"" or_test ""else"" test] | lambdef ;
+test: (or_test [""if"" or_test ""else"" test]) | lambdef ;
 or_test: and_test (""or"" and_test)* ;
 and_test: not_test (""and"" not_test)* ;
-not_test: ""not"" not_test | comparison ;
+not_test: (""not"" not_test) | comparison ;
 comparison: expr (comp_op expr)* ;
-comp_op: ""<""|"">""|""==""|"">=""|""<=""|""<>""|""!=""|""in""|""not"" ""in""|""is""|""is"" ""not"" ;
+comp_op: ""<""|"">""|""==""|"">=""|""<=""|""<>""|""!=""|""in""|(""not"" ""in"")|""is""|(""is"" ""not"") ;
 expr: xor_expr (""|"" xor_expr)* ;
 xor_expr: and_expr (""^"" and_expr)* ;
 and_expr: shift_expr (""&"" shift_expr)* ;
@@ -160,13 +161,13 @@ arith_expr: term ((""+""|""-"") term)* ;
 term: factor ((""*""|""/""|""%""|""//"") factor)* ;
 factor: (""+""|""-""|""~"") factor | power ;
 power: atom trailer* [""**"" factor] ;
-atom: (<lparen> [yield_expr|testlist_comp] <rparen> |
-       <lbrack> [listmaker] <rbrack> |
-       <lcurly> [dictorsetmaker] <rcurly> |
-       ""`"" testlist1 ""`"" |
+atom: ((<lparen> [yield_expr|testlist_comp] <rparen>) |
+       (<lbrack> [listmaker] <rbrack>) |
+       (<lcurly> [dictorsetmaker] <rcurly>) |
+       (""`"" testlist1 ""`"") |
        <name> | <number> | <string>+) ;
-listmaker: test ( list_for | ("","" test)* ["",""] ) ;
-testlist_comp: test ( comp_for | ("","" test)* ["",""] ) ;
+listmaker: test ( list_for | (("","" test)* ["",""]) ) ;
+testlist_comp: test ( comp_for | (("","" test)* ["",""]) ) ;
 lambdef: ""lambda"" [varargslist] "":"" test ;
 trailer: <lparen> [arglist] <rparen> | <lbrack> subscriptlist <rbrack> | ""."" <name> ;
 subscriptlist: subscript ("","" subscript)* ["",""] ;
