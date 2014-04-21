@@ -20,5 +20,8 @@ statesToMakeIntoMethodsFor: aSmaCCNode
 			(each allTransitionsWith: selectedStates) > 300
 				ifTrue: [ 
 					selectedStates add: each.
-					selectedStates addAll: (each transitions collect: [ :e | e to ]) ] ].
+					each transitions
+						do: [ :t | 
+							(t to allTransitionsWith: selectedStates) > 5
+								ifTrue: [ selectedStates add: t to ] ] ] ].
 	^ selectedStates asSortedCollection: [ :a :b | a id < b id ]
