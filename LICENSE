@@ -24,7 +24,7 @@ And for the parts where SmaCC differs from the original :
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Thierry Goubier
+Copyright (c) 2014 Thierry Goubier (except for parts extracted from SmaCC for Pharo)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
