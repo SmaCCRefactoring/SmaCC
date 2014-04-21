@@ -85,40 +85,40 @@ decorator: ""@"" dotted_name [ <lparen> [arglist] <rparen> ] <NEWLINE> ;
 decorators: decorator+ ;
 decorated: decorators (classdef | funcdef) ;
 funcdef: ""def"" <name> parameters "":"" suite ;
-parameters: <lparen> [varargslist] <rparen> ;
+parameters: <lparen> varargslist? <rparen> ;
 varargslist: (fpdef [""="" test] "","")* 
-              (""*"" <name> ["","" ""**"" <name>]
+                   ( ""*"" <name> ["","" ""**"" <name>]
 		 | ""**"" <name> 
- 	          | fpdef [""="" test] ["",""] ) ;
+ 	          | fpdef [""="" test] "",""? ) ;
 fpdef: <name> | <lparen> fplist <rparen> ;
-fplist: fpdef ("","" fpdef)* ["",""] ;
+fplist: fpdef ( "","" fpdef )* "",""? ;
 
 stmt: simple_stmt | compound_stmt ;
-simple_stmt: small_stmt ("";"" small_stmt)* ["";""] <NEWLINE> ;
-small_stmt: (expr_stmt | print_stmt  | del_stmt | pass_stmt | flow_stmt |
-             import_stmt | global_stmt | exec_stmt | assert_stmt) ;
-expr_stmt: testlist (augassign (yield_expr|testlist) |
-                     (""="" (yield_expr|testlist))*) ;
-augassign: (""+="" | ""-="" | ""*="" | ""/="" | ""%="" | ""&="" | ""|="" | ""^="" |
-            ""<<="" | "">>="" | ""**="" | ""//="") ;
+simple_stmt: small_stmt ("";"" small_stmt)* "";""? <NEWLINE> ;
+small_stmt: expr_stmt | print_stmt  | del_stmt | pass_stmt | flow_stmt |
+             import_stmt | global_stmt | exec_stmt | assert_stmt ;
+expr_stmt: testlist ( augassign ( yield_expr | testlist ) |
+                     ( ""="" ( yield_expr|testlist ) )* ) ;
+augassign: ""+="" | ""-="" | ""*="" | ""/="" | ""%="" | ""&="" | ""|="" | ""^="" |
+            ""<<="" | "">>="" | ""**="" | ""//="" ;
 # For normal assignments, additional restrictions enforced by the interpreter
-print_stmt: ""print"" ( [ test ("","" test)* ["",""] ] |
-                      "">>"" test [ ("","" test)+ ["",""] ] ) ;
+print_stmt: ""print"" ( [ test ("","" test)* "",""? ] |
+                      "">>"" test [ ("","" test)+ "",""? ] ) ;
 del_stmt: ""del"" exprlist ;
 pass_stmt: ""pass"" ;
 flow_stmt: break_stmt | continue_stmt | return_stmt | raise_stmt | yield_stmt ;
 break_stmt: ""break"" ;
 continue_stmt: ""continue"" ;
-return_stmt: ""return"" [testlist] ;
+return_stmt: ""return"" testlist ? ;
 yield_stmt: yield_expr ;
-raise_stmt: ""raise"" [test ["","" test ["","" test]]] ;
+raise_stmt: ""raise"" [ test [ "","" test [ "","" test ] ] ] ;
 import_stmt: import_name | import_from ;
 import_name: ""import"" dotted_as_names ;
 import_from: ( ""from"" ( dotted_name | "".""+ dotted_name? )
               ""import"" ( ""*"" | <lparen> import_as_names <rparen> | import_as_names ) ) ;
 import_as_name: <name> [ ""as"" <name> ] ;
 dotted_as_name: dotted_name [ ""as"" <name> ] ;
-import_as_names: import_as_name ( "","" import_as_name )* [ "","" ] ;
+import_as_names: import_as_name ( "","" import_as_name )* "",""? ;
 dotted_as_names: dotted_as_name ( "","" dotted_as_name )* ;
 dotted_name: <name> ( ""."" <name> )* ;
 global_stmt: ""global"" <name> ( "","" <name> )* ;
@@ -145,61 +145,61 @@ suite: simple_stmt | <NEWLINE> <INDENT> stmt+ <DEDENT> ;
 # even while also allowing:
 # lambda x: 5 if x else 2
 # (But not a mix of the two)
-testlist_safe: old_test [("","" old_test)+ ["",""]] ;
+testlist_safe: old_test [ ( "","" old_test )+ "",""? ] ;
 old_test: or_test | old_lambdef ;
-old_lambdef: ""lambda"" [varargslist] "":"" old_test ;
+old_lambdef: ""lambda"" varargslist? "":"" old_test ;
 
-test: (or_test [""if"" or_test ""else"" test]) | lambdef ;
-or_test: and_test (""or"" and_test)* ;
-and_test: not_test (""and"" not_test)* ;
-not_test: (""not"" not_test) | comparison ;
-comparison: expr (comp_op expr)* ;
-comp_op: ""<""|"">""|""==""|"">=""|""<=""|""<>""|""!=""|""in""|(""not"" ""in"")|""is""|(""is"" ""not"") ;
+test: or_test [ ""if"" or_test ""else"" test ] | lambdef ;
+or_test: and_test ( ""or"" and_test )* ;
+and_test: not_test ( ""and"" not_test )* ;
+not_test: ""not"" not_test  | comparison ;
+comparison: expr ( comp_op expr )* ;
+comp_op: ""<"" | "">"" | ""=="" | "">="" | ""<="" | ""<>"" | ""!="" | ""in"" | ""not"" ""in"" | ""is"" | ""is"" ""not"" ;
 expr: xor_expr (""|"" xor_expr)* ;
 xor_expr: and_expr (""^"" and_expr)* ;
 and_expr: shift_expr (""&"" shift_expr)* ;
-shift_expr: arith_expr ((""<<""|"">>"") arith_expr)* ;
-arith_expr: term ((""+""|""-"") term)* ;
-term: factor ((""*""|""/""|""%""|""//"") factor)* ;
-factor: (""+""|""-""|""~"") factor | power ;
+shift_expr: arith_expr ( ( ""<<"" | "">>"" ) arith_expr)* ;
+arith_expr: term ( ( ""+"" | ""-"" ) term )* ;
+term: factor ( ( ""*"" | ""/"" | ""%"" | ""//"" ) factor)* ;
+factor: ( ""+"" | ""-"" | ""~"" ) factor | power ;
 power: atom trailer* [""**"" factor] ;
-atom: ((<lparen> [yield_expr|testlist_comp] <rparen>) |
-       (<lbrack> [listmaker] <rbrack>) |
-       (<lcurly> [dictorsetmaker] <rcurly>) |
-       (""`"" testlist1 ""`"") |
-       <name> | <number> | <string>+) ;
-listmaker: test ( list_for | (("","" test)* ["",""]) ) ;
-testlist_comp: test ( comp_for | (("","" test)* ["",""]) ) ;
-lambdef: ""lambda"" [varargslist] "":"" test ;
-trailer: <lparen> [arglist] <rparen> | <lbrack> subscriptlist <rbrack> | ""."" <name> ;
-subscriptlist: subscript ("","" subscript)* ["",""] ;
-subscript: ""."" ""."" ""."" | test | [test] "":"" [test] [sliceop] ;
-sliceop: "":"" [test] ;
-exprlist: expr ("","" expr)* ["",""] ;
-testlist: test ("","" test)* ["",""] ;
-dictorsetmaker: ( (test "":"" test (comp_for | ("","" test "":"" test)* ["",""])) |
-                  (test (comp_for | ("","" test)* ["",""])) ) ;
+atom: <lparen> [ yield_expr | testlist_comp ] <rparen> |
+       <lbrack> listmaker? <rbrack> |
+       <lcurly> dictorsetmaker? <rcurly> |
+       ""`"" testlist1 ""`"" |
+       <name> | <number> | <string>+ ;
+listmaker: test ( list_for | ( "","" test )* "",""? ) ;
+testlist_comp: test ( comp_for | ( "","" test )* "",""? ) ;
+lambdef: ""lambda"" varargslist? "":"" test ;
+trailer: <lparen> arglist? <rparen> | <lbrack> subscriptlist <rbrack> | ""."" <name> ;
+subscriptlist: subscript ("","" subscript)* "",""? ;
+subscript: ""."" ""."" ""."" | test | test? "":"" test? sliceop? ;
+sliceop: "":"" test? ;
+exprlist: expr ( "","" expr )* "",""? ;
+testlist: test ( "","" test )* "",""? ;
+dictorsetmaker: ( ( test "":"" test (comp_for | ("","" test "":"" test)* "",""? ) ) |
+                  (test (comp_for | ("","" test)* "",""? )) ) ;
 
-classdef: ""class"" <name> [<lparen> [testlist] <rparen>] "":"" suite ;
+classdef: ""class"" <name> [<lparen> testlist? <rparen>] "":"" suite ;
 
-arglist: (argument "","")* ( argument ["",""]
+arglist: (argument "","")* ( argument "",""?
                          | ""*"" test ("","" argument)* ["","" ""**"" test] 
                          | ""**"" test ) ;
 # The reason that keywords are test nodes instead of <name> is that using <name>
 # results in an ambiguity. ast.c makes sure it""s a <name>.
-argument: test [comp_for] | test ""="" test ;
+argument: test comp_for? | test ""="" test ;
 
 list_iter: list_for | list_if ;
-list_for: ""for"" exprlist ""in"" testlist_safe [list_iter] ;
-list_if: ""if"" old_test [list_iter] ;
+list_for: ""for"" exprlist ""in"" testlist_safe list_iter? ;
+list_if: ""if"" old_test list_iter? ;
 
 comp_iter: comp_for | comp_if ;
-comp_for: ""for"" exprlist ""in"" or_test [comp_iter] ;
-comp_if: ""if"" old_test [comp_iter] ;
+comp_for: ""for"" exprlist ""in"" or_test comp_iter? ;
+comp_if: ""if"" old_test comp_iter? ;
 
 testlist1: test ("","" test)* ;
 
 # not used in grammar, but may appear in ""node"" passed from Parser to Compiler
 #encoding_decl: <name> ;
 
-yield_expr: ""yield"" [testlist] ;"
+yield_expr: ""yield"" testlist? ;"
