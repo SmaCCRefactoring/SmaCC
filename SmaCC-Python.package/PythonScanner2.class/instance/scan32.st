@@ -1,3 +1,3 @@
 generated
 scan32
-	^ self recordAndReportMatch: #(21)
+	^ self recordAndReportMatch: #(26)

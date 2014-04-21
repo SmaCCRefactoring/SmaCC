@@ -1,3 +1,7 @@
 generated
 scan23
-	^ self recordAndReportMatch: #(19)
+	self recordMatch: #(13).
+	self step.
+	currentCharacter isDigit
+		ifTrue: [ ^ self scan24 ].
+	^ self reportLastMatch

@@ -1,20 +1,14 @@
 generated
 scan27
+	self recordMatch: #(50).
 	self step.
-	currentCharacter isDigit
+	currentCharacter = $/
 		ifTrue: [ 
-			[ 
-			self recordMatch: #(73).
+			self recordMatch: #(48).
 			self step.
-			currentCharacter isDigit ] whileTrue.
+			currentCharacter = $=
+				ifTrue: [ ^ self recordAndReportMatch: #(6) ].
 			^ self reportLastMatch ].
-	('+-' includes: currentCharacter)
-		ifTrue: [ 
-			self step.
-			currentCharacter isDigit
-				ifTrue: [ 
-					[ 
-					self recordMatch: #(73).
-					self step.
-					currentCharacter isDigit ] whileTrue ] ].
+	currentCharacter = $=
+		ifTrue: [ ^ self recordAndReportMatch: #(30) ].
 	^ self reportLastMatch

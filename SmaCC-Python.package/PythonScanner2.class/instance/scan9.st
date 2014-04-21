@@ -8,16 +8,9 @@ scan9
 				timesRepeat: [ 
 					self step.
 					currentCharacter = $"
-						ifFalse: [ 
-							currentCharacter = $\
-								ifTrue: [ ^ self scan10 ].
-							^ self scan9 ] ].
-			[ 
-			self recordMatch: #(72).
-			self step.
-			currentCharacter = $" ] whileTrue.
-			currentCharacter = $\
-				ifTrue: [ ^ self scan10 ].
-			^ self scan9 ].
+						ifFalse: [ ^ self scan9 ] ].
+			^ self recordAndReportMatch: #(72) ].
 	currentCharacter = $\
-		ifTrue: [ ^ self scan10 ] ] repeat
+		ifTrue: [ 
+			self step.
+			^ self scan9 ] ] repeat

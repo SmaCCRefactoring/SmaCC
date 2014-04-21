@@ -14,8 +14,8 @@ definitionComment
 		\' ( [^\\\n\r\'] | <escapeseq> )* \'
 		| \"" ( [^\\\n\r\""] | <escapeseq>)* \"";
 <longstring> :
-		\'\'\' ( [^\\] | <escapeseq> )* \'\'\'
-		| \""\""\"" ( [^\\] | <escapeseq> )* \""\""\"" ;
+		\'\'\' ( [^\\\'] | <escapeseq> | \'[^\'] | \'\'[^\'] )* \'\'\'
+		| \""\""\"" ( [^\\\""] | <escapeseq> | \""[^\""] | \""\""[^\""] )* \""\""\"" ;
 <string> : <stringprefix>?(<shortstring> | <longstring>);
 
 # Integer literals
@@ -32,7 +32,7 @@ definitionComment
 <floatnumber> :  <pointfloat> | <exponentfloat> ;
 
 #Imaginary literals
-<imagnumber> : (<floatnumber> | [0-9]+) ; #Is that true that one can write 0000j ? Yes.
+<imagnumber> : (<floatnumber> | [0-9]+) j ; #Is that true that one can write 0000j ? Yes.
 
 #All number literals
 <number> : <longinteger> | <integer> | <floatnumber> | <imagnumber> ;
