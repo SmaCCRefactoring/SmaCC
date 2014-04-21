@@ -2,14 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"DEDENTId" : "ThierryGoubier 4/20/2014 17:51",
-		"INDENTId" : "ThierryGoubier 4/20/2014 17:43",
+		"DEDENTId" : "ThierryGoubier 4/21/2014 15:34",
+		"INDENTId" : "ThierryGoubier 4/21/2014 15:34",
 		"NEWLINE" : "ThierryGoubier 4/20/2014 23:11",
 		"NEWLINEId" : "ThierryGoubier 4/20/2014 17:51",
 		"blankLine" : "ThierryGoubier 4/20/2014 23:12",
 		"emptyLine" : "ThierryGoubier 4/20/2014 23:12",
-		"emptySymbolTokenId" : "ThierryGoubier 4/20/2014 17:43",
-		"errorTokenId" : "ThierryGoubier 4/20/2014 17:43",
+		"emptySymbolTokenId" : "ThierryGoubier 4/21/2014 15:34",
+		"errorTokenId" : "ThierryGoubier 4/21/2014 15:34",
 		"indent" : "ThierryGoubier 4/20/2014 17:59",
 		"indentStack" : "ThierryGoubier 4/19/2014 16:57",
 		"initialize" : "ThierryGoubier 4/19/2014 23:35",
@@ -98,7 +98,7 @@
 		"scan8" : "ThierryGoubier 4/18/2014 19:59",
 		"scan9" : "ThierryGoubier 4/21/2014 10:24",
 		"scanForToken" : "ThierryGoubier 4/21/2014 10:28",
-		"scannerError" : "ThierryGoubier 4/20/2014 11:36",
+		"scannerError" : "ThierryGoubier 4/21/2014 15:02",
 		"tokenActions" : "ThierryGoubier 4/20/2014 17:51",
 		"tokenStack" : "ThierryGoubier 4/19/2014 13:01",
 		"tokenStack:" : "ThierryGoubier 4/19/2014 13:01" } }

@@ -87,8 +87,9 @@ decorated: decorators (classdef | funcdef) ;
 funcdef: ""def"" <name> parameters "":"" suite ;
 parameters: <lparen> [varargslist] <rparen> ;
 varargslist: (fpdef [""="" test] "","")* 
-              ((""*"" <name> ["","" ""**"" <name>]) | (""**"" <name>) 
-              | (fpdef [""="" test] ["",""])) ;
+              (""*"" <name> ["","" ""**"" <name>]
+		 | ""**"" <name> 
+ 	          | fpdef [""="" test] ["",""] ) ;
 fpdef: <name> | <lparen> fplist <rparen> ;
 fplist: fpdef ("","" fpdef)* ["",""] ;
 
@@ -113,31 +114,31 @@ yield_stmt: yield_expr ;
 raise_stmt: ""raise"" [test ["","" test ["","" test]]] ;
 import_stmt: import_name | import_from ;
 import_name: ""import"" dotted_as_names ;
-import_from: (""from"" (dotted_name | ("".""+ dotted_name?))
-              ""import"" (""*"" | (<lparen> import_as_names <rparen>) | import_as_names)) ;
-import_as_name: <name> [""as"" <name>] ;
-dotted_as_name: dotted_name [""as"" <name>] ;
-import_as_names: import_as_name ("","" import_as_name)* ["",""] ;
-dotted_as_names: dotted_as_name ("","" dotted_as_name)* ;
-dotted_name: <name> (""."" <name>)* ;
-global_stmt: ""global"" <name> ("","" <name>)* ;
-exec_stmt: ""exec"" expr [""in"" test ["","" test]] ;
-assert_stmt: ""assert"" test ["","" test] ;
+import_from: ( ""from"" ( dotted_name | "".""+ dotted_name? )
+              ""import"" ( ""*"" | <lparen> import_as_names <rparen> | import_as_names ) ) ;
+import_as_name: <name> [ ""as"" <name> ] ;
+dotted_as_name: dotted_name [ ""as"" <name> ] ;
+import_as_names: import_as_name ( "","" import_as_name )* [ "","" ] ;
+dotted_as_names: dotted_as_name ( "","" dotted_as_name )* ;
+dotted_name: <name> ( ""."" <name> )* ;
+global_stmt: ""global"" <name> ( "","" <name> )* ;
+exec_stmt: ""exec"" expr [ ""in"" test [ "","" test ] ] ;
+assert_stmt: ""assert"" test [ "","" test ] ;
 
 compound_stmt: if_stmt | while_stmt | for_stmt | try_stmt | with_stmt | funcdef | classdef | decorated ;
-if_stmt: ""if"" test "":"" suite (""elif"" test "":"" suite)* [""else"" "":"" suite] ;
-while_stmt: ""while"" test "":"" suite [""else"" "":"" suite] ;
-for_stmt: ""for"" exprlist ""in"" testlist "":"" suite [""else"" "":"" suite] ;
-try_stmt: (""try"" "":"" suite
-           (((except_clause "":"" suite)+
-            [""else"" "":"" suite]
-            [""finally"" "":"" suite]) |
-           (""finally"" "":"" suite))) ;
-with_stmt: ""with"" with_item ("","" with_item)*  "":"" suite ;
-with_item: test [""as"" expr] ;
+if_stmt: ""if"" test "":"" suite ( ""elif"" test "":"" suite )* [ ""else"" "":"" suite ] ;
+while_stmt: ""while"" test "":"" suite [ ""else"" "":"" suite ] ;
+for_stmt: ""for"" exprlist ""in"" testlist "":"" suite [ ""else"" "":"" suite ] ;
+try_stmt: ( ""try"" "":"" suite
+           ( ( except_clause "":"" suite )+
+            [ ""else"" "":"" suite ]
+            [ ""finally"" "":"" suite ] |
+           ""finally"" "":"" suite ) ) ;
+with_stmt: ""with"" with_item ( "","" with_item )*  "":"" suite ;
+with_item: test [ ""as"" expr ] ;
 # NB compile.c makes sure that the default except clause is last
-except_clause: ""except"" [test [(""as"" | "","") test]] ;
-suite: simple_stmt | (<NEWLINE> <INDENT> stmt+ <DEDENT>) ;
+except_clause: ""except"" [ test [ ( ""as"" | "","" ) test ] ] ;
+suite: simple_stmt | <NEWLINE> <INDENT> stmt+ <DEDENT> ;
 
 # Backward compatibility cruft to support:
 # [ x for x in lambda: True, lambda: False if x() ]
@@ -181,9 +182,9 @@ dictorsetmaker: ( (test "":"" test (comp_for | ("","" test "":"" test)* ["",""])
 
 classdef: ""class"" <name> [<lparen> [testlist] <rparen>] "":"" suite ;
 
-arglist: (argument "","")* (argument ["",""]
-                         |""*"" test ("","" argument)* ["","" ""**"" test] 
-                         |""**"" test) ;
+arglist: (argument "","")* ( argument ["",""]
+                         | ""*"" test ("","" argument)* ["","" ""**"" test] 
+                         | ""**"" test ) ;
 # The reason that keywords are test nodes instead of <name> is that using <name>
 # results in an ambiguity. ast.c makes sure it""s a <name>.
 argument: test [comp_for] | test ""="" test ;
