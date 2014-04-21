@@ -1,16 +1,7 @@
 generated
 scan33
-	self recordMatch: #(66).
+	self recordMatch: #(75).
 	self step.
-	currentCharacter = $<
-		ifTrue: [ 
-			self recordMatch: #(43).
-			self step.
-			currentCharacter = $=
-				ifTrue: [ ^ self recordAndReportMatch: #(16) ].
-			^ self reportLastMatch ].
-	currentCharacter = $=
-		ifTrue: [ ^ self recordAndReportMatch: #(45) ].
-	currentCharacter = $>
-		ifTrue: [ ^ self recordAndReportMatch: #(52) ].
+	currentCharacter = Character lf
+		ifTrue: [ ^ self recordAndReportMatch: #(75) ].
 	^ self reportLastMatch

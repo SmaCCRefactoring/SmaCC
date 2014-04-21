@@ -1,7 +1,9 @@
 generated
 scan12
-	self recordMatch: #(38).
+	[ 
+	self recordMatch: #(73).
 	self step.
-	currentCharacter = $=
-		ifTrue: [ ^ self recordAndReportMatch: #(28) ].
+	currentCharacter = $j
+		ifTrue: [ ^ self recordAndReportMatch: #(73) ].
+	currentCharacter isDigit ] whileTrue.
 	^ self reportLastMatch

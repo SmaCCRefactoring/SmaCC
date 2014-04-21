@@ -1,16 +1,18 @@
 generated
 scan16
-	[ 
+	self recordMatch: #(71).
 	self step.
+	currentCharacter = $"
+		ifTrue: [ ^ self scan2 ].
 	currentCharacter = $'
+		ifTrue: [ ^ self scan6 ].
+	((currentCharacter between: $0 and: $9)
+		or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ])
 		ifTrue: [ 
-			2
-				timesRepeat: [ 
-					self step.
-					currentCharacter = $'
-						ifFalse: [ ^ self scan16 ] ].
-			^ self recordAndReportMatch: #(72) ].
-	currentCharacter = $\
-		ifTrue: [ 
+			[ 
+			self recordMatch: #(71).
 			self step.
-			^ self scan16 ] ] repeat
+			(currentCharacter between: $0 and: $9)
+				or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
+				whileTrue ].
+	^ self reportLastMatch

@@ -1,7 +1,8 @@
 generated
 scan11
-	self recordMatch: #(51).
 	self step.
-	currentCharacter = $=
-		ifTrue: [ ^ self recordAndReportMatch: #(31) ].
+	('+-' includes: currentCharacter)
+		ifTrue: [ self step ].
+	currentCharacter isDigit
+		ifTrue: [ ^ self scan12 ].
 	^ self reportLastMatch
