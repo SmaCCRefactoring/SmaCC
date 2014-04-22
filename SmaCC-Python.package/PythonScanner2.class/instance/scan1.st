@@ -143,7 +143,7 @@ scan1
 	currentCharacter = $@
 		ifTrue: [ ^ self recordAndReportMatch: #(23) ].
 	currentCharacter = $R
-		ifTrue: [ ^ self scan16 ].
+		ifTrue: [ ^ self scan15 ].
 	currentCharacter = $[
 		ifTrue: [ ^ self recordAndReportMatch: #(83) ].
 	currentCharacter = $\
@@ -170,25 +170,25 @@ scan1
 	currentCharacter = $`
 		ifTrue: [ ^ self recordAndReportMatch: #(46) ].
 	currentCharacter = $a
-		ifTrue: [ ^ self scan17 ].
+		ifTrue: [ ^ self scan16 ].
 	currentCharacter = $b
-		ifTrue: [ ^ self scan18 ].
+		ifTrue: [ ^ self scan17 ].
 	currentCharacter = $c
-		ifTrue: [ ^ self scan19 ].
+		ifTrue: [ ^ self scan18 ].
 	currentCharacter = $d
-		ifTrue: [ ^ self scan20 ].
+		ifTrue: [ ^ self scan19 ].
 	currentCharacter = $e
-		ifTrue: [ ^ self scan21 ].
+		ifTrue: [ ^ self scan20 ].
 	currentCharacter = $f
-		ifTrue: [ ^ self scan22 ].
+		ifTrue: [ ^ self scan21 ].
 	currentCharacter = $g
-		ifTrue: [ ^ self scan23 ].
+		ifTrue: [ ^ self scan22 ].
 	currentCharacter = $i
-		ifTrue: [ ^ self scan24 ].
+		ifTrue: [ ^ self scan23 ].
 	currentCharacter = $l
-		ifTrue: [ ^ self scan25 ].
+		ifTrue: [ ^ self scan24 ].
 	currentCharacter = $n
-		ifTrue: [ ^ self scan26 ].
+		ifTrue: [ ^ self scan25 ].
 	currentCharacter = $o
 		ifTrue: [ 
 			self recordMatch: #(71).
@@ -220,15 +220,59 @@ scan1
 						whileTrue ].
 			^ self reportLastMatch ].
 	currentCharacter = $p
-		ifTrue: [ ^ self scan27 ].
+		ifTrue: [ ^ self scan26 ].
 	currentCharacter = $r
-		ifTrue: [ ^ self scan28 ].
+		ifTrue: [ ^ self scan27 ].
 	currentCharacter = $t
-		ifTrue: [ ^ self scan29 ].
+		ifTrue: [ 
+			self recordMatch: #(71).
+			self step.
+			currentCharacter = $r
+				ifTrue: [ 
+					self recordMatch: #(71).
+					self step.
+					currentCharacter = $y
+						ifTrue: [ 
+							self recordMatch: #(62 71).
+							self step.
+							((currentCharacter between: $0 and: $9)
+								or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ])
+								ifTrue: [ 
+									[ 
+									self recordMatch: #(71).
+									self step.
+									(currentCharacter between: $0 and: $9)
+										or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
+										whileTrue ].
+							^ self reportLastMatch ].
+					((currentCharacter between: $0 and: $9)
+						or: [ 
+							(currentCharacter between: $A and: $Z)
+								or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $x) or: [ currentCharacter = $z ] ] ] ])
+						ifTrue: [ 
+							[ 
+							self recordMatch: #(71).
+							self step.
+							(currentCharacter between: $0 and: $9)
+								or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
+								whileTrue ].
+					^ self reportLastMatch ].
+			((currentCharacter between: $0 and: $9)
+				or: [ 
+					(currentCharacter between: $A and: $Z)
+						or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $q) or: [ currentCharacter between: $s and: $z ] ] ] ])
+				ifTrue: [ 
+					[ 
+					self recordMatch: #(71).
+					self step.
+					(currentCharacter between: $0 and: $9)
+						or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
+						whileTrue ].
+			^ self reportLastMatch ].
 	currentCharacter = $w
-		ifTrue: [ ^ self scan30 ].
+		ifTrue: [ ^ self scan28 ].
 	currentCharacter = $y
-		ifTrue: [ ^ self scan31 ].
+		ifTrue: [ ^ self scan29 ].
 	currentCharacter = ${
 		ifTrue: [ ^ self recordAndReportMatch: #(85) ].
 	currentCharacter = $|
@@ -263,7 +307,29 @@ scan1
 			currentCharacter = Character tab or: [ currentCharacter = Character space ] ] whileTrue.
 			^ self reportLastMatch ].
 	('BUu' includes: currentCharacter)
-		ifTrue: [ ^ self scan15 ].
+		ifTrue: [ 
+			self recordMatch: #(71).
+			self step.
+			currentCharacter = $"
+				ifTrue: [ ^ self scan2 ].
+			currentCharacter = $'
+				ifTrue: [ ^ self scan6 ].
+			('Rr' includes: currentCharacter)
+				ifTrue: [ ^ self scan15 ].
+			((currentCharacter between: $0 and: $9)
+				or: [ 
+					(currentCharacter between: $A and: $Q)
+						or: [ 
+							(currentCharacter between: $S and: $Z)
+								or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $q) or: [ currentCharacter between: $s and: $z ] ] ] ] ])
+				ifTrue: [ 
+					[ 
+					self recordMatch: #(71).
+					self step.
+					(currentCharacter between: $0 and: $9)
+						or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
+						whileTrue ].
+			^ self reportLastMatch ].
 	currentCharacter isSafeForHTTP
 		ifTrue: [ 
 			[ 
