@@ -1,4 +1,4 @@
-private
+default
 patternToken
 	| token |
 	token := SmaCCPatternToken
