@@ -12,16 +12,15 @@ statesToMakeIntoMethodsFor: aSmaCCNode
 					each ~= edge to
 						ifTrue: [ (incoming at: edge to ifAbsentPut: [ Set new ]) add: each ] ] ].
 	selectedStates := allStates
-		select: [ :each | 
-			aSmaCCNode = each
-				or: [ each isTerminalNode not and: [ (incoming at: each ifAbsent: [ #() ]) size > 1	"or: [ each needsSeparateMethod ] " ] ] ].
+		select: [ :each | aSmaCCNode = each or: [ each isTerminalNode not and: [ (incoming at: each ifAbsent: [ #() ]) size > 1 ] ] ].
 	allStates
 		do: [ :each | 
-			(each allTransitionsWith: selectedStates) > 300
+			(each allTransitionsWith: selectedStates) > self class maxTransitionsInScanMethod
 				ifTrue: [ 
+					| ts |
 					selectedStates add: each.
-					each transitions
-						do: [ :t | 
-							(t to allTransitionsWith: selectedStates) > 5
-								ifTrue: [ selectedStates add: t to ] ] ] ].
+					ts := (each transitions collect: [ :e | e to ])
+						asSortedCollection: [ :a :b | (a allTransitionsWith: selectedStates) > (b allTransitionsWith: selectedStates) ].
+					[ (each allTransitionsWith: selectedStates) > self class maxTransitionsInScanMethod ]
+						whileTrue: [ selectedStates add: ts removeFirst ] ] ].
 	^ selectedStates asSortedCollection: [ :a :b | a id < b id ]

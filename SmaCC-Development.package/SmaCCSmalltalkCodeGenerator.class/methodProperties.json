@@ -1,6 +1,7 @@
 {
 	"class" : {
 		"codeTemplatesArray" : "ThierryGoubier 3/18/2014 10:53:00",
+		"maxTransitionsInScanMethod" : "ThierryGoubier 4/22/2014 12:22",
 		"parseSourceSelector" : "ThierryGoubier 3/18/2014 10:53:00",
 		"typeName" : "ThierryGoubier 3/18/2014 10:53:00" },
 	"instance" : {
@@ -62,7 +63,7 @@
 		"removeOldMethods" : "ThierryGoubier 3/18/2014 10:53:00",
 		"removeOldMethodsFrom:" : "ThierryGoubier 3/18/2014 10:53:00",
 		"removeUnnecessaryChanges" : "ThierryGoubier 3/18/2014 10:53:00",
-		"scannerActionFor:" : "ThierryGoubier 3/18/2014 10:53:00",
+		"scannerActionFor:" : "ThierryGoubier 4/22/2014 22:37",
 		"scannerClass" : "ThierryGoubier 3/18/2014 10:53:00",
 		"scannerClass:" : "ThierryGoubier 3/18/2014 10:53:00",
 		"selectorMap:" : "ThierryGoubier 3/18/2014 10:53:00",
@@ -70,7 +71,7 @@
 		"send:to:with:" : "ThierryGoubier 3/18/2014 10:53:00",
 		"send:to:with:with:" : "ThierryGoubier 3/18/2014 10:53:00",
 		"send:to:with:with:with:" : "ThierryGoubier 3/18/2014 10:53:00",
-		"statesToMakeIntoMethodsFor:" : "ThierryGoubier 4/21/2014 22:46",
+		"statesToMakeIntoMethodsFor:" : "ThierryGoubier 4/22/2014 12:25",
 		"superMessage:" : "ThierryGoubier 3/18/2014 10:53:00",
 		"superMessage:argument:" : "ThierryGoubier 3/18/2014 10:53:00",
 		"superMessage:argument:argument:" : "ThierryGoubier 3/18/2014 10:53:00",
