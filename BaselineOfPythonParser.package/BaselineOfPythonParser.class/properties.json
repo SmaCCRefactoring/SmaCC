@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfPythonParser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfPythonParser",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
