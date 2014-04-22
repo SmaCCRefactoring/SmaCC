@@ -4,6 +4,7 @@
 	"instance" : {
 		"parse:" : "ThierryGoubier 4/20/2014 22:32",
 		"parserClass" : "ThierryGoubier 4/20/2014 22:31",
+		"testCommentAtEnd" : "ThierryGoubier 4/22/2014 19:28",
 		"testLibDummyThreading" : "ThierryGoubier 4/20/2014 23:19",
 		"testNoReturnAtEnd" : "ThierryGoubier 4/21/2014 15:04",
 		"testSimpleProgram1" : "ThierryGoubier 4/20/2014 23:20",

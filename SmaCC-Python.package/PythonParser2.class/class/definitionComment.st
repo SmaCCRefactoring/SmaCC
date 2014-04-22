@@ -40,7 +40,7 @@ definitionComment
 #Modes
 <cr>	: \r | \n | \r\n ;
 lineBegin <emptyLine> : <cr> ;
-lineBegin <blankLine> : [ \t\f]* (\# [^\r\n]* )? <cr> ;
+lineBegin <blankLine> : [ \t\f]* ((\# [^\r\n]*  <cr>?) | <cr>) ;
 lineBegin <indent> : [ \t\f]+ ;
 lineBegin <noindent>  : [^ \t\f\#] ;
 <comment> : \#[^\r\n]* ;
