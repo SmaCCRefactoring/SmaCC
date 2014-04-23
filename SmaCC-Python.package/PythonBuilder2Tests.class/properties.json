@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "DamienCassou 4/23/2014 10:13",
+	"commentStamp" : "",
 	"instvars" : [
-		"builder" ],
-	"name" : "PythonParser2",
+		 ],
+	"name" : "PythonBuilder2Tests",
 	"pools" : [
 		 ],
-	"super" : "SmaCCParser",
+	"super" : "TestCase",
 	"type" : "normal" }

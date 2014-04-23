@@ -195,7 +195,7 @@ scan1
 			self step.
 			currentCharacter = $r
 				ifTrue: [ 
-					self recordMatch: #(68 71).
+					self recordMatch: #(70 71).
 					self step.
 					((currentCharacter between: $0 and: $9)
 						or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ])

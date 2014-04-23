@@ -81,6 +81,10 @@ file_input: (<NEWLINE> | stmt)* ;
 single_input: <NEWLINE> | simple_stmt | compound_stmt <NEWLINE> ;
 eval_input: testlist <NEWLINE>* ;
 
+number:
+  <number> { builder number: '1' value }
+  ;
+
 decorator: ""@"" dotted_name [ <lparen> [arglist] <rparen> ] <NEWLINE> ;
 decorators: decorator+ ;
 decorated: decorators (classdef | funcdef) ;
@@ -159,7 +163,7 @@ expr: xor_expr (""|"" xor_expr)* ;
 xor_expr: and_expr (""^"" and_expr)* ;
 and_expr: shift_expr (""&"" shift_expr)* ;
 shift_expr: arith_expr ( ( ""<<"" | "">>"" ) arith_expr)* ;
-arith_expr: term ( ( ""+"" | ""-"" ) term )* ;
+arith_expr: term ( ( ""+"" | ""-"" ) term )* { builder arithExprLeft: '1' right: '2'};
 term: factor ( ( ""*"" | ""/"" | ""%"" | ""//"" ) factor)* ;
 factor: ( ""+"" | ""-"" | ""~"" ) factor | power ;
 power: atom trailer* [""**"" factor] ;
@@ -167,7 +171,7 @@ atom: <lparen> [ yield_expr | testlist_comp ] <rparen> |
        <lbrack> listmaker? <rbrack> |
        <lcurly> dictorsetmaker? <rcurly> |
        ""`"" testlist1 ""`"" |
-       <name> | <number> | <string>+ ;
+       <name> | number | <string>+ ;
 listmaker: test ( list_for | ( "","" test )* "",""? ) ;
 testlist_comp: test ( comp_for | ( "","" test )* "",""? ) ;
 lambdef: ""lambda"" varargslist? "":"" test ;

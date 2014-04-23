@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "DamienCassou 4/23/2014 10:13",
 	"instvars" : [
 		"lineJoiningStack",
 		"indentStack",
