@@ -2,7 +2,6 @@ baselines
 baseline20: spec
 	<version: '2.0-baseline'>
 	
-	self class ensureGitFileTree.
 	spec
 		for: #'pharo3.x'
 		do: [ 
