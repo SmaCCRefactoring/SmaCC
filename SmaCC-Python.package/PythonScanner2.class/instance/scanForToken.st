@@ -14,7 +14,7 @@ scanForToken
 					^ self reportLastMatch ].
 			currentCharacter = $#
 				ifTrue: [ ^ self scan31 ].
-			currentCharacter isSeparator
+			currentCharacter isWhitespace
 				ifTrue: [ 
 					[ 
 					self recordMatch: #(76).
@@ -25,7 +25,7 @@ scanForToken
 						ifTrue: [ ^ self scan30 ].
 					currentCharacter = $#
 						ifTrue: [ ^ self scan31 ].
-					currentCharacter isSeparator ] whileTrue.
+					currentCharacter isWhitespace ] whileTrue.
 					^ self reportLastMatch ].
 			^ self recordAndReportMatch: #(77) ].
 	state == #default

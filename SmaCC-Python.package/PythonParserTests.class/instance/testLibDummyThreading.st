@@ -1,4 +1,4 @@
-tests
+tests - programs
 testLibDummyThreading
 	"from Python standard library"
 	self parse: '"""Faux ``threading`` version using ``dummy_thread`` instead of ``thread``.
