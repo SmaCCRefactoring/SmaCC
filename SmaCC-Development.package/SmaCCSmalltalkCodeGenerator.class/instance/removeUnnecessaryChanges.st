@@ -1,7 +1,6 @@
 compiling
 removeUnnecessaryChanges
-	"TODO: Rework this because :
-		In the changes, classes are first redeclared without instance variables, method removed and then instance variables are added one by one and then the new methods. When this optimisation is applied, methods aren't removed and each class recompilation forces a recompilation of all methods with many Undeclared warnings for missing instance variables (and those instance variables will be added later)."
+	"Removing then defining instance variables optimization is done when defining the instance variables."
 
 	| allChanges |
 	allChanges := self changes changes copy.
