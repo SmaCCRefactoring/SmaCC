@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Examples-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ExampleRecompiler",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

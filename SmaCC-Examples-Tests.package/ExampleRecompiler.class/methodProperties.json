@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"buildScanner:andParser:" : "ThierryGoubier 4/27/2014 08:34",
+		"definitionFrom:selector:" : "ThierryGoubier 4/27/2014 08:33",
+		"testRecompileCParser" : "ThierryGoubier 4/27/2014 17:49",
+		"testRecompileCSharpParser" : "ThierryGoubier 4/27/2014 08:36",
+		"testRecompileJavaParser" : "ThierryGoubier 4/27/2014 17:48",
+		"testRecompileStParser" : "ThierryGoubier 4/27/2014 17:48" } }

@@ -10,10 +10,14 @@ scannerActionFor: aString
 		and: [ 
 			selector isUnary
 				and: [ 
-					(scannerClass directlyDefinesMethod: selector)
-						or: [ 
-							(scannerClass whoDefinesMethod: selector)
-								ifNil: [ false ]
-								ifNotNil: [ :aClass | (Object canUnderstand: selector) not and: [ (aClass protocolsFor: selector) includes: #default ] ] ] ] ])
+					(Object canUnderstand: selector) not
+						and: [ 
+							(scannerClass directlyDefinesMethod: selector)
+								or: [ 
+									(scannerClass whoDefinesMethod: selector)
+										ifNil: [ false ]
+										ifNotNil: [ :aClass | 
+											(aClass name == #SmaCCScanner and: [ #(#comment #whitespace #patternToken) includes: selector ])
+												or: [ aClass name ~= #SmaCCScanner ] ] ] ] ] ])
 		ifTrue: [ selector ]
 		ifFalse: [ nil ]
