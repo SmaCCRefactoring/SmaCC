@@ -49,11 +49,11 @@ scan1
 		ifTrue: [ ^ self recordAndReportMatch: #(82) ].
 	currentCharacter = $*
 		ifTrue: [ 
-			self recordMatch: #(20).
+			self recordMatch: #(19).
 			self step.
 			currentCharacter = $*
 				ifTrue: [ 
-					self recordMatch: #(25).
+					self recordMatch: #(20).
 					self step.
 					currentCharacter = $=
 						ifTrue: [ ^ self recordAndReportMatch: #(5) ].
@@ -69,7 +69,7 @@ scan1
 				ifTrue: [ ^ self recordAndReportMatch: #(35) ].
 			^ self reportLastMatch ].
 	currentCharacter = $,
-		ifTrue: [ ^ self recordAndReportMatch: #(19) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(22) ].
 	currentCharacter = $-
 		ifTrue: [ 
 			self recordMatch: #(53).
@@ -122,7 +122,7 @@ scan1
 			^ self reportLastMatch ].
 	currentCharacter = $=
 		ifTrue: [ 
-			self recordMatch: #(22).
+			self recordMatch: #(25).
 			self step.
 			currentCharacter = $=
 				ifTrue: [ ^ self recordAndReportMatch: #(56) ].

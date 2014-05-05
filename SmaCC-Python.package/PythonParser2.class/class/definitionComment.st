@@ -75,65 +75,263 @@ lineBegin <noindent>  : [^ \t\f\#] ;
 #       file_input is a module or sequence of commands read from an input file;
 #       eval_input is the input for the eval() and input() functions.
 # NB: compound_stmt in single_input is followed by extra <NEWLINE>!
+
 %start file_input single_input eval_input ;
 
-file_input: (<NEWLINE> | stmt)* ;
-single_input: <NEWLINE> | simple_stmt | compound_stmt <NEWLINE> ;
-eval_input: testlist <NEWLINE>* ;
+# Note: Grammar rewritten to eliminate () [] * ? + ThierryGoubier 5/5/2014 22:34
 
-decorator: ""@"" dotted_name [ <lparen> [arglist] <rparen> ] <NEWLINE> ;
-decorators: decorator+ ;
-decorated: decorators (classdef | funcdef) ;
-funcdef: ""def"" <name> parameters "":"" suite ;
-parameters: <lparen> varargslist? <rparen> ;
-varargslist: (fpdef [""="" test] "","")* 
-                   ( ""*"" <name> ["","" ""**"" <name>]
-		 | ""**"" <name> 
- 	          | fpdef [""="" test] "",""? ) ;
-fpdef: <name> | <lparen> fplist <rparen> ;
-fplist: fpdef ( "","" fpdef )* "",""? ;
+file_input:
+	| file_input <NEWLINE>
+	| file_input stmt
+	;
+single_input:
+	<NEWLINE>
+	| simple_stmt
+	| compound_stmt <NEWLINE>
+	;
+eval_input:
+	testlist newline_opts
+	;
+newline_opts:
+	| newline_opts <NEWLINE>
+	;
 
-stmt: simple_stmt | compound_stmt ;
-simple_stmt: small_stmt ("";"" small_stmt)* "";""? <NEWLINE> ;
-small_stmt: expr_stmt | print_stmt  | del_stmt | pass_stmt | flow_stmt |
-             import_stmt | global_stmt | exec_stmt | assert_stmt ;
-expr_stmt: testlist ( augassign ( yield_expr | testlist ) |
-                     ( ""="" ( yield_expr|testlist ) )* ) ;
-augassign: ""+="" | ""-="" | ""*="" | ""/="" | ""%="" | ""&="" | ""|="" | ""^="" |
-            ""<<="" | "">>="" | ""**="" | ""//="" ;
+decorator:
+	""@"" dotted_name paren_arglist_opt <NEWLINE>
+	;
+paren_arglist_opt:
+	| <lparen> arglist_opt <rparen>
+	;
+arglist_opt:
+	| arglist
+	;
+
+decorators:
+	decorators decorator
+	| decorator
+	;
+decorated:
+	decorators classdef
+	| decorators funcdef
+	;
+funcdef:
+	""def"" <name> parameters "":"" suite
+	;
+parameters:
+	<lparen> varargslist_opt <rparen>
+	;
+varargslist_opt:
+	| varargslist
+	;
+varargslist: fpdef init_opt "","" varargslist
+	| ""*"" <name> 
+	| ""*"" <name> "","" ""**"" <name>
+	| ""**"" <name> 
+      | fpdef init_opt comma_opt
+	;
+init_opt:
+	| ""="" test
+	;
+comma_opt:
+	| "",""
+	;
+fpdef:
+	<name>
+	| <lparen> fplist <rparen>
+	;
+fplist:
+	fpdef "","" fplist
+	| fpdef comma_opt
+	;
+
+stmt:
+	simple_stmt
+	| compound_stmt
+	;
+simple_stmt:
+	small_stmt "";"" simple_stmt
+	| small_stmt semicolon_opt <NEWLINE>
+	;
+semicolon_opt:
+	| "";""
+	;
+small_stmt:
+	expr_stmt
+	| print_stmt
+	| del_stmt
+	| pass_stmt
+	| flow_stmt
+	| import_stmt
+	| global_stmt
+	| exec_stmt
+	| assert_stmt
+	;
+expr_stmt: 
+	testlist assign_after
+	| testlist augassign yield_or_testlist
+	;
+assign_after:
+	| assign_after ""="" yield_or_testlist
+	;
+yield_or_testlist:
+	yield_expr
+	| testlist
+	;
+augassign:
+	""+=""
+	| ""-=""
+	| ""*=""
+	| ""/=""
+	| ""%=""
+	| ""&=""
+	| ""|=""
+	| ""^=""
+	| ""<<=""
+	| "">>=""
+	| ""**=""
+	| ""//=""
+	;
 # For normal assignments, additional restrictions enforced by the interpreter
-print_stmt: ""print"" ( [ test ("","" test)* "",""? ] |
-                      "">>"" test [ ("","" test)+ "",""? ] ) ;
-del_stmt: ""del"" exprlist ;
-pass_stmt: ""pass"" ;
-flow_stmt: break_stmt | continue_stmt | return_stmt | raise_stmt | yield_stmt ;
-break_stmt: ""break"" ;
-continue_stmt: ""continue"" ;
-return_stmt: ""return"" testlist ? ;
-yield_stmt: yield_expr ;
-raise_stmt: ""raise"" [ test [ "","" test [ "","" test ] ] ] ;
-import_stmt: import_name | import_from ;
-import_name: ""import"" dotted_as_names ;
-import_from: ( ""from"" ( dotted_name | "".""+ dotted_name? )
-              ""import"" ( ""*"" | <lparen> import_as_names <rparen> | import_as_names ) ) ;
-import_as_name: <name> [ ""as"" <name> ] ;
-dotted_as_name: dotted_name [ ""as"" <name> ] ;
-import_as_names: import_as_name ( "","" import_as_name )* "",""? ;
-dotted_as_names: dotted_as_name ( "","" dotted_as_name )* ;
-dotted_name: <name> ( ""."" <name> )* ;
-global_stmt: ""global"" <name> ( "","" <name> )* ;
-exec_stmt: ""exec"" expr [ ""in"" test [ "","" test ] ] ;
-assert_stmt: ""assert"" test [ "","" test ] ;
+print_stmt:
+	""print"" testlist_opt
+	| ""print"" "">>"" testlist
+	;
+testlist_opt:
+	| testlist
+	;
+del_stmt:
+	""del"" exprlist
+	;
+pass_stmt:
+	""pass""
+	;
+flow_stmt:
+	break_stmt
+	| continue_stmt
+	| return_stmt
+	| raise_stmt
+	| yield_stmt
+	;
+break_stmt:
+	""break""
+	;
+continue_stmt:
+	""continue""
+	;
+return_stmt:
+	""return"" testlist_opt
+	;
+yield_stmt:
+	yield_expr
+	;
+raise_stmt:
+	""raise""
+	| ""raise"" test
+	| ""raise"" test "","" test
+	| ""raise"" test "","" test "","" test
+	;
+import_stmt:
+	import_name
+	| import_from
+	;
+import_name:
+	""import"" dotted_as_names
+	;
+import_from:
+	""from"" dotopt_dotted_name ""import"" import_names_star
+	;
+dotopt_dotted_name:
+	dotted_name
+	| dots
+	| dots dotted_name
+	;
+dots:
+	dots "".""
+	| "".""
+	;
+import_names_star:
+	""*""
+	| <lparen> import_as_names <rparen>
+	| import_as_names
+	;
+import_as_name:
+	<name>
+	| <name> ""as"" <name>
+	;
+dotted_as_name:
+	dotted_name
+	| dotted_name ""as"" <name>
+	;
+import_as_names:
+	import_as_names_in comma_opt
+	;
+import_as_names_in:
+	import_as_names_in "","" import_as_name
+	| import_as_name
+	;
+dotted_as_names:
+	dotted_as_names "","" dotted_as_name
+	| dotted_as_name
+	;
+dotted_name:
+	dotted_name ""."" <name>
+	| <name>
+	;
+global_stmt:
+	""global"" namelist
+	;
+namelist:
+	namelist "","" <name>
+	| <name>
+	;
+exec_stmt:
+	""exec"" expr
+	| ""exec"" expr ""in"" test_test_opt
+	;
+test_test_opt:
+	test
+	| test "","" test
+	;
+assert_stmt:
+	""assert"" test_test_opt
+	;
 
-compound_stmt: if_stmt | while_stmt | for_stmt | try_stmt | with_stmt | funcdef | classdef | decorated ;
-if_stmt: ""if"" test "":"" suite ( ""elif"" test "":"" suite )* [ ""else"" "":"" suite ] ;
-while_stmt: ""while"" test "":"" suite [ ""else"" "":"" suite ] ;
-for_stmt: ""for"" exprlist ""in"" testlist "":"" suite [ ""else"" "":"" suite ] ;
-try_stmt: ( ""try"" "":"" suite
-           ( ( except_clause "":"" suite )+
-            [ ""else"" "":"" suite ]
-            [ ""finally"" "":"" suite ] |
-           ""finally"" "":"" suite ) ) ;
+compound_stmt:
+	if_stmt
+	| while_stmt
+	| for_stmt
+	| try_stmt
+	| with_stmt
+	| funcdef
+	| classdef
+	| decorated
+	;
+if_stmt:
+	""if"" test "":"" suite elifs_opt else_opt
+	;
+elifs_opt:
+	| elifs_opt ""elif"" test "":"" suite
+	;
+else_opt:
+	| ""else"" "":"" suite
+	;
+while_stmt:
+	""while"" test "":"" suite else_opt
+	;
+for_stmt:
+	""for"" exprlist ""in"" testlist "":"" suite else_opt
+	;
+try_stmt:
+	""try"" "":"" suite except_list else_opt finally_opt
+	| ""try"" "":"" suite ""finally"" "":"" suite
+	;
+finally_opt:
+	| ""finally"" "":"" suite
+	;
+except_list:
+	except_list except_clause "":"" suite
+	| except_clause "":"" suite
+	;
 with_stmt: ""with"" with_item ( "","" with_item )*  "":"" suite ;
 with_item: test [ ""as"" expr ] ;
 # NB compile.c makes sure that the default except clause is last
