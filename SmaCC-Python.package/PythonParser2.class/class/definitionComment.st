@@ -332,36 +332,132 @@ except_list:
 	except_list except_clause "":"" suite
 	| except_clause "":"" suite
 	;
-with_stmt: ""with"" with_item ( "","" with_item )*  "":"" suite ;
-with_item: test [ ""as"" expr ] ;
+with_stmt:
+	""with"" with_items "":"" suite
+	;
+with_items:
+	with_items "","" with_item
+	| with_item
+	;
+with_item:
+	test |
+	test ""as"" expr
+	;
 # NB compile.c makes sure that the default except clause is last
-except_clause: ""except"" [ test [ ( ""as"" | "","" ) test ] ] ;
-suite: simple_stmt | <NEWLINE> <INDENT> stmt+ <DEDENT> ;
+except_clause: 
+	""except"" |
+	""except"" test |
+	""except"" test ""as"" test |
+	""except"" test "","" test
+	;
+suite:
+	simple_stmt
+	| <NEWLINE> <INDENT> stmts <DEDENT>
+	;
+stmts:
+	stmts stmt
+	| stmt
+	;
 
 # Backward compatibility cruft to support:
 # [ x for x in lambda: True, lambda: False if x() ]
 # even while also allowing:
 # lambda x: 5 if x else 2
 # (But not a mix of the two)
-testlist_safe: old_test [ ( "","" old_test )+ "",""? ] ;
-old_test: or_test | old_lambdef ;
-old_lambdef: ""lambda"" varargslist? "":"" old_test ;
+testlist_safe:
+	old_test 
+	| old_test "","" old_tests comma_opt
+	;
+old_tests:
+	old_tests "","" old_test
+	| old_test
+	;
+old_test:
+	or_test
+	| old_lambdef
+	;
+old_lambdef:
+	""lambda"" varargslist_opt "":"" old_test
+	;
 
-test: or_test [ ""if"" or_test ""else"" test ] | lambdef ;
-or_test: and_test ( ""or"" and_test )* ;
-and_test: not_test ( ""and"" not_test )* ;
-not_test: ""not"" not_test  | comparison ;
-comparison: expr ( comp_op expr )* ;
-comp_op: ""<"" | "">"" | ""=="" | "">="" | ""<="" | ""<>"" | ""!="" | ""in"" | ""not"" ""in"" | ""is"" | ""is"" ""not"" ;
-expr: xor_expr (""|"" xor_expr)* ;
-xor_expr: and_expr (""^"" and_expr)* ;
-and_expr: shift_expr (""&"" shift_expr)* ;
-shift_expr: arith_expr ( ( ""<<"" | "">>"" ) arith_expr)* ;
-arith_expr: term ( ( ""+"" | ""-"" ) term )* ;
-term: factor ( ( ""*"" | ""/"" | ""%"" | ""//"" ) factor)* ;
-factor: ( ""+"" | ""-"" | ""~"" ) factor | power ;
-power: atom trailer* [""**"" factor] ;
-atom: <lparen> [ yield_expr | testlist_comp ] <rparen> |
+test:
+	or_test
+	| or_test ""if"" or_test ""else"" test
+	| lambdef
+	;
+or_test:
+	and_test
+	| and_test ""or"" or_test
+	;
+and_test:
+	not_test
+	| not_test ""and"" and_test
+	;
+not_test:
+	""not"" not_test 
+	| comparison
+	;
+comparison:
+	expr
+	| expr comp_op comparison
+	;
+comp_op:
+	""<""
+	| "">""
+	| ""==""
+	| "">=""
+	| ""<=""
+	| ""<>""
+	| ""!=""
+	| ""in""
+	| ""not"" ""in"" 
+	| ""is""
+	| ""is"" ""not""
+	;
+expr:
+	xor_expr 
+	| xor_expr ""|"" expr
+	;
+xor_expr:
+	and_expr
+	| and_expr ""^"" xor_expr
+	;
+and_expr:
+	shift_expr
+	| shift_expr ""&"" and_expr
+	;
+shift_expr:
+	arith_expr
+	| arith_expr ""<<"" shift_expr
+	| arith_expr "">>"" shift_expr
+	;
+arith_expr:
+	term
+	| term ""+"" arith_expr
+	| term ""-"" arith_expr
+	;
+term:
+	factor
+	| factor ""*"" term
+	| factor ""/"" term
+	| factor ""%"" term
+	| factor ""//"" term
+	;
+factor:
+	power
+	| ""+"" factor
+	| ""-"" factor
+	| ""~"" factor
+	;
+power:
+	atom trailers_opt
+	| atom trailers_opt ""**"" factor
+	;
+trailers_opt:
+	| trailers_opt trailer
+	;
+atom: 
+	<lparen> [ yield_expr | testlist_comp ] <rparen> |
        <lbrack> listmaker? <rbrack> |
        <lcurly> dictorsetmaker? <rcurly> |
        ""`"" testlist1 ""`"" |
