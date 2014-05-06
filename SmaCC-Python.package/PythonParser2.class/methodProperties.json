@@ -1,14 +1,10 @@
 {
 	"class" : {
-		"definitionComment" : "ThierryGoubier 5/6/2014 07:26",
-		"scannerClass" : "ThierryGoubier 5/5/2014 17:12:55",
-		"startingStateForeval_input" : "ThierryGoubier 5/5/2014 17:12:55",
-		"startingStateForfile_input" : "ThierryGoubier 5/6/2014 07:26",
-		"startingStateForsingle_input" : "ThierryGoubier 5/5/2014 17:12:55" },
+		"definitionComment" : "ThierryGoubier 5/6/2014 12:02",
+		"scannerClass" : "DamienCassou 4/24/2014 16:09:04",
+		"startingStateForeval_input" : "DamienCassou 4/24/2014 16:09:04",
+		"startingStateForfile_input" : "ThierryGoubier 5/6/2014 13:10",
+		"startingStateForsingle_input" : "DamienCassou 4/24/2014 16:09:04" },
 	"instance" : {
-		"reduceActionFor________test__1:" : "ThierryGoubier 5/5/2014 23:18",
-		"reduceActionFor_string__1:" : "ThierryGoubier 5/5/2014 17:12:55",
-		"reduceActionFor_string__2:" : "ThierryGoubier 5/5/2014 22:59",
-		"reduceActionFortestlist_2:" : "ThierryGoubier 5/6/2014 07:23",
-		"reduceTable" : "ThierryGoubier 5/6/2014 07:26",
-		"transitionTable" : "ThierryGoubier 5/6/2014 07:26" } }
+		"reduceTable" : "ThierryGoubier 5/6/2014 12:02",
+		"transitionTable" : "ThierryGoubier 5/6/2014 12:02" } }

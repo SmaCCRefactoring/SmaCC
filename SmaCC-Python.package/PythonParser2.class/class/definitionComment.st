@@ -457,43 +457,129 @@ trailers_opt:
 	| trailers_opt trailer
 	;
 atom: 
-	<lparen> [ yield_expr | testlist_comp ] <rparen> |
-       <lbrack> listmaker? <rbrack> |
-       <lcurly> dictorsetmaker? <rcurly> |
-       ""`"" testlist1 ""`"" |
-       <name> | <number> | <string>+ ;
-listmaker: test ( list_for | ( "","" test )* "",""? ) ;
-testlist_comp: test ( comp_for | ( "","" test )* "",""? ) ;
-lambdef: ""lambda"" varargslist? "":"" test ;
-trailer: <lparen> arglist? <rparen> | <lbrack> subscriptlist <rbrack> | ""."" <name> ;
-subscriptlist: subscript ("","" subscript)* "",""? ;
-subscript: ""."" ""."" ""."" | test | test? "":"" test? sliceop? ;
-sliceop: "":"" test? ;
-exprlist: expr ( "","" expr )* "",""? ;
-testlist: test ( "","" test )* "",""? ;
-dictorsetmaker: ( ( test "":"" test (comp_for | ("","" test "":"" test)* "",""? ) ) |
-                  (test (comp_for | ("","" test)* "",""? )) ) ;
+	<lparen> <rparen>
+	| <lparen> yield_expr <rparen>
+	| <lparen> testlist_comp <rparen>
+	| <lbrack> <rbrack>
+	| <lbrack> listmaker <rbrack>
+	| <lcurly> dictorsetmaker <rcurly>
+	| <lcurly>  <rcurly>
+	| ""`"" testlist1 ""`""
+	| <name>
+	| <number>
+	| strings
+	;
+strings:
+	<string> strings
+	| <string>
+	;
+listmaker:
+	test list_for
+	| testlist
+	;
+testlist_comp:
+	test comp_for
+	| testlist
+	;
+lambdef:
+	""lambda"" varargslist_opt "":"" test
+	;
+trailer: 
+	<lparen> <rparen>
+	| <lparen> arglist <rparen>
+	| <lbrack> subscriptlist <rbrack>
+	| ""."" <name>
+	;
+subscriptlist:
+	subscript "","" subscriptlist
+	| subscript comma_opt
+	;
+subscript:
+	""."" ""."" "".""
+	| test
+	| test_opt "":"" test_opt sliceop
+	;
+test_opt:
+	| test
+	;
+sliceop:
+	| "":"" test_opt
+	;
+exprlist:
+	expr "","" exprlist
+	| expr comma_opt
+	;
+testlist:
+	test "","" testlist
+	| test comma_opt
+	;
+dictorsetmaker: 
+	test "":"" test comp_for
+	| test "":"" test more_tests
+	| test comp_for
+	| testlist
+	;
+more_tests:
+	comma_opt
+	| "","" test "":"" test more_tests
+	;
+classdef:
+	""class"" <name> "":"" suite
+	| ""class"" <name> <lparen> testlist_opt <rparen> "":"" suite
+	;
 
-classdef: ""class"" <name> [<lparen> testlist? <rparen>] "":"" suite ;
-
-arglist: (argument "","")* ( argument "",""?
-                         | ""*"" test ("","" argument)* ["","" ""**"" test] 
-                         | ""**"" test ) ;
+arglist: 
+	argument "","" arglist
+	| argument comma_opt
+	| ""*"" test more_args
+	| ""**"" test
+	;
+more_args:
+	| "","" ""**"" test
+	| "","" argument more_args
+	;
 # The reason that keywords are test nodes instead of <name> is that using <name>
 # results in an ambiguity. ast.c makes sure it""s a <name>.
-argument: test comp_for? | test ""="" test ;
+argument:
+	test
+	| test comp_for
+	| test ""="" test
+	;
 
-list_iter: list_for | list_if ;
-list_for: ""for"" exprlist ""in"" testlist_safe list_iter? ;
-list_if: ""if"" old_test list_iter? ;
+list_iter:
+	list_for
+	| list_if
+	;
+list_for:
+	""for"" exprlist ""in"" testlist_safe
+	| ""for"" exprlist ""in"" testlist_safe list_iter
+	;
+list_if:
+	""if"" old_test
+	| ""if"" old_test list_iter
+	;
 
-comp_iter: comp_for | comp_if ;
-comp_for: ""for"" exprlist ""in"" or_test comp_iter? ;
-comp_if: ""if"" old_test comp_iter? ;
+comp_iter:
+	comp_for
+	| comp_if
+	;
+comp_for:
+	""for"" exprlist ""in"" or_test
+	| ""for"" exprlist ""in"" or_test comp_iter
+	;
+comp_if:
+	""if"" old_test
+	| ""if"" old_test comp_iter
+	;
 
-testlist1: test ("","" test)* ;
+testlist1:
+	test 
+	| test "","" testlist1
+	;
 
 # not used in grammar, but may appear in ""node"" passed from Parser to Compiler
 #encoding_decl: <name> ;
 
-yield_expr: ""yield"" testlist? ;"
+yield_expr:
+	""yield"" testlist_opt
+	;"
