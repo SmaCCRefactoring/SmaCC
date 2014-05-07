@@ -80,10 +80,16 @@ lineBegin <noindent>  : [^ \t\f\#] ;
 
 # Note: Grammar rewritten to eliminate () [] * ? + ThierryGoubier 5/5/2014 22:34
 
+%annotate_tokens;
+%root Python;
+%prefix AST;
+%suffix Node;
+
 file_input:
 	| file_input <NEWLINE>
 	| file_input stmt
-	;
+	{{}};
+
 single_input:
 	<NEWLINE>
 	| simple_stmt
@@ -116,7 +122,7 @@ decorated:
 	;
 funcdef:
 	""def"" <name> parameters "":"" suite
-	;
+	{{}};
 parameters:
 	<lparen> varargslist_opt <rparen>
 	;
@@ -147,7 +153,7 @@ fplist:
 stmt:
 	simple_stmt
 	| compound_stmt
-	;
+	{{}};
 simple_stmt:
 	small_stmt "";"" simple_stmt
 	| small_stmt semicolon_opt <NEWLINE>
@@ -526,7 +532,7 @@ more_tests:
 classdef:
 	""class"" <name> "":"" suite
 	| ""class"" <name> <lparen> testlist_opt <rparen> "":"" suite
-	;
+	{{}};
 
 arglist: 
 	argument "","" arglist

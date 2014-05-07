@@ -1,0 +1,3 @@
+generated
+classTokens
+	^ classTokens

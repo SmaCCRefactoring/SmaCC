@@ -1,0 +1,3 @@
+generated
+assertTokens
+	^ assertTokens
