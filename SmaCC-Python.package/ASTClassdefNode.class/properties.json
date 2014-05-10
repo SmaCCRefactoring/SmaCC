@@ -6,7 +6,13 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"classToken",
+		"cname",
+		"colonToken",
+		"body",
+		"lparenToken",
+		"opts",
+		"rparenToken" ],
 	"name" : "ASTClassdefNode",
 	"pools" : [
 		 ],

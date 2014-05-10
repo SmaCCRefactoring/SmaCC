@@ -1,3 +1,9 @@
 generated-reduction actions
 reduceActionForclassdef1: nodes
-	^ nodes at: 4
+	| result |
+	result := ASTClassdefNode new.
+	result classToken: (nodes at: 1).
+	result cname: (nodes at: 2).
+	result colonToken: (nodes at: 3).
+	result body: (nodes at: 4).
+	^ result

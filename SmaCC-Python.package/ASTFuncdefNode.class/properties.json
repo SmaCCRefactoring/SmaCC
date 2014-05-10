@@ -6,7 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
+		"defToken",
+		"fname",
+		"parameters",
+		"colonToken",
+		"body" ],
 	"name" : "ASTFuncdefNode",
 	"pools" : [
 		 ],

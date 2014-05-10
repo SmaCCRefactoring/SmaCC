@@ -86,9 +86,9 @@ lineBegin <noindent>  : [^ \t\f\#] ;
 %suffix Node;
 
 file_input:
-	| file_input <NEWLINE>
-	| file_input stmt
-	{{}};
+	| file_input 'file' <NEWLINE> {{}}
+	| file_input 'file' stmt 'statements' {{}}
+	;
 
 single_input:
 	<NEWLINE>
@@ -121,19 +121,20 @@ decorated:
 	| decorators funcdef
 	;
 funcdef:
-	""def"" <name> parameters "":"" suite
-	{{}};
+	""def"" <name> 'fname' parameters 'parameters' "":"" suite 'body' {{}}
+	;
 parameters:
 	<lparen> varargslist_opt <rparen>
 	;
 varargslist_opt:
 	| varargslist
 	;
-varargslist: fpdef init_opt "","" varargslist
+varargslist:
+	fpdef init_opt "","" varargslist
 	| ""*"" <name> 
 	| ""*"" <name> "","" ""**"" <name>
 	| ""**"" <name> 
-      | fpdef init_opt comma_opt
+	| fpdef init_opt comma_opt
 	;
 init_opt:
 	| ""="" test
@@ -151,9 +152,9 @@ fplist:
 	;
 
 stmt:
-	simple_stmt
-	| compound_stmt
-	{{}};
+	simple_stmt 'statement' {{}}
+	| compound_stmt 'statement' {{}}
+	;
 simple_stmt:
 	small_stmt "";"" simple_stmt
 	| small_stmt semicolon_opt <NEWLINE>
@@ -530,9 +531,9 @@ more_tests:
 	| "","" test "":"" test more_tests
 	;
 classdef:
-	""class"" <name> "":"" suite
-	| ""class"" <name> <lparen> testlist_opt <rparen> "":"" suite
-	{{}};
+	""class"" <name> 'cname' "":"" suite 'body' {{}}
+	| ""class"" <name> 'cname' <lparen> testlist_opt 'opts' <rparen> "":"" suite 'body' {{}}
+	;
 
 arglist: 
 	argument "","" arglist

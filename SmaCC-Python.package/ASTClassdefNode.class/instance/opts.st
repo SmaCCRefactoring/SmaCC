@@ -1,0 +1,3 @@
+generated
+opts
+	^ opts
