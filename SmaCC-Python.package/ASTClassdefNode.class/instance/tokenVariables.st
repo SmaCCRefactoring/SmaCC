@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#classToken #cname #colonToken #lparenToken #opts #rparenToken)
+	^ #(#classToken #cname #colonToken #lparenToken #rparenToken)

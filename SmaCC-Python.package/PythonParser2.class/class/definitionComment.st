@@ -86,8 +86,8 @@ lineBegin <noindent>  : [^ \t\f\#] ;
 %suffix Node;
 
 file_input:
-	| file_input 'file' <NEWLINE> {{}}
-	| file_input 'file' stmt 'statements' {{}}
+	| file_input <NEWLINE> {{}}
+	| file_input stmt 'statement' {{}}
 	;
 
 single_input:
@@ -347,15 +347,15 @@ with_items:
 	| with_item
 	;
 with_item:
-	test |
-	test ""as"" expr
+	test
+	| test ""as"" expr
 	;
 # NB compile.c makes sure that the default except clause is last
 except_clause: 
-	""except"" |
-	""except"" test |
-	""except"" test ""as"" test |
-	""except"" test "","" test
+	""except""
+	| ""except"" test
+	| ""except"" test ""as"" test
+	| ""except"" test "","" test
 	;
 suite:
 	simple_stmt
@@ -517,8 +517,8 @@ exprlist:
 	| expr comma_opt
 	;
 testlist:
-	test "","" testlist
-	| test comma_opt
+	test "","" testlist {'3' addFirst: '1'. ^ '3'}
+	| test comma_opt { ^ OrderedCollection with: '1' }
 	;
 dictorsetmaker: 
 	test "":"" test comp_for

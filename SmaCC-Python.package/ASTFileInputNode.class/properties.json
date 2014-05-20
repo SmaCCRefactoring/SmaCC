@@ -6,9 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"file",
-		"nEWLINEToken",
-		"statements" ],
+		"statements",
+		"nEWLINETokens" ],
 	"name" : "ASTFileInputNode",
 	"pools" : [
 		 ],

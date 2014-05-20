@@ -3,11 +3,11 @@
 		 },
 	"instance" : {
 		"acceptVisitor:" : "DamienCassou 5/7/2014 18:16:27",
-		"file" : "ThierryGoubier 5/10/2014 20:18",
-		"file:" : "ThierryGoubier 5/10/2014 20:18",
-		"nEWLINEToken" : "ThierryGoubier 5/10/2014 20:18",
-		"nEWLINEToken:" : "ThierryGoubier 5/10/2014 20:18",
-		"nodeVariables" : "ThierryGoubier 5/10/2014 21:30",
+		"compositeNodeVariables" : "ThierryGoubier 5/20/2014 14:21",
+		"compositeTokenVariables" : "ThierryGoubier 5/20/2014 14:21",
+		"initialize" : "ThierryGoubier 5/20/2014 14:21",
+		"nEWLINETokens" : "ThierryGoubier 5/20/2014 14:21",
+		"nEWLINETokens:" : "ThierryGoubier 5/20/2014 14:21",
+		"pluralVariablesMap" : "ThierryGoubier 5/20/2014 14:21",
 		"statements" : "ThierryGoubier 5/10/2014 20:18",
-		"statements:" : "ThierryGoubier 5/10/2014 21:30",
-		"tokenVariables" : "ThierryGoubier 5/10/2014 20:18" } }
+		"statements:" : "ThierryGoubier 5/20/2014 14:21" } }

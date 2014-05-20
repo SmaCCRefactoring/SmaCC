@@ -2,6 +2,6 @@ generated-reduction actions
 reduceActionForfile_input2: nodes
 	| result |
 	result := ASTFileInputNode new.
-	result file: (nodes at: 1).
-	result nEWLINEToken: (nodes at: 2).
+	result addVariablesFrom: (nodes at: 1).
+	result addToken: (nodes at: 2) to: result nEWLINETokens.
 	^ result

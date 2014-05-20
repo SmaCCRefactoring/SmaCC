@@ -1,3 +1,3 @@
 generated
-opts: aSmaCCToken
-	opts := aSmaCCToken
+opts: anObject
+	opts := anObject

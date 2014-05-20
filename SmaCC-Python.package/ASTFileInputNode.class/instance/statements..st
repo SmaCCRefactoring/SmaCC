@@ -1,7 +1,5 @@
 generated
-statements: anASTStmtNode
-	self statements notNil
-		ifTrue: [ self statements parent: nil ].
-	statements := anASTStmtNode.
-	self statements notNil
-		ifTrue: [ self statements parent: self ]
+statements: anOrderedCollection
+	self setParents: self statements to: nil.
+	statements := anOrderedCollection.
+	self setParents: self statements to: self
