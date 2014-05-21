@@ -1,3 +1,0 @@
-generated
-otherVariables
-	^ #(#parameters #body)

@@ -1,3 +1,0 @@
-generated
-compositeTokenVariables
-	^ #(#notTokens #upArrowTokens #orTokens #andTokens #lessThanTokens #greaterThanTokens #equalEqualTokens #greaterThanEqualTokens #lessThanEqualTokens #lessThanGreaterThanTokens #bangEqualTokens #inTokens #isTokens #plusTokens #minusTokens #lessThanLessThanTokens #greaterThanGreaterThanTokens #tildeTokens #timesTokens #divideTokens #percentTokens #divideDivideTokens #timesTimesTokens #lparenTokens #rparenTokens #yieldTokens #lbrackTokens #rbrackTokens #lcurlyTokens #rcurlyTokens #_Tokens #nameTokens #numberTokens #ifTokens #elseTokens #lambdaTokens #colonTokens #equalTokens #commaTokens #stringTokens #periodTokens #forTokens #asTokens)

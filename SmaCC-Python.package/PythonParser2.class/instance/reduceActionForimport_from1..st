@@ -1,19 +1,15 @@
 generated-reduction actions
 reduceActionForimport_from1: nodes
 	| result |
-	result := Array new: 9.
-	result at: 2 put: (OrderedCollection new: 2).
-	result at: 3 put: (OrderedCollection new: 2).
-	result at: 7 put: (OrderedCollection new: 2).
-	result at: 8 put: (OrderedCollection new: 2).
-	result at: 1 put: (nodes at: 1).
-	self addAll: ((nodes at: 2) at: 1) to: (result at: 2).
-	self addAll: ((nodes at: 2) at: 2) to: (result at: 3).
-	result at: 4 put: (nodes at: 3).
-	result at: 5 put: ((nodes at: 4) at: 1).
-	result at: 6 put: ((nodes at: 4) at: 2).
-	self addAll: ((nodes at: 4) at: 3) to: (result at: 7).
-	self addAll: ((nodes at: 4) at: 4) to: (result at: 3).
-	self addAll: ((nodes at: 4) at: 5) to: (result at: 8).
-	result at: 9 put: ((nodes at: 4) at: 6).
+	result := ASTImportNode new.
+	result fromToken: (nodes at: 1).
+	result from: (nodes at: 2).
+	result importToken: (nodes at: 3).
+	result timesToken: ((nodes at: 4) at: 1).
+	result lparenToken: ((nodes at: 4) at: 2).
+	result addTokens: ((nodes at: 4) at: 3) to: result commaTokens.
+	result addObjects: ((nodes at: 4) at: 4) to: result names.
+	result addTokens: ((nodes at: 4) at: 5) to: result asTokens.
+	result addTokens: ((nodes at: 4) at: 6) to: result renames.
+	result rparenToken: ((nodes at: 4) at: 7).
 	^ result

@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"numberToken" ],
+	"name" : "ASTNumberNode",
+	"pools" : [
+		 ],
+	"super" : "ASTPythonNode",
+	"type" : "normal" }

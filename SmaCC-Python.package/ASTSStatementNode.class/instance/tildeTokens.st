@@ -1,3 +1,0 @@
-generated
-tildeTokens
-	^ tildeTokens

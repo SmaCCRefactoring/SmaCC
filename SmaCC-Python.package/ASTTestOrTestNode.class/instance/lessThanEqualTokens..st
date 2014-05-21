@@ -1,3 +1,0 @@
-generated
-lessThanEqualTokens: anOrderedCollection
-	lessThanEqualTokens := anOrderedCollection

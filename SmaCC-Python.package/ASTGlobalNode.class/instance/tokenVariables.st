@@ -1,0 +1,3 @@
+generated
+tokenVariables
+	^ #(#globalToken #names)

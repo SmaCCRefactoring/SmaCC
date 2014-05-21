@@ -1,7 +1,6 @@
 generated-reduction actions
 reduceActionForstrings2: nodes
 	| result |
-	result := Array new: 1.
-	result at: 1 put: (OrderedCollection new: 2).
-	self add: (nodes at: 1) to: (result at: 1).
+	result := ASTStringsNode new.
+	result addToken: (nodes at: 1) to: result strings.
 	^ result

@@ -1,6 +1,6 @@
 generated-reduction actions
 reduceActionForcomma_opt2: nodes
 	| result |
-	result := ASTNullPatternFooNode new.
-	result commaToken: (nodes at: 1).
+	result := Array new: 1.
+	result at: 1 put: (nodes at: 1).
 	^ result

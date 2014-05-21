@@ -1,0 +1,19 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"ifToken",
+		"if",
+		"colonToken",
+		"then",
+		"elsif",
+		"else" ],
+	"name" : "ASTIfStmtNode",
+	"pools" : [
+		 ],
+	"super" : "ASTPythonNode",
+	"type" : "normal" }

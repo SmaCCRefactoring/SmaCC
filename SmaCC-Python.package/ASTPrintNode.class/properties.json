@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"printToken",
+		"arguments",
+		"greaterThanGreaterThanToken" ],
+	"name" : "ASTPrintNode",
+	"pools" : [
+		 ],
+	"super" : "ASTPythonNode",
+	"type" : "normal" }

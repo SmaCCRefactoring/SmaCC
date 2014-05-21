@@ -1,0 +1,3 @@
+generated
+compositeTokenVariables
+	^ #(#elifTokens #colonTokens)

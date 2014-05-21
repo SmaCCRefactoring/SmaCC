@@ -127,14 +127,14 @@ parameters:
 	<lparen> varargslist_opt <rparen>
 	;
 varargslist_opt:
-	| varargslist
+	| varargslist {{VarArgList}}
 	;
 varargslist:
-	fpdef init_opt "","" varargslist
-	| ""*"" <name> 
-	| ""*"" <name> "","" ""**"" <name>
-	| ""**"" <name> 
-	| fpdef init_opt comma_opt
+	fpdef 'arg' init_opt 'init' "","" varargslist
+	| ""*"" <name> 'sname'
+	| ""*"" <name> 'sname' "","" ""**"" <name> 'ssname'
+	| ""**"" <name>  'sname'
+	| fpdef 'arg' init_opt 'init' comma_opt
 	;
 init_opt:
 	| ""="" test
@@ -149,8 +149,8 @@ fplist:
 	;
 
 stmt:
-	simple_stmt 'statement' {{}}
-	| compound_stmt 'statement' {{}}
+	simple_stmt
+	| compound_stmt
 	;
 simple_stmt:
 	small_stmt "";"" simple_stmt
@@ -186,14 +186,14 @@ augassign:
 	;
 # For normal assignments, additional restrictions enforced by the interpreter
 print_stmt:
-	""print"" testlist_opt
-	| ""print"" "">>"" testlist
+	""print"" testlist_opt 'arguments' {{Print}}
+	| ""print"" "">>"" testlist 'arguments' {{Print}}
 	;
 del_stmt:
 	""del"" exprlist
 	;
 pass_stmt:
-	""pass""
+	""pass"" {{Pass}}
 	;
 flow_stmt:
 	break_stmt
@@ -203,32 +203,32 @@ flow_stmt:
 	| yield_stmt
 	;
 break_stmt:
-	""break""
+	""break"" {{Break}}
 	;
 continue_stmt:
-	""continue""
+	""continue"" {{Continue}}
 	;
 return_stmt:
-	""return"" testlist_opt
+	""return"" testlist_opt 'args' {{Return}}
 	;
 yield_stmt:
 	yield_expr
 	;
 raise_stmt:
-	""raise""
-	| ""raise"" test
-	| ""raise"" test "","" test
-	| ""raise"" test "","" test "","" test
+	""raise"" {{Raise}}
+	| ""raise"" test 'arg1' {{Raise}}
+	| ""raise"" test 'arg1' "","" test 'arg2'  {{Raise}}
+	| ""raise"" test 'arg1' "","" test 'arg2' "","" test 'arg3' {{Raise}}
 	;
 import_stmt:
 	import_name
 	| import_from
 	;
 import_name:
-	""import"" dotted_as_names
+	""import"" dotted_as_names {{Import}}
 	;
 import_from:
-	""from"" dotopt_dotted_name ""import"" import_names_star
+	""from"" dotopt_dotted_name 'from' ""import"" import_names_star {{Import}}
 	;
 dotopt_dotted_name:
 	dotted_name
@@ -245,12 +245,12 @@ import_names_star:
 	| import_as_names
 	;
 import_as_name:
-	<name>
-	| <name> ""as"" <name>
+	<name> 'name'
+	| <name> 'name' ""as"" <name> 'rename'
 	;
 dotted_as_name:
-	dotted_name
-	| dotted_name ""as"" <name>
+	dotted_name 'name'
+	| dotted_name 'name' ""as"" <name> 'rename'
 	;
 import_as_names:
 	import_as_names_in comma_opt
@@ -264,11 +264,11 @@ dotted_as_names:
 	| dotted_as_name
 	;
 dotted_name:
-	dotted_name ""."" <name>
-	| <name>
+	dotted_name ""."" <name> 'name' {{DottedName}}
+	| <name> 'name' {{DottedName}}
 	;
 global_stmt:
-	""global"" namelist
+	""global"" namelist 'names' {{Global}}
 	;
 namelist:
 	namelist "","" <name>
@@ -283,37 +283,37 @@ test_test_opt:
 	| test "","" test
 	;
 assert_stmt:
-	""assert"" test_test_opt
+	""assert"" test_test_opt 'condition' {{Assert}}
 	;
 small_stmt:
-	expr_stmt     {{SStatement}}
-	| print_stmt  {{SStatement}}
-	| del_stmt    {{SStatement}}
-	| pass_stmt   {{SStatement}}
-	| flow_stmt   {{SStatement}}
-	| import_stmt {{SStatement}}
-	| global_stmt {{SStatement}}
-	| exec_stmt   {{SStatement}}
-	| assert_stmt {{SStatement}}
+	expr_stmt
+	| print_stmt
+	| del_stmt
+	| pass_stmt
+	| flow_stmt
+	| import_stmt
+	| global_stmt
+	| exec_stmt
+	| assert_stmt
 	;
 compound_stmt:
-	if_stmt      {{Statement}}
-	| while_stmt {{Statement}}
-	| for_stmt   {{Statement}}
-	| try_stmt   {{Statement}}
-	| with_stmt  {{Statement}}
-	| funcdef    {'1'}
-	| classdef   {'1'}
-	| decorated  {{Statement}}
+	if_stmt
+	| while_stmt
+	| for_stmt
+	| try_stmt
+	| with_stmt
+	| funcdef 
+	| classdef
+	| decorated 
 	;
 if_stmt:
-	""if"" test "":"" suite elifs_opt else_opt
+	""if"" test 'if' "":"" suite 'then' elifs_opt 'elsif' else_opt 'else' {{IfStmt}}
 	;
 elifs_opt:
-	| elifs_opt ""elif"" test "":"" suite
+	| elifs_opt ""elif"" test 'elif' "":"" suite 'then' {{Elif}}
 	;
 else_opt:
-	| ""else"" "":"" suite
+	| ""else"" "":"" suite 'else' {{Else}}
 	;
 while_stmt:
 	""while"" test "":"" suite else_opt
@@ -355,8 +355,8 @@ suite:
 	| <NEWLINE> <INDENT> stmts <DEDENT>
 	;
 stmts:
-	stmts stmt
-	| stmt
+	stmts stmt 'statement' {{Statements}}
+	| stmt 'statement' {{Statements}}
 	;
 
 # Backward compatibility cruft to support:
@@ -377,23 +377,23 @@ old_test:
 	| old_lambdef
 	;
 old_lambdef:
-	""lambda"" varargslist_opt "":"" old_test
+	""lambda"" varargslist_opt 'args' "":"" old_test 'body' {{Lambda}}
 	;
 or_test:
 	and_test
-	| and_test ""or"" or_test
+	| and_test 'one' ""or"" or_test 'two' {{Or}}
 	;
 and_test:
 	not_test
-	| not_test ""and"" and_test
+	| not_test 'one' ""and"" and_test 'two' {{And}}
 	;
 not_test:
-	""not"" not_test 
+	""not"" not_test 'negated' {{Not}}
 	| comparison
 	;
 comparison:
 	expr
-	| expr comp_op comparison
+	| expr 'one' comp_op 'op' comparison 'two' {{Comparison}}
 	;
 comp_op:
 	""<""
@@ -410,62 +410,62 @@ comp_op:
 	;
 expr:
 	xor_expr 
-	| xor_expr ""|"" expr
+	| xor_expr 'one' ""|"" expr 'two' {{VBarExpr}}
 	;
 xor_expr:
 	and_expr
-	| and_expr ""^"" xor_expr
+	| and_expr 'one' ""^"" xor_expr  'two' {{XorExpr}}
 	;
 and_expr:
 	shift_expr
-	| shift_expr ""&"" and_expr
+	| shift_expr 'one' ""&"" and_expr 'two'  {{AndExpr}}
 	;
 shift_expr:
 	arith_expr
-	| arith_expr ""<<"" shift_expr
-	| arith_expr "">>"" shift_expr
+	| arith_expr 'one' ""<<"" shift_expr 'two' {{LShiftExpr}}
+	| arith_expr 'one' "">>"" shift_expr 'two' {{RShiftExpr}}
 	;
 arith_expr:
 	term
-	| term ""+"" arith_expr
-	| term ""-"" arith_expr
+	| term 'one' ""+"" arith_expr 'two'  {{PlusExpr}}
+	| term 'one' ""-"" arith_expr 'two'  {{MinusExpr}}
 	;
 term:
 	factor
-	| factor ""*"" term
-	| factor ""/"" term
-	| factor ""%"" term
-	| factor ""//"" term
+	| factor 'factor' ""*"" term 'term'  {{}}
+	| factor 'factor' ""/"" term 'term'  {{}}
+	| factor 'factor' ""%"" term 'term' {{}}
+	| factor 'factor' ""//"" term 'term' {{}}
 	;
 factor:
 	power
-	| ""+"" factor
-	| ""-"" factor
-	| ""~"" factor
+	| ""+"" factor 'factor' {{}}
+	| ""-"" factor 'factor' {{}}
+	| ""~"" factor 'factor' {{}}
 	;
 power:
 	atom trailers_opt
-	| atom trailers_opt ""**"" factor
+	| atom 'atom' trailers_opt ""**"" factor 'factor' {{}}
 	;
 trailers_opt:
-	| trailers_opt trailer
+	| trailers_opt trailer 'trailer'
 	;
 atom: 
-	<lparen> <rparen>
-	| <lparen> yield_expr <rparen>
-	| <lparen> testlist_comp <rparen>
-	| <lbrack> <rbrack>
-	| <lbrack> listmaker <rbrack>
-	| <lcurly> dictorsetmaker <rcurly>
-	| <lcurly>  <rcurly>
-	| ""`"" testlist1 ""`""
-	| <name>
-	| <number>
+	<lparen> <rparen> {{}}
+	| <lparen> yield_expr 'list' <rparen> {{}}
+	| <lparen> testlist_comp 'list' <rparen> {{}}
+	| <lbrack> <rbrack> {{}}
+	| <lbrack> listmaker 'list' <rbrack> {{}}
+	| <lcurly> dictorsetmaker 'list' <rcurly> {{}}
+	| <lcurly>  <rcurly> {{}}
+	| ""`"" testlist1 'list' ""`"" {{BackTick}}
+	| <name>  {{Symbol}}
+	| <number> {{Number}}
 	| strings
 	;
 strings:
-	<string> strings
-	| <string>
+	<string> 'string' strings {{Strings}}
+	| <string> 'string'  {{Strings}}
 	;
 listmaker:
 	test list_for
@@ -476,7 +476,7 @@ testlist_comp:
 	| testlist
 	;
 lambdef:
-	""lambda"" varargslist_opt "":"" test
+	""lambda"" varargslist_opt 'arguments' "":"" test 'body' {{Lambda}}
 	;
 trailer: 
 	<lparen> <rparen>
@@ -504,21 +504,19 @@ exprlist:
 	| expr comma_opt
 	;
 comma_opt:
-	{{NullPatternFoo}}
-	| "","" {{NullPatternFoo}}
+	| "",""
 	;
 test:
-	or_test {{TestOrTest}}
-	| or_test ""if"" or_test ""else"" test {{OrTestIf}}
-	| lambdef {{LambdaDefTest}}
+	or_test
+	| or_test ""if"" or_test 'if' ""else"" test 'else'
+	| lambdef
 	;
 testlist:
-	test "","" testlist {'3' addFirst: '1'. ^ '3'}
-	| test comma_opt { ^ OrderedCollection with: '1' }
+	test 'test' "","" testlist
+	| test 'test' comma_opt
 	;
 testlist_opt:
-	{{NullPatternTestlistOpt}}
-	| testlist { ^ '1' }
+	| testlist
 	;
 dictorsetmaker: 
 	test "":"" test comp_for
@@ -588,5 +586,5 @@ testlist1:
 #encoding_decl: <name> ;
 
 yield_expr:
-	""yield"" testlist_opt
+	""yield"" testlist_opt 'arguments' {{Yield}}
 	;"

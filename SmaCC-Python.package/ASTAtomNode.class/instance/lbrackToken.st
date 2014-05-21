@@ -1,0 +1,3 @@
+generated
+lbrackToken
+	^ lbrackToken

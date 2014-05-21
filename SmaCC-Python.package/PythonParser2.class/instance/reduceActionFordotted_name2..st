@@ -1,8 +1,6 @@
 generated-reduction actions
 reduceActionFordotted_name2: nodes
 	| result |
-	result := Array new: 2.
-	result at: 1 put: (OrderedCollection new: 2).
-	result at: 2 put: (OrderedCollection new: 2).
-	self add: (nodes at: 1) to: (result at: 2).
+	result := ASTDottedNameNode new.
+	result addToken: (nodes at: 1) to: result names.
 	^ result

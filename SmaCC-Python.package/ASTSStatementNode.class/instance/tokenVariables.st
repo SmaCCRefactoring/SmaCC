@@ -1,3 +1,0 @@
-generated
-tokenVariables
-	^ #(#plusEqualToken #minusEqualToken #timesEqualToken #divideEqualToken #percentEqualToken #andEqualToken #orEqualToken #upArrowEqualToken #lessThanLessThanEqualToken #greaterThanGreaterThanEqualToken #timesTimesEqualToken #divideDivideEqualToken #printToken #delToken #passToken #breakToken #continueToken #returnToken #raiseToken #importToken #fromToken #globalToken #execToken #assertToken)

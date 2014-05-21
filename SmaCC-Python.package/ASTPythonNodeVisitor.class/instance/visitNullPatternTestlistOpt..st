@@ -1,3 +1,0 @@
-generated
-visitNullPatternTestlistOpt: aNullPatternTestlistOpt
-	^ self visitPython: aNullPatternTestlistOpt

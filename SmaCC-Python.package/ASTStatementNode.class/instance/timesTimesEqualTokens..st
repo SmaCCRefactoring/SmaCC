@@ -1,3 +1,0 @@
-generated
-timesTimesEqualTokens: anOrderedCollection
-	timesTimesEqualTokens := anOrderedCollection

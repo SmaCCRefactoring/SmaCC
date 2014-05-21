@@ -1,0 +1,20 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"lparenToken",
+		"rparenToken",
+		"list",
+		"lbrackToken",
+		"rbrackToken",
+		"lcurlyToken",
+		"rcurlyToken" ],
+	"name" : "ASTAtomNode",
+	"pools" : [
+		 ],
+	"super" : "ASTPythonNode",
+	"type" : "normal" }
