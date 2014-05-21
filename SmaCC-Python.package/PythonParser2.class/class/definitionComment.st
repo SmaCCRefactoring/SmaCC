@@ -530,7 +530,7 @@ more_tests:
 	;
 classdef:
 	""class"" <name> 'cname' "":"" suite 'body' {{}}
-	| ""class"" <name> 'cname' <lparen> testlist_opt 'opts' <rparen> "":"" suite 'body' {{}}
+	| ""class"" <name> 'cname' <lparen> testlist_opt <rparen> "":"" suite 'body' {{}}
 	;
 
 arglist: 

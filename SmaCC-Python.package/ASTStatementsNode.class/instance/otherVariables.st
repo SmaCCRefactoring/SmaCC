@@ -1,3 +1,3 @@
 generated
-compositeNodeVariables
+otherVariables
 	^ #(#statements)

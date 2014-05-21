@@ -11,8 +11,9 @@
 		"colonToken",
 		"body",
 		"lparenToken",
-		"opts",
-		"rparenToken" ],
+		"rparenToken",
+		"tests",
+		"commaTokens" ],
 	"name" : "ASTClassdefNode",
 	"pools" : [
 		 ],

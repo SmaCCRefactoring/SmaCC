@@ -6,5 +6,5 @@ reduceActionForelifs_opt2: nodes
 	result addToken: (nodes at: 2) to: result elifTokens.
 	result addNode: (nodes at: 3) to: result elifs.
 	result addToken: (nodes at: 4) to: result colonTokens.
-	result addNode: (nodes at: 5) to: result thens.
+	result addObject: (nodes at: 5) to: result thens.
 	^ result
