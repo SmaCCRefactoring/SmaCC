@@ -1,0 +1,45 @@
+generated-initialize-release
+initialize
+	super initialize.
+	notTokens := OrderedCollection new: 2.
+	upArrowTokens := OrderedCollection new: 2.
+	orTokens := OrderedCollection new: 2.
+	andTokens := OrderedCollection new: 2.
+	lessThanTokens := OrderedCollection new: 2.
+	greaterThanTokens := OrderedCollection new: 2.
+	equalEqualTokens := OrderedCollection new: 2.
+	greaterThanEqualTokens := OrderedCollection new: 2.
+	lessThanEqualTokens := OrderedCollection new: 2.
+	lessThanGreaterThanTokens := OrderedCollection new: 2.
+	bangEqualTokens := OrderedCollection new: 2.
+	inTokens := OrderedCollection new: 2.
+	isTokens := OrderedCollection new: 2.
+	plusTokens := OrderedCollection new: 2.
+	minusTokens := OrderedCollection new: 2.
+	lessThanLessThanTokens := OrderedCollection new: 2.
+	greaterThanGreaterThanTokens := OrderedCollection new: 2.
+	tildeTokens := OrderedCollection new: 2.
+	timesTokens := OrderedCollection new: 2.
+	divideTokens := OrderedCollection new: 2.
+	percentTokens := OrderedCollection new: 2.
+	divideDivideTokens := OrderedCollection new: 2.
+	timesTimesTokens := OrderedCollection new: 2.
+	lparenTokens := OrderedCollection new: 2.
+	rparenTokens := OrderedCollection new: 2.
+	yieldTokens := OrderedCollection new: 2.
+	lbrackTokens := OrderedCollection new: 2.
+	rbrackTokens := OrderedCollection new: 2.
+	lcurlyTokens := OrderedCollection new: 2.
+	rcurlyTokens := OrderedCollection new: 2.
+	_Tokens := OrderedCollection new: 2.
+	nameTokens := OrderedCollection new: 2.
+	numberTokens := OrderedCollection new: 2.
+	commaTokens := OrderedCollection new: 2.
+	ifTokens := OrderedCollection new: 2.
+	elseTokens := OrderedCollection new: 2.
+	colonTokens := OrderedCollection new: 2.
+	stringTokens := OrderedCollection new: 2.
+	periodTokens := OrderedCollection new: 2.
+	forTokens := OrderedCollection new: 2.
+	equalTokens := OrderedCollection new: 2.
+	lambdaTokens := OrderedCollection new: 2.

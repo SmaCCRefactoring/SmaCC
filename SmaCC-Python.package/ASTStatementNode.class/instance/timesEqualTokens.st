@@ -1,0 +1,3 @@
+generated
+timesEqualTokens
+	^ timesEqualTokens

@@ -139,9 +139,6 @@ varargslist:
 init_opt:
 	| ""="" test
 	;
-comma_opt:
-	| "",""
-	;
 fpdef:
 	<name>
 	| <lparen> fplist <rparen>
@@ -161,17 +158,6 @@ simple_stmt:
 	;
 semicolon_opt:
 	| "";""
-	;
-small_stmt:
-	expr_stmt
-	| print_stmt
-	| del_stmt
-	| pass_stmt
-	| flow_stmt
-	| import_stmt
-	| global_stmt
-	| exec_stmt
-	| assert_stmt
 	;
 expr_stmt: 
 	testlist assign_after
@@ -202,9 +188,6 @@ augassign:
 print_stmt:
 	""print"" testlist_opt
 	| ""print"" "">>"" testlist
-	;
-testlist_opt:
-	| testlist
 	;
 del_stmt:
 	""del"" exprlist
@@ -302,16 +285,26 @@ test_test_opt:
 assert_stmt:
 	""assert"" test_test_opt
 	;
-
+small_stmt:
+	expr_stmt     {{SStatement}}
+	| print_stmt  {{SStatement}}
+	| del_stmt    {{SStatement}}
+	| pass_stmt   {{SStatement}}
+	| flow_stmt   {{SStatement}}
+	| import_stmt {{SStatement}}
+	| global_stmt {{SStatement}}
+	| exec_stmt   {{SStatement}}
+	| assert_stmt {{SStatement}}
+	;
 compound_stmt:
-	if_stmt
-	| while_stmt
-	| for_stmt
-	| try_stmt
-	| with_stmt
-	| funcdef
-	| classdef
-	| decorated
+	if_stmt      {{Statement}}
+	| while_stmt {{Statement}}
+	| for_stmt   {{Statement}}
+	| try_stmt   {{Statement}}
+	| with_stmt  {{Statement}}
+	| funcdef    {'1'}
+	| classdef   {'1'}
+	| decorated  {{Statement}}
 	;
 if_stmt:
 	""if"" test "":"" suite elifs_opt else_opt
@@ -385,12 +378,6 @@ old_test:
 	;
 old_lambdef:
 	""lambda"" varargslist_opt "":"" old_test
-	;
-
-test:
-	or_test
-	| or_test ""if"" or_test ""else"" test
-	| lambdef
 	;
 or_test:
 	and_test
@@ -516,9 +503,22 @@ exprlist:
 	expr "","" exprlist
 	| expr comma_opt
 	;
+comma_opt:
+	{{NullPatternFoo}}
+	| "","" {{NullPatternFoo}}
+	;
+test:
+	or_test {{TestOrTest}}
+	| or_test ""if"" or_test ""else"" test {{OrTestIf}}
+	| lambdef {{LambdaDefTest}}
+	;
 testlist:
 	test "","" testlist {'3' addFirst: '1'. ^ '3'}
 	| test comma_opt { ^ OrderedCollection with: '1' }
+	;
+testlist_opt:
+	{{NullPatternTestlistOpt}}
+	| testlist { ^ '1' }
 	;
 dictorsetmaker: 
 	test "":"" test comp_for

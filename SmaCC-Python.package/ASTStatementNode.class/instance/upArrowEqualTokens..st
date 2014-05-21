@@ -1,0 +1,3 @@
+generated
+upArrowEqualTokens: anOrderedCollection
+	upArrowEqualTokens := anOrderedCollection

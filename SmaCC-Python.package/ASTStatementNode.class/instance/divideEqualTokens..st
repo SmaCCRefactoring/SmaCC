@@ -1,0 +1,3 @@
+generated
+divideEqualTokens: anOrderedCollection
+	divideEqualTokens := anOrderedCollection
