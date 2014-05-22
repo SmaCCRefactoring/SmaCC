@@ -1,7 +1,7 @@
 generated-reduction actions
 reduceActionForif_stmt1: nodes
 	| result |
-	result := ASTIfStmtNode new.
+	result := PyIfStmtNode new.
 	result ifToken: (nodes at: 1).
 	result if: (nodes at: 2).
 	result colonToken: (nodes at: 3).

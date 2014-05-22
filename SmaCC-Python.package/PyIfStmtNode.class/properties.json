@@ -1,0 +1,19 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"ifToken",
+		"if",
+		"colonToken",
+		"then",
+		"elsif",
+		"else" ],
+	"name" : "PyIfStmtNode",
+	"pools" : [
+		 ],
+	"super" : "PyRootNode",
+	"type" : "normal" }

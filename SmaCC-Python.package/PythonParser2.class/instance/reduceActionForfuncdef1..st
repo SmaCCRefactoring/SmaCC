@@ -1,7 +1,7 @@
 generated-reduction actions
 reduceActionForfuncdef1: nodes
 	| result |
-	result := ASTFuncdefNode new.
+	result := PyFuncdefNode new.
 	result defToken: (nodes at: 1).
 	result fname: (nodes at: 2).
 	result parameters: (nodes at: 3).

@@ -1,0 +1,17 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"elifTokens",
+		"elifs",
+		"colonTokens",
+		"thens" ],
+	"name" : "PyElifNode",
+	"pools" : [
+		 ],
+	"super" : "PyRootNode",
+	"type" : "normal" }

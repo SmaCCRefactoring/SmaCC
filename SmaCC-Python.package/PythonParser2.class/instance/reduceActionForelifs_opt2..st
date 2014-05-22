@@ -1,7 +1,7 @@
 generated-reduction actions
 reduceActionForelifs_opt2: nodes
 	| result |
-	result := ASTElifNode new.
+	result := PyElifNode new.
 	result addVariablesFrom: (nodes at: 1).
 	result addToken: (nodes at: 2) to: result elifTokens.
 	result addNode: (nodes at: 3) to: result elifs.

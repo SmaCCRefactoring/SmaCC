@@ -1,7 +1,7 @@
 generated-reduction actions
 reduceActionForraise_stmt4: nodes
 	| result |
-	result := ASTRaiseNode new.
+	result := PyRaiseNode new.
 	result raiseToken: (nodes at: 1).
 	result arg1: (nodes at: 2).
 	result addToken: (nodes at: 3) to: result commaTokens.

@@ -1,7 +1,7 @@
 generated-reduction actions
 reduceActionForimport_name1: nodes
 	| result |
-	result := ASTImportNode new.
+	result := PyImportNode new.
 	result importToken: (nodes at: 1).
 	result addTokens: ((nodes at: 2) at: 1) to: result commaTokens.
 	result addObjects: ((nodes at: 2) at: 2) to: result names.

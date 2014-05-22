@@ -1,0 +1,17 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"plusToken",
+		"factor",
+		"minusToken",
+		"tildeToken" ],
+	"name" : "PyFactorNode",
+	"pools" : [
+		 ],
+	"super" : "PyRootNode",
+	"type" : "normal" }

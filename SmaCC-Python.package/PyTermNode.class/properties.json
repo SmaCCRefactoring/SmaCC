@@ -1,0 +1,19 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"factor",
+		"timesToken",
+		"term",
+		"divideToken",
+		"percentToken",
+		"divideDivideToken" ],
+	"name" : "PyTermNode",
+	"pools" : [
+		 ],
+	"super" : "PyRootNode",
+	"type" : "normal" }

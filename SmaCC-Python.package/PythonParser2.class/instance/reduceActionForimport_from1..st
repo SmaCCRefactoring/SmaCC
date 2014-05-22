@@ -1,7 +1,7 @@
 generated-reduction actions
 reduceActionForimport_from1: nodes
 	| result |
-	result := ASTImportNode new.
+	result := PyImportNode new.
 	result fromToken: (nodes at: 1).
 	result from: (nodes at: 2).
 	result importToken: (nodes at: 3).

@@ -81,8 +81,8 @@ lineBegin <noindent>  : [^ \t\f\#] ;
 # Note: Grammar rewritten to eliminate () [] * ? + ThierryGoubier 5/5/2014 22:34
 
 %annotate_tokens;
-%root Python;
-%prefix AST;
+%root Root;
+%prefix Py;
 %suffix Node;
 
 file_input:
@@ -530,7 +530,7 @@ more_tests:
 	;
 classdef:
 	""class"" <name> 'cname' "":"" suite 'body' {{}}
-	| ""class"" <name> 'cname' <lparen> testlist_opt <rparen> "":"" suite 'body' {{}}
+	| ""class"" <name> 'cname' <lparen> testlist_opt<rparen> "":"" suite 'body' {{}}
 	;
 
 arglist: 

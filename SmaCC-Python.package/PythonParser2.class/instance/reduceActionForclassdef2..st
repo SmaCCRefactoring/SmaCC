@@ -1,7 +1,7 @@
 generated-reduction actions
 reduceActionForclassdef2: nodes
 	| result |
-	result := ASTClassdefNode new.
+	result := PyClassdefNode new.
 	result classToken: (nodes at: 1).
 	result cname: (nodes at: 2).
 	result lparenToken: (nodes at: 3).
