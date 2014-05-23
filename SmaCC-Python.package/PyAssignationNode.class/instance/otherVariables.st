@@ -1,0 +1,3 @@
+generated
+otherVariables
+	^ #(#tests #argumentses)

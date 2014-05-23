@@ -1,7 +1,3 @@
 generated
-two: aPyRootNode
-	self two notNil
-		ifTrue: [ self two parent: nil ].
-	two := aPyRootNode.
-	self two notNil
-		ifTrue: [ self two parent: self ]
+two: anObject
+	two := anObject

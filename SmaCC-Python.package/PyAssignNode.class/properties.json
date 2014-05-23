@@ -1,0 +1,30 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"tests",
+		"commaTokens",
+		"equalTokens",
+		"yieldTokens",
+		"argumentses",
+		"plusEqualToken",
+		"minusEqualToken",
+		"timesEqualToken",
+		"divideEqualToken",
+		"percentEqualToken",
+		"andEqualToken",
+		"orEqualToken",
+		"upArrowEqualToken",
+		"lessThanLessThanEqualToken",
+		"greaterThanGreaterThanEqualToken",
+		"timesTimesEqualToken",
+		"divideDivideEqualToken" ],
+	"name" : "PyAssignNode",
+	"pools" : [
+		 ],
+	"super" : "PyRootNode",
+	"type" : "normal" }

@@ -160,8 +160,8 @@ semicolon_opt:
 	| "";""
 	;
 expr_stmt: 
-	testlist assign_after
-	| testlist augassign yield_or_testlist
+	testlist assign_after { {Assignation} }
+	| testlist augassign yield_or_testlist { {Assignation} }
 	;
 assign_after:
 	| assign_after ""="" yield_or_testlist
@@ -443,13 +443,6 @@ factor:
 	| ""-"" factor 'factor' {{}}
 	| ""~"" factor 'factor' {{}}
 	;
-power:
-	atom trailers_opt
-	| atom 'atom' trailers_opt ""**"" factor 'factor' {{}}
-	;
-trailers_opt:
-	| trailers_opt trailer 'trailer'
-	;
 atom: 
 	<lparen> <rparen> {{}}
 	| <lparen> yield_expr 'list' <rparen> {{}}
@@ -459,10 +452,24 @@ atom:
 	| <lcurly> dictorsetmaker 'list' <rcurly> {{}}
 	| <lcurly>  <rcurly> {{}}
 	| ""`"" testlist1 'list' ""`"" {{BackTick}}
-	| <name>  {{Symbol}}
+	| symbol
 	| <number> {{Number}}
 	| strings
 	;
+
+symbol:
+	<name> { { Symbol} }
+	;
+	
+power:
+	atom 'atom' trailers_opt 'trailer' { 'trailer' addFirst: 'atom'. ^'trailer' } 
+	| atom 'atom' trailers_opt ""**"" factor 'factor' { '2' addFirst: 'atom'. ^'2' } 
+	;
+trailers_opt:
+	{^OrderedCollection new }
+	| trailers_opt trailer 'trailer' { 'trailer' addFirst: '1'. ^'trailer' }
+	;
+	
 strings:
 	<string> 'string' strings {{Strings}}
 	| <string> 'string'  {{Strings}}
@@ -478,11 +485,12 @@ testlist_comp:
 lambdef:
 	""lambda"" varargslist_opt 'arguments' "":"" test 'body' {{Lambda}}
 	;
+	
 trailer: 
 	<lparen> <rparen>
 	| <lparen> arglist <rparen>
-	| <lbrack> subscriptlist <rbrack>
-	| ""."" <name>
+	| <lbrack> subscriptlist <rbrack> { { } }
+	| ""."" symbol { ^OrderedCollection with: '2' }
 	;
 subscriptlist:
 	subscript "","" subscriptlist

@@ -5,7 +5,7 @@ reduceActionForclassdef2: nodes
 	result classToken: (nodes at: 1).
 	result cname: (nodes at: 2).
 	result lparenToken: (nodes at: 3).
-	result addNodes: ((nodes at: 4) at: 1) to: result tests.
+	result addObjects: ((nodes at: 4) at: 1) to: result tests.
 	result addTokens: ((nodes at: 4) at: 2) to: result commaTokens.
 	result rparenToken: (nodes at: 5).
 	result colonToken: (nodes at: 6).
