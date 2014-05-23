@@ -1,3 +1,3 @@
 generated
 otherVariables
-	^ #(#elifs #thens)
+	^ #(#thens)

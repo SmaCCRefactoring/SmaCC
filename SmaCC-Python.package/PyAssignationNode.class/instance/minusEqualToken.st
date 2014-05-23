@@ -1,3 +1,0 @@
-generated
-minusEqualToken
-	^ minusEqualToken

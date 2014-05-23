@@ -1,3 +1,7 @@
 generated
-factor: anObject
-	factor := anObject
+factor: aPyRootNode
+	self factor notNil
+		ifTrue: [ self factor parent: nil ].
+	factor := aPyRootNode.
+	self factor notNil
+		ifTrue: [ self factor parent: self ]

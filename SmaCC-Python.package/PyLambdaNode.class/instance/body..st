@@ -1,3 +1,7 @@
 generated
-body: anObject
-	body := anObject
+body: aPyRootNode
+	self body notNil
+		ifTrue: [ self body parent: nil ].
+	body := aPyRootNode.
+	self body notNil
+		ifTrue: [ self body parent: self ]

@@ -1,3 +1,3 @@
 generated
 otherVariables
-	^ #(#body #tests)
+	^ #(#body)

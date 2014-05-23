@@ -1,3 +1,3 @@
 generated
 otherVariables
-	^ #(#if #then)
+	^ #(#then)
