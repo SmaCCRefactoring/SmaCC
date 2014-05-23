@@ -2,14 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptVisitor:" : "DamienCassou 5/22/2014 11:09",
-		"factor" : "DamienCassou 5/22/2014 11:09",
-		"factor:" : "DamienCassou 5/22/2014 11:09",
-		"minusToken" : "DamienCassou 5/22/2014 11:09",
-		"minusToken:" : "DamienCassou 5/22/2014 11:09",
-		"nodeVariables" : "DamienCassou 5/22/2014 11:09",
-		"plusToken" : "DamienCassou 5/22/2014 11:09",
-		"plusToken:" : "DamienCassou 5/22/2014 11:09",
-		"tildeToken" : "DamienCassou 5/22/2014 11:09",
-		"tildeToken:" : "DamienCassou 5/22/2014 11:09",
-		"tokenVariables" : "DamienCassou 5/22/2014 11:09" } }
+		"acceptVisitor:" : "DamienCassou 5/22/2014 11:20:05",
+		"factor" : "DamienCassou 5/22/2014 11:20:05",
+		"factor:" : "jb 5/23/2014 17:16",
+		"minusToken" : "DamienCassou 5/22/2014 11:20:05",
+		"minusToken:" : "DamienCassou 5/22/2014 11:20:05",
+		"otherVariables" : "jb 5/23/2014 17:16",
+		"plusToken" : "DamienCassou 5/22/2014 11:20:05",
+		"plusToken:" : "DamienCassou 5/22/2014 11:20:05",
+		"tildeToken" : "DamienCassou 5/22/2014 11:20:05",
+		"tildeToken:" : "DamienCassou 5/22/2014 11:20:05",
+		"tokenVariables" : "DamienCassou 5/22/2014 11:20:05" } }

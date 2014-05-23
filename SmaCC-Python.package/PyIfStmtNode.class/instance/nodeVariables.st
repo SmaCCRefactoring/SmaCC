@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^ #(#if #elsif #else)
+	^ #(#elsif #else)

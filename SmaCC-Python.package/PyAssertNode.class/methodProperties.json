@@ -2,10 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptVisitor:" : "DamienCassou 5/22/2014 11:09",
-		"assertToken" : "DamienCassou 5/22/2014 11:09",
-		"assertToken:" : "DamienCassou 5/22/2014 11:09",
-		"condition" : "DamienCassou 5/22/2014 11:09",
-		"condition:" : "DamienCassou 5/22/2014 11:09",
-		"nodeVariables" : "DamienCassou 5/22/2014 11:09",
-		"tokenVariables" : "DamienCassou 5/22/2014 11:09" } }
+		"acceptVisitor:" : "DamienCassou 5/22/2014 11:20:05",
+		"assertToken" : "DamienCassou 5/22/2014 11:20:05",
+		"assertToken:" : "DamienCassou 5/22/2014 11:20:05",
+		"condition" : "DamienCassou 5/22/2014 11:20:05",
+		"condition:" : "jb 5/23/2014 17:16",
+		"otherVariables" : "jb 5/23/2014 17:16",
+		"tokenVariables" : "DamienCassou 5/22/2014 11:20:05" } }
