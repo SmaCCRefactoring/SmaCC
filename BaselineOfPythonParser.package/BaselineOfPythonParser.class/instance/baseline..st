@@ -4,7 +4,7 @@ baseline: spec
 	spec
 		for: #pharo
 		do: [ 
-			spec repository: 'github://ThierryGoubier/SmaCC:pharo30-dev'.
+			spec repository: 'github://ThierryGoubier/SmaCC:master'.
 			spec
 				project: 'SmaCC'
 				with: [ 
