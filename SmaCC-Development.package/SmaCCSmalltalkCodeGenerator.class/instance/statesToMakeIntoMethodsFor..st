@@ -21,6 +21,6 @@ statesToMakeIntoMethodsFor: aSmaCCNode
 					selectedStates add: each.
 					ts := (each transitions collect: [ :e | e to ])
 						asSortedCollection: [ :a :b | (a allTransitionsWith: selectedStates) > (b allTransitionsWith: selectedStates) ].
-					[ (each allTransitionsWith: selectedStates) > self class maxTransitionsInScanMethod ]
+					[ ts notEmpty and: [ (each allTransitionsWith: selectedStates) > self class maxTransitionsInScanMethod ] ]
 						whileTrue: [ selectedStates add: ts removeFirst ] ] ].
 	^ selectedStates asSortedCollection: [ :a :b | a id < b id ]

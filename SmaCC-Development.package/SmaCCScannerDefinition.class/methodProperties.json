@@ -1,16 +1,16 @@
 {
 	"class" : {
-		"new" : "ThierryGoubier 3/18/2014 10:53:00" },
+		"new" : "ThierryGoubier 4/27/2014 17:57:11" },
 	"instance" : {
-		"addExcludeState:" : "ThierryGoubier 3/18/2014 10:53:00",
-		"addState:" : "ThierryGoubier 3/18/2014 10:53:00",
-		"addToken:withName:" : "ThierryGoubier 3/18/2014 10:53:00",
-		"defaultState" : "ThierryGoubier 3/18/2014 10:53:00",
-		"includesTokenNamed:" : "ThierryGoubier 3/18/2014 10:53:00",
-		"initialize" : "ThierryGoubier 3/18/2014 10:53:00",
-		"isExcludeState:" : "ThierryGoubier 3/18/2014 10:53:00",
-		"nonExcludeStates" : "ThierryGoubier 3/18/2014 10:53:00",
-		"states" : "ThierryGoubier 3/18/2014 10:53:00",
-		"tokenNamed:" : "ThierryGoubier 3/18/2014 10:53:00",
-		"tokenNamed:ifAbsentPut:" : "ThierryGoubier 3/18/2014 10:53:00",
-		"tokens" : "ThierryGoubier 3/18/2014 10:53:00" } }
+		"addExcludeState:" : "ThierryGoubier 4/27/2014 17:57:11",
+		"addState:" : "ThierryGoubier 4/27/2014 17:57:11",
+		"addToken:withName:" : "ThierryGoubier 4/27/2014 17:57:11",
+		"defaultState" : "ThierryGoubier 4/27/2014 17:57:11",
+		"includesTokenNamed:" : "ThierryGoubier 4/27/2014 17:57:11",
+		"initialize" : "ThierryGoubier 4/27/2014 17:57:11",
+		"isExcludeState:" : "ThierryGoubier 4/27/2014 17:57:11",
+		"nonExcludeStates" : "ThierryGoubier 4/27/2014 17:57:11",
+		"states" : "ThierryGoubier 4/27/2014 17:57:11",
+		"tokenNamed:" : "ThierryGoubier 4/27/2014 17:57:11",
+		"tokenNamed:ifAbsentPut:" : "ThierryGoubier 4/27/2014 17:57:11",
+		"tokens" : "ThierryGoubier 4/27/2014 17:57:11" } }
