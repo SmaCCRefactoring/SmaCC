@@ -1,0 +1,3 @@
+generated
+symbolTypes
+	^ #(#SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #Object #Object #Object #Object #Object #Object #SmaCCToken #Object #Object #Object #Object #SmaCCToken #Object #Object #Object #SmaCCToken #Object #Object #Object #Object #Object #Object #Object #Object #Object #Object #Object #Object #Object #Object #SmaCCToken #Object #SmaCCToken #SmaCCToken)

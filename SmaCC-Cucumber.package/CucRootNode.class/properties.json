@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Cucumber",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "CucRootNode",
+	"pools" : [
+		 ],
+	"super" : "SmaCCParseNode",
+	"type" : "normal" }

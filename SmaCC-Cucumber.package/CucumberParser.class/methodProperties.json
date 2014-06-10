@@ -1,0 +1,15 @@
+{
+	"class" : {
+		"definitionComment" : "ThierryGoubier 6/10/2014 02:04",
+		"scannerClass" : "ThierryGoubier 6/5/2014 15:17",
+		"startingStateForfeature" : "ThierryGoubier 6/10/2014 02:00" },
+	"instance" : {
+		"reduceActionFor_____space_____eol___1:" : "ThierryGoubier 6/10/2014 02:04",
+		"reduceActionFor_____tag_______space_____eol_____1:" : "ThierryGoubier 6/10/2014 02:04",
+		"reduceActionFor_____tag_______space_____eol_____2:" : "ThierryGoubier 6/10/2014 02:04",
+		"reduceActionForbackground_2:" : "ThierryGoubier 6/10/2014 02:00",
+		"reduceActionForfeature1:" : "ThierryGoubier 6/10/2014 02:00",
+		"reduceActionForstep1:" : "ThierryGoubier 6/10/2014 02:00",
+		"reduceTable" : "ThierryGoubier 6/10/2014 02:04",
+		"symbolTypes" : "ThierryGoubier 6/10/2014 02:04",
+		"transitionTable" : "ThierryGoubier 6/10/2014 02:04" } }

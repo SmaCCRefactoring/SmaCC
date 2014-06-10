@@ -1,0 +1,1 @@
+(name 'SmaCC-Cucumber-ThierryGoubier.1' message 'First version of the Cucumber parser. Has shift/reduce conflicts, isn''t tested, requires a new SmaCC-Development and I haven''t regenerated all parsers with it.' id 'a0cb2305-1a89-4af7-bf80-23cf23dc8b4a' date '10 June 2014' time '2:30:49.048277 am' author 'ThierryGoubier' ancestors () stepChildren ())

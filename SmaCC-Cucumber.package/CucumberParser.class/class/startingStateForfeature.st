@@ -1,0 +1,3 @@
+generated
+startingStateForfeature
+	^ 1
