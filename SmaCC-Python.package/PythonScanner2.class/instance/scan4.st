@@ -1,4 +1,7 @@
 generated
 scan4
+	self recordMatch: #(80).
 	self step.
-	^ self scan3
+	currentCharacter = Character lf
+		ifTrue: [ ^ self scan3 ].
+	^ self reportLastMatch

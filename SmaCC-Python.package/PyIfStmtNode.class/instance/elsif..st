@@ -1,7 +1,7 @@
 generated
-elsif: aPyElifNode
+elsif: aPyRootNode
 	self elsif notNil
 		ifTrue: [ self elsif parent: nil ].
-	elsif := aPyElifNode.
+	elsif := aPyRootNode.
 	self elsif notNil
 		ifTrue: [ self elsif parent: self ]

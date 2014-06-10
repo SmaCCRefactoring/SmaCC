@@ -2,7 +2,7 @@ generated
 scan7
 	[ 
 	self step.
-	currentCharacter = $'
+	currentCharacter = $"
 		ifTrue: [ ^ self recordAndReportMatch: #(72) ].
 	currentCharacter = $\
 		ifTrue: [ ^ self scan8 ].
@@ -10,6 +10,6 @@ scan7
 		or: [ 
 			(currentCharacter between: Character pageUp and: Character newPage)
 				or: [ 
-					(currentCharacter between: (Character value: 14) and: $&)
-						or: [ (currentCharacter between: $( and: $[) or: [ currentCharacter >= $] ] ] ] ] ] whileTrue.
+					(currentCharacter between: (Character value: 14) and: $!)
+						or: [ (currentCharacter between: $# and: $[) or: [ currentCharacter >= $] ] ] ] ] ] whileTrue.
 	^ self reportLastMatch

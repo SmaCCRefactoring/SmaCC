@@ -1,64 +1,20 @@
 generated
 scan13
-	self recordMatch: #(73).
 	self step.
-	currentCharacter = $.
-		ifTrue: [ ^ self scan10 ].
-	(currentCharacter between: $8 and: $9)
+	currentCharacter = $'
+		ifTrue: [ 
+			self recordMatch: #(72).
+			self step.
+			currentCharacter = $'
+				ifTrue: [ ^ self scan16 ].
+			^ self reportLastMatch ].
+	currentCharacter = $\
+		ifTrue: [ ^ self scan15 ].
+	(currentCharacter <= Character tab
+		or: [ 
+			(currentCharacter between: Character pageUp and: Character newPage)
+				or: [ 
+					(currentCharacter between: (Character value: 14) and: $&)
+						or: [ (currentCharacter between: $( and: $[) or: [ currentCharacter >= $] ] ] ] ])
 		ifTrue: [ ^ self scan14 ].
-	currentCharacter isDigit
-		ifTrue: [ 
-			[ 
-			self recordMatch: #(73).
-			self step.
-			currentCharacter = $.
-				ifTrue: [ ^ self scan10 ].
-			(currentCharacter between: $8 and: $9)
-				ifTrue: [ ^ self scan14 ].
-			currentCharacter isDigit ] whileTrue.
-			('Ee' includes: currentCharacter)
-				ifTrue: [ ^ self scan11 ].
-			('Ljl' includes: currentCharacter)
-				ifTrue: [ ^ self recordAndReportMatch: #(73) ].
-			^ self reportLastMatch ].
-	('Bb' includes: currentCharacter)
-		ifTrue: [ 
-			self step.
-			(currentCharacter between: $0 and: $1)
-				ifTrue: [ 
-					[ 
-					self recordMatch: #(73).
-					self step.
-					currentCharacter between: $0 and: $1 ] whileTrue.
-					('Ll' includes: currentCharacter)
-						ifTrue: [ ^ self recordAndReportMatch: #(73) ] ].
-			^ self reportLastMatch ].
-	('Ee' includes: currentCharacter)
-		ifTrue: [ ^ self scan11 ].
-	('Oo' includes: currentCharacter)
-		ifTrue: [ 
-			self step.
-			(currentCharacter between: $0 and: $7)
-				ifTrue: [ 
-					[ 
-					self recordMatch: #(73).
-					self step.
-					currentCharacter between: $0 and: $7 ] whileTrue.
-					('Ll' includes: currentCharacter)
-						ifTrue: [ ^ self recordAndReportMatch: #(73) ] ].
-			^ self reportLastMatch ].
-	('Xx' includes: currentCharacter)
-		ifTrue: [ 
-			self step.
-			currentCharacter isHexDigit
-				ifTrue: [ 
-					[ 
-					self recordMatch: #(73).
-					self step.
-					('Ll' includes: currentCharacter)
-						ifTrue: [ ^ self recordAndReportMatch: #(73) ].
-					currentCharacter isHexDigit ] whileTrue ].
-			^ self reportLastMatch ].
-	('Ljl' includes: currentCharacter)
-		ifTrue: [ ^ self recordAndReportMatch: #(73) ].
 	^ self reportLastMatch

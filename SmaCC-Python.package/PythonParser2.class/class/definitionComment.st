@@ -85,7 +85,7 @@ lineBegin <noindent>  : [^ \t\f\#] ;
 %prefix Py;
 %suffix Node;
 
-file_input:
+file_input: {{}}
 	| file_input <NEWLINE> {{}}
 	| file_input stmt 'statement' {{}}
 	;
@@ -309,7 +309,7 @@ compound_stmt:
 if_stmt:
 	""if"" test 'if' "":"" suite 'then' elifs_opt 'elsif' else_opt 'else' {{IfStmt}}
 	;
-elifs_opt:
+elifs_opt: {{}}
 	| elifs_opt ""elif"" test 'elif' "":"" suite 'then' {{Elif}}
 	;
 else_opt:

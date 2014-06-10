@@ -1,7 +1,7 @@
 generated
 reduceTable
 ^#(
-	#(179 0 #nil) 
+	#(179 0 #reduceActionForfile_input1:) 
 	#(119 1 #reduceActionForpass_stmt1:) 
 	#(115 0 #reduceActionFortestlist_opt1:) 
 	#(120 1 #reduceActionForbreak_stmt1:) 
@@ -141,7 +141,7 @@ reduceTable
 	#(178 3 #reduceActionForsingle_input1:) 
 	#(95 4 #reduceActionForclassdef1:) 
 	#(149 0 #nil) 
-	#(148 0 #nil) 
+	#(148 0 #reduceActionForelifs_opt1:) 
 	#(152 1 #reduceActionForsingle_input1:) 
 	#(154 3 #reduceActionForsingle_input1:) 
 	#(147 4 #liftSecondValue:) 
@@ -184,7 +184,7 @@ reduceTable
 	#(93 3 #reduceActionForsingle_input1:) 
 	#(143 6 #reduceActionForif_stmt1:) 
 	#(100 4 #reduceActionForsuite2:) 
-	#(155 2 #reduceActionForstmts1:) 
+	#(155 2 #reduceActionForfile_input3:) 
 	#(146 6 #reduceActionForsuite2:) 
 	#(150 3 #reduceActionForsingle_input1:) 
 	#(203 5 #reduceActionForvarargslist3:) 

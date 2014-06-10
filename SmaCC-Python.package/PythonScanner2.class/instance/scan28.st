@@ -1,124 +1,64 @@
 generated
 scan28
-	self recordMatch: #(71).
+	self recordMatch: #(73).
 	self step.
-	currentCharacter = $h
-		ifTrue: [ 
-			self recordMatch: #(71).
-			self step.
-			currentCharacter = $i
-				ifTrue: [ 
-					self recordMatch: #(71).
-					self step.
-					currentCharacter = $l
-						ifTrue: [ 
-							self recordMatch: #(71).
-							self step.
-							currentCharacter = $e
-								ifTrue: [ 
-									self recordMatch: #(58 71).
-									self step.
-									((currentCharacter between: $0 and: $9)
-										or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ])
-										ifTrue: [ 
-											[ 
-											self recordMatch: #(71).
-											self step.
-											(currentCharacter between: $0 and: $9)
-												or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-												whileTrue ].
-									^ self reportLastMatch ].
-							((currentCharacter between: $0 and: $9)
-								or: [ 
-									(currentCharacter between: $A and: $Z)
-										or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $d) or: [ currentCharacter between: $f and: $z ] ] ] ])
-								ifTrue: [ 
-									[ 
-									self recordMatch: #(71).
-									self step.
-									(currentCharacter between: $0 and: $9)
-										or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-										whileTrue ].
-							^ self reportLastMatch ].
-					((currentCharacter between: $0 and: $9)
-						or: [ 
-							(currentCharacter between: $A and: $Z)
-								or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $k) or: [ currentCharacter between: $m and: $z ] ] ] ])
-						ifTrue: [ 
-							[ 
-							self recordMatch: #(71).
-							self step.
-							(currentCharacter between: $0 and: $9)
-								or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-								whileTrue ].
-					^ self reportLastMatch ].
-			((currentCharacter between: $0 and: $9)
-				or: [ 
-					(currentCharacter between: $A and: $Z)
-						or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $h) or: [ currentCharacter between: $j and: $z ] ] ] ])
-				ifTrue: [ 
-					[ 
-					self recordMatch: #(71).
-					self step.
-					(currentCharacter between: $0 and: $9)
-						or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-						whileTrue ].
-			^ self reportLastMatch ].
-	currentCharacter = $i
-		ifTrue: [ 
-			self recordMatch: #(71).
-			self step.
-			currentCharacter = $t
-				ifTrue: [ 
-					self recordMatch: #(71).
-					self step.
-					currentCharacter = $h
-						ifTrue: [ 
-							self recordMatch: #(63 71).
-							self step.
-							((currentCharacter between: $0 and: $9)
-								or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ])
-								ifTrue: [ 
-									[ 
-									self recordMatch: #(71).
-									self step.
-									(currentCharacter between: $0 and: $9)
-										or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-										whileTrue ].
-							^ self reportLastMatch ].
-					((currentCharacter between: $0 and: $9)
-						or: [ 
-							(currentCharacter between: $A and: $Z)
-								or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $g) or: [ currentCharacter between: $i and: $z ] ] ] ])
-						ifTrue: [ 
-							[ 
-							self recordMatch: #(71).
-							self step.
-							(currentCharacter between: $0 and: $9)
-								or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-								whileTrue ].
-					^ self reportLastMatch ].
-			((currentCharacter between: $0 and: $9)
-				or: [ 
-					(currentCharacter between: $A and: $Z)
-						or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $s) or: [ currentCharacter between: $u and: $z ] ] ] ])
-				ifTrue: [ 
-					[ 
-					self recordMatch: #(71).
-					self step.
-					(currentCharacter between: $0 and: $9)
-						or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-						whileTrue ].
-			^ self reportLastMatch ].
-	((currentCharacter between: $0 and: $9)
-		or: [ 
-			(currentCharacter between: $A and: $Z)
-				or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $g) or: [ currentCharacter between: $j and: $z ] ] ] ])
+	currentCharacter = $.
+		ifTrue: [ ^ self scan24 ].
+	(currentCharacter between: $8 and: $9)
+		ifTrue: [ ^ self scan29 ].
+	currentCharacter isDigit
 		ifTrue: [ 
 			[ 
-			self recordMatch: #(71).
+			self recordMatch: #(73).
 			self step.
-			(currentCharacter between: $0 and: $9)
-				or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-				whileTrue ].
+			currentCharacter = $.
+				ifTrue: [ ^ self scan24 ].
+			(currentCharacter between: $8 and: $9)
+				ifTrue: [ ^ self scan29 ].
+			currentCharacter isDigit ] whileTrue.
+			('Ee' includes: currentCharacter)
+				ifTrue: [ ^ self scan25 ].
+			('Ljl' includes: currentCharacter)
+				ifTrue: [ ^ self recordAndReportMatch: #(73) ].
+			^ self reportLastMatch ].
+	('Bb' includes: currentCharacter)
+		ifTrue: [ 
+			self step.
+			(currentCharacter between: $0 and: $1)
+				ifTrue: [ 
+					[ 
+					self recordMatch: #(73).
+					self step.
+					currentCharacter between: $0 and: $1 ] whileTrue.
+					('Ll' includes: currentCharacter)
+						ifTrue: [ ^ self recordAndReportMatch: #(73) ] ].
+			^ self reportLastMatch ].
+	('Ee' includes: currentCharacter)
+		ifTrue: [ ^ self scan25 ].
+	('Oo' includes: currentCharacter)
+		ifTrue: [ 
+			self step.
+			(currentCharacter between: $0 and: $7)
+				ifTrue: [ 
+					[ 
+					self recordMatch: #(73).
+					self step.
+					currentCharacter between: $0 and: $7 ] whileTrue.
+					('Ll' includes: currentCharacter)
+						ifTrue: [ ^ self recordAndReportMatch: #(73) ] ].
+			^ self reportLastMatch ].
+	('Xx' includes: currentCharacter)
+		ifTrue: [ 
+			self step.
+			currentCharacter isHexDigit
+				ifTrue: [ 
+					[ 
+					self recordMatch: #(73).
+					self step.
+					('Ll' includes: currentCharacter)
+						ifTrue: [ ^ self recordAndReportMatch: #(73) ].
+					currentCharacter isHexDigit ] whileTrue ].
+			^ self reportLastMatch ].
+	('Ljl' includes: currentCharacter)
+		ifTrue: [ ^ self recordAndReportMatch: #(73) ].
 	^ self reportLastMatch
