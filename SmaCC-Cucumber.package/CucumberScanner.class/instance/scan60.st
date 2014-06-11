@@ -1,7 +1,7 @@
 generated
 scan60
 	self step.
-	currentCharacter = $a
+	currentCharacter = $n
 		ifTrue: [ ^ self scan61 ].
 	currentCharacter = $|
 		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
@@ -9,7 +9,7 @@ scan60
 		or: [ 
 			(currentCharacter between: Character pageUp and: Character newPage)
 				or: [ 
-					(currentCharacter between: (Character value: 14) and: $`)
-						or: [ (currentCharacter between: $b and: ${) or: [ currentCharacter >= $} ] ] ] ])
+					(currentCharacter between: (Character value: 14) and: $m)
+						or: [ (currentCharacter between: $o and: ${) or: [ currentCharacter >= $} ] ] ] ])
 		ifTrue: [ ^ self scan1 ].
 	^ self reportLastMatch

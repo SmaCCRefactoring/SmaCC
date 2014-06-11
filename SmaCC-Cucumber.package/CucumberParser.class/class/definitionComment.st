@@ -1,6 +1,11 @@
 generated
 definitionComment
-"<tag> : @ ([^@\r\n\t ])+ ;
+"%root Root;
+%prefix Cuc;
+%suffix Node;
+%glr ;
+
+<tag> : @ ([^@\r\n\t ])+ ;
 <space> : [  \t] ;
 <line_to_eol> : (!(\r?\n))* ;
 <eol> : \r?\n ;
@@ -22,11 +27,27 @@ definitionComment
 <lines_to_keyword> : (!(<eol> <space>* <reserved_words_and_symbols>))* ;
 <header> : (!(<comment> (<tag> | <scenario_keyword> | <background_keyword>)))* ;
 
-feature : <white> <comment> tags <header> background? feature_elements <comment>? ;
-feature_elements : (scenario | scenario_outline)* ;
-scenario : <comment> tags <scenario_keyword> <space>* <lines_to_keyword> <white> steps ;
-scenario_outline : <comment> tags <scenario_outline_keyword> <space>* <lines_to_keyword> <white> steps examples_sections <white> ;
-tags : <white> (<tag> (<space>|<eol>)+)* ;
+# Grammar part of it.
+feature : <white>* <comment> tags <header> background? 'background' feature_elements <comment>? {{}} ;
+
+feature_elements :
+	| feature_element 'feature_element' feature_elements
+	;
+
+feature_element:
+	scenario
+	| scenario_outline
+	; 
+
+scenario : <comment> tags <scenario_keyword> <space>* <lines_to_keyword> <white> steps {{}} ;
+
+scenario_outline : <comment> tags <scenario_outline_keyword> <space>* <lines_to_keyword> <white> steps examples_sections <white> {{}};
+
+tags : <white> tag ;
+tag : 
+	| <tag> 'tag' (<space>|<eol>)+ tag
+	;
+
 background : <comment> <background_keyword> <space>* <lines_to_keyword>? <eol>+ steps ;
 row : <row_start> (<cell>| <row_start>)+ <eol> ;
 table : row+ ;
@@ -34,9 +55,4 @@ steps : step* ;
 step : <comment> <step_keyword> <keyword_space> <line_to_eol> (<eol>+) multiline_arg? <white> ;
 examples_sections : examples* ;
 examples : <comment> <space>* <examples_keyword> <space>* <lines_to_keyword>? <eol> table <white> ;
-multiline_arg : table | <py_string> ;
-
-
-%root Root;
-%prefix Cuc;
-%suffix Node;"
+multiline_arg : table | <py_string> ;"

@@ -1,7 +1,7 @@
 generated
 scan58
 	self step.
-	currentCharacter = $e
+	currentCharacter = $c
 		ifTrue: [ ^ self scan59 ].
 	currentCharacter = $|
 		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
@@ -9,7 +9,7 @@ scan58
 		or: [ 
 			(currentCharacter between: Character pageUp and: Character newPage)
 				or: [ 
-					(currentCharacter between: (Character value: 14) and: $d)
-						or: [ (currentCharacter between: $f and: ${) or: [ currentCharacter >= $} ] ] ] ])
+					(currentCharacter between: (Character value: 14) and: $b)
+						or: [ (currentCharacter between: $d and: ${) or: [ currentCharacter >= $} ] ] ] ])
 		ifTrue: [ ^ self scan1 ].
 	^ self reportLastMatch

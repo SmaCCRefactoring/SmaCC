@@ -1,3 +1,0 @@
-generated-reduction actions
-reduceActionFor_____tag_______space_____eol_____1: nodes
-	^ OrderedCollection new

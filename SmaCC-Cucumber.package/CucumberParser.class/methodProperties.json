@@ -1,15 +1,23 @@
 {
 	"class" : {
-		"definitionComment" : "ThierryGoubier 6/10/2014 02:04",
+		"definitionComment" : "ThierryGoubier 6/11/2014 06:42",
 		"scannerClass" : "ThierryGoubier 6/5/2014 15:17",
 		"startingStateForfeature" : "ThierryGoubier 6/10/2014 02:00" },
 	"instance" : {
+		"ambiguousTransitions" : "ThierryGoubier 6/11/2014 06:42",
+		"reduceActionFor_____space_____eol__1:" : "ThierryGoubier 6/11/2014 01:39",
 		"reduceActionFor_____space_____eol___1:" : "ThierryGoubier 6/10/2014 02:04",
-		"reduceActionFor_____tag_______space_____eol_____1:" : "ThierryGoubier 6/10/2014 02:04",
-		"reduceActionFor_____tag_______space_____eol_____2:" : "ThierryGoubier 6/10/2014 02:04",
-		"reduceActionForbackground_2:" : "ThierryGoubier 6/10/2014 02:00",
-		"reduceActionForfeature1:" : "ThierryGoubier 6/10/2014 02:00",
+		"reduceActionFor_white__1:" : "ThierryGoubier 6/11/2014 06:42",
+		"reduceActionFor_white__2:" : "ThierryGoubier 6/11/2014 06:42",
+		"reduceActionForbackground1:" : "ThierryGoubier 6/11/2014 01:39",
+		"reduceActionForfeature1:" : "ThierryGoubier 6/11/2014 06:42",
+		"reduceActionForfeature_elements2:" : "ThierryGoubier 6/11/2014 01:39",
+		"reduceActionForscenario1:" : "ThierryGoubier 6/11/2014 01:39",
+		"reduceActionForscenario_outline1:" : "ThierryGoubier 6/11/2014 01:39",
 		"reduceActionForstep1:" : "ThierryGoubier 6/10/2014 02:00",
-		"reduceTable" : "ThierryGoubier 6/10/2014 02:04",
-		"symbolTypes" : "ThierryGoubier 6/10/2014 02:04",
-		"transitionTable" : "ThierryGoubier 6/10/2014 02:04" } }
+		"reduceActionFortag1:" : "ThierryGoubier 6/11/2014 01:39",
+		"reduceActionFortag2:" : "ThierryGoubier 6/11/2014 01:39",
+		"reduceActionFortags1:" : "ThierryGoubier 6/11/2014 01:39",
+		"reduceTable" : "ThierryGoubier 6/11/2014 06:42",
+		"symbolTypes" : "ThierryGoubier 6/11/2014 06:42",
+		"transitionTable" : "ThierryGoubier 6/11/2014 06:42" } }
