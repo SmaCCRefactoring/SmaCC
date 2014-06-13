@@ -6,158 +6,83 @@ scan16
 		ifTrue: [ 
 			self recordMatch: #(30).
 			self step.
-			currentCharacter = $n
+			currentCharacter = $o
 				ifTrue: [ 
 					self recordMatch: #(30).
 					self step.
-					currentCharacter = $o
+					currentCharacter = $t
 						ifTrue: [ 
 							self recordMatch: #(30).
 							self step.
-							currentCharacter = $t
+							currentCharacter = $a
 								ifTrue: [ 
 									self recordMatch: #(30).
 									self step.
-									currentCharacter = $a
+									currentCharacter = $t
 										ifTrue: [ 
 											self recordMatch: #(30).
 											self step.
-											currentCharacter = $t
+											currentCharacter = $e
 												ifTrue: [ 
 													self recordMatch: #(30).
 													self step.
-													currentCharacter = $e
+													currentCharacter = $_
 														ifTrue: [ 
 															self recordMatch: #(30).
 															self step.
-															currentCharacter = $_
+															currentCharacter = $t
 																ifTrue: [ 
 																	self recordMatch: #(30).
 																	self step.
-																	currentCharacter = $t
+																	currentCharacter = $o
 																		ifTrue: [ 
 																			self recordMatch: #(30).
 																			self step.
-																			currentCharacter = $o
+																			currentCharacter = $k
 																				ifTrue: [ 
 																					self recordMatch: #(30).
 																					self step.
-																					currentCharacter = $k
+																					currentCharacter = $e
 																						ifTrue: [ 
 																							self recordMatch: #(30).
 																							self step.
-																							currentCharacter = $e
+																							currentCharacter = $n
 																								ifTrue: [ 
 																									self recordMatch: #(30).
 																									self step.
-																									currentCharacter = $n
+																									currentCharacter = $s
 																										ifTrue: [ 
-																											self recordMatch: #(30).
+																											self recordMatch: #(27 30).
 																											self step.
-																											currentCharacter = $s
+																											(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
 																												ifTrue: [ 
-																													self recordMatch: #(27 30).
+																													[ 
+																													self recordMatch: #(30).
 																													self step.
-																													(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
-																														ifTrue: [ 
-																															[ 
-																															self recordMatch: #(30).
-																															self step.
-																															currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
-																													^ self reportLastMatch ] ].
-																									(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
-																										ifTrue: [ 
-																											[ 
-																											self recordMatch: #(30).
-																											self step.
-																											currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
-																									^ self reportLastMatch ] ].
-																					(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
-																						ifTrue: [ 
-																							[ 
-																							self recordMatch: #(30).
-																							self step.
-																							currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
-																					^ self reportLastMatch ] ].
-																	(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
-																		ifTrue: [ 
-																			[ 
-																			self recordMatch: #(30).
-																			self step.
-																			currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
-																	^ self reportLastMatch ].
-															currentCharacter isAlphaNumeric
+																													currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
+																											^ self reportLastMatch ] ].
+																							(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
+																								ifTrue: [ 
+																									[ 
+																									self recordMatch: #(30).
+																									self step.
+																									currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
+																							^ self reportLastMatch ] ].
+																			(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
+																				ifTrue: [ 
+																					[ 
+																					self recordMatch: #(30).
+																					self step.
+																					currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
+																			^ self reportLastMatch ] ].
+															(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
 																ifTrue: [ 
 																	[ 
 																	self recordMatch: #(30).
 																	self step.
 																	currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
-															^ self reportLastMatch ] ].
-											(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
-												ifTrue: [ 
-													[ 
-													self recordMatch: #(30).
-													self step.
-													currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
-											^ self reportLastMatch ] ].
-							(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
-								ifTrue: [ 
-									[ 
-									self recordMatch: #(30).
-									self step.
-									currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
-							^ self reportLastMatch ] ].
-			(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
-				ifTrue: [ 
-					[ 
-					self recordMatch: #(30).
-					self step.
-					currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
-			^ self reportLastMatch ].
-	currentCharacter = $t
-		ifTrue: [ 
-			self recordMatch: #(30).
-			self step.
-			currentCharacter = $t
-				ifTrue: [ 
-					self recordMatch: #(30).
-					self step.
-					currentCharacter = $r
-						ifTrue: [ 
-							self recordMatch: #(30).
-							self step.
-							currentCharacter = $i
-								ifTrue: [ 
-									self recordMatch: #(30).
-									self step.
-									currentCharacter = $b
-										ifTrue: [ 
-											self recordMatch: #(30).
-											self step.
-											currentCharacter = $u
-												ifTrue: [ 
-													self recordMatch: #(30).
-													self step.
-													currentCharacter = $t
-														ifTrue: [ 
-															self recordMatch: #(30).
-															self step.
-															currentCharacter = $e
-																ifTrue: [ 
-																	self recordMatch: #(30).
-																	self step.
-																	currentCharacter = $s
-																		ifTrue: [ 
-																			self recordMatch: #(16 30).
-																			self step ].
-																	(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
-																		ifTrue: [ 
-																			[ 
-																			self recordMatch: #(30).
-																			self step.
-																			currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
-																	^ self reportLastMatch ] ].
-													(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
+															^ self reportLastMatch ].
+													currentCharacter isAlphaNumeric
 														ifTrue: [ 
 															[ 
 															self recordMatch: #(30).

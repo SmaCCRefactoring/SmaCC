@@ -1,7 +1,6 @@
 generated
 scan4
-	self recordMatch: #(36).
 	self step.
-	currentCharacter = $>
-		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
+	(currentCharacter isLetter or: [ currentCharacter = $_ ])
+		ifTrue: [ ^ self scan5 ].
 	^ self reportLastMatch

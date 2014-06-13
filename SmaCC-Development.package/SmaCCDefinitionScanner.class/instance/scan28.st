@@ -1,9 +1,7 @@
 generated
-scan12
-	self recordMatch: #(30).
+scan28
+	self recordMatch: #(30 41).
 	self step.
-	currentCharacter = $r
-		ifTrue: [ ^ self scan13 ].
 	(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
 		ifTrue: [ 
 			[ 

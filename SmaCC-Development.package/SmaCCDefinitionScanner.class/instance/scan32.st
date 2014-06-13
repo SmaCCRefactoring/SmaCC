@@ -1,6 +1,6 @@
 generated
-scan12
-	self recordMatch: #(30).
+scan32
+	self recordMatch: #(30 41).
 	self step.
 	currentCharacter = $r
 		ifTrue: [ ^ self scan13 ].

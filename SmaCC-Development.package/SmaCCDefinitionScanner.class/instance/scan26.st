@@ -1,5 +1,5 @@
 generated
-scan14
+scan26
 	self step.
 	currentCharacter = $"
 		ifTrue: [ ^ self scan1 ].
@@ -38,54 +38,23 @@ scan14
 		ifTrue: [ ^ self recordAndReportMatch: #(7) ].
 	currentCharacter = $]
 		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
-	currentCharacter = $a
-		ifTrue: [ ^ self scan15 ].
 	currentCharacter = $e
-		ifTrue: [ ^ self scan17 ].
-	currentCharacter = $g
-		ifTrue: [ 
-			self recordMatch: #(30).
-			self step.
-			currentCharacter = $l
-				ifTrue: [ 
-					self recordMatch: #(30).
-					self step.
-					currentCharacter = $r
-						ifTrue: [ 
-							self recordMatch: #(24 30).
-							self step.
-							(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
-								ifTrue: [ 
-									[ 
-									self recordMatch: #(30).
-									self step.
-									currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
-							^ self reportLastMatch ] ].
-			(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
-				ifTrue: [ 
-					[ 
-					self recordMatch: #(30).
-					self step.
-					currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
-			^ self reportLastMatch ].
-	currentCharacter = $h
-		ifTrue: [ ^ self scan18 ].
-	currentCharacter = $i
-		ifTrue: [ ^ self scan19 ].
-	currentCharacter = $l
-		ifTrue: [ ^ self scan21 ].
-	currentCharacter = $n
-		ifTrue: [ ^ self scan22 ].
-	currentCharacter = $p
-		ifTrue: [ ^ self scan23 ].
-	currentCharacter = $r
-		ifTrue: [ ^ self scan24 ].
-	currentCharacter = $s
-		ifTrue: [ ^ self scan25 ].
+		ifTrue: [ ^ self scan12 ].
 	currentCharacter = ${
-		ifTrue: [ ^ self recordAndReportMatch: #(33) ].
+		ifTrue: [ 
+			self recordMatch: #(33).
+			self step.
+			currentCharacter = ${
+				ifTrue: [ ^ self recordAndReportMatch: #(43) ].
+			^ self reportLastMatch ].
 	currentCharacter = $|
 		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
+	currentCharacter = $}
+		ifTrue: [ 
+			self step.
+			currentCharacter = $}
+				ifTrue: [ ^ self recordAndReportMatch: #(44) ].
+			^ self reportLastMatch ].
 	(currentCharacter isSeparator or: [ currentCharacter = Character pageUp ])
 		ifTrue: [ 
 			[ 

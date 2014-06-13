@@ -445,7 +445,7 @@ Term
 					(scannerDefinition includesTokenNamed: '1' value) 
 						ifTrue: [symbol regularExpression: (scannerDefinition tokenNamed: '1' value)]
 						ifFalse:
-							[node := SmaCCGrammar implicitToken: '1' value.
+							[node := self generateImplicitToken: '1' value.
 							node notNil
 								ifTrue: 
 									[node addStates: scannerDefinition nonExcludeStates.
