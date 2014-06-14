@@ -92,4 +92,26 @@ If a token is not referenced from a grammar specification, it will not be includ
 
 Unicode Characters
 
-SmaCC compiles the scanner into a bunch of conditional tests on characters. Normally, it assumes that characters have values between 0 and 255, and it can make some optimizations based on this fact. With the "Allow Unicode Characters" option checked, it will assume that characters have values between 0 and 65535. Dolphin does not support Unicode characters, so this option isn''t available under Dolphin.'
+SmaCC compiles the scanner into a bunch of conditional tests on characters. Normally, it assumes that characters have values between 0 and 255, and it can make some optimizations based on this fact. With the "Allow Unicode Characters" option checked, it will assume that characters have values between 0 and 65535. 
+
+
+Scanner states
+
+SmaCC can compile scanners with states, and tokens which are active depending on the state of the scanner, allowing one to activate specialized scanners to handle things like the indentation at the beginning of lines in Python, embedded SQL syntax in another language, etc... The syntax consist of preceding the token name in the definition with a state label:
+
+nameOfState <tokenName> :
+
+And, somewhere in the generated parser or scanner, the switch to the other state is activated by:
+
+self state: #nameOfState (in the scanner)
+self scanner state: #nameOfState (in the productions actions)
+
+Such states have mutually exclusive definitions: a definition active in one state is not visible in another state. Definitions without state label are considered as belonging to the state #default, which can switched to with:
+
+self state: #default
+
+Examples of that use are the SmaCCPython parser.
+
+Implicit tokens
+
+SmaCC can auto-generates a token specification out of a token name referenced as a method of Character and not instantiated somewhere else. For example, <isUppercase> is an implicit token class matching all characters in Uppercase, as implemented by Character>>asUppercase. Such implicit tokens are allways ordered last and can be used both in the scanner definition and in the grammar productions.'
