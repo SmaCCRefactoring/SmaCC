@@ -99,9 +99,9 @@ Scanner states
 
 SmaCC can compile scanners with states, and tokens which are active depending on the state of the scanner, allowing one to activate specialized scanners to handle things like the indentation at the beginning of lines in Python, embedded SQL syntax in another language, etc... The syntax consist of preceding the token name in the definition with a state label:
 
-nameOfState <tokenName> :
+nameOfState TokenName :
 
-And, somewhere in the generated parser or scanner, the switch to the other state is activated by:
+where nameOfState is a valid identifier. Somewhere in the generated parser or scanner, the switch to the other state is activated by:
 
 self state: #nameOfState (in the scanner)
 self scanner state: #nameOfState (in the productions actions)
