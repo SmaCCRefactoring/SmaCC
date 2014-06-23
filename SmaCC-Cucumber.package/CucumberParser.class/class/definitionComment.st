@@ -22,13 +22,15 @@ definitionComment
 <scenario_outline_keyword> : Scenario\ Outline\: ;
 <scenario_keyword> : Scenario\: ;
 <background_keyword> : Background\: ;
-<keyword_space> : \ ;
-<reserved_words_and_symbols> : (<step_keyword> <keyword_space>) | <scenario_keyword> | <scenario_outline_keyword> | <row_start> | (<space> * <tag>) | <comment_line> ;
-<lines_to_keyword> : (!(<eol> <space>* <reserved_words_and_symbols>))* ;
-<header> : (!(<comment> (<tag> | <scenario_keyword> | <background_keyword>)))* ;
+<feature_keyword> : Feature\: ;
+<reserved_words_and_symbols> : (<step_keyword> \ ) | <scenario_keyword> | <scenario_outline_keyword> | <row_start> | <tag> | \# ;
+<whitespace> : \s ;
+
+after_keyword <lines_to_keyword> : (!(<eol> <space>* <reserved_words_and_symbols>))* ;
+
 
 # Grammar part of it.
-feature : <white>* <comment> tags <header> background? 'background' feature_elements <comment>? {{}} ;
+feature : tags ""Feature:"" <lines_to_keyword> background? 'background' feature_elements {{}} ;
 
 feature_elements :
 	| feature_element 'feature_element' feature_elements
@@ -39,13 +41,12 @@ feature_element:
 	| scenario_outline
 	; 
 
-scenario : <comment> tags <scenario_keyword> <space>* <lines_to_keyword> <white> steps {{}} ;
+scenario :  tags <scenario_keyword> <lines_to_keyword> steps {{}} ;
 
-scenario_outline : <comment> tags <scenario_outline_keyword> <space>* <lines_to_keyword> <white> steps examples_sections <white> {{}};
+scenario_outline : tags <scenario_outline_keyword> <lines_to_keyword> steps examples_sections {{}};
 
-tags : <white> tag ;
-tag : 
-	| <tag> 'tag' (<space>|<eol>)+ tag
+tags :
+	| <tag> 'tag' tags
 	;
 
 background : <comment> <background_keyword> <space>* <lines_to_keyword>? <eol>+ steps ;

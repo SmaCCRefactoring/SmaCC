@@ -2,21 +2,37 @@ generated
 scan15
 	self step.
 	currentCharacter = Character lf
-		ifTrue: [ ^ self scan20 ].
+		ifTrue: [ ^ self scan16 ].
 	currentCharacter = Character cr
-		ifTrue: [ ^ self scan26 ].
+		ifTrue: [ ^ self scan18 ].
 	currentCharacter = $!
 		ifTrue: [ 
 			self step.
 			currentCharacter = Character lf
-				ifTrue: [ ^ self scan21 ].
+				ifTrue: [ ^ self scan17 ].
 			currentCharacter = Character cr
-				ifTrue: [ ^ self scan27 ].
+				ifTrue: [ ^ self scan19 ].
 			currentCharacter = $|
-				ifTrue: [ ^ self recordAndReportMatch: #(9) ].
-			^ self scan1 ].
+				ifTrue: [ ^ self recordAndReportMatch: #(10) ].
+			^ self scan8 ].
 	currentCharacter = $|
-		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(10) ].
 	(currentCharacter = Character tab or: [ currentCharacter = Character space ])
-		ifTrue: [ ^ self scan14 ].
-	^ self scan1
+		ifTrue: [ 
+			[ 
+			self recordMatch: #(7).
+			self step.
+			currentCharacter = $#
+				ifTrue: [ ^ self scan15 ].
+			currentCharacter = $|
+				ifTrue: [ ^ self recordAndReportMatch: #(10) ].
+			currentCharacter = Character tab or: [ currentCharacter = Character space ] ] whileTrue.
+			(currentCharacter <= Character backspace
+				or: [ 
+					(currentCharacter between: Character pageUp and: Character newPage)
+						or: [ 
+							(currentCharacter between: (Character value: 14) and: Character arrowDown)
+								or: [ (currentCharacter between: $! and: $") or: [ (currentCharacter between: $$ and: ${) or: [ currentCharacter >= $} ] ] ] ] ])
+				ifTrue: [ ^ self scan8 ].
+			^ self reportLastMatch ].
+	^ self scan8

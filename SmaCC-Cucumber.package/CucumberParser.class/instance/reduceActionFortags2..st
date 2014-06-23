@@ -1,5 +1,5 @@
 generated-reduction actions
-reduceActionForfeature_elements2: nodes
+reduceActionFortags2: nodes
 	| result |
 	result := Array new: 1.
 	result at: 1 put: (OrderedCollection new: 2).

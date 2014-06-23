@@ -1,25 +1,15 @@
 generated
 scan33
-	self recordMatch: #(3).
 	self step.
-	currentCharacter = $!
-		ifTrue: [ ^ self scan49 ].
-	currentCharacter = $#
-		ifTrue: [ ^ self scan35 ].
-	currentCharacter = $@
-		ifTrue: [ ^ self scan38 ].
-	currentCharacter = $A
-		ifTrue: [ ^ self scan40 ].
-	currentCharacter = $B
-		ifTrue: [ ^ self scan44 ].
-	currentCharacter = $G
-		ifTrue: [ ^ self scan45 ].
-	currentCharacter = $S
-		ifTrue: [ ^ self scan47 ].
-	currentCharacter = $|
-		ifTrue: [ ^ self scan42 ].
-	(currentCharacter = Character tab or: [ currentCharacter = Character space ])
+	currentCharacter = $r
 		ifTrue: [ ^ self scan34 ].
-	('TW' includes: currentCharacter)
-		ifTrue: [ ^ self scan48 ].
+	currentCharacter = $|
+		ifTrue: [ ^ self recordAndReportMatch: #(10) ].
+	(currentCharacter <= Character tab
+		or: [ 
+			(currentCharacter between: Character pageUp and: Character newPage)
+				or: [ 
+					(currentCharacter between: (Character value: 14) and: $q)
+						or: [ (currentCharacter between: $s and: ${) or: [ currentCharacter >= $} ] ] ] ])
+		ifTrue: [ ^ self scan8 ].
 	^ self reportLastMatch

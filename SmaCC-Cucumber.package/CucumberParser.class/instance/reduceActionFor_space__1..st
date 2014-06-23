@@ -1,3 +1,3 @@
 generated-reduction actions
-reduceActionFor_white__1: nodes
+reduceActionFor_space__1: nodes
 	^ OrderedCollection new

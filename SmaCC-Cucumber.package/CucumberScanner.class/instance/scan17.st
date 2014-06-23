@@ -1,19 +1,16 @@
 generated
 scan17
-	[ 
-	self recordMatch: #(17).
 	self step.
-	currentCharacter = $!
+	currentCharacter = Character cr
 		ifTrue: [ ^ self scan18 ].
-	currentCharacter = $|
-		ifTrue: [ ^ self scan29 ].
-	(currentCharacter = Character tab or: [ currentCharacter = Character space or: [ currentCharacter = $@ ] ])
-		ifTrue: [ ^ self scan1 ].
-	currentCharacter <= Character backspace
-		or: [ 
-			(currentCharacter between: Character pageUp and: Character newPage)
-				or: [ 
-					(currentCharacter between: (Character value: 14) and: Character arrowDown)
-						or: [ (currentCharacter between: $" and: $?) or: [ (currentCharacter between: $A and: ${) or: [ currentCharacter >= $} ] ] ] ] ] ]
-		whileTrue.
+	currentCharacter = $!
+		ifTrue: [ 
+			self step.
+			currentCharacter = Character lf
+				ifTrue: [ ^ self scan17 ].
+			currentCharacter = Character cr
+				ifTrue: [ ^ self scan19 ].
+			^ self reportLastMatch ].
+	((currentCharacter between: Character tab and: Character lf) or: [ currentCharacter = Character space ])
+		ifTrue: [ ^ self scan16 ].
 	^ self reportLastMatch
