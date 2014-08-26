@@ -5,15 +5,14 @@ allStartingSymbols
 	| startingSymbols default |
 	default := self startSymbol.
 	startingSymbols := otherStartingSymbols copy.
-	startingSymbols remove: default ifAbsent: [].
+	startingSymbols remove: default ifAbsent: [  ].
 	startingSymbols := startingSymbols
-		collect:
-			[:each | 
+		collect: [ :each | 
 			(self newStartingSymbolNamed: each name)
 				addProduction:
-						((self newRHS)
+						(self newRHS
 								add: each;
 								yourself);
-				yourself].
-	startingSymbols addFirst: default.
-	^startingSymbols
+				yourself ].
+	default ifNotNil: [ startingSymbols addFirst: default ].
+	^ startingSymbols
