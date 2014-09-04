@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Browser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SmaCCASTTreeNode",
+	"pools" : [
+		 ],
+	"super" : "AlCompositeTreeNode",
+	"type" : "normal" }

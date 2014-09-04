@@ -1,0 +1,19 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptDroppingMorph:event:inMorph:" : "ThierryGoubier 9/4/2014 11:44",
+		"buildTextMenu:" : "ThierryGoubier 9/4/2014 11:44",
+		"buildTreeMenu:" : "ThierryGoubier 9/4/2014 11:44",
+		"defaultCommands" : "ThierryGoubier 9/4/2014 11:44",
+		"defaultTextMorph" : "ThierryGoubier 9/4/2014 13:43",
+		"doubleClick" : "ThierryGoubier 9/4/2014 11:38",
+		"dragPassengerFor:inMorph:" : "ThierryGoubier 9/4/2014 11:44",
+		"history" : "ThierryGoubier 9/4/2014 13:15",
+		"open" : "ThierryGoubier 9/4/2014 11:37",
+		"selection:" : "ThierryGoubier 9/4/2014 11:43",
+		"text" : "ThierryGoubier 9/4/2014 13:56",
+		"text:" : "ThierryGoubier 9/4/2014 13:43",
+		"updateTextKeymap" : "ThierryGoubier 9/4/2014 11:40",
+		"updateTreeKeymap" : "ThierryGoubier 9/4/2014 11:39",
+		"wantsDroppedMorph:event:inMorph:" : "ThierryGoubier 9/4/2014 11:44" } }

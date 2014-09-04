@@ -1,0 +1,17 @@
+{
+	"category" : "SmaCC-Browser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"window",
+		"textMorph",
+		"history",
+		"text" ],
+	"name" : "SmaCCBrowser",
+	"pools" : [
+		 ],
+	"super" : "AlTreeModel",
+	"type" : "normal" }
