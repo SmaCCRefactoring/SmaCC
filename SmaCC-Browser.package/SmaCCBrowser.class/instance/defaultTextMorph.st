@@ -1,7 +1,7 @@
 view
 defaultTextMorph
 	^ (PluggableTextMorph
-		on: self source
+		on: self
 		text: #text
 		accept: #text:
 		readSelection: nil

@@ -33,5 +33,4 @@ open
 				addLeftOrTop: treeMorph;
 				addRightOrBottom: textMorph).
 	window minimumExtent: 500 @ 500.
-	window open.
-	self registerToAnnouncements
+	window open
