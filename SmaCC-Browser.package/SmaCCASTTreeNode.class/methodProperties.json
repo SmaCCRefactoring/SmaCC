@@ -3,4 +3,11 @@
 		 },
 	"instance" : {
 		"asStringIn:" : "ThierryGoubier 9/9/2014 17:02",
-		"contents" : "ThierryGoubier 9/9/2014 17:06" } }
+		"buildTextMenu:on:with:" : "ThierryGoubier 9/10/2014 16:13",
+		"buildTextShortcutsOn:with:" : "ThierryGoubier 9/10/2014 16:13",
+		"buildTreeMenu:on:with:" : "ThierryGoubier 9/10/2014 16:14",
+		"buildTreeShortcutsOn:with:" : "ThierryGoubier 9/10/2014 16:14",
+		"contents" : "ThierryGoubier 9/9/2014 17:06",
+		"pragmas:from:to:" : "ThierryGoubier 9/10/2014 16:27",
+		"startPosition" : "ThierryGoubier 9/10/2014 16:33",
+		"stopPosition" : "ThierryGoubier 9/10/2014 16:33" } }

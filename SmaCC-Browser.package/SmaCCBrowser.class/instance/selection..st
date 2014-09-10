@@ -10,10 +10,11 @@ selection: anItem
 		ifTrue: [ ^ self ].
 	self updateTextKeymap.
 	self updateTreeKeymap.
-	self updateTitle.
+	self updateTextSelection.
 	sel isNil
 		ifTrue: [ 
-			"Need to unselect things?" ]
+			"Need to unselect things?"
+			 ]
 		ifFalse: [ 
 			self history add: sel.
 			sel item selectIn: self ]
