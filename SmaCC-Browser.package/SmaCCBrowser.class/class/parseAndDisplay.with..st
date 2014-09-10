@@ -5,6 +5,6 @@ parseAndDisplay: aString with: aParser
 	| ast browser |
 	ast := aParser parse: aString.
 	browser := self new.
-	browser rootItems: (ast sortedChildren collect: [ :e | SmaCCASTTreeNode with: e ]).
+	browser rootItems: {(SmaCCASTTreeNode with: ast)}.
 	browser text: aString.
 	browser open
