@@ -1,3 +1,3 @@
 generated
-body: anObject
-	body := anObject
+body: anOrderedCollection
+	body := anOrderedCollection

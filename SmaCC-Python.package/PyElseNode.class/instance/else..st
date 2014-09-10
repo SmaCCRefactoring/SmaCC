@@ -1,3 +1,3 @@
 generated
-else: anObject
-	else := anObject
+else: anOrderedCollection
+	else := anOrderedCollection

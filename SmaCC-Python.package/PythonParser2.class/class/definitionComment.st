@@ -153,8 +153,8 @@ stmt:
 	| compound_stmt
 	;
 simple_stmt:
-	small_stmt "";"" simple_stmt
-	| small_stmt semicolon_opt <NEWLINE>
+	small_stmt "";"" simple_stmt 'simple'
+	| small_stmt 'simple' semicolon_opt <NEWLINE>
 	;
 semicolon_opt:
 	| "";""
@@ -268,7 +268,7 @@ dotted_name:
 	| <name> 'name' {{DottedName}}
 	;
 global_stmt:
-	""global"" namelist 'names' {{Global}}
+	""global"" namelist {{Global}}
 	;
 namelist:
 	namelist "","" <name>
@@ -316,14 +316,14 @@ else_opt:
 	| ""else"" "":"" suite 'else' {{Else}}
 	;
 while_stmt:
-	""while"" test "":"" suite else_opt
+	""while"" test "":"" suite else_opt {{While}}
 	;
 for_stmt:
-	""for"" exprlist ""in"" testlist "":"" suite else_opt
+	""for"" exprlist ""in"" testlist "":"" suite else_opt {{For}}
 	;
 try_stmt:
-	""try"" "":"" suite except_list else_opt finally_opt
-	| ""try"" "":"" suite ""finally"" "":"" suite
+	""try"" "":"" suite except_list else_opt finally_opt {{Try}}
+	| ""try"" "":"" suite ""finally"" "":"" suite {{Try}}
 	;
 finally_opt:
 	| ""finally"" "":"" suite

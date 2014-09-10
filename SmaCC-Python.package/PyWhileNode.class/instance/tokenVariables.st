@@ -1,0 +1,3 @@
+generated
+tokenVariables
+	^ #(#whileToken #plusEqualToken #minusEqualToken #timesEqualToken #divideEqualToken #percentEqualToken #andEqualToken #orEqualToken #upArrowEqualToken #lessThanLessThanEqualToken #greaterThanGreaterThanEqualToken #timesTimesEqualToken #divideDivideEqualToken #printToken #greaterThanGreaterThanToken #delToken #passToken #breakToken #continueToken #returnToken #raiseToken #importToken #fromToken #timesToken #lparenToken #rparenToken #globalToken #execToken #inToken #assertToken #semicolonToken #nEWLINEToken #iNDENTToken #dEDENTToken)

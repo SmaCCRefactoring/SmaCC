@@ -1,0 +1,3 @@
+generated
+fname
+	^ fname

@@ -9,6 +9,6 @@ noindent
 			[ self indentStack last > 0 ]
 				whileTrue: [ 
 					matchActions := Array with: self DEDENTId.
-					self tokenStack add: (self createTokenFor: 'Dedent').
+					self tokenStack add: (self createTokenFor: '').
 					self indentStack removeLast ] ].
 	^ self next

@@ -20,11 +20,11 @@ indent
 		ifTrue: [ 
 			self indentStack add: count.
 			matchActions := Array with: self INDENTId.
-			^ self createTokenFor: 'Indent' ].
+			^ self createTokenFor: '' ].
 	[ count < self indentStack last ]
 		whileTrue: [ 
 			matchActions := Array with: self DEDENTId.
-			self tokenStack add: (self createTokenFor: 'Dedent').
+			self tokenStack add: (self createTokenFor: '').
 			self indentStack removeLast ].
 	count = self indentStack last
 		ifFalse: [ ^ self scannerError ].	"A bit crude, but shows an indentation error."

@@ -2,9 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptVisitor:" : "DamienCassou 5/23/2014 18:02:26",
-		"globalToken" : "DamienCassou 5/23/2014 18:02:26",
-		"globalToken:" : "DamienCassou 5/23/2014 18:02:26",
-		"names" : "DamienCassou 5/23/2014 18:02:26",
-		"names:" : "DamienCassou 5/23/2014 18:02:26",
-		"tokenVariables" : "DamienCassou 5/23/2014 18:02:26" } }
+		"acceptVisitor:" : "ThierryGoubier 6/10/2014 03:05:00",
+		"commaTokens" : "ThierryGoubier 9/10/2014 16:46",
+		"commaTokens:" : "ThierryGoubier 9/10/2014 16:46",
+		"compositeTokenVariables" : "ThierryGoubier 9/10/2014 16:46",
+		"globalToken" : "ThierryGoubier 6/10/2014 03:05:00",
+		"globalToken:" : "ThierryGoubier 6/10/2014 03:05:00",
+		"initialize" : "ThierryGoubier 9/10/2014 16:46",
+		"nameTokens" : "ThierryGoubier 9/10/2014 16:46",
+		"nameTokens:" : "ThierryGoubier 9/10/2014 16:46",
+		"pluralVariablesMap" : "ThierryGoubier 9/10/2014 16:46",
+		"tokenVariables" : "ThierryGoubier 9/10/2014 16:46" } }
