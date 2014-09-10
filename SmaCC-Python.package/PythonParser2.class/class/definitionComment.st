@@ -90,10 +90,10 @@ file_input: {{}}
 	| file_input stmt 'statement' {{}}
 	;
 
-single_input:
-	<NEWLINE>
-	| simple_stmt
-	| compound_stmt <NEWLINE>
+single_input: 
+	<NEWLINE> {{}}
+	| simple_stmt {{}}
+	| compound_stmt <NEWLINE> {{}}
 	;
 eval_input:
 	testlist newline_opts
@@ -190,7 +190,7 @@ print_stmt:
 	| ""print"" "">>"" testlist 'arguments' {{Print}}
 	;
 del_stmt:
-	""del"" exprlist
+	""del"" exprlist {{Del}}
 	;
 pass_stmt:
 	""pass"" {{Pass}}
