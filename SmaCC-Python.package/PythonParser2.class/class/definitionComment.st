@@ -92,12 +92,14 @@ file_input: {{}}
 
 single_input: 
 	<NEWLINE> {{}}
-	| simple_stmt {{}}
-	| compound_stmt <NEWLINE> {{}}
+	| simple_stmt 'statement' {{}}
+	| compound_stmt 'statement' <NEWLINE> {{}}
 	;
+
 eval_input:
-	testlist newline_opts
+	testlist 'statement' newline_opts {{}}
 	;
+
 newline_opts:
 	| newline_opts <NEWLINE>
 	;
@@ -113,12 +115,12 @@ arglist_opt:
 	;
 
 decorators:
-	decorators decorator
-	| decorator
+	decorators decorator 'decorator'
+	| decorator 'decorator'
 	;
 decorated:
-	decorators classdef
-	| decorators funcdef
+	decorators classdef 'classdef'
+	| decorators funcdef 'funcdef'
 	;
 funcdef:
 	""def"" <name> 'fname' parameters 'parameters' "":"" suite 'body' {{}}
@@ -149,22 +151,22 @@ fplist:
 	;
 
 stmt:
-	simple_stmt
-	| compound_stmt
+	simple_stmt 'stmt'
+	| compound_stmt 'stmt'
 	;
 simple_stmt:
-	small_stmt "";"" simple_stmt 'simple'
-	| small_stmt 'simple' semicolon_opt <NEWLINE>
+	small_stmt 'stmt' "";"" simple_stmt
+	| small_stmt 'stmt' semicolon_opt <NEWLINE>
 	;
 semicolon_opt:
 	| "";""
 	;
 expr_stmt: 
-	testlist assign_after
-	| testlist augassign yield_or_testlist
+	testlist 'testlist' assign_after {{}}
+	| testlist 'testlist' augassign 'assign' yield_or_testlist 'to' {{}}
 	;
 assign_after:
-	| assign_after ""="" yield_or_testlist
+	| assign_after ""="" 'assign' yield_or_testlist 'to'
 	;
 yield_or_testlist:
 	yield_expr
@@ -212,7 +214,7 @@ return_stmt:
 	""return"" testlist_opt 'args' {{Return}}
 	;
 yield_stmt:
-	yield_expr
+	yield_expr {{Yield}}
 	;
 raise_stmt:
 	""raise"" {{Raise}}
@@ -275,12 +277,12 @@ namelist:
 	| <name>
 	;
 exec_stmt:
-	""exec"" expr
-	| ""exec"" expr ""in"" test_test_opt
+	""exec"" expr 'expr' {{Exec}}
+	| ""exec"" expr 'expr' ""in"" test_test_opt {{Exec}}
 	;
 test_test_opt:
-	test
-	| test "","" test
+	test 'test1' {{}}
+	| test 'test1' "","" test 'test2' {{}}
 	;
 assert_stmt:
 	""assert"" test_test_opt 'condition' {{Assert}}
@@ -307,9 +309,9 @@ compound_stmt:
 	| decorated 
 	;
 if_stmt:
-	""if"" test 'if' "":"" suite 'then' elifs_opt 'elsif' else_opt 'else' {{IfStmt}}
+	""if"" test 'if' "":"" suite 'then' elifs_opt 'elsif' else_opt 'else' {{If}}
 	;
-elifs_opt: {{}}
+elifs_opt:
 	| elifs_opt ""elif"" test 'elif' "":"" suite 'then' {{Elif}}
 	;
 else_opt:
@@ -326,33 +328,33 @@ try_stmt:
 	| ""try"" "":"" suite ""finally"" "":"" suite {{Try}}
 	;
 finally_opt:
-	| ""finally"" "":"" suite
+	| ""finally"" "":"" suite {{Finally}}
 	;
 except_list:
-	except_list except_clause "":"" suite
-	| except_clause "":"" suite
+	except_list except_clause 'clause' "":"" suite
+	| except_clause 'clause' "":"" suite
 	;
 with_stmt:
-	""with"" with_items "":"" suite
+	""with"" with_items "":"" suite {{With}}
 	;
 with_items:
-	with_items "","" with_item
-	| with_item
+	with_items "","" with_item 'withItem'
+	| with_item 'withItem'
 	;
 with_item:
-	test
-	| test ""as"" expr
+	test 'test' {{WithItem}}
+	| test 'test' ""as"" expr 'expr'  {{WithItem}}
 	;
 # NB compile.c makes sure that the default except clause is last
 except_clause: 
-	""except""
-	| ""except"" test
-	| ""except"" test ""as"" test
-	| ""except"" test "","" test
+	""except"" {{ExceptClause}}
+	| ""except"" test 'except' {{ExceptClause}}
+	| ""except"" test 'except' ""as"" test 'another' {{ExceptClause}}
+	| ""except"" test 'except' "","" test 'except2' {{ExceptClause}}
 	;
 suite:
-	simple_stmt
-	| <NEWLINE> <INDENT> stmts <DEDENT>
+	simple_stmt 'suite'
+	| <NEWLINE> <INDENT> stmts 'suite' <DEDENT>
 	;
 stmts:
 	stmts stmt 'statement' {{Statements}}
@@ -365,12 +367,12 @@ stmts:
 # lambda x: 5 if x else 2
 # (But not a mix of the two)
 testlist_safe:
-	old_test 
-	| old_test "","" old_tests comma_opt
+	old_test 'test'
+	| old_test 'test' "","" old_tests comma_opt
 	;
 old_tests:
-	old_tests "","" old_test
-	| old_test
+	old_tests "","" old_test 'test'
+	| old_test 'test'
 	;
 old_test:
 	or_test
@@ -479,14 +481,14 @@ lambdef:
 	""lambda"" varargslist_opt 'arguments' "":"" test 'body' {{Lambda}}
 	;
 trailer: 
-	<lparen> <rparen>
-	| <lparen> arglist <rparen>
-	| <lbrack> subscriptlist <rbrack>
-	| ""."" <name>
+	<lparen> <rparen> {{}}
+	| <lparen> arglist <rparen> {{}}
+	| <lbrack> subscriptlist <rbrack> {{}}
+	| ""."" <name>  {{}}
 	;
 subscriptlist:
-	subscript "","" subscriptlist
-	| subscript comma_opt
+	subscript 'subscript' "","" subscriptlist
+	| subscript 'subscript' comma_opt
 	;
 subscript:
 	""."" ""."" "".""
@@ -499,16 +501,18 @@ test_opt:
 sliceop:
 	| "":"" test_opt
 	;
+
 exprlist:
-	expr "","" exprlist
-	| expr comma_opt
+	expr 'expr' "","" exprlist
+	| expr 'expr' comma_opt
 	;
 comma_opt:
 	| "",""
 	;
+
 test:
 	or_test
-	| or_test ""if"" or_test 'if' ""else"" test 'else'
+	| or_test ""if"" or_test 'if' ""else"" test 'else' {{IfTest}}
 	| lambdef
 	;
 testlist:
@@ -529,19 +533,19 @@ more_tests:
 	| "","" test "":"" test more_tests
 	;
 classdef:
-	""class"" <name> 'cname' "":"" suite 'body' {{}}
-	| ""class"" <name> 'cname' <lparen> testlist_opt<rparen> "":"" suite 'body' {{}}
+	""class"" <name> 'cname' "":"" suite 'body' {{Classdef}}
+	| ""class"" <name> 'cname' <lparen> testlist_opt<rparen> "":"" suite 'body' {{Classdef}}
 	;
 
 arglist: 
-	argument "","" arglist
-	| argument comma_opt
-	| ""*"" test more_args
-	| ""**"" test
+	argument 'argument' "","" arglist
+	| argument 'argument' comma_opt
+	| ""*"" test 'argument' more_args
+	| ""**"" test 'argument'
 	;
 more_args:
-	| "","" ""**"" test
-	| "","" argument more_args
+	| "","" ""**"" test 'argument'
+	| "","" argument 'argument' more_args
 	;
 # The reason that keywords are test nodes instead of <name> is that using <name>
 # results in an ambiguity. ast.c makes sure it""s a <name>.
@@ -556,12 +560,12 @@ list_iter:
 	| list_if
 	;
 list_for:
-	""for"" exprlist ""in"" testlist_safe
-	| ""for"" exprlist ""in"" testlist_safe list_iter
+	""for"" exprlist 'for' ""in"" testlist_safe {{ListFor}}
+	| ""for"" exprlist 'for' ""in"" testlist_safe list_iter {{ListFor}}
 	;
 list_if:
-	""if"" old_test
-	| ""if"" old_test list_iter
+	""if"" old_test 'condition' {{ListIf}}
+	| ""if"" old_test 'condition' list_iter {{ListIf}}
 	;
 
 comp_iter:
@@ -569,17 +573,17 @@ comp_iter:
 	| comp_if
 	;
 comp_for:
-	""for"" exprlist ""in"" or_test
-	| ""for"" exprlist ""in"" or_test comp_iter
+	""for"" exprlist 'for' ""in"" or_test {{CompFor}}
+	| ""for"" exprlist 'for' ""in"" or_test comp_iter {{CompFor}}
 	;
 comp_if:
-	""if"" old_test
-	| ""if"" old_test comp_iter
+	""if"" old_test 'condition' {{CompIf}}
+	| ""if"" old_test 'condition' comp_iter {{CompIf}}
 	;
 
 testlist1:
-	test 
-	| test "","" testlist1
+	test 'test'
+	| test 'test' "","" testlist1
 	;
 
 # not used in grammar, but may appear in ""node"" passed from Parser to Compiler

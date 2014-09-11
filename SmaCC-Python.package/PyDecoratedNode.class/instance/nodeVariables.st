@@ -1,0 +1,3 @@
+generated
+nodeVariables
+	^ #(#body #parameters)

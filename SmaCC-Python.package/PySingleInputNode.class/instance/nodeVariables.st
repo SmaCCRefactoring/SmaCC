@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^ #(#elsif #parameters)
+	^ #(#statement)

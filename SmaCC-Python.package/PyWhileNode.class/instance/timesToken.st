@@ -1,3 +1,0 @@
-generated
-timesToken
-	^ timesToken

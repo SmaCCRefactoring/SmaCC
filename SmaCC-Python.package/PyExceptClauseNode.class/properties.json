@@ -1,0 +1,19 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"exceptToken",
+		"except",
+		"asToken",
+		"another",
+		"commaToken",
+		"except2" ],
+	"name" : "PyExceptClauseNode",
+	"pools" : [
+		 ],
+	"super" : "PyRootNode",
+	"type" : "normal" }

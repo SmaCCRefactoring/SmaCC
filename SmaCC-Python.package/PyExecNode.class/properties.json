@@ -1,0 +1,19 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"execToken",
+		"expr",
+		"inToken",
+		"test1",
+		"commaToken",
+		"test2" ],
+	"name" : "PyExecNode",
+	"pools" : [
+		 ],
+	"super" : "PyRootNode",
+	"type" : "normal" }

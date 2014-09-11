@@ -1,3 +1,0 @@
-generated
-delToken
-	^ delToken

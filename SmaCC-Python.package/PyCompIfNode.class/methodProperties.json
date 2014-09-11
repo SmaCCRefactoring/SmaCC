@@ -1,0 +1,28 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "ThierryGoubier 9/11/2014 13:40",
+		"compositeNodeVariables" : "ThierryGoubier 9/11/2014 16:51",
+		"compositeTokenVariables" : "ThierryGoubier 9/11/2014 13:38",
+		"conditions" : "ThierryGoubier 9/11/2014 13:38",
+		"conditions:" : "ThierryGoubier 9/11/2014 13:38",
+		"forTokens" : "ThierryGoubier 9/11/2014 13:38",
+		"forTokens:" : "ThierryGoubier 9/11/2014 13:38",
+		"fors" : "ThierryGoubier 9/11/2014 13:38",
+		"fors:" : "ThierryGoubier 9/11/2014 13:38",
+		"ifTokens" : "ThierryGoubier 9/11/2014 13:38",
+		"ifTokens:" : "ThierryGoubier 9/11/2014 13:38",
+		"inTokens" : "ThierryGoubier 9/11/2014 13:38",
+		"inTokens:" : "ThierryGoubier 9/11/2014 13:38",
+		"initialize" : "ThierryGoubier 9/11/2014 13:38",
+		"ones" : "ThierryGoubier 9/11/2014 13:38",
+		"ones:" : "ThierryGoubier 9/11/2014 13:38",
+		"orTokens" : "ThierryGoubier 9/11/2014 13:38",
+		"orTokens:" : "ThierryGoubier 9/11/2014 13:38",
+		"otherVariables" : "ThierryGoubier 9/11/2014 16:51",
+		"pluralVariablesMap" : "ThierryGoubier 9/11/2014 13:38",
+		"trailers" : "ThierryGoubier 9/11/2014 13:38",
+		"trailers:" : "ThierryGoubier 9/11/2014 16:51",
+		"twos" : "ThierryGoubier 9/11/2014 13:38",
+		"twos:" : "ThierryGoubier 9/11/2014 13:38" } }

@@ -1,0 +1,21 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"withToken",
+		"commaTokens",
+		"withItems",
+		"colonToken",
+		"nEWLINEToken",
+		"iNDENTToken",
+		"dEDENTToken",
+		"suite" ],
+	"name" : "PyWithNode",
+	"pools" : [
+		 ],
+	"super" : "PyRootNode",
+	"type" : "normal" }

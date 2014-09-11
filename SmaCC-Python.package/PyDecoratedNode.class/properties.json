@@ -1,0 +1,25 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"decorators",
+		"classToken",
+		"cname",
+		"colonToken",
+		"body",
+		"lparenToken",
+		"tests",
+		"commaTokens",
+		"rparenToken",
+		"defToken",
+		"fname",
+		"parameters" ],
+	"name" : "PyDecoratedNode",
+	"pools" : [
+		 ],
+	"super" : "PyRootNode",
+	"type" : "normal" }

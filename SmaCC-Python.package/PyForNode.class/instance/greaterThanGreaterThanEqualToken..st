@@ -1,3 +1,0 @@
-generated
-greaterThanGreaterThanEqualToken: aSmaCCToken
-	greaterThanGreaterThanEqualToken := aSmaCCToken
