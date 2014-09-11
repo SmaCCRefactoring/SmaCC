@@ -1,12 +1,12 @@
 {
 	"class" : {
-		"nodes:" : "ThierryGoubier 6/14/2014 00:41:18" },
+		"nodes:" : "ThierryGoubier 8/26/2014 18:36:12" },
 	"instance" : {
-		"asNFAStartingWith:" : "ThierryGoubier 6/14/2014 00:41:18",
-		"makeCaseInsensitive" : "ThierryGoubier 6/14/2014 00:41:18",
-		"nodes:" : "ThierryGoubier 6/14/2014 00:41:18",
-		"possibleMatchesDo:on:" : "ThierryGoubier 6/14/2014 00:41:18",
-		"possibleMatchesSize" : "ThierryGoubier 6/14/2014 00:41:18",
-		"postCopy" : "ThierryGoubier 6/14/2014 00:41:18",
-		"printOn:" : "ThierryGoubier 6/14/2014 00:41:18",
-		"|" : "ThierryGoubier 6/14/2014 00:41:18" } }
+		"asNFAStartingWith:" : "ThierryGoubier 8/26/2014 18:36:12",
+		"makeCaseInsensitive" : "ThierryGoubier 8/26/2014 18:36:12",
+		"nodes:" : "ThierryGoubier 8/26/2014 18:36:12",
+		"possibleMatchesDo:on:" : "ThierryGoubier 8/26/2014 18:36:12",
+		"possibleMatchesSize" : "ThierryGoubier 8/26/2014 18:36:12",
+		"postCopy" : "ThierryGoubier 8/26/2014 18:36:12",
+		"printOn:" : "ThierryGoubier 8/26/2014 18:36:12",
+		"|" : "ThierryGoubier 8/26/2014 18:36:12" } }

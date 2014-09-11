@@ -2,14 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"addProduction:" : "ThierryGoubier 6/14/2014 00:41:18",
-		"calculateFirstTerminals" : "ThierryGoubier 6/14/2014 00:41:18",
-		"initialize" : "ThierryGoubier 6/14/2014 00:41:18",
-		"isEmpty" : "ThierryGoubier 6/14/2014 00:41:18",
-		"isTerminal" : "ThierryGoubier 6/14/2014 00:41:18",
-		"modelTypes:" : "ThierryGoubier 6/14/2014 00:41:18",
-		"name:" : "ThierryGoubier 6/14/2014 00:41:18",
-		"positionOf:" : "ThierryGoubier 6/14/2014 00:41:18",
-		"productionsDo:" : "ThierryGoubier 6/14/2014 00:41:18",
-		"returnsVariableCollection" : "ThierryGoubier 6/14/2014 00:41:18",
-		"size" : "ThierryGoubier 6/14/2014 00:41:18" } }
+		"addProduction:" : "ThierryGoubier 8/26/2014 18:36:12",
+		"calculateFirstTerminals" : "ThierryGoubier 8/26/2014 18:36:12",
+		"initialize" : "ThierryGoubier 8/26/2014 18:36:12",
+		"isEmpty" : "ThierryGoubier 8/26/2014 18:36:12",
+		"isTerminal" : "ThierryGoubier 8/26/2014 18:36:12",
+		"modelTypes:" : "ThierryGoubier 8/26/2014 18:36:12",
+		"name:" : "ThierryGoubier 8/26/2014 18:36:12",
+		"positionOf:" : "ThierryGoubier 8/26/2014 18:36:12",
+		"productionsDo:" : "ThierryGoubier 8/26/2014 18:36:12",
+		"returnsVariableCollection" : "ThierryGoubier 8/26/2014 18:36:12",
+		"size" : "ThierryGoubier 8/26/2014 18:36:12" } }
