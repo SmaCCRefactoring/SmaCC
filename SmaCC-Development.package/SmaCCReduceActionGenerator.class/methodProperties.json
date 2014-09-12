@@ -3,10 +3,10 @@
 		"generate:pullUp:on:" : "ThierryGoubier 8/26/2014 18:36:12" },
 	"instance" : {
 		"compileAddToVariable:from:collection:" : "ThierryGoubier 8/26/2014 18:36:12",
-		"connectChild" : "ThierryGoubier 8/26/2014 18:36:12",
+		"connectChild" : "ThierryGoubier 9/12/2014 10:55",
 		"generate:pullUp:on:" : "ThierryGoubier 8/26/2014 18:36:12",
 		"getSubIndex:ofType:" : "ThierryGoubier 8/26/2014 18:36:12",
-		"pullUpChildren" : "ThierryGoubier 8/26/2014 18:36:12",
-		"pullUpNodeVariables" : "ThierryGoubier 8/26/2014 18:36:12",
+		"pullUpChildren" : "ThierryGoubier 9/12/2014 10:57",
+		"pullUpNodeVariables" : "ThierryGoubier 9/12/2014 16:57",
 		"pullUpPotentialNodeVariables" : "ThierryGoubier 8/26/2014 18:36:12",
 		"pullUpVariableArray" : "ThierryGoubier 8/26/2014 18:36:12" } }

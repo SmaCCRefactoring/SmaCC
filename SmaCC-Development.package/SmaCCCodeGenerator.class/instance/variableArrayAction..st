@@ -11,7 +11,9 @@ variableArrayAction: aSmaCCRHS
 			variableName isNil
 				ifTrue: [ 
 					value isNode
-						ifTrue: [ self error: 'Incorrect AST specification'	"self pullUpNodeVariablesFrom: value into: aSmaCCRHS index: key" ]
+						ifTrue: [ 
+							self error: 'Incorrect AST specification'.
+							self pullUpNodeVariablesFrom: value into: aSmaCCRHS index: key ]
 						ifFalse: [ self pullUpVariablesFrom: value into: aSmaCCRHS index: key ] ]
 				ifFalse: [ self assignVariable: variableName in: aSmaCCRHS at: key ] ].
 	self nextPutStatement: (self return: 'result').
