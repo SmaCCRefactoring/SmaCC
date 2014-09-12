@@ -281,8 +281,8 @@ exec_stmt:
 	| ""exec"" expr 'expr' ""in"" test_test_opt {{Exec}}
 	;
 test_test_opt:
-	test 'test1' {{}}
-	| test 'test1' "","" test 'test2' {{}}
+	test 'test1'
+	| test 'test1' "","" test 'test2'
 	;
 assert_stmt:
 	""assert"" test_test_opt 'condition' {{Assert}}
