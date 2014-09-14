@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-LLVM-IR",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "LLVMParser",
+	"pools" : [
+		 ],
+	"super" : "SmaCCParser",
+	"type" : "normal" }

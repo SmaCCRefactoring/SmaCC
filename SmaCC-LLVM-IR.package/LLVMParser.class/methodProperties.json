@@ -1,0 +1,8 @@
+{
+	"class" : {
+		"definitionComment" : "ThierryGoubier 9/14/2014 08:13",
+		"scannerClass" : "ThierryGoubier 9/14/2014 08:13",
+		"startingStateForArithmeticOps" : "ThierryGoubier 9/14/2014 08:13" },
+	"instance" : {
+		"reduceTable" : "ThierryGoubier 9/14/2014 08:13",
+		"transitionTable" : "ThierryGoubier 9/14/2014 08:13" } }
