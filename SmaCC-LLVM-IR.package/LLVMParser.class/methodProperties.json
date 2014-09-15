@@ -1,8 +1,9 @@
 {
 	"class" : {
-		"definitionComment" : "ThierryGoubier 9/14/2014 08:13",
-		"scannerClass" : "ThierryGoubier 9/14/2014 08:13",
-		"startingStateForArithmeticOps" : "ThierryGoubier 9/14/2014 08:13" },
+		"definitionComment" : "ThierryGoubier 9/15/2014 16:46",
+		"scannerClass" : "ThierryGoubier 9/14/2014 08:15:12",
+		"startingStateForArithmeticOps" : "ThierryGoubier 9/14/2014 08:15:12",
+		"startingStateForModule" : "ThierryGoubier 9/15/2014 16:15" },
 	"instance" : {
-		"reduceTable" : "ThierryGoubier 9/14/2014 08:13",
-		"transitionTable" : "ThierryGoubier 9/14/2014 08:13" } }
+		"reduceTable" : "ThierryGoubier 9/15/2014 16:46",
+		"transitionTable" : "ThierryGoubier 9/15/2014 16:46" } }

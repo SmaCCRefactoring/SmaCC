@@ -47,7 +47,7 @@ scan98
 								ifTrue: [ ^ self recordAndReportMatch: #(169) ].
 							currentCharacter = $p
 								ifTrue: [ 
-									self recordMatch: #(120).
+									self recordMatch: #(119).
 									self step.
 									currentCharacter = $:
 										ifTrue: [ ^ self recordAndReportMatch: #(169) ] ].
@@ -74,7 +74,7 @@ scan98
 								ifTrue: [ ^ self recordAndReportMatch: #(169) ].
 							currentCharacter = $p
 								ifTrue: [ 
-									self recordMatch: #(122).
+									self recordMatch: #(139).
 									self step.
 									currentCharacter = $:
 										ifTrue: [ ^ self recordAndReportMatch: #(169) ] ].

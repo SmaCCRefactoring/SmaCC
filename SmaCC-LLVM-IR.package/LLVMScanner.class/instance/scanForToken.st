@@ -84,8 +84,8 @@ scanForToken
 	currentCharacter = $}
 		ifTrue: [ ^ self scan114 ].
 	currentCharacter isDigit
-		ifTrue: [ ^ self scan16 ].
-	(currentCharacter isSeparator or: [ currentCharacter = Character pageUp ])
+		ifTrue: [ ^ self scan17 ].
+	(currentCharacter isWhitespace or: [ currentCharacter = Character pageUp ])
 		ifTrue: [ ^ self scan1 ].
 	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
 		ifTrue: [ ^ self scan3 ].

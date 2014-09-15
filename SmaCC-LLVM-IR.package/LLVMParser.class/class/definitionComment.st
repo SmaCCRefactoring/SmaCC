@@ -1,7 +1,7 @@
 generated
 definitionComment
 "# SmaCC adaptation of the LLVM ASM parser.
-# llvmAsmParser.y - Parser for llvm assembly files --------*- C++ -*-===//
+# llvmAsmParser.y - Parser for llvm assembly files --------*- C++ -*-===
 # LLLexer.cpp
 #
 #                     The LLVM Compiler Infrastructure
@@ -9,16 +9,16 @@ definitionComment
 #  License. See LICENSE.TXT for details.
 
 # Tokens and types for handling constant integer values
+<integerConstant> : [1-9][0-9]* ;
+<integerNegConstant> :  - [0-9]+  ;
+<integerHexConstant> :  u0x[0-9A-Fa-f]+ ;
+<integerHexNegConstant> : s0x[0-9A-Fa-f]+ ;
+%id <ESINT64VAL> <EUINT64VAL> <ESAPINTVAL> <EUAPINTVAL> ;
+# Generates for types of  constants.
 # ESINT64VAL - A negative number within long long range
-<ESINT64VAL> : -[0-9]+ ;
 # EUINT64VAL - A positive number within uns. long long range
-<EUINT64VAL> : [0-9]+ ;
-
 # ESAPINTVAL - A negative number with arbitrary precision 
-<ESAPINTVAL> : s0x[0-9A-Fa-f]+ ;
-
 # EUAPINTVAL - A positive number with arbitrary precision 
-<EUAPINTVAL> : u0x[0-9A-Fa-f]+ ;
 
 <LOCALVAL_ID> : %[0-9]+ ;
 <GLOBALVAL_ID> : @[0-9]+ ;
@@ -37,6 +37,7 @@ definitionComment
 
 <whitespace> : \s ;
 
+%start Module;
 
 ArithmeticOps: ""add"" | ""sub"" | ""nul"" | ""udiv"" | ""sdiv"" | ""fdiv"" | ""urem"" | ""srem"" | ""frem"";
 LogicalOps   : ""shl"" | ""lshr"" | ""ashr"" | ""and"" | ""or"" | ""xor"";
@@ -63,8 +64,8 @@ FPredicates
   | ""false"" 
   ;
 
-#// These are some types that allow classification if we only want a particular 
-#// thing... for example, only a signed, unsigned, or integral type.
+# These are some types that allow classification if we only want a particular 
+# thing... for example, only a signed, unsigned, or integral type.
 IntType :  <INTTYPE> ;
 FPType   : ""float"" | ""double"" | ""ppc_fp128"" | ""fp128"" | ""x86_fp80"";
 
@@ -198,18 +199,18 @@ SectionString : ""section"" <STRINGCONSTANT> ;
 OptSection : /*empty*/  |
              SectionString ;
 
-#// GlobalVarAttributes - Used to pass the attributes string on a global.  CurGV
-#// is set to be the global we are processing.
+# GlobalVarAttributes - Used to pass the attributes string on a global.  CurGV
+# is set to be the global we are processing.
 GlobalVarAttributes : /* empty */  |
                      "","" GlobalVarAttribute GlobalVarAttributes ;
 GlobalVarAttribute : SectionString  
   | ""align"" <EUINT64VAL> ;
 
-#//===----------------------------------------------------------------------===//
-#// Types includes all predefined types... except void, because it can only be
-#// used in specific contexts (function returning void for example).  
+#===----------------------------------------------------------------------===
+# Types includes all predefined types... except void, because it can only be
+# used in specific contexts (function returning void for example).  
 
-#// Derived types are added later...
+# Derived types are added later...
 PrimType : <INTTYPE> | ""float"" | ""double"" | ""ppc_fp128"" | ""fp128"" | ""x86_fp80"" | ""label"" ;
 
 Types 
@@ -218,8 +219,8 @@ Types
   | Types OptAddrSpace ""*"" 
   | SymbolicValueRef 
   | ""\\"" <EUINT64VAL> 
-  | Types ""("" ArgTypeListI "")"" OptFuncAttrs 
-  | ""void"" ""("" ArgTypeListI "")"" OptFuncAttrs 
+  | Types ""("" ArgTypeListI "")"" # OptFuncAttrs removed, only allowed as backup
+  | ""void"" ""("" ArgTypeListI "")"" # OptFuncAttrs removed, only allowed as backup
 
   | ""["" <EUINT64VAL> ""x"" Types ""]"" 
   | ""<"" <EUINT64VAL> ""x"" Types "">"" 
@@ -248,17 +249,17 @@ ArgTypeListI
   | ""..."" 
   | /*empty*/ ;
 
-#// TypeList - Used for struct declarations and as a basis for function type 
-#// declaration type lists
+# TypeList - Used for struct declarations and as a basis for function type 
+# declaration type lists
 TypeListI : Types 
   | TypeListI "","" Types ;
 
-#// ConstVal - The various declarations that go into the constant pool.  This
-#// production is used ONLY to represent constants that show up AFTER a 'const',
-#// 'constant' or 'global' token at global scope.  Constants that can be inlined
-#// into other expressions (such as integers and constexprs) are handled by the
-#// ResolvedVal, ValueRef and ConstValueRef productions.
-#//
+# ConstVal - The various declarations that go into the constant pool.  This
+# production is used ONLY to represent constants that show up AFTER a 'const',
+# 'constant' or 'global' token at global scope.  Constants that can be inlined
+# into other expressions (such as integers and constexprs) are handled by the
+# ResolvedVal, ValueRef and ConstValueRef productions.
+#
 ConstVal: Types ""["" ConstVector ""]"" 
   | Types ""["" ""]"" 
   | Types ""c"" <STRINGCONSTANT> 
@@ -301,23 +302,23 @@ ConstVector : ConstVector "","" ConstVal
   | ConstVal ;
 
 
-#// GlobalType - Match either GLOBAL or CONSTANT for global declarations...
+# GlobalType - Match either GLOBAL or CONSTANT for global declarations...
 GlobalType : ""global""  | ""constant"" ;
 
-#// ThreadLocal 
+# ThreadLocal 
 ThreadLocal : ""thread_local""  | ;
 
-#// AliaseeRef - Match either GlobalValue or bitcast to GlobalValue.
+# AliaseeRef - Match either GlobalValue or bitcast to GlobalValue.
 AliaseeRef : ResultTypes SymbolicValueRef 
    | ""bitcast"" ""("" AliaseeRef ""to"" Types "")"" ;
 
-#//===----------------------------------------------------------------------===//
-#//                             Rules to match Modules
-#//===----------------------------------------------------------------------===//
+#===----------------------------------------------------------------------===
+#                             Rules to match Modules
+#===----------------------------------------------------------------------===
 
-#// Module rule: Capture the result of parsing the whole file into a result
-#// variable...
-#//
+# Module rule: Capture the result of parsing the whole file into a result
+# variable...
+#
 Module 
   : DefinitionList 
   | /*empty*/ 
@@ -358,9 +359,9 @@ LibList : LibList "","" <STRINGCONSTANT>
         | /* empty: end of list */ 
         ;
 
-#//===----------------------------------------------------------------------===//
-#//                       Rules to match Function Headers
-#//===----------------------------------------------------------------------===//
+#===----------------------------------------------------------------------===
+#                       Rules to match Function Headers
+#===----------------------------------------------------------------------===
 
 ArgListH : ArgListH "","" Types OptParamAttrs OptLocalName 
   | Types OptParamAttrs OptLocalName ;
@@ -383,9 +384,9 @@ Function : BasicBlockList END ;
 
 FunctionProto : FunctionDeclareLinkage GVVisibilityStyle FunctionHeaderH ;
 
-#//===----------------------------------------------------------------------===//
-#//                        Rules to match Basic Blocks
-#//===----------------------------------------------------------------------===//
+#===----------------------------------------------------------------------===
+#                        Rules to match Basic Blocks
+#===----------------------------------------------------------------------===
 
 OptSideEffect : /* empty */ 
   | ""sideeffect"" ;
@@ -411,21 +412,21 @@ ConstValueRef : <ESINT64VAL>
   | ConstExpr 
   | ""asm"" OptSideEffect <STRINGCONSTANT> "","" <STRINGCONSTANT> ;
 
-#// SymbolicValueRef - Reference to one of two ways of symbolically refering to
-#// another value.
-#//
+# SymbolicValueRef - Reference to one of two ways of symbolically refering to
+# another value.
+#
 SymbolicValueRef : <LOCALVAL_ID> 
   | <GLOBALVAL_ID> 
   | LocalName 
   | GlobalName ;
 
-#// ValueRef - A reference to a definition... either constant or symbolic
+# ValueRef - A reference to a definition... either constant or symbolic
 ValueRef : SymbolicValueRef | ConstValueRef;
 
 
-#// ResolvedVal - a <type> <value> pair.  This is used only in cases where the
-#// type immediately preceeds the value reference, and allows complex constant
-#// pool references (for things like: 'ret [2 x int] [ int 12, int 42]')
+# ResolvedVal - a <type> <value> pair.  This is used only in cases where the
+# type immediately preceeds the value reference, and allows complex constant
+# pool references (for things like: 'ret [2 x int] [ int 12, int 42]')
 ResolvedVal : Types ValueRef 
   ;
 
@@ -436,9 +437,9 @@ BasicBlockList : BasicBlockList BasicBlock
   | FunctionHeader BasicBlock ;
 
 
-#// Basic blocks are terminated by branching instructions: 
-#// br, br/cc, switch, ret
-#//
+# Basic blocks are terminated by branching instructions: 
+# br, br/cc, switch, ret
+#
 BasicBlock : InstructionList OptLocalAssign BBTerminatorInst ;
 
 BasicBlock : InstructionList LocalNumber BBTerminatorInst ;
@@ -451,7 +452,7 @@ InstructionList : InstructionList Inst
 BBTerminatorInst : 
   ""ret"" ReturnedVal  
   | ""ret"" ""void"" 
-  | ""br"" <LABEL> ValueRef                                                #// Conditional Branch...
+  | ""br"" <LABEL> ValueRef                                                # Conditional Branch...
   | ""br"" ""int"" ValueRef "","" <LABEL> ValueRef "","" <LABEL> ValueRef 
   | ""switch"" IntType ValueRef "","" <LABEL> ValueRef ""["" JumpTable ""]"" 
   | ""switch"" IntType ValueRef "","" <LABEL> ValueRef ""["" ""]"" 
@@ -477,15 +478,15 @@ PHIList : Types ""["" ValueRef "","" ValueRef ""]""
 ParamList : Types OptParamAttrs ValueRef OptParamAttrs 
   | <LABEL> OptParamAttrs ValueRef OptParamAttrs 
   | ParamList "","" Types OptParamAttrs ValueRef OptParamAttrs 
-  | ParamList "","" LABEL OptParamAttrs ValueRef OptParamAttrs 
+  | ParamList "","" <LABEL> OptParamAttrs ValueRef OptParamAttrs 
   | /*empty*/ ;
 
-IndexList       #// Used for gep instructions and constant expressions
+IndexList       # Used for gep instructions and constant expressions
   : /*empty*/ 
   | IndexList "","" ResolvedVal 
   ;
 
-ConstantIndexList       #// Used for insertvalue and extractvalue instructions
+ConstantIndexList       # Used for insertvalue and extractvalue instructions
   : "","" <EUINT64VAL> 
   | ConstantIndexList "","" <EUINT64VAL> 
   ;

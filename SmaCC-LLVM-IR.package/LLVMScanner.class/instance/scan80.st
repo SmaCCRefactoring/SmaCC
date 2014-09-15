@@ -11,7 +11,7 @@ scan80
 			currentCharacter isHexDigit
 				ifTrue: [ 
 					[ 
-					self recordMatch: #(163).
+					self recordMatch: #(164).
 					self step.
 					currentCharacter = $:
 						ifTrue: [ ^ self recordAndReportMatch: #(169) ].

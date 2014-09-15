@@ -1,0 +1,3 @@
+generated
+startingStateForModule
+	^ 2

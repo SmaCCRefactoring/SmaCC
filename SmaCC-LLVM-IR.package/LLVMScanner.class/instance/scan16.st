@@ -1,13 +1,11 @@
 generated
 scan16
 	[ 
-	self recordMatch: #(162).
+	self recordMatch: #(167).
 	self step.
-	currentCharacter = $.
-		ifTrue: [ ^ self scan12 ].
 	currentCharacter = $:
 		ifTrue: [ ^ self recordAndReportMatch: #(169) ].
-	currentCharacter isDigit ] whileTrue.
+	currentCharacter isHexDigit ] whileTrue.
 	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
 		ifTrue: [ ^ self scan3 ].
 	^ self reportLastMatch

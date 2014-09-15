@@ -1,1 +1,2 @@
-(name 'SmaCC-LLVM-IR-ThierryGoubier.1' message 'Première version :)' id 'ee1aa969-055d-4599-b8b5-b6edc9698c14' date '14 September 2014' time '8:15:08.267462 am' author 'ThierryGoubier' ancestors () stepChildren ())
+(name 'SmaCC-LLVM-IR-ThierryGoubier.2' message 'Removed shift/reduce conflicts (only compatible > LLVM 3.0 ?)Added handling of integer 64Bits / infinite precision constants' id '472c0b0f-3e8a-4f32-a45e-b0485d515425' date '15 September 2014' time '4:47:59.911111 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-LLVM-IR-ThierryGoubier.1' message 'Première version :)
+' id 'a15727d7-778f-5015-a86e-9818df65c667' date '14 September 2014' time '8:15:12 am' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())

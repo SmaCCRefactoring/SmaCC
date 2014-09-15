@@ -1,6 +1,6 @@
 generated
 scan32
-	self recordMatch: #(150).
+	self recordMatch: #(149).
 	self step.
 	currentCharacter = $:
 		ifTrue: [ ^ self recordAndReportMatch: #(169) ].

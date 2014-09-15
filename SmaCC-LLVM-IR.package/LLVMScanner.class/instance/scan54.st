@@ -36,7 +36,7 @@ scan54
 										ifTrue: [ ^ self recordAndReportMatch: #(169) ].
 									currentCharacter = $l
 										ifTrue: [ 
-											self recordMatch: #(119).
+											self recordMatch: #(101).
 											self step.
 											currentCharacter = $:
 												ifTrue: [ ^ self recordAndReportMatch: #(169) ] ].

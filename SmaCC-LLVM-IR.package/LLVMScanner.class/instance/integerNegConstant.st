@@ -1,0 +1,12 @@
+private
+integerNegConstant
+	"Return an integer constant. In smalltalk, this will be just an integer, with a type which says over 64 bits / below 64 bits, signed."
+
+	| i |
+	i := Integer readFrom: outputStream contents.
+	matchActions := Array
+		with:
+			(i < -16r8000000000000000
+				ifTrue: [ self ESAPINTVALId ]
+				ifFalse: [ self ESINT64VALId ]).
+	^ self createTokenFor: outputStream contents
