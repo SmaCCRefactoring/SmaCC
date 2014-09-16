@@ -37,7 +37,11 @@ definitionComment
 
 <whitespace> : \s ;
 
-%start Module;
+%start Module ;
+#%annotate_tokens ;
+#%root Module ;
+#%prefix LLVM ;
+#%suffix Node ;
 
 ArithmeticOps: ""add"" | ""sub"" | ""nul"" | ""udiv"" | ""sdiv"" | ""fdiv"" | ""urem"" | ""srem"" | ""frem"";
 LogicalOps   : ""shl"" | ""lshr"" | ""ashr"" | ""and"" | ""or"" | ""xor"";
@@ -187,16 +191,16 @@ OptGC         : /* empty */
 
 # OptAlign/OptCAlign - An optional alignment, and an optional alignment with
 # a comma before it.
-OptAlign : /*empty*/         |
+OptAlign :          |
            ""align"" <EUINT64VAL> ;
-OptCAlign : /*empty*/             |
+OptCAlign :              |
             "","" ""align"" <EUINT64VAL> ;
 
 
 
 SectionString : ""section"" <STRINGCONSTANT> ;
 
-OptSection : /*empty*/  |
+OptSection :   |
              SectionString ;
 
 # GlobalVarAttributes - Used to pass the attributes string on a global.  CurGV
@@ -221,7 +225,6 @@ Types
   | ""\\"" <EUINT64VAL> 
   | Types ""("" ArgTypeListI "")"" # OptFuncAttrs removed, only allowed as backup
   | ""void"" ""("" ArgTypeListI "")"" # OptFuncAttrs removed, only allowed as backup
-
   | ""["" <EUINT64VAL> ""x"" Types ""]"" 
   | ""<"" <EUINT64VAL> ""x"" Types "">"" 
   | ""{"" TypeListI ""}"" 
@@ -247,7 +250,7 @@ ArgTypeListI
   : ArgTypeList
   | ArgTypeList "","" ""..."" 
   | ""..."" 
-  | /*empty*/ ;
+  |  ;
 
 # TypeList - Used for struct declarations and as a basis for function type 
 # declaration type lists
@@ -319,32 +322,28 @@ AliaseeRef : ResultTypes SymbolicValueRef
 # Module rule: Capture the result of parsing the whole file into a result
 # variable...
 #
-Module 
-  : DefinitionList 
-  | /*empty*/ 
-  ;
+Module: 
+	| DefinitionList 
+	;
 
-DefinitionList
-  : Definition
-  | DefinitionList Definition
-  ;
+DefinitionList:
+	Definition
+	| DefinitionList Definition
+	;
 
-Definition 
-  : ""define""  Function 
-  | ""declare""  FunctionProto 
-  | ""module"" ""asm"" AsmBlock   
-  | OptLocalAssign ""type"" Types 
-  | OptLocalAssign ""type"" ""void"" 
-  | OptGlobalAssign GVVisibilityStyle ThreadLocal GlobalType ConstVal 
-    OptAddrSpace  GlobalVarAttributes 
-  | OptGlobalAssign GVInternalLinkage GVVisibilityStyle ThreadLocal GlobalType
-    ConstVal OptAddrSpace  GlobalVarAttributes 
-  | OptGlobalAssign GVExternalLinkage GVVisibilityStyle ThreadLocal GlobalType
-    Types OptAddrSpace  GlobalVarAttributes 
-  | OptGlobalAssign GVVisibilityStyle ""alias"" AliasLinkage AliaseeRef 
-  | ""target"" TargetDefinition 
-  | ""deplibs"" ""="" LibrariesDefinition 
-  ;
+Definition:
+	""define""  Function 
+  	| ""declare""  FunctionProto 
+  	| ""module"" ""asm"" AsmBlock   
+  	| OptLocalAssign ""type"" Types 
+  	| OptLocalAssign ""type"" ""void"" 
+ 	| OptGlobalAssign GVVisibilityStyle ThreadLocal GlobalType ConstVal OptAddrSpace  GlobalVarAttributes 
+	| OptGlobalAssign GVInternalLinkage GVVisibilityStyle ThreadLocal GlobalType ConstVal OptAddrSpace  GlobalVarAttributes 
+	| OptGlobalAssign GVExternalLinkage GVVisibilityStyle ThreadLocal GlobalType Types OptAddrSpace  GlobalVarAttributes 
+	| OptGlobalAssign GVVisibilityStyle ""alias"" AliasLinkage AliaseeRef 
+ 	| ""target"" TargetDefinition 
+	| ""deplibs"" ""="" LibrariesDefinition 
+	;
 
 
 AsmBlock : <STRINGCONSTANT> ;
@@ -479,10 +478,10 @@ ParamList : Types OptParamAttrs ValueRef OptParamAttrs
   | <LABEL> OptParamAttrs ValueRef OptParamAttrs 
   | ParamList "","" Types OptParamAttrs ValueRef OptParamAttrs 
   | ParamList "","" <LABEL> OptParamAttrs ValueRef OptParamAttrs 
-  | /*empty*/ ;
+  |  ;
 
 IndexList       # Used for gep instructions and constant expressions
-  : /*empty*/ 
+  :  
   | IndexList "","" ResolvedVal 
   ;
 

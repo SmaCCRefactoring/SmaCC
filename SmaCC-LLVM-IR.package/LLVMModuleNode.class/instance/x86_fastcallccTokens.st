@@ -1,0 +1,3 @@
+generated
+x86_fastcallccTokens
+	^ x86_fastcallccTokens

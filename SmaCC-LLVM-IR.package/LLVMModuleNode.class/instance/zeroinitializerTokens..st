@@ -1,0 +1,3 @@
+generated
+zeroinitializerTokens: anOrderedCollection
+	zeroinitializerTokens := anOrderedCollection

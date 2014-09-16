@@ -1,0 +1,3 @@
+generated
+shufflevectorTokens: anOrderedCollection
+	shufflevectorTokens := anOrderedCollection

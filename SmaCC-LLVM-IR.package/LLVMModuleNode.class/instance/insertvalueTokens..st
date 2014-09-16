@@ -1,0 +1,3 @@
+generated
+insertvalueTokens: anOrderedCollection
+	insertvalueTokens := anOrderedCollection
