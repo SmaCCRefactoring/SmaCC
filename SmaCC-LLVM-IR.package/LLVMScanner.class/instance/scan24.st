@@ -1,3 +1,3 @@
 generated
 scan24
-	^ self recordAndReportMatch: #(155)
+	^ self recordAndReportMatch: #(42)

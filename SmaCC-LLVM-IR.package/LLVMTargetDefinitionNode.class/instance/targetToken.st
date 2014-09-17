@@ -1,0 +1,3 @@
+generated
+targetToken
+	^ targetToken

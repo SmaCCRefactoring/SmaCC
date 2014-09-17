@@ -1,3 +1,0 @@
-generated
-extern_weakTokens: anOrderedCollection
-	extern_weakTokens := anOrderedCollection

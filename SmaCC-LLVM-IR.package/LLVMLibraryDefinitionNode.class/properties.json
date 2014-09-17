@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-LLVM-IR",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"deplibsToken",
+		"equalToken",
+		"libraries" ],
+	"name" : "LLVMLibraryDefinitionNode",
+	"pools" : [
+		 ],
+	"super" : "LLVMAbstractNode",
+	"type" : "normal" }

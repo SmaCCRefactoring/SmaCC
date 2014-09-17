@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-LLVM-IR",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "LLVMAbstractNodeVisitor",
+	"pools" : [
+		 ],
+	"super" : "SmaCCParseNodeVisitor",
+	"type" : "normal" }

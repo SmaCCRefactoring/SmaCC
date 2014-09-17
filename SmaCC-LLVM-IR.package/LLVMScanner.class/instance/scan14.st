@@ -1,19 +1,11 @@
 generated
 scan14
-	2
-		timesRepeat: [ 
-			self step.
-			currentCharacter = $.
-				ifFalse: [ 
-					currentCharacter = $:
-						ifTrue: [ ^ self recordAndReportMatch: #(169) ].
-					(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-						ifTrue: [ ^ self scan3 ].
-					^ self reportLastMatch ] ].
-	self recordMatch: #(154).
+	[ 
+	self recordMatch: #(168).
 	self step.
 	currentCharacter = $:
-		ifTrue: [ ^ self recordAndReportMatch: #(169) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(170) ].
+	currentCharacter isDigit ] whileTrue.
 	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-		ifTrue: [ ^ self scan3 ].
+		ifTrue: [ ^ self scan4 ].
 	^ self reportLastMatch

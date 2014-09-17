@@ -1,3 +1,0 @@
-generated
-neverTokens
-	^ neverTokens

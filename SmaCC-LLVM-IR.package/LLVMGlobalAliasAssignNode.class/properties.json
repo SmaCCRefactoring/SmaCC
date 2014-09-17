@@ -1,0 +1,18 @@
+{
+	"category" : "SmaCC-LLVM-IR",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"assign",
+		"visibility",
+		"aliasToken",
+		"alias",
+		"aliasee" ],
+	"name" : "LLVMGlobalAliasAssignNode",
+	"pools" : [
+		 ],
+	"super" : "LLVMAbstractNode",
+	"type" : "normal" }

@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-LLVM-IR",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"moduleToken",
+		"asmToken",
+		"asm" ],
+	"name" : "LLVMAsmModuleNode",
+	"pools" : [
+		 ],
+	"super" : "LLVMAbstractNode",
+	"type" : "normal" }

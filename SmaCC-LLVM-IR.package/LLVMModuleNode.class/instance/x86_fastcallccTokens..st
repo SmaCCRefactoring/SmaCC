@@ -1,3 +1,0 @@
-generated
-x86_fastcallccTokens: anOrderedCollection
-	x86_fastcallccTokens := anOrderedCollection

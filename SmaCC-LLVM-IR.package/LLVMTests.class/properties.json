@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-LLVM-IR",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "LLVMTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

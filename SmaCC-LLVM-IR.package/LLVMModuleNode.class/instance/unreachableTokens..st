@@ -1,3 +1,0 @@
-generated
-unreachableTokens: anOrderedCollection
-	unreachableTokens := anOrderedCollection

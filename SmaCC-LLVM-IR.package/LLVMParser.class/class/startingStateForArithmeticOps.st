@@ -1,3 +1,0 @@
-generated
-startingStateForArithmeticOps
-	^ 1

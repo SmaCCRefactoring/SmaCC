@@ -1,0 +1,3 @@
+generated
+moduleToken
+	^ moduleToken

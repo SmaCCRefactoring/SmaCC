@@ -1,12 +1,20 @@
 generated
 definitionComment
 "# SmaCC adaptation of the LLVM ASM parser.
+# References:
 # llvmAsmParser.y - Parser for llvm assembly files --------*- C++ -*-===
 # LLLexer.cpp
 #
 #                     The LLVM Compiler Infrastructure
-# This file is distributed under the University of Illinois Open Source
-#  License. See LICENSE.TXT for details.
+# This file is distributed under the University of Illinois Open Source License.
+# LLVM_IR.xtext
+#Copyright (c) 2013, Intel Corporation
+#Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+# * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+# * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+# * Neither the name of Intel Corporation nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS IS"" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# This reference is missing the metadata file and probably more stuff.
 
 # Tokens and types for handling constant integer values
 <integerConstant> : [1-9][0-9]* ;
@@ -28,22 +36,80 @@ definitionComment
 <INTTYPE> : i[0-9]+ ;
 <LABEL> : [-a-zA-Z$._0-9]+\: ;
 
-<LOCALVAR> : %[-a-zA-Z$._][-a-zA-Z$._0-9]* ;
-<GLOBALVAR> : @[-a-zA-Z$._][-a-zA-Z$._0-9]* ;
-<LABELSTR> : \""[^\""]*\""\: ;
-<STRINGCONSTANT> : \""[^\""]*\"" ;
-<ATSTRINGCONSTANT> : \@\""[^\""]*\"" ;
-<PCTSTRINGCONSTANT> : \%\""[^\""]*\"" ;
+<LOCALVAR> : \%[-a-zA-Z$._][-a-zA-Z$._0-9]* ;
+<GLOBALVAR> : \@[-a-zA-Z$._][-a-zA-Z$._0-9]* ;
+<string> : \""[^\""]*\"" ;
+<LABELSTR> : <string> \: ;
+<STRINGCONSTANT> : <string> ;
+<ATSTRINGCONSTANT> : \@ <string> ;
+<PCTSTRINGCONSTANT> : \% <string> ;
+
+<metadata_int> : \! [ 0-9]+ ;
+<metadata_name> : \! [-a-zA-Z$._][-a-zA-Z$._0-9]* ;
+<metadata_string> : \! <string> ;
 
 <whitespace> : \s ;
+<comment>: \;[^\r\n]*(\n|\r\n|\r|\r\n) ;
 
-%start Module ;
-#%annotate_tokens ;
-#%root Module ;
-#%prefix LLVM ;
-#%suffix Node ;
+%annotate_tokens ;
+%root Abstract ;
+%prefix LLVM ;
+%suffix Node ;
 
-ArithmeticOps: ""add"" | ""sub"" | ""nul"" | ""udiv"" | ""sdiv"" | ""fdiv"" | ""urem"" | ""srem"" | ""frem"";
+#===----------------------------------------------------------------------===
+#                             Rules to match Modules
+#===----------------------------------------------------------------------===
+
+# Module rule: Capture the result of parsing the whole file into a result
+# variable... Moved here because %start doesn't have the yacc semantic
+#
+Module: 
+	| DefinitionList {{}}
+	;
+
+DefinitionList:
+	Definition 'definition'
+	| DefinitionList Definition 'definition'
+	;
+
+Definition:
+	""define""  Function 'function' {{FunctionDefinition}}
+  	| ""declare""  FunctionProto 'prototype' {{FunctionDeclaration}}
+  	| ""module"" ""asm"" AsmBlock  'asm' {{AsmModule}}
+  	| OptLocalAssign 'assign' ""type"" Types 'types' {{LocalTypeAssign}}
+  	| OptLocalAssign 'assign' ""type"" ""void"" {{LocalVoidAssign}}
+ 	| OptGlobalAssign 'assign' GVVisibilityStyle 'visibility' ThreadLocal 'thread' GlobalType 'type' ConstVal 'constant' OptAddrSpace 'addrSpace' GlobalVarAttributes 'attributes' {{GlobalConstAssign}}
+	| OptGlobalAssign 'assign' GVInternalLinkage 'internalLinkage' GVVisibilityStyle 'visibility' ThreadLocal 'thread' GlobalType 'type' ConstVal 'constant' OptAddrSpace 'addrSpace'  GlobalVarAttributes 'attributes' {{GlobalConstAssign}}
+	| OptGlobalAssign 'assign' GVExternalLinkage 'externalLinkage' GVVisibilityStyle 'visibility' ThreadLocal 'thread' GlobalType 'type' Types 'types' OptAddrSpace 'addrSpace'  GlobalVarAttributes 'attributes'  {{GlobalTypeAssign}}
+	| OptGlobalAssign 'assign' GVVisibilityStyle 'visibility' ""alias"" AliasLinkage 'alias' AliaseeRef 'aliasee' {{GlobalAliasAssign}}
+ 	| ""target"" TargetDefinition 'target' {{TargetDefinition}}
+	| ""deplibs"" ""="" LibrariesDefinition 'libraries' {{LibraryDefinition}}
+	| NamedMetadata {{Metadata}}
+	;
+
+AsmBlock:
+	<STRINGCONSTANT>
+	;
+
+TargetDefinition:
+	""triple"" ""="" <STRINGCONSTANT> 
+	| ""datalayout"" ""="" <STRINGCONSTANT>
+	;
+
+LibrariesDefinition:
+	""["" LibList ""]""
+	;
+
+LibList:
+	| LibList "","" <STRINGCONSTANT> 
+	| <STRINGCONSTANT> 
+	;
+
+#===----------------------------------------------------------------------===
+#                             Basic stuff
+#===----------------------------------------------------------------------===
+
+ArithmeticOps: ""add"" | ""sub"" | ""mul"" | ""udiv"" | ""sdiv"" | ""fdiv"" | ""urem"" | ""srem"" | ""frem"";
 LogicalOps   : ""shl"" | ""lshr"" | ""ashr"" | ""and"" | ""or"" | ""xor"";
 CastOps      : ""trunc"" | ""zext"" | ""sext"" | ""fptrunc"" | ""fpext"" | ""bitcast"" | 
                ""uitofp"" | ""sitofp"" | ""fptoui"" | ""fptosi"" | ""inttoptr"" | ""ptrtoint"";
@@ -71,13 +137,14 @@ FPredicates
 # These are some types that allow classification if we only want a particular 
 # thing... for example, only a signed, unsigned, or integral type.
 IntType :  <INTTYPE> ;
-FPType   : ""float"" | ""double"" | ""ppc_fp128"" | ""fp128"" | ""x86_fp80"";
+FPType   : ""float""  | ""double"" | ""ppc_fp128"" | ""fp128"" | ""x86_fp80"" ;
 
 LocalName : <LOCALVAR> | <STRINGCONSTANT> | <PCTSTRINGCONSTANT> ;
 OptLocalName : LocalName | ;
 
-OptAddrSpace : ""addrspace"" ""("" <EUINT64VAL> "")"" 
-             | ;
+OptAddrSpace :
+	| ""addrspace"" ""("" <EUINT64VAL> "")"" 
+ 	;
 
 OptLocalAssign : LocalName ""="" 
   |  ;
@@ -114,22 +181,19 @@ GVVisibilityStyle
   | ""protected"" 
   ;
 
-FunctionDeclareLinkage
-  :   
+FunctionDeclareLinkage:   
   | ""dllimport""    
   | ""extern_weak"" 
   ;
   
-FunctionDefineLinkage
-  :   
+FunctionDefineLinkage:   
   | ""internal""    
   | ""linkonce""    
   | ""weak""        
   | ""dllexport""    
   ; 
 
-AliasLinkage
-  :
+AliasLinkage:
   | ""weak""        
   | ""internal""    
   ;
@@ -205,20 +269,25 @@ OptSection :   |
 
 # GlobalVarAttributes - Used to pass the attributes string on a global.  CurGV
 # is set to be the global we are processing.
-GlobalVarAttributes : /* empty */  |
-                     "","" GlobalVarAttribute GlobalVarAttributes ;
-GlobalVarAttribute : SectionString  
-  | ""align"" <EUINT64VAL> ;
+
+GlobalVarAttributes:
+	| "","" GlobalVarAttribute GlobalVarAttributes
+	;
+
+GlobalVarAttribute:
+	SectionString
+	| ""align"" <EUINT64VAL>
+	;
 
 #===----------------------------------------------------------------------===
 # Types includes all predefined types... except void, because it can only be
 # used in specific contexts (function returning void for example).  
 
 # Derived types are added later...
-PrimType : <INTTYPE> | ""float"" | ""double"" | ""ppc_fp128"" | ""fp128"" | ""x86_fp80"" | ""label"" ;
+PrimType : IntType | FPType ;
 
-Types 
-  : ""opaque"" 
+Types:
+	""opaque"" 
   | PrimType 
   | Types OptAddrSpace ""*"" 
   | SymbolicValueRef 
@@ -230,7 +299,8 @@ Types
   | ""{"" TypeListI ""}"" 
   | ""{"" ""}"" 
   | ""<"" ""{"" TypeListI ""}"" "">"" 
-  | ""<"" ""{"" ""}"" "">"" 
+  | ""<"" ""{"" ""}"" "">""
+	| MetadataType
   ;
 
 ArgType 
@@ -280,9 +350,12 @@ ConstVal: Types ""["" ConstVector ""]""
   | IntType <ESAPINTVAL> 
   | IntType <EUINT64VAL> 
   | IntType <EUAPINTVAL> 
-  | <INTTYPE> ""true"" 
-  | <INTTYPE> ""false"" 
-  | FPType <FPVAL> ;
+  | IntType ""true"" 
+  | IntType ""false"" 
+  | FPType <FPVAL>
+	| Types MetadataNode
+	| Types <metadata_string>
+	;
 
 
 ConstExpr: CastOps ""("" ConstVal ""to"" Types "")"" 
@@ -315,63 +388,25 @@ ThreadLocal : ""thread_local""  | ;
 AliaseeRef : ResultTypes SymbolicValueRef 
    | ""bitcast"" ""("" AliaseeRef ""to"" Types "")"" ;
 
-#===----------------------------------------------------------------------===
-#                             Rules to match Modules
-#===----------------------------------------------------------------------===
-
-# Module rule: Capture the result of parsing the whole file into a result
-# variable...
-#
-Module: 
-	| DefinitionList 
-	;
-
-DefinitionList:
-	Definition
-	| DefinitionList Definition
-	;
-
-Definition:
-	""define""  Function 
-  	| ""declare""  FunctionProto 
-  	| ""module"" ""asm"" AsmBlock   
-  	| OptLocalAssign ""type"" Types 
-  	| OptLocalAssign ""type"" ""void"" 
- 	| OptGlobalAssign GVVisibilityStyle ThreadLocal GlobalType ConstVal OptAddrSpace  GlobalVarAttributes 
-	| OptGlobalAssign GVInternalLinkage GVVisibilityStyle ThreadLocal GlobalType ConstVal OptAddrSpace  GlobalVarAttributes 
-	| OptGlobalAssign GVExternalLinkage GVVisibilityStyle ThreadLocal GlobalType Types OptAddrSpace  GlobalVarAttributes 
-	| OptGlobalAssign GVVisibilityStyle ""alias"" AliasLinkage AliaseeRef 
- 	| ""target"" TargetDefinition 
-	| ""deplibs"" ""="" LibrariesDefinition 
-	;
-
-
-AsmBlock : <STRINGCONSTANT> ;
-
-TargetDefinition : ""triple"" ""="" <STRINGCONSTANT> 
-  | ""datalayout"" ""="" <STRINGCONSTANT> ;
-
-LibrariesDefinition : ""["" LibList ""]"";
-
-LibList : LibList "","" <STRINGCONSTANT> 
-        | <STRINGCONSTANT> 
-        | /* empty: end of list */ 
-        ;
 
 #===----------------------------------------------------------------------===
 #                       Rules to match Function Headers
 #===----------------------------------------------------------------------===
 
-ArgListH : ArgListH "","" Types OptParamAttrs OptLocalName 
-  | Types OptParamAttrs OptLocalName ;
+ArgListH:
+	ArgListH "","" Types OptParamAttrs OptLocalName
+	| Types OptParamAttrs OptLocalName
+	;
 
-ArgList : ArgListH 
-  | ArgListH "","" ""..."" 
-  | ""..."" 
-  | /* empty */ ;
+ArgList:
+	| ArgListH
+	| ArgListH "","" ""...""
+	| ""...""
+	;
 
-FunctionHeaderH : OptCallingConv ResultTypes GlobalName ""("" ArgList "")"" 
-                  OptFuncAttrs OptSection OptAlign OptGC OptFuncNotes ;
+FunctionHeaderH:
+	OptCallingConv ResultTypes GlobalName ""("" ArgList "")"" OptFuncAttrs OptSection OptAlign OptGC OptFuncNotes
+	;
 
 BEGIN : ""begin"" | ""{"";                # Allow BEGIN or '{' to start a function
 
@@ -426,37 +461,38 @@ ValueRef : SymbolicValueRef | ConstValueRef;
 # ResolvedVal - a <type> <value> pair.  This is used only in cases where the
 # type immediately preceeds the value reference, and allows complex constant
 # pool references (for things like: 'ret [2 x int] [ int 12, int 42]')
-ResolvedVal : Types ValueRef 
-  ;
+ResolvedVal:
+	Types ValueRef 
+	;
 
 ReturnedVal : ResolvedVal 
   | ReturnedVal "","" ResolvedVal ;
 
-BasicBlockList : BasicBlockList BasicBlock 
-  | FunctionHeader BasicBlock ;
-
-
+BasicBlockList:
+	BasicBlockList BasicBlock
+	| FunctionHeader BasicBlock
+	;
 # Basic blocks are terminated by branching instructions: 
 # br, br/cc, switch, ret
 #
-BasicBlock : InstructionList OptLocalAssign BBTerminatorInst ;
+BasicBlock:
+	InstructionList OptLocalAssign BBTerminatorInst
+	| InstructionList LocalNumber BBTerminatorInst
+	;
 
-BasicBlock : InstructionList LocalNumber BBTerminatorInst ;
+InstructionList :
+	| InstructionList Inst 
+	| <LABELSTR>
+	;
 
-
-InstructionList : InstructionList Inst 
-  | /* empty */ 
-  | <LABELSTR> ;
-
-BBTerminatorInst : 
+BBTerminatorInst:
   ""ret"" ReturnedVal  
   | ""ret"" ""void"" 
   | ""br"" <LABEL> ValueRef                                                # Conditional Branch...
   | ""br"" ""int"" ValueRef "","" <LABEL> ValueRef "","" <LABEL> ValueRef 
   | ""switch"" IntType ValueRef "","" <LABEL> ValueRef ""["" JumpTable ""]"" 
   | ""switch"" IntType ValueRef "","" <LABEL> ValueRef ""["" ""]"" 
-  | ""invoke"" OptCallingConv ResultTypes ValueRef ""("" ParamList "")"" OptFuncAttrs
-    ""to"" <LABEL> ValueRef ""unwind"" <LABEL> ValueRef 
+  | ""invoke"" OptCallingConv ResultTypes ValueRef ""("" ParamList "")"" OptFuncAttrs ""to"" <LABEL> ValueRef ""unwind"" <LABEL> ValueRef 
   | ""unwind"" 
   | ""unreachable"" ;
 
@@ -465,9 +501,10 @@ BBTerminatorInst :
 JumpTable : JumpTable IntType ConstValueRef "","" <LABEL> ValueRef 
   | IntType ConstValueRef "","" <LABEL> ValueRef ;
 
-Inst : OptLocalAssign InstVal ;
-
-Inst : LocalNumber InstVal ;
+Inst:
+	OptLocalAssign InstVal MetadataSuffix
+	| LocalNumber InstVal MetadataSuffix
+	;
 
 
 PHIList : Types ""["" ValueRef "","" ValueRef ""]"" 
@@ -506,8 +543,7 @@ InstVal : ArithmeticOps Types ValueRef "","" ValueRef
   | ""insertelement"" ResolvedVal "","" ResolvedVal "","" ResolvedVal 
   | ""shufflevector"" ResolvedVal "","" ResolvedVal "","" ResolvedVal 
   | ""phi"" PHIList 
-  | OptTailCall OptCallingConv ResultTypes ValueRef ""("" ParamList "")"" 
-    OptFuncAttrs 
+  | OptTailCall OptCallingConv ResultTypes ValueRef ""("" ParamList "")"" OptFuncAttrs 
   | MemoryInst ;
 
 OptVolatile : ""volatile"" 
@@ -515,15 +551,55 @@ OptVolatile : ""volatile""
 
 
 
-MemoryInst : ""malloc"" Types OptCAlign 
-  | ""malloc"" Types "","" <INTTYPE> ValueRef OptCAlign 
-  | ""alloca"" Types OptCAlign 
-  | ""alloca"" Types "","" <INTTYPE> ValueRef OptCAlign 
-  | ""free"" ResolvedVal 
+MemoryInst:
+	""malloc"" Types OptCAlign
+	| ""malloc"" Types "","" IntType ValueRef OptCAlign 
+	| ""alloca"" Types IntType
+	| ""alloca"" Types "","" IntType ValueRef OptCAlign
+	| ""free"" ResolvedVal
+	| OptVolatile ""load"" Types ValueRef OptCAlign
+	| OptVolatile ""store"" ResolvedVal "","" Types ValueRef OptCAlign
+	| ""getresult"" Types ValueRef "","" <EUINT64VAL>
+	| ""getelementptr"" Types ValueRef IndexList
+	| ""extractvalue"" Types ValueRef ConstantIndexList
+	| ""insertvalue"" Types ValueRef "","" Types ValueRef ConstantIndexList
+	;
 
-  | OptVolatile ""load"" Types ValueRef OptCAlign 
-  | OptVolatile ""store"" ResolvedVal "","" Types ValueRef OptCAlign 
-  | ""getresult"" Types ValueRef "","" <EUINT64VAL>  
-  | ""getelementptr"" Types ValueRef IndexList 
-  | ""extractvalue"" Types ValueRef ConstantIndexList 
-  | ""insertvalue"" Types ValueRef "","" Types ValueRef ConstantIndexList ;"
+NamedMetadata:
+	<metadata_int> ""="" ""metadata"" MetadataNode
+	| <metadata_name> ""="" MetadataNode
+	;
+
+MetadataRef:
+	NamedMetadata
+	| MetadataIdentifier
+	;
+
+MetadataIdentifier:
+	<metadata_int>
+	| <metadata_name>
+	;
+
+MetadataSuffix:
+	| MetadataSuffix "","" <metadata_name> MetadataRef
+	;
+
+MetadataNode:
+	""!"" ""{"" MetadataNodeElementList ""}""
+	| ""!"" ""{"" ""}""
+	;
+
+MetadataNodeElementList:
+	MetadataNodeElement
+	| MetadataNodeElementList "","" MetadataNodeElement
+	;
+
+MetadataNodeElement:
+	Types ValueRef
+	| MetadataRef
+	| ""null""
+	;
+
+MetadataType:
+	""metadata""
+	;"

@@ -1,3 +1,0 @@
-generated
-thread_localTokens
-	^ thread_localTokens

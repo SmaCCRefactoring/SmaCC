@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-LLVM-IR",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"assign",
+		"typeToken",
+		"types" ],
+	"name" : "LLVMLocalTypeAssignNode",
+	"pools" : [
+		 ],
+	"super" : "LLVMAbstractNode",
+	"type" : "normal" }

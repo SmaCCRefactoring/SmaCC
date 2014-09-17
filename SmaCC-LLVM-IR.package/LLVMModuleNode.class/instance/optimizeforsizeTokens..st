@@ -1,3 +1,0 @@
-generated
-optimizeforsizeTokens: anOrderedCollection
-	optimizeforsizeTokens := anOrderedCollection

@@ -2,7 +2,10 @@ generated
 scan3
 	[ 
 	self step.
-	currentCharacter = $:
-		ifTrue: [ ^ self recordAndReportMatch: #(169) ].
-	currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ] ] whileTrue.
-	^ self reportLastMatch
+	currentCharacter = $"
+		ifTrue: [ 
+			self recordMatch: #(174).
+			self step.
+			currentCharacter = $:
+				ifTrue: [ ^ self recordAndReportMatch: #(173) ].
+			^ self reportLastMatch ] ] repeat

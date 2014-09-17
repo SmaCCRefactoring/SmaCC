@@ -1,0 +1,17 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"visitAbstract:" : "ThierryGoubier 9/17/2014 15:17",
+		"visitAsmModule:" : "ThierryGoubier 9/17/2014 15:17",
+		"visitFunctionDeclaration:" : "ThierryGoubier 9/17/2014 15:17",
+		"visitFunctionDefinition:" : "ThierryGoubier 9/17/2014 15:17",
+		"visitGlobalAliasAssign:" : "ThierryGoubier 9/17/2014 15:17",
+		"visitGlobalConstAssign:" : "ThierryGoubier 9/17/2014 15:17",
+		"visitGlobalTypeAssign:" : "ThierryGoubier 9/17/2014 15:17",
+		"visitLibraryDefinition:" : "ThierryGoubier 9/17/2014 15:17",
+		"visitLocalTypeAssign:" : "ThierryGoubier 9/17/2014 15:17",
+		"visitLocalVoidAssign:" : "ThierryGoubier 9/17/2014 15:17",
+		"visitMetadata:" : "ThierryGoubier 9/17/2014 17:11",
+		"visitModule:" : "ThierryGoubier 9/17/2014 15:17",
+		"visitTargetDefinition:" : "ThierryGoubier 9/17/2014 15:17" } }

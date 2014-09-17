@@ -1,3 +1,0 @@
-generated
-invokeTokens
-	^ invokeTokens
