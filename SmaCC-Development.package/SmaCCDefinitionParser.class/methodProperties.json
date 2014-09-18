@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"definitionComment" : "ThierryGoubier 9/18/2014 16:51",
+		"definitionComment" : "ThierryGoubier 9/18/2014 17:01",
 		"scannerClass" : "ThierryGoubier 8/26/2014 18:36:12",
 		"startingStateForFile" : "ThierryGoubier 8/26/2014 18:36:12" },
 	"instance" : {
@@ -74,7 +74,7 @@
 		"reduceActionForSuperclassLine1:" : "ThierryGoubier 8/26/2014 18:36:12",
 		"reduceActionForSymbol1:" : "ThierryGoubier 8/26/2014 18:36:12",
 		"reduceActionForTerm1:" : "ThierryGoubier 8/26/2014 18:36:12",
-		"reduceActionForTerm2:" : "ThierryGoubier 8/26/2014 18:36:12",
+		"reduceActionForTerm2:" : "ThierryGoubier 9/18/2014 17:01",
 		"reduceActionForTerm3:" : "ThierryGoubier 8/26/2014 18:36:12",
 		"reduceActionForTerm4:" : "ThierryGoubier 8/26/2014 18:36:12",
 		"reduceActionForTerm5:" : "ThierryGoubier 8/26/2014 18:36:12",

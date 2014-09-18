@@ -8,7 +8,7 @@ reduceActionForTerm2: nodes
 			(scannerDefinition includesTokenNamed: (nodes at: 1) value)
 				ifTrue: [ symbol regularExpression: (scannerDefinition tokenNamed: (nodes at: 1) value) ]
 				ifFalse: [ 
-					node := self generateImplicitToken: (nodes at: 1) value.
+					node := self generateImplicitToken: (nodes at: 1).
 					node notNil
 						ifTrue: [ 
 							node addStates: scannerDefinition nonExcludeStates.
