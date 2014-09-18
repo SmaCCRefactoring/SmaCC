@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"definitionComment" : "ThierryGoubier 8/26/2014 18:36:12",
+		"definitionComment" : "ThierryGoubier 9/18/2014 16:51",
 		"scannerClass" : "ThierryGoubier 8/26/2014 18:36:12",
 		"startingStateForFile" : "ThierryGoubier 8/26/2014 18:36:12" },
 	"instance" : {
@@ -89,10 +89,10 @@
 		"reduceActionForTerms7:" : "ThierryGoubier 8/26/2014 18:36:12",
 		"reduceActionForTerms8:" : "ThierryGoubier 8/26/2014 18:36:12",
 		"reduceActionForTerms9:" : "ThierryGoubier 8/26/2014 18:36:12",
-		"reduceTable" : "ThierryGoubier 8/26/2014 18:36:12",
+		"reduceTable" : "ThierryGoubier 9/18/2014 16:51",
 		"reportCharacterBlockErrorForToken:" : "ThierryGoubier 8/26/2014 18:36:12",
 		"tabString" : "ThierryGoubier 8/26/2014 18:36:12",
-		"transitionTable" : "ThierryGoubier 8/26/2014 18:36:12",
+		"transitionTable" : "ThierryGoubier 9/18/2014 16:51",
 		"verifyCodeToken:for:" : "ThierryGoubier 8/26/2014 18:36:12",
 		"verticalTabString" : "ThierryGoubier 8/26/2014 18:36:12",
 		"whitespaceValues" : "ThierryGoubier 8/26/2014 18:36:12" } }

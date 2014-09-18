@@ -5,12 +5,12 @@ scan27
 		ifTrue: [ 
 			self recordMatch: #(28 41).
 			self step.
-			(currentCharacter isSeparator or: [ currentCharacter = Character pageUp ])
+			(currentCharacter isWhitespace or: [ currentCharacter = Character pageUp ])
 				ifTrue: [ 
 					[ 
 					self recordMatch: #(28).
 					self step.
-					currentCharacter isSeparator or: [ currentCharacter = Character pageUp ] ] whileTrue ].
+					currentCharacter isWhitespace or: [ currentCharacter = Character pageUp ] ] whileTrue ].
 			^ self reportLastMatch ].
 	currentCharacter = $"
 		ifTrue: [ 
@@ -103,12 +103,12 @@ scan27
 		ifTrue: [ ^ self scan33 ].
 	currentCharacter = $|
 		ifTrue: [ ^ self recordAndReportMatch: #(4 41) ].
-	(currentCharacter isSeparator or: [ currentCharacter = Character pageUp ])
+	(currentCharacter isWhitespace or: [ currentCharacter = Character pageUp ])
 		ifTrue: [ 
 			[ 
 			self recordMatch: #(28).
 			self step.
-			currentCharacter isSeparator or: [ currentCharacter = Character pageUp ] ] whileTrue.
+			currentCharacter isWhitespace or: [ currentCharacter = Character pageUp ] ] whileTrue.
 			^ self reportLastMatch ].
 	(currentCharacter isLetter or: [ currentCharacter = $_ ])
 		ifTrue: [ ^ self scan28 ].

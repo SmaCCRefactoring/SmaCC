@@ -93,5 +93,9 @@ reduceTable
 	#(88 3 #reduceActionForParserRules1:) 
 	#(89 3 #reduceActionForTerms8:) 
 	#(89 3 #reduceActionForTerms6:) 
-	#(89 3 #reduceActionForTerms4:)
+	#(89 3 #reduceActionForTerms4:) 
+	#(89 3 #reduceActionForTerms3:) 
+	#(89 4 #reduceActionForTerms9:) 
+	#(89 4 #reduceActionForTerms7:) 
+	#(89 4 #reduceActionForTerms5:)
 	).

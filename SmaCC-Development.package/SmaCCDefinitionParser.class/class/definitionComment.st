@@ -472,20 +472,40 @@ SimpleTerms
 
 SimpleTerm
 	: { grammar newRHS }
-	| SimpleTerm 'rhs' Term 'term'
+	| SimpleTerm 'rhs' Term 'term' 
 		{rhs
 			add: term;
+			yourself} 
+	| SimpleTerm 'rhs' Term 'term'  <variablename> 'variableNameToken'
+		{rhs
+			add: term;
+			nameLastItem: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1);
 			yourself} 
 	| SimpleTerm 'rhs' Term 'term' ""?""
 		{rhs
 			add: (grammar makeOptionalSymbolFor: term);
 			yourself}
+	| SimpleTerm 'rhs' Term 'term' ""?"" <variablename> 'variableNameToken'
+		{rhs
+			add: (grammar makeOptionalSymbolFor: term);
+			nameLastItem: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1);
+			yourself}	
 	| SimpleTerm 'rhs' Term 'term' ""*""
 		{rhs
 			add: (grammar makeRepeatSymbolFor: term);
 			yourself}
+	| SimpleTerm 'rhs' Term 'term' ""*""  <variablename> 'variableNameToken'
+		{rhs
+			add: (grammar makeRepeatSymbolFor: term);
+			nameLastItem: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1);
+			yourself}
 	| SimpleTerm 'rhs' Term 'term' ""+""
 		{rhs
 			add: (grammar makeRepeatMultipleSymbolFor: term);
+			yourself}	
+	| SimpleTerm 'rhs' Term 'term' ""+""  <variablename> 'variableNameToken'
+		{rhs
+			add: (grammar makeRepeatMultipleSymbolFor: term);
+			nameLastItem: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1);
 			yourself}	
 	;"
