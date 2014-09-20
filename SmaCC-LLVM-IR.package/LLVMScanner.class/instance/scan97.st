@@ -2,48 +2,30 @@ generated
 scan97
 	self step.
 	currentCharacter = $:
-		ifTrue: [ ^ self recordAndReportMatch: #(258) ].
-	currentCharacter = $_
+		ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+	currentCharacter = $l
 		ifTrue: [ ^ self scan98 ].
-	currentCharacter = $d
+	currentCharacter = $r
 		ifTrue: [ 
 			self step.
 			currentCharacter = $:
-				ifTrue: [ ^ self recordAndReportMatch: #(258) ].
-			currentCharacter = $i
+				ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+			currentCharacter = $n
 				ifTrue: [ 
 					self step.
 					currentCharacter = $:
-						ifTrue: [ ^ self recordAndReportMatch: #(258) ].
+						ifTrue: [ ^ self recordAndReportMatch: #(257) ].
 					currentCharacter = $a
 						ifTrue: [ 
 							self step.
 							currentCharacter = $:
-								ifTrue: [ ^ self recordAndReportMatch: #(258) ].
+								ifTrue: [ ^ self recordAndReportMatch: #(257) ].
 							currentCharacter = $l
 								ifTrue: [ 
+									self recordMatch: #(136).
 									self step.
 									currentCharacter = $:
-										ifTrue: [ ^ self recordAndReportMatch: #(258) ].
-									currentCharacter = $e
-										ifTrue: [ 
-											self step.
-											currentCharacter = $:
-												ifTrue: [ ^ self recordAndReportMatch: #(258) ].
-											currentCharacter = $c
-												ifTrue: [ 
-													self step.
-													currentCharacter = $:
-														ifTrue: [ ^ self recordAndReportMatch: #(258) ].
-													currentCharacter = $t
-														ifTrue: [ 
-															self recordMatch: #(218).
-															self step.
-															currentCharacter = $:
-																ifTrue: [ ^ self recordAndReportMatch: #(258) ] ].
-													(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-														ifTrue: [ ^ self scan5 ].
-													^ self reportLastMatch ] ].
+										ifTrue: [ ^ self recordAndReportMatch: #(257) ].
 									(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
 										ifTrue: [ ^ self scan5 ].
 									^ self reportLastMatch ] ].

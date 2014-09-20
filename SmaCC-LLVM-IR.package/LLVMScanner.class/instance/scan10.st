@@ -4,7 +4,7 @@ scan10
 	currentCharacter isDigit
 		ifTrue: [ 
 			[ 
-			self recordMatch: #(262).
+			self recordMatch: #(261).
 			self step.
 			currentCharacter = $.
 				ifTrue: [ ^ self scan11 ].

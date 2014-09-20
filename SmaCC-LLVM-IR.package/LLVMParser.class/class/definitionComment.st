@@ -118,12 +118,6 @@ NamedInstruction:
 	NamedTerminatorInstruction
 	;
 
-Instruction:
-	StartingInstruction |
-	MiddleInstruction |
-	TerminatorInstruction
-	;
-
 Alias:
 	GlobalName ""alias"" Linkage? Visibility? Type Aliasee
 	;
@@ -146,7 +140,7 @@ GlobalVariable:
 
 Constant:
 	SimpleConstant |
-	StructureOrPackedVectorConstant | # predicate because a vector constant and a structure constant can start with '<'
+	StructureConstant | # predicate because a vector constant and a structure constant can start with '<'
 	ArrayConstant |
 	VectorConstant |
 	ZeroInitializer |
@@ -265,11 +259,11 @@ MetadataString:
 	<metadata_string> 'name'
 	;
 
-TLSmodel:
-	""thread_local"" ""("" TLSoption "")""
+TLSModel:
+	""thread_local"" ""("" TLSOption "")""
 	;
 
-TLSoption:
+TLSOption:
 	""localdynamic"" |
 	""initialexec"" |
 	""localexec""
@@ -398,6 +392,7 @@ NamedMiddleInstruction:
 		Instruction_cmpxchg |
 		Instruction_atomicrmw |
 		ConversionInstruction |
+		MemoryInstruction |
 		OtherInstruction |
 		Instruction_call_nonVoid
 	) 'instruction'
@@ -439,8 +434,8 @@ NamedTerminatorInstruction:
 	LocalName 'name' Instruction_invoke_nonVoid 'instruction'
 	;
 	
-#// ret <type> <value> ; Return a value from a non-void function
-#// ret void ; Return from void function
+# ret <type> <value> ; Return a value from a non-void function
+# ret void ; Return from void function
 Instruction_ret:
 	""ret"" 'opcode' (TypedValue 'val' | ""void"")
 	;
@@ -758,7 +753,7 @@ Instruction_fcmp:
 	;
 
 FcmpCondition:
-	BOOLEAN | ""oeq"" | ""ogt"" | ""oge"" | ""olt"" | ""ole"" | ""one"" | ""ord"" | ""ueq"" | ""ugt"" | ""uge"" | ""ult"" | ""ule"" | ""une"" | ""uno""
+	<boolean> | ""oeq"" | ""ogt"" | ""oge"" | ""olt"" | ""ole"" | ""one"" | ""ord"" | ""ueq"" | ""ugt"" | ""uge"" | ""ult"" | ""ule"" | ""une"" | ""uno""
 	;
 
 # <result> = phi <ty> [ <val0>, <label0>], ...
@@ -910,9 +905,10 @@ TypeDef:
 	LocalName 'name' ""type"" NonVoidType 'type'
 	;
 
-BinaryOpcode:
-	""mov"" | ""add"" | ""sub""
-	;
+# strange that it isn't needed?
+#BinaryOpcode:
+#	""mov"" | ""add"" | ""sub""
+#	;
 
 IntType:
 	<int_type>

@@ -6,14 +6,14 @@ scan16
 			currentCharacter = $.
 				ifFalse: [ 
 					currentCharacter = $:
-						ifTrue: [ ^ self recordAndReportMatch: #(258) ].
+						ifTrue: [ ^ self recordAndReportMatch: #(257) ].
 					(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
 						ifTrue: [ ^ self scan5 ].
 					^ self reportLastMatch ] ].
-	self recordMatch: #(29).
+	self recordMatch: #(28).
 	self step.
 	currentCharacter = $:
-		ifTrue: [ ^ self recordAndReportMatch: #(258) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(257) ].
 	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
 		ifTrue: [ ^ self scan5 ].
 	^ self reportLastMatch

@@ -2,7 +2,7 @@ generated
 scan48
 	self step.
 	currentCharacter = $:
-		ifTrue: [ ^ self recordAndReportMatch: #(258) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(257) ].
 	currentCharacter = $b
 		ifTrue: [ ^ self scan49 ].
 	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])

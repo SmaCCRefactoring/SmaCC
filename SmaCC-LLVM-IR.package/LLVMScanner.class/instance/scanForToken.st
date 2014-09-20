@@ -50,43 +50,43 @@ scanForToken
 	currentCharacter = $e
 		ifTrue: [ ^ self scan65 ].
 	currentCharacter = $f
-		ifTrue: [ ^ self scan71 ].
+		ifTrue: [ ^ self scan72 ].
 	currentCharacter = $g
-		ifTrue: [ ^ self scan81 ].
+		ifTrue: [ ^ self scan82 ].
 	currentCharacter = $h
-		ifTrue: [ ^ self scan83 ].
-	currentCharacter = $i
 		ifTrue: [ ^ self scan84 ].
+	currentCharacter = $i
+		ifTrue: [ ^ self scan85 ].
 	currentCharacter = $l
-		ifTrue: [ ^ self scan99 ].
+		ifTrue: [ ^ self scan100 ].
 	currentCharacter = $m
-		ifTrue: [ ^ self scan119 ].
+		ifTrue: [ ^ self scan120 ].
 	currentCharacter = $n
-		ifTrue: [ ^ self scan123 ].
+		ifTrue: [ ^ self scan124 ].
 	currentCharacter = $o
-		ifTrue: [ ^ self scan136 ].
+		ifTrue: [ ^ self scan137 ].
 	currentCharacter = $p
-		ifTrue: [ ^ self scan139 ].
+		ifTrue: [ ^ self scan140 ].
 	currentCharacter = $r
-		ifTrue: [ ^ self scan151 ].
+		ifTrue: [ ^ self scan152 ].
 	currentCharacter = $s
-		ifTrue: [ ^ self scan155 ].
+		ifTrue: [ ^ self scan156 ].
 	currentCharacter = $t
-		ifTrue: [ ^ self scan179 ].
+		ifTrue: [ ^ self scan180 ].
 	currentCharacter = $u
-		ifTrue: [ ^ self scan186 ].
+		ifTrue: [ ^ self scan187 ].
 	currentCharacter = $v
-		ifTrue: [ ^ self scan203 ].
+		ifTrue: [ ^ self scan204 ].
 	currentCharacter = $w
-		ifTrue: [ ^ self scan205 ].
+		ifTrue: [ ^ self scan206 ].
 	currentCharacter = $x
-		ifTrue: [ ^ self scan208 ].
+		ifTrue: [ ^ self scan209 ].
 	currentCharacter = $z
-		ifTrue: [ ^ self scan219 ].
+		ifTrue: [ ^ self scan220 ].
 	currentCharacter = ${
-		ifTrue: [ ^ self scan224 ].
-	currentCharacter = $}
 		ifTrue: [ ^ self scan225 ].
+	currentCharacter = $}
+		ifTrue: [ ^ self scan226 ].
 	currentCharacter isDigit
 		ifTrue: [ ^ self scan18 ].
 	(currentCharacter isWhitespace or: [ currentCharacter = Character pageUp ])

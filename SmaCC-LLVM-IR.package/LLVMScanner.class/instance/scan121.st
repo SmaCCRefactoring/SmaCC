@@ -2,88 +2,47 @@ generated
 scan121
 	self step.
 	currentCharacter = $:
-		ifTrue: [ ^ self recordAndReportMatch: #(258) ].
-	currentCharacter = $d
+		ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+	currentCharacter = $t
 		ifTrue: [ 
 			self step.
 			currentCharacter = $:
-				ifTrue: [ ^ self recordAndReportMatch: #(258) ].
-			currentCharacter = $u
+				ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+			currentCharacter = $a
 				ifTrue: [ 
 					self step.
 					currentCharacter = $:
-						ifTrue: [ ^ self recordAndReportMatch: #(258) ].
-					currentCharacter = $l
+						ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+					currentCharacter = $d
 						ifTrue: [ 
 							self step.
 							currentCharacter = $:
-								ifTrue: [ ^ self recordAndReportMatch: #(258) ].
-							currentCharacter = $e
-								ifTrue: [ 
-									self recordMatch: #(92).
-									self step.
-									currentCharacter = $:
-										ifTrue: [ ^ self recordAndReportMatch: #(258) ] ].
-							(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-								ifTrue: [ ^ self scan5 ].
-							^ self reportLastMatch ] ].
-			(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-				ifTrue: [ ^ self scan5 ].
-			^ self reportLastMatch ].
-	currentCharacter = $n
-		ifTrue: [ 
-			self step.
-			currentCharacter = $:
-				ifTrue: [ ^ self recordAndReportMatch: #(258) ].
-			currentCharacter = $o
-				ifTrue: [ 
-					self step.
-					currentCharacter = $:
-						ifTrue: [ ^ self recordAndReportMatch: #(258) ].
-					currentCharacter = $t
-						ifTrue: [ 
-							self step.
-							currentCharacter = $:
-								ifTrue: [ ^ self recordAndReportMatch: #(258) ].
-							currentCharacter = $o
+								ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+							currentCharacter = $a
 								ifTrue: [ 
 									self step.
 									currentCharacter = $:
-										ifTrue: [ ^ self recordAndReportMatch: #(258) ].
-									currentCharacter = $n
+										ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+									currentCharacter = $t
 										ifTrue: [ 
 											self step.
 											currentCharacter = $:
-												ifTrue: [ ^ self recordAndReportMatch: #(258) ].
-											currentCharacter = $i
+												ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+											currentCharacter = $a
 												ifTrue: [ 
+													self recordMatch: #(77).
 													self step.
 													currentCharacter = $:
-														ifTrue: [ ^ self recordAndReportMatch: #(258) ].
-													currentCharacter = $c
-														ifTrue: [ 
-															self recordMatch: #(226).
-															self step.
-															currentCharacter = $:
-																ifTrue: [ ^ self recordAndReportMatch: #(258) ].
-															(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-																ifTrue: [ ^ self scan5 ].
-															^ self reportLastMatch ] ].
-											(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-												ifTrue: [ ^ self scan5 ].
-											^ self reportLastMatch ] ].
-							(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-								ifTrue: [ ^ self scan5 ].
-							^ self reportLastMatch ] ].
-			(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-				ifTrue: [ ^ self scan5 ].
-			^ self reportLastMatch ].
-	currentCharacter = $v
-		ifTrue: [ 
-			self recordMatch: #(153).
-			self step.
-			currentCharacter = $:
-				ifTrue: [ ^ self recordAndReportMatch: #(258) ] ].
+														ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+													(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
+														ifTrue: [ ^ self scan5 ].
+													^ self reportLastMatch ] ].
+									(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
+										ifTrue: [ ^ self scan5 ].
+									^ self reportLastMatch ] ].
+					(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
+						ifTrue: [ ^ self scan5 ].
+					^ self reportLastMatch ] ].
 	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
 		ifTrue: [ ^ self scan5 ].
 	^ self reportLastMatch

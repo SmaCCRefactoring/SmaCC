@@ -1,3 +1,3 @@
 generated
 scan7
-	^ self recordAndReportMatch: #(67)
+	^ self recordAndReportMatch: #(66)

@@ -1,7 +1,7 @@
 generated
 scan11
 	[ 
-	self recordMatch: #(250).
+	self recordMatch: #(249).
 	self step.
 	currentCharacter isDigit ] whileTrue.
 	('Ee' includes: currentCharacter)
@@ -10,7 +10,7 @@ scan11
 			currentCharacter isDigit
 				ifTrue: [ 
 					[ 
-					self recordMatch: #(250).
+					self recordMatch: #(249).
 					self step.
 					currentCharacter isDigit ] whileTrue.
 					^ self reportLastMatch ].
