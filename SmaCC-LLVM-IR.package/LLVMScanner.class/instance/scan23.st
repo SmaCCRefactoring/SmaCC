@@ -1,23 +1,49 @@
 generated
 scan23
 	self step.
-	currentCharacter = $"
+	currentCharacter = $o
 		ifTrue: [ 
-			[ 
 			self step.
-			currentCharacter = $"
-				ifTrue: [ ^ self recordAndReportMatch: #(175) ] ] repeat ].
-	currentCharacter isDigit
-		ifTrue: [ 
-			[ 
-			self recordMatch: #(167).
-			self step.
-			currentCharacter isDigit ] whileTrue.
+			currentCharacter = $m
+				ifTrue: [ 
+					self step.
+					currentCharacter = $i
+						ifTrue: [ 
+							self step.
+							currentCharacter = $c
+								ifTrue: [ 
+									self recordMatch: #(205).
+									self step.
+									currentCharacter = $r
+										ifTrue: [ 
+											self step.
+											currentCharacter = $m
+												ifTrue: [ 
+													self step.
+													currentCharacter = $w
+														ifTrue: [ ^ self recordAndReportMatch: #(204) ] ] ] ] ] ].
 			^ self reportLastMatch ].
-	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
+	currentCharacter = $t
 		ifTrue: [ 
-			[ 
-			self recordMatch: #(172).
 			self step.
-			currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ] ] whileTrue ].
+			currentCharacter = $r
+				ifTrue: [ 
+					self step.
+					currentCharacter = $i
+						ifTrue: [ 
+							self step.
+							currentCharacter = $b
+								ifTrue: [ 
+									self step.
+									currentCharacter = $u
+										ifTrue: [ 
+											self step.
+											currentCharacter = $t
+												ifTrue: [ 
+													self step.
+													currentCharacter = $e
+														ifTrue: [ 
+															self step.
+															currentCharacter = $s
+																ifTrue: [ ^ self recordAndReportMatch: #(82) ] ] ] ] ] ] ] ].
 	^ self reportLastMatch

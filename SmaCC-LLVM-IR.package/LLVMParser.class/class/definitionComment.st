@@ -1,20 +1,29 @@
 generated
 definitionComment
 "# SmaCC adaptation of the LLVM ASM parser.
-# References:
-# llvmAsmParser.y - Parser for llvm assembly files --------*- C++ -*-===
-# LLLexer.cpp
-#
-#                     The LLVM Compiler Infrastructure
-# This file is distributed under the University of Illinois Open Source License.
-# LLVM_IR.xtext
-#Copyright (c) 2013, Intel Corporation
-#Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-# * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-# * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-# * Neither the name of Intel Corporation nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS IS"" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-# This reference is missing the metadata file and probably more stuff.
+/*
+Copyright (c) 2013, Intel Corporation
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+* Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+* Neither the name of Intel Corporation nor the names of its contributors
+may be used to endorse or promote products derived from this software
+without specific prior written permission.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS IS"" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
 
 # Tokens and types for handling constant integer values
 <integerConstant> : [1-9][0-9]* ;
@@ -28,578 +37,970 @@ definitionComment
 # ESAPINTVAL - A negative number with arbitrary precision 
 # EUAPINTVAL - A positive number with arbitrary precision 
 
-<LOCALVAL_ID> : %[0-9]+ ;
-<GLOBALVAL_ID> : @[0-9]+ ;
-<FPVAL> : 0x[KLM]?[0-9A-Fa-f]+ | [-+]?[0-9]+[.][0-9]*([eE][-+]?[0-9]+)? ;     # Float or Double constant
-
-# Built in types...
-<INTTYPE> : i[0-9]+ ;
-<LABEL> : [-a-zA-Z$._0-9]+\: ;
-
-<LOCALVAR> : \%[-a-zA-Z$._][-a-zA-Z$._0-9]* ;
-<GLOBALVAR> : \@[-a-zA-Z$._][-a-zA-Z$._0-9]* ;
-<string> : \""[^\""]*\"" ;
-<LABELSTR> : <string> \: ;
-<STRINGCONSTANT> : <string> ;
-<ATSTRINGCONSTANT> : \@ <string> ;
-<PCTSTRINGCONSTANT> : \% <string> ;
-
-<metadata_int> : \! [ 0-9]+ ;
-<metadata_name> : \! [-a-zA-Z$._][-a-zA-Z$._0-9]* ;
+<float> : 0x[KLMH]?[0-9A-Fa-f]+ | [-+]?[0-9]+[.][0-9]*([eE][-+]?[0-9]+)? ;     # Float or Double constant
+<boolean> : true | false ;
+<null>: null ;
+<integer> :  [0-9]+ ;
+<name> :  [a-zA-Z\$\._\-][a-zA-Z\$\._\-0-9]* ;
+<string> : \""[^\""]*\"" ;  #Missing \ characters.
+<int_type> : i <integer>;
+<global_id> : \@ (<integer> | <name> | <string>) ;
+<local_id> : \% (<integer> | <name> | <string>) ;
+<basic_block_id> : (<integer> | <name> | <string>) \: ;
+<meta_int> : \! <integer> ;
+<meta_name> : \! <name> ;
+<attribute_id> : \# (<integer> | <name>) ;
+<signed_int> : [\+\-] <integer> ;
+<cstring> : c <string> ;
 <metadata_string> : \! <string> ;
 
 <whitespace> : \s ;
 <comment>: \;[^\r\n]*(\n|\r\n|\r|\r\n) ;
 
-%annotate_tokens ;
-%root Abstract ;
-%prefix LLVM ;
-%suffix Node ;
-
-#===----------------------------------------------------------------------===
-#                             Rules to match Modules
-#===----------------------------------------------------------------------===
-
-# Module rule: Capture the result of parsing the whole file into a result
-# variable... Moved here because %start doesn't have the yacc semantic
-#
-Module: 
-	| DefinitionList {{}}
+Module:
+	| Module TopLevelElement
 	;
 
-DefinitionList:
-	Definition 'definition'
-	| DefinitionList Definition 'definition'
+TopLevelElement:
+	TypeDef | InlineAsm | TargetInfo | GlobalValue | NamedMetadata | AttributeGroup
 	;
 
-Definition:
-	""define""  Function 'function' {{FunctionDefinition}}
-  	| ""declare""  FunctionProto 'prototype' {{FunctionDeclaration}}
-  	| ""module"" ""asm"" AsmBlock  'asm' {{AsmModule}}
-  	| OptLocalAssign 'assign' ""type"" Types 'types' {{LocalTypeAssign}}
-  	| OptLocalAssign 'assign' ""type"" ""void"" {{LocalVoidAssign}}
- 	| OptGlobalAssign 'assign' GVVisibilityStyle 'visibility' ThreadLocal 'thread' GlobalType 'type' ConstVal 'constant' OptAddrSpace 'addrSpace' GlobalVarAttributes 'attributes' {{GlobalConstAssign}}
-	| OptGlobalAssign 'assign' GVInternalLinkage 'internalLinkage' GVVisibilityStyle 'visibility' ThreadLocal 'thread' GlobalType 'type' ConstVal 'constant' OptAddrSpace 'addrSpace'  GlobalVarAttributes 'attributes' {{GlobalConstAssign}}
-	| OptGlobalAssign 'assign' GVExternalLinkage 'externalLinkage' GVVisibilityStyle 'visibility' ThreadLocal 'thread' GlobalType 'type' Types 'types' OptAddrSpace 'addrSpace'  GlobalVarAttributes 'attributes'  {{GlobalTypeAssign}}
-	| OptGlobalAssign 'assign' GVVisibilityStyle 'visibility' ""alias"" AliasLinkage 'alias' AliaseeRef 'aliasee' {{GlobalAliasAssign}}
- 	| ""target"" TargetDefinition 'target' {{TargetDefinition}}
-	| ""deplibs"" ""="" LibrariesDefinition 'libraries' {{LibraryDefinition}}
-	| NamedMetadata {{Metadata}}
+AttributeGroup:
+	""attributes"" ATTRIBUTE_ID ""="" ""{"" (FunctionAttribute | AlignStack ""="" INTEGER | TargetSpecificAttribute)+ ""}""
 	;
 
-AsmBlock:
-	<STRINGCONSTANT>
-	;
-
-TargetDefinition:
-	""triple"" ""="" <STRINGCONSTANT> 
-	| ""datalayout"" ""="" <STRINGCONSTANT>
-	;
-
-LibrariesDefinition:
-	""["" LibList ""]""
-	;
-
-LibList:
-	| LibList "","" <STRINGCONSTANT> 
-	| <STRINGCONSTANT> 
-	;
-
-#===----------------------------------------------------------------------===
-#                             Basic stuff
-#===----------------------------------------------------------------------===
-
-ArithmeticOps: ""add"" | ""sub"" | ""mul"" | ""udiv"" | ""sdiv"" | ""fdiv"" | ""urem"" | ""srem"" | ""frem"";
-LogicalOps   : ""shl"" | ""lshr"" | ""ashr"" | ""and"" | ""or"" | ""xor"";
-CastOps      : ""trunc"" | ""zext"" | ""sext"" | ""fptrunc"" | ""fpext"" | ""bitcast"" | 
-               ""uitofp"" | ""sitofp"" | ""fptoui"" | ""fptosi"" | ""inttoptr"" | ""ptrtoint"";
-
-IPredicates  
-  : ""eq""     | ""ne""   
-  | ""slt""   | ""sgt""  
-  | ""sle""   | ""sge""  
-  | ""ult""   | ""ugt""  
-  | ""ule""   | ""uge"" 
-  ;
-
-FPredicates  
-  : ""oeq""   | ""one""  
-  | ""olt""   | ""ogt""  
-  | ""ole""   | ""oge""  
-  | ""ord""   | ""uno""  
-  | ""ueq""   | ""une""  
-  | ""ult""   | ""ugt""  
-  | ""ule""   | ""uge""  
-  | ""true"" 
-  | ""false"" 
-  ;
-
-# These are some types that allow classification if we only want a particular 
-# thing... for example, only a signed, unsigned, or integral type.
-IntType :  <INTTYPE> ;
-FPType   : ""float""  | ""double"" | ""ppc_fp128"" | ""fp128"" | ""x86_fp80"" ;
-
-LocalName : <LOCALVAR> | <STRINGCONSTANT> | <PCTSTRINGCONSTANT> ;
-OptLocalName : LocalName | ;
-
-OptAddrSpace :
-	| ""addrspace"" ""("" <EUINT64VAL> "")"" 
- 	;
-
-OptLocalAssign : LocalName ""="" 
-  |  ;
-
-LocalNumber : <LOCALVAL_ID> ""="" ;
-
-
-GlobalName : <GLOBALVAR> | <ATSTRINGCONSTANT> ;
-
-OptGlobalAssign : GlobalAssign
-  | ;
-
-GlobalAssign : GlobalName ""="" ;
-
-GVInternalLinkage 
-  : ""internal""     
-  | ""weak""         
-  | ""linkonce""    
-  | ""appending""   
-  | ""dllexport""    
-  | ""common""      
-  ;
-
-GVExternalLinkage
-  : ""dllimport""   
-  | ""extern_weak"" 
-  | ""external""    
-  ;
-
-GVVisibilityStyle
-  : 
-  | ""default""   
-  | ""hidden""    
-  | ""protected"" 
-  ;
-
-FunctionDeclareLinkage:   
-  | ""dllimport""    
-  | ""extern_weak"" 
-  ;
-  
-FunctionDefineLinkage:   
-  | ""internal""    
-  | ""linkonce""    
-  | ""weak""        
-  | ""dllexport""    
-  ; 
-
-AliasLinkage:
-  | ""weak""        
-  | ""internal""    
-  ;
-
-OptCallingConv :  |
-                 ""ccc""             |
-                 ""fastcc""          |
-                 ""coldcc""          |
-                 ""x86_stdcallcc""   |
-                 ""x86_fastcallcc""  |
-                 ""x86_ssecallcc""   |
-                 ""cc"" <EUINT64VAL>  ;
-
-ParamAttr     : ""zeroext"" 
-              | ""zext""    
-              | ""signext"" 
-              | ""sext""    
-              | ""inreg""   
-              | ""sret""    
-              | ""noalias"" 
-              | ""byval""   
-              | ""nest""    
-              | ""align"" <EUINT64VAL> 
-              ;
-
-OptParamAttrs : /* empty */  
-              | OptParamAttrs ParamAttr 
-              ;
-
-FuncAttr      : ""noreturn"" 
-              | ""nounwind"" 
-              | ""inreg""    
-              | ""zeroext""  
-              | ""signext""  
-              | ""readnone"" 
-              | ""readonly"" 
-              ;
-
-OptFuncAttrs  : /* empty */ 
-              | OptFuncAttrs FuncAttr 
-              ;
-
-FuncNoteList  : FuncNote 
-              | FuncNoteList "","" FuncNote 
-              ;
-
-FuncNote      : ""inline"" ""="" ""never"" 
-              | ""inline"" ""="" ""always"" 
-              | ""optimizeforsize"" 
-              ;
-
-OptFuncNotes  : /* empty */ 
-              | ""fnnote"" ""("" FuncNoteList  "")"" 
-              ;
-
-OptGC         : /* empty */ 
-              | ""gc"" <STRINGCONSTANT>
-              ;
-
-# OptAlign/OptCAlign - An optional alignment, and an optional alignment with
-# a comma before it.
-OptAlign :          |
-           ""align"" <EUINT64VAL> ;
-OptCAlign :              |
-            "","" ""align"" <EUINT64VAL> ;
-
-
-
-SectionString : ""section"" <STRINGCONSTANT> ;
-
-OptSection :   |
-             SectionString ;
-
-# GlobalVarAttributes - Used to pass the attributes string on a global.  CurGV
-# is set to be the global we are processing.
-
-GlobalVarAttributes:
-	| "","" GlobalVarAttribute GlobalVarAttributes
-	;
-
-GlobalVarAttribute:
-	SectionString
-	| ""align"" <EUINT64VAL>
-	;
-
-#===----------------------------------------------------------------------===
-# Types includes all predefined types... except void, because it can only be
-# used in specific contexts (function returning void for example).  
-
-# Derived types are added later...
-PrimType : IntType | FPType ;
-
-Types:
-	""opaque"" 
-  | PrimType 
-  | Types OptAddrSpace ""*"" 
-  | SymbolicValueRef 
-  | ""\\"" <EUINT64VAL> 
-  | Types ""("" ArgTypeListI "")"" # OptFuncAttrs removed, only allowed as backup
-  | ""void"" ""("" ArgTypeListI "")"" # OptFuncAttrs removed, only allowed as backup
-  | ""["" <EUINT64VAL> ""x"" Types ""]"" 
-  | ""<"" <EUINT64VAL> ""x"" Types "">"" 
-  | ""{"" TypeListI ""}"" 
-  | ""{"" ""}"" 
-  | ""<"" ""{"" TypeListI ""}"" "">"" 
-  | ""<"" ""{"" ""}"" "">""
-	| MetadataType
-  ;
-
-ArgType 
-  : Types OptParamAttrs 
-  ;
-
-ResultTypes
-  : Types 
-  | ""void"" 
-  ;
-
-ArgTypeList : ArgType 
-  | ArgTypeList "","" ArgType 
-  ;
-
-ArgTypeListI 
-  : ArgTypeList
-  | ArgTypeList "","" ""..."" 
-  | ""..."" 
-  |  ;
-
-# TypeList - Used for struct declarations and as a basis for function type 
-# declaration type lists
-TypeListI : Types 
-  | TypeListI "","" Types ;
-
-# ConstVal - The various declarations that go into the constant pool.  This
-# production is used ONLY to represent constants that show up AFTER a 'const',
-# 'constant' or 'global' token at global scope.  Constants that can be inlined
-# into other expressions (such as integers and constexprs) are handled by the
-# ResolvedVal, ValueRef and ConstValueRef productions.
-#
-ConstVal: Types ""["" ConstVector ""]"" 
-  | Types ""["" ""]"" 
-  | Types ""c"" <STRINGCONSTANT> 
-  | Types ""<"" ConstVector "">"" 
-  | Types ""{"" ConstVector ""}"" 
-  | Types ""{"" ""}"" 
-  | Types ""<"" ""{"" ConstVector ""}"" "">"" 
-  | Types ""<"" ""{"" ""}"" "">"" 
-  | Types ""null"" 
-  | Types ""undef"" 
-  | Types SymbolicValueRef 
-  | Types ConstExpr 
-  | Types ""zeroinitializer"" 
-  | IntType <ESINT64VAL> 
-  | IntType <ESAPINTVAL> 
-  | IntType <EUINT64VAL> 
-  | IntType <EUAPINTVAL> 
-  | IntType ""true"" 
-  | IntType ""false"" 
-  | FPType <FPVAL>
-	| Types MetadataNode
-	| Types <metadata_string>
-	;
-
-
-ConstExpr: CastOps ""("" ConstVal ""to"" Types "")"" 
-  | ""getelementptr"" ""("" ConstVal IndexList "")"" 
-  | ""select"" ""("" ConstVal "","" ConstVal "","" ConstVal "")"" 
-  | ArithmeticOps ""("" ConstVal "","" ConstVal "")"" 
-  | LogicalOps ""("" ConstVal "","" ConstVal "")"" 
-  | ""icmp"" IPredicates ""("" ConstVal "","" ConstVal "")"" 
-  | ""fcmp"" FPredicates ""("" ConstVal "","" ConstVal "")"" 
-  | ""vicmp"" IPredicates ""("" ConstVal "","" ConstVal "")"" 
-  | ""vfcmp"" FPredicates ""("" ConstVal "","" ConstVal "")"" 
-  | ""extractelement"" ""("" ConstVal "","" ConstVal "")"" 
-  | ""insertelement"" ""("" ConstVal "","" ConstVal "","" ConstVal "")"" 
-  | ""shufflevector"" ""("" ConstVal "","" ConstVal "","" ConstVal "")"" 
-  | ""extractvalue"" ""("" ConstVal ConstantIndexList "")"" 
-  | ""insertvalue"" ""("" ConstVal "","" ConstVal ConstantIndexList "")"" ;
-
-
-ConstVector : ConstVector "","" ConstVal 
-  | ConstVal ;
-
-
-# GlobalType - Match either GLOBAL or CONSTANT for global declarations...
-GlobalType : ""global""  | ""constant"" ;
-
-# ThreadLocal 
-ThreadLocal : ""thread_local""  | ;
-
-# AliaseeRef - Match either GlobalValue or bitcast to GlobalValue.
-AliaseeRef : ResultTypes SymbolicValueRef 
-   | ""bitcast"" ""("" AliaseeRef ""to"" Types "")"" ;
-
-
-#===----------------------------------------------------------------------===
-#                       Rules to match Function Headers
-#===----------------------------------------------------------------------===
-
-ArgListH:
-	ArgListH "","" Types OptParamAttrs OptLocalName
-	| Types OptParamAttrs OptLocalName
-	;
-
-ArgList:
-	| ArgListH
-	| ArgListH "","" ""...""
-	| ""...""
-	;
-
-FunctionHeaderH:
-	OptCallingConv ResultTypes GlobalName ""("" ArgList "")"" OptFuncAttrs OptSection OptAlign OptGC OptFuncNotes
-	;
-
-BEGIN : ""begin"" | ""{"";                # Allow BEGIN or '{' to start a function
-
-FunctionHeader : FunctionDefineLinkage GVVisibilityStyle FunctionHeaderH BEGIN ;
-
-END : ""end"" | ""}"";                    # Allow end of '}' to end a function
-
-Function : BasicBlockList END ;
-
-FunctionProto : FunctionDeclareLinkage GVVisibilityStyle FunctionHeaderH ;
-
-#===----------------------------------------------------------------------===
-#                        Rules to match Basic Blocks
-#===----------------------------------------------------------------------===
-
-OptSideEffect : /* empty */ 
-  | ""sideeffect"" ;
-
-ConstValueRef : <ESINT64VAL> 
-  | <EUINT64VAL> 
-  | <ESAPINTVAL>   
-  | <EUAPINTVAL> 
-  | <FPVAL> 
-  | ""true""  
-  | ""false"" 
-  | ""null"" 
-  | ""undef"" 
-  | ""zeroinitializer"" 
-  | ""<"" ConstVector "">"" 
-  | ""["" ConstVector ""]"" 
-  | ""["" ""]"" 
-  | ""c"" <STRINGCONSTANT> 
-  | ""{"" ConstVector ""}"" 
-  | ""{"" ""}"" 
-  | ""<"" ""{"" ConstVector ""}"" "">"" 
-  | ""<"" ""{"" ""}"" "">"" 
-  | ConstExpr 
-  | ""asm"" OptSideEffect <STRINGCONSTANT> "","" <STRINGCONSTANT> ;
-
-# SymbolicValueRef - Reference to one of two ways of symbolically refering to
-# another value.
-#
-SymbolicValueRef : <LOCALVAL_ID> 
-  | <GLOBALVAL_ID> 
-  | LocalName 
-  | GlobalName ;
-
-# ValueRef - A reference to a definition... either constant or symbolic
-ValueRef : SymbolicValueRef | ConstValueRef;
-
-
-# ResolvedVal - a <type> <value> pair.  This is used only in cases where the
-# type immediately preceeds the value reference, and allows complex constant
-# pool references (for things like: 'ret [2 x int] [ int 12, int 42]')
-ResolvedVal:
-	Types ValueRef 
-	;
-
-ReturnedVal : ResolvedVal 
-  | ReturnedVal "","" ResolvedVal ;
-
-BasicBlockList:
-	BasicBlockList BasicBlock
-	| FunctionHeader BasicBlock
-	;
-# Basic blocks are terminated by branching instructions: 
-# br, br/cc, switch, ret
-#
-BasicBlock:
-	InstructionList OptLocalAssign BBTerminatorInst
-	| InstructionList LocalNumber BBTerminatorInst
-	;
-
-InstructionList :
-	| InstructionList Inst 
-	| <LABELSTR>
-	;
-
-BBTerminatorInst:
-  ""ret"" ReturnedVal  
-  | ""ret"" ""void"" 
-  | ""br"" <LABEL> ValueRef                                                # Conditional Branch...
-  | ""br"" ""int"" ValueRef "","" <LABEL> ValueRef "","" <LABEL> ValueRef 
-  | ""switch"" IntType ValueRef "","" <LABEL> ValueRef ""["" JumpTable ""]"" 
-  | ""switch"" IntType ValueRef "","" <LABEL> ValueRef ""["" ""]"" 
-  | ""invoke"" OptCallingConv ResultTypes ValueRef ""("" ParamList "")"" OptFuncAttrs ""to"" <LABEL> ValueRef ""unwind"" <LABEL> ValueRef 
-  | ""unwind"" 
-  | ""unreachable"" ;
-
-
-
-JumpTable : JumpTable IntType ConstValueRef "","" <LABEL> ValueRef 
-  | IntType ConstValueRef "","" <LABEL> ValueRef ;
-
-Inst:
-	OptLocalAssign InstVal MetadataSuffix
-	| LocalNumber InstVal MetadataSuffix
-	;
-
-
-PHIList : Types ""["" ValueRef "","" ValueRef ""]"" 
-  | PHIList "","" ""["" ValueRef "","" ValueRef ""]"" ;
-
-
-ParamList : Types OptParamAttrs ValueRef OptParamAttrs 
-  | <LABEL> OptParamAttrs ValueRef OptParamAttrs 
-  | ParamList "","" Types OptParamAttrs ValueRef OptParamAttrs 
-  | ParamList "","" <LABEL> OptParamAttrs ValueRef OptParamAttrs 
-  |  ;
-
-IndexList       # Used for gep instructions and constant expressions
-  :  
-  | IndexList "","" ResolvedVal 
-  ;
-
-ConstantIndexList       # Used for insertvalue and extractvalue instructions
-  : "","" <EUINT64VAL> 
-  | ConstantIndexList "","" <EUINT64VAL> 
-  ;
-
-OptTailCall : ""tail"" ""call"" 
-  | ""call"" ;
-
-InstVal : ArithmeticOps Types ValueRef "","" ValueRef 
-  | LogicalOps Types ValueRef "","" ValueRef 
-  | ""icmp"" IPredicates Types ValueRef "","" ValueRef  
-  | ""fcmp"" FPredicates Types ValueRef "","" ValueRef  
-  | ""vicmp"" IPredicates Types ValueRef "","" ValueRef  
-  | ""vfcmp"" FPredicates Types ValueRef "","" ValueRef  
-  | CastOps ResolvedVal ""to"" Types 
-  | ""select"" ResolvedVal "","" ResolvedVal "","" ResolvedVal 
-  | ""vaarg"" ResolvedVal "","" Types 
-  | ""extractelement"" ResolvedVal "","" ResolvedVal 
-  | ""insertelement"" ResolvedVal "","" ResolvedVal "","" ResolvedVal 
-  | ""shufflevector"" ResolvedVal "","" ResolvedVal "","" ResolvedVal 
-  | ""phi"" PHIList 
-  | OptTailCall OptCallingConv ResultTypes ValueRef ""("" ParamList "")"" OptFuncAttrs 
-  | MemoryInst ;
-
-OptVolatile : ""volatile"" 
-  | /* empty */ ;
-
-
-
-MemoryInst:
-	""malloc"" Types OptCAlign
-	| ""malloc"" Types "","" IntType ValueRef OptCAlign 
-	| ""alloca"" Types IntType
-	| ""alloca"" Types "","" IntType ValueRef OptCAlign
-	| ""free"" ResolvedVal
-	| OptVolatile ""load"" Types ValueRef OptCAlign
-	| OptVolatile ""store"" ResolvedVal "","" Types ValueRef OptCAlign
-	| ""getresult"" Types ValueRef "","" <EUINT64VAL>
-	| ""getelementptr"" Types ValueRef IndexList
-	| ""extractvalue"" Types ValueRef ConstantIndexList
-	| ""insertvalue"" Types ValueRef "","" Types ValueRef ConstantIndexList
+TargetSpecificAttribute:
+	<string> (""="" <string>)?
 	;
 
 NamedMetadata:
-	<metadata_int> ""="" ""metadata"" MetadataNode
-	| <metadata_name> ""="" MetadataNode
+	<meta_int> ""="" ""metadata"" MetadataNode
+	| <meta_name> ""="" MetadataNode
 	;
-
+	
 MetadataRef:
-	NamedMetadata
-	| MetadataIdentifier
+	NamedMetadata | MetadataIdentifier
 	;
 
 MetadataIdentifier:
-	<metadata_int>
-	| <metadata_name>
+	<meta_int> | <meta_name>
+	;
+	
+ValueRef:
+	GlobalValueRef |
+	LocalValueRef
 	;
 
-MetadataSuffix:
-	| MetadataSuffix "","" <metadata_name> MetadataRef
+GlobalValueRef:
+	Constant |
+	MetadataRef
+	;
+
+LocalValueRef:
+	LocalValue|LOCAL_ID
+	;
+
+GlobalValue:
+	GlobalVariable | Function | Alias
+	;
+
+GlobalValueDef:
+	GlobalVariable | FunctionHeader | Alias
+	;
+
+LocalValue:
+	NamedInstruction | Parameter
+	;
+
+NamedInstruction:
+	StartingInstruction |
+	NamedMiddleInstruction |
+	NamedTerminatorInstruction
+	;
+
+Instruction:
+	StartingInstruction |
+	MiddleInstruction |
+	TerminatorInstruction
+	;
+
+Alias:
+	GlobalName ""alias"" Linkage? Visibility? Type Aliasee
+	;
+
+Aliasee:
+	GlobalValueDef | GLOBAL_ID | ConstantExpression_convert
+	;
+
+TargetInfo:
+	""target"" (""datalayout"" | ""triple"") ""="" <string>
+	;
+
+InlineAsm:
+	""module"" ""asm"" <string> 'asmLine'
+	;
+
+GlobalVariable:
+	GlobalName 'name' Linkage? 'linkage'  AddressSpace? 'addrSpace' TLSModel? 'tlsModel' ""unnamed_addr"" ? (""constant"" | ""global"") Type 'type' Constant? 'initialValue' ("","" Section 'section')? ("","" Align 'align')?
+	;
+
+Constant:
+	SimpleConstant |
+	StructureConstant | # predicate because a vector constant and a structure constant can start with '<'
+	ArrayConstant |
+	VectorConstant |
+	ZeroInitializer |
+	MetadataNode |
+	MetadataString |
+	BlockAddress |
+	Undef |
+	ConstantExpression |
+	GlobalValueDef 'ref' |
+	GLOBAL_ID 'ref'
+	;
+
+ConstantExpression:
+	ConstantExpression_convert |
+	ConstantExpression_getelementptr |
+	ConstantExpression_select |
+	ConstantExpression_compare |
+	ConstantExpression_extractelement |
+	ConstantExpression_insertelement |
+	ConstantExpression_shufflevector |
+	ConstantExpression_extractvalue |
+	ConstantExpression_insertvalue |
+	ConstantExpression_binary
+	;
+
+ConstantExpression_convert:
+	ConvertionOpcode 'opcode' ""("" Type 'fromType' GlobalValueRef 'constant' ""to"" Type 'targetType' "")""
+	;
+
+ConstantExpression_getelementptr:
+	""getelementptr"" 'opcode' ""inbounds""? ""("" Type ""constantType"" GlobalValueRef ""constant"" ("","" Type 'indexTypes' Constant 'indices')* "")""
+	;
+
+ConstantExpression_select:
+	""select"" 'opcode' ""("" TypedValue 'condition' "","" TypedValue 'op1' "","" TypedValue 'op2' "")""
+	;
+
+ConstantExpression_compare:
+	(""icmp"" 'opcode' IcmpCondition 'condition' | ""fcmp"" 'opcode' FcmpCondition 'condition') ""("" TypedValue 'op1' "","" TypedValue 'op2' "")""
+	;
+
+ConstantExpression_extractelement:
+	""extractelement"" 'opcode' ""("" TypedValue 'vector' "","" TypedValue 'index' "")""
+	;
+
+ConstantExpression_insertelement:
+	""insertelement"" 'opcode' ""("" VectorType 'vectorType' ValueRef 'vector' "","" TypedValue 'element' "","" TypedValue 'index' "")""
+	;
+
+ConstantExpression_shufflevector:
+	""shufflevector"" 'opcode' ""("" TypedValue 'vector1' "","" TypedValue 'vector2' "","" TypedValue 'mask' "")""
+	;
+
+ConstantExpression_extractvalue:
+	""extractvalue"" 'opcode' ""("" TypedValue 'value' ("","" INTEGER 'indices')+ "")""
+	;
+
+ConstantExpression_insertvalue:
+	""insertvalue"" 'opcode' ""("" TypedValue 'value' "","" TypedValue 'element' ("","" INTEGER 'indices')+ "")""
+	;
+
+ConstantExpression_binary:
+	(
+		((""add"" | ""sub"" | ""mul"" | ""shl"") 'opcode' (""nuw""?  ""nsw""?)) |
+		((""sdiv"" | ""udiv"" | ""lshr"" | ""ashr"") 'opcode' ""exact""?) |
+		(""fadd"" | ""fsub"" | ""fmul"" | ""fdiv"" | ""urem"" | ""srem"" | ""frem"" | ""and"" | ""or"" | ""xor"") 'opcode'
+	)
+	""("" TypedValue 'op1' "","" TypedValue 'op2' "")""
+	;
+
+Undef:
+	""undef"" 'undef'
+	;
+
+BlockAddress:
+	""blockaddress"" ""("" GlobalValueRef 'function' "","" BasicBlockRef 'basicBlock' "")""
+	;
+
+ZeroInitializer:
+	""zeroinitializer"" {{}}
+	;
+
+StructureConstant:
+	""{"" ConstantList? 'list' ""}"" | ""<"" 'packed' ""{"" ConstantList? 'list' ""}"" "">""
+	;
+
+ArrayConstant:
+	""["" ConstantList? 'list' ""]""
+	;
+
+VectorConstant:
+	""<"" ConstantList? 'list' "">""
+	;
+
+ConstantList:
+	TypedConstant 'typedConstants' ("","" TypedConstant 'typedConstants')*
+	;
+
+TypedConstant:
+	Type 'type' Constant 'value'
+	;
+
+SimpleConstant:
+	(INTEGER | SIGNED_INT | FLOAT | BOOLEAN | NULL | CSTRING) 'value'
 	;
 
 MetadataNode:
-	""!"" ""{"" MetadataNodeElementList ""}""
-	| ""!"" ""{"" ""}""
-	;
-
-MetadataNodeElementList:
-	MetadataNodeElement
-	| MetadataNodeElementList "","" MetadataNodeElement
+	""!"" ""{"" (MetadataNodeElement 'elements' ("","" MetadataNodeElement 'elements')*)? ""}""
 	;
 
 MetadataNodeElement:
-	Types ValueRef
-	| MetadataRef
-	| ""null""
+	TypedValue 'value' | MetadataRef 'metadataRef' | NULL 'null'
+	;
+
+MetadataString:
+	<metadata_string> 'name'
+	;
+
+TLSmodel:
+	""thread_local"" ""("" TLSoption "")""
+	;
+
+TLSoption:
+	""localdynamic"" |
+	""initialexec"" |
+	""localexec""
+	;
+
+AddressSpace:
+	""addrspace"" ""("" INTEGER 'value' "")""
+	;
+
+Section:
+	""section"" <string>
+	;
+
+Align:
+	""align"" INTEGER
+	;
+
+Gc:
+	""gc"" <string>
+	;
+
+Function:
+	FunctionDef | FunctionDecl
+	;
+
+FunctionDef:
+	""define"" FunctionHeader 'header' ""{"" BasicBlock+ 'basicBlocks' ""}""
+	;
+
+FunctionDecl:
+	""declare"" FunctionHeader 'header'
+	;
+
+FunctionHeader:
+	Linkage? 'linkage' Visibility? 'visibility' CConv? 'cconv' ""unnamed_addr""? ParameterAttributes? 'rettypeAttrs' Type 'rettype' <global_id> 'name' ""("" Parameters 'parameters' "")"" FunctionAttributes? 'attrs' Section? 'section' Align? 'align' Gc? 'gc' FunctionPrefix? 'functionPrefix'
+	;
+
+FunctionPrefix:
+	""prefix"" TypedConstant 'value'
+	;
+
+Parameters:
+	(Parameter 'parameters' ("","" Parameter 'parameters')* ("","" ""..."" 'vararg')?)?
+	| ""..."" 'vararg'
+	;
+
+FunctionAttributes:
+	(FunctionAttribute 'functionAttributes'
+	| (AlignStack 'alignstack' ""("" INTEGER 'alignstackValue' "")"")
+	| (AttributeGroup | ATTRIBUTE_ID) 'functionAttributeGroupRefs' )+
+	;
+
+AlignStack:
+	""alignstack""
+	;
+
+FunctionAttribute:
+	(
+		""alwaysinline"" |
+		""builtin"" |
+		""cold"" |
+		""inlinehint"" |
+		""naked"" |
+		""nobuiltin"" |
+		""noduplicate"" |
+		""noimplicitfloat"" |
+		""noinline"" |
+		""nonlazybind"" |
+		""noredzone"" |
+		""noreturn"" |
+		""nounwind"" |
+		""optnone"" |
+		""optsize"" |
+		""readnone"" |
+		""readonly"" |
+		""returns_twice"" |
+		""sanitize_address"" |
+		""sanitize_memory"" |
+		""sanitize_thread"" |
+		""ssp"" |
+		""sspreq"" |
+		""sspstrong"" |
+		""uwtable"" |
+		""address_safety"" |
+		""thread_safety"" |
+		""uninitialized_checks""
+	) 'attribute'
+	;
+
+BasicBlock:
+	BasicBlockName 'name' StartingInstruction* 'instructions' MiddleInstruction* 'instructions' TerminatorInstruction 'instructions'
+	;
+
+BasicBlockName:
+	BASIC_BLOCK_ID?
+	;
+
+MetadataSuffix:
+	"","" <meta_name> 'name' MetadataRef 'value'
+	;
+
+StartingInstruction:
+	LocalName 'name' Instruction_phi 'instruction' MetadataSuffix* 'metadata'
+	;
+
+MiddleInstruction:
+	(
+		NamedMiddleInstruction |
+		Instruction_store |
+		Instruction_fence |
+		Instruction_call_void
+	) 'instruction'
+	MetadataSuffix* 'metadata'
+	;
+
+NamedMiddleInstruction:
+	LocalName 'name'
+	(
+		BinaryInstruction |
+		BitwiseBinaryInstruction |
+		VectorInstructions |
+		AggregateInstruction |
+		Instruction_alloca |
+		Instruction_load |
+		Instruction_getelementptr |
+		Instruction_cmpxchg |
+		Instruction_atomicrmw |
+		ConversionInstruction |
+		OtherInstruction |
+		Instruction_call_nonVoid
+	) 'instruction'
+	;
+
+ParamName:
+# A value converter translates this into either %num (if this isn't provided)
+# or into %NAME if it is.
+	<local_id>?
+	;
+
+LocalName:
+#// A value converter translates this into either %num (if this isn't provided)
+#// or into %NAME if it is.
+	(<local_id> ""="")?
+	;
+
+GlobalName:
+#// A value converter translates this into either %num (if this isn't provided)
+#// or into %NAME if it is.
+	(<global_id> ""="")?
+	;
+
+TerminatorInstruction:
+	(
+		NamedTerminatorInstruction |
+		Instruction_ret |
+		Instruction_br |
+		Instruction_switch |
+		Instruction_indirectbr |
+		Instruction_resume |
+		Instruction_unreachable |
+		Instruction_invoke_void
+	) 'instruction'
+	MetadataSuffix* 'metadata'
+	;
+
+NamedTerminatorInstruction:
+	LocalName 'name' Instruction_invoke_nonVoid 'instruction'
+	;
+	
+#// ret <type> <value> ; Return a value from a non-void function
+#// ret void ; Return from void function
+Instruction_ret:
+	""ret"" 'opcode' (TypedValue 'val' | ""void"")
+	;
+
+#// br i1 <cond>, label <iftrue>, label <iffalse>
+#// br label <dest> ; Unconditional branch
+Instruction_br:
+	""br"" 'opcode' (
+		(TypedValue 'condition' "","" ""label"" BasicBlockRef 'true' "","" ""label"" BasicBlockRef 'false' ) |
+		(""label"" BasicBlockRef 'unconditional' )
+	)
+	;
+
+#// switch <intty> <value>, label <defaultdest> [ <intty> <val>, label <dest> ... ]
+Instruction_switch:
+	""switch"" 'opcode' TypedValue 'comparisonValue' "","" ""label"" BasicBlockRef 'defaultDest' ""["" (TypedValue 'caseConditions' "","" ""label"" BasicBlockRef 'destinations')* ""]""
+	;
+
+#// indirectbr <somety>* <address>, [ label <dest1>, label <dest2>, ... ]
+Instruction_indirectbr:
+	""indirectbr"" 'opcode' TypedValue 'address' "","" ""[""
+		(""label"" BasicBlockRef 'destinations' ("","" ""label"" BasicBlockRef 'destinations')*)?
+	""]""
+	;
+
+#// <result> = invoke [cconv] [ret attrs] <ptr to function ty> <function ptr val>(<function args>) [fn attrs]
+#// to label <normal label> unwind label <exception label>
+#// Notice this template as it appears in the reference is incorrect, <ptr to function ty> actually
+#// behaves just like in a call instruction, so it's possible to provide return type only.
+Instruction_invoke_void:
+	""invoke"" 'opcode' CConv? 'cconv' (""zeroext""? ""signext""? ""inreg""?) VoidType 'type' Callee 'callee' ArgList 'args' FunctionAttributes? 'attributes' ""to"" ""label"" BasicBlockRef 'toLabel' ""unwind"" ""label"" BasicBlockRef 'exceptionLabel'
+	;
+
+# <result> = invoke [cconv] [ret attrs] <ptr to function ty> <function ptr val>(<function args>) [fn attrs]
+# to label <normal label> unwind label <exception label>
+# Notice this template as it appears in the reference is incorrect, <ptr to function ty> actually
+# behaves just like in a call instruction, so it's possible to provide return type only.
+Instruction_invoke_nonVoid:
+	""invoke"" 'opcode' CConv? 'cconv' (""zeroext""? ""signext""? ""inreg""?) NonVoidType 'type' Callee 'callee' ArgList 'args' FunctionAttributes? 'attributes' ""to"" ""label"" BasicBlockRef 'toLabel' ""unwind"" ""label"" BasicBlockRef 'exceptionLabel'
+	;
+	
+# resume <type> <value>
+Instruction_resume:
+	""resume"" 'opcode' TypedValue 'value'
+	;
+
+# unreachable
+Instruction_unreachable:
+	""unreachable"" 'opcode'
+	;
+
+BasicBlockRef:
+	BasicBlock  'ref' | <local_id> 'ref'
+	;
+
+BinaryInstruction:
+	Instruction_add |
+	Instruction_fadd |
+	Instruction_sub |
+	Instruction_fsub |
+	Instruction_mul |
+	Instruction_fmul |
+	Instruction_udiv |
+	Instruction_sdiv |
+	Instruction_fdiv |
+	Instruction_urem |
+	Instruction_srem |
+	Instruction_frem
+	;
+
+# <result> = add <ty> <op1>, <op2> ; yields {ty}:result
+# <result> = add nuw <ty> <op1>, <op2> ; yields {ty}:result
+# <result> = add nsw <ty> <op1>, <op2> ; yields {ty}:result
+# <result> = add nuw nsw <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_add:
+	""add"" 'opcode' ""nuw""? ""nsw""? Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+# <result> = fadd [fast-math flags]* <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_fadd:
+	""fadd"" 'opcode' FastMathFlag* 'fastMathFlags' Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+FastMathFlag:
+	(""nnan"" | ""ninf"" | ""nsz"" | ""arcp"" | ""fast"") 'kind'
+	;
+
+# <result> = sub <ty> <op1>, <op2> ; yields {ty}:result
+# <result> = sub nuw <ty> <op1>, <op2> ; yields {ty}:result
+# <result> = sub nsw <ty> <op1>, <op2> ; yields {ty}:result
+# <result> = sub nuw nsw <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_sub:
+	""sub"" 'opcode' ""nuw""? ""nsw""? Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+# <result> = fsub [fast-math flags]* <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_fsub:
+	""fsub"" 'opcode' FastMathFlag* 'fastMathFlags' Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+# <result> = mul <ty> <op1>, <op2> ; yields {ty}:result
+# <result> = mul nuw <ty> <op1>, <op2> ; yields {ty}:result
+# <result> = mul nsw <ty> <op1>, <op2> ; yields {ty}:result
+# <result> = mul nuw nsw <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_mul:
+	""mul"" 'opcode' ""nuw""? ""nsw"" ? Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+# <result> = fmul [fast-math flags]* <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_fmul:
+	""fmul"" 'opcode' FastMathFlag* 'fastMathFlags' Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+# <result> = udiv <ty> <op1>, <op2> ; yields {ty}:result
+# <result> = udiv exact <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_udiv:
+	""udiv"" 'opcode' ""exact""? Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+# <result> = sdiv <ty> <op1>, <op2> ; yields {ty}:result
+# <result> = sdiv exact <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_sdiv:
+	""sdiv"" 'opcode' ""exact""? Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+# <result> = fdiv [fast-math flags]* <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_fdiv:
+	""fdiv 'opcode"" FastMathFlag* 'fastMathFlags' Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+# <result> = urem <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_urem:
+	""urem"" 'opcode' Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+# <result> = srem <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_srem:
+	""srem"" 'opcode' Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+# <result> = frem <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_frem:
+	""frem"" 'opcode' Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+BitwiseBinaryInstruction:
+	Instruction_shl |
+	Instruction_lshr |
+	Instruction_ashr |
+	Instruction_and |
+	Instruction_or |
+	Instruction_xor
+	;
+
+# <result> = shl <ty> <op1>, <op2> ; yields {ty}:result
+# <result> = shl nuw <ty> <op1>, <op2> ; yields {ty}:result
+# <result> = shl nsw <ty> <op1>, <op2> ; yields {ty}:result
+# <result> = shl nuw nsw <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_shl:
+	""shl"" 'opcode' ""nuw""? ""nsw""? Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+# <result> = lshr <ty> <op1>, <op2> ; yields {ty}:result
+# <result> = lshr exact <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_lshr:
+	""lshr"" 'opcode' ""exact""? Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+# <result> = ashr <ty> <op1>, <op2> ; yields {ty}:result
+# <result> = ashr exact <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_ashr:
+	""ashr"" 'opcode' ""exact""? Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+# <result> = and <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_and:
+	""and"" 'opcode' Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+# <result> = or <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_or:
+	""or"" 'opcode' Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+# <result> = xor <ty> <op1>, <op2> ; yields {ty}:result
+Instruction_xor:
+	""xor"" 'opcode' Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+VectorInstructions:
+	Instruction_extractelement |
+	Instruction_insertelement |
+	Instruction_shufflevector
+	;
+
+# <result> = extractelement <n x <ty>> <val>, i32 <idx> ; yields <ty>
+Instruction_extractelement:
+	""extractelement"" 'opcode' TypedValue 'vector' "","" TypedValue 'index'
+	;
+
+# <result> = insertelement <n x <ty>> <val>, <ty> <elt>, i32 <idx> ; yields <n x <ty>>
+Instruction_insertelement:
+	""insertelement"" 'opcode' TypedValue 'vector' "","" TypedValue 'element' "","" TypedValue 'index'
+	;
+
+# <result> = shufflevector <n x <ty>> <v1>, <n x <ty>> <v2>, <m x i32> <mask> ; yields <m x <ty>>
+Instruction_shufflevector:
+	""shufflevector"" 'opcode' TypedValue 'vector1' "","" TypedValue 'vector2' "","" TypedValue 'mask'
+	;
+
+AggregateInstruction:
+	Instruction_extractvalue |
+	Instruction_insertvalue
+	;
+
+# <result> = extractvalue <aggregate type> <val>, <idx>{, <idx>}*
+Instruction_extractvalue:
+	""extractvalue"" 'opcode' TypedValue 'aggregate' ("","" Constant 'indices')+
+	;
+# <result> = insertvalue <aggregate type> <val>, <ty> <elt>, <idx>{, <idx>}* ; yields <aggregate type>
+Instruction_insertvalue:
+	""insertvalue"" 'opcode' TypedValue 'aggregate' "","" TypedValue 'element' ("","" Constant 'indices')+
+	;
+
+MemoryInstruction:
+	Instruction_alloca |
+	Instruction_load |
+	Instruction_store |
+	Instruction_fence |
+	Instruction_cmpxchg |
+	Instruction_atomicrmw |
+	Instruction_getelementptr
+	;
+	
+# <result> = alloca <type>[, <ty> <NumElements>][, align <alignment>] ; yields {type*}:result
+Instruction_alloca:
+	""alloca"" 'opcode' Type 'type' ("","" TypedValue 'numElements' )? ("","" Align 'alignment')?
+	;
+
+# <result> = load [volatile] <ty>* <pointer>[, align <alignment>][, !nontemporal !<index>][, !invariant.load !<index>]
+# <result> = load atomic [volatile] <ty>* <pointer> [singlethread] <ordering>, align <alignment>
+# !<index> = !{ i32 1 }
+Instruction_load:
+	""load"" 'opcode' (
+		( ""volatile""? TypedValue 'pointer' ("","" Align 'alignment')? ("","" ""!nontemporal"" MetadataRef 'nontemporalIndex')? ("","" ""!invariant.load"" MetadataRef 'invariantLoadIndex')? ) |
+		( ""atomic"" ""volatile""? TypedValue 'pointer' ""singlethread""? Ordering 'ordering' Align 'alignment' )
+	)
+	;
+
+# store [volatile] <ty> <value>, <ty>* <pointer>[, align <alignment>][, !nontemporal !<index>] ; yields {void}
+# store atomic [volatile] <ty> <value>, <ty>* <pointer> [singlethread] <ordering>, align <alignment> ; yields {void}
+Instruction_store:
+	""store"" 'opcode' (
+		( ""volatile""? TypedValue 'value' "","" TypedValue 'pointer' ("","" Align 'alignment')? ("","" ""!nontemporal"" MetadataRef 'nontemporalIndex')? ) |
+		(""atomic"" ""volatile""? TypedValue 'value' TypedValue 'pointer' ""singlethread""? Ordering 'ordering' Align 'alignment' )
+	)
+	;
+
+# fence [singlethread] <ordering> ; yields {void}
+Instruction_fence:
+	""fence"" 'opcode' ""singlethread""? Ordering 'ordering'
+	;
+
+# cmpxchg [volatile] <ty>* <pointer>, <ty> <cmp>, <ty> <new> [singlethread] <ordering> ; yields {ty}
+Instruction_cmpxchg:
+	""cmpxchg"" 'opcode' ""volatile""? TypedValue 'pointer' "","" TypedValue 'comparedWith' "","" TypedValue 'newValue' ""singlethread""? Ordering 'ordering'
+	;
+
+# atomicrmw [volatile] <operation> <ty>* <pointer>, <ty> <value> [singlethread] <ordering>
+# ; yields {ty}
+Instruction_atomicrmw:
+	""atomicrmw"" 'opcode' ""volatile""? Atomicrmw_operation 'operation' TypedValue 'pointer' "","" TypedValue 'argument' ""singlethread""? Ordering 'ordering'
+	;
+
+Atomicrmw_operation:
+	""xchg"" | ""add"" | ""sub"" | ""and"" | ""nand"" | ""or"" | ""xor"" | ""max"" | ""min"" | ""umax"" | ""umin""
+	;
+
+# <result> = getelementptr <pty>* <ptrval>{, <ty> <idx>}*
+# <result> = getelementptr inbounds <pty>* <ptrval>{, <ty> <idx>}*
+# <result> = getelementptr <ptr vector> ptrval, <vector index type> idx
+Instruction_getelementptr:
+	""getelementptr"" ""inbounds""? TypedValue 'base' ("","" TypedValue 'indices')*
+	;
+
+ConversionInstruction:
+# Merged since they all look exactly the same except the opcode
+	ConvertionOpcode 'opcode' Type 'fromType' ValueRef 'value' ""to"" Type 'targetType'
+	;
+
+ConvertionOpcode:
+	""trunc"" | ""zext"" | ""sext"" | ""fptrunc"" | ""fpext"" | ""fptoui"" | ""fptosi"" | ""uitofp"" | ""sitofp"" | ""ptrtoint"" | ""inttoptr"" | ""bitcast"" | ""addrspacecast""
+	;
+
+OtherInstruction:
+	Instruction_icmp |
+	Instruction_fcmp |
+	Instruction_select |
+	Instruction_va_arg |
+	Instruction_landingpad
+	;
+
+# <result> = icmp <cond> <ty> <op1>, <op2> ; yields {i1} or {<N x i1>}:result
+Instruction_icmp:
+	""icmp"" 'opcode' IcmpCondition 'condition' Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+IcmpCondition:
+	""eq"" | ""ne"" | ""ugt"" | ""uge"" | ""ult"" | ""ule"" | ""sgt"" | ""sge"" | ""slt"" | ""sle""
+	;
+
+# <result> = fcmp <cond> <ty> <op1>, <op2> ; yields {i1} or {<N x i1>}:result
+Instruction_fcmp:
+	""fcmp"" 'opcode' FcmpCondition 'condition' Type 'type' ValueRef 'op1' "","" ValueRef 'op2'
+	;
+
+FcmpCondition:
+	BOOLEAN | ""oeq"" | ""ogt"" | ""oge"" | ""olt"" | ""ole"" | ""one"" | ""ord"" | ""ueq"" | ""ugt"" | ""uge"" | ""ult"" | ""ule"" | ""une"" | ""uno""
+	;
+
+# <result> = phi <ty> [ <val0>, <label0>], ...
+Instruction_phi:
+	""phi"" 'opcode' Type 'type' (""["" ValueRef 'values' "","" BasicBlockRef 'labels' ""]"") ("","" ""["" ValueRef 'values' "","" BasicBlockRef 'labels' ""]"")*
+	;
+# <result> = select selty <cond>, <ty> <val1>, <ty> <val2> ; yields ty
+# selty is either i1 or {<N x i1>}
+Instruction_select:
+	""select"" 'opcode' TypedValue 'condition' "","" TypedValue 'value1' "","" TypedValue 'value2'
+	;
+
+# <result> = [tail] call [cconv] [ret attrs] <ty> [<fnty>*] <fnptrval>(<function args>) [fn attrs]
+Instruction_call_nonVoid:
+	""tail""? 'isTail' ""call"" 'opcode' CConv? 'cconv' ParameterAttributes? 'returnAttributes' NonVoidType 'type' Callee 'callee' ArgList 'args' FunctionAttributes? 'functionAttributes'
+	;
+
+Instruction_call_void:
+	""tail""? isTail ""call"" 'opcode' CConv? 'cconv' ParameterAttributes? 'returnAttributes' VoidType 'type' Callee 'callee' ArgList 'args' FunctionAttributes? 'functionAttributes'
+	;
+
+ArgList:
+	""("" (Argument 'arguments' ("","" Argument 'arguments' )* )? "")""
+	;
+
+Callee:
+	ValueRef | InlineAssembler
+	;
+
+InlineAssembler:
+	""asm"" ""sideeffect""? ""alignstack""? ""inteldialect""? STRING 'assembler' "","" STRING 'flags'
+	;
+
+# <resultval> = va_arg <va_list*> <arglist>, <argty>
+Instruction_va_arg:
+	""va_arg"" 'opcode' TypedValue 'arglist' "","" Type 'type'
+	;
+
+# <resultval> = landingpad <resultty> personality <type> <pers_fn> <clause>+
+# <resultval> = landingpad <resultty> personality <type> <pers_fn> cleanup <clause>*
+# <clause> := catch <type> <value>
+# <clause> := filter <array constant type> <array constant>
+Instruction_landingpad:
+	""landingpad"" 'opcode' Type 'resultType' ""personality"" TypedValue 'personality' (LandingpadClause 'clauses' | ""cleanup"") LandingpadClause* 'clauses'
+	;
+
+LandingpadClause:
+	""catch"" 'landingPadType' TypedValue 'catchType'
+	| ""filter"" 'landingPadType' ArrayType 'arrayType' ArrayConstant 'arrayConstant'
+	;
+
+Ordering:
+	""unordered"" | ""monotonic"" | ""acquire"" | ""release"" | ""acq_rel"" | ""seq_cst""
+	;
+
+TypedValue:
+	Type 'type' ValueRef 'ref'
+	;
+
+ParameterType:
+	Type 'type' ParameterAttributes? 'attrs'
+	;
+
+ParameterAttributes:
+	ParameterAttribute+ 'attributes'
+	;
+
+ParameterAttribute:
+	""zeroext"" |
+	""signext"" |
+	""inreg"" |
+	(""byval"" (""align"" INTEGER)?) |
+	""sret"" |
+	""noalias"" |
+	""nocapture"" |
+	""nest"" |
+	""returned"" |
+	""inalloca""
+	;
+
+Argument:
+	ParameterType 'type' ValueRef 'ref'
+	;
+
+Parameter:
+	ParameterType 'type' ParamName 'name'
+	;
+
+NonVoidType:
+# A function which returns void, or a pointer to such a function.
+	VoidType 'baseType' TypeSuffix+ 'suffixes'
+	|
+# A non-void single type, or a pointer to such a type, or a function which returns
+# such a type or a pointer to such a type, or a pointer to such a function. In short,
+# All type options not covered by the previous alternative, but not including ""void"",
+# which is the only type not allowed.
+	NonLeftRecursiveNonVoidType 'baseType' Star* 'stars' TypeSuffix* 'suffixes'
+	;
+
+Star:
+	AddressSpace? 'addressSpace' ""*""
+	;
+
+Type:
+	NonLeftRecursiveType 'baseType' Star* 'stars' TypeSuffix* 'suffixes'
+	;
+
+# A suffix of a function type or a pointer to a function type - basically
+# the entire function type, not including the return type.
+TypeSuffix:
+	""("" (
+		(ParameterType 'containedTypes' ("","" ParameterType 'containedTypes')* ("","" ""..."" 'vararg')?)?
+		| ""..."" 'vararg'
+	)"")"" Star* 'stars'
+	;
+
+NonLeftRecursiveType:
+# Complete types:
+	(
+		IntType |
+		FloatingType |
+		VectorType |
+		ArrayType |
+		X86mmxType |
+		VoidType |
+		MetadataType |
+		StructType |
+		OpaqueType
+	) 'type'
+	| (TypeDef | LOCAL_ID) 'typedef'
+	;
+
+NonLeftRecursiveNonVoidType:
+# Complete types:
+	(
+		IntType |
+		FloatingType |
+		VectorType |
+		ArrayType |
+		X86mmxType |
+		MetadataType |
+		StructType |
+		OpaqueType
+	) 'type'
+	| (TypeDef|LOCAL_ID) 'typedef'
+	;
+
+TypeDef:
+	LocalName 'name' ""type"" NonVoidType 'type'
+	;
+
+BinaryOpcode:
+	""mov"" | ""add"" | ""sub""
+	;
+
+IntType:
+	INT_TYPE
+	;
+
+OpaqueType:
+	""opaque""
+	;
+
+StructType:
+	""{"" (Type 'types' ("","" Type 'types')*)? ""}""
+	|
+	""<"" 'packed' ""{"" (Type 'types' ("","" Type 'types' )*)? ""}"" "">""
+	;
+
+VectorType:
+	""<"" INTEGER 'size' ""x"" Type 'elemType' "">""
+	;
+
+ArrayType:
+	""["" INTEGER 'size' ""x"" Type 'elemType' ""]""
+	;
+
+X86mmxType:
+	""x86_mmx""
+	;
+
+VoidType:
+	""void"" 
 	;
 
 MetadataType:
 	""metadata""
+	;
+
+FloatingType:
+	(""half"" | ""float"" | ""double"" | ""fp128"" | ""x86_fp80"" | ""ppc_fp128"")
+	;
+
+Linkage:
+	""private"" |
+	""linker_private"" |
+	""linker_private_weak"" |
+	""linker_private_weak_def_auto"" |
+	""internal"" |
+	""available_externally"" |
+	""linkonce"" |
+	""weak"" |
+	""common"" |
+	""appending"" |
+	""extern_weak"" |
+	""linkonce_odr"" |
+	""weak_odr"" |
+	""external"" |
+	""dllimport"" |
+	""dllexport""
+	;
+
+CConv:
+	(
+		""ccc"" |
+		""fastcc"" |
+		""coldcc"" |
+		""webkit_jscc"" |
+		""anyregcc"" |
+		""preserve_mostcc"" |
+		""preserve_allcc"" |
+			# The following are not documented in the langref:
+		""intel_ocl_bicc"" |
+		""x86_stdcallcc"" |
+		""x86_fastcallcc"" |
+		""x86_thiscallcc"" |
+		""arm_apcscc"" |
+		""arm_aapcscc"" |
+		""arm_aapcs_vfpcc"" |
+		""msp430_intrcc"" |
+		""ptx_kernel"" |
+		""ptx_device"" |
+		""spir_kernel"" |
+		""spir_func"" |
+		""x86_64_sysvcc"" |
+		""x86_64_win64cc""
+	) 'val'
+	| ""cc"" 'val' INTEGER 'customNumber'
+	;
+
+Visibility:
+	""default"" |
+	""hidden"" |
+	""protected""
 	;"

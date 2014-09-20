@@ -1,24 +1,24 @@
 generated
 scan2
-	self recordMatch: #(73).
+	self recordMatch: #(103).
 	self step.
 	currentCharacter = $"
 		ifTrue: [ 
 			[ 
 			self step.
 			currentCharacter = $"
-				ifTrue: [ ^ self recordAndReportMatch: #(179) ] ] repeat ].
-	(currentCharacter isDigit or: [ currentCharacter = Character space ])
+				ifTrue: [ ^ self recordAndReportMatch: #(255) ] ] repeat ].
+	currentCharacter isDigit
 		ifTrue: [ 
 			[ 
-			self recordMatch: #(177).
+			self recordMatch: #(253).
 			self step.
-			currentCharacter isDigit or: [ currentCharacter = Character space ] ] whileTrue.
+			currentCharacter isDigit ] whileTrue.
 			^ self reportLastMatch ].
 	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
 		ifTrue: [ 
 			[ 
-			self recordMatch: #(178).
+			self recordMatch: #(254).
 			self step.
 			currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ] ] whileTrue ].
 	^ self reportLastMatch

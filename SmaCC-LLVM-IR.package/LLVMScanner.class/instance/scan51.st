@@ -1,54 +1,63 @@
 generated
 scan51
 	self step.
-	currentCharacter = $:
-		ifTrue: [ ^ self recordAndReportMatch: #(170) ].
-	currentCharacter = $l
+	currentCharacter = $r
 		ifTrue: [ 
 			self step.
-			currentCharacter = $:
-				ifTrue: [ ^ self recordAndReportMatch: #(170) ].
-			currentCharacter = $s
-				ifTrue: [ 
-					self step.
-					currentCharacter = $:
-						ifTrue: [ ^ self recordAndReportMatch: #(170) ].
-					currentCharacter = $e
-						ifTrue: [ 
-							self recordMatch: #(31).
-							self step.
-							currentCharacter = $:
-								ifTrue: [ ^ self recordAndReportMatch: #(170) ].
-							(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-								ifTrue: [ ^ self scan4 ].
-							^ self reportLastMatch ] ].
-			(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-				ifTrue: [ ^ self scan4 ].
-			^ self reportLastMatch ].
-	currentCharacter = $s
-		ifTrue: [ 
-			self step.
-			currentCharacter = $:
-				ifTrue: [ ^ self recordAndReportMatch: #(170) ].
 			currentCharacter = $t
 				ifTrue: [ 
-					2
-						timesRepeat: [ 
-							self step.
-							currentCharacter = $:
-								ifTrue: [ ^ self recordAndReportMatch: #(170) ].
-							currentCharacter = $c
-								ifFalse: [ 
-									(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-										ifTrue: [ ^ self scan4 ].
-									^ self reportLastMatch ] ].
-					self recordMatch: #(136).
 					self step.
-					currentCharacter = $:
-						ifTrue: [ ^ self recordAndReportMatch: #(170) ].
-					(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-						ifTrue: [ ^ self scan4 ].
-					^ self reportLastMatch ] ].
-	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-		ifTrue: [ ^ self scan4 ].
+					currentCharacter = $o
+						ifTrue: [ 
+							self step.
+							currentCharacter = $i
+								ifTrue: [ 
+									self step.
+									currentCharacter = $n
+										ifTrue: [ 
+											self step.
+											currentCharacter = $t
+												ifTrue: [ ^ self recordAndReportMatch: #(191) ] ] ] ] ].
+			^ self reportLastMatch ].
+	currentCharacter = $x
+		ifTrue: [ 
+			self step.
+			currentCharacter = $_
+				ifTrue: [ 
+					self step.
+					currentCharacter = $d
+						ifTrue: [ 
+							self step.
+							currentCharacter = $e
+								ifTrue: [ 
+									self step.
+									currentCharacter = $v
+										ifTrue: [ 
+											self step.
+											currentCharacter = $i
+												ifTrue: [ 
+													self step.
+													currentCharacter = $c
+														ifTrue: [ 
+															self step.
+															currentCharacter = $e
+																ifTrue: [ ^ self recordAndReportMatch: #(158) ] ] ] ] ].
+							^ self reportLastMatch ].
+					currentCharacter = $k
+						ifTrue: [ 
+							self step.
+							currentCharacter = $e
+								ifTrue: [ 
+									self step.
+									currentCharacter = $r
+										ifTrue: [ 
+											self step.
+											currentCharacter = $n
+												ifTrue: [ 
+													self step.
+													currentCharacter = $e
+														ifTrue: [ 
+															self step.
+															currentCharacter = $l
+																ifTrue: [ ^ self recordAndReportMatch: #(155) ] ] ] ] ] ] ] ].
 	^ self reportLastMatch

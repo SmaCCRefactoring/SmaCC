@@ -1,10 +1,27 @@
 generated
 scan46
 	self step.
-	currentCharacter = $:
-		ifTrue: [ ^ self recordAndReportMatch: #(170) ].
-	currentCharacter = $a
-		ifTrue: [ ^ self scan47 ].
-	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-		ifTrue: [ ^ self scan4 ].
+	currentCharacter = $l
+		ifTrue: [ 
+			self step.
+			currentCharacter = $a
+				ifTrue: [ 
+					self step.
+					currentCharacter = $z
+						ifTrue: [ 
+							self step.
+							currentCharacter = $y
+								ifTrue: [ 
+									self step.
+									currentCharacter = $b
+										ifTrue: [ 
+											self step.
+											currentCharacter = $i
+												ifTrue: [ 
+													self step.
+													currentCharacter = $n
+														ifTrue: [ 
+															self step.
+															currentCharacter = $d
+																ifTrue: [ ^ self recordAndReportMatch: #(2) ] ] ] ] ] ] ] ].
 	^ self reportLastMatch

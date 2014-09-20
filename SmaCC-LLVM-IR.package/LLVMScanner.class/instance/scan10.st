@@ -1,10 +1,9 @@
 generated
 scan10
 	self step.
-	currentCharacter isDigit
+	currentCharacter = $.
 		ifTrue: [ 
-			[ 
-			self recordMatch: #(168).
 			self step.
-			currentCharacter isDigit ] whileTrue ].
+			currentCharacter = $.
+				ifTrue: [ ^ self recordAndReportMatch: #(29) ] ].
 	^ self reportLastMatch
