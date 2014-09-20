@@ -7,18 +7,18 @@ scan2
 			[ 
 			self step.
 			currentCharacter = $"
-				ifTrue: [ ^ self recordAndReportMatch: #(255) ] ] repeat ].
+				ifTrue: [ ^ self recordAndReportMatch: #(264) ] ] repeat ].
 	currentCharacter isDigit
 		ifTrue: [ 
 			[ 
-			self recordMatch: #(253).
+			self recordMatch: #(259).
 			self step.
 			currentCharacter isDigit ] whileTrue.
 			^ self reportLastMatch ].
 	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
 		ifTrue: [ 
 			[ 
-			self recordMatch: #(254).
+			self recordMatch: #(260).
 			self step.
 			currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ] ] whileTrue ].
 	^ self reportLastMatch

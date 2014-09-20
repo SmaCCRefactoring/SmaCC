@@ -1,37 +1,40 @@
 generated
 scan56
 	self step.
-	currentCharacter = $l
-		ifTrue: [ ^ self recordAndReportMatch: #(115) ].
-	currentCharacter = $u
+	currentCharacter = $:
+		ifTrue: [ ^ self recordAndReportMatch: #(258) ].
+	currentCharacter = $p
 		ifTrue: [ 
-			2
-				timesRepeat: [ 
-					self step.
-					currentCharacter = $f
-						ifFalse: [ ^ self reportLastMatch ] ].
 			self step.
-			currentCharacter = $l
+			currentCharacter = $:
+				ifTrue: [ ^ self recordAndReportMatch: #(258) ].
+			currentCharacter = $x
 				ifTrue: [ 
 					self step.
-					currentCharacter = $e
+					currentCharacter = $:
+						ifTrue: [ ^ self recordAndReportMatch: #(258) ].
+					currentCharacter = $c
 						ifTrue: [ 
 							self step.
-							currentCharacter = $v
+							currentCharacter = $:
+								ifTrue: [ ^ self recordAndReportMatch: #(258) ].
+							currentCharacter = $h
 								ifTrue: [ 
 									self step.
-									currentCharacter = $e
+									currentCharacter = $:
+										ifTrue: [ ^ self recordAndReportMatch: #(258) ].
+									currentCharacter = $g
 										ifTrue: [ 
+											self recordMatch: #(201).
 											self step.
-											currentCharacter = $c
-												ifTrue: [ 
-													self step.
-													currentCharacter = $t
-														ifTrue: [ 
-															self step.
-															currentCharacter = $o
-																ifTrue: [ 
-																	self step.
-																	currentCharacter = $r
-																		ifTrue: [ ^ self recordAndReportMatch: #(72) ] ] ] ] ] ] ] ] ].
+											currentCharacter = $:
+												ifTrue: [ ^ self recordAndReportMatch: #(258) ] ].
+									(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
+										ifTrue: [ ^ self scan5 ].
+									^ self reportLastMatch ] ].
+					(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
+						ifTrue: [ ^ self scan5 ].
+					^ self reportLastMatch ] ].
+	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
+		ifTrue: [ ^ self scan5 ].
 	^ self reportLastMatch

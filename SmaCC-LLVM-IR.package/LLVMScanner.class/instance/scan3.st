@@ -3,4 +3,9 @@ scan3
 	[ 
 	self step.
 	currentCharacter = $"
-		ifTrue: [ ^ self recordAndReportMatch: #(250) ] ] repeat
+		ifTrue: [ 
+			self recordMatch: #(254).
+			self step.
+			currentCharacter = $:
+				ifTrue: [ ^ self recordAndReportMatch: #(258) ].
+			^ self reportLastMatch ] ] repeat

@@ -66,7 +66,7 @@ TopLevelElement:
 	;
 
 AttributeGroup:
-	""attributes"" ATTRIBUTE_ID ""="" ""{"" (FunctionAttribute | AlignStack ""="" INTEGER | TargetSpecificAttribute)+ ""}""
+	""attributes"" <attribute_id> ""="" ""{"" (FunctionAttribute | AlignStack ""="" <integer> | TargetSpecificAttribute)+ ""}""
 	;
 
 TargetSpecificAttribute:
@@ -97,7 +97,7 @@ GlobalValueRef:
 	;
 
 LocalValueRef:
-	LocalValue|LOCAL_ID
+	LocalValue | <local_id>
 	;
 
 GlobalValue:
@@ -129,7 +129,7 @@ Alias:
 	;
 
 Aliasee:
-	GlobalValueDef | GLOBAL_ID | ConstantExpression_convert
+	GlobalValueDef | <global_id> | ConstantExpression_convert
 	;
 
 TargetInfo:
@@ -146,7 +146,7 @@ GlobalVariable:
 
 Constant:
 	SimpleConstant |
-	StructureConstant | # predicate because a vector constant and a structure constant can start with '<'
+	StructureOrPackedVectorConstant | # predicate because a vector constant and a structure constant can start with '<'
 	ArrayConstant |
 	VectorConstant |
 	ZeroInitializer |
@@ -156,7 +156,7 @@ Constant:
 	Undef |
 	ConstantExpression |
 	GlobalValueDef 'ref' |
-	GLOBAL_ID 'ref'
+	<global_id> 'ref'
 	;
 
 ConstantExpression:
@@ -201,11 +201,11 @@ ConstantExpression_shufflevector:
 	;
 
 ConstantExpression_extractvalue:
-	""extractvalue"" 'opcode' ""("" TypedValue 'value' ("","" INTEGER 'indices')+ "")""
+	""extractvalue"" 'opcode' ""("" TypedValue 'value' ("","" <integer> 'indices')+ "")""
 	;
 
 ConstantExpression_insertvalue:
-	""insertvalue"" 'opcode' ""("" TypedValue 'value' "","" TypedValue 'element' ("","" INTEGER 'indices')+ "")""
+	""insertvalue"" 'opcode' ""("" TypedValue 'value' "","" TypedValue 'element' ("","" <integer> 'indices')+ "")""
 	;
 
 ConstantExpression_binary:
@@ -226,7 +226,7 @@ BlockAddress:
 	;
 
 ZeroInitializer:
-	""zeroinitializer"" {{}}
+	""zeroinitializer""
 	;
 
 StructureConstant:
@@ -250,7 +250,7 @@ TypedConstant:
 	;
 
 SimpleConstant:
-	(INTEGER | SIGNED_INT | FLOAT | BOOLEAN | NULL | CSTRING) 'value'
+	(<integer> | <signed_int> | <float> | <boolean> | <null> | <cstring>) 'value'
 	;
 
 MetadataNode:
@@ -258,7 +258,7 @@ MetadataNode:
 	;
 
 MetadataNodeElement:
-	TypedValue 'value' | MetadataRef 'metadataRef' | NULL 'null'
+	TypedValue 'value' | MetadataRef 'metadataRef' | <null> 'null'
 	;
 
 MetadataString:
@@ -276,7 +276,7 @@ TLSoption:
 	;
 
 AddressSpace:
-	""addrspace"" ""("" INTEGER 'value' "")""
+	""addrspace"" ""("" <integer> 'value' "")""
 	;
 
 Section:
@@ -284,7 +284,7 @@ Section:
 	;
 
 Align:
-	""align"" INTEGER
+	""align"" <integer>
 	;
 
 Gc:
@@ -318,8 +318,8 @@ Parameters:
 
 FunctionAttributes:
 	(FunctionAttribute 'functionAttributes'
-	| (AlignStack 'alignstack' ""("" INTEGER 'alignstackValue' "")"")
-	| (AttributeGroup | ATTRIBUTE_ID) 'functionAttributeGroupRefs' )+
+	| (AlignStack 'alignstack' ""("" <integer> 'alignstackValue' "")"")
+	| (AttributeGroup | <attribute_id>) 'functionAttributeGroupRefs' )+
 	;
 
 AlignStack:
@@ -364,7 +364,7 @@ BasicBlock:
 	;
 
 BasicBlockName:
-	BASIC_BLOCK_ID?
+	<basic_block_id> ?
 	;
 
 MetadataSuffix:
@@ -777,7 +777,7 @@ Instruction_call_nonVoid:
 	;
 
 Instruction_call_void:
-	""tail""? isTail ""call"" 'opcode' CConv? 'cconv' ParameterAttributes? 'returnAttributes' VoidType 'type' Callee 'callee' ArgList 'args' FunctionAttributes? 'functionAttributes'
+	""tail""? 'isTail' ""call"" 'opcode' CConv? 'cconv' ParameterAttributes? 'returnAttributes' VoidType 'type' Callee 'callee' ArgList 'args' FunctionAttributes? 'functionAttributes'
 	;
 
 ArgList:
@@ -789,7 +789,7 @@ Callee:
 	;
 
 InlineAssembler:
-	""asm"" ""sideeffect""? ""alignstack""? ""inteldialect""? STRING 'assembler' "","" STRING 'flags'
+	""asm"" ""sideeffect""? ""alignstack""? ""inteldialect""? <string> 'assembler' "","" <string> 'flags'
 	;
 
 # <resultval> = va_arg <va_list*> <arglist>, <argty>
@@ -830,7 +830,7 @@ ParameterAttribute:
 	""zeroext"" |
 	""signext"" |
 	""inreg"" |
-	(""byval"" (""align"" INTEGER)?) |
+	(""byval"" (""align"" <integer>)?) |
 	""sret"" |
 	""noalias"" |
 	""nocapture"" |
@@ -888,7 +888,7 @@ NonLeftRecursiveType:
 		StructType |
 		OpaqueType
 	) 'type'
-	| (TypeDef | LOCAL_ID) 'typedef'
+	| (TypeDef | <local_id>) 'typedef'
 	;
 
 NonLeftRecursiveNonVoidType:
@@ -903,7 +903,7 @@ NonLeftRecursiveNonVoidType:
 		StructType |
 		OpaqueType
 	) 'type'
-	| (TypeDef|LOCAL_ID) 'typedef'
+	| (TypeDef| <local_id>) 'typedef'
 	;
 
 TypeDef:
@@ -915,7 +915,7 @@ BinaryOpcode:
 	;
 
 IntType:
-	INT_TYPE
+	<int_type>
 	;
 
 OpaqueType:
@@ -929,11 +929,11 @@ StructType:
 	;
 
 VectorType:
-	""<"" INTEGER 'size' ""x"" Type 'elemType' "">""
+	""<"" <integer> 'size' ""x"" Type 'elemType' "">""
 	;
 
 ArrayType:
-	""["" INTEGER 'size' ""x"" Type 'elemType' ""]""
+	""["" <integer> 'size' ""x"" Type 'elemType' ""]""
 	;
 
 X86mmxType:
@@ -996,7 +996,7 @@ CConv:
 		""x86_64_sysvcc"" |
 		""x86_64_win64cc""
 	) 'val'
-	| ""cc"" 'val' INTEGER 'customNumber'
+	| ""cc"" 'val' <integer> 'customNumber'
 	;
 
 Visibility:

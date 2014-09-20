@@ -1,13 +1,10 @@
 generated
 scan12
-	[ 
 	self step.
-	currentCharacter = Character lf
-		ifTrue: [ ^ self recordAndReportMatch: #(257) ].
-	currentCharacter = Character cr
+	currentCharacter isDigit
 		ifTrue: [ 
-			self recordMatch: #(257).
+			[ 
+			self recordMatch: #(250).
 			self step.
-			currentCharacter = Character lf
-				ifTrue: [ ^ self recordAndReportMatch: #(257) ].
-			^ self reportLastMatch ] ] repeat
+			currentCharacter isDigit ] whileTrue ].
+	^ self reportLastMatch

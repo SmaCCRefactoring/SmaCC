@@ -1,21 +1,32 @@
 generated
 scan66
-	self recordMatch: #(148).
 	self step.
-	currentCharacter = $8
-		ifTrue: [ ^ self scan67 ].
-	currentCharacter = $c
+	currentCharacter = $:
+		ifTrue: [ ^ self recordAndReportMatch: #(258) ].
+	currentCharacter = $a
 		ifTrue: [ 
 			self step.
-			currentCharacter = $h
+			currentCharacter = $:
+				ifTrue: [ ^ self recordAndReportMatch: #(258) ].
+			currentCharacter = $c
 				ifTrue: [ 
 					self step.
-					currentCharacter = $g
-						ifTrue: [ ^ self recordAndReportMatch: #(206) ] ].
+					currentCharacter = $:
+						ifTrue: [ ^ self recordAndReportMatch: #(258) ].
+					currentCharacter = $t
+						ifTrue: [ 
+							self recordMatch: #(121).
+							self step.
+							currentCharacter = $:
+								ifTrue: [ ^ self recordAndReportMatch: #(258) ].
+							(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
+								ifTrue: [ ^ self scan5 ].
+							^ self reportLastMatch ] ].
+			(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
+				ifTrue: [ ^ self scan5 ].
 			^ self reportLastMatch ].
-	currentCharacter = $o
-		ifTrue: [ 
-			self step.
-			currentCharacter = $r
-				ifTrue: [ ^ self recordAndReportMatch: #(95) ] ].
+	currentCharacter = $t
+		ifTrue: [ ^ self scan67 ].
+	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
+		ifTrue: [ ^ self scan5 ].
 	^ self reportLastMatch

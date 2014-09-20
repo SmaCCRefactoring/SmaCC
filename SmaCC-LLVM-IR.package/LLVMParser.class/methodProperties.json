@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"definitionComment" : "ThierryGoubier 9/20/2014 19:24",
+		"definitionComment" : "ThierryGoubier 9/20/2014 21:14",
 		"scannerClass" : "ThierryGoubier 9/14/2014 08:15:12",
 		"startingStateForModule" : "ThierryGoubier 9/17/2014 11:04" },
 	"instance" : {
@@ -8,5 +8,5 @@
 		"reduceActionForBasicBlock_2:" : "ThierryGoubier 9/20/2014 19:24",
 		"reduceActionForStar_1:" : "ThierryGoubier 9/20/2014 19:24",
 		"reduceActionFor_____local_id_______2:" : "ThierryGoubier 9/20/2014 19:24",
-		"reduceTable" : "ThierryGoubier 9/20/2014 19:24",
-		"transitionTable" : "ThierryGoubier 9/20/2014 19:24" } }
+		"reduceTable" : "ThierryGoubier 9/20/2014 21:15",
+		"transitionTable" : "ThierryGoubier 9/20/2014 21:15" } }
