@@ -3,8 +3,8 @@ scan110
 	self step.
 	currentCharacter = $:
 		ifTrue: [ ^ self recordAndReportMatch: #(257) ].
-	currentCharacter = $v
+	currentCharacter = $_
 		ifTrue: [ ^ self scan111 ].
 	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-		ifTrue: [ ^ self scan5 ].
+		ifTrue: [ ^ self scan9 ].
 	^ self reportLastMatch

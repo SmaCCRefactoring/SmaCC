@@ -1,9 +1,10 @@
 generated
 scan74
-	self recordMatch: #(250).
 	self step.
 	currentCharacter = $:
 		ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+	currentCharacter = $t
+		ifTrue: [ ^ self scan75 ].
 	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-		ifTrue: [ ^ self scan5 ].
+		ifTrue: [ ^ self scan9 ].
 	^ self reportLastMatch
