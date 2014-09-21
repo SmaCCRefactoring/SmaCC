@@ -74,18 +74,14 @@ TargetSpecificAttribute:
 	;
 
 NamedMetadata:
-	<meta_int> ""="" ""metadata"" MetadataNode
-	| <meta_name> ""="" MetadataNode
+	<meta_int> 'name' ""="" ""metadata"" MetadataNode 'node'
+	| <meta_name> 'name' ""="" MetadataNode 'node'
 	;
 	
 MetadataRef:
-	NamedMetadata | MetadataIdentifier
+	NamedMetadata
 	;
 
-MetadataIdentifier:
-	<meta_int> | <meta_name>
-	;
-	
 ValueRef:
 	GlobalValueRef |
 	LocalValueRef
@@ -97,7 +93,7 @@ GlobalValueRef:
 	;
 
 LocalValueRef:
-	LocalValue | <local_id>
+	LocalValue
 	;
 
 GlobalValue:
@@ -123,11 +119,11 @@ Alias:
 	;
 
 Aliasee:
-	GlobalValueDef | <global_id> | ConstantExpression_convert
+	GlobalValueDef | ConstantExpression_convert 'bitcast'
 	;
 
 TargetInfo:
-	""target"" (""datalayout"" | ""triple"") ""="" <string>
+	""target"" (""datalayout"" | ""triple"") 'infoType' ""="" <string> 'layout'
 	;
 
 InlineAsm:
@@ -149,8 +145,7 @@ Constant:
 	BlockAddress |
 	Undef |
 	ConstantExpression |
-	GlobalValueDef 'ref' |
-	<global_id> 'ref'
+	GlobalValueDef 'ref'
 	;
 
 ConstantExpression:
@@ -313,7 +308,7 @@ Parameters:
 FunctionAttributes:
 	(FunctionAttribute 'functionAttributes'
 	| (AlignStack 'alignstack' ""("" <integer> 'alignstackValue' "")"")
-	| (AttributeGroup | <attribute_id>) 'functionAttributeGroupRefs' )+
+	| AttributeGroup 'functionAttributeGroupRefs' )+
 	;
 
 AlignStack:
@@ -488,7 +483,7 @@ Instruction_unreachable:
 	;
 
 BasicBlockRef:
-	BasicBlock  'ref' | <local_id> 'ref'
+	BasicBlock  'ref'
 	;
 
 BinaryInstruction:
@@ -883,7 +878,7 @@ NonLeftRecursiveType:
 		StructType |
 		OpaqueType
 	) 'type'
-	| (TypeDef | <local_id>) 'typedef'
+	| TypeDef 'typedef'
 	;
 
 NonLeftRecursiveNonVoidType:
@@ -898,7 +893,7 @@ NonLeftRecursiveNonVoidType:
 		StructType |
 		OpaqueType
 	) 'type'
-	| (TypeDef| <local_id>) 'typedef'
+	| TypeDef 'typedef'
 	;
 
 TypeDef:
