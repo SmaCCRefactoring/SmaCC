@@ -1,14 +1,11 @@
 generated
 scan3
+	[ 
 	self step.
-	currentCharacter = Character lf
-		ifTrue: [ ^ self scan4 ].
-	currentCharacter = Character cr
+	currentCharacter = $"
 		ifTrue: [ 
-			self recordMatch: #(264).
+			self recordMatch: #(253).
 			self step.
-			currentCharacter = Character lf
-				ifTrue: [ ^ self scan4 ].
-			(currentCharacter = Character tab or: [ currentCharacter = Character space ])
-				ifTrue: [ ^ self scan3 ] ].
-	^ self reportLastMatch
+			currentCharacter = $:
+				ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+			^ self reportLastMatch ] ] repeat

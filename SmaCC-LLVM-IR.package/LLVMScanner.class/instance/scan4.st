@@ -1,7 +1,17 @@
 generated
 scan4
-	self recordMatch: #(264).
 	self step.
-	(currentCharacter = Character tab or: [ currentCharacter = Character space ])
-		ifTrue: [ ^ self scan3 ].
+	currentCharacter isDigit
+		ifTrue: [ 
+			[ 
+			self recordMatch: #(260).
+			self step.
+			currentCharacter isDigit ] whileTrue.
+			^ self reportLastMatch ].
+	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
+		ifTrue: [ 
+			[ 
+			self recordMatch: #(260).
+			self step.
+			currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ] ] whileTrue ].
 	^ self reportLastMatch

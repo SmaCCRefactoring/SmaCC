@@ -1,9 +1,23 @@
 generated
 scan23
-	[ 
-	self recordMatch: #(265).
 	self step.
-	currentCharacter <= Character tab
-		or: [ (currentCharacter between: Character pageUp and: Character newPage) or: [ currentCharacter >= (Character value: 14) ] ] ]
-		whileTrue.
+	currentCharacter = $"
+		ifTrue: [ 
+			[ 
+			self step.
+			currentCharacter = $"
+				ifTrue: [ ^ self recordAndReportMatch: #(255) ] ] repeat ].
+	currentCharacter isDigit
+		ifTrue: [ 
+			[ 
+			self recordMatch: #(255).
+			self step.
+			currentCharacter isDigit ] whileTrue.
+			^ self reportLastMatch ].
+	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
+		ifTrue: [ 
+			[ 
+			self recordMatch: #(255).
+			self step.
+			currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ] ] whileTrue ].
 	^ self reportLastMatch

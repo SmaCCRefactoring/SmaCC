@@ -10,5 +10,5 @@
 	"name" : "LLVMParser",
 	"pools" : [
 		 ],
-	"super" : "SmaCCParser",
+	"super" : "SmaCCGLRParser",
 	"type" : "normal" }

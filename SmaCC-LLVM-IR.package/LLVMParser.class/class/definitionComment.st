@@ -53,12 +53,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 <signed_int> : [\+\-] <integer> ;
 <cstring> : c <string> ;
 <metadata_string> : \! <string> ;
-<cr>: ((\n|\r\n|\r|\r\n)[\t ])*(\n|\r\n|\r|\r\n) ;
 <comment>: \;[^\r\n]* ;
 <whitespace> : \s ;
 
+%glr ;
+
 Module:
-	| Module <cr> TopLevelElement
+	| Module  TopLevelElement
 	;
 
 TopLevelElement:
@@ -361,7 +362,7 @@ MetadataSuffix:
 	;
 
 StartingInstruction:
-	LocalName 'name' Instruction_phi 'instruction' MetadataSuffix* 'metadata' <cr>
+	LocalName 'name' Instruction_phi 'instruction' MetadataSuffix* 'metadata'
 	;
 
 MiddleInstruction:
@@ -371,7 +372,7 @@ MiddleInstruction:
 		Instruction_fence |
 		Instruction_call_void
 	) 'instruction'
-	MetadataSuffix* 'metadata' <cr>
+	MetadataSuffix* 'metadata'
 	;
 
 NamedMiddleInstruction:
@@ -422,7 +423,7 @@ TerminatorInstruction:
 		Instruction_unreachable |
 		Instruction_invoke_void
 	) 'instruction'
-	MetadataSuffix* 'metadata' <cr>
+	MetadataSuffix* 'metadata'
 	;
 
 NamedTerminatorInstruction:
