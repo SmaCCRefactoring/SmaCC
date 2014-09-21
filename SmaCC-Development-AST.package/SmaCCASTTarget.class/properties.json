@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Development-AST",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "SmaCCASTTarget",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }
