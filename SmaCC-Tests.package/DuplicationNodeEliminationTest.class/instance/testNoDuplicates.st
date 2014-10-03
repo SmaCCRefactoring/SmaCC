@@ -14,16 +14,16 @@ testNoDuplicates
 	self assert: node1 allStates size = 3.
 	self assert: node1 transitions size = 1.
 	self assert: (node1 action includes: 1).
-	self assert: node1 transitions first transitionObjects = 'a'.
+	self assert: node1 transitions first transitionObjects asString = 'a'.
 	node2 := node1 transitions first to.
 	self deny: node1 = node2.
 	self assert: node2 transitions size = 1.
 	self assert: (node2 action includes: 2).
-	self assert: node2 transitions first transitionObjects = 'a'.
+	self assert: node2 transitions first transitionObjects asString = 'a'.
 	node3 := node2 transitions first to.
 	self deny: node1 = node3.
 	self deny: node2 = node3.
 	self assert: node3 transitions size = 1.
 	self assert: (node3 action includes: 3).
-	self assert: node3 transitions first transitionObjects = 'a'.
+	self assert: node3 transitions first transitionObjects asString = 'a'.
 	self assert: node3 transitions first to = node1

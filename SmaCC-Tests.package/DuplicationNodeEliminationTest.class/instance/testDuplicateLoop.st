@@ -14,5 +14,5 @@ testDuplicateLoop
 	self assert: node1 allStates size = 1.
 	self assert: node1 transitions size = 1.
 	self assert: (node1 action includes: 1).
-	self assert: node1 transitions first transitionObjects = 'a'.
+	self assert: node1 transitions first transitionObjects asString = 'a'.
 	self assert: node1 transitions first to = node1
