@@ -2,7 +2,6 @@ compiling
 optimizationRewriter
 	| rewriter |
 	rewriter := RBParseTreeRewriter new.
-	self addTimesRepeatOptimizationTo: rewriter.
 	rewriter
 		replace:
 				'`@.Stmts1.

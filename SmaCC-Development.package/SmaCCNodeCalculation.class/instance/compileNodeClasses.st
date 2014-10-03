@@ -1,7 +1,7 @@
 private
 compileNodeClasses
-	classes := self sortedClasses.
-	classes isEmpty ifTrue: [^self].
+	self sortedClasses isEmpty
+		ifTrue: [ ^ self ].
 	self defineNodeClasses.
 	self calculateSymbolVariables.
 	self calculateReduceActions.

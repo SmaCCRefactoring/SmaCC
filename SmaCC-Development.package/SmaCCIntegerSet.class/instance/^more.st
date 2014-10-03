@@ -1,0 +1,3 @@
+comparing
+> aSmaCCIntegerCollection
+	^ aSmaCCIntegerCollection < self

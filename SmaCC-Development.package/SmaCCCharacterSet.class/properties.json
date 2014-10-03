@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Development",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SmaCCCharacterSet",
+	"pools" : [
+		 ],
+	"super" : "SmaCCIntegerSet",
+	"type" : "normal" }

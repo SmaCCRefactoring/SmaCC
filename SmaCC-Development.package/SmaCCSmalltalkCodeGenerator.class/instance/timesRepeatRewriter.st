@@ -1,6 +1,6 @@
 compiling
-addTimesRepeatOptimizationTo: rewriter
-	rewriter
+timesRepeatRewriter
+	^ RBParseTreeRewriter new
 		replace:
 				'`@.StmtsBefore.
 				`@.Common.
@@ -66,4 +66,5 @@ addTimesRepeatOptimizationTo: rewriter
 			with:
 				'`@.StmtsBefore.
 				`{RBLiteralNode value: `#l1 value + `#l2 value} timesRepeat: `@b.
-				`@.StmtsAfter'
+				`@.StmtsAfter';
+		yourself

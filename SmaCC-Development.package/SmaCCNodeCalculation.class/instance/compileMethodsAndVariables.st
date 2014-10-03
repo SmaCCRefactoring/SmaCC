@@ -1,3 +1,3 @@
 private
 compileMethodsAndVariables
-	classes do: [:each | each compileMethodsAndVariables]
+	self sortedClasses do: [ :each | each compileMethodsAndVariables ]

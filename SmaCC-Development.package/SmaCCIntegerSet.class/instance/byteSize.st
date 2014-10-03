@@ -1,0 +1,3 @@
+private
+byteSize
+	^ 8

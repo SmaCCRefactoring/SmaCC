@@ -1,10 +1,11 @@
 {
 	"class" : {
-		"initialize" : "ThierryGoubier 8/26/2014 18:36:12" },
+		"initialize" : "ThierryGoubier 9/18/2014 17:03:41" },
 	"instance" : {
-		"=" : "ThierryGoubier 8/26/2014 18:36:12",
-		"basicModelTypes:" : "ThierryGoubier 8/26/2014 18:36:12",
-		"index" : "ThierryGoubier 8/26/2014 18:36:12",
-		"modelTypes:" : "ThierryGoubier 8/26/2014 18:36:12",
-		"returnedNodeIndex" : "ThierryGoubier 8/26/2014 18:36:12",
-		"source" : "ThierryGoubier 8/26/2014 18:36:12" } }
+		"=" : "ThierryGoubier 9/18/2014 17:03:41",
+		"basicModelTypes:" : "ThierryGoubier 9/18/2014 17:03:41",
+		"index" : "ThierryGoubier 10/3/2014 14:35",
+		"modelTypes:" : "ThierryGoubier 9/18/2014 17:03:41",
+		"returnedNodeIndex" : "ThierryGoubier 9/18/2014 17:03:41",
+		"signalNodeCreationWarning" : "ThierryGoubier 10/3/2014 14:40",
+		"source" : "ThierryGoubier 9/18/2014 17:03:41" } }

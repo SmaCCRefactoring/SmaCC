@@ -1,3 +1,3 @@
 code
 variableReference: aSmaCCVariableDefinition in: aString
-	^'(' , aString , ') ' , aSmaCCVariableDefinition getterMethodName
+	^ '(' , aString , ') ' , aSmaCCVariableDefinition getterMethodName

@@ -5,6 +5,4 @@ basicModelTypes: aSet
 	index notNil
 		ifTrue: [ ^ self basicModelTypes: aSet forIndex: index ].
 	parseTree := RBParser parseExpression: self source onError: [ :e :p | ^ Array with: (self model classFor: Object) ].
-	parseTree isLiteralNode
-		ifTrue: [ ^ Array with: (self model classFor: parseTree value class) ].
-	^ Array with: (self model classFor: Object)
+	^ self typesForTree: parseTree

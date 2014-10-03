@@ -1,8 +1,8 @@
 {
 	"class" : {
-		"removeEpsilonEdgesFrom:" : "ThierryGoubier 8/26/2014 18:36:12" },
+		"removeEpsilonEdgesFrom:" : "ThierryGoubier 9/18/2014 17:03:41" },
 	"instance" : {
-		"createNodeWithoutEpsilonEdges:" : "ThierryGoubier 8/26/2014 18:36:12",
-		"epsilonReachableNodesFrom:" : "ThierryGoubier 8/26/2014 18:36:12",
-		"initialize" : "ThierryGoubier 8/26/2014 18:36:12",
-		"removeEpsilonEdgesFrom:" : "ThierryGoubier 8/26/2014 18:36:12" } }
+		"createNodeWithoutEpsilonEdges:" : "ThierryGoubier 9/18/2014 17:03:41",
+		"epsilonReachableNodesFrom:" : "ThierryGoubier 9/18/2014 17:03:41",
+		"initialize" : "ThierryGoubier 9/18/2014 17:03:41",
+		"removeEpsilonEdgesFrom:" : "ThierryGoubier 9/18/2014 17:03:41" } }

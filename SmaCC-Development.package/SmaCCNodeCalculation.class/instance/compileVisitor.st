@@ -6,7 +6,7 @@ compileVisitor
 		asSubclassOf: (self codeGenerator model classFor: SmaCCParseNodeVisitor).
 	self codeGenerator removeOldMethodsFrom: class.
 	self codeGenerator removeOldMethodsFrom: class theMetaClass.
-	(SmaCCVisitorClassDefinition forClassDefinitions: classes)
+	(SmaCCVisitorClassDefinition forClassDefinitions: self sortedClasses)
 		grammar: grammar;
 		modelClass: class;
 		compileMethodsAndVariables

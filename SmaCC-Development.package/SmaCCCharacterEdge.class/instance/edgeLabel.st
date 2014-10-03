@@ -1,3 +1,3 @@
 printing
 edgeLabel
-	^transitionObjects
+	^ transitionObjects asString

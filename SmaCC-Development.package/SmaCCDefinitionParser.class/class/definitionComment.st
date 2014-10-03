@@ -281,7 +281,7 @@ GLR
 			{grammar isGLR: true}
 	;
 IgnoredVariables
-	: <ignorevariables> IgnoredVariableList 'variables'
+	: EndDirective <ignorevariables> IgnoredVariableList 'variables'
 			{grammar ignoredVariables: variables}
 	;
 IgnoredVariableList

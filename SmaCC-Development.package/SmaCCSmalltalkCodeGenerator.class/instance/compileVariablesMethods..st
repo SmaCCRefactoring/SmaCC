@@ -40,5 +40,4 @@ compileVariablesMethods: aSmaCCNodeClassDefinition
 		value: (allVariables select: [ :each | each isBaseTokenType and: [ each isCollection ] ])
 			value: 'compositeTokenVariables';
 		value: (allVariables select: [ :each | each isBaseTokenType not and: [ each isBaseNodeType not ] ])
-			value: 'otherVariables'.
-	self compilePluralVariableMap: (allVariables select: [ :each | each isCollection ]) into: aSmaCCNodeClassDefinition
+			value: 'otherVariables'

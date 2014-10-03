@@ -10,11 +10,15 @@ variableArrayAction: aSmaCCRHS
 			variableName := aSmaCCRHS variableNameForIndex: key.
 			variableName isNil
 				ifTrue: [ 
-					value isNode
-						ifTrue: [ 
-							self pullUpNodeVariablesFrom: value into: aSmaCCRHS index: key ]
-						ifFalse: [ self pullUpVariablesFrom: value into: aSmaCCRHS index: key ] ]
-				ifFalse: [ self assignVariable: variableName in: aSmaCCRHS at: key ] ].
+					value returnsVariableCollection
+						ifTrue: [ self pullUpVariablesFrom: value into: aSmaCCRHS index: key ]
+						ifFalse: [ 
+							value modelType = (self model classFor: nil class)
+								ifFalse: [ aSmaCCRHS generateUnnamedSymbolWarningFor: key ] ] ]
+				ifFalse: [ 
+					value returnsVariableCollection
+						ifTrue: [ aSmaCCRHS generateNamedVariableCollectionWarningFor: key ].
+					self assignVariable: variableName in: aSmaCCRHS at: key ] ].
 	self nextPutStatement: (self return: 'result').
 	self nextPutLine: ''.
 	^ self codeStream contents
