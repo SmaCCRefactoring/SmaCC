@@ -1,13 +1,15 @@
 tests
-testUnnamedCollectionSymbol
+testUnnamedNodeVariable
 	| compiler |
 	compiler := SmaCCGrammarCompiler new.
 	compiler
 		buildDefinition:
-			'<number> : \d+; <whitespace> : \s+; 
+			'%glr;
+			<number> : \d+; <whitespace> : \s+; 
 			%root FooNode;
-			A : B {{FooANode}} ;
-			B : "b" ''b'' {{FooBNode}} | B "b" ''b'' {{FooBNode}} ;'.
+			A : B D {{FooANode}};
+			B : <number> ''a'' <number> ''b'' {{FooBNode}} | ;
+			D : <number> ''c''; '.
 	self
 		assert:
 			([ 

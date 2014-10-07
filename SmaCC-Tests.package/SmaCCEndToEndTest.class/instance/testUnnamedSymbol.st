@@ -1,14 +1,20 @@
 tests
 testUnnamedSymbol
-	| compiler node |
+	| compiler |
 	compiler := SmaCCGrammarCompiler new.
 	compiler
-		buildDefinition: '<number> : \d+; <whitespace> : \s+; 
+		buildDefinition:
+			'<number> : \d+; <whitespace> : \s+; 
 			%root FooNode;
 			A : B {{FooANode}} ;
 			B : "b" ''b'' {{FooBNode}} ;'.
-	compiler compileInto: 'TestScanner'
-		andParser: 'TestParser'.
-	node := self parserClass parse: 'b'.
-	self assert: node class name asString = 'FooANode'.
-	self assert: node b value = 'b'
+	self
+		assert:
+			([ 
+			compiler compileInto: 'TestScanner' andParser: 'TestParser'.
+			false ]
+				on: SmaCCCompilationNotification
+				do: [ :ex | 
+					('Node creation' = ex messageText and: [ '*>>>B<<<*' match: ex tag ])
+						ifTrue: [ ex return: true ]
+						ifFalse: [ ex resume: nil ] ])

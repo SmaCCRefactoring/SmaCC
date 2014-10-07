@@ -2,4 +2,5 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"testMultipleDeleteWhitespaceAfter" : "ThierryGoubier 10/7/2014 23:03",
+		"testMultipleDeleteWhitespaceBefore" : "ThierryGoubier 10/7/2014 23:03" } }
