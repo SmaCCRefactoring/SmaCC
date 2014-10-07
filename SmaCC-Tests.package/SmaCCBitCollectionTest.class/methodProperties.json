@@ -1,0 +1,21 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"byteSizeCollection" : "ThierryGoubier 10/7/2014 22:45",
+		"largeCollection" : "ThierryGoubier 10/7/2014 22:45",
+		"largeValue" : "ThierryGoubier 10/7/2014 22:45",
+		"mediumCollection" : "ThierryGoubier 10/7/2014 22:46",
+		"newCollection" : "ThierryGoubier 10/7/2014 22:46",
+		"supportsLargeValues" : "ThierryGoubier 10/7/2014 22:46",
+		"testABunch" : "ThierryGoubier 10/7/2014 22:46",
+		"testAddToNextByte" : "ThierryGoubier 10/7/2014 22:46",
+		"testAdding" : "ThierryGoubier 10/7/2014 22:46",
+		"testComparing" : "ThierryGoubier 10/7/2014 22:46",
+		"testCopying" : "ThierryGoubier 10/7/2014 22:47",
+		"testGrowing" : "ThierryGoubier 10/7/2014 22:47",
+		"testLessThan" : "ThierryGoubier 10/7/2014 22:47",
+		"testNew" : "ThierryGoubier 10/7/2014 22:47",
+		"testPerformance" : "ThierryGoubier 10/7/2014 22:47",
+		"testRemoving" : "ThierryGoubier 10/7/2014 22:47",
+		"value:" : "ThierryGoubier 10/7/2014 22:46" } }

@@ -1,0 +1,3 @@
+private
+newCollection
+	^ SmaCCIntegerSet new
