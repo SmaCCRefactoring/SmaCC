@@ -29,6 +29,5 @@ createDefinitionPage
 	aDefinitionPage addMorph: group.
 	self
 		addCompileButtonsToCompilePage: aDefinitionPage;
-		addCheckBoxesToCompilePage: aDefinitionPage;
 		addClassSelectorsToCompilePage: aDefinitionPage.
 	self tabList selectedPageIndex: 1
