@@ -1,8 +1,8 @@
 {
 	"class" : {
-		"new" : "ThierryGoubier 9/18/2014 17:03:41" },
+		"new" : "ThierryGoubier 10/3/2014 17:22:23" },
 	"instance" : {
-		"createMergedNodeFrom:" : "ThierryGoubier 9/18/2014 17:03:41",
-		"initialize" : "ThierryGoubier 9/18/2014 17:03:41",
-		"mergeActionsFrom:into:" : "ThierryGoubier 9/18/2014 17:03:41",
-		"mergeTransitionsFrom:into:" : "ThierryGoubier 9/18/2014 17:03:41" } }
+		"createMergedNodeFrom:" : "ThierryGoubier 10/3/2014 17:22:23",
+		"initialize" : "ThierryGoubier 10/3/2014 17:22:23",
+		"mergeActionsFrom:into:" : "ThierryGoubier 10/3/2014 17:22:23",
+		"mergeTransitionsFrom:into:" : "ThierryGoubier 10/3/2014 17:22:23" } }
