@@ -13,7 +13,7 @@ statesToMakeIntoMethodsFor: aSmaCCNode
 						ifTrue: [ (incoming at: edge to ifAbsentPut: [ Set new ]) add: each ] ] ].
 	selectedStates := allStates
 		select: [ :each | aSmaCCNode = each or: [ each isTerminalNode not and: [ (incoming at: each ifAbsent: [ #() ]) size > 1 ] ] ].
-	allStates
+"	allStates
 		do: [ :each | 
 			(each allTransitionsWith: selectedStates) > self class maxTransitionsInScanMethod
 				ifTrue: [ 
@@ -22,5 +22,5 @@ statesToMakeIntoMethodsFor: aSmaCCNode
 					ts := (each transitions collect: [ :e | e to ])
 						asSortedCollection: [ :a :b | (a allTransitionsWith: selectedStates) > (b allTransitionsWith: selectedStates) ].
 					[ ts notEmpty and: [ (each allTransitionsWith: selectedStates) > self class maxTransitionsInScanMethod ] ]
-						whileTrue: [ selectedStates add: ts removeFirst ] ] ].
+						whileTrue: [ selectedStates add: ts removeFirst ] ] ]."
 	^ selectedStates asSortedCollection: [ :a :b | a id < b id ]

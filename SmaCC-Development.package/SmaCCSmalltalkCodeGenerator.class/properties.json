@@ -8,7 +8,8 @@
 	"instvars" : [
 		"isExpressions",
 		"parseTreeCache",
-		"category" ],
+		"category",
+		"splitIndex" ],
 	"name" : "SmaCCSmalltalkCodeGenerator",
 	"pools" : [
 		 ],
