@@ -14,6 +14,4 @@ reduceActionFortry_stmt1: nodes
 	result addTokens: ((nodes at: 4) at: 4) to: result nEWLINETokens.
 	result addTokens: ((nodes at: 4) at: 5) to: result iNDENTTokens.
 	result addTokens: ((nodes at: 4) at: 6) to: result dEDENTTokens.
-	result addVariablesFrom: (nodes at: 5).
-	result addVariablesFrom: (nodes at: 6).
 	^ result

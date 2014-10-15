@@ -13,5 +13,4 @@ reduceActionForfor_stmt1: nodes
 	result nEWLINEToken: ((nodes at: 6) at: 2).
 	result iNDENTToken: ((nodes at: 6) at: 3).
 	result dEDENTToken: ((nodes at: 6) at: 4).
-	result addVariablesFrom: (nodes at: 7).
 	^ result

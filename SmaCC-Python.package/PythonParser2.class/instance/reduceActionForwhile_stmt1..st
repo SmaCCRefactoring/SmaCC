@@ -8,5 +8,4 @@ reduceActionForwhile_stmt1: nodes
 	result nEWLINEToken: ((nodes at: 4) at: 2).
 	result iNDENTToken: ((nodes at: 4) at: 3).
 	result dEDENTToken: ((nodes at: 4) at: 4).
-	result addVariablesFrom: (nodes at: 5).
 	^ result

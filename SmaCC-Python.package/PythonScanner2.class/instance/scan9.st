@@ -1,16 +1,11 @@
 generated
 scan9
 	[ 
+	self recordMatch: #(73).
 	self step.
-	currentCharacter = $"
-		ifTrue: [ 
-			2
-				timesRepeat: [ 
-					self step.
-					currentCharacter = $"
-						ifFalse: [ ^ self scan9 ] ].
-			^ self recordAndReportMatch: #(72) ].
-	currentCharacter = $\
-		ifTrue: [ 
-			self step.
-			^ self scan9 ] ] repeat
+	currentCharacter = $j
+		ifTrue: [ ^ self recordAndReportMatch: #(73) ].
+	currentCharacter isDigit ] whileTrue.
+	('Ee' includes: currentCharacter)
+		ifTrue: [ ^ self scan10 ].
+	^ self reportLastMatch

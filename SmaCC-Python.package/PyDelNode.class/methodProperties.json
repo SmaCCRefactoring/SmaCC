@@ -2,15 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptVisitor:" : "ThierryGoubier 9/10/2014 17:41",
-		"commaTokens" : "ThierryGoubier 9/10/2014 17:41",
-		"commaTokens:" : "ThierryGoubier 9/10/2014 17:41",
-		"compositeNodeVariables" : "ThierryGoubier 9/11/2014 13:39",
-		"compositeTokenVariables" : "ThierryGoubier 9/11/2014 13:39",
-		"delToken" : "ThierryGoubier 9/10/2014 17:41",
-		"delToken:" : "ThierryGoubier 9/10/2014 17:41",
-		"exprs" : "ThierryGoubier 9/11/2014 13:39",
-		"exprs:" : "ThierryGoubier 9/11/2014 13:39",
-		"initialize" : "ThierryGoubier 9/11/2014 13:39",
-		"pluralVariablesMap" : "ThierryGoubier 9/11/2014 13:39",
-		"tokenVariables" : "ThierryGoubier 9/10/2014 17:41" } }
+		"acceptVisitor:" : "ThierryGoubier 9/12/2014 17:04:25",
+		"commaTokens" : "ThierryGoubier 9/12/2014 17:04:25",
+		"commaTokens:" : "ThierryGoubier 9/12/2014 17:04:25",
+		"compositeNodeVariables" : "ThierryGoubier 9/12/2014 17:04:25",
+		"compositeTokenVariables" : "ThierryGoubier 9/12/2014 17:04:25",
+		"delToken" : "ThierryGoubier 9/12/2014 17:04:25",
+		"delToken:" : "ThierryGoubier 9/12/2014 17:04:25",
+		"exprs" : "ThierryGoubier 9/12/2014 17:04:25",
+		"exprs:" : "ThierryGoubier 9/12/2014 17:04:25",
+		"initialize" : "ThierryGoubier 9/12/2014 17:04:25",
+		"tokenVariables" : "ThierryGoubier 9/12/2014 17:04:25" } }
