@@ -2,12 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptVisitor:" : "ThierryGoubier 6/5/2014 22:37",
-		"background" : "ThierryGoubier 6/5/2014 22:37",
-		"background:" : "ThierryGoubier 6/11/2014 01:39",
-		"compositeNodeVariables" : "ThierryGoubier 6/11/2014 01:39",
-		"feature_elements" : "ThierryGoubier 6/11/2014 01:39",
-		"feature_elements:" : "ThierryGoubier 6/11/2014 01:39",
-		"initialize" : "ThierryGoubier 6/11/2014 01:39",
-		"otherVariables" : "ThierryGoubier 6/11/2014 01:39",
-		"pluralVariablesMap" : "ThierryGoubier 6/11/2014 01:39" } }
+		"acceptVisitor:" : "ThierryGoubier 6/23/2014 19:44:51",
+		"background" : "ThierryGoubier 6/23/2014 19:44:51",
+		"background:" : "ThierryGoubier 6/23/2014 19:44:51",
+		"compositeNodeVariables" : "ThierryGoubier 6/23/2014 19:44:51",
+		"feature_elements" : "ThierryGoubier 6/23/2014 19:44:51",
+		"feature_elements:" : "ThierryGoubier 6/23/2014 19:44:51",
+		"initialize" : "ThierryGoubier 6/23/2014 19:44:51",
+		"otherVariables" : "ThierryGoubier 6/23/2014 19:44:51" } }

@@ -53,7 +53,7 @@ background : <comment> <background_keyword> <space>* <lines_to_keyword>? <eol>+ 
 row : <row_start> (<cell>| <row_start>)+ <eol> ;
 table : row+ ;
 steps : step* ;
-step : <comment> <step_keyword> <keyword_space> <line_to_eol> (<eol>+) multiline_arg? <white> ;
+step : <comment> <step_keyword> <space>* <line_to_eol> (<eol>+) multiline_arg? <white> ;
 examples_sections : examples* ;
 examples : <comment> <space>* <examples_keyword> <space>* <lines_to_keyword>? <eol> table <white> ;
 multiline_arg : table | <py_string> ;"

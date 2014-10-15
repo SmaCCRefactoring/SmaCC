@@ -1,19 +1,20 @@
 generated
 scan11
+	[ 
 	self step.
-	currentCharacter = Character lf
-		ifTrue: [ ^ self scan12 ].
-	currentCharacter = Character cr
+	currentCharacter = $"
 		ifTrue: [ 
 			self step.
-			currentCharacter = Character lf
-				ifTrue: [ ^ self scan12 ].
+			currentCharacter = $"
+				ifTrue: [ 
+					self step.
+					currentCharacter = $"
+						ifTrue: [ 
+							self step.
+							currentCharacter = Character cr
+								ifTrue: [ ^ self scan12 ].
+							((currentCharacter between: Character tab and: Character lf) or: [ currentCharacter = Character space ])
+								ifTrue: [ ^ self scan9 ] ] ].
 			^ self reportLastMatch ].
-	currentCharacter = $!
-		ifTrue: [ 
-			self step.
-			currentCharacter = Character cr
-				ifTrue: [ self step ].
-			currentCharacter = Character lf
-				ifTrue: [ ^ self scan13 ] ].
+	currentCharacter = Character tab or: [ currentCharacter = Character space ] ] whileTrue.
 	^ self reportLastMatch

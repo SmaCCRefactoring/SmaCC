@@ -1,21 +1,28 @@
 generated
 scan22
-	self recordMatch: #(2 10).
 	self step.
-	(currentCharacter <= Character backspace
-		or: [ 
-			(currentCharacter between: Character pageUp and: Character newPage)
-				or: [ 
-					(currentCharacter between: (Character value: 14) and: Character arrowDown)
-						or: [ (currentCharacter between: $! and: $?) or: [ currentCharacter >= $A ] ] ] ])
+	currentCharacter = $e
 		ifTrue: [ 
-			[ 
-			self recordMatch: #(2).
 			self step.
-			currentCharacter <= Character backspace
+			currentCharacter = $n
+				ifTrue: [ ^ self scan21 ].
+			currentCharacter = $|
+				ifTrue: [ ^ self recordAndReportMatch: #(10) ].
+			(currentCharacter <= Character tab
 				or: [ 
 					(currentCharacter between: Character pageUp and: Character newPage)
 						or: [ 
-							(currentCharacter between: (Character value: 14) and: Character arrowDown)
-								or: [ (currentCharacter between: $! and: $?) or: [ currentCharacter >= $A ] ] ] ] ] whileTrue ].
+							(currentCharacter between: (Character value: 14) and: $m)
+								or: [ (currentCharacter between: $o and: ${) or: [ currentCharacter >= $} ] ] ] ])
+				ifTrue: [ ^ self scan7 ].
+			^ self reportLastMatch ].
+	currentCharacter = $|
+		ifTrue: [ ^ self recordAndReportMatch: #(10) ].
+	(currentCharacter <= Character tab
+		or: [ 
+			(currentCharacter between: Character pageUp and: Character newPage)
+				or: [ 
+					(currentCharacter between: (Character value: 14) and: $d)
+						or: [ (currentCharacter between: $f and: ${) or: [ currentCharacter >= $} ] ] ] ])
+		ifTrue: [ ^ self scan7 ].
 	^ self reportLastMatch

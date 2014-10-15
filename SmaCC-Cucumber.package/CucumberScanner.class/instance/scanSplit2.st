@@ -1,5 +1,5 @@
 generated
-scan25
+scanSplit2
 	self step.
 	currentCharacter = $a
 		ifTrue: [ 
@@ -38,7 +38,7 @@ scan25
 																						or: [ 
 																							(currentCharacter between: Character pageUp and: Character newPage)
 																								or: [ (currentCharacter between: (Character value: 14) and: ${) or: [ currentCharacter >= $} ] ] ])
-																						ifTrue: [ ^ self scan8 ].
+																						ifTrue: [ ^ self scan7 ].
 																					^ self reportLastMatch ].
 																			currentCharacter = $|
 																				ifTrue: [ ^ self recordAndReportMatch: #(10) ].
@@ -48,7 +48,7 @@ scan25
 																						or: [ 
 																							(currentCharacter between: (Character value: 14) and: $9)
 																								or: [ (currentCharacter between: $; and: ${) or: [ currentCharacter >= $} ] ] ] ])
-																				ifTrue: [ ^ self scan8 ].
+																				ifTrue: [ ^ self scan7 ].
 																			^ self reportLastMatch ].
 																	currentCharacter = $|
 																		ifTrue: [ ^ self recordAndReportMatch: #(10) ].
@@ -58,7 +58,7 @@ scan25
 																				or: [ 
 																					(currentCharacter between: (Character value: 14) and: $c)
 																						or: [ (currentCharacter between: $e and: ${) or: [ currentCharacter >= $} ] ] ] ])
-																		ifTrue: [ ^ self scan8 ].
+																		ifTrue: [ ^ self scan7 ].
 																	^ self reportLastMatch ].
 															currentCharacter = $|
 																ifTrue: [ ^ self recordAndReportMatch: #(10) ].
@@ -68,7 +68,7 @@ scan25
 																		or: [ 
 																			(currentCharacter between: (Character value: 14) and: $m)
 																				or: [ (currentCharacter between: $o and: ${) or: [ currentCharacter >= $} ] ] ] ])
-																ifTrue: [ ^ self scan8 ].
+																ifTrue: [ ^ self scan7 ].
 															^ self reportLastMatch ].
 													currentCharacter = $|
 														ifTrue: [ ^ self recordAndReportMatch: #(10) ].
@@ -78,7 +78,7 @@ scan25
 																or: [ 
 																	(currentCharacter between: (Character value: 14) and: $t)
 																		or: [ (currentCharacter between: $v and: ${) or: [ currentCharacter >= $} ] ] ] ])
-														ifTrue: [ ^ self scan8 ].
+														ifTrue: [ ^ self scan7 ].
 													^ self reportLastMatch ].
 											currentCharacter = $|
 												ifTrue: [ ^ self recordAndReportMatch: #(10) ].
@@ -88,7 +88,7 @@ scan25
 														or: [ 
 															(currentCharacter between: (Character value: 14) and: $n)
 																or: [ (currentCharacter between: $p and: ${) or: [ currentCharacter >= $} ] ] ] ])
-												ifTrue: [ ^ self scan8 ].
+												ifTrue: [ ^ self scan7 ].
 											^ self reportLastMatch ].
 									currentCharacter = $|
 										ifTrue: [ ^ self recordAndReportMatch: #(10) ].
@@ -98,7 +98,7 @@ scan25
 												or: [ 
 													(currentCharacter between: (Character value: 14) and: $q)
 														or: [ (currentCharacter between: $s and: ${) or: [ currentCharacter >= $} ] ] ] ])
-										ifTrue: [ ^ self scan8 ].
+										ifTrue: [ ^ self scan7 ].
 									^ self reportLastMatch ].
 							currentCharacter = $|
 								ifTrue: [ ^ self recordAndReportMatch: #(10) ].
@@ -108,7 +108,7 @@ scan25
 										or: [ 
 											(currentCharacter between: (Character value: 14) and: $f)
 												or: [ (currentCharacter between: $h and: ${) or: [ currentCharacter >= $} ] ] ] ])
-								ifTrue: [ ^ self scan8 ].
+								ifTrue: [ ^ self scan7 ].
 							^ self reportLastMatch ].
 					currentCharacter = $|
 						ifTrue: [ ^ self recordAndReportMatch: #(10) ].
@@ -118,7 +118,7 @@ scan25
 								or: [ 
 									(currentCharacter between: (Character value: 14) and: $j)
 										or: [ (currentCharacter between: $l and: ${) or: [ currentCharacter >= $} ] ] ] ])
-						ifTrue: [ ^ self scan8 ].
+						ifTrue: [ ^ self scan7 ].
 					^ self reportLastMatch ].
 			currentCharacter = $|
 				ifTrue: [ ^ self recordAndReportMatch: #(10) ].
@@ -128,13 +128,13 @@ scan25
 						or: [ 
 							(currentCharacter between: (Character value: 14) and: $b)
 								or: [ (currentCharacter between: $d and: ${) or: [ currentCharacter >= $} ] ] ] ])
-				ifTrue: [ ^ self scan8 ].
+				ifTrue: [ ^ self scan7 ].
 			^ self reportLastMatch ].
 	currentCharacter = $u
 		ifTrue: [ 
 			self step.
 			currentCharacter = $t
-				ifTrue: [ ^ self scan24 ].
+				ifTrue: [ ^ self scan21 ].
 			currentCharacter = $|
 				ifTrue: [ ^ self recordAndReportMatch: #(10) ].
 			(currentCharacter <= Character tab
@@ -143,7 +143,7 @@ scan25
 						or: [ 
 							(currentCharacter between: (Character value: 14) and: $s)
 								or: [ (currentCharacter between: $u and: ${) or: [ currentCharacter >= $} ] ] ] ])
-				ifTrue: [ ^ self scan8 ].
+				ifTrue: [ ^ self scan7 ].
 			^ self reportLastMatch ].
 	currentCharacter = $|
 		ifTrue: [ ^ self recordAndReportMatch: #(10) ].
@@ -153,5 +153,5 @@ scan25
 				or: [ 
 					(currentCharacter between: (Character value: 14) and: $`)
 						or: [ (currentCharacter between: $b and: $t) or: [ (currentCharacter between: $v and: ${) or: [ currentCharacter >= $} ] ] ] ] ])
-		ifTrue: [ ^ self scan8 ].
+		ifTrue: [ ^ self scan7 ].
 	^ self reportLastMatch

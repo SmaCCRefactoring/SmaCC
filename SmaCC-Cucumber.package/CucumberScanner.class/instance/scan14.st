@@ -1,6 +1,9 @@
 generated
 scan14
+	[ 
+	self recordMatch: #(7).
 	self step.
-	currentCharacter = Character lf
-		ifTrue: [ ^ self scan11 ].
+	currentCharacter = $#
+		ifTrue: [ ^ self scan15 ].
+	currentCharacter = Character tab or: [ currentCharacter = Character space ] ] whileTrue.
 	^ self reportLastMatch
