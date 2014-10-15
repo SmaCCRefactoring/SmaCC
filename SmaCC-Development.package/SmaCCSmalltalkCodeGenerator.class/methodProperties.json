@@ -1,7 +1,6 @@
 {
 	"class" : {
 		"codeTemplatesArray" : "ThierryGoubier 10/3/2014 17:22:23",
-		"maxTransitionsInScanMethod" : "ThierryGoubier 10/3/2014 17:22:23",
 		"parseSourceSelector" : "ThierryGoubier 10/3/2014 17:22:23",
 		"typeName" : "ThierryGoubier 10/3/2014 17:22:23" },
 	"instance" : {
@@ -27,7 +26,7 @@
 		"compileMatchInContextMethod:" : "ThierryGoubier 10/3/2014 17:22:23",
 		"compileMethodIn:" : "ThierryGoubier 10/3/2014 17:22:23",
 		"compileMethodWithoutFormattingIn:" : "ThierryGoubier 10/3/2014 17:22:23",
-		"compileNode:" : "ThierryGoubier 10/15/2014 12:40",
+		"compileNode:" : "ThierryGoubier 10/15/2014 12:47:59",
 		"compileOptimizedMethod:in:" : "ThierryGoubier 10/14/2014 17:36",
 		"compileOptimizedMethodIn:" : "ThierryGoubier 10/14/2014 17:28",
 		"compilePostCopyMethod:" : "ThierryGoubier 10/3/2014 17:22:23",
@@ -45,7 +44,7 @@
 		"initialize" : "ThierryGoubier 10/3/2014 17:22:23",
 		"initializeIsExpressions" : "ThierryGoubier 10/3/2014 17:22:23",
 		"keywords" : "ThierryGoubier 10/3/2014 17:22:23",
-		"maxMethodLength" : "ThierryGoubier 10/15/2014 12:41",
+		"maxMethodLength" : "ThierryGoubier 10/15/2014 12:47:59",
 		"method:type:" : "ThierryGoubier 10/3/2014 17:22:23",
 		"method:type:argumentName:argumentType:" : "ThierryGoubier 10/3/2014 17:22:23",
 		"method:type:argumentName:argumentType:argumentName:argumentType:" : "ThierryGoubier 10/3/2014 17:22:23",
@@ -77,8 +76,8 @@
 		"send:to:with:" : "ThierryGoubier 10/3/2014 17:22:23",
 		"send:to:with:with:" : "ThierryGoubier 10/3/2014 17:22:23",
 		"send:to:with:with:with:" : "ThierryGoubier 10/3/2014 17:22:23",
-		"splitTree:" : "ThierryGoubier 10/15/2014 12:38",
-		"statesToMakeIntoMethodsFor:" : "ThierryGoubier 10/14/2014 15:39",
+		"splitTree:" : "ThierryGoubier 10/15/2014 13:54",
+		"statesToMakeIntoMethodsFor:" : "ThierryGoubier 10/15/2014 13:43",
 		"superMessage:" : "ThierryGoubier 10/3/2014 17:22:23",
 		"superMessage:argument:" : "ThierryGoubier 10/3/2014 17:22:23",
 		"superMessage:argument:argument:" : "ThierryGoubier 10/3/2014 17:22:23",

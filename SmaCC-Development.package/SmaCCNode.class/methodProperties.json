@@ -14,8 +14,6 @@
 		"addEdgeTo:onStates:" : "ThierryGoubier 10/3/2014 17:22:23",
 		"allStates" : "ThierryGoubier 10/3/2014 17:22:23",
 		"allStatesInto:" : "ThierryGoubier 10/3/2014 17:22:23",
-		"allTransitionsWith:" : "ThierryGoubier 10/3/2014 17:22:23",
-		"allTransitionsWith:visited:" : "ThierryGoubier 10/3/2014 17:22:23",
 		"asDFA" : "ThierryGoubier 10/3/2014 17:22:23",
 		"asDOTstring" : "ThierryGoubier 10/3/2014 17:22:23",
 		"asNFAWithoutEpsilonTransitions" : "ThierryGoubier 10/3/2014 17:22:23",

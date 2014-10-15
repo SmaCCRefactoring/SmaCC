@@ -4,7 +4,7 @@ splitTree: aTree
 
 	"We have here a fairly complex code which tries to split sequence nodes. At the moment, this code has not been proven as being of interest, is complex and may not be correct."
 
-	"This code generates methods with names such as scanSplitX (normal scan approach) and scanSplitSeq (splitting inside sequences). Some improvement may be to look at how to split more efficiently in sequences."
+	"This code generates methods with names such as scanSplitX (normal scan approach) and scanSplitSeqX (splitting inside sequences). Some improvement may be to look at how to split more efficiently in sequences."
 
 	"Do one split, then return."
 
