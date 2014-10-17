@@ -57,6 +57,7 @@ definitionComment
 	;
 
 %id <TypeName> <IDENTIFIER> <CONSTANT> ;
+%left ""else"" ;
 
 translationUnit
 	: external_declaration

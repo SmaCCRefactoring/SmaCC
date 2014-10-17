@@ -1,2 +1,3 @@
-(name 'SmaCC-C-Parser-ThierryGoubier.2' message 'Regenerated' id '11c0e4ef-631b-4989-a3b7-334886a391b0' date '18 March 2014' time '1:04:24.786926 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-C-Parser-ThierryGoubier.1' message 'SmaCC C Parser ported from Dolphin SmaCC 2.0.3
-' id '0d4d8daa-7285-532d-9167-3eb1a7cecfe9' date '27 January 2014' time '4:14:45 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
+(name 'SmaCC-C-Parser-ThierryGoubier.3' message 'Regenerated for 2.0.4' id 'e3875470-16ff-4e88-a9de-5bc5b2384ea0' date '17 October 2014' time '5:11:17.581002 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-C-Parser-ThierryGoubier.2' message 'Regenerated
+' id '7c14f4d1-b6dc-55e2-8055-a2a2968dd976' date '18 March 2014' time '1:04:25 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-C-Parser-ThierryGoubier.1' message 'SmaCC C Parser ported from Dolphin SmaCC 2.0.3
+' id '0d4d8daa-7285-532d-9167-3eb1a7cecfe9' date '27 January 2014' time '4:14:45 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())) stepChildren ())
