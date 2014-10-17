@@ -1,5 +1,5 @@
 generated
-scan26
+scanSplit4
 	self step.
 	currentCharacter = $"
 		ifTrue: [ ^ self scan1 ].
@@ -55,12 +55,12 @@ scan26
 			currentCharacter = $}
 				ifTrue: [ ^ self recordAndReportMatch: #(44) ].
 			^ self reportLastMatch ].
-	(currentCharacter isWhitespace or: [ currentCharacter = Character pageUp ])
+	(currentCharacter isSeparator or: [ currentCharacter = Character pageUp ])
 		ifTrue: [ 
 			[ 
 			self recordMatch: #(28).
 			self step.
-			currentCharacter isWhitespace or: [ currentCharacter = Character pageUp ] ] whileTrue.
+			currentCharacter isSeparator or: [ currentCharacter = Character pageUp ] ] whileTrue.
 			^ self reportLastMatch ].
 	(currentCharacter isLetter or: [ currentCharacter = $_ ])
 		ifTrue: [ 

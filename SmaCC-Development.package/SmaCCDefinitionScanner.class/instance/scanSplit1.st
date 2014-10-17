@@ -1,16 +1,16 @@
 generated
-scan27
+scanSplit1
 	self step.
 	currentCharacter = Character newPage
 		ifTrue: [ 
 			self recordMatch: #(28 41).
 			self step.
-			(currentCharacter isWhitespace or: [ currentCharacter = Character pageUp ])
+			(currentCharacter isSeparator or: [ currentCharacter = Character pageUp ])
 				ifTrue: [ 
 					[ 
 					self recordMatch: #(28).
 					self step.
-					currentCharacter isWhitespace or: [ currentCharacter = Character pageUp ] ] whileTrue ].
+					currentCharacter isSeparator or: [ currentCharacter = Character pageUp ] ] whileTrue ].
 			^ self reportLastMatch ].
 	currentCharacter = $"
 		ifTrue: [ 
@@ -89,27 +89,80 @@ scan27
 			self recordMatch: #(7).
 			self step.
 			currentCharacter = $\
-				ifTrue: [ ^ self scan30 ].
+				ifTrue: [ ^ self scan15 ].
 			(currentCharacter <= $[ or: [ currentCharacter >= $^ ])
-				ifTrue: [ ^ self scan29 ].
+				ifTrue: [ ^ self scan14 ].
 			^ self reportLastMatch ].
 	currentCharacter = $\
-		ifTrue: [ ^ self scan31 ].
+		ifTrue: [ 
+			self step.
+			currentCharacter = $c
+				ifTrue: [ 
+					self step.
+					(currentCharacter between: $A and: $Z)
+						ifTrue: [ ^ self recordAndReportMatch: #(38) ].
+					^ self reportLastMatch ].
+			currentCharacter = $x
+				ifTrue: [ 
+					self step.
+					currentCharacter isHexDigit
+						ifTrue: [ 
+							3
+								timesRepeat: [ 
+									self recordMatch: #(38).
+									self step.
+									currentCharacter isHexDigit
+										ifFalse: [ ^ self reportLastMatch ] ].
+							^ self recordAndReportMatch: #(38) ].
+					^ self reportLastMatch ].
+			^ self recordAndReportMatch: #(38) ].
 	currentCharacter = $]
 		ifTrue: [ ^ self recordAndReportMatch: #(6 41) ].
 	currentCharacter = $e
-		ifTrue: [ ^ self scan32 ].
+		ifTrue: [ 
+			self recordMatch: #(30 41).
+			self step.
+			currentCharacter = $r
+				ifTrue: [ ^ self scan13 ].
+			(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
+				ifTrue: [ 
+					[ 
+					self recordMatch: #(30).
+					self step.
+					currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
+			^ self reportLastMatch ].
 	currentCharacter = ${
-		ifTrue: [ ^ self scan33 ].
+		ifTrue: [ 
+			self recordMatch: #(33).
+			self step.
+			currentCharacter = $,
+				ifTrue: [ ^ self scan16 ].
+			currentCharacter isDigit
+				ifTrue: [ 
+					[ 
+					self step.
+					currentCharacter = $,
+						ifTrue: [ ^ self scan16 ].
+					currentCharacter isDigit ] whileTrue ].
+			^ self reportLastMatch ].
 	currentCharacter = $|
 		ifTrue: [ ^ self recordAndReportMatch: #(4 41) ].
-	(currentCharacter isWhitespace or: [ currentCharacter = Character pageUp ])
+	(currentCharacter isSeparator or: [ currentCharacter = Character pageUp ])
 		ifTrue: [ 
 			[ 
 			self recordMatch: #(28).
 			self step.
-			currentCharacter isWhitespace or: [ currentCharacter = Character pageUp ] ] whileTrue.
+			currentCharacter isSeparator or: [ currentCharacter = Character pageUp ] ] whileTrue.
 			^ self reportLastMatch ].
 	(currentCharacter isLetter or: [ currentCharacter = $_ ])
-		ifTrue: [ ^ self scan28 ].
+		ifTrue: [ 
+			self recordMatch: #(30 41).
+			self step.
+			(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
+				ifTrue: [ 
+					[ 
+					self recordMatch: #(30).
+					self step.
+					currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
+			^ self reportLastMatch ].
 	^ self recordAndReportMatch: #(41)

@@ -1,5 +1,5 @@
 generated
-scan24
+scanSplit7
 	self recordMatch: #(30).
 	self step.
 	currentCharacter = $i
@@ -17,14 +17,7 @@ scan24
 							currentCharacter = $t
 								ifTrue: [ 
 									self recordMatch: #(20 30).
-									self step ].
-							(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
-								ifTrue: [ 
-									[ 
-									self recordMatch: #(30).
-									self step.
-									currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
-							^ self reportLastMatch ] ].
+									self step ] ] ].
 			(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
 				ifTrue: [ 
 					[ 
@@ -43,14 +36,7 @@ scan24
 					currentCharacter = $t
 						ifTrue: [ 
 							self recordMatch: #(14 30).
-							self step ].
-					(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
-						ifTrue: [ 
-							[ 
-							self recordMatch: #(30).
-							self step.
-							currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
-					^ self reportLastMatch ] ].
+							self step ] ] ].
 	(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
 		ifTrue: [ 
 			[ 

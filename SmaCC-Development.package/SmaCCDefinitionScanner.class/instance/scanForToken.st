@@ -1,10 +1,8 @@
 generated
 scanForToken
 	state == #parser
-		ifTrue: [ ^ self scan26 ].
+		ifTrue: [ ^ self scanSplit4 ].
 	state == #directives
-		ifTrue: [ ^ self scan14 ].
-	state == #default
 		ifTrue: [ 
 			self step.
 			currentCharacter = $"
@@ -44,18 +42,177 @@ scanForToken
 				ifTrue: [ ^ self recordAndReportMatch: #(7) ].
 			currentCharacter = $]
 				ifTrue: [ ^ self recordAndReportMatch: #(6) ].
+			currentCharacter = $a
+				ifTrue: [ ^ self scanSplit2 ].
 			currentCharacter = $e
-				ifTrue: [ ^ self scan12 ].
+				ifTrue: [ 
+					self recordMatch: #(30).
+					self step.
+					currentCharacter = $r
+						ifTrue: [ ^ self scan13 ].
+					currentCharacter = $x
+						ifTrue: [ 
+							self recordMatch: #(30).
+							self step.
+							currentCharacter = $c
+								ifTrue: [ 
+									self recordMatch: #(30).
+									self step.
+									currentCharacter = $l
+										ifTrue: [ 
+											self recordMatch: #(30).
+											self step.
+											currentCharacter = $u
+												ifTrue: [ 
+													self recordMatch: #(30).
+													self step.
+													currentCharacter = $d
+														ifTrue: [ 
+															self recordMatch: #(30).
+															self step.
+															currentCharacter = $e
+																ifTrue: [ 
+																	self recordMatch: #(30).
+																	self step.
+																	currentCharacter = $s
+																		ifTrue: [ 
+																			self recordMatch: #(13 30).
+																			self step ] ] ] ] ] ] ].
+					(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
+						ifTrue: [ 
+							[ 
+							self recordMatch: #(30).
+							self step.
+							currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
+					^ self reportLastMatch ].
+			currentCharacter = $g
+				ifTrue: [ 
+					self recordMatch: #(30).
+					self step.
+					currentCharacter = $l
+						ifTrue: [ 
+							self recordMatch: #(30).
+							self step.
+							currentCharacter = $r
+								ifTrue: [ 
+									self recordMatch: #(24 30).
+									self step ] ].
+					(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
+						ifTrue: [ 
+							[ 
+							self recordMatch: #(30).
+							self step.
+							currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
+					^ self reportLastMatch ].
+			currentCharacter = $h
+				ifTrue: [ ^ self scanSplit8 ].
+			currentCharacter = $i
+				ifTrue: [ ^ self scanSplit3 ].
+			currentCharacter = $l
+				ifTrue: [ 
+					self recordMatch: #(30).
+					self step.
+					currentCharacter = $e
+						ifTrue: [ 
+							self recordMatch: #(30).
+							self step.
+							currentCharacter = $f
+								ifTrue: [ 
+									self recordMatch: #(30).
+									self step.
+									currentCharacter = $t
+										ifTrue: [ 
+											self recordMatch: #(19 30).
+											self step ] ] ].
+					(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
+						ifTrue: [ 
+							[ 
+							self recordMatch: #(30).
+							self step.
+							currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
+					^ self reportLastMatch ].
+			currentCharacter = $n
+				ifTrue: [ 
+					self recordMatch: #(30).
+					self step.
+					currentCharacter = $o
+						ifTrue: [ 
+							self recordMatch: #(30).
+							self step.
+							currentCharacter = $n
+								ifTrue: [ 
+									self recordMatch: #(30).
+									self step.
+									currentCharacter = $a
+										ifTrue: [ 
+											2
+												timesRepeat: [ 
+													self recordMatch: #(30).
+													self step.
+													currentCharacter = $s
+														ifFalse: [ ^ self reportLastMatch ] ].
+											self recordMatch: #(30).
+											self step.
+											currentCharacter = $o
+												ifTrue: [ 
+													self recordMatch: #(30).
+													self step.
+													currentCharacter = $c
+														ifTrue: [ 
+															self recordMatch: #(21 30).
+															self step ] ] ] ] ].
+					(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
+						ifTrue: [ 
+							[ 
+							self recordMatch: #(30).
+							self step.
+							currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
+					^ self reportLastMatch ].
+			currentCharacter = $p
+				ifTrue: [ 
+					self recordMatch: #(30).
+					self step.
+					currentCharacter = $r
+						ifTrue: [ 
+							self recordMatch: #(30).
+							self step.
+							currentCharacter = $e
+								ifTrue: [ 
+									self recordMatch: #(30).
+									self step.
+									currentCharacter = $f
+										ifTrue: [ 
+											self recordMatch: #(30).
+											self step.
+											currentCharacter = $i
+												ifTrue: [ 
+													self recordMatch: #(30).
+													self step.
+													currentCharacter = $x
+														ifTrue: [ 
+															self recordMatch: #(17 30).
+															self step ] ] ] ] ].
+					(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
+						ifTrue: [ 
+							[ 
+							self recordMatch: #(30).
+							self step.
+							currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
+					^ self reportLastMatch ].
+			currentCharacter = $r
+				ifTrue: [ ^ self scanSplit7 ].
+			currentCharacter = $s
+				ifTrue: [ ^ self scanSplit6 ].
 			currentCharacter = ${
 				ifTrue: [ ^ self recordAndReportMatch: #(33) ].
 			currentCharacter = $|
 				ifTrue: [ ^ self recordAndReportMatch: #(4) ].
-			(currentCharacter isWhitespace or: [ currentCharacter = Character pageUp ])
+			(currentCharacter isSeparator or: [ currentCharacter = Character pageUp ])
 				ifTrue: [ 
 					[ 
 					self recordMatch: #(28).
 					self step.
-					currentCharacter isWhitespace or: [ currentCharacter = Character pageUp ] ] whileTrue.
+					currentCharacter isSeparator or: [ currentCharacter = Character pageUp ] ] whileTrue.
 					^ self reportLastMatch ].
 			(currentCharacter isLetter or: [ currentCharacter = $_ ])
 				ifTrue: [ 
@@ -64,6 +221,8 @@ scanForToken
 					self step.
 					currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
 			^ self reportLastMatch ].
+	state == #default
+		ifTrue: [ ^ self scanSplit5 ].
 	state == #scanner
-		ifTrue: [ ^ self scan27 ].
+		ifTrue: [ ^ self scanSplit1 ].
 	^ self reportLastMatch
