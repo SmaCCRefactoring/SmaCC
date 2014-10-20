@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#ifToken #left #right)
+	^ #(#ifToken)

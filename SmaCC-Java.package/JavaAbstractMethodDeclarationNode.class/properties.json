@@ -10,7 +10,8 @@
 		"type",
 		"declarator",
 		"throws",
-		"semicolon" ],
+		"semicolon",
+		"typeParameters" ],
 	"name" : "JavaAbstractMethodDeclarationNode",
 	"pools" : [
 		 ],

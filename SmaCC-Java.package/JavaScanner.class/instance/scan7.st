@@ -8,5 +8,5 @@ scan7
 			self step.
 			currentCharacter = $* ] whileTrue.
 			currentCharacter = $/
-				ifTrue: [ ^ self recordAndReportMatch: #(104) ].
+				ifTrue: [ ^ self recordAndReportMatch: #(106) ].
 			^ self scan7 ] ] repeat

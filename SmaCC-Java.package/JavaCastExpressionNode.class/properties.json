@@ -7,7 +7,6 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"type",
-		"emptyDims",
 		"expression" ],
 	"name" : "JavaCastExpressionNode",
 	"pools" : [

@@ -2,16 +2,15 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptVisitor:" : "ThierryGoubier 3/18/2014 12:38:27",
-		"compositeNodeVariables" : "ThierryGoubier 3/18/2014 12:38:27",
-		"initialize" : "ThierryGoubier 3/18/2014 12:38:27",
-		"labels" : "ThierryGoubier 3/18/2014 12:38:27",
-		"labels:" : "ThierryGoubier 3/18/2014 12:38:27",
-		"left" : "ThierryGoubier 3/18/2014 12:38:27",
-		"left:" : "ThierryGoubier 3/18/2014 12:38:27",
-		"pluralVariablesMap" : "ThierryGoubier 3/18/2014 12:38:27",
-		"right" : "ThierryGoubier 3/18/2014 12:38:27",
-		"right:" : "ThierryGoubier 3/18/2014 12:38:27",
-		"statementGroups" : "ThierryGoubier 3/18/2014 12:38:27",
-		"statementGroups:" : "ThierryGoubier 3/18/2014 12:38:27",
-		"tokenVariables" : "ThierryGoubier 3/18/2014 12:38:27" } }
+		"acceptVisitor:" : "ThierryGoubier 4/19/2014 10:28:23",
+		"compositeNodeVariables" : "ThierryGoubier 4/19/2014 10:28:23",
+		"ignoredTokenVariables" : "ThierryGoubier 10/20/2014 09:12",
+		"initialize" : "ThierryGoubier 4/19/2014 10:28:23",
+		"labels" : "ThierryGoubier 4/19/2014 10:28:23",
+		"labels:" : "ThierryGoubier 4/19/2014 10:28:23",
+		"left" : "ThierryGoubier 4/19/2014 10:28:23",
+		"left:" : "ThierryGoubier 4/19/2014 10:28:23",
+		"right" : "ThierryGoubier 4/19/2014 10:28:23",
+		"right:" : "ThierryGoubier 4/19/2014 10:28:23",
+		"statementGroups" : "ThierryGoubier 4/19/2014 10:28:23",
+		"statementGroups:" : "ThierryGoubier 4/19/2014 10:28:23" } }

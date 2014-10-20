@@ -10,7 +10,8 @@
 		"type",
 		"declarator",
 		"throws",
-		"body" ],
+		"body",
+		"typeParameters" ],
 	"name" : "JavaMethodDeclarationNode",
 	"pools" : [
 		 ],

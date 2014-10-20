@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#forToken #left #colon #right)
+	^ #(#forToken #_name #colon)

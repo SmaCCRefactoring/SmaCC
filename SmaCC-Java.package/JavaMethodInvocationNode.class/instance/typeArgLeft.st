@@ -1,0 +1,3 @@
+generated
+typeArgLeft
+	^ typeArgLeft

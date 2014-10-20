@@ -1,7 +1,7 @@
 generated
-test: aJavaExpressionNode
+test: aJavaLambdaExpressionNode
 	self test notNil
 		ifTrue: [ self test parent: nil ].
-	test := aJavaExpressionNode.
+	test := aJavaLambdaExpressionNode.
 	self test notNil
 		ifTrue: [ self test parent: self ]

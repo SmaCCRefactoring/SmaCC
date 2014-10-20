@@ -9,7 +9,6 @@
 		"newToken",
 		"type",
 		"dimExpressions",
-		"emptyDims",
 		"initializer" ],
 	"name" : "JavaNewArrayNode",
 	"pools" : [

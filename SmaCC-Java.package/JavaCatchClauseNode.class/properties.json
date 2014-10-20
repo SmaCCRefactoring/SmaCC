@@ -8,11 +8,9 @@
 	"instvars" : [
 		"catchToken",
 		"left",
-		"modifiers",
-		"type",
-		"variable",
 		"right",
-		"block" ],
+		"block",
+		"parameter" ],
 	"name" : "JavaCatchClauseNode",
 	"pools" : [
 		 ],

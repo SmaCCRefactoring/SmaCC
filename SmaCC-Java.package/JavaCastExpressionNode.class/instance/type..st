@@ -1,7 +1,7 @@
 generated
-type: aJavaProgramNode
+type: aJavaTypeNode
 	self type notNil
 		ifTrue: [ self type parent: nil ].
-	type := aJavaProgramNode.
+	type := aJavaTypeNode.
 	self type notNil
 		ifTrue: [ self type parent: self ]

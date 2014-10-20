@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#catchToken #left #right)
+	^ #(#catchToken)

@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#synchronizedToken #left #right)
+	^ #(#synchronizedToken)

@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#importToken #staticToken #semicolon)
+	^ #(#importToken #staticToken)

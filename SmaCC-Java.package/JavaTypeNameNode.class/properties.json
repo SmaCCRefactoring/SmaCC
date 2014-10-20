@@ -7,10 +7,10 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"_name",
-		"left",
 		"arguments",
 		"commas",
-		"right" ],
+		"typeArgLeft",
+		"typeArgRight" ],
 	"name" : "JavaTypeNameNode",
 	"pools" : [
 		 ],

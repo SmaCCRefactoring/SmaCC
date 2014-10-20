@@ -2,14 +2,15 @@
 	"class" : {
 		 },
 	"instance" : {
-		"_name" : "ThierryGoubier 3/18/2014 12:38:27",
-		"_name:" : "ThierryGoubier 3/18/2014 12:38:27",
-		"acceptVisitor:" : "ThierryGoubier 3/18/2014 12:38:27",
-		"importToken" : "ThierryGoubier 3/18/2014 12:38:27",
-		"importToken:" : "ThierryGoubier 3/18/2014 12:38:27",
-		"nodeVariables" : "ThierryGoubier 3/18/2014 12:38:27",
-		"semicolon" : "ThierryGoubier 3/18/2014 12:38:27",
-		"semicolon:" : "ThierryGoubier 3/18/2014 12:38:27",
-		"staticToken" : "ThierryGoubier 3/18/2014 12:38:27",
-		"staticToken:" : "ThierryGoubier 3/18/2014 12:38:27",
-		"tokenVariables" : "ThierryGoubier 3/18/2014 12:38:27" } }
+		"_name" : "ThierryGoubier 4/19/2014 10:28:23",
+		"_name:" : "ThierryGoubier 4/19/2014 10:28:23",
+		"acceptVisitor:" : "ThierryGoubier 4/19/2014 10:28:23",
+		"ignoredTokenVariables" : "ThierryGoubier 10/20/2014 09:12",
+		"importToken" : "ThierryGoubier 4/19/2014 10:28:23",
+		"importToken:" : "ThierryGoubier 4/19/2014 10:28:23",
+		"nodeVariables" : "ThierryGoubier 4/19/2014 10:28:23",
+		"semicolon" : "ThierryGoubier 4/19/2014 10:28:23",
+		"semicolon:" : "ThierryGoubier 4/19/2014 10:28:23",
+		"staticToken" : "ThierryGoubier 4/19/2014 10:28:23",
+		"staticToken:" : "ThierryGoubier 4/19/2014 10:28:23",
+		"tokenVariables" : "ThierryGoubier 10/20/2014 09:12" } }

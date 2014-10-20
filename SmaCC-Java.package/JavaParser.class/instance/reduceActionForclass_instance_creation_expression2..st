@@ -4,11 +4,11 @@ reduceActionForclass_instance_creation_expression2: nodes
 	result := JavaNewClassNode new.
 	result newToken: (nodes at: 1).
 	result type: (nodes at: 2).
-	result addToken: (nodes at: 3) to: result lefts.
+	result left: (nodes at: 3).
 	result addNodes: ((nodes at: 4) at: 1) to: result expressions.
 	result addTokens: ((nodes at: 4) at: 2) to: result commas.
-	result addToken: (nodes at: 5) to: result rights.
-	result addToken: ((nodes at: 6) at: 1) to: result lefts.
+	result right: (nodes at: 5).
+	result left: ((nodes at: 6) at: 1).
 	result addNodes: ((nodes at: 6) at: 2) to: result declarations.
-	result addToken: ((nodes at: 6) at: 3) to: result rights.
+	result right: ((nodes at: 6) at: 3).
 	^ result

@@ -13,7 +13,8 @@
 		"colon",
 		"expression",
 		"right",
-		"statement" ],
+		"statement",
+		"_name" ],
 	"name" : "JavaForEachStatementNode",
 	"pools" : [
 		 ],

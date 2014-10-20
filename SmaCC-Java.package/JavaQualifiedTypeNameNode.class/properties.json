@@ -9,10 +9,10 @@
 		"nspace",
 		"period",
 		"_name",
-		"left",
 		"arguments",
 		"commas",
-		"right" ],
+		"typeArgLeft",
+		"typeArgRight" ],
 	"name" : "JavaQualifiedTypeNameNode",
 	"pools" : [
 		 ],

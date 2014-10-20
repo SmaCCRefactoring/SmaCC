@@ -1,4 +1,5 @@
 generated-initialize-release
 initialize
 	super initialize.
-	emptyDims := OrderedCollection new: 2.
+	lefts := OrderedCollection new: 2.
+	rights := OrderedCollection new: 2.

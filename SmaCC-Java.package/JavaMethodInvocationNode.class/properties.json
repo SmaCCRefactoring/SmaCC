@@ -12,7 +12,10 @@
 		"receiver",
 		"period",
 		"superToken",
-		"superPeriod" ],
+		"superPeriod",
+		"typeArgLeft",
+		"arguments",
+		"typeArgRight" ],
 	"name" : "JavaMethodInvocationNode",
 	"pools" : [
 		 ],

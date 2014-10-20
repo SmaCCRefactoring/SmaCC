@@ -1,7 +1,7 @@
 generated
-constant: aJavaExpressionNode
+constant: aJavaLambdaExpressionNode
 	self constant notNil
 		ifTrue: [ self constant parent: nil ].
-	constant := aJavaExpressionNode.
+	constant := aJavaLambdaExpressionNode.
 	self constant notNil
 		ifTrue: [ self constant parent: self ]

@@ -1,0 +1,3 @@
+generated
+ignoredTokenVariables
+	^ #(#left #right)

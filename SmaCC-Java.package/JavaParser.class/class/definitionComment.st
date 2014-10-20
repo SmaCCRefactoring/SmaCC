@@ -1,8 +1,12 @@
 generated
 definitionComment
-"%start goal block_statement expression ;
+"%start goal block_statement expression type_declaration;
 %glr;
 %right ""else"";
+
+%id <UNSIGNED_RIGHT_SHIFT> <SIGNED_RIGHT_SHIFT> <GREATER_THAN>;
+
+%ignore_variables semicolon comma left right;
 
 %prefix Java ;
 %suffix Node ;
@@ -20,13 +24,23 @@ definitionComment
 %hierarchy Expression (PostIncrementExpression PostDecrementExpression UnaryAddition UnarySubtraction
 					PreIncrementExpression PreDecrementExpression UnaryBitInvert UnaryNot
 					CastExpression BinaryExpression ConditionalExpression Assignment 
-					This ClassProperty FieldAccess MethodInvocation ArrayAccess
-					New Literal AssignmentExpression Name NewArray);
-%hierarchy Name (QualifiedName) ;
+					ClassProperty FieldAccess MethodInvocation ArrayAccess
+					New Literal Name NewArray LambdaExpression);
+					%hierarchy Name (QualifiedName) ;
 %hierarchy SingleTypeImportDeclaration (TypeImportOnDemandDeclaration);
 %hierarchy VariableDeclaration (InitializedVariableDeclaration) ;
-
-
+%hierarchy Parameter (VariableArgumentParameter);
+%hierarchy AbstractMethodDeclaration (AnnotationMethodDeclaration);
+ 
+<GREATER_THAN>
+	: >
+	;
+<SIGNED_RIGHT_SHIFT>
+	: >>
+	;
+<UNSIGNED_RIGHT_SHIFT>
+	: >>>
+	;
 <DECIMAL_INTEGER>
 	: 0 | [1-9] [0-9]*	
 	;
@@ -53,6 +67,7 @@ definitionComment
 	| \. [0-9]+ <EXPONENT>? <FLOAT_TYPE>? 
 	| [0-9]+ <EXPONENT> <FLOAT_TYPE>? 
 	| [0-9]+ <FLOAT_TYPE>	
+	| <HEX_INTEGER> \. [0-9a-fA-F]+ [pP] [\-\+]? [0-9]+ <FLOAT_TYPE>?
 	;
 <BOOLEAN_LITERAL>
 	: true 
@@ -193,6 +208,7 @@ type_import_on_demand_declaration
 type_declaration 
 	: class_declaration 
 	| interface_declaration 
+	| annotation_interface_declaration
 	| "";"" 'semicolon' {{EmptyDeclaration}}
 	;
 # 19.7) Productions used only in the LALR(1) grammar
@@ -264,9 +280,7 @@ class_body_declaration
 class_member_declaration 
 	: field_declaration 
 	| method_declaration 
-	| class_declaration
-	| interface_declaration 
-	| "";"" 'semicolon' {{EmptyDeclaration}}
+	| type_declaration
 	;
 # 19.8.2) Field Declarations
 field_declaration 
@@ -293,8 +307,8 @@ method_declaration
 	: method_header method_body 'body' {{MethodDeclaration}}
 	;
 method_header 
-	: modifiers_opt type 'type' method_declarator 'declarator' throws_opt 'throws'
-	| modifiers_opt void 'type' method_declarator 'declarator' throws_opt 'throws'
+	: modifiers_opt type_parameters_opt 'typeParameters' type 'type' method_declarator 'declarator' throws_opt 'throws'
+	| modifiers_opt type_parameters_opt 'typeParameters' void 'type' method_declarator 'declarator' throws_opt 'throws'
 	;
 ####
 void 
@@ -316,6 +330,7 @@ formal_parameter_list
 	;
 formal_parameter 
 	: variable_modifiers type 'type' variable_declarator_id 'variable' {{Parameter}}
+	| variable_modifiers type 'type' ""..."" 'varArgsToken' variable_declarator_id 'variable' {{VariableArgumentParameter}}
 	;
 throws_opt 
 	: 
@@ -363,6 +378,27 @@ interface_declaration
 	: modifiers_opt ""interface"" 'interfaceToken' <IDENTIFIER> 'name' type_parameters_opt 'typeParameters' extends_interfaces_opt 
 			interface_body {{Interface}}
 	;
+annotation_interface_declaration
+	: modifiers_opt ""@"" 'atToken' ""interface"" 'interfaceToken' <IDENTIFIER> 'name' annotation_interface_body {{AnnotationInterface}}
+	;
+annotation_interface_body
+	: ""{"" 'left' annotation_interface_member_declarations_opt ""}"" 'right'
+	;
+annotation_interface_member_declarations_opt
+	: 
+	| annotation_interface_member_declarations
+	;
+annotation_interface_member_declarations
+	: annotation_interface_member_declaration 'declaration'
+	| annotation_interface_member_declarations annotation_interface_member_declaration 'declaration'
+	;
+annotation_interface_member_declaration
+	: annotation_method_declaration
+	;
+annotation_method_declaration
+	: abstract_method_declaration
+	| method_header ""default"" 'defaultToken' expression 'value' "";"" 'semicolon' {{AnnotationMethodDeclaration}}
+	;
 extends_interfaces_opt 
 	: 
 	| extends_interfaces 
@@ -385,9 +421,8 @@ interface_member_declarations
 interface_member_declaration 
 	: constant_declaration 
 	| abstract_method_declaration 
-	| class_declaration 
-	| interface_declaration 
-	;
+	| type_declaration
+ 	;
 constant_declaration 
 	: field_declaration 
 	# need to semantically check that modifiers of field declaration
@@ -565,7 +600,7 @@ catches
 	| catches catch_clause 'catch'
 	;
 catch_clause 
-	: ""catch"" 'catchToken' ""("" 'left' formal_parameter "")"" 'right' block 'block' {{CatchClause}}
+	: ""catch"" 'catchToken' ""("" 'left' formal_parameter 'parameter' "")"" 'right' block 'block' {{CatchClause}}
 	;
 finally 
 	: ""finally"" 'finallyToken' block 'block' {{FinallyClause}}
@@ -581,7 +616,7 @@ primary
 	;
 primary_no_new_array 
 	: literal 
-	| ""this"" 'thisToken' {{This}}
+	| ""this"" 'name' {{Name}}
 	| ""("" 'left' expression "")"" 'right' {{Expression}}
 	| class_instance_creation_expression 
 	| field_access 
@@ -592,6 +627,32 @@ primary_no_new_array
 	| array_type 'type' ""."" 'period' ""class"" 'classToken' {{ClassProperty}}
 	| name 'name' ""."" 'period' ""class"" 'classToken' {{ClassProperty}} ###???
 	| name 'name' ""."" 'period' ""this"" 'thisToken' {{ClassProperty}} ###???
+	;
+lambda_expression
+	: lambda_parameters ""->"" 'arrowToken' lambda_function {{LambdaExpression}}
+	;
+lambda_parameters
+	: ""("" 'leftParen' lambda_parameter_list_opt "")"" 'rightParen' 
+	| untyped_lambda_parameter 'parameter'
+	;
+lambda_parameter_list_opt
+	:
+	| lambda_parameter_list
+	;
+lambda_parameter_list
+	: lambda_parameter 'parameter'
+	| lambda_parameter_list "","" 'comma' lambda_parameter 'parameter'
+	;
+lambda_parameter
+	: formal_parameter
+	| untyped_lambda_parameter
+	;
+untyped_lambda_parameter
+	: variable_declarator_id 'variable' {{Parameter}}
+	;
+lambda_function
+	: block 'value'
+	| expression 'value'
 	;
 class_instance_creation_expression 
 	: ""new"" 'newToken' class_type 'type' ""("" 'left' argument_list_opt "")"" 'right' {{New}}
@@ -627,28 +688,24 @@ dims_opt
 	| dims 
 	;
 dims 
-	: empty_dim_expr 'emptyDim'
-	| dims empty_dim_expr 'emptyDim'
+ 	: empty_dim_expr
+	| dims empty_dim_expr
 	;
 empty_dim_expr
-	: ""["" 'left' ""]"" 'right' {{EmptyDimensionList}}
-	;
+	: ""["" 'left' ""]"" 'right'
+ 	;
 field_access 
 	: primary 'receiver' ""."" 'period' <IDENTIFIER> 'name' {{FieldAccess}}
 	| ""super"" 'superToken' ""."" 'period' <IDENTIFIER> 'name' {{FieldAccess}}
 	| name 'receiver' ""."" 'superPeriod' ""super"" 'superToken' ""."" 'period' <IDENTIFIER> 'name' {{FieldAccess}}###???
 	;
 method_invocation 
-	: name 'name' ""("" 'left' argument_list_opt "")"" 'right' {{MethodInvocation}}
-	| primary 'receiver' ""."" 'period' identifierName 'name' ""("" 'left' argument_list_opt "")"" 'right' {{MethodInvocation}}
-	| ""super"" 'superToken' ""."" 'period' identifierName 'name' ""("" 'left' argument_list_opt "")"" 'right' {{MethodInvocation}}
-	| name 'receiver' ""."" 'superPeriod' ""super"" 'superToken' ""."" 'period' identifierName 'name' ""("" 'left' argument_list_opt "")"" 'right' {{MethodInvocation}}
-	;
-####
-identifierName 
-	: <IDENTIFIER> 'name' {{IdentifierName}}
-	;
-####
+	: type_arguments_opt <IDENTIFIER> 'name' ""("" 'left' argument_list_opt "")"" 'right' {{MethodInvocation}}
+	| primary 'receiver' ""."" 'period' type_arguments_opt <IDENTIFIER> 'name' ""("" 'left' argument_list_opt "")"" 'right' {{MethodInvocation}}
+	| name 'receiver' ""."" 'period' type_arguments_opt <IDENTIFIER> 'name' ""("" 'left' argument_list_opt "")"" 'right' {{MethodInvocation}}
+	| ""super"" 'superToken' ""."" 'period' type_arguments_opt <IDENTIFIER> 'name' ""("" 'left' argument_list_opt "")"" 'right' {{MethodInvocation}}
+	| name 'receiver' ""."" 'superPeriod' ""super"" 'superToken' ""."" 'period' type_arguments_opt <IDENTIFIER> 'name' ""("" 'left' argument_list_opt "")"" 'right' {{MethodInvocation}}
+ 	;
 array_access 
 	: name 'array' ""["" 'left' expression 'expression' ""]"" 'right' {{ArrayAccess}}
 	| primary_no_new_array 'array' ""["" 'left' expression 'expression' ""]"" 'right' {{ArrayAccess}}
@@ -670,7 +727,8 @@ unary_expression
 	| predecrement_expression 
 	| ""+"" 'plus' unary_expression 'expression' {{UnaryAddition}}
 	| ""-"" 'minus' unary_expression 'expression' {{UnarySubtraction}}
-	| unary_expression_not_plus_minus 
+	| unary_expression_not_plus_minus
+	| assignment # HACK for VAGEN
 	;
 preincrement_expression 
 	: ""++"" 'plusPlus' unary_expression 'expression' {{PreIncrementExpression}}
@@ -685,9 +743,7 @@ unary_expression_not_plus_minus
 	| cast_expression 
 	;
 cast_expression 
-	: ""("" 'left' primitive_type 'type' dims_opt "")"" 'right' unary_expression 'expression' {{CastExpression}}
-	| ""("" 'left' expression 'type' "")"" 'right' unary_expression_not_plus_minus 'expression' {{CastExpression}}
-	| ""("" 'left' name 'type' dims "")"" 'right' unary_expression_not_plus_minus 'expression' {{CastExpression}}
+	: ""("" 'left' type 'type' "")"" 'right' unary_expression_not_plus_minus 'expression' {{CastExpression}}
 	;
 multiplicative_expression 
 	: unary_expression 
@@ -703,13 +759,13 @@ additive_expression
 shift_expression 
 	: additive_expression 
 	| shift_expression 'leftExpression' ""<<"" 'op' additive_expression 'rightExpression' {{BinaryExpression}}
-	| shift_expression 'leftExpression' "">>"" 'op' additive_expression 'rightExpression' {{BinaryExpression}}
-	| shift_expression 'leftExpression' "">>>"" 'op' additive_expression 'rightExpression' {{BinaryExpression}}
+	| shift_expression 'leftExpression' <SIGNED_RIGHT_SHIFT> 'op' additive_expression 'rightExpression' {{BinaryExpression}}
+	| shift_expression 'leftExpression' <UNSIGNED_RIGHT_SHIFT> 'op' additive_expression 'rightExpression' {{BinaryExpression}}
 	;
 relational_expression 
 	: shift_expression 
 	| relational_expression 'leftExpression' ""<"" 'op' shift_expression 'rightExpression' {{BinaryExpression}}
-	| relational_expression 'leftExpression' "">"" 'op' shift_expression 'rightExpression' {{BinaryExpression}}
+	| relational_expression 'leftExpression' <GREATER_THAN> 'op' shift_expression 'rightExpression' {{BinaryExpression}}
 	| relational_expression 'leftExpression' ""<="" 'op' shift_expression 'rightExpression' {{BinaryExpression}}
 	| relational_expression 'leftExpression' "">="" 'op' shift_expression 'rightExpression' {{BinaryExpression}}
 	| relational_expression 'leftExpression' ""instanceof"" 'op' reference_type 'rightExpression' {{BinaryExpression}}
@@ -746,7 +802,7 @@ conditional_expression
 	;
 assignment_expression 
 	: conditional_expression 
-	| assignment {{AssignmentExpression}}
+	| assignment
 	;
 assignment 
 	: left_hand_side 'variable' assignment_operator 'op' assignment_expression 'value' {{Assignment}}
@@ -775,7 +831,7 @@ expression_opt
 	| expression 
 	;
 expression 
-	: assignment_expression 
+	: lambda_expression 
 	;
 constant_expression 
 	: expression 
@@ -862,7 +918,7 @@ enum_body_declarations
 	;
 type_parameters_opt
 	:
-	| ""<"" 'left' type_parameters "">"" 'right' {{TypeParameters}}
+	| ""<"" 'left' type_parameters <GREATER_THAN> 'right' {{TypeParameters}}
 	;
 type_parameters
 	: type_parameter 'parameter'
@@ -881,8 +937,8 @@ type_bound
 	;
 type_arguments_opt
 	:
-	| ""<"" 'left' type_arguments "">"" 'right'
-	;
+ 	| ""<"" 'typeArgLeft' type_arguments <GREATER_THAN> 'typeArgRight'
+ 	;
 type_arguments
 	: type_argument 'argument'
 	| type_arguments "","" 'comma' type_argument 'argument'
@@ -894,6 +950,7 @@ type_argument
 type_argument_type
 	: ""extends"" 'token' type 'type'
 	| ""super"" 'token' type 'type'
+	|
 	;
 type_name
 	: simple_type_name 
@@ -906,8 +963,8 @@ qualified_type_name
 	: type_name 'nspace' ""."" 'period' <IDENTIFIER> 'name' type_arguments_opt {{QualifiedTypeName}}
 	;
 foreach_statement 
-	: ""for"" 'forToken' ""("" 'left' variable_modifiers type 'type' <IDENTIFIER> "":"" 'colon' expression 'expression' "")"" 'right' statement 'statement' {{ForEachStatement}}
-	;
+	: ""for"" 'forToken' ""("" 'left' variable_modifiers type 'type' <IDENTIFIER> 'name' "":"" 'colon' expression 'expression' "")"" 'right' statement 'statement' {{ForEachStatement}}
+ 	;
 variable_modifiers
 	: 
 	| variable_modifiers variable_modifier 'modifier'

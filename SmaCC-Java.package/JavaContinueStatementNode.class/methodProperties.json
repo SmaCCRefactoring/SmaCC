@@ -2,11 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptVisitor:" : "ThierryGoubier 3/18/2014 12:38:27",
-		"continueToken" : "ThierryGoubier 3/18/2014 12:38:27",
-		"continueToken:" : "ThierryGoubier 3/18/2014 12:38:27",
-		"identifier" : "ThierryGoubier 3/18/2014 12:38:27",
-		"identifier:" : "ThierryGoubier 3/18/2014 12:38:27",
-		"semicolon" : "ThierryGoubier 3/18/2014 12:38:27",
-		"semicolon:" : "ThierryGoubier 3/18/2014 12:38:27",
-		"tokenVariables" : "ThierryGoubier 3/18/2014 12:38:27" } }
+		"acceptVisitor:" : "ThierryGoubier 4/19/2014 10:28:23",
+		"continueToken" : "ThierryGoubier 4/19/2014 10:28:23",
+		"continueToken:" : "ThierryGoubier 4/19/2014 10:28:23",
+		"identifier" : "ThierryGoubier 4/19/2014 10:28:23",
+		"identifier:" : "ThierryGoubier 4/19/2014 10:28:23",
+		"ignoredTokenVariables" : "ThierryGoubier 10/20/2014 09:12",
+		"semicolon" : "ThierryGoubier 4/19/2014 10:28:23",
+		"semicolon:" : "ThierryGoubier 4/19/2014 10:28:23",
+		"tokenVariables" : "ThierryGoubier 10/20/2014 09:12" } }
