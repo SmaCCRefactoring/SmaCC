@@ -1,4 +1,5 @@
 accessing
 parserClass: aSmaCCParserClass
 	parserClass := aSmaCCParserClass.
-	self modified
+	self modified.
+	self trigger: #parserClass

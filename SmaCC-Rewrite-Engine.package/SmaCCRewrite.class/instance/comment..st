@@ -1,3 +1,4 @@
 accessing
 comment: aString
-	comment := aString
+	comment := aString.
+	self trigger: #comment

@@ -1,3 +1,3 @@
 generated
 visitNodeReplace: aNodeReplace
-	^self visitReplace: aNodeReplace
+	^ self visitReplace: aNodeReplace

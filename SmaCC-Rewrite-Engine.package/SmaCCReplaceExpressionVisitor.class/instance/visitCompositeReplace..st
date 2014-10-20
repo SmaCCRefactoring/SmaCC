@@ -1,3 +1,3 @@
 generated
 visitCompositeReplace: aCompositeReplace
-	^self visitReplace: aCompositeReplace
+	^ self visitReplace: aCompositeReplace

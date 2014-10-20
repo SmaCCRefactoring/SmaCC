@@ -9,10 +9,10 @@
 		"beforeWhitespace",
 		"beforePrefix",
 		"prefix",
-		"name",
 		"postfix",
 		"afterPostfix",
-		"afterWhitespace" ],
+		"afterWhitespace",
+		"_name" ],
 	"name" : "SmaCCNodeReplaceExpression",
 	"pools" : [
 		 ],

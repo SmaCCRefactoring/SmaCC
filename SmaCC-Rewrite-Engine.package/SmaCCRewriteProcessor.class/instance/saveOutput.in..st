@@ -1,9 +1,8 @@
 accessing
 saveOutput: aString in: aFilename
-	| directory fullFilename |
-	(self outputDirectory isNil or: [ self outputDirectory isEmpty ])
+	| directory |
+	(aFilename isNil or: [ aFilename isEmpty ])
 		ifTrue: [ ^ self ].
-	fullFilename := self outputDirectory / aFilename.
-	directory := fullFilename parent.
+	directory := aFilename parent.
 	directory ensureDirectory.
-	fullFilename writeStreamDo: [ :stream | stream nextPutAll: aString ]
+	aFilename writeStreamDo: [ :stream | stream nextPutAll: aString ]

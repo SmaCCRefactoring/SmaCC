@@ -1,3 +1,3 @@
 generated
 afterWhitespace
-	^afterWhitespace
+	^ afterWhitespace

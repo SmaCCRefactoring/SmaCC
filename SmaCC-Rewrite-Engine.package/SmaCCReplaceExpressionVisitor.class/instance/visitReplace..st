@@ -1,3 +1,3 @@
 generated
 visitReplace: aReplace
-	^self visitSmaCCParseNode: aReplace
+	^ self visitSmaCCParseNode: aReplace

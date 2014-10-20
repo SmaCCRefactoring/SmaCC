@@ -1,3 +1,3 @@
 generated
 beforeWhitespace
-	^beforeWhitespace
+	^ beforeWhitespace

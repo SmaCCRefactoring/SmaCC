@@ -1,6 +1,8 @@
 accessing
 processFile: aFileReference usingResult: aSmaCCRewriteResult
-	| input output tree stream subdirectory |
+	| input output tree stream subdirectory fullFilename |
+	(Smalltalk includesKey: #Smalltalk)
+		ifFalse: [ Smalltalk at: #Smalltalk put: Smalltalk ].	"Add Smalltalk back if it got stripped"
 	aSmaCCRewriteResult filename: aFileReference.
 	[ 
 	input := self sourceFor: aFileReference.
@@ -22,7 +24,21 @@ processFile: aFileReference usingResult: aSmaCCRewriteResult
 	tree
 		completeSource: input;
 		filename: aFileReference.
-	self engine source: (aSmaCCRewriteResult smaccStringClass on: input).
+	subdirectory := self baseDirectory isEmpty
+		ifTrue: [ '' ]
+		ifFalse: [ aFileReference parent pathString copyFrom: self baseDirectory size + 1 ].
+	fullFilename := (self outputDirectory isNil or: [ self outputDirectory isEmpty ])
+		ifTrue: [ '' ]
+		ifFalse: [ self outputDirectory asFileReference / subdirectory ].
+	self engine
+		source: (aSmaCCRewriteResult smaccStringClass on: input);
+		outputDirectory: fullFilename;
+		outputFilename:
+				aFileReference basenameWithoutExtension
+						,
+							(self validationParserClass isNil
+								ifTrue: [ '' ]
+								ifFalse: [ self validationParserClass fileExtension ]).
 	output := [ self engine rewriteTree: tree ]
 		on: Error
 		do: [ :ex | 
@@ -39,21 +55,14 @@ processFile: aFileReference usingResult: aSmaCCRewriteResult
 						interval: (node startPosition to: node stopPosition);
 						transformation: frame receiver ].
 			ex pass ].
+	self engine finished.
 	aSmaCCRewriteResult
 		outputSource: output;
 		transformedString: self engine source.
-	subdirectory := self baseDirectory isNil
-		ifTrue: [ '' ]
-		ifFalse: [ aFileReference parent ].
-	self
-		saveOutput: output
-		in:
-			subdirectory / aFileReference basename
-				,
-					(self validationParserClass isNil
-						ifTrue: [ '' ]
-						ifFalse: [ self validationParserClass fileExtension ]).
-	self engine additionalFiles keysAndValuesDo: [ :file :text | self saveOutput: text in: subdirectory / file ].
+	(self outputDirectory isNil or: [ self outputDirectory isEmpty ])
+		ifFalse: [ 
+			self saveOutput: output in: self engine outputDirectory / self engine outputFilename.
+			self engine additionalFiles keysAndValuesDo: [ :file :text | self saveOutput: text in: file ] ].
 	aSmaCCRewriteResult class == SmaCCRewriteResult
 		ifFalse: [ self validate: output forResult: aSmaCCRewriteResult ] ]
 		on: Error
@@ -65,12 +74,9 @@ processFile: aFileReference usingResult: aSmaCCRewriteResult
 						ifFalse: [ #warning ]).
 			aSmaCCRewriteResult errorString: ex description.
 			(self debug and: [ Processor activeProcess respondsTo: #debug ])
-				ifTrue: [ Processor activeProcess debug ].
-	"TODO: recreate that."
-	"		SessionManager current cmdLineFlags
+				ifTrue: [ Processor activeProcess debug ].	"TODO: recreate that."	"		SessionManager current cmdLineFlags
 				do: [ :each | 
 					(each sameAs: 'error')
 						ifTrue: [ ex pass ] ]."
-			ex return ].
-"	MemoryManager current compact."
+			ex return ].	"	MemoryManager current compact."
 	^ aSmaCCRewriteResult

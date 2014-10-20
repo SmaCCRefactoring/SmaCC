@@ -4,8 +4,8 @@ definitionComment
 %id <codeExpression>;
 
 expression <name>
-	: (<isLetter>) (<isLetter> | <isDigit>) *
-	;
+	: (<isLetter> | _) (<isLetter> | _ | <isDigit>) *
+ 	;
 expression <newline>
 	: \\
 	;

@@ -3,7 +3,8 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"Continue" ],
+		"Continue",
+		"SilentProperties" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"rewriteEngine",

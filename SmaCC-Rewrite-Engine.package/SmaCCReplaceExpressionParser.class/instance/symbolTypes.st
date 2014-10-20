@@ -1,3 +1,3 @@
 generated
 symbolTypes
-	^#(#SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #Object #SmaCCStringReplaceExpression #SmaCCCompositeReplaceExpression #SmaCCCompositeReplaceExpression #SmaCCNodeReplaceExpression #OrderedCollection #OrderedCollection #Object #SmaCCToken #SmaCCCodeReplaceExpression #SmaCCToken #Object #SmaCCReplaceExpression #SmaCCToken #OrderedCollection #SmaCCToken #SmaCCToken #SmaCCToken)
+	^ #(#SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCCodeReplaceExpression #SmaCCNodeReplaceExpression #SmaCCStringReplaceExpression #SmaCCReplaceExpression #SmaCCCompositeReplaceExpression #SmaCCToken #OrderedCollection #Object #Object #Object #SmaCCToken #SmaCCToken #SmaCCCompositeReplaceExpression #SmaCCToken #OrderedCollection #OrderedCollection #SmaCCToken #SmaCCToken)

@@ -1,0 +1,3 @@
+accessing
+outputFilename
+	^ rewriteEngine outputFilename

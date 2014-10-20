@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^#(#beforeWhitespace #beforePrefix #prefix #name #postfix #afterPostfix #afterWhitespace)
+	^ #(#beforeWhitespace #beforePrefix #prefix #_name #postfix #afterPostfix #afterWhitespace)

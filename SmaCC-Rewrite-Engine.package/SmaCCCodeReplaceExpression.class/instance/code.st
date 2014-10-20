@@ -1,3 +1,3 @@
 generated
 code
-	^code
+	^ code

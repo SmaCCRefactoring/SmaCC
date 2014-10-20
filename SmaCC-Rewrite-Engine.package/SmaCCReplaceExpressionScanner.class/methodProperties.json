@@ -2,10 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
-		"codeExpressionId" : "",
-		"emptySymbolTokenId" : "",
-		"errorTokenId" : "",
-		"isValidCode" : "ThierryGoubier 1/27/2014 11:29",
-		"next" : "",
-		"scanCode" : "",
-		"scanForToken" : "" } }
+		"codeExpressionId" : "ThierryGoubier 10/20/2014 15:00",
+		"emptySymbolTokenId" : "ThierryGoubier 10/20/2014 15:00",
+		"errorTokenId" : "ThierryGoubier 10/20/2014 15:00",
+		"isValidCode" : "ThierryGoubier 1/27/2014 15:07:16",
+		"next" : "ThierryGoubier 1/27/2014 15:07:16",
+		"scanCode" : "ThierryGoubier 1/27/2014 15:07:16",
+		"scanForToken" : "ThierryGoubier 10/20/2014 15:01" } }

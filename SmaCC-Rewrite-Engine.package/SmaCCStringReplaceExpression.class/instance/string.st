@@ -1,3 +1,3 @@
 generated
 string
-	^string
+	^ string

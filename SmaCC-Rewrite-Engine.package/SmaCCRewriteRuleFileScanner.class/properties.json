@@ -1,7 +1,7 @@
 {
 	"category" : "SmaCC-Rewrite-Engine",
 	"classinstvars" : [
-		 ],
+		"rewriter" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",

@@ -1,3 +1,3 @@
 generated
 afterPostfix
-	^afterPostfix
+	^ afterPostfix

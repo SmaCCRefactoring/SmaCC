@@ -11,7 +11,10 @@
 		"newStarts",
 		"newStops",
 		"properties",
-		"processedNodes" ],
+		"methods",
+		"processedNodes",
+		"outputDirectory",
+		"outputFilename" ],
 	"name" : "SmaCCRewriteEngine",
 	"pools" : [
 		 ],

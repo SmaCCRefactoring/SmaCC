@@ -1,3 +1,3 @@
 generated
 acceptVisitor: aReplaceVisitor
-	^aReplaceVisitor visitNodeReplace: self
+	^ aReplaceVisitor visitNodeReplace: self

@@ -1,3 +1,3 @@
 generated
 prefix
-	^prefix
+	^ prefix

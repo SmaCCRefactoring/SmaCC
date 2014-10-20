@@ -1,3 +1,3 @@
 generated
 visitStringReplace: aStringReplace
-	^self visitReplace: aStringReplace
+	^ self visitReplace: aStringReplace

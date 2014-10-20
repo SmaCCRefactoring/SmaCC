@@ -1,3 +1,4 @@
 class
 initialize
-	Continue := Object new
+	Continue := Object new.
+	SilentProperties := false
