@@ -1,3 +1,3 @@
 generated
 acceptVisitor: anExpressionVisitor
-	^anExpressionVisitor visitBinaryExpression: self
+	^ anExpressionVisitor visitBinaryExpression: self

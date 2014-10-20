@@ -1,5 +1,7 @@
 generated
 left: aSmaCCRewriteTestExpressionNode
-	self left notNil ifTrue: [self left parent: nil].
+	self left notNil
+		ifTrue: [ self left parent: nil ].
 	left := aSmaCCRewriteTestExpressionNode.
-	self left notNil ifTrue: [self left parent: self]
+	self left notNil
+		ifTrue: [ self left parent: self ]

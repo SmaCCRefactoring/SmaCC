@@ -1,3 +1,3 @@
 generated
 number
-	^number
+	^ number

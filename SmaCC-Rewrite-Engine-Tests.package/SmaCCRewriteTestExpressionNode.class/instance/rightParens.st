@@ -1,3 +1,3 @@
 generated
 rightParens
-	^rightParens
+	^ rightParens

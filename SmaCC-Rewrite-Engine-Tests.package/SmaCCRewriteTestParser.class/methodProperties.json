@@ -1,12 +1,12 @@
 {
 	"class" : {
-		"definitionComment" : "",
-		"scannerClass" : "",
-		"startingStateForExpression" : "" },
+		"definitionComment" : "ThierryGoubier 1/27/2014 13:03:51",
+		"scannerClass" : "ThierryGoubier 1/27/2014 13:03:51",
+		"startingStateForExpression" : "ThierryGoubier 10/20/2014 13:32" },
 	"instance" : {
-		"reduceActionForExpression1:" : "",
-		"reduceActionForExpression2:" : "",
-		"reduceActionForExpression7:" : "",
-		"reduceTable" : "",
-		"symbolTypes" : "",
-		"transitionTable" : "" } }
+		"reduceActionForExpression1:" : "ThierryGoubier 10/20/2014 13:32",
+		"reduceActionForExpression3:" : "ThierryGoubier 10/20/2014 13:32",
+		"reduceActionForExpression7:" : "ThierryGoubier 10/20/2014 13:32",
+		"reduceTable" : "ThierryGoubier 10/20/2014 13:32",
+		"symbolTypes" : "ThierryGoubier 10/20/2014 13:32",
+		"transitionTable" : "ThierryGoubier 10/20/2014 13:32" } }

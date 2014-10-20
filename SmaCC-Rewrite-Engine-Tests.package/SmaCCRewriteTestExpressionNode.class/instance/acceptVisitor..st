@@ -1,3 +1,3 @@
 generated
 acceptVisitor: anExpressionVisitor
-	^anExpressionVisitor visitExpression: self
+	^ anExpressionVisitor visitExpression: self

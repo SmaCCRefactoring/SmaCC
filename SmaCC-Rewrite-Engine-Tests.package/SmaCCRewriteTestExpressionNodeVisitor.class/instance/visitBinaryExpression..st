@@ -1,3 +1,3 @@
 generated
 visitBinaryExpression: aBinaryExpression
-	^self visitExpression: aBinaryExpression
+	^ self visitExpression: aBinaryExpression

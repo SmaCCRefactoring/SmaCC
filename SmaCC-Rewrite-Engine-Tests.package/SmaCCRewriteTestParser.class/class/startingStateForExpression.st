@@ -1,3 +1,3 @@
 generated
 startingStateForExpression
-	^1
+	^ 1
