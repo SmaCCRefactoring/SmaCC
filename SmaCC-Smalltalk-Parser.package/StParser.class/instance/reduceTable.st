@@ -1,10 +1,10 @@
 generated
 reduceTable
 ^#(
-	#(37 0 #errorTable) 
+	#(37 0 #reduceActionForTemporaries1:) 
 	#(46 0 #reduceActionForPrimitives1:) 
 	#(35 0 #reduceActionForPrimitives1:) 
-	#(37 1 #errorTable) 
+	#(37 1 #reduceActionForTemporaries1:) 
 	#(36 0 #reduceActionForPrimitives1:) 
 	#(56 2 #reduceActionForMethod1:) 
 	#(57 1 #reduceActionForVariable1:) 
@@ -13,7 +13,7 @@ reduceTable
 	#(56 2 #reduceActionForMethod3:) 
 	#(56 2 #reduceActionForMethod2:) 
 	#(68 1 #reduceActionForLiteral1:) 
-	#(68 1 #tryAllTokens) 
+	#(68 1 #reduceActionForLiteral2:) 
 	#(68 1 #nil) 
 	#(68 1 #reduceActionForLiteral4:) 
 	#(68 1 #reduceActionForLiteral7:) 
