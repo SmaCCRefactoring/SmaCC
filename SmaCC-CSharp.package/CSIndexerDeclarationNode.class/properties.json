@@ -18,7 +18,8 @@
 		"leftBraceToken",
 		"getAccessor",
 		"setAccessor",
-		"rightBraceToken" ],
+		"rightBraceToken",
+		"type" ],
 	"name" : "CSIndexerDeclarationNode",
 	"pools" : [
 		 ],

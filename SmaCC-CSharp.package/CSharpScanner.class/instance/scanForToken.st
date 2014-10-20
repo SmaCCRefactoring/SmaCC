@@ -36,57 +36,7 @@ scanForToken
 				ifTrue: [ ^ self recordAndReportMatch: #(116) ].
 			^ self reportLastMatch ].
 	currentCharacter = $'
-		ifTrue: [ 
-			self step.
-			currentCharacter = $\
-				ifTrue: [ 
-					self step.
-					currentCharacter = $x
-						ifTrue: [ 
-							self step.
-							currentCharacter isHexDigit
-								ifTrue: [ 
-									3
-										timesRepeat: [ 
-											self step.
-											currentCharacter = $'
-												ifTrue: [ ^ self recordAndReportMatch: #(157) ].
-											currentCharacter isHexDigit
-												ifFalse: [ ^ self reportLastMatch ] ].
-									^ self scan3 ].
-							^ self reportLastMatch ].
-					('Uu' includes: currentCharacter)
-						ifTrue: [ 
-							self step.
-							currentCharacter isHexDigit
-								ifTrue: [ 
-									3
-										timesRepeat: [ 
-											self step.
-											currentCharacter isHexDigit
-												ifFalse: [ ^ self reportLastMatch ] ].
-									self step.
-									currentCharacter = $'
-										ifTrue: [ ^ self recordAndReportMatch: #(157) ].
-									currentCharacter isHexDigit
-										ifTrue: [ 
-											3
-												timesRepeat: [ 
-													self step.
-													currentCharacter isHexDigit
-														ifFalse: [ ^ self reportLastMatch ] ].
-											^ self scan3 ] ].
-							^ self reportLastMatch ].
-					(('"''0\' includes: currentCharacter)
-						or: [ (currentCharacter between: $a and: $b) or: [ 'fnrtv' includes: currentCharacter ] ])
-						ifTrue: [ ^ self scan3 ].
-					^ self reportLastMatch ].
-			(currentCharacter <= Character tab
-				or: [ 
-					(currentCharacter between: Character pageUp and: $&)
-						or: [ (currentCharacter between: $( and: $[) or: [ currentCharacter >= $] ] ] ])
-				ifTrue: [ ^ self scan3 ].
-			^ self reportLastMatch ].
+		ifTrue: [ ^ self scanSplit1 ].
 	currentCharacter = $(
 		ifTrue: [ ^ self recordAndReportMatch: #(65) ].
 	currentCharacter = $)
@@ -146,36 +96,7 @@ scanForToken
 				ifTrue: [ ^ self recordAndReportMatch: #(123) ].
 			^ self reportLastMatch ].
 	currentCharacter = $0
-		ifTrue: [ 
-			self recordMatch: #(155 156).
-			self step.
-			currentCharacter = $.
-				ifTrue: [ ^ self scan8 ].
-			currentCharacter isDigit
-				ifTrue: [ ^ self scan9 ].
-			('Ee' includes: currentCharacter)
-				ifTrue: [ ^ self scan5 ].
-			('Ll' includes: currentCharacter)
-				ifTrue: [ ^ self scan10 ].
-			('Uu' includes: currentCharacter)
-				ifTrue: [ ^ self scan11 ].
-			('Xx' includes: currentCharacter)
-				ifTrue: [ 
-					self step.
-					currentCharacter isHexDigit
-						ifTrue: [ 
-							[ 
-							self recordMatch: #(155).
-							self step.
-							('Ll' includes: currentCharacter)
-								ifTrue: [ ^ self scan10 ].
-							('Uu' includes: currentCharacter)
-								ifTrue: [ ^ self scan11 ].
-							currentCharacter isHexDigit ] whileTrue ].
-					^ self reportLastMatch ].
-			('DFMdfm' includes: currentCharacter)
-				ifTrue: [ ^ self recordAndReportMatch: #(156) ].
-			^ self reportLastMatch ].
+		ifTrue: [ ^ self scanSplit2 ].
 	currentCharacter = $:
 		ifTrue: [ 
 			self recordMatch: #(34).

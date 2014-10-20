@@ -12,12 +12,7 @@
 		"arguments",
 		"commaTokens",
 		"rightParenToken",
-		"leftBraceToken",
-		"identifiers",
-		"equalTokens",
-		"values",
-		"rightBraceToken",
-		"initializers" ],
+		"initializer" ],
 	"name" : "CSObjectCreationExpressionNode",
 	"pools" : [
 		 ],

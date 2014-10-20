@@ -1,7 +1,7 @@
 generated-reduction actions
 reduceActionFor_query_continuation1: nodes
 	| result |
-	result := Array new: 23.
+	result := Array new: 24.
 	result at: 1 put: (OrderedCollection new: 2).
 	result at: 2 put: (OrderedCollection new: 2).
 	result at: 3 put: (OrderedCollection new: 2).
@@ -25,4 +25,5 @@ reduceActionFor_query_continuation1: nodes
 	result at: 21 put: (OrderedCollection new: 2).
 	result at: 22 put: (OrderedCollection new: 2).
 	result at: 23 put: (OrderedCollection new: 2).
+	result at: 24 put: (OrderedCollection new: 2).
 	^ result

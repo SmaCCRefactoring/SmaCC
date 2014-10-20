@@ -2,5 +2,5 @@ accessing
 parseBlock: aString onError: aBlock 
 	^self 
 		parse: aString
-		startingAt: self startingStateForBlock
+		startingAt: self startingStateForblock
 		onError: aBlock

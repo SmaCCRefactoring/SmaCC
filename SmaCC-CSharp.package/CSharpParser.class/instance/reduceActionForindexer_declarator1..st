@@ -1,7 +1,7 @@
 generated-reduction actions
 reduceActionForindexer_declarator1: nodes
 	| result |
-	result := Array new: 7.
+	result := Array new: 8.
 	result at: 4 put: (OrderedCollection new: 2).
 	result at: 5 put: (OrderedCollection new: 2).
 	result at: 1 put: (nodes at: 1).

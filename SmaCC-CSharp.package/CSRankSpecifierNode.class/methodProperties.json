@@ -2,14 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptVisitor:" : "ThierryGoubier 3/18/2014 12:44:58",
-		"commaTokens" : "ThierryGoubier 3/18/2014 12:44:58",
-		"commaTokens:" : "ThierryGoubier 3/18/2014 12:44:58",
-		"ignoredCompositeTokenVariables" : "ThierryGoubier 3/18/2014 12:44:58",
-		"initialize" : "ThierryGoubier 3/18/2014 12:44:58",
-		"leftBracketToken" : "ThierryGoubier 3/18/2014 12:44:58",
-		"leftBracketToken:" : "ThierryGoubier 3/18/2014 12:44:58",
-		"pluralVariablesMap" : "ThierryGoubier 3/18/2014 12:44:58",
-		"rightBracketToken" : "ThierryGoubier 3/18/2014 12:44:58",
-		"rightBracketToken:" : "ThierryGoubier 3/18/2014 12:44:58",
-		"tokenVariables" : "ThierryGoubier 3/18/2014 12:44:58" } }
+		"acceptVisitor:" : "ThierryGoubier 4/19/2014 10:27:56",
+		"commaTokens" : "ThierryGoubier 4/19/2014 10:27:56",
+		"commaTokens:" : "ThierryGoubier 4/19/2014 10:27:56",
+		"ignoredCompositeTokenVariables" : "ThierryGoubier 4/19/2014 10:27:56",
+		"initialize" : "ThierryGoubier 4/19/2014 10:27:56",
+		"leftBracketToken" : "ThierryGoubier 4/19/2014 10:27:56",
+		"leftBracketToken:" : "ThierryGoubier 4/19/2014 10:27:56",
+		"rightBracketToken" : "ThierryGoubier 4/19/2014 10:27:56",
+		"rightBracketToken:" : "ThierryGoubier 4/19/2014 10:27:56",
+		"tokenVariables" : "ThierryGoubier 4/19/2014 10:27:56" } }

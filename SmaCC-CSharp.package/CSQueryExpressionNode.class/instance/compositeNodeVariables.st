@@ -1,3 +1,3 @@
 generated
 compositeNodeVariables
-	^ #(#types #lhses #rhses)
+	^ #(#types #expressions #joinInExpressions #joinOnExpressions #joinEqualsExpressions #groupExpressions #groupByExpressions)

@@ -12,6 +12,7 @@ reduceActionForfield_declaration1: nodes
 	result addTokens: ((nodes at: 2) at: 7) to: result readonlyTokens.
 	result addTokens: ((nodes at: 2) at: 8) to: result volatileTokens.
 	result addTokens: ((nodes at: 2) at: 9) to: result unsafeTokens.
+	result type: (nodes at: 3).
 	result addNodes: ((nodes at: 4) at: 1) to: result declarators.
 	result addTokens: ((nodes at: 4) at: 2) to: result commaTokens.
 	result semicolonToken: (nodes at: 5).

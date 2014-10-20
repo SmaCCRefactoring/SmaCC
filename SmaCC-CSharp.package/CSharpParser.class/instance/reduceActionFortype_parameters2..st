@@ -10,7 +10,5 @@ reduceActionFortype_parameters2: nodes
 	self addAll: ((nodes at: 1) at: 3) to: (result at: 3).
 	self add: (nodes at: 2) to: (result at: 3).
 	self addAll: ((nodes at: 3) at: 1) to: (result at: 1).
-	self
-		addAll: (SmaCCParseNode collectionVariableIn: (nodes at: 4) collectionGetter: nil variableGetter: #_name)
-		to: (result at: 2).
+	self add: (nodes at: 4) to: (result at: 2).
 	^ result

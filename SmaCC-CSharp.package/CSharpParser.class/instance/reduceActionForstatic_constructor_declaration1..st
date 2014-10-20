@@ -9,8 +9,6 @@ reduceActionForstatic_constructor_declaration1: nodes
 	result identifierToken: (nodes at: 3).
 	result leftParenToken: (nodes at: 4).
 	result rightParenToken: (nodes at: 5).
-	result leftBraceToken: ((nodes at: 6) at: 1).
-	result addNodes: ((nodes at: 6) at: 2) to: result statements.
-	result rightBraceToken: ((nodes at: 6) at: 3).
-	result semicolonToken: ((nodes at: 6) at: 4).
+	result block: ((nodes at: 6) at: 1).
+	result semicolonToken: ((nodes at: 6) at: 2).
 	^ result

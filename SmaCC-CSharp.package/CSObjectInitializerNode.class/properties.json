@@ -7,11 +7,9 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"leftBraceToken",
-		"identifiers",
-		"equalTokens",
-		"values",
 		"commaTokens",
-		"rightBraceToken" ],
+		"rightBraceToken",
+		"initializers" ],
 	"name" : "CSObjectInitializerNode",
 	"pools" : [
 		 ],

@@ -59,6 +59,7 @@ definitionComment
 	ThrowStatement
 	TryStatement
 	UncheckedStatement
+	UnsafeStatement
 	UsingStatement
 	WhileStatement
 	YieldStatement
@@ -499,8 +500,8 @@ post_decrement_expression
 	: primary_expression 'expression' ""--"" 'operator' {{PostExpression}}
 	;
 object_creation_expression
-	: ""new"" type 'type' ""("" _argument_list "")"" _object_or_collection_initializer {{}}
-	| ""new"" type 'type' object_or_collection_initializer {{}}
+	: ""new"" type 'type' ""("" _argument_list "")"" _object_or_collection_initializer 'initializer' {{}}
+	| ""new"" type 'type' object_or_collection_initializer 'initializer' {{}}
 	;
 _object_or_collection_initializer
 	:
@@ -519,8 +520,8 @@ _member_initializer_list
 	| member_initializer_list
 	;
 member_initializer_list
-	: member_initializer
-	| member_initializer_list "","" member_initializer
+	: member_initializer 'initializer'
+	| member_initializer_list "","" member_initializer 'initializer'
 	;
 member_initializer
 	: <Identifier> 'identifier' ""="" initializer_value 'value' {{}}
@@ -739,8 +740,8 @@ query_expression
 	: from_clause query_body {{}}
 	;
 from_clause
-	: ""from"" _type <Identifier> ""in"" expression
-	;
+	: ""from"" _type <Identifier> ""in"" expression 'expression'
+ 	;
 query_body
 	: _query_body_clauses select_or_group_clause _query_continuation
 	;
@@ -761,16 +762,16 @@ query_body_clause
 	| orderby_clause
 	;
 let_clause
-	: ""let"" <Identifier> ""="" expression
+	: ""let"" <Identifier> ""="" expression 'expression'
 	;
 where_clause
-	: ""where"" boolean_expression
+	: ""where"" boolean_expression 'expression'
 	;
 join_clause
-	: ""join"" _type <Identifier> ""in"" expression ""on"" expression ""equals"" expression
+	: ""join"" _type <Identifier> ""in"" expression 'joinInExpression' ""on"" expression 'joinOnExpression' ""equals"" expression 'joinEqualsExpression'
 	;
 join_into_clause
-	: ""join"" _type <Identifier> ""in"" expression ""on"" expression ""equals"" expression ""into"" <Identifier>
+	: ""join"" _type <Identifier> ""in"" expression 'joinInExpression' ""on"" expression 'joinOnExpression' ""equals"" expression 'joinEqualsExpression' ""into"" <Identifier>
 	;
 orderby_clause
 	: ""orderby"" orderings
@@ -780,8 +781,8 @@ orderings
 	| orderings "","" ordering
 	;
 ordering
-	: expression _ordering_direction
-	;
+	: expression 'expression' _ordering_direction
+ 	;
 _ordering_direction
 	: 
 	| ordering_direction
@@ -795,11 +796,11 @@ select_or_group_clause
 	| group_clause
 	;
 select_clause
-	: ""select"" expression
-	;
+	: ""select"" expression 'expression'
+ 	;
 group_clause
-	: ""group"" expression ""by"" expression
-	;
+	: ""group"" expression 'groupExpression' ""by"" expression 'groupByExpression'
+ 	;
 _query_continuation
 	: 
 	| query_continuation
@@ -1113,8 +1114,8 @@ type_parameter_list
 	: ""<"" 'lessThan' type_parameters <gt> 'greaterThan' {{}}
 	;
 type_parameters
-	: _attributes type_parameter
-	| type_parameters "","" _attributes type_parameter
+	: _attributes type_parameter 'parameter'
+	| type_parameters "","" _attributes type_parameter 'parameter'
 	;
 type_parameter
 	: <Identifier> 'name'  {{TypeName}}
@@ -1220,8 +1221,8 @@ constant_declarator
 	: <Identifier> ""="" constant_expression 'expression' {{}}
 	;
 field_declaration
-	: _attributes _field_modifiers type variable_declarators "";"" {{}}
-	;
+	: _attributes _field_modifiers type 'type' variable_declarators "";"" {{}}
+ 	;
 _field_modifiers
 	: 
 	| field_modifiers
@@ -1436,8 +1437,8 @@ indexer_modifier
 	;
 indexer_declarator
 	: type 'returnType' ""this"" ""["" formal_parameters_list ""]""
-	| type 'returnType' interface_type ""."" ""this"" ""["" formal_parameters_list ""]""
-	;
+	| type 'returnType' interface_type 'type' ""."" ""this"" ""["" formal_parameters_list ""]""
+ 	;
 operator_declaration
 	: _attributes operator_modifiers operator_declarator operator_body 'body' {{}}
 	;
@@ -1539,7 +1540,7 @@ static_constructor_modifiers
 	| ""static"" _extern
 	;
 static_constructor_body
-	: block
+	: block 'block'
 	| "";""
 	;
 # redefined in the unsafe section
@@ -1939,8 +1940,8 @@ embedded_statement
 	: unsafe_statement
 	;
 unsafe_statement
-	: ""unsafe"" block
-	;
+	: ""unsafe"" block 'block' {{UnsafeStatement}}
+ 	;
 type
 	: pointer_type
 	;

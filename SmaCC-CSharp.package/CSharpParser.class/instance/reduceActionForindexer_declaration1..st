@@ -10,7 +10,8 @@ reduceActionForindexer_declaration1: nodes
 	result addNodes: ((nodes at: 3) at: 4) to: result parameters.
 	result addTokens: ((nodes at: 3) at: 5) to: result commas.
 	result rightBracketToken: ((nodes at: 3) at: 6).
-	result periodToken: ((nodes at: 3) at: 7).
+	result type: ((nodes at: 3) at: 7).
+	result periodToken: ((nodes at: 3) at: 8).
 	result leftBraceToken: (nodes at: 4).
 	result getAccessor: ((nodes at: 5) at: 1).
 	result setAccessor: ((nodes at: 5) at: 2).
