@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfSmaCC",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfSmaCC",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
