@@ -21,7 +21,7 @@ Installing SmaCC if you are a SmaCC developper
 
 ```smalltalk
 Gofer new
-    url: 'http://smalltalkhub.com/mc/PharoExtras/Smacc/main/';
+    url: 'http://smalltalkhub.com/mc/Pharo/MetaRepoForPharo30/main/';
     configurationOf: 'SmaCC';
     loadDevelopment
 ```
