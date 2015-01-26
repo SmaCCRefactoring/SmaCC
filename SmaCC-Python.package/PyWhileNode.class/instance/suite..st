@@ -1,7 +1,7 @@
 generated
-suite: aPyRootNode
+suite: aPySuiteNode
 	self suite notNil
 		ifTrue: [ self suite parent: nil ].
-	suite := aPyRootNode.
+	suite := aPySuiteNode.
 	self suite notNil
 		ifTrue: [ self suite parent: self ]

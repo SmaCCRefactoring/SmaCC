@@ -6,11 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"simple",
 		"nEWLINEToken",
 		"iNDENTToken",
-		"statements",
-		"dEDENTToken" ],
+		"dEDENTToken",
+		"suite" ],
 	"name" : "PySuiteNode",
 	"pools" : [
 		 ],

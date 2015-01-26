@@ -8,14 +8,11 @@
 	"instvars" : [
 		"tryToken",
 		"colonTokens",
-		"nEWLINETokens",
-		"iNDENTTokens",
-		"dEDENTTokens",
 		"finallyToken",
-		"elseToken",
 		"else",
 		"suites",
-		"clauses" ],
+		"clauses",
+		"finally" ],
 	"name" : "PyTryNode",
 	"pools" : [
 		 ],

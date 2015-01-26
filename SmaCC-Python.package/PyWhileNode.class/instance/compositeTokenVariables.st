@@ -1,3 +1,0 @@
-generated
-compositeTokenVariables
-	^ #(#elseTokens #colonTokens)

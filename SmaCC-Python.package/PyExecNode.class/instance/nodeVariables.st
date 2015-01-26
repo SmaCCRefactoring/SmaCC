@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^ #(#expr #test1 #test2)
+	^ #(#expr #tests_opt)

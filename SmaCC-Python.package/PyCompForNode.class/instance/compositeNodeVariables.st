@@ -1,3 +1,3 @@
 generated
 compositeNodeVariables
-	^ #(#trailers #ones #twos #conditions)
+	^ #(#ones #twos #conditions)

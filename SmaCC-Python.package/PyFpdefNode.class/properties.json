@@ -1,0 +1,18 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"commaTokens",
+		"nameToken",
+		"lparenToken",
+		"fpdefs",
+		"rparenToken" ],
+	"name" : "PyFpdefNode",
+	"pools" : [
+		 ],
+	"super" : "PyRootNode",
+	"type" : "normal" }

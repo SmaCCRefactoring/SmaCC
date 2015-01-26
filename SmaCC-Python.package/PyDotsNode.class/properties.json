@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"periodTokens" ],
+	"name" : "PyDotsNode",
+	"pools" : [
+		 ],
+	"super" : "PyRootNode",
+	"type" : "normal" }

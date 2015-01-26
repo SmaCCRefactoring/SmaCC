@@ -1,3 +1,7 @@
 generated
-arguments: anOrderedCollection
-	arguments := anOrderedCollection
+arguments: aPyRootNode
+	self arguments notNil
+		ifTrue: [ self arguments parent: nil ].
+	arguments := aPyRootNode.
+	self arguments notNil
+		ifTrue: [ self arguments parent: self ]

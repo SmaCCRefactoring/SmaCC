@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"colonToken" ],
+	"name" : "PySliceopNode",
+	"pools" : [
+		 ],
+	"super" : "PyRootNode",
+	"type" : "normal" }

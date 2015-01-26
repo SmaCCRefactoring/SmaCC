@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^ #(#one #two #if #else)
+	^ #(#or #if #else)

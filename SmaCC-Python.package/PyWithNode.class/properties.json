@@ -10,9 +10,6 @@
 		"commaTokens",
 		"withItems",
 		"colonToken",
-		"nEWLINEToken",
-		"iNDENTToken",
-		"dEDENTToken",
 		"suite" ],
 	"name" : "PyWithNode",
 	"pools" : [

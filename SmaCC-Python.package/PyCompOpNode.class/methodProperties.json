@@ -1,0 +1,26 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "ThierryGoubier 1/26/2015 16:28",
+		"bangEqualToken" : "ThierryGoubier 1/26/2015 16:28",
+		"bangEqualToken:" : "ThierryGoubier 1/26/2015 16:28",
+		"equalEqualToken" : "ThierryGoubier 1/26/2015 16:28",
+		"equalEqualToken:" : "ThierryGoubier 1/26/2015 16:28",
+		"greaterThanEqualToken" : "ThierryGoubier 1/26/2015 16:28",
+		"greaterThanEqualToken:" : "ThierryGoubier 1/26/2015 16:28",
+		"greaterThanToken" : "ThierryGoubier 1/26/2015 16:28",
+		"greaterThanToken:" : "ThierryGoubier 1/26/2015 16:28",
+		"inToken" : "ThierryGoubier 1/26/2015 16:28",
+		"inToken:" : "ThierryGoubier 1/26/2015 16:28",
+		"isToken" : "ThierryGoubier 1/26/2015 16:28",
+		"isToken:" : "ThierryGoubier 1/26/2015 16:28",
+		"lessThanEqualToken" : "ThierryGoubier 1/26/2015 16:28",
+		"lessThanEqualToken:" : "ThierryGoubier 1/26/2015 16:28",
+		"lessThanGreaterThanToken" : "ThierryGoubier 1/26/2015 16:28",
+		"lessThanGreaterThanToken:" : "ThierryGoubier 1/26/2015 16:28",
+		"lessThanToken" : "ThierryGoubier 1/26/2015 16:28",
+		"lessThanToken:" : "ThierryGoubier 1/26/2015 16:28",
+		"notToken" : "ThierryGoubier 1/26/2015 16:28",
+		"notToken:" : "ThierryGoubier 1/26/2015 16:28",
+		"tokenVariables" : "ThierryGoubier 1/26/2015 16:28" } }

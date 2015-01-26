@@ -1,0 +1,15 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"equalToken",
+		"test" ],
+	"name" : "PyInitOptNode",
+	"pools" : [
+		 ],
+	"super" : "PyRootNode",
+	"type" : "normal" }

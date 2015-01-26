@@ -1,0 +1,3 @@
+generated
+args
+	^ args

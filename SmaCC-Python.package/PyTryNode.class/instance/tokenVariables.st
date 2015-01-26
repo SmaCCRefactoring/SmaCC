@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#tryToken #elseToken #finallyToken)
+	^ #(#tryToken #finallyToken)

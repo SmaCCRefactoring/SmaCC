@@ -12,7 +12,6 @@
 		"body",
 		"lparenToken",
 		"tests",
-		"commaTokens",
 		"rparenToken" ],
 	"name" : "PyClassdefNode",
 	"pools" : [

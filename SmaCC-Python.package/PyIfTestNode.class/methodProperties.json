@@ -3,7 +3,6 @@
 		 },
 	"instance" : {
 		"acceptVisitor:" : "ThierryGoubier 10/15/2014 12:48:56",
-		"compositeNodeVariables" : "ThierryGoubier 10/15/2014 12:48:56",
 		"else" : "ThierryGoubier 10/15/2014 12:48:56",
 		"else:" : "ThierryGoubier 10/15/2014 12:48:56",
 		"elseToken" : "ThierryGoubier 10/15/2014 12:48:56",
@@ -12,14 +11,7 @@
 		"if:" : "ThierryGoubier 10/15/2014 12:48:56",
 		"ifToken" : "ThierryGoubier 10/15/2014 12:48:56",
 		"ifToken:" : "ThierryGoubier 10/15/2014 12:48:56",
-		"initialize" : "ThierryGoubier 10/15/2014 12:48:56",
-		"nodeVariables" : "ThierryGoubier 10/15/2014 12:48:56",
-		"one" : "ThierryGoubier 10/15/2014 12:48:56",
-		"one:" : "ThierryGoubier 10/15/2014 12:48:56",
-		"orToken" : "ThierryGoubier 10/15/2014 12:48:56",
-		"orToken:" : "ThierryGoubier 10/15/2014 12:48:56",
-		"tokenVariables" : "ThierryGoubier 10/15/2014 12:48:56",
-		"trailers" : "ThierryGoubier 10/15/2014 12:48:56",
-		"trailers:" : "ThierryGoubier 10/15/2014 12:48:56",
-		"two" : "ThierryGoubier 10/15/2014 12:48:56",
-		"two:" : "ThierryGoubier 10/15/2014 12:48:56" } }
+		"nodeVariables" : "ThierryGoubier 1/26/2015 16:50",
+		"or" : "ThierryGoubier 1/26/2015 16:50",
+		"or:" : "ThierryGoubier 1/26/2015 16:50",
+		"tokenVariables" : "ThierryGoubier 1/26/2015 16:50" } }

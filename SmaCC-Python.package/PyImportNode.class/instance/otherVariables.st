@@ -1,3 +1,3 @@
 generated
 otherVariables
-	^ #(#names #from)
+	^ #(#names)

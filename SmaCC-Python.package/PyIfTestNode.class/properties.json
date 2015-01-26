@@ -6,14 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"trailers",
-		"one",
-		"orToken",
-		"two",
 		"ifToken",
 		"if",
 		"elseToken",
-		"else" ],
+		"else",
+		"or" ],
 	"name" : "PyIfTestNode",
 	"pools" : [
 		 ],

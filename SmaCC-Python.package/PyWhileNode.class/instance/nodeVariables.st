@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^ #(#one #two #if #arguments #body #suite)
+	^ #(#test #suite #else)

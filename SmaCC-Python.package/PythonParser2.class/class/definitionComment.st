@@ -105,28 +105,28 @@ newline_opts:
 	;
 
 decorator:
-	""@"" dotted_name paren_arglist_opt <NEWLINE>
+	""@"" dotted_name 'dotted_name' paren_arglist_opt 'args' <NEWLINE> {{}}
 	;
 paren_arglist_opt:
-	| <lparen> arglist_opt <rparen>
+	| <lparen> arglist_opt <rparen> { '2' }
 	;
 arglist_opt:
 	| arglist
 	;
 
 decorators:
-	decorators decorator 'decorator'
-	| decorator 'decorator'
+	decorators decorator 'decorator' {{}}
+	| decorator 'decorator' {{}}
 	;
 decorated:
-	decorators classdef 'classdef'
-	| decorators funcdef 'funcdef'
+	decorators 'decorators' classdef 'classdef' {{}}
+	| decorators 'decorators' funcdef 'funcdef' {{}}
 	;
 funcdef:
 	""def"" <name> 'fname' parameters 'parameters' "":"" suite 'body' {{}}
 	;
 parameters:
-	<lparen> varargslist_opt <rparen>
+	<lparen> varargslist_opt <rparen> { '2' }
 	;
 varargslist_opt:
 	| varargslist {{VarArgList}}
@@ -138,25 +138,29 @@ varargslist:
 	| ""**"" <name>  'sname'
 	| fpdef 'arg' init_opt 'init' comma_opt
 	;
+
 init_opt:
-	| ""="" test
+	| ""="" test 'test' {{}}
 	;
+
 fpdef:
-	<name>
-	| <lparen> fplist <rparen>
+	<name> {{}}
+	| <lparen> fplist <rparen> {{}}
 	;
+
 fplist:
-	fpdef "","" fplist
-	| fpdef comma_opt
+	fpdef 'fpdef' "","" fplist
+	| fpdef 'fpdef' comma_opt
 	;
 
 stmt:
 	simple_stmt 'stmt'
 	| compound_stmt 'stmt'
 	;
+
 simple_stmt:
-	small_stmt 'stmt' "";"" simple_stmt
-	| small_stmt 'stmt' semicolon_opt <NEWLINE>
+	small_stmt 'stmt' "";"" simple_stmt {{}}
+	| small_stmt 'stmt' semicolon_opt <NEWLINE> {{}}
 	;
 semicolon_opt:
 	| "";""
@@ -233,13 +237,13 @@ import_from:
 	""from"" dotopt_dotted_name 'from' ""import"" import_names_star {{Import}}
 	;
 dotopt_dotted_name:
-	dotted_name
-	| dots
-	| dots dotted_name
+	dotted_name 'name' {{}}
+	| dots 'dots' {{}}
+	| dots 'dots' dotted_name 'name' {{}}
 	;
 dots:
-	dots "".""
-	| "".""
+	dots ""."" {{}}
+	| ""."" {{}}
 	;
 import_names_star:
 	""*""
@@ -278,11 +282,12 @@ namelist:
 	;
 exec_stmt:
 	""exec"" expr 'expr' {{Exec}}
-	| ""exec"" expr 'expr' ""in"" test_test_opt {{Exec}}
+	| ""exec"" expr 'expr' ""in"" test_test_opt 'tests_opt' {{Exec}}
 	;
+
 test_test_opt:
-	test 'test1'
-	| test 'test1' "","" test 'test2'
+	test 'test1' {{}}
+	| test 'test1' "","" test 'test2' {{}}
 	;
 assert_stmt:
 	""assert"" test_test_opt 'condition' {{Assert}}
@@ -318,24 +323,24 @@ else_opt:
 	| ""else"" "":"" suite 'else' {{Else}}
 	;
 while_stmt:
-	""while"" test "":"" suite else_opt {{While}}
+	""while"" test 'test' "":"" suite 'suite' else_opt 'else' {{While}}
 	;
 for_stmt:
 	""for"" exprlist ""in"" testlist "":"" suite else_opt {{For}}
 	;
 try_stmt:
-	""try"" "":"" suite except_list else_opt finally_opt {{Try}}
-	| ""try"" "":"" suite ""finally"" "":"" suite {{Try}}
+	""try"" "":"" suite 'suite' except_list else_opt 'else' finally_opt 'finally' {{Try}}
+	| ""try"" "":"" suite 'suite' ""finally"" "":"" suite 'finally' {{Try}}
 	;
 finally_opt:
 	| ""finally"" "":"" suite {{Finally}}
 	;
 except_list:
-	except_list except_clause 'clause' "":"" suite
-	| except_clause 'clause' "":"" suite
+	except_list except_clause 'clause' "":"" suite 'suite'
+	| except_clause 'clause' "":"" suite 'suite'
 	;
 with_stmt:
-	""with"" with_items "":"" suite {{With}}
+	""with"" with_items "":"" suite 'suite' {{With}}
 	;
 with_items:
 	with_items "","" with_item 'withItem'
@@ -353,8 +358,8 @@ except_clause:
 	| ""except"" test 'except' "","" test 'except2' {{ExceptClause}}
 	;
 suite:
-	simple_stmt 'suite'
-	| <NEWLINE> <INDENT> stmts 'suite' <DEDENT>
+	simple_stmt 'suite' {{}}
+	| <NEWLINE> <INDENT> stmts 'suite' <DEDENT> {{}}
 	;
 stmts:
 	stmts stmt 'statement' {{Statements}}
@@ -398,17 +403,17 @@ comparison:
 	| expr 'one' comp_op 'op' comparison 'two' {{Comparison}}
 	;
 comp_op:
-	""<""
-	| "">""
-	| ""==""
-	| "">=""
-	| ""<=""
-	| ""<>""
-	| ""!=""
-	| ""in""
-	| ""not"" ""in"" 
-	| ""is""
-	| ""is"" ""not""
+	""<"" {{}}
+	| "">"" {{}}
+	| ""=="" {{}}
+	| "">="" {{}}
+	| ""<="" {{}}
+	| ""<>"" {{}}
+	| ""!="" {{}}
+	| ""in"" {{}}
+	| ""not"" ""in"" {{}}
+	| ""is"" {{}}
+	| ""is"" ""not"" {{}}
 	;
 expr:
 	xor_expr 
@@ -445,8 +450,9 @@ factor:
 	| ""-"" factor 'factor' {{}}
 	| ""~"" factor 'factor' {{}}
 	;
+
 power:
-	atom trailers_opt
+	atom 'atom' trailers_opt {{}}
 	| atom 'atom' trailers_opt ""**"" factor 'factor' {{}}
 	;
 trailers_opt:
@@ -470,11 +476,11 @@ strings:
 	| <string> 'string'  {{Strings}}
 	;
 listmaker:
-	test list_for
+	test 'test' list_for 'list_for' {{}}
 	| testlist
 	;
 testlist_comp:
-	test comp_for
+	test 'test' comp_for 'comp_for' {{}}
 	| testlist
 	;
 lambdef:
@@ -491,15 +497,15 @@ subscriptlist:
 	| subscript 'subscript' comma_opt
 	;
 subscript:
-	""."" ""."" "".""
-	| test
-	| test_opt "":"" test_opt sliceop
+	""."" ""."" ""."" {{}}
+	| test 'test' {{}}
+	| test_opt "":"" test_opt sliceop {{}}
 	;
 test_opt:
 	| test
 	;
 sliceop:
-	| "":"" test_opt
+	| "":"" test_opt {{}}
 	;
 
 exprlist:
@@ -512,25 +518,26 @@ comma_opt:
 
 test:
 	or_test
-	| or_test ""if"" or_test 'if' ""else"" test 'else' {{IfTest}}
+	| or_test 'or' ""if"" or_test 'if' ""else"" test 'else' {{IfTest}}
 	| lambdef
 	;
 testlist:
-	test 'test' "","" testlist
-	| test 'test' comma_opt
+	test 'test' "","" testlist {{}}
+	| test 'test' comma_opt {{}}
 	;
+
 testlist_opt:
-	| testlist
+	| testlist 'tests' {{}}
 	;
 dictorsetmaker: 
-	test "":"" test comp_for
-	| test "":"" test more_tests
-	| test comp_for
+	test 'test' "":"" test 'test2' comp_for 'comp' {{}}
+	| test 'test' "":"" test 'test2' more_tests 'more' {{}}
+	| test 'test' comp_for 'comp' {{}}
 	| testlist
 	;
 more_tests:
 	comma_opt
-	| "","" test "":"" test more_tests
+	| "","" test 'test' "":"" test 'test2' more_tests 'more_tests' {{}}
 	;
 classdef:
 	""class"" <name> 'cname' "":"" suite 'body' {{Classdef}}
@@ -550,9 +557,9 @@ more_args:
 # The reason that keywords are test nodes instead of <name> is that using <name>
 # results in an ambiguity. ast.c makes sure it""s a <name>.
 argument:
-	test
-	| test comp_for
-	| test ""="" test
+	test 'test' {{}}
+	| test 'test' comp_for 'comp' {{}}
+	| test 'test' ""="" test 'test2' {{}}
 	;
 
 list_iter:
@@ -583,7 +590,7 @@ comp_if:
 
 testlist1:
 	test 'test'
-	| test 'test' "","" testlist1
+	| test 'test' "","" testlist1 'tests' {{}}
 	;
 
 # not used in grammar, but may appear in ""node"" passed from Parser to Compiler

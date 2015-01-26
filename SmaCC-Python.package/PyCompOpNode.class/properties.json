@@ -1,0 +1,23 @@
+{
+	"category" : "SmaCC-Python",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"lessThanToken",
+		"greaterThanToken",
+		"equalEqualToken",
+		"greaterThanEqualToken",
+		"lessThanEqualToken",
+		"lessThanGreaterThanToken",
+		"bangEqualToken",
+		"inToken",
+		"notToken",
+		"isToken" ],
+	"name" : "PyCompOpNode",
+	"pools" : [
+		 ],
+	"super" : "PyRootNode",
+	"type" : "normal" }

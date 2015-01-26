@@ -1,3 +1,7 @@
 generated
-arguments: anOrderedCollection
-	arguments := anOrderedCollection
+arguments: aPyTestlistOptNode
+	self arguments notNil
+		ifTrue: [ self arguments parent: nil ].
+	arguments := aPyTestlistOptNode.
+	self arguments notNil
+		ifTrue: [ self arguments parent: self ]

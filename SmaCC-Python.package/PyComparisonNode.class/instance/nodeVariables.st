@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^ #(#one #two)
+	^ #(#one #op #two)

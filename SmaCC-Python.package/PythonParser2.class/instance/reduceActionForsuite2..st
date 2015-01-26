@@ -1,9 +1,9 @@
 generated-reduction actions
 reduceActionForsuite2: nodes
 	| result |
-	result := Array new: 4.
-	result at: 2 put: (nodes at: 1).
-	result at: 3 put: (nodes at: 2).
-	result at: 1 put: (nodes at: 3).
-	result at: 4 put: (nodes at: 4).
+	result := PySuiteNode new.
+	result nEWLINEToken: (nodes at: 1).
+	result iNDENTToken: (nodes at: 2).
+	result suite: (nodes at: 3).
+	result dEDENTToken: (nodes at: 4).
 	^ result

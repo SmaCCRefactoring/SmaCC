@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#execToken #inToken #commaToken)
+	^ #(#execToken #inToken)

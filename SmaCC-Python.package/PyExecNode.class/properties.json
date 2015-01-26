@@ -9,9 +9,7 @@
 		"execToken",
 		"expr",
 		"inToken",
-		"test1",
-		"commaToken",
-		"test2" ],
+		"tests_opt" ],
 	"name" : "PyExecNode",
 	"pools" : [
 		 ],

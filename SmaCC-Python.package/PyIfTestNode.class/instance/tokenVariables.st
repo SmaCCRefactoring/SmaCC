@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#orToken #ifToken #elseToken)
+	^ #(#ifToken #elseToken)

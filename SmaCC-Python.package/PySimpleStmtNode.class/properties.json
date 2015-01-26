@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"smalls",
 		"semicolonTokens",
-		"nEWLINEToken" ],
+		"nEWLINEToken",
+		"stmts" ],
 	"name" : "PySimpleStmtNode",
 	"pools" : [
 		 ],
