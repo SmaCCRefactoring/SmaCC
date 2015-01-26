@@ -1,17 +1,17 @@
 {
 	"class" : {
-		"compileForGrammar:" : "ThierryGoubier 10/3/2014 17:22:23" },
+		"compileForGrammar:" : "ThierryGoubier 10/17/2014 17:15:44" },
 	"instance" : {
-		"calculateReduceActions" : "ThierryGoubier 10/3/2014 17:22:23",
-		"calculateSymbolVariables" : "ThierryGoubier 10/3/2014 17:22:23",
-		"calculateSymbolVariablesFor:" : "ThierryGoubier 10/3/2014 17:22:23",
-		"calculateVariables" : "ThierryGoubier 10/3/2014 17:22:23",
-		"codeGenerator" : "ThierryGoubier 10/3/2014 17:22:23",
-		"compileMethodsAndVariables" : "ThierryGoubier 10/3/2014 17:22:23",
-		"compileNodeClasses" : "ThierryGoubier 10/3/2014 17:22:23",
-		"compileTypes" : "ThierryGoubier 10/3/2014 17:22:23",
-		"compileVisitor" : "ThierryGoubier 10/3/2014 17:22:23",
-		"defineNodeClasses" : "ThierryGoubier 10/3/2014 17:22:23",
-		"grammar:" : "ThierryGoubier 10/3/2014 17:22:23",
-		"hasVariables:seen:" : "ThierryGoubier 10/3/2014 17:22:23",
-		"sortedClasses" : "ThierryGoubier 10/3/2014 17:22:23" } }
+		"calculateReduceActions" : "ThierryGoubier 10/17/2014 17:15:44",
+		"calculateSymbolVariables" : "ThierryGoubier 10/17/2014 17:15:44",
+		"calculateSymbolVariablesFor:" : "ThierryGoubier 10/17/2014 17:15:44",
+		"calculateVariables" : "ThierryGoubier 10/17/2014 17:15:44",
+		"codeGenerator" : "ThierryGoubier 10/17/2014 17:15:44",
+		"compileMethodsAndVariables" : "ThierryGoubier 10/17/2014 17:15:44",
+		"compileNodeClasses" : "ThierryGoubier 10/17/2014 17:15:44",
+		"compileTypes" : "ThierryGoubier 10/17/2014 17:15:44",
+		"compileVisitor" : "ThierryGoubier 10/17/2014 17:15:44",
+		"defineNodeClasses" : "ThierryGoubier 10/17/2014 17:15:44",
+		"grammar:" : "ThierryGoubier 10/17/2014 17:15:44",
+		"hasVariables:seen:" : "ThierryGoubier 10/17/2014 17:15:44",
+		"sortedClasses" : "ThierryGoubier 10/17/2014 17:15:44" } }

@@ -28,7 +28,7 @@ splitTree: aTree
 				ifTrue: [ 
 					| sz |
 					(current isSequence
-						and: [ current temporaries isEmpty and: [ (sz := current children last allChildren size) < 1000 ] ])
+						and: [ current temporaries isEmpty and: [ (sz := current children last allChildren size) < self maxMethodLength ] ])
 						ifTrue: [ 
 							| j currentChild currentCopy oldSz |
 							j := current children size.
