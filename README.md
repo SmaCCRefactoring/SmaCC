@@ -14,7 +14,16 @@ Integrates:
 - Master / slave distributed workload for the rewriting engine
 - Sample parsers: C, Smalltalk, Java, C#, Python
 
-This is the port for Smalltalk/Pharo3.
+This is the port for Smalltalk/Pharo3 and Pharo4.
+
+Installing SmaCC as a user with the latest version
+=====
+```smalltalk
+Metacello new
+    baseline: 'SmaCC';
+    repository: 'github://ThierryGoubier/SmaCC';
+    load
+```
 
 Installing SmaCC if you are a SmaCC developper
 =====
