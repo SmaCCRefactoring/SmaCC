@@ -2,7 +2,9 @@ generated-reduction actions
 reduceActionForcomp_for1: nodes
 	| result |
 	result := PyCompForNode new.
-	result addToken: (nodes at: 1) to: result forTokens.
-	result addObject: (nodes at: 2) to: result fors.
-	result addToken: (nodes at: 3) to: result inTokens.
+	result forToken: (nodes at: 1).
+	result addNodes: ((nodes at: 2) at: 1) to: result exprs.
+	result addTokens: ((nodes at: 2) at: 2) to: result commaTokens.
+	result inToken: (nodes at: 3).
+	result _in: (nodes at: 4).
 	^ result

@@ -10,7 +10,10 @@
 		"fname",
 		"parameters",
 		"colonToken",
-		"body" ],
+		"statements",
+		"nEWLINEToken",
+		"iNDENTToken",
+		"dEDENTToken" ],
 	"name" : "PyFuncdefNode",
 	"pools" : [
 		 ],

@@ -1,6 +1,7 @@
 generated-reduction actions
 reduceActionForsuite1: nodes
 	| result |
-	result := PySuiteNode new.
-	result suite: (nodes at: 1).
+	result := Array new: 4.
+	result at: 1 put: (OrderedCollection new: 2).
+	self add: (nodes at: 1) to: (result at: 1).
 	^ result

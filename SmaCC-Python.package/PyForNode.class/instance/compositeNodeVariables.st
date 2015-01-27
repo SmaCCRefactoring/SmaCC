@@ -1,3 +1,3 @@
 generated
 compositeNodeVariables
-	^ #(#exprs #tests)
+	^ #(#exprs #tests #statements)

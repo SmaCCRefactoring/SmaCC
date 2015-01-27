@@ -1,3 +1,3 @@
 generated
 compositeTokenVariables
-	^ #(#periodTokens #colonTokens)
+	^ #(#periodTokens)

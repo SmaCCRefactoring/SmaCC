@@ -1,7 +1,7 @@
 generated
-finally: aPyRootNode
+finally: aPyFinallyNode
 	self finally notNil
 		ifTrue: [ self finally parent: nil ].
-	finally := aPyRootNode.
+	finally := aPyFinallyNode.
 	self finally notNil
 		ifTrue: [ self finally parent: self ]

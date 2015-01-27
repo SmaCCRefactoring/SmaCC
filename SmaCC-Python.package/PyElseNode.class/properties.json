@@ -8,7 +8,10 @@
 	"instvars" : [
 		"elseToken",
 		"colonToken",
-		"else" ],
+		"statements",
+		"nEWLINEToken",
+		"iNDENTToken",
+		"dEDENTToken" ],
 	"name" : "PyElseNode",
 	"pools" : [
 		 ],

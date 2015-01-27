@@ -6,14 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"ifTokens",
-		"conditions",
-		"forTokens",
-		"fors",
-		"inTokens",
-		"ones",
-		"orTokens",
-		"twos" ],
+		"ifToken",
+		"condition",
+		"iter" ],
 	"name" : "PyCompIfNode",
 	"pools" : [
 		 ],

@@ -6,8 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"statement",
-		"nEWLINETokens" ],
+		"nEWLINETokens",
+		"tests",
+		"commaTokens" ],
 	"name" : "PyEvalInputNode",
 	"pools" : [
 		 ],

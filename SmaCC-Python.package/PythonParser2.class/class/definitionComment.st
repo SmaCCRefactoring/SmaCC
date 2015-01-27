@@ -97,7 +97,7 @@ single_input:
 	;
 
 eval_input:
-	testlist 'statement' newline_opts {{}}
+	testlist newline_opts {{}}
 	;
 
 newline_opts:
@@ -123,7 +123,7 @@ decorated:
 	| decorators 'decorators' funcdef 'funcdef' {{}}
 	;
 funcdef:
-	""def"" <name> 'fname' parameters 'parameters' "":"" suite 'body' {{}}
+	""def"" <name> 'fname' parameters 'parameters' "":"" suite {{}}
 	;
 parameters:
 	<lparen> varargslist_opt <rparen> { '2' }
@@ -166,8 +166,8 @@ semicolon_opt:
 	| "";""
 	;
 expr_stmt: 
-	testlist 'testlist' assign_after {{}}
-	| testlist 'testlist' augassign 'assign' yield_or_testlist 'to' {{}}
+	testlist assign_after {{}}
+	| testlist augassign 'assign' yield_or_testlist 'to' {{}}
 	;
 assign_after:
 	| assign_after ""="" 'assign' yield_or_testlist 'to'
@@ -192,8 +192,8 @@ augassign:
 	;
 # For normal assignments, additional restrictions enforced by the interpreter
 print_stmt:
-	""print"" testlist_opt 'arguments' {{Print}}
-	| ""print"" "">>"" testlist 'arguments' {{Print}}
+	""print"" testlist_opt {{Print}}
+	| ""print"" "">>"" testlist {{Print}}
 	;
 del_stmt:
 	""del"" exprlist {{Del}}
@@ -215,7 +215,7 @@ continue_stmt:
 	""continue"" {{Continue}}
 	;
 return_stmt:
-	""return"" testlist_opt 'args' {{Return}}
+	""return"" testlist_opt {{Return}}
 	;
 yield_stmt:
 	yield_expr {{Yield}}
@@ -314,33 +314,34 @@ compound_stmt:
 	| decorated 
 	;
 if_stmt:
-	""if"" test 'if' "":"" suite 'then' elifs_opt 'elsif' else_opt 'else' {{If}}
+	""if"" test 'if' "":"" suite elifs_opt 'elsif' else_opt 'else' {{If}}
 	;
 elifs_opt:
-	| elifs_opt ""elif"" test 'elif' "":"" suite 'then' {{Elif}}
+	| elifs_opt 'elifs_opt' ""elif"" test 'elif' "":"" suite {{Elif}}
 	;
 else_opt:
-	| ""else"" "":"" suite 'else' {{Else}}
+	| ""else"" "":"" suite {{Else}}
 	;
+
 while_stmt:
-	""while"" test 'test' "":"" suite 'suite' else_opt 'else' {{While}}
+	""while"" test 'test' "":"" suite else_opt 'else' {{While}}
 	;
 for_stmt:
-	""for"" exprlist ""in"" testlist "":"" suite else_opt {{For}}
+	""for"" exprlist ""in"" testlist "":"" suite else_opt 'else' {{For}}
 	;
 try_stmt:
-	""try"" "":"" suite 'suite' except_list else_opt 'else' finally_opt 'finally' {{Try}}
-	| ""try"" "":"" suite 'suite' ""finally"" "":"" suite 'finally' {{Try}}
+	""try"" "":"" suite except_list else_opt 'else' finally_opt 'finally' {{Try}}
+	| ""try"" "":"" suite ""finally"" "":"" suite {{Try}}
 	;
 finally_opt:
 	| ""finally"" "":"" suite {{Finally}}
 	;
 except_list:
-	except_list except_clause 'clause' "":"" suite 'suite'
-	| except_clause 'clause' "":"" suite 'suite'
+	except_list except_clause 'clause' "":"" suite
+	| except_clause 'clause' "":"" suite
 	;
 with_stmt:
-	""with"" with_items "":"" suite 'suite' {{With}}
+	""with"" with_items "":"" suite {{With}}
 	;
 with_items:
 	with_items "","" with_item 'withItem'
@@ -357,13 +358,15 @@ except_clause:
 	| ""except"" test 'except' ""as"" test 'another' {{ExceptClause}}
 	| ""except"" test 'except' "","" test 'except2' {{ExceptClause}}
 	;
+
 suite:
-	simple_stmt 'suite' {{}}
-	| <NEWLINE> <INDENT> stmts 'suite' <DEDENT> {{}}
+	simple_stmt 'statement'
+	| <NEWLINE> <INDENT> stmts  <DEDENT>
 	;
+
 stmts:
-	stmts stmt 'statement' {{Statements}}
-	| stmt 'statement' {{Statements}}
+	stmts stmt 'statement'
+	| stmt 'statement'
 	;
 
 # Backward compatibility cruft to support:
@@ -499,13 +502,13 @@ subscriptlist:
 subscript:
 	""."" ""."" ""."" {{}}
 	| test 'test' {{}}
-	| test_opt "":"" test_opt sliceop {{}}
+	| test_opt 'test' "":"" test_opt 'test2' sliceop 'slice' {{}}
 	;
 test_opt:
 	| test
 	;
 sliceop:
-	| "":"" test_opt {{}}
+	| "":"" test_opt 'test' {{}}
 	;
 
 exprlist:
@@ -522,12 +525,12 @@ test:
 	| lambdef
 	;
 testlist:
-	test 'test' "","" testlist {{}}
-	| test 'test' comma_opt {{}}
+	test 'test' "","" testlist
+	| test 'test' comma_opt
 	;
 
 testlist_opt:
-	| testlist 'tests' {{}}
+	| testlist
 	;
 dictorsetmaker: 
 	test 'test' "":"" test 'test2' comp_for 'comp' {{}}
@@ -540,8 +543,8 @@ more_tests:
 	| "","" test 'test' "":"" test 'test2' more_tests 'more_tests' {{}}
 	;
 classdef:
-	""class"" <name> 'cname' "":"" suite 'body' {{Classdef}}
-	| ""class"" <name> 'cname' <lparen> testlist_opt<rparen> "":"" suite 'body' {{Classdef}}
+	""class"" <name> 'cname' "":"" suite {{Classdef}}
+	| ""class"" <name> 'cname' <lparen> testlist_opt<rparen> "":"" suite {{Classdef}}
 	;
 
 arglist: 
@@ -567,35 +570,36 @@ list_iter:
 	| list_if
 	;
 list_for:
-	""for"" exprlist 'for' ""in"" testlist_safe {{ListFor}}
-	| ""for"" exprlist 'for' ""in"" testlist_safe list_iter {{ListFor}}
+	""for"" exprlist ""in"" testlist_safe {{ListFor}}
+	| ""for"" exprlist ""in"" testlist_safe list_iter 'list' {{ListFor}}
 	;
 list_if:
 	""if"" old_test 'condition' {{ListIf}}
-	| ""if"" old_test 'condition' list_iter {{ListIf}}
+	| ""if"" old_test 'condition' list_iter 'iter' {{ListIf}}
 	;
 
 comp_iter:
 	comp_for
 	| comp_if
 	;
+
 comp_for:
-	""for"" exprlist 'for' ""in"" or_test {{CompFor}}
-	| ""for"" exprlist 'for' ""in"" or_test comp_iter {{CompFor}}
+	""for"" exprlist ""in"" or_test 'in' {{CompFor}}
+	| ""for"" exprlist ""in"" or_test 'in' comp_iter 'comp' {{CompFor}}
 	;
 comp_if:
 	""if"" old_test 'condition' {{CompIf}}
-	| ""if"" old_test 'condition' comp_iter {{CompIf}}
+	| ""if"" old_test 'condition' comp_iter 'iter' {{CompIf}}
 	;
 
 testlist1:
-	test 'test'
-	| test 'test' "","" testlist1 'tests' {{}}
+	test 'test' "","" testlist1 'tests' {{}}
+	| test 'test'
 	;
 
 # not used in grammar, but may appear in ""node"" passed from Parser to Compiler
 #encoding_decl: <name> ;
 
 yield_expr:
-	""yield"" testlist_opt 'arguments' {{Yield}}
+	""yield"" testlist_opt {{Yield}}
 	;"

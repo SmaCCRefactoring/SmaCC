@@ -6,13 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"ifTokens",
-		"conditions",
-		"forTokens",
-		"fors",
-		"inTokens",
-		"tests",
-		"commaTokens" ],
+		"ifToken",
+		"condition",
+		"iter" ],
 	"name" : "PyListIfNode",
 	"pools" : [
 		 ],

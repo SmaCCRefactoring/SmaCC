@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^ #(#test #suite #else)
+	^ #(#test #else)

@@ -1,7 +1,9 @@
 generated-reduction actions
 reduceActionFortestlist2: nodes
 	| result |
-	result := PyTestlistNode new.
-	result addNode: (nodes at: 1) to: result tests.
-	result addToken: ((nodes at: 2) at: 1) to: result commaTokens.
+	result := Array new: 2.
+	result at: 1 put: (OrderedCollection new: 2).
+	result at: 2 put: (OrderedCollection new: 2).
+	self add: (nodes at: 1) to: (result at: 1).
+	self add: ((nodes at: 2) at: 1) to: (result at: 2).
 	^ result

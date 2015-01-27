@@ -7,8 +7,9 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"printToken",
-		"arguments",
-		"greaterThanGreaterThanToken" ],
+		"greaterThanGreaterThanToken",
+		"tests",
+		"commaTokens" ],
 	"name" : "PyPrintNode",
 	"pools" : [
 		 ],

@@ -3,12 +3,17 @@
 		 },
 	"instance" : {
 		"acceptVisitor:" : "ThierryGoubier 1/26/2015 16:33",
-		"colonTokens" : "ThierryGoubier 1/26/2015 16:33",
-		"colonTokens:" : "ThierryGoubier 1/26/2015 16:33",
-		"compositeTokenVariables" : "ThierryGoubier 1/26/2015 16:33",
-		"initialize" : "ThierryGoubier 1/26/2015 16:33",
-		"nodeVariables" : "ThierryGoubier 1/26/2015 16:50",
+		"colonToken" : "ThierryGoubier 1/27/2015 10:55",
+		"colonToken:" : "ThierryGoubier 1/27/2015 10:55",
+		"compositeTokenVariables" : "ThierryGoubier 1/27/2015 10:55",
+		"initialize" : "ThierryGoubier 1/27/2015 10:55",
+		"nodeVariables" : "ThierryGoubier 1/27/2015 10:55",
 		"periodTokens" : "ThierryGoubier 1/26/2015 16:33",
 		"periodTokens:" : "ThierryGoubier 1/26/2015 16:33",
+		"slice" : "ThierryGoubier 1/27/2015 10:55",
+		"slice:" : "ThierryGoubier 1/27/2015 10:55",
 		"test" : "ThierryGoubier 1/26/2015 16:50",
-		"test:" : "ThierryGoubier 1/26/2015 16:50" } }
+		"test2" : "ThierryGoubier 1/27/2015 10:55",
+		"test2:" : "ThierryGoubier 1/27/2015 10:55",
+		"test:" : "ThierryGoubier 1/26/2015 16:50",
+		"tokenVariables" : "ThierryGoubier 1/27/2015 10:55" } }

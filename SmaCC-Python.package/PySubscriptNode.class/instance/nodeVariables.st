@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^ #(#test)
+	^ #(#test #test2 #slice)

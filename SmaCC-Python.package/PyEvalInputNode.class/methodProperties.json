@@ -3,10 +3,12 @@
 		 },
 	"instance" : {
 		"acceptVisitor:" : "ThierryGoubier 10/15/2014 12:48:56",
-		"compositeTokenVariables" : "ThierryGoubier 10/15/2014 12:48:56",
-		"initialize" : "ThierryGoubier 10/15/2014 12:48:56",
+		"commaTokens" : "ThierryGoubier 1/26/2015 17:17",
+		"commaTokens:" : "ThierryGoubier 1/26/2015 17:17",
+		"compositeNodeVariables" : "ThierryGoubier 1/26/2015 17:17",
+		"compositeTokenVariables" : "ThierryGoubier 1/26/2015 17:17",
+		"initialize" : "ThierryGoubier 1/26/2015 17:17",
 		"nEWLINETokens" : "ThierryGoubier 10/15/2014 12:48:56",
 		"nEWLINETokens:" : "ThierryGoubier 10/15/2014 12:48:56",
-		"nodeVariables" : "ThierryGoubier 1/26/2015 16:38",
-		"statement" : "ThierryGoubier 10/15/2014 12:48:56",
-		"statement:" : "ThierryGoubier 1/26/2015 16:38" } }
+		"tests" : "ThierryGoubier 1/26/2015 17:17",
+		"tests:" : "ThierryGoubier 1/26/2015 17:17" } }

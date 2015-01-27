@@ -1,9 +1,10 @@
 generated-reduction actions
 reduceActionForsuite2: nodes
 	| result |
-	result := PySuiteNode new.
-	result nEWLINEToken: (nodes at: 1).
-	result iNDENTToken: (nodes at: 2).
-	result suite: (nodes at: 3).
-	result dEDENTToken: (nodes at: 4).
+	result := Array new: 4.
+	result at: 1 put: (OrderedCollection new: 2).
+	result at: 2 put: (nodes at: 1).
+	result at: 3 put: (nodes at: 2).
+	self addAll: ((nodes at: 3) at: 1) to: (result at: 1).
+	result at: 4 put: (nodes at: 4).
 	^ result

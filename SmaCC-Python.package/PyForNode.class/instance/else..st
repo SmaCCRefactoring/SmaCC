@@ -1,7 +1,7 @@
 generated
-else: aPySuiteNode
+else: aPyElseNode
 	self else notNil
 		ifTrue: [ self else parent: nil ].
-	else := aPySuiteNode.
+	else := aPyElseNode.
 	self else notNil
 		ifTrue: [ self else parent: self ]

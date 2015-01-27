@@ -7,10 +7,13 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"whileToken",
-		"suite",
 		"test",
 		"colonToken",
-		"else" ],
+		"else",
+		"statements",
+		"nEWLINEToken",
+		"iNDENTToken",
+		"dEDENTToken" ],
 	"name" : "PyWhileNode",
 	"pools" : [
 		 ],

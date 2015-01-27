@@ -3,9 +3,13 @@
 		 },
 	"instance" : {
 		"acceptVisitor:" : "ThierryGoubier 10/15/2014 12:48:56",
-		"arguments" : "ThierryGoubier 10/15/2014 12:48:56",
-		"arguments:" : "ThierryGoubier 1/26/2015 16:38",
-		"nodeVariables" : "ThierryGoubier 1/26/2015 16:38",
+		"commaTokens" : "ThierryGoubier 1/26/2015 17:13",
+		"commaTokens:" : "ThierryGoubier 1/26/2015 17:13",
+		"compositeNodeVariables" : "ThierryGoubier 1/26/2015 17:13",
+		"compositeTokenVariables" : "ThierryGoubier 1/26/2015 17:13",
+		"initialize" : "ThierryGoubier 1/26/2015 17:13",
+		"tests" : "ThierryGoubier 1/26/2015 17:13",
+		"tests:" : "ThierryGoubier 1/26/2015 17:13",
 		"tokenVariables" : "ThierryGoubier 10/15/2014 12:48:56",
 		"yieldToken" : "ThierryGoubier 10/15/2014 12:48:56",
 		"yieldToken:" : "ThierryGoubier 10/15/2014 12:48:56" } }

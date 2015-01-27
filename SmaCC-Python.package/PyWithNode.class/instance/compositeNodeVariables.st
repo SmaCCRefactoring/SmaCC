@@ -1,3 +1,3 @@
 generated
 compositeNodeVariables
-	^ #(#withItems)
+	^ #(#withItems #statements)

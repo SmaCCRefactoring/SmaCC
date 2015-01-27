@@ -6,13 +6,12 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"forTokens",
-		"fors",
-		"inTokens",
 		"tests",
 		"commaTokens",
-		"ifTokens",
-		"conditions" ],
+		"exprs",
+		"forToken",
+		"inToken",
+		"list" ],
 	"name" : "PyListForNode",
 	"pools" : [
 		 ],

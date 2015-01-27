@@ -1,3 +1,3 @@
 generated
 compositeTokenVariables
-	^ #(#nEWLINETokens)
+	^ #(#commaTokens #nEWLINETokens)

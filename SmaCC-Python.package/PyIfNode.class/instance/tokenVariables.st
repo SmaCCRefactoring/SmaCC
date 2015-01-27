@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#ifToken #colonToken)
+	^ #(#ifToken #colonToken #nEWLINEToken #iNDENTToken #dEDENTToken)

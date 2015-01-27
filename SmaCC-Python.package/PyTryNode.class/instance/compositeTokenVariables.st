@@ -1,3 +1,3 @@
 generated
 compositeTokenVariables
-	^ #(#colonTokens)
+	^ #(#colonTokens #nEWLINETokens #iNDENTTokens #dEDENTTokens)

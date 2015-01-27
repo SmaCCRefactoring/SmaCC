@@ -7,8 +7,10 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"periodTokens",
-		"colonTokens",
-		"test" ],
+		"test",
+		"colonToken",
+		"test2",
+		"slice" ],
 	"name" : "PySubscriptNode",
 	"pools" : [
 		 ],

@@ -1,3 +1,3 @@
 generated
 compositeNodeVariables
-	^ #(#suites #clauses)
+	^ #(#statements #clauses)
