@@ -5,6 +5,7 @@ baseline: spec
 		for: #common
 		do: [ 
 			spec
-				baseline: 'SmaCC';
-				import: 'SmaCC-Runtime'.
-			spec package: 'SmaCC-Python' ]
+				package: 'SmaCC-Source-Editing';
+				package: 'SmaCC-Runtime' with: [ spec requires: 'SmaCC-Source-Editing' ];
+				package: 'SmaCC-Python' with: [ spec requires: 'SmaCC-Runtime' ];
+				group: 'default' with: #('SmaCC-Python') ]
