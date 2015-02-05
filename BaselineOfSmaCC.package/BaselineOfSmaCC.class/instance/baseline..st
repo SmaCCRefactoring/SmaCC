@@ -32,4 +32,5 @@ baseline: spec
 				group: 'Rewrite' with: #('SmaCC-Rewrite-Engine');
 				group: 'Rewrite-Server' with: #('SmaCC-Rewrite-Server-Worker' 'SmaCC-Rewrite-Server' 'Rewrite');
 				group: 'Tools' with: #('SmaCC-Development-UI' 'Examples' 'Rewrite');
-				group: 'Examples' with: #('SmaCC-Smalltalk-Parser' 'SmaCC-C-Parser' 'SmaCC-CSharp' 'SmaCC-Java' 'SmaCC-Python') ]
+				group: 'Examples' with: #('SmaCC-Smalltalk-Parser' 'SmaCC-C-Parser' 'SmaCC-CSharp' 'SmaCC-Java' 'SmaCC-Python');
+				group: 'Tests' with: #('SmaCC-Tests' 'SmaCC-Rewrite-Engine-Tests') ]

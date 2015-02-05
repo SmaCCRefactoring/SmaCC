@@ -1,1 +1,2 @@
-(name 'BaselineOfSmaCC-ThierryGoubier.1' message 'First attempt at a baseline' id '5d6da5fa-b6f1-407a-a4ec-18bbe47d8f5a' date '22 October 2014' time '3:32:29.837382 pm' author 'ThierryGoubier' ancestors () stepChildren ())
+(name 'BaselineOfSmaCC-ThierryGoubier.2' message 'Add a ''Tests'' group' id '8b5c9a2e-109b-4d90-8230-e6c3d8c8d65d' date '5 February 2015' time '10:13:42.088065 am' author 'ThierryGoubier' ancestors ((name 'BaselineOfSmaCC-ThierryGoubier.1' message 'First attempt at a baseline
+' id 'd23e9deb-7aa2-5259-931a-cd5f9f70d7cd' date '22 October 2014' time '3:32:30 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
