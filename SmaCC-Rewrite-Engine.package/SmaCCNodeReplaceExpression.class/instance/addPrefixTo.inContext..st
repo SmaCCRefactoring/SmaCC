@@ -1,7 +1,7 @@
 private
 addPrefixTo: aSmaCCString inContext: aSmaCCRewriteMatchContext
 	| node startPosition |
-	node := aSmaCCRewriteMatchContext nodeFor: name value.
+	node := aSmaCCRewriteMatchContext nodeFor: _name value.
 	startPosition := aSmaCCRewriteMatchContext originalStartPosition: node.
 	prefix notNil ifTrue: [aSmaCCString addPrefix: prefix value].
 	(aSmaCCRewriteMatchContext isAtStartOfParent: node) ifTrue: [^self].

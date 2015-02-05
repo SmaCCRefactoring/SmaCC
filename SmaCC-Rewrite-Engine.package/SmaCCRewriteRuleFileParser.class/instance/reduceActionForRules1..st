@@ -1,5 +1,5 @@
-generated
+generated-reduction actions
 reduceActionForRules1: nodes
-	^(SmaCCRewriteFile new)
+	^ SmaCCRewriteFile new
 		filename: filename;
 		yourself

@@ -1,3 +1,3 @@
 generated
 startingStateForFile
-	^1
+	^ 1

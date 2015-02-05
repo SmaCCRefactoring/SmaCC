@@ -1,3 +1,3 @@
-generated
+generated-reduction actions
 reduceActionForStartSmalltalkExpression1: nodes
-	^self scanSmalltalkExpression
+	^ self scanSmalltalkExpression

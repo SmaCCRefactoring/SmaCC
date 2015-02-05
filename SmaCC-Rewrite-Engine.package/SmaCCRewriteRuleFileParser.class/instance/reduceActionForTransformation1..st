@@ -1,3 +1,3 @@
-generated
+generated-reduction actions
 reduceActionForTransformation1: nodes
-	^SmaCCRewriteStringTransformation on: (nodes at: 1)
+	^ SmaCCRewriteStringTransformation on: (nodes at: 1)

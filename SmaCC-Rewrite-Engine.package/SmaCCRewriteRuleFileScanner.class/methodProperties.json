@@ -1,17 +1,17 @@
 {
 	"class" : {
-		"initializeKeywordMap" : "ThierryGoubier 1/27/2014 15:07:16",
-		"rewriter" : "ThierryGoubier 10/20/2014 15:33",
-		"rewriter:" : "ThierryGoubier 10/20/2014 15:33" },
+		"initializeKeywordMap" : "ThierryGoubier 2/5/2015 13:21",
+		"rewriter" : "ThierryGoubier 10/20/2014 15:33:40",
+		"rewriter:" : "ThierryGoubier 10/20/2014 15:33:40" },
 	"instance" : {
-		"emptySymbolTokenId" : "ThierryGoubier 1/27/2014 15:07:16",
-		"errorTokenId" : "ThierryGoubier 1/27/2014 15:07:16",
-		"fixExpression:" : "ThierryGoubier 10/20/2014 15:30",
-		"isValidSmalltalk:" : "ThierryGoubier 1/27/2014 15:07:16",
-		"scan1" : "ThierryGoubier 1/27/2014 15:07:16",
-		"scan2" : "ThierryGoubier 1/27/2014 15:07:16",
-		"scan3" : "ThierryGoubier 1/27/2014 15:07:16",
-		"scanForToken" : "ThierryGoubier 1/27/2014 15:07:16",
-		"scanSmalltalkExpression" : "ThierryGoubier 1/27/2014 15:07:16",
-		"scanStringExpression" : "ThierryGoubier 1/27/2014 15:07:16",
-		"tokenActions" : "ThierryGoubier 1/27/2014 15:07:16" } }
+		"emptySymbolTokenId" : "ThierryGoubier 2/5/2015 13:21",
+		"errorTokenId" : "ThierryGoubier 2/5/2015 13:21",
+		"fixExpression:" : "ThierryGoubier 10/20/2014 15:33:40",
+		"isValidSmalltalk:" : "ThierryGoubier 10/20/2014 15:33:40",
+		"scan1" : "ThierryGoubier 2/5/2015 13:21",
+		"scan2" : "ThierryGoubier 2/5/2015 13:21",
+		"scan3" : "ThierryGoubier 2/5/2015 13:21",
+		"scanForToken" : "ThierryGoubier 2/5/2015 13:21",
+		"scanSmalltalkExpression" : "ThierryGoubier 10/20/2014 15:33:40",
+		"scanStringExpression" : "ThierryGoubier 10/20/2014 15:33:40",
+		"tokenActions" : "ThierryGoubier 2/5/2015 13:21" } }

@@ -1,7 +1,7 @@
 private
 addPostfixTo: aSmaCCString inContext: aSmaCCRewriteMatchContext
 	| node position string |
-	node := aSmaCCRewriteMatchContext nodeFor: name value.
+	node := aSmaCCRewriteMatchContext nodeFor: _name value.
 	(aSmaCCRewriteMatchContext isAtEndOfParent: node)
 		ifFalse:
 			[position := aSmaCCRewriteMatchContext originalStopPosition: node.
