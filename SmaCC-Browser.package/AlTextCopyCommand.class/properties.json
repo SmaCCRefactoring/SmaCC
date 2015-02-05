@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Browser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "AlTextCopyCommand",
+	"pools" : [
+		 ],
+	"super" : "AlTreeCommand",
+	"type" : "normal" }
