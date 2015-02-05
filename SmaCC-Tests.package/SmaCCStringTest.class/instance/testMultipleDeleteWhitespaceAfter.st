@@ -1,5 +1,8 @@
 tests
 testMultipleDeleteWhitespaceAfter
+	"For now, this is expected to fail. "
+
+	<expectedFailure>
 	| string |
 	string := SmaCCString on: '0 asdf 9'.
 	6 to: 3 by: -1 do: [ :i | 

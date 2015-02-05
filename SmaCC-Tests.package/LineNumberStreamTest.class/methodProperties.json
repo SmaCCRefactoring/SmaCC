@@ -2,14 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"addCRLFsTo:" : "ThierryGoubier 10/3/2014 17:22:41",
-		"addCRsTo:" : "ThierryGoubier 10/3/2014 17:22:41",
-		"addLFsTo:" : "ThierryGoubier 10/3/2014 17:22:41",
-		"testCRLFLines" : "ThierryGoubier 10/3/2014 17:22:41",
-		"testCRLines" : "ThierryGoubier 10/3/2014 17:22:41",
-		"testEmptyLines" : "ThierryGoubier 10/3/2014 17:22:41",
-		"testForwardPositionCRLFLines" : "ThierryGoubier 10/3/2014 17:22:41",
-		"testLFLines" : "ThierryGoubier 10/3/2014 17:22:41",
-		"testNoLines" : "ThierryGoubier 10/3/2014 17:22:41",
-		"testPositionCRLFLines" : "ThierryGoubier 10/3/2014 17:22:41",
-		"testPositionCRLines" : "ThierryGoubier 10/3/2014 17:22:41" } }
+		"addCRLFsTo:" : "ThierryGoubier 10/7/2014 23:11:55",
+		"addCRsTo:" : "ThierryGoubier 10/7/2014 23:11:55",
+		"addLFsTo:" : "ThierryGoubier 10/7/2014 23:11:55",
+		"testCRLFLines" : "ThierryGoubier 10/7/2014 23:11:55",
+		"testCRLines" : "ThierryGoubier 10/7/2014 23:11:55",
+		"testEmptyLines" : "ThierryGoubier 10/7/2014 23:11:55",
+		"testForwardPositionCRLFLines" : "ThierryGoubier 10/7/2014 23:11:55",
+		"testLFLines" : "ThierryGoubier 10/7/2014 23:11:55",
+		"testNoLines" : "ThierryGoubier 10/7/2014 23:11:55",
+		"testPositionCRLFLines" : "ThierryGoubier 10/7/2014 23:11:55",
+		"testPositionCRLines" : "ThierryGoubier 10/7/2014 23:11:55" } }
