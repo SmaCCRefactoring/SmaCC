@@ -21,9 +21,6 @@ compile: aSymbol
 				parserClass: self parserClassString.
 			aGrammar := parserCompiler grammar.
 			aGrammar type: aSymbol.
-			aGrammar isGLR
-				ifTrue: [ isGLR := true ]
-				ifFalse: [ aGrammar isGLR: isGLR ].
 			stream := WriteStream on: Text new.
 			[ 
 			parserCompiler createChanges.

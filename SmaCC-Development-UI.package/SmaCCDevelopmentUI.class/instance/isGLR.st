@@ -1,5 +1,3 @@
 accessing
 isGLR
-	isGLR isNil
-		ifTrue: [ isGLR := false ].
-	^ isGLR
+	^ isGLR ifNil: [ isGLR := false ]

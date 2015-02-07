@@ -1,3 +1,3 @@
 actions
 toggleIsGLR
-	isGLR := isGLR not
+	isGLR := self isGLR not
