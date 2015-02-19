@@ -36,6 +36,7 @@
 		"testCrLf" : "ThierryGoubier 10/7/2014 23:11:55",
 		"testDefaultClassNameWithUnderscore" : "ThierryGoubier 10/7/2014 23:11:55",
 		"testEmptyAlternative" : "ThierryGoubier 10/7/2014 23:11:55",
+		"testEmptyKeyword" : "ThierryGoubier 2/19/2015 14:34",
 		"testErrorToken" : "ThierryGoubier 10/7/2014 23:11:55",
 		"testErrors" : "ThierryGoubier 10/7/2014 23:11:55",
 		"testExcludeScannerState" : "ThierryGoubier 10/7/2014 23:11:55",
