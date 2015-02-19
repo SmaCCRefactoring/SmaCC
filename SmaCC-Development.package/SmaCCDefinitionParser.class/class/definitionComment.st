@@ -66,7 +66,7 @@ directives <annotate_tokens>
 	: <name>
 	 ;
 <keyword>
-	: (\"" [^\""]* \"") + 
+	: (\"" [^\""]+ \"") + 
 	;
 <comment>
 	: (\# [^\r\n]*) 

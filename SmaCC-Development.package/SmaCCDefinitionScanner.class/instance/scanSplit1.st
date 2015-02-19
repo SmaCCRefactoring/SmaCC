@@ -16,9 +16,9 @@ scanSplit1
 		ifTrue: [ 
 			self recordMatch: #(41).
 			self step.
-			currentCharacter = $"
+			currentCharacter ~~ $"
 				ifTrue: [ ^ self scan2 ].
-			^ self scan1 ].
+			^ self reportLastMatch ].
 	currentCharacter = $#
 		ifTrue: [ 
 			self recordMatch: #(32 41).
