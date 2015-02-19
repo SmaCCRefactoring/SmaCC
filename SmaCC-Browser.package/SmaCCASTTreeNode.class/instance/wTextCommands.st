@@ -1,4 +1,5 @@
 as yet unclassified
 wTextCommands
 	<textAreaCommand>
-	^ {AlTextCopyCommand}
+	^ {AlTextCopyCommand.
+	AlTextCancelCommand}
