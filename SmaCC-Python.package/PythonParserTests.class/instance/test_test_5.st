@@ -1,10 +1,3 @@
 tests - programs
 test_test_5
-	 self parse: '
-class fred:
-    def speak(self, x):
-        return x
-b = fred()
-c = b.speak(''goedzo!'')
-
-'
+	self parse: self source_test_5

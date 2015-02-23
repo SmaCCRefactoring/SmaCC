@@ -1,6 +1,3 @@
 tests - programs
 test_test_4
-	 self parse: '
-a = [1]
-
-'
+	self parse: self source_test_4

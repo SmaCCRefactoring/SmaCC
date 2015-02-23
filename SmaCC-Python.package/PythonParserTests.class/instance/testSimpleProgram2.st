@@ -1,7 +1,5 @@
 tests - programs
 testSimpleProgram2
 	"from https://wiki.python.org/moin/SimplePrograms"
-	self parse: 
-'name = raw_input(''What is your name?\n'')
-print ''Hi, %s.'' % name
-'
+
+	self parse: self sourceSimpleProgram2

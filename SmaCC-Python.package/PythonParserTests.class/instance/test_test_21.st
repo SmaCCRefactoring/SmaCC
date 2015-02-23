@@ -1,11 +1,3 @@
 tests - programs
 test_test_21
-	 self parse: '
-def gettuple():
-    return (5,6)
-
-a = gettuple()
-cube = [(1,2),(3,4),a,gettuple()]
-#cube.append(1.0)
-
-'
+	self parse: self source_test_21

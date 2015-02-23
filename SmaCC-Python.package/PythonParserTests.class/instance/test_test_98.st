@@ -1,9 +1,3 @@
 tests - programs
 test_test_98
-	 self parse: '
-def best_move(xx):                       # xx: [int]
-    return (0, 0), 0                     # [tuple2(tuple2(int, int), int)]
-
-a, b = best_move(1)                      # [tuple2(tuple2(int, int), int)]
-
-'
+	self parse: self source_test_98

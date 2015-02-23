@@ -1,13 +1,3 @@
 tests - programs
 test_test_64
-	 self parse: '
-def dupl(y):                             # y: [list(int)]
-    k = []                               # [list(float)]
-    k.append(1.0)                        # []
-
-a = []                                   # [list(int)]
-a = []                                   # [list(int)]
-a.append(1)                              # []
-dupl(a)                                  # []
-
-'
+	self parse: self source_test_64

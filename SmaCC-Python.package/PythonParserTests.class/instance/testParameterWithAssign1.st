@@ -1,6 +1,3 @@
 tests - programs
 testParameterWithAssign1
-	self parse: 
-'
-f(end="")
-'
+	self parse: self sourceParameterWithAssign1

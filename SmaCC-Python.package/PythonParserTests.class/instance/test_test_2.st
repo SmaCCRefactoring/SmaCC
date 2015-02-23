@@ -1,7 +1,3 @@
 tests - programs
 test_test_2
-	 self parse: '
-class fred: pass
-x = fred()
-
-'
+	self parse: self source_test_2

@@ -1,5 +1,3 @@
 tests - programs
 testString6
-	self parse: 
-'[ ''\\'' , ''\n'', ''\'''', ''"'']
-'
+	self parse: self sourceString6
