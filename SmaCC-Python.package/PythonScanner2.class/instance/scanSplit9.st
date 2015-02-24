@@ -2,17 +2,17 @@ generated
 scanSplit9
 	self recordMatch: #(71).
 	self step.
-	currentCharacter = $l
+	currentCharacter = $i
 		ifTrue: [ 
 			self recordMatch: #(71).
 			self step.
-			currentCharacter = $i
+			currentCharacter = $n
 				ifTrue: [ 
 					self recordMatch: #(71).
 					self step.
-					currentCharacter = $f
+					currentCharacter = $t
 						ifTrue: [ 
-							self recordMatch: #(60 71).
+							self recordMatch: #(3 71).
 							self step.
 							((currentCharacter between: $0 and: $9)
 								or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ])
@@ -27,37 +27,7 @@ scanSplit9
 					((currentCharacter between: $0 and: $9)
 						or: [ 
 							(currentCharacter between: $A and: $Z)
-								or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $e) or: [ currentCharacter between: $g and: $z ] ] ] ])
-						ifTrue: [ 
-							[ 
-							self recordMatch: #(71).
-							self step.
-							(currentCharacter between: $0 and: $9)
-								or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-								whileTrue ].
-					^ self reportLastMatch ].
-			currentCharacter = $s
-				ifTrue: [ 
-					self recordMatch: #(71).
-					self step.
-					currentCharacter = $e
-						ifTrue: [ 
-							self recordMatch: #(57 71).
-							self step.
-							((currentCharacter between: $0 and: $9)
-								or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ])
-								ifTrue: [ 
-									[ 
-									self recordMatch: #(71).
-									self step.
-									(currentCharacter between: $0 and: $9)
-										or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-										whileTrue ].
-							^ self reportLastMatch ].
-					((currentCharacter between: $0 and: $9)
-						or: [ 
-							(currentCharacter between: $A and: $Z)
-								or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $d) or: [ currentCharacter between: $f and: $z ] ] ] ])
+								or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $s) or: [ currentCharacter between: $u and: $z ] ] ] ])
 						ifTrue: [ 
 							[ 
 							self recordMatch: #(71).
@@ -69,11 +39,7 @@ scanSplit9
 			((currentCharacter between: $0 and: $9)
 				or: [ 
 					(currentCharacter between: $A and: $Z)
-						or: [ 
-							currentCharacter = $_
-								or: [ 
-									(currentCharacter between: $a and: $h)
-										or: [ (currentCharacter between: $j and: $r) or: [ currentCharacter between: $t and: $z ] ] ] ] ])
+						or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $m) or: [ currentCharacter between: $o and: $z ] ] ] ])
 				ifTrue: [ 
 					[ 
 					self recordMatch: #(71).
@@ -82,21 +48,16 @@ scanSplit9
 						or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
 						whileTrue ].
 			^ self reportLastMatch ].
-	currentCharacter = $x
-		ifTrue: [ ^ self scanSplit8 ].
 	((currentCharacter between: $0 and: $9)
 		or: [ 
 			(currentCharacter between: $A and: $Z)
-				or: [ 
-					currentCharacter = $_
-						or: [ 
-							(currentCharacter between: $a and: $k)
-								or: [ (currentCharacter between: $m and: $w) or: [ currentCharacter between: $y and: $z ] ] ] ] ])
+				or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $h) or: [ currentCharacter between: $j and: $z ] ] ] ])
 		ifTrue: [ 
 			[ 
 			self recordMatch: #(71).
 			self step.
 			(currentCharacter between: $0 and: $9)
 				or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-				whileTrue ].
+				whileTrue.
+			^ self reportLastMatch ].
 	^ self reportLastMatch

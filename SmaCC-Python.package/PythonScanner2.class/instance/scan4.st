@@ -9,7 +9,8 @@ scan4
 				ifTrue: [ 
 					self step.
 					currentCharacter = $"
-						ifTrue: [ ^ self recordAndReportMatch: #(72) ] ].
+						ifTrue: [ ^ self recordAndReportMatch: #(72) ].
+					^ self scan4 ].
 			^ self scan4 ].
 	currentCharacter = $\
 		ifTrue: [ 
