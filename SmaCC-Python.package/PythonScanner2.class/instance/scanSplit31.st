@@ -1,5 +1,5 @@
 generated
-scanSplit29
+scanSplit31
 	self recordMatch: #(71).
 	self step.
 	currentCharacter = $l
@@ -36,24 +36,7 @@ scanSplit29
 								or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
 								whileTrue ].
 					^ self reportLastMatch ].
-			currentCharacter = $s
-				ifTrue: [ ^ self scanSplit28 ].
-			((currentCharacter between: $0 and: $9)
-				or: [ 
-					(currentCharacter between: $A and: $Z)
-						or: [ 
-							currentCharacter = $_
-								or: [ 
-									(currentCharacter between: $a and: $h)
-										or: [ (currentCharacter between: $j and: $r) or: [ currentCharacter between: $t and: $z ] ] ] ] ])
-				ifTrue: [ 
-					[ 
-					self recordMatch: #(71).
-					self step.
-					(currentCharacter between: $0 and: $9)
-						or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-						whileTrue ].
-			^ self reportLastMatch ].
+			^ self scanSplitSeq30 ].
 	currentCharacter = $x
 		ifTrue: [ ^ self scanSplit18 ].
 	((currentCharacter between: $0 and: $9)
@@ -70,6 +53,5 @@ scanSplit29
 			self step.
 			(currentCharacter between: $0 and: $9)
 				or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-				whileTrue.
-			^ self reportLastMatch ].
+				whileTrue ].
 	^ self reportLastMatch

@@ -1,3 +1,3 @@
 generated
 scanForToken
-	^ self scanSplit35
+	^ self scanSplit34

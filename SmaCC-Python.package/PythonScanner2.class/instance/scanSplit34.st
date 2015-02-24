@@ -1,5 +1,5 @@
 generated
-scanSplit35
+scanSplit34
 	state == #lineBegin
 		ifTrue: [ 
 			self step.
@@ -64,5 +64,41 @@ scanSplit35
 					currentCharacter = $=
 						ifTrue: [ ^ self recordAndReportMatch: #(31) ].
 					^ self reportLastMatch ].
-			^ self scanSplitSeq34 ].
+			currentCharacter = $&
+				ifTrue: [ 
+					self recordMatch: #(38).
+					self step.
+					currentCharacter = $=
+						ifTrue: [ ^ self recordAndReportMatch: #(28) ].
+					^ self reportLastMatch ].
+			currentCharacter = $'
+				ifTrue: [ ^ self scan5 ].
+			currentCharacter = $(
+				ifTrue: [ ^ self recordAndReportMatch: #(81) ].
+			currentCharacter = $)
+				ifTrue: [ ^ self recordAndReportMatch: #(82) ].
+			currentCharacter = $*
+				ifTrue: [ 
+					self recordMatch: #(19).
+					self step.
+					currentCharacter = $*
+						ifTrue: [ 
+							self recordMatch: #(20).
+							self step.
+							currentCharacter = $=
+								ifTrue: [ ^ self recordAndReportMatch: #(5) ].
+							^ self reportLastMatch ].
+					currentCharacter = $=
+						ifTrue: [ ^ self recordAndReportMatch: #(33) ].
+					^ self reportLastMatch ].
+			currentCharacter = $+
+				ifTrue: [ 
+					self recordMatch: #(44).
+					self step.
+					currentCharacter = $=
+						ifTrue: [ ^ self recordAndReportMatch: #(35) ].
+					^ self reportLastMatch ].
+			currentCharacter = $,
+				ifTrue: [ ^ self recordAndReportMatch: #(22) ].
+			^ self scanSplitSeq33 ].
 	^ self reportLastMatch

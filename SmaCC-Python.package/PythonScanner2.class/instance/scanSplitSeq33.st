@@ -1,101 +1,115 @@
 generated
 scanSplitSeq33
-	currentCharacter = $@
-		ifTrue: [ ^ self recordAndReportMatch: #(23) ].
-	currentCharacter = $R
-		ifTrue: [ ^ self scan13 ].
-	currentCharacter = $[
-		ifTrue: [ ^ self recordAndReportMatch: #(83) ].
-	currentCharacter = $\
+	currentCharacter = $-
 		ifTrue: [ 
-			self step.
-			currentCharacter = Character lf
-				ifTrue: [ ^ self recordAndReportMatch: #(79) ].
-			currentCharacter = Character cr
-				ifTrue: [ 
-					self recordMatch: #(79).
-					self step.
-					currentCharacter = Character lf
-						ifTrue: [ ^ self recordAndReportMatch: #(79) ].
-					^ self reportLastMatch ].
-			^ self reportLastMatch ].
-	currentCharacter = $]
-		ifTrue: [ ^ self recordAndReportMatch: #(84) ].
-	currentCharacter = $^
-		ifTrue: [ 
-			self recordMatch: #(37).
+			self recordMatch: #(53).
 			self step.
 			currentCharacter = $=
-				ifTrue: [ ^ self recordAndReportMatch: #(34) ].
+				ifTrue: [ ^ self recordAndReportMatch: #(32) ].
 			^ self reportLastMatch ].
-	currentCharacter = $`
-		ifTrue: [ ^ self recordAndReportMatch: #(46) ].
-	currentCharacter = $a
-		ifTrue: [ ^ self scanSplit16 ].
-	currentCharacter = $b
-		ifTrue: [ ^ self scanSplit30 ].
-	currentCharacter = $c
-		ifTrue: [ ^ self scanSplit20 ].
-	currentCharacter = $d
-		ifTrue: [ ^ self scanSplit3 ].
-	currentCharacter = $e
-		ifTrue: [ ^ self scanSplit29 ].
-	currentCharacter = $f
-		ifTrue: [ ^ self scanSplit23 ].
-	currentCharacter = $g
+	currentCharacter = $.
 		ifTrue: [ 
-			self recordMatch: #(71).
+			self recordMatch: #(13).
 			self step.
-			currentCharacter = $l
-				ifTrue: [ ^ self scanSplit2 ].
-			((currentCharacter between: $0 and: $9)
-				or: [ 
-					(currentCharacter between: $A and: $Z)
-						or: [ currentCharacter = $_ or: [ (currentCharacter between: $a and: $k) or: [ currentCharacter between: $m and: $z ] ] ] ])
+			currentCharacter isDigit
+				ifTrue: [ ^ self scan9 ].
+			^ self reportLastMatch ].
+	currentCharacter = $/
+		ifTrue: [ 
+			self recordMatch: #(50).
+			self step.
+			currentCharacter = $/
+				ifTrue: [ 
+					self recordMatch: #(48).
+					self step.
+					currentCharacter = $=
+						ifTrue: [ ^ self recordAndReportMatch: #(6) ].
+					^ self reportLastMatch ].
+			currentCharacter = $=
+				ifTrue: [ ^ self recordAndReportMatch: #(30) ].
+			^ self reportLastMatch ].
+	currentCharacter = $0
+		ifTrue: [ 
+			self recordMatch: #(73).
+			self step.
+			currentCharacter = $.
+				ifTrue: [ ^ self scan9 ].
+			(currentCharacter between: $8 and: $9)
+				ifTrue: [ ^ self scan12 ].
+			currentCharacter isDigit
 				ifTrue: [ 
 					[ 
-					self recordMatch: #(71).
+					self recordMatch: #(73).
 					self step.
-					(currentCharacter between: $0 and: $9)
-						or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-						whileTrue.
+					currentCharacter = $.
+						ifTrue: [ ^ self scan9 ].
+					(currentCharacter between: $8 and: $9)
+						ifTrue: [ ^ self scan12 ].
+					currentCharacter isDigit ] whileTrue.
+					('Ee' includes: currentCharacter)
+						ifTrue: [ ^ self scan10 ].
+					('Ljl' includes: currentCharacter)
+						ifTrue: [ ^ self recordAndReportMatch: #(73) ].
 					^ self reportLastMatch ].
-			^ self reportLastMatch ].
-	currentCharacter = $i
-		ifTrue: [ 
-			self recordMatch: #(71).
-			self step.
-			currentCharacter = $f
+			('Bb' includes: currentCharacter)
 				ifTrue: [ 
-					self recordMatch: #(59 71).
 					self step.
-					((currentCharacter between: $0 and: $9)
-						or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ])
+					(currentCharacter between: $0 and: $1)
 						ifTrue: [ 
 							[ 
-							self recordMatch: #(71).
+							self recordMatch: #(73).
 							self step.
-							(currentCharacter between: $0 and: $9)
-								or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-								whileTrue.
-							^ self reportLastMatch ].
+							currentCharacter between: $0 and: $1 ] whileTrue.
+							('Ll' includes: currentCharacter)
+								ifTrue: [ ^ self recordAndReportMatch: #(73) ] ].
 					^ self reportLastMatch ].
-			^ self scanSplitSeq32 ].
-	currentCharacter = $l
-		ifTrue: [ 
-			self recordMatch: #(71).
-			self step.
-			currentCharacter = $a
-				ifTrue: [ ^ self scanSplit1 ].
-			((currentCharacter between: $0 and: $9)
-				or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $b and: $z ] ] ])
+			('Ee' includes: currentCharacter)
+				ifTrue: [ ^ self scan10 ].
+			('Oo' includes: currentCharacter)
 				ifTrue: [ 
-					[ 
-					self recordMatch: #(71).
 					self step.
-					(currentCharacter between: $0 and: $9)
-						or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-						whileTrue.
+					(currentCharacter between: $0 and: $7)
+						ifTrue: [ 
+							[ 
+							self recordMatch: #(73).
+							self step.
+							currentCharacter between: $0 and: $7 ] whileTrue.
+							('Ll' includes: currentCharacter)
+								ifTrue: [ ^ self recordAndReportMatch: #(73) ] ].
 					^ self reportLastMatch ].
+			('Xx' includes: currentCharacter)
+				ifTrue: [ 
+					self step.
+					currentCharacter isHexDigit
+						ifTrue: [ 
+							[ 
+							self recordMatch: #(73).
+							self step.
+							('Ll' includes: currentCharacter)
+								ifTrue: [ ^ self recordAndReportMatch: #(73) ].
+							currentCharacter isHexDigit ] whileTrue ].
+					^ self reportLastMatch ].
+			('Ljl' includes: currentCharacter)
+				ifTrue: [ ^ self recordAndReportMatch: #(73) ].
 			^ self reportLastMatch ].
-	^ self scanSplitSeq31
+	currentCharacter = $:
+		ifTrue: [ ^ self recordAndReportMatch: #(21) ].
+	currentCharacter = $;
+		ifTrue: [ ^ self recordAndReportMatch: #(26) ].
+	currentCharacter = $<
+		ifTrue: [ 
+			self recordMatch: #(66).
+			self step.
+			currentCharacter = $<
+				ifTrue: [ 
+					self recordMatch: #(43).
+					self step.
+					currentCharacter = $=
+						ifTrue: [ ^ self recordAndReportMatch: #(16) ].
+					^ self reportLastMatch ].
+			currentCharacter = $=
+				ifTrue: [ ^ self recordAndReportMatch: #(45) ].
+			currentCharacter = $>
+				ifTrue: [ ^ self recordAndReportMatch: #(52) ].
+			^ self reportLastMatch ].
+	^ self scanSplitSeq32

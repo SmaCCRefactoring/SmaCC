@@ -3,7 +3,7 @@ scanSplit18
 	self recordMatch: #(71).
 	self step.
 	currentCharacter = $c
-		ifTrue: [ ^ self scanSplit12 ].
+		ifTrue: [ ^ self scanSplit10 ].
 	currentCharacter = $e
 		ifTrue: [ 
 			self recordMatch: #(71).
@@ -46,6 +46,5 @@ scanSplit18
 			self step.
 			(currentCharacter between: $0 and: $9)
 				or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-				whileTrue.
-			^ self reportLastMatch ].
+				whileTrue ].
 	^ self reportLastMatch

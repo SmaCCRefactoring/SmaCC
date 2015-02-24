@@ -1,23 +1,15 @@
 generated
-scanSplitSeq31
-	currentCharacter = $n
-		ifTrue: [ ^ self scanSplit21 ].
-	currentCharacter = $o
-		ifTrue: [ ^ self scanSplit27 ].
-	currentCharacter = $p
-		ifTrue: [ ^ self scanSplit17 ].
-	currentCharacter = $r
-		ifTrue: [ ^ self scanSplit25 ].
+scanSplitSeq25
 	currentCharacter = $t
 		ifTrue: [ ^ self scanSplit24 ].
 	currentCharacter = $w
-		ifTrue: [ ^ self scanSplit6 ].
+		ifTrue: [ ^ self scanSplit4 ].
 	currentCharacter = $y
 		ifTrue: [ 
 			self recordMatch: #(71).
 			self step.
 			currentCharacter = $i
-				ifTrue: [ ^ self scanSplit4 ].
+				ifTrue: [ ^ self scanSplit2 ].
 			((currentCharacter between: $0 and: $9)
 				or: [ 
 					(currentCharacter between: $A and: $Z)
@@ -94,6 +86,5 @@ scanSplitSeq31
 			self step.
 			(currentCharacter between: $0 and: $9)
 				or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-				whileTrue.
-			^ self reportLastMatch ].
+				whileTrue ].
 	^ self reportLastMatch
