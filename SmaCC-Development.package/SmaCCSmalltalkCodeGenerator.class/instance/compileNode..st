@@ -5,6 +5,7 @@ compileNode: aSmaCCNode
 	| methodNodes methodMap |
 	methodNodes := self statesToMakeIntoMethodsFor: aSmaCCNode.
 	methodMap := self methodNameMap: aSmaCCNode forMethods: methodNodes.
+	splitIndex := 0.
 	methodNodes
 		do: [ :each | 
 			| tree |
@@ -16,6 +17,11 @@ compileNode: aSmaCCNode
 			self endMethod.
 			tree := RBParser parseMethod: self codeStream contents.
 			self rewriters do: [ :rw | [ rw executeTree: tree ] whileTrue: [ tree := rw tree ] ].
-			splitIndex := 0.
-			[ tree allChildren size > self maxMethodLength ] whileTrue: [ self splitTree: tree ].
+			self splitSpecificRewriter
+				in: [ :rewriter | 
+					(rewriter executeTree: tree)
+						ifTrue: [ tree := rewriter tree ] ].
+			(tree allChildren select: #isLiteralNode) size > 90
+				ifTrue: [ [ self splitTree: tree toLimit: 90 ] whileTrue: [ tree := RBParser parseMethod: tree formattedCode ] ].
+			self rewriters do: [ :rw | [ rw executeTree: tree ] whileTrue: [ tree := rw tree ] ].
 			self compileOptimizedMethod: tree in: scannerClass ]
