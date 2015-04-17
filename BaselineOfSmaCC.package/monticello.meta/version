@@ -1,3 +1,4 @@
-(name 'BaselineOfSmaCC-ThierryGoubier.3' message 'commented' id 'a2f5c21a-cef0-4afc-85d7-bc14818f775e' date '6 March 2015' time '10:17:33.097475 am' author 'ThierryGoubier' ancestors ((name 'BaselineOfSmaCC-ThierryGoubier.2' message 'Add a ''Tests'' group
+(name 'BaselineOfSmaCC-ThierryGoubier.4' message 'catalog keywords' id '7fe0ef70-be21-4fba-9443-9b807ba6a26a' date '17 April 2015' time '3:08:15.689421 pm' author 'ThierryGoubier' ancestors ((name 'BaselineOfSmaCC-ThierryGoubier.3' message 'commented
+' id '23a26c76-75a0-5413-92b4-883b4e7fa161' date '6 March 2015' time '10:17:33 am' author 'ThierryGoubier' ancestors ((name 'BaselineOfSmaCC-ThierryGoubier.2' message 'Add a ''Tests'' group
 ' id '1d62d7f5-820e-5062-ab07-474dc94d5434' date '5 February 2015' time '10:13:42 am' author 'ThierryGoubier' ancestors ((name 'BaselineOfSmaCC-ThierryGoubier.1' message 'First attempt at a baseline
-' id 'd23e9deb-7aa2-5259-931a-cd5f9f70d7cd' date '22 October 2014' time '3:32:30 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())) stepChildren ())
+' id 'd23e9deb-7aa2-5259-931a-cd5f9f70d7cd' date '22 October 2014' time '3:32:30 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())
