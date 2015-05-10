@@ -1,3 +1,3 @@
 generated-reduction actions
-reduceActionFor_space__1: nodes
+reduceActionFortag_1: nodes
 	^ OrderedCollection new

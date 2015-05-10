@@ -1,3 +1,3 @@
 generated-reduction actions
-reduceActionFor_eol__1: nodes
+reduceActionFor_line__1: nodes
 	^ OrderedCollection with: (nodes at: 1)

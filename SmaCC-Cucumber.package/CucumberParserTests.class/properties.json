@@ -7,8 +7,8 @@
 	"commentStamp" : "<historical>",
 	"instvars" : [
 		 ],
-	"name" : "CucumberScanner",
+	"name" : "CucumberParserTests",
 	"pools" : [
 		 ],
-	"super" : "SmaCCScanner",
+	"super" : "TestCase",
 	"type" : "normal" }

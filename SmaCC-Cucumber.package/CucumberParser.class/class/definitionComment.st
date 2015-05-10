@@ -1,59 +1,51 @@
 generated
 definitionComment
-"%root Root;
-%prefix Cuc;
-%suffix Node;
-%glr ;
+"#%root Root;
+#%prefix Cuc;
+#%suffix Node;
+#%glr ;
 
-<tag> : @ ([^@\r\n\t ])+ ;
-<space> : [  \t] ;
-<line_to_eol> : (!(\r?\n))* ;
-<eol> : \r?\n ;
-<white> : <space> | <eol> ;
-<comment_line> : <space>* \# <line_to_eol> ;
-<comment> : (<comment_line> <white>)* ;
-<open_py_string> : <space>* \""\""\"" <space>* <eol> ;
-<close_py_string> : <eol> <space>* \""\""\"" <white> ;
-<py_string> : <open_py_string> (!<close_py_string>)* <close_py_string> ;
-<row_start> : <space> * \|;
-<cell> : [^\r\n|]+ \| ;
-<step_keyword> : Given | When | Then | And | But ;
-<examples_keyword> : Examples\: ;
-<scenario_outline_keyword> : Scenario\ Outline\: ;
-<scenario_keyword> : Scenario\: ;
-<background_keyword> : Background\: ;
-<feature_keyword> : Feature\: ;
-<reserved_words_and_symbols> : (<step_keyword> \ ) | <scenario_keyword> | <scenario_outline_keyword> | <row_start> | <tag> | \# ;
-<whitespace> : \s ;
-
-after_keyword <lines_to_keyword> : (!(<eol> <space>* <reserved_words_and_symbols>))* ;
-
+<tagKeyword> : @ ([^@\r\n\t ])+ ;
+<py_string> : [ \t]* \""\""\"" ([^\""] | \"" [^\""] | \""\"" [^\""] ) * \"" \"" \"" ;
+<rowKeyword> : \|;
+<stepKeyword> : Given | When | Then | And | But ;
+<examplesKeyword> : Examples\: ;
+<scenarioOutlineKeyword> : Scenario\ Outline\: ;
+<scenarioKeyword> : Scenario\: ;
+<backgroundKeyword> : Background\: ;
+<featureKeyword> : Feature\: ;
+lineBegin <stepStart> :  [ \t]* <stepKeyword>;
+lineBegin <scenarioStart> :  [ \t]* <scenarioKeyword>;
+lineBegin <examplesStart> :  [ \t]* <examplesKeyword>;
+lineBegin <scenarioOutlineStart> :  [ \t]* <scenarioOutlineKeyword>;
+lineBegin <featureStart> :  [ \t]* <featureKeyword>;
+lineBegin <backgroundStart> :  [ \t]* <backgroundKeyword>;
+lineBegin <rowStart> :  [ \t]* <rowKeyword>;
+lineBegin <tagStart> :  [ \t]* <tagKeyword>;
+lineBegin <comment> : [ \t]* \# [^\r\n]* ;
+lineBegin <eol1> : [ \t]* (\r | \r\n | \n) ;
+lineBegin <line> : [^\r\n]+ ;
+<line> : [^\r\n]+ ;
+inRow <cell> : [^\r\n|]+ \| ;
+inRow <eol2> : [ \t]* (\r | \r\n | \n) ;
+<eol> : [ \t]* (\r | \r\n | \n) ;
 
 # Grammar part of it.
-feature : tags ""Feature:"" <lines_to_keyword> background? 'background' feature_elements {{}} ;
-
-feature_elements :
-	| feature_element 'feature_element' feature_elements
-	;
+feature : tag* <featureStart> <line>+ background? feature_element+ ;
 
 feature_element:
 	scenario
 	| scenario_outline
 	; 
 
-scenario :  tags <scenario_keyword> <lines_to_keyword> steps {{}} ;
+scenario :  tag* <scenarioStart> <line>+ step+ ;
 
-scenario_outline : tags <scenario_outline_keyword> <lines_to_keyword> steps examples_sections {{}};
+scenario_outline : tag* <scenarioOutlineStart> <line>+ step+ example* ;
 
-tags :
-	| <tag> 'tag' tags
-	;
-
-background : <comment> <background_keyword> <space>* <lines_to_keyword>? <eol>+ steps ;
-row : <row_start> (<cell>| <row_start>)+ <eol> ;
+background : <backgroundStart> <line>* step+ ;
+row : <rowStart> (<cell>)+ ;
 table : row+ ;
-steps : step* ;
-step : <comment> <step_keyword> <space>* <line_to_eol> (<eol>+) multiline_arg? <white> ;
-examples_sections : examples* ;
-examples : <comment> <space>* <examples_keyword> <space>* <lines_to_keyword>? <eol> table <white> ;
-multiline_arg : table | <py_string> ;"
+step : <stepStart> <line> multiline_arg? ;
+example : <examplesStart> <line> table ;
+multiline_arg : table | <py_string> ;
+tag : <tagStart> ;"

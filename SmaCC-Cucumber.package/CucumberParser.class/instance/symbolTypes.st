@@ -1,3 +1,0 @@
-generated
-symbolTypes
-	^ #(#SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #SmaCCToken #Object #CucScenarioOutlineNode #Object #SmaCCToken #CucScenarioNode #CucRootNode #CucFeatureNode #CucFeatureNode #SmaCCToken #Object #Object #Object #Object #Object #Object #OrderedCollection #Object #Object #Object #Object #Object #Object #Object #Object #OrderedCollection #SmaCCToken #SmaCCToken #Object)

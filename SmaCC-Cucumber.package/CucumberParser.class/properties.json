@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "<historical>",
 	"instvars" : [
 		 ],
 	"name" : "CucumberParser",
 	"pools" : [
 		 ],
-	"super" : "SmaCCGLRParser",
+	"super" : "SmaCCParser",
 	"type" : "normal" }

@@ -1,3 +1,3 @@
 generated
 tokenActions
-	^ #(nil nil nil nil nil nil #comment nil nil nil nil nil nil nil nil #whitespace)
+	^ #(nil #stepStart #scenarioStart #examplesStart #scenarioOutlineStart #featureStart #backgroundStart #rowStart #tagStart #comment #eol1 nil nil #eol2 #eol)
