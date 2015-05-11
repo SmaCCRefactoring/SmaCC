@@ -1,6 +1,6 @@
 generated
-scan19
+scan23
 	self step.
-	currentCharacter = $v
+	currentCharacter = $h
 		ifTrue: [ ^ self scan20 ].
 	^ self reportLastMatch

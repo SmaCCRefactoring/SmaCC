@@ -1,20 +1,14 @@
 generated
 scan5
+	self recordMatch: #(1 12).
 	self step.
-	(currentCharacter <= Character backspace
-		or: [ 
-			(currentCharacter between: Character pageUp and: Character newPage)
-				or: [ 
-					(currentCharacter between: (Character value: 14) and: Character arrowDown)
-						or: [ (currentCharacter between: $! and: $?) or: [ currentCharacter >= $A ] ] ] ])
+	(currentCharacter <= Character tab
+		or: [ (currentCharacter between: Character pageUp and: Character newPage) or: [ currentCharacter >= (Character value: 14) ] ])
 		ifTrue: [ 
 			[ 
-			self recordMatch: #(9).
+			self recordMatch: #(12).
 			self step.
-			currentCharacter <= Character backspace
-				or: [ 
-					(currentCharacter between: Character pageUp and: Character newPage)
-						or: [ 
-							(currentCharacter between: (Character value: 14) and: Character arrowDown)
-								or: [ (currentCharacter between: $! and: $?) or: [ currentCharacter >= $A ] ] ] ] ] whileTrue ].
+			currentCharacter <= Character tab
+				or: [ (currentCharacter between: Character pageUp and: Character newPage) or: [ currentCharacter >= (Character value: 14) ] ] ]
+				whileTrue ].
 	^ self reportLastMatch

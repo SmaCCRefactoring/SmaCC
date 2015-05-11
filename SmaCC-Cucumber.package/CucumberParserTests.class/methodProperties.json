@@ -2,12 +2,22 @@
 	"class" : {
 		"backgroundFeature" : "ThierryGoubier 5/10/2015 23:44",
 		"datatablesFeature" : "ThierryGoubier 5/10/2015 23:46",
-		"groupFeature" : "ThierryGoubier 5/6/2015 22:07",
-		"inviteFeature" : "ThierryGoubier 5/6/2015 22:03",
-		"searchFeature" : "ThierryGoubier 5/6/2015 22:06",
-		"snippetSearchFeature" : "ThierryGoubier 5/6/2015 22:05",
-		"userFeature" : "ThierryGoubier 5/6/2015 22:05" },
+		"descriptionFeature" : "ThierryGoubier 5/11/2015 07:28",
+		"docstringFeature" : "ThierryGoubier 5/11/2015 18:40",
+		"exampleTokensEverywhereFeature" : "ThierryGoubier 5/11/2015 18:48",
+		"languageFeature" : "ThierryGoubier 5/11/2015 18:52",
+		"minimalFeature" : "ThierryGoubier 5/11/2015 18:53",
+		"scenarioOutlineFeature" : "ThierryGoubier 5/11/2015 18:54",
+		"severalExamplesFeature" : "ThierryGoubier 5/11/2015 18:55",
+		"tagsFeature" : "ThierryGoubier 5/11/2015 19:04" },
 	"instance" : {
 		"testBackgroundFeature" : "ThierryGoubier 5/10/2015 23:45",
 		"testDatatablesFeature" : "ThierryGoubier 5/10/2015 23:46",
-		"testGroupFeature" : "ThierryGoubier 5/6/2015 22:34" } }
+		"testDescriptionFeature" : "ThierryGoubier 5/11/2015 07:29",
+		"testDocstringFeature" : "ThierryGoubier 5/11/2015 18:41",
+		"testExampleTokensEverywhereFeature" : "ThierryGoubier 5/11/2015 18:48",
+		"testLanguageFeature" : "ThierryGoubier 5/11/2015 18:52",
+		"testMinimalFeature" : "ThierryGoubier 5/11/2015 18:53",
+		"testScenarioOutlineFeature" : "ThierryGoubier 5/11/2015 18:54",
+		"testSeveralExamplesFeature" : "ThierryGoubier 5/11/2015 18:56",
+		"testTagsFeature" : "ThierryGoubier 5/11/2015 19:07" } }

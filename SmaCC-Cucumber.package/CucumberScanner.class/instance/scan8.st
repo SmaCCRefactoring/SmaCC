@@ -1,8 +1,13 @@
 generated
 scan8
+	[ 
 	self step.
-	currentCharacter = $a
-		ifTrue: [ ^ self scan9 ].
-	currentCharacter = $u
-		ifTrue: [ ^ self scan10 ].
-	^ self reportLastMatch
+	currentCharacter = $`
+		ifTrue: [ 
+			self step.
+			currentCharacter = $`
+				ifTrue: [ 
+					self step.
+					currentCharacter = $`
+						ifTrue: [ ^ self recordAndReportMatch: #(1) ] ].
+			^ self scan8 ] ] repeat

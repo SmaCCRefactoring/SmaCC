@@ -12,19 +12,7 @@ scan3
 					self recordMatch: #(12).
 					self step.
 					currentCharacter = $"
-						ifTrue: [ 
-							self recordMatch: #(1 12).
-							self step.
-							(currentCharacter <= Character tab
-								or: [ (currentCharacter between: Character pageUp and: Character newPage) or: [ currentCharacter >= (Character value: 14) ] ])
-								ifTrue: [ 
-									[ 
-									self recordMatch: #(12).
-									self step.
-									currentCharacter <= Character tab
-										or: [ (currentCharacter between: Character pageUp and: Character newPage) or: [ currentCharacter >= (Character value: 14) ] ] ]
-										whileTrue ].
-							^ self reportLastMatch ] ].
+						ifTrue: [ ^ self scan5 ] ].
 			(currentCharacter = Character lf or: [ currentCharacter = Character cr ])
 				ifTrue: [ ^ self scan4 ].
 			^ self scan3 ].

@@ -1,24 +1,30 @@
 generated
 scan12
 	self step.
-	currentCharacter = $a
+	currentCharacter = $c
 		ifTrue: [ 
 			self step.
-			currentCharacter = $m
+			currentCharacter = $k
 				ifTrue: [ 
 					self step.
-					currentCharacter = $p
+					currentCharacter = $g
 						ifTrue: [ 
 							self step.
-							currentCharacter = $l
+							currentCharacter = $r
 								ifTrue: [ 
 									self step.
-									currentCharacter = $e
+									currentCharacter = $o
 										ifTrue: [ 
 											self step.
-											currentCharacter = $s
+											currentCharacter = $u
 												ifTrue: [ 
 													self step.
-													currentCharacter = $:
-														ifTrue: [ ^ self recordAndReportMatch: #(4) ] ] ] ] ] ] ].
+													currentCharacter = $n
+														ifTrue: [ 
+															self step.
+															currentCharacter = $d
+																ifTrue: [ 
+																	self step.
+																	currentCharacter = $:
+																		ifTrue: [ ^ self recordAndReportMatch: #(7) ] ] ] ] ] ] ] ] ].
 	^ self reportLastMatch

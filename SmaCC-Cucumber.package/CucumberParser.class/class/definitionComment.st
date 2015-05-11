@@ -3,10 +3,10 @@ definitionComment
 "#%root Root;
 #%prefix Cuc;
 #%suffix Node;
-#%glr ;
+%glr ;
 
-<tagKeyword> : @ ([^@\r\n\t ])+ ;
-<py_string> : [ \t]* \""\""\"" ([^\""] | \"" [^\""] | \""\"" [^\""] ) * \"" \"" \"" ;
+<tagKeyword> : @ ;
+<py_string> : [ \t]* ( (\""\""\"" ([^\""] | \"" [^\""] | \""\"" [^\""] ) * \"" \"" \"") | (``` ( [^`] | `[^`] | ``[^`] )* ```) );
 <rowKeyword> : \|;
 <stepKeyword> : Given | When | Then | And | But ;
 <examplesKeyword> : Examples\: ;
@@ -37,14 +37,14 @@ feature_element:
 	| scenario_outline
 	; 
 
-scenario :  tag* <scenarioStart> <line>+ step+ ;
+scenario :  tag* <scenarioStart> <line>+ step* ;
 
-scenario_outline : tag* <scenarioOutlineStart> <line>+ step+ example* ;
+scenario_outline : tag* <scenarioOutlineStart> <line>+ step+ example+ ;
 
 background : <backgroundStart> <line>* step+ ;
 row : <rowStart> (<cell>)+ ;
 table : row+ ;
 step : <stepStart> <line> multiline_arg? ;
-example : <examplesStart> <line> table ;
+example : tag* <examplesStart> <line>* table ;
 multiline_arg : table | <py_string> ;
-tag : <tagStart> ;"
+tag : <tagStart> <line> ;"

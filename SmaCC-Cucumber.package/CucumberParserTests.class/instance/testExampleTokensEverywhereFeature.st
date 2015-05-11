@@ -1,0 +1,3 @@
+as yet unclassified
+testExampleTokensEverywhereFeature
+	CucumberParser parse: self class exampleTokensEverywhereFeature

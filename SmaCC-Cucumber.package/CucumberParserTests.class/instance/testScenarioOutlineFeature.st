@@ -1,0 +1,3 @@
+as yet unclassified
+testScenarioOutlineFeature
+	CucumberParser parse: self class scenarioOutlineFeature

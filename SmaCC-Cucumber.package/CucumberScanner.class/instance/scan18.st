@@ -1,6 +1,6 @@
 generated
 scan18
 	self step.
-	currentCharacter = $c
+	currentCharacter = $i
 		ifTrue: [ ^ self scan19 ].
 	^ self reportLastMatch

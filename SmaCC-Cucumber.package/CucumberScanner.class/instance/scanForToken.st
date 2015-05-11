@@ -38,6 +38,8 @@ scanForToken
 				ifTrue: [ ^ self scan1 ].
 			currentCharacter = $"
 				ifTrue: [ ^ self scan2 ].
+			currentCharacter = $`
+				ifTrue: [ ^ self scan6 ].
 			(currentCharacter = Character tab or: [ currentCharacter = Character space ])
 				ifTrue: [ 
 					[ 
@@ -49,6 +51,8 @@ scanForToken
 						ifTrue: [ ^ self scan1 ].
 					currentCharacter = $"
 						ifTrue: [ ^ self scan2 ].
+					currentCharacter = $`
+						ifTrue: [ ^ self scan6 ].
 					currentCharacter = Character tab or: [ currentCharacter = Character space ] ] whileTrue ].
 			true
 				ifTrue: [ 
