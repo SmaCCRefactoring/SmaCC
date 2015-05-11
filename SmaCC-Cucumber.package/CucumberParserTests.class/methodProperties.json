@@ -1,9 +1,13 @@
 {
 	"class" : {
+		"backgroundFeature" : "ThierryGoubier 5/10/2015 23:44",
+		"datatablesFeature" : "ThierryGoubier 5/10/2015 23:46",
 		"groupFeature" : "ThierryGoubier 5/6/2015 22:07",
 		"inviteFeature" : "ThierryGoubier 5/6/2015 22:03",
 		"searchFeature" : "ThierryGoubier 5/6/2015 22:06",
 		"snippetSearchFeature" : "ThierryGoubier 5/6/2015 22:05",
 		"userFeature" : "ThierryGoubier 5/6/2015 22:05" },
 	"instance" : {
+		"testBackgroundFeature" : "ThierryGoubier 5/10/2015 23:45",
+		"testDatatablesFeature" : "ThierryGoubier 5/10/2015 23:46",
 		"testGroupFeature" : "ThierryGoubier 5/6/2015 22:34" } }

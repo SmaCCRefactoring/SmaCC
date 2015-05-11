@@ -23,10 +23,9 @@ lineBegin <backgroundStart> :  [ \t]* <backgroundKeyword>;
 lineBegin <rowStart> :  [ \t]* <rowKeyword>;
 lineBegin <tagStart> :  [ \t]* <tagKeyword>;
 lineBegin <comment> : [ \t]* \# [^\r\n]* ;
-lineBegin <eol1> : [ \t]* (\r | \r\n | \n) ;
-lineBegin <line> : [^\r\n]+ ;
+lineBegin <noKeyword> : . ;
 <line> : [^\r\n]+ ;
-inRow <cell> : [^\r\n|]+ \| ;
+inRow <cell> : [^\r\n|]* \| ;
 inRow <eol2> : [ \t]* (\r | \r\n | \n) ;
 <eol> : [ \t]* (\r | \r\n | \n) ;
 

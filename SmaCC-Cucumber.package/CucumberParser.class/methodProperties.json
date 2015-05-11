@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"definitionComment" : "ThierryGoubier 5/10/2015 23:34",
+		"definitionComment" : "ThierryGoubier 5/11/2015 07:22",
 		"scannerClass" : "ThierryGoubier 10/15/2014 14:27:30",
 		"startingStateForfeature" : "ThierryGoubier 10/15/2014 14:27:30" },
 	"instance" : {
@@ -8,5 +8,5 @@
 		"reduceActionForbackground_2:" : "ThierryGoubier 10/15/2014 14:27:30",
 		"reduceActionFortag_1:" : "ThierryGoubier 5/8/2015 23:25",
 		"reduceActionFortag_2:" : "ThierryGoubier 5/8/2015 23:25",
-		"reduceTable" : "ThierryGoubier 5/10/2015 23:34",
-		"transitionTable" : "ThierryGoubier 5/10/2015 23:34" } }
+		"reduceTable" : "ThierryGoubier 5/11/2015 07:19",
+		"transitionTable" : "ThierryGoubier 5/11/2015 07:19" } }

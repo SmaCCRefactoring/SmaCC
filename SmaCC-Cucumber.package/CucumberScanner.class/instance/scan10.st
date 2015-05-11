@@ -1,6 +1,6 @@
 generated
-scan7
+scan10
 	self step.
-	currentCharacter = $d
+	currentCharacter = $t
 		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
 	^ self reportLastMatch

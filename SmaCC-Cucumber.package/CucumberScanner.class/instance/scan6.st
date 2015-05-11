@@ -1,7 +1,6 @@
 generated
 scan6
-	self recordMatch: #(14).
 	self step.
-	currentCharacter = Character lf
-		ifTrue: [ ^ self recordAndReportMatch: #(14) ].
+	currentCharacter = $n
+		ifTrue: [ ^ self scan7 ].
 	^ self reportLastMatch
