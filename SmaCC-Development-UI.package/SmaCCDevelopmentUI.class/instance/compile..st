@@ -1,8 +1,9 @@
 private
 compile: aSymbol
-	| aGrammar stream oldCharacterSize parserCompiler |
+	| aGrammar stream oldCharacterSize parserCompiler messages |
 	(self scannerClassString isEmpty or: [ self parserClassString isEmpty ])
 		ifTrue: [ ^ UIManager default inform: 'Both classes are not specified' ].
+	messages := OrderedCollection new.
 	Cursor read
 		showWhile: [ 
 			self verifyDefinition
@@ -28,17 +29,15 @@ compile: aSymbol
 				on: SmaCCCompilationNotification
 				do: [ :ex | 
 					(ShowPrecedenceConflicts or: [ ('*precedence*' match: ex messageText) not ])
-						ifTrue: [ 
-							stream
-								nextPutAll: '-------------------------\' withCRs asText , ex messageText asText allBold;
-								cr;
-								cr;
-								nextPutAll: ex description;
-								cr;
-								nextPutAll: ex tag;
-								cr;
-								cr ].
+						ifTrue: [ messages add: ex messageText , Character cr asString , Character cr asString , ex tag ].
 					ex pass ].
+			messages asSortedCollection
+				do: [ :each | 
+					stream
+						nextPutAll: '-------------------------';
+						cr;
+						nextPutAll: each;
+						cr ].
 			self conflicts: stream contents.
 			grammarCompiler := parserCompiler.
 			self changed: #items.

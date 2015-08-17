@@ -1,12 +1,12 @@
 {
 	"class" : {
-		"asts" : "ThierryGoubier 6/14/2014 02:57:59",
-		"bookName" : "ThierryGoubier 6/14/2014 02:57:59",
-		"directives" : "ThierryGoubier 6/14/2014 02:57:59",
-		"pages" : "ThierryGoubier 6/14/2014 02:57:59",
-		"parser" : "ThierryGoubier 6/14/2014 02:57:59",
-		"scanner" : "ThierryGoubier 6/14/2014 02:57:59",
-		"transformations" : "ThierryGoubier 6/14/2014 02:57:59",
-		"tutorial" : "ThierryGoubier 6/14/2014 02:57:59" },
+		"asts" : "StephanEggermont 3/2/2015 15:27:56",
+		"bookName" : "StephanEggermont 3/2/2015 15:27:56",
+		"directives" : "StephanEggermont 3/2/2015 15:27:56",
+		"pages" : "StephanEggermont 3/2/2015 15:27:56",
+		"parser" : "StephanEggermont 3/2/2015 15:27:56",
+		"scanner" : "StephanEggermont 3/2/2015 15:27:56",
+		"transformations" : "StephanEggermont 3/2/2015 15:27:56",
+		"tutorial" : "StephanEggermont 3/2/2015 15:27:56" },
 	"instance" : {
 		 } }
