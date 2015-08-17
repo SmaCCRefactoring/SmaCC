@@ -1,0 +1,16 @@
+{
+	"class" : {
+		"definitionComment" : "ThierryGoubier 8/17/2015 15:46",
+		"scannerClass" : "ThierryGoubier 8/17/2015 15:46",
+		"startingStateForFile" : "ThierryGoubier 8/17/2015 15:46" },
+	"instance" : {
+		"reduceActionForFile1:" : "ThierryGoubier 8/17/2015 15:46",
+		"reduceActionForLine1:" : "ThierryGoubier 8/17/2015 15:46",
+		"reduceActionForLine2:" : "ThierryGoubier 8/17/2015 15:46",
+		"reduceActionForLines1:" : "ThierryGoubier 8/17/2015 15:46",
+		"reduceActionForLines2:" : "ThierryGoubier 8/17/2015 15:46",
+		"reduceActionForMissing1:" : "ThierryGoubier 8/17/2015 15:46",
+		"reduceActionForValue1:" : "ThierryGoubier 8/17/2015 15:46",
+		"reduceTable" : "ThierryGoubier 8/17/2015 15:46",
+		"symbolTypes" : "ThierryGoubier 8/17/2015 15:46",
+		"transitionTable" : "ThierryGoubier 8/17/2015 15:46" } }
