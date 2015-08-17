@@ -1,3 +1,6 @@
 compiling
 compileMethodWithoutFormattingIn: modelClass
-	modelClass compile: self codeStream contents classified: #generated
+	| code |
+	code := self codeStream contents.
+	code := code trim.
+	modelClass compile: code classified: #generated

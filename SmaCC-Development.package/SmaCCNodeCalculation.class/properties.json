@@ -8,7 +8,8 @@
 	"instvars" : [
 		"grammar",
 		"classes",
-		"variableSymbols" ],
+		"variableSymbols",
+		"singleVariableSymbols" ],
 	"name" : "SmaCCNodeCalculation",
 	"pools" : [
 		 ],

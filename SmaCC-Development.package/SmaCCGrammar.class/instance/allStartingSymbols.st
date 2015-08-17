@@ -5,7 +5,7 @@ allStartingSymbols
 	| startingSymbols default |
 	default := self startSymbol.
 	startingSymbols := otherStartingSymbols copy.
-	startingSymbols remove: default ifAbsent: [  ].
+	startingSymbols remove: default symbol ifAbsent: [  ].
 	startingSymbols := startingSymbols
 		collect: [ :each | 
 			(self newStartingSymbolNamed: each name)

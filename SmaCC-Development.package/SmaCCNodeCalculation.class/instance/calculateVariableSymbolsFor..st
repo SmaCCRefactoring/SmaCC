@@ -1,5 +1,5 @@
 private
-calculateSymbolVariablesFor: aSmaCCSymbol
+calculateVariableSymbolsFor: aSmaCCSymbol
 	"This is where the generation"
 
 	aSmaCCSymbol isTerminal
@@ -9,4 +9,4 @@ calculateSymbolVariablesFor: aSmaCCSymbol
 	(variableSymbols includes: aSmaCCSymbol)
 		ifTrue: [ ^ self ].
 	variableSymbols add: aSmaCCSymbol.
-	aSmaCCSymbol productionsDo: [ :rhs | rhs unnamedSymbolsDo: [ :each | self calculateSymbolVariablesFor: each ] ]
+	aSmaCCSymbol productionsDo: [ :rhs | rhs unnamedSymbolsDo: [ :each | self calculateVariableSymbolsFor: each ] ]

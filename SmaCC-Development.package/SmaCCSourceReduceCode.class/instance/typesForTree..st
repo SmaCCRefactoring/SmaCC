@@ -13,4 +13,7 @@ typesForTree: aRBProgramNode
 			^ types asArray ].
 	aRBProgramNode isLiteralNode
 		ifTrue: [ ^ Array with: (self model classFor: aRBProgramNode value class) ].
+	(aRBProgramNode isMessage
+		and: [ aRBProgramNode receiver isVariable and: [ aRBProgramNode receiver name = 'SmaCCToken' ] ])
+		ifTrue: [ ^ Array with: (self model classFor: SmaCCToken) ].
 	^ Array with: (self model classFor: Object)

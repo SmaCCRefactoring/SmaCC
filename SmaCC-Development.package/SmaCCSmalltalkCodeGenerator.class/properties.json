@@ -3,7 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"MaxJumpSize" ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
 		"isExpressions",

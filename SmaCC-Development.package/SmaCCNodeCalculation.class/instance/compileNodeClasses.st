@@ -3,7 +3,7 @@ compileNodeClasses
 	self sortedClasses isEmpty
 		ifTrue: [ ^ self ].
 	self defineNodeClasses.
-	self calculateSymbolVariables.
+	self calculateVariableSymbols.
 	self calculateReduceActions.
 	self calculateVariables.
 	self compileMethodsAndVariables.

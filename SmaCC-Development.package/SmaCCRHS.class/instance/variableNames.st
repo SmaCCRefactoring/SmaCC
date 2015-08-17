@@ -1,0 +1,3 @@
+accessing
+variableNames
+	^ variableNameMap keys

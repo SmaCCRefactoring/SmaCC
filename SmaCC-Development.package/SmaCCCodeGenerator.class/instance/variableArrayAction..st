@@ -13,8 +13,11 @@ variableArrayAction: aSmaCCRHS
 					value returnsVariableCollection
 						ifTrue: [ self pullUpVariablesFrom: value into: aSmaCCRHS index: key ]
 						ifFalse: [ 
-							value modelType = (self model classFor: nil class)
-								ifFalse: [ aSmaCCRHS generateUnnamedSymbolWarningFor: key ] ] ]
+							value returnsSingleVariable
+								ifTrue: [ self pullUpVariableFrom: value into: aSmaCCRHS index: key ]
+								ifFalse: [ 
+									value modelType = (self model classFor: nil class)
+										ifFalse: [ aSmaCCRHS generateUnnamedSymbolWarningFor: key ] ] ] ]
 				ifFalse: [ 
 					value returnsVariableCollection
 						ifTrue: [ aSmaCCRHS generateNamedVariableCollectionWarningFor: key ].

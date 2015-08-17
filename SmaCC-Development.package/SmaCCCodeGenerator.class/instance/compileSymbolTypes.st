@@ -2,10 +2,12 @@ compiling
 compileSymbolTypes
 	| names |
 	names := grammar symbols
-		collect:
-			[:each | 
-			| types |
+		collect: [ :each | 
+			| types previousSize |
 			types := each modelTypes.
-			types remove: (self model classFor: nil class) ifAbsent: [].
-			(self commonSupertypeOf: types) name].
+			previousSize := types sizes.
+			types remove: (self model classFor: nil class) ifAbsent: [  ].
+			(types isEmpty and: [ previousSize = 1 ])
+				ifTrue: [ nil ]
+				ifFalse: [ (self commonSupertypeOf: types) name ] ].
 	self compileSymbolTypes: names asArray

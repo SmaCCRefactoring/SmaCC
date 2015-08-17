@@ -1,3 +1,3 @@
-public
+testing
 returnsVariableCollection
 	^false

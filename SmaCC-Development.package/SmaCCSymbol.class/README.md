@@ -7,7 +7,7 @@ Subclasses must implement the following messages:
 		isTerminal
 
 Instance Variables:
-	firstItems	<Collection of: SmaCCTerminalSymbol>	the first terminals that can be produced from us
-	name	<String>	our name
+	firstTerminals	<Set of: SmaCCTerminalSymbol>	the first terminal symbol that this can produce
+	name	<String>		the name of the symbol
 	precedence	<Integer>	our precedence (in case of shift/reduce conflicts)
 

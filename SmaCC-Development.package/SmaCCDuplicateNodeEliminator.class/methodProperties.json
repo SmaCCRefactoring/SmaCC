@@ -1,12 +1,13 @@
 {
 	"class" : {
-		"removeDuplicateNodesIn:" : "ThierryGoubier 10/17/2014 17:15:44" },
+		"removeDuplicateNodesIn:" : "ThierryGoubier 2/24/2015 14:37:14" },
 	"instance" : {
-		"copyEdgesWith:" : "ThierryGoubier 10/17/2014 17:15:44",
-		"copyGraph" : "ThierryGoubier 10/17/2014 17:15:44",
-		"copyNodesInto:" : "ThierryGoubier 10/17/2014 17:15:44",
-		"isNode:equivalentTo:" : "ThierryGoubier 10/17/2014 17:15:44",
-		"mergeAllTransitions" : "ThierryGoubier 10/17/2014 17:15:44",
-		"pairsDo:" : "ThierryGoubier 10/17/2014 17:15:44",
-		"removeDuplicateNodesIn:" : "ThierryGoubier 10/17/2014 17:15:44",
-		"removeDuplicates" : "ThierryGoubier 10/17/2014 17:15:44" } }
+		"copyEdgesWith:" : "ThierryGoubier 2/24/2015 14:37:14",
+		"copyGraph" : "ThierryGoubier 2/24/2015 14:37:14",
+		"copyNodesInto:" : "ThierryGoubier 2/24/2015 14:37:14",
+		"isNode:equivalentTo:" : "ThierryGoubier 2/24/2015 14:37:14",
+		"mergeAllTransitions" : "ThierryGoubier 2/24/2015 14:37:14",
+		"mergeNodeUsing:" : "ThierryGoubier 8/17/2015 17:33",
+		"pairsDo:" : "ThierryGoubier 8/17/2015 17:34",
+		"removeDuplicateNodesIn:" : "ThierryGoubier 2/24/2015 14:37:14",
+		"removeDuplicates" : "ThierryGoubier 8/17/2015 17:35" } }
