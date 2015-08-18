@@ -12,10 +12,10 @@ replace: originalSmaCCParseNode with: newSmaCCParseNode
 							keysAndValuesDo: [ :index :value | 
 								value == originalSmaCCParseNode
 									ifTrue: [ each at: index put: newSmaCCParseNode ] ] ] ] ].
-	newSmaCCParseNode parent: self.
 	self completeSource
 		ifNotNil: [ :source | 
 			source
 				replaceFrom: originalSmaCCParseNode startPosition
 				to: originalSmaCCParseNode stopPosition
-				with: newSmaCCParseNode source ]
+				with: newSmaCCParseNode source ].
+	newSmaCCParseNode parent: self
