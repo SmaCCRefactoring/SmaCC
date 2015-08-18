@@ -1,17 +1,17 @@
 {
 	"class" : {
-		"comment:match:transformation:" : "ThierryGoubier 10/20/2014 15:33:40",
-		"newInstance" : "ThierryGoubier 10/20/2014 15:33:40" },
+		"comment:match:transformation:" : "ThierryGoubier 2/5/2015 15:53:02",
+		"newInstance" : "ThierryGoubier 2/5/2015 15:53:02" },
 	"instance" : {
-		"comment" : "ThierryGoubier 10/20/2014 15:33:40",
-		"comment:" : "ThierryGoubier 2/5/2015 13:15",
-		"displayOn:" : "ThierryGoubier 10/20/2014 15:33:40",
-		"engine:" : "ThierryGoubier 10/20/2014 15:33:40",
-		"listForClass:into:" : "ThierryGoubier 10/20/2014 15:33:40",
-		"localSaveOn:" : "ThierryGoubier 10/20/2014 15:33:40",
-		"match" : "ThierryGoubier 10/20/2014 15:33:40",
-		"match:" : "ThierryGoubier 2/5/2015 13:15",
-		"performOn:continuation:" : "ThierryGoubier 10/20/2014 15:33:40",
-		"postCopy" : "ThierryGoubier 10/20/2014 15:33:40",
-		"transformation" : "ThierryGoubier 10/20/2014 15:33:40",
-		"transformation:" : "ThierryGoubier 2/5/2015 13:15" } }
+		"comment" : "ThierryGoubier 2/5/2015 15:53:02",
+		"comment:" : "ThierryGoubier 2/5/2015 15:53:02",
+		"displayOn:" : "ThierryGoubier 2/5/2015 15:53:02",
+		"engine:" : "ThierryGoubier 2/5/2015 15:53:02",
+		"listForClass:into:" : "ThierryGoubier 2/5/2015 15:53:02",
+		"localSaveOn:" : "ThierryGoubier 2/5/2015 15:53:02",
+		"match" : "ThierryGoubier 2/5/2015 15:53:02",
+		"match:" : "ThierryGoubier 2/5/2015 15:53:02",
+		"performOn:continuation:" : "ThierryGoubier 2/5/2015 15:53:02",
+		"postCopy" : "ThierryGoubier 2/5/2015 15:53:02",
+		"transformation" : "ThierryGoubier 2/5/2015 15:53:02",
+		"transformation:" : "ThierryGoubier 2/5/2015 15:53:02" } }

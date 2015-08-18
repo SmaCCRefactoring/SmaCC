@@ -55,7 +55,6 @@ processFile: aFileReference usingResult: aSmaCCRewriteResult
 						interval: (node startPosition to: node stopPosition);
 						transformation: frame receiver ].
 			ex pass ].
-	self engine finished.
 	aSmaCCRewriteResult
 		outputSource: output;
 		transformedString: self engine source.
@@ -63,6 +62,7 @@ processFile: aFileReference usingResult: aSmaCCRewriteResult
 		ifFalse: [ 
 			self saveOutput: output in: self engine outputDirectory / self engine outputFilename.
 			self engine additionalFiles keysAndValuesDo: [ :file :text | self saveOutput: text in: file ] ].
+	self engine finished.
 	aSmaCCRewriteResult class == SmaCCRewriteResult
 		ifFalse: [ self validate: output forResult: aSmaCCRewriteResult ] ]
 		on: Error
