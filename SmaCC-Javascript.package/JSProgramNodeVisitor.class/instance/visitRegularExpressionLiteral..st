@@ -1,0 +1,3 @@
+generated
+visitRegularExpressionLiteral: aRegularExpressionLiteral
+	^ self visitLiteral: aRegularExpressionLiteral

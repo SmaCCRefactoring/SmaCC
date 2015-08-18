@@ -1,0 +1,15 @@
+{
+	"category" : "SmaCC-Javascript",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"operator",
+		"expression" ],
+	"name" : "JSUnaryExpressionNode",
+	"pools" : [
+		 ],
+	"super" : "JSExpressionNode",
+	"type" : "normal" }

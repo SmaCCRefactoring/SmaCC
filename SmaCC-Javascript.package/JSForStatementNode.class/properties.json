@@ -1,0 +1,24 @@
+{
+	"category" : "SmaCC-Javascript",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"forToken",
+		"leftParen",
+		"initialExpression",
+		"semicolons",
+		"condition",
+		"iteratorExpression",
+		"rightParen",
+		"statement",
+		"varToken",
+		"variables",
+		"commas" ],
+	"name" : "JSForStatementNode",
+	"pools" : [
+		 ],
+	"super" : "JSStatementNode",
+	"type" : "normal" }

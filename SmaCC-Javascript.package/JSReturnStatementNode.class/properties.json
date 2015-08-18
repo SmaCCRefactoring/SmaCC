@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-Javascript",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"returnToken",
+		"expression",
+		"semicolon" ],
+	"name" : "JSReturnStatementNode",
+	"pools" : [
+		 ],
+	"super" : "JSStatementNode",
+	"type" : "normal" }

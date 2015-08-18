@@ -1,0 +1,17 @@
+{
+	"category" : "SmaCC-Javascript",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"caseToken",
+		"caseExpression",
+		"colonToken",
+		"statements" ],
+	"name" : "JSCaseClauseNode",
+	"pools" : [
+		 ],
+	"super" : "JSProgramNode",
+	"type" : "normal" }

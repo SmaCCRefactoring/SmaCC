@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Javascript",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "JSParserTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-Javascript",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"expression",
+		"periodToken",
+		"_name" ],
+	"name" : "JSNamedPropertyExpressionNode",
+	"pools" : [
+		 ],
+	"super" : "JSExpressionNode",
+	"type" : "normal" }

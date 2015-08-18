@@ -1,0 +1,18 @@
+{
+	"category" : "SmaCC-Javascript",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"whileToken",
+		"leftParen",
+		"expression",
+		"rightParen",
+		"statement" ],
+	"name" : "JSWhileStatementNode",
+	"pools" : [
+		 ],
+	"super" : "JSStatementNode",
+	"type" : "normal" }

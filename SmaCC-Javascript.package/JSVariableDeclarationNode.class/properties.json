@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-Javascript",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"variable",
+		"equalsToken",
+		"_value" ],
+	"name" : "JSVariableDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "JSProgramNode",
+	"type" : "normal" }

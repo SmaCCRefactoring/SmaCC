@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Javascript",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "JSProgramNodeVisitor",
+	"pools" : [
+		 ],
+	"super" : "SmaCCParseNodeVisitor",
+	"type" : "normal" }

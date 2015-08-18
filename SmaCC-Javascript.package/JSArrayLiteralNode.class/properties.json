@@ -1,0 +1,17 @@
+{
+	"category" : "SmaCC-Javascript",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"leftBracket",
+		"expressions",
+		"commas",
+		"rightBracket" ],
+	"name" : "JSArrayLiteralNode",
+	"pools" : [
+		 ],
+	"super" : "JSExpressionNode",
+	"type" : "normal" }

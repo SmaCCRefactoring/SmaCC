@@ -1,0 +1,20 @@
+{
+	"category" : "SmaCC-Javascript",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"switchToken",
+		"leftParen",
+		"expression",
+		"rightParen",
+		"leftBrace",
+		"clauses",
+		"rightBrace" ],
+	"name" : "JSSwitchStatementNode",
+	"pools" : [
+		 ],
+	"super" : "JSStatementNode",
+	"type" : "normal" }

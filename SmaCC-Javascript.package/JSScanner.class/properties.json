@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Javascript",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "JSScanner",
+	"pools" : [
+		 ],
+	"super" : "SmaCCScanner",
+	"type" : "normal" }
