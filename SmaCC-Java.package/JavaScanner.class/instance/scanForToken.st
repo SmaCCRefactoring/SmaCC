@@ -80,6 +80,4 @@ scanForToken
 			currentCharacter = $=
 				ifTrue: [ ^ self recordAndReportMatch: #(68) ].
 			^ self reportLastMatch ].
-	currentCharacter = $,
-		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
 	^ self scanSplitSeq2

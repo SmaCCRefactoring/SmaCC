@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Java",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "JavaParserTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

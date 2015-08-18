@@ -2,7 +2,7 @@ generated-reduction actions
 reduceActionForannotation_interface_declaration1: nodes
 	| result |
 	result := JavaAnnotationInterfaceNode new.
-	result addNodes: ((nodes at: 1) at: 1) to: result modifiers.
+	result addNodes: (nodes at: 1) to: result modifiers.
 	result atToken: (nodes at: 2).
 	result interfaceToken: (nodes at: 3).
 	result _name: (nodes at: 4).

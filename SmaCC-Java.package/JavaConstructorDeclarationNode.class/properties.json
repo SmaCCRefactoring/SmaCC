@@ -13,7 +13,8 @@
 		"commas",
 		"right",
 		"throws",
-		"body" ],
+		"body",
+		"typeParameters" ],
 	"name" : "JavaConstructorDeclarationNode",
 	"pools" : [
 		 ],

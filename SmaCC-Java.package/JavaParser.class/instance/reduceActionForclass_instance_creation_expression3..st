@@ -6,8 +6,8 @@ reduceActionForclass_instance_creation_expression3: nodes
 	result period: (nodes at: 2).
 	result newToken: (nodes at: 3).
 	result _name: (nodes at: 4).
-	result left: (nodes at: 5).
+	result addToken: (nodes at: 5) to: result lefts.
 	result addNodes: ((nodes at: 6) at: 1) to: result expressions.
 	result addTokens: ((nodes at: 6) at: 2) to: result commas.
-	result right: (nodes at: 7).
+	result addToken: (nodes at: 7) to: result rights.
 	^ result

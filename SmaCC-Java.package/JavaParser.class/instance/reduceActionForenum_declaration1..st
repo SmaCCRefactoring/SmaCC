@@ -2,7 +2,7 @@ generated-reduction actions
 reduceActionForenum_declaration1: nodes
 	| result |
 	result := JavaEnumDeclarationNode new.
-	result addNodes: ((nodes at: 1) at: 1) to: result modifiers.
+	result addNodes: (nodes at: 1) to: result modifiers.
 	result enumToken: (nodes at: 2).
 	result _name: (nodes at: 3).
 	result implementsToken: ((nodes at: 4) at: 1).

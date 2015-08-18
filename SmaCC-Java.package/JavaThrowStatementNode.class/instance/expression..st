@@ -1,7 +1,7 @@
 generated
-expression: aJavaLambdaExpressionNode
+expression: aJavaExpressionNode
 	self expression notNil
 		ifTrue: [ self expression parent: nil ].
-	expression := aJavaLambdaExpressionNode.
+	expression := aJavaExpressionNode.
 	self expression notNil
 		ifTrue: [ self expression parent: self ]

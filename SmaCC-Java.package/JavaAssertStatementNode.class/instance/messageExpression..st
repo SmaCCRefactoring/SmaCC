@@ -1,7 +1,7 @@
 generated
-messageExpression: aJavaLambdaExpressionNode
+messageExpression: aJavaExpressionNode
 	self messageExpression notNil
 		ifTrue: [ self messageExpression parent: nil ].
-	messageExpression := aJavaLambdaExpressionNode.
+	messageExpression := aJavaExpressionNode.
 	self messageExpression notNil
 		ifTrue: [ self messageExpression parent: self ]

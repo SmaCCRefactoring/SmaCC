@@ -1,5 +1,7 @@
 generated
 scanSplitSeq2
+	currentCharacter = $,
+		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
 	currentCharacter = $-
 		ifTrue: [ 
 			self recordMatch: #(90).
@@ -33,6 +35,7 @@ scanSplitSeq2
 			currentCharacter = $/
 				ifTrue: [ 
 					[ 
+					self recordMatch: #(106).
 					self step.
 					currentCharacter = Character lf
 						ifTrue: [ ^ self recordAndReportMatch: #(106) ].

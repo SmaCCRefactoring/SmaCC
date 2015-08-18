@@ -1,3 +1,3 @@
 generated
 startingStateFortype_declaration
-	^ 5
+	^ 4

@@ -95,7 +95,7 @@ definitionComment
 	: \s+
 	;
 <comment>
-	: \/\/ [^\r\n]* <eol> 
+	: \/\/ [^\r\n]* <eol>?
 	| /\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+/
  	;
 <patternToken>
@@ -357,7 +357,7 @@ constructor_declaration
 			constructor_body 'body' {{ConstructorDeclaration}}
 	;
 constructor_declarator 
-	: simple_name 'name' ""("" 'left' formal_parameter_list_opt "")"" 'right'
+	: type_parameters_opt 'typeParameters' simple_name 'name' ""("" 'left' formal_parameter_list_opt "")"" 'right'
 	;
 constructor_body 
 	: ""{"" 'left' explicit_constructor_invocation 'constructorInvocation'
@@ -394,10 +394,12 @@ annotation_interface_member_declarations
 	;
 annotation_interface_member_declaration
 	: annotation_method_declaration
+	| type_declaration
+	| field_declaration
 	;
 annotation_method_declaration
 	: abstract_method_declaration
-	| method_header ""default"" 'defaultToken' expression 'value' "";"" 'semicolon' {{AnnotationMethodDeclaration}}
+	| method_header ""default"" 'defaultToken' variable_initializer 'value' "";"" 'semicolon' {{AnnotationMethodDeclaration}}
 	;
 extends_interfaces_opt 
 	: 
@@ -831,7 +833,8 @@ expression_opt
 	| expression 
 	;
 expression 
-	: lambda_expression 
+	: assignment_expression
+	| lambda_expression 
 	;
 constant_expression 
 	: expression 
