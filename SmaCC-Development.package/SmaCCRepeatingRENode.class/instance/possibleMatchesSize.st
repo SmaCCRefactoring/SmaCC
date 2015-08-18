@@ -7,5 +7,5 @@ possibleMatchesSize
 	baseSize = 1
 		ifTrue: [ ^ node possibleMatchesSize * (maximumMatches - minimumMatches + 1) ].
 	maximumMatches >= 6
-		ifTrue: [ ^ SmallInteger maximum ].
+		ifTrue: [ ^ SmallInteger maxVal ].
 	^ (minimumMatches to: maximumMatches) inject: 0 into: [ :sum :each | sum + (baseSize raisedTo: each) ]

@@ -5,7 +5,7 @@ compileSymbolTypes
 		collect: [ :each | 
 			| types previousSize |
 			types := each modelTypes.
-			previousSize := types sizes.
+			previousSize := types size.
 			types remove: (self model classFor: nil class) ifAbsent: [  ].
 			(types isEmpty and: [ previousSize = 1 ])
 				ifTrue: [ nil ]
