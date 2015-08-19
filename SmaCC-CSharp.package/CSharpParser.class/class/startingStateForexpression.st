@@ -1,3 +1,3 @@
 generated
 startingStateForexpression
-	^ 5
+	^ 4

@@ -2,7 +2,7 @@ generated-reduction actions
 reduceActionForstatic_constructor_declaration1: nodes
 	| result |
 	result := CSStaticConstructorDeclarationNode new.
-	result addNodes: ((nodes at: 1) at: 1) to: result _attributes.
+	result addNodes: (nodes at: 1) to: result _attributes.
 	result addTokens: ((nodes at: 2) at: 1) to: result modifiers.
 	result staticToken: ((nodes at: 2) at: 2).
 	result unsafeToken: ((nodes at: 2) at: 3).

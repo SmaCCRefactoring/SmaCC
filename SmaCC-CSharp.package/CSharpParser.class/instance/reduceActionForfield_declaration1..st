@@ -2,7 +2,7 @@ generated-reduction actions
 reduceActionForfield_declaration1: nodes
 	| result |
 	result := CSFieldDeclarationNode new.
-	result addNodes: ((nodes at: 1) at: 1) to: result _attributes.
+	result addNodes: (nodes at: 1) to: result _attributes.
 	result addTokens: ((nodes at: 2) at: 1) to: result newTokens.
 	result addTokens: ((nodes at: 2) at: 2) to: result publicTokens.
 	result addTokens: ((nodes at: 2) at: 3) to: result protectedTokens.

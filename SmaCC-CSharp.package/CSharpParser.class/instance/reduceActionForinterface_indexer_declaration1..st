@@ -2,7 +2,7 @@ generated-reduction actions
 reduceActionForinterface_indexer_declaration1: nodes
 	| result |
 	result := CSInterfaceIndexerDeclarationNode new.
-	result addNodes: ((nodes at: 1) at: 1) to: result _attributes.
+	result addNodes: (nodes at: 1) to: result _attributes.
 	result modifier: (nodes at: 2).
 	result type: (nodes at: 3).
 	result thisToken: (nodes at: 4).

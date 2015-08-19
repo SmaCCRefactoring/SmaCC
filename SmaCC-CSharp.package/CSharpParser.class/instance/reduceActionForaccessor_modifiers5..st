@@ -1,8 +1,7 @@
 generated-reduction actions
 reduceActionForaccessor_modifiers5: nodes
 	| result |
-	result := Array new: 1.
-	result at: 1 put: (OrderedCollection new: 2).
-	self add: (nodes at: 1) to: (result at: 1).
-	self add: (nodes at: 2) to: (result at: 1).
+	result := OrderedCollection new: 2.
+	self add: (nodes at: 1) to: result.
+	self add: (nodes at: 2) to: result.
 	^ result

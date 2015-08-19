@@ -4,7 +4,7 @@ reduceActionForjoin_into_clause1: nodes
 	result := Array new: 10.
 	result at: 3 put: (OrderedCollection new: 2).
 	result at: 1 put: (nodes at: 1).
-	result at: 2 put: ((nodes at: 2) at: 1).
+	result at: 2 put: (nodes at: 2).
 	self add: (nodes at: 3) to: (result at: 3).
 	result at: 4 put: (nodes at: 4).
 	result at: 5 put: (nodes at: 5).

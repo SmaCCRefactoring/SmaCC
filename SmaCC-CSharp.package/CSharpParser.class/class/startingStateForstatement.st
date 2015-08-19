@@ -1,3 +1,3 @@
 generated
 startingStateForstatement
-	^ 4
+	^ 3

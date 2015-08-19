@@ -2,8 +2,8 @@ generated-reduction actions
 reduceActionForevent_declaration2: nodes
 	| result |
 	result := CSEventDeclarationNode new.
-	result addNodes: ((nodes at: 1) at: 1) to: result _attributes.
-	result addTokens: ((nodes at: 2) at: 1) to: result modifiers.
+	result addNodes: (nodes at: 1) to: result _attributes.
+	result addTokens: (nodes at: 2) to: result modifiers.
 	result eventToken: (nodes at: 3).
 	result type: (nodes at: 4).
 	result _name: ((nodes at: 5) at: 1).

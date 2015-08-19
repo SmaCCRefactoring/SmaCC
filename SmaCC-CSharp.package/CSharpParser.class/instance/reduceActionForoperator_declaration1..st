@@ -2,8 +2,8 @@ generated-reduction actions
 reduceActionForoperator_declaration1: nodes
 	| result |
 	result := CSOperatorDeclarationNode new.
-	result addNodes: ((nodes at: 1) at: 1) to: result _attributes.
-	result addTokens: ((nodes at: 2) at: 1) to: result modifiers.
+	result addNodes: (nodes at: 1) to: result _attributes.
+	result addTokens: (nodes at: 2) to: result modifiers.
 	result returnType: ((nodes at: 3) at: 1).
 	result operatorToken: ((nodes at: 3) at: 2).
 	result operator: ((nodes at: 3) at: 3).

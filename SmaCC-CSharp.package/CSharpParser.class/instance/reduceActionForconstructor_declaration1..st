@@ -2,8 +2,8 @@ generated-reduction actions
 reduceActionForconstructor_declaration1: nodes
 	| result |
 	result := CSConstructorDeclarationNode new.
-	result addNodes: ((nodes at: 1) at: 1) to: result _attributes.
-	result addTokens: ((nodes at: 2) at: 1) to: result modifiers.
+	result addNodes: (nodes at: 1) to: result _attributes.
+	result addTokens: (nodes at: 2) to: result modifiers.
 	result identifierToken: ((nodes at: 3) at: 1).
 	result leftParenToken: ((nodes at: 3) at: 2).
 	result addNodes: ((nodes at: 3) at: 3) to: result parameters.

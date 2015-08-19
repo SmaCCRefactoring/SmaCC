@@ -1,3 +1,3 @@
 generated
 startingStateForblock
-	^ 6
+	^ 5
