@@ -42,7 +42,7 @@ scanSplitSeq1
 				ifTrue: [ ^ self recordAndReportMatch: #(62) ].
 			^ self reportLastMatch ].
 	currentCharacter = $`
-		ifTrue: [ ^ self scan9 ].
+		ifTrue: [ ^ self scan10 ].
 	currentCharacter = ${
 		ifTrue: [ ^ self recordAndReportMatch: #(3) ].
 	currentCharacter = $|

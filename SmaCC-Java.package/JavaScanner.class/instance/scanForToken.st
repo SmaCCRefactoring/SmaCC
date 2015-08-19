@@ -60,24 +60,4 @@ scanForToken
 			(currentCharacter <= $& or: [ (currentCharacter between: $( and: $[) or: [ currentCharacter >= $] ] ])
 				ifTrue: [ ^ self scan2 ].
 			^ self reportLastMatch ].
-	currentCharacter = $(
-		ifTrue: [ ^ self recordAndReportMatch: #(21) ].
-	currentCharacter = $)
-		ifTrue: [ ^ self recordAndReportMatch: #(19) ].
-	currentCharacter = $*
-		ifTrue: [ 
-			self recordMatch: #(44).
-			self step.
-			currentCharacter = $=
-				ifTrue: [ ^ self recordAndReportMatch: #(57) ].
-			^ self reportLastMatch ].
-	currentCharacter = $+
-		ifTrue: [ 
-			self recordMatch: #(93).
-			self step.
-			currentCharacter = $+
-				ifTrue: [ ^ self recordAndReportMatch: #(92) ].
-			currentCharacter = $=
-				ifTrue: [ ^ self recordAndReportMatch: #(68) ].
-			^ self reportLastMatch ].
 	^ self scanSplitSeq2
