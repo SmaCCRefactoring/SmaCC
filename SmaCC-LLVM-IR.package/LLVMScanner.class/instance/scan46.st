@@ -6,5 +6,5 @@ scan46
 	currentCharacter = $l
 		ifTrue: [ ^ self scan47 ].
 	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-		ifTrue: [ ^ self scan5 ].
+		ifTrue: [ ^ self scan1 ].
 	^ self reportLastMatch

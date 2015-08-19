@@ -1,23 +1,55 @@
 generated
 scan23
 	self step.
-	currentCharacter = $"
+	currentCharacter = $:
+		ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+	currentCharacter = $s
 		ifTrue: [ 
-			[ 
 			self step.
-			currentCharacter = $"
-				ifTrue: [ ^ self recordAndReportMatch: #(255) ] ] repeat ].
-	currentCharacter isDigit
-		ifTrue: [ 
-			[ 
-			self recordMatch: #(255).
-			self step.
-			currentCharacter isDigit ] whileTrue.
-			^ self reportLastMatch ].
+			currentCharacter = $:
+				ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+			currentCharacter = $_
+				ifTrue: [ 
+					self step.
+					currentCharacter = $:
+						ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+					currentCharacter = $v
+						ifTrue: [ 
+							self step.
+							currentCharacter = $:
+								ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+							currentCharacter = $f
+								ifTrue: [ 
+									self step.
+									currentCharacter = $:
+										ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+									currentCharacter = $p
+										ifTrue: [ 
+											2
+												timesRepeat: [ 
+													self step.
+													currentCharacter = $:
+														ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+													currentCharacter = $c
+														ifFalse: [ ^ self reportLastMatch ] ].
+											self recordMatch: #(157).
+											self step.
+											currentCharacter = $:
+												ifTrue: [ ^ self recordAndReportMatch: #(257) ] ] ] ].
+					(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
+						ifTrue: [ ^ self scan1 ].
+					^ self reportLastMatch ].
+			currentCharacter = $c
+				ifTrue: [ 
+					self step.
+					currentCharacter = $:
+						ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+					currentCharacter = $c
+						ifTrue: [ 
+							self recordMatch: #(161).
+							self step.
+							currentCharacter = $:
+								ifTrue: [ ^ self recordAndReportMatch: #(257) ] ] ] ].
 	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-		ifTrue: [ 
-			[ 
-			self recordMatch: #(255).
-			self step.
-			currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ] ] whileTrue ].
+		ifTrue: [ ^ self scan1 ].
 	^ self reportLastMatch

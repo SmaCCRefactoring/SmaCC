@@ -1,24 +1,41 @@
 generated
 scan187
+	self recordMatch: #(148).
 	self step.
+	currentCharacter = $8
+		ifTrue: [ ^ self scan188 ].
 	currentCharacter = $:
 		ifTrue: [ ^ self recordAndReportMatch: #(257) ].
-	currentCharacter = $x
+	currentCharacter = $c
 		ifTrue: [ 
 			self step.
 			currentCharacter = $:
 				ifTrue: [ ^ self recordAndReportMatch: #(257) ].
-			currentCharacter isHexDigit
+			currentCharacter = $h
 				ifTrue: [ 
-					[ 
-					self recordMatch: #(247).
 					self step.
 					currentCharacter = $:
 						ifTrue: [ ^ self recordAndReportMatch: #(257) ].
-					currentCharacter isHexDigit ] whileTrue.
-					(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-						ifTrue: [ ^ self scan5 ].
-					^ self reportLastMatch ] ].
+					currentCharacter = $g
+						ifTrue: [ 
+							self recordMatch: #(205).
+							self step.
+							currentCharacter = $:
+								ifTrue: [ ^ self recordAndReportMatch: #(257) ] ] ].
+			(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
+				ifTrue: [ ^ self scan1 ].
+			^ self reportLastMatch ].
+	currentCharacter = $o
+		ifTrue: [ 
+			self step.
+			currentCharacter = $:
+				ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+			currentCharacter = $r
+				ifTrue: [ 
+					self recordMatch: #(94).
+					self step.
+					currentCharacter = $:
+						ifTrue: [ ^ self recordAndReportMatch: #(257) ] ] ].
 	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-		ifTrue: [ ^ self scan5 ].
+		ifTrue: [ ^ self scan1 ].
 	^ self reportLastMatch

@@ -1,9 +1,10 @@
 generated
 scan19
-	[ 
-	self recordMatch: #(264).
 	self step.
-	currentCharacter <= Character tab
-		or: [ (currentCharacter between: Character pageUp and: Character newPage) or: [ currentCharacter >= (Character value: 14) ] ] ]
-		whileTrue.
+	currentCharacter = $:
+		ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+	currentCharacter = $a
+		ifTrue: [ ^ self scan20 ].
+	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
+		ifTrue: [ ^ self scan1 ].
 	^ self reportLastMatch

@@ -1,11 +1,10 @@
 generated
 scan3
-	[ 
 	self step.
-	currentCharacter = $"
+	currentCharacter isDigit
 		ifTrue: [ 
-			self recordMatch: #(253).
+			[ 
+			self recordMatch: #(249).
 			self step.
-			currentCharacter = $:
-				ifTrue: [ ^ self recordAndReportMatch: #(257) ].
-			^ self reportLastMatch ] ] repeat
+			currentCharacter isDigit ] whileTrue ].
+	^ self reportLastMatch

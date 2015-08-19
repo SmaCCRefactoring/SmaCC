@@ -5,41 +5,41 @@ scan61
 		ifTrue: [ ^ self recordAndReportMatch: #(257) ].
 	currentCharacter = $c
 		ifTrue: [ 
+			self recordMatch: #(16).
 			self step.
 			currentCharacter = $:
 				ifTrue: [ ^ self recordAndReportMatch: #(257) ].
-			currentCharacter = $l
+			(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
+				ifTrue: [ ^ self scan1 ].
+			^ self reportLastMatch ].
+	currentCharacter = $e
+		ifTrue: [ ^ self scan62 ].
+	currentCharacter = $l
+		ifTrue: [ 
+			self step.
+			currentCharacter = $:
+				ifTrue: [ ^ self recordAndReportMatch: #(257) ].
+			currentCharacter = $o
 				ifTrue: [ 
 					self step.
 					currentCharacter = $:
 						ifTrue: [ ^ self recordAndReportMatch: #(257) ].
-					currentCharacter = $a
+					currentCharacter = $b
 						ifTrue: [ 
 							self step.
 							currentCharacter = $:
 								ifTrue: [ ^ self recordAndReportMatch: #(257) ].
-							currentCharacter = $r
+							currentCharacter = $a
 								ifTrue: [ 
 									self step.
 									currentCharacter = $:
 										ifTrue: [ ^ self recordAndReportMatch: #(257) ].
-									currentCharacter = $e
+									currentCharacter = $l
 										ifTrue: [ 
-											self recordMatch: #(21).
+											self recordMatch: #(73).
 											self step.
 											currentCharacter = $:
-												ifTrue: [ ^ self recordAndReportMatch: #(257) ].
-											(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-												ifTrue: [ ^ self scan5 ].
-											^ self reportLastMatch ] ].
-							(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-								ifTrue: [ ^ self scan5 ].
-							^ self reportLastMatch ] ].
-			(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-				ifTrue: [ ^ self scan5 ].
-			^ self reportLastMatch ].
-	currentCharacter = $f
-		ifTrue: [ ^ self scan62 ].
+												ifTrue: [ ^ self recordAndReportMatch: #(257) ] ] ] ] ] ].
 	(currentCharacter isSafeForHTTP or: [ currentCharacter = $$ ])
-		ifTrue: [ ^ self scan5 ].
+		ifTrue: [ ^ self scan1 ].
 	^ self reportLastMatch
