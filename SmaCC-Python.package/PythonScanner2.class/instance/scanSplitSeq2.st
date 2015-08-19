@@ -5,21 +5,21 @@ scanSplitSeq2
 			self recordMatch: #(73).
 			self step.
 			currentCharacter = $.
-				ifTrue: [ ^ self scan9 ].
+				ifTrue: [ ^ self scan10 ].
 			(currentCharacter between: $8 and: $9)
-				ifTrue: [ ^ self scan12 ].
+				ifTrue: [ ^ self scan13 ].
 			currentCharacter isDigit
 				ifTrue: [ 
 					[ 
 					self recordMatch: #(73).
 					self step.
 					currentCharacter = $.
-						ifTrue: [ ^ self scan9 ].
+						ifTrue: [ ^ self scan10 ].
 					(currentCharacter between: $8 and: $9)
-						ifTrue: [ ^ self scan12 ].
+						ifTrue: [ ^ self scan13 ].
 					currentCharacter isDigit ] whileTrue.
 					('Ee' includes: currentCharacter)
-						ifTrue: [ ^ self scan10 ].
+						ifTrue: [ ^ self scan11 ].
 					('Ljl' includes: currentCharacter)
 						ifTrue: [ ^ self recordAndReportMatch: #(73) ].
 					^ self reportLastMatch ].
@@ -36,7 +36,7 @@ scanSplitSeq2
 								ifTrue: [ ^ self recordAndReportMatch: #(73) ] ].
 					^ self reportLastMatch ].
 			('Ee' includes: currentCharacter)
-				ifTrue: [ ^ self scan10 ].
+				ifTrue: [ ^ self scan11 ].
 			('Oo' includes: currentCharacter)
 				ifTrue: [ 
 					self step.

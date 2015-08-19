@@ -13,7 +13,7 @@ scanForToken
 						ifTrue: [ ^ self recordAndReportMatch: #(74 75) ].
 					^ self reportLastMatch ].
 			currentCharacter = $#
-				ifTrue: [ ^ self scan15 ].
+				ifTrue: [ ^ self scan16 ].
 			currentCharacter isSeparator
 				ifTrue: [ 
 					[ 
@@ -22,12 +22,12 @@ scanForToken
 					currentCharacter = Character lf
 						ifTrue: [ ^ self recordAndReportMatch: #(75) ].
 					currentCharacter = Character cr
-						ifTrue: [ ^ self scan14 ].
-					currentCharacter = $#
 						ifTrue: [ ^ self scan15 ].
+					currentCharacter = $#
+						ifTrue: [ ^ self scan16 ].
 					currentCharacter isSeparator ] whileTrue.
 					^ self reportLastMatch ].
 			^ self recordAndReportMatch: #(77) ].
 	state == #default
-		ifTrue: [ ^ self scanSplit3 ].
+		ifTrue: [ ^ self scan1 ].
 	^ self reportLastMatch

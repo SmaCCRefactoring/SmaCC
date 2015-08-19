@@ -1,20 +1,17 @@
 generated
 scan5
+	[ 
 	self step.
-	currentCharacter = $'
+	currentCharacter = $"
 		ifTrue: [ 
-			self recordMatch: #(72).
 			self step.
-			currentCharacter = $'
-				ifTrue: [ ^ self scan8 ].
-			^ self reportLastMatch ].
+			currentCharacter = $"
+				ifTrue: [ 
+					self step.
+					currentCharacter = $"
+						ifTrue: [ ^ self recordAndReportMatch: #(72) ] ].
+			^ self scan5 ].
 	currentCharacter = $\
-		ifTrue: [ ^ self scan7 ].
-	(currentCharacter <= Character tab
-		or: [ 
-			(currentCharacter between: Character pageUp and: Character newPage)
-				or: [ 
-					(currentCharacter between: (Character value: 14) and: $&)
-						or: [ (currentCharacter between: $( and: $[) or: [ currentCharacter >= $] ] ] ] ])
-		ifTrue: [ ^ self scan6 ].
-	^ self reportLastMatch
+		ifTrue: [ 
+			self step.
+			^ self scan5 ] ] repeat
