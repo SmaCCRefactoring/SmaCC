@@ -1,3 +1,3 @@
 generated
 startingStateForsingle_input
-	^ 3
+	^ 2

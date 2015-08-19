@@ -1,33 +1,5 @@
 generated
-scanSplitSeq33
-	currentCharacter = $-
-		ifTrue: [ 
-			self recordMatch: #(53).
-			self step.
-			currentCharacter = $=
-				ifTrue: [ ^ self recordAndReportMatch: #(32) ].
-			^ self reportLastMatch ].
-	currentCharacter = $.
-		ifTrue: [ 
-			self recordMatch: #(13).
-			self step.
-			currentCharacter isDigit
-				ifTrue: [ ^ self scan9 ].
-			^ self reportLastMatch ].
-	currentCharacter = $/
-		ifTrue: [ 
-			self recordMatch: #(50).
-			self step.
-			currentCharacter = $/
-				ifTrue: [ 
-					self recordMatch: #(48).
-					self step.
-					currentCharacter = $=
-						ifTrue: [ ^ self recordAndReportMatch: #(6) ].
-					^ self reportLastMatch ].
-			currentCharacter = $=
-				ifTrue: [ ^ self recordAndReportMatch: #(30) ].
-			^ self reportLastMatch ].
+scanSplitSeq2
 	currentCharacter = $0
 		ifTrue: [ 
 			self recordMatch: #(73).
@@ -112,4 +84,24 @@ scanSplitSeq33
 			currentCharacter = $>
 				ifTrue: [ ^ self recordAndReportMatch: #(52) ].
 			^ self reportLastMatch ].
-	^ self scanSplitSeq32
+	currentCharacter = $=
+		ifTrue: [ 
+			self recordMatch: #(25).
+			self step.
+			currentCharacter = $=
+				ifTrue: [ ^ self recordAndReportMatch: #(56) ].
+			^ self reportLastMatch ].
+	currentCharacter = $>
+		ifTrue: [ 
+			self recordMatch: #(65).
+			self step.
+			currentCharacter = $=
+				ifTrue: [ ^ self recordAndReportMatch: #(54) ].
+			currentCharacter = $>
+				ifTrue: [ 
+					self recordMatch: #(4).
+					self step.
+					currentCharacter = $=
+						ifTrue: [ ^ self recordAndReportMatch: #(9) ] ].
+			^ self reportLastMatch ].
+	^ self scanSplitSeq1

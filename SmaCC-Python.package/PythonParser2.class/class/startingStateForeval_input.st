@@ -1,3 +1,3 @@
 generated
 startingStateForeval_input
-	^ 4
+	^ 3

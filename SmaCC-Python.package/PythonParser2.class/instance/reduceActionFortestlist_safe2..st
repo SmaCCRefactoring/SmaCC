@@ -8,5 +8,5 @@ reduceActionFortestlist_safe2: nodes
 	self add: (nodes at: 2) to: (result at: 2).
 	self addAll: ((nodes at: 3) at: 1) to: (result at: 2).
 	self addAll: ((nodes at: 3) at: 2) to: (result at: 1).
-	self add: ((nodes at: 4) at: 1) to: (result at: 2).
+	self add: (nodes at: 4) to: (result at: 2).
 	^ result

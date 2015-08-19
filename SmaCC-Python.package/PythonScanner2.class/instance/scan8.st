@@ -9,8 +9,7 @@ scan8
 				ifTrue: [ 
 					self step.
 					currentCharacter = $'
-						ifTrue: [ ^ self recordAndReportMatch: #(72) ].
-					^ self scan8 ].
+						ifTrue: [ ^ self recordAndReportMatch: #(72) ] ].
 			^ self scan8 ].
 	currentCharacter = $\
 		ifTrue: [ 
