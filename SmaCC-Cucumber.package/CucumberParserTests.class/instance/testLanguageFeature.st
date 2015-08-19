@@ -1,3 +1,3 @@
-as yet unclassified
+tests
 testLanguageFeature
 	CucumberParser parse: self class languageFeature

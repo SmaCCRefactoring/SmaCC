@@ -1,6 +1,24 @@
 generated
 scan16
 	self step.
-	currentCharacter = $e
-		ifTrue: [ ^ self scan17 ].
+	currentCharacter = $a
+		ifTrue: [ 
+			self step.
+			currentCharacter = $m
+				ifTrue: [ 
+					self step.
+					currentCharacter = $p
+						ifTrue: [ 
+							self step.
+							currentCharacter = $l
+								ifTrue: [ 
+									self step.
+									currentCharacter = $e
+										ifTrue: [ 
+											self step.
+											currentCharacter = $s
+												ifTrue: [ 
+													self step.
+													currentCharacter = $:
+														ifTrue: [ ^ self recordAndReportMatch: #(4) ] ] ] ] ] ] ].
 	^ self reportLastMatch

@@ -1,3 +1,3 @@
-as yet unclassified
+tests
 testDescriptionFeature
 	CucumberParser parse: self class descriptionFeature

@@ -1,3 +1,3 @@
-as yet unclassified
+tests
 testSeveralExamplesFeature
 	CucumberParser parse: self class severalExamplesFeature

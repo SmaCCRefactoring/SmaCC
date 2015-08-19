@@ -1,3 +1,3 @@
-as yet unclassified
+tests
 testTagsFeature
 	CucumberParser parse: self class tagsFeature

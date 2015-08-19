@@ -1,3 +1,3 @@
-as yet unclassified
+tests
 testBackgroundFeature
 	CucumberParser parse: self class backgroundFeature

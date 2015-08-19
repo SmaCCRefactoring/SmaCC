@@ -1,3 +1,3 @@
-as yet unclassified
+tests
 testDatatablesFeature
 	CucumberParser parse: self class datatablesFeature

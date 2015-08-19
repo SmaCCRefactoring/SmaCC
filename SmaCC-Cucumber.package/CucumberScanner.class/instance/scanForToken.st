@@ -28,7 +28,7 @@ scanForToken
 								or: [ (currentCharacter between: (Character value: 14) and: ${) or: [ currentCharacter >= $} ] ] ] ] whileTrue ].
 			^ self reportLastMatch ].
 	state == #lineBegin
-		ifTrue: [ ^ self scanSplit1 ].
+		ifTrue: [ ^ self scan9 ].
 	state == #default
 		ifTrue: [ 
 			self step.
