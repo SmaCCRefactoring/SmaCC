@@ -23,7 +23,10 @@ baseline: spec
 								requires: 'SmaCC-Server-Session' ];
 				package: 'SmaCC-Smalltalk-Parser' with: [ spec requires: 'SmaCC-Runtime' ];
 				package: 'SmaCC-C-Parser' with: [ spec requires: 'SmaCC-Runtime' ];
+				package: 'SmaCC-CSV' with: [ spec requires: 'SmaCC-Runtime' ];
 				package: 'SmaCC-CSharp' with: [ spec requires: 'SmaCC-GLR-Runtime' ];
+				package: 'SmaCC-Cucumber' with: [ spec requires: 'SmaCC-GLR-Runtime' ];
+				package: 'SmaCC-Javascript' with: [ spec requires: 'SmaCC-GLR-Runtime' ];
 				package: 'SmaCC-Java' with: [ spec requires: 'SmaCC-GLR-Runtime' ];
 				package: 'SmaCC-Python' with: [ spec requires: 'SmaCC-Runtime' ].
 			spec
@@ -32,5 +35,6 @@ baseline: spec
 				group: 'Rewrite' with: #('SmaCC-Rewrite-Engine');
 				group: 'Rewrite-Server' with: #('SmaCC-Rewrite-Server-Worker' 'SmaCC-Rewrite-Server' 'Rewrite');
 				group: 'Tools' with: #('SmaCC-Development-UI' 'Examples' 'Rewrite');
-				group: 'Examples' with: #('SmaCC-Smalltalk-Parser' 'SmaCC-C-Parser' 'SmaCC-CSharp' 'SmaCC-Java' 'SmaCC-Python');
+				group: 'Examples'
+					with: #('SmaCC-Smalltalk-Parser' 'SmaCC-C-Parser' 'SmaCC-CSharp' 'SmaCC-Java' 'SmaCC-Python' 'SmaCC-Javascript' 'SmaCC-CSV' 'SmaCC-Cucumber');
 				group: 'Tests' with: #('SmaCC-Tests' 'SmaCC-Rewrite-Engine-Tests') ]
