@@ -1,0 +1,1 @@
+I inspect the currently selected item

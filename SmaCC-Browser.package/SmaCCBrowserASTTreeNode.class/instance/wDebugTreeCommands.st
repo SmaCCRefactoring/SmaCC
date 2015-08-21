@@ -1,0 +1,3 @@
+tree commands
+wDebugTreeCommands
+	^ #(#SmaCCBrowserInspectItemCommand)

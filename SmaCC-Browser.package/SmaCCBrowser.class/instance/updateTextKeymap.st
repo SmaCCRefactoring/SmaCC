@@ -1,13 +1,8 @@
 shortcuts
 updateTextKeymap
-	"Update the text keymap. Reset the dispatcher and make it an AltKMDispatcher if needed."
+	"Update the text keymap."
 
-	(textMorph kmDispatcher isKindOf: AlKMDispatcher)
-		ifFalse: [ textMorph setProperty: #kmdispatcher toValue: (AlKMDispatcher target: textMorph) ].
-	(textMorph textMorph kmDispatcher isKindOf: AltKMDispatcher)
-		ifFalse: [ textMorph textMorph setProperty: #kmDispatcher toValue: (AltKMDispatcher target: textMorph textMorph) ].
-	{(textMorph kmDispatcher).
-	(textMorph textMorph kmDispatcher)}
+	(Array with: textMorph kmDispatcher with: textMorph textMorph kmDispatcher)
 		do: [ :aKMDispatcher | 
 			aKMDispatcher reset.
 			aKMDispatcher attachCategory: #MorphFocusCtrlNavigation.

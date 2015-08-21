@@ -5,6 +5,6 @@ displayAstFor: aString do: aBlock
 	| ast browser |
 	ast := aBlock value: aString.
 	browser := self new.
-	browser rootItems: {(SmaCCASTTreeNode with: ast)}.
+	browser rootItems: {(SmaCCBrowserASTTreeNode with: ast)}.
 	browser text: aString.
 	browser open

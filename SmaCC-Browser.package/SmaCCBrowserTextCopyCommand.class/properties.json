@@ -6,14 +6,9 @@
 		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
-		"treeMorph",
-		"isSelectionUpdate",
-		"window",
-		"textMorph",
-		"history",
-		"text" ],
-	"name" : "SmaCCBrowser",
+		 ],
+	"name" : "SmaCCBrowserTextCopyCommand",
 	"pools" : [
 		 ],
-	"super" : "MorphTreeModel",
+	"super" : "SmaCCBrowserCommand",
 	"type" : "normal" }
