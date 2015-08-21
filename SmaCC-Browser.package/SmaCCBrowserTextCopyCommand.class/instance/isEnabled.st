@@ -1,3 +1,5 @@
 testing
 isEnabled
-	^ target trueSelection isEmpty not
+	| interval |
+	interval := requestor textSelectionInterval ifNil: [ ^ false ].
+	^ (target text copyFrom: interval first to: interval last) isEmpty not

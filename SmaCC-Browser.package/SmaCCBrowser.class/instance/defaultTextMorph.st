@@ -4,5 +4,6 @@ defaultTextMorph
 		on: self
 		text: #text
 		accept: #text:
-		readSelection: nil
-		menu: #buildTextMenu:) font: StandardFonts codeFont
+		readSelection: #textSelectionInterval
+		menu: #buildTextMenu:
+		setSelection: #textSelectionInterval:) font: StandardFonts codeFont

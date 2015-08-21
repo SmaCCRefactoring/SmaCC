@@ -11,7 +11,8 @@
 		"window",
 		"textMorph",
 		"history",
-		"text" ],
+		"text",
+		"textSelectionInterval" ],
 	"name" : "SmaCCBrowser",
 	"pools" : [
 		 ],
