@@ -7,6 +7,7 @@ baseline: spec
 			spec blessing: #baseline.
 			spec
 				package: 'SmaCC-Source-Editing';
+				package: 'SmaCC-Browser';
 				package: 'SmaCC-Runtime' with: [ spec requires: 'SmaCC-Source-Editing' ];
 				package: 'SmaCC-GLR-Runtime' with: [ spec requires: 'SmaCC-Runtime' ];
 				package: 'SmaCC-Development' with: [ spec requires: 'SmaCC-GLR-Runtime' ];
