@@ -6,11 +6,12 @@
 		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
+		"contents",
 		"contentsMorph",
 		"owner",
 		"ownerAcceptSelector" ],
 	"name" : "SmaCCCodeHolder",
 	"pools" : [
 		 ],
-	"super" : "StringHolder",
+	"super" : "Model",
 	"type" : "normal" }

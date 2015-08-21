@@ -6,6 +6,6 @@ contents: aStringOrText notifying: aRequestor
 		ifFalse: [ result := true ].
 	result
 		ifTrue: [ 
-			self acceptContents: aStringOrText.
+			self contents: aStringOrText.
 			^ true ].
 	^ false

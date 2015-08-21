@@ -1,7 +1,7 @@
 actions
 parseAndEvaluate: aBlock
 	| class |
-	self testCodeHolder acceptContents: self testText.
+	self testCodeHolder contents: self testText.
 	self testCodeHolder changed: #contents.
 	class := self parserClass.
 	class isNil
