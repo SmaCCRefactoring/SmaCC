@@ -11,7 +11,7 @@ verifyDefinition
 		ifTrue: [ 
 			(self acceptDefinition: definition notifying: self definitionCodeHolder contentsMorph)
 				ifTrue: [ 
-					self definitionCodeHolder acceptContents: definition.
+					self definitionCodeHolder contents: definition.
 					self definitionCodeHolder contentsMorph text = definition
 						ifFalse: [ self definitionCodeHolder changed: #contents ]
 						ifTrue: [ self definitionCodeHolder clearUserEditFlag ] ]
