@@ -6,7 +6,9 @@ selectorsForProtocol: aString
 
 	^ OrderedCollection
 		streamContents: [ :stream | 
-			self class protocols
-				do: [ :p | 
-					(p matchesRegex: aString)
-						ifTrue: [ stream nextPutAll: (self class selectorsInProtocol: p) ] ] ]
+			self class withAllSuperclasses
+				do: [ :c | 
+					c protocols
+						do: [ :p | 
+							(p matchesRegex: aString)
+								ifTrue: [ stream nextPutAll: (c selectorsInProtocol: p) ] ] ] ]
