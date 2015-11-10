@@ -5,7 +5,11 @@ updateTextSelection
 	self selectedNode
 		ifNil: [  ]
 		ifNotNil: [ :aNode | 
-			textMorph
-				setSelection:
-					{(aNode item startPosition).
-					(aNode item stopPosition)} ]
+			aNode item startPosition
+				ifNotNil: [ :startPosition | 
+					aNode item stopPosition
+						ifNotNil: [ :stopPosition | 
+							textMorph
+								setSelection:
+									{startPosition.
+									stopPosition} ] ] ]
