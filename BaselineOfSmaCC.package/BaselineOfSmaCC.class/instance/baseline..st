@@ -16,7 +16,7 @@ baseline: spec
 				package: 'SmaCC-Development-UI'
 					with: [ spec requires: 'SmaCC-Development' ];
 				package: 'SmaCC-Tests'
-					with: [ spec requires: 'SmaCC-GLR-Runtime' ];
+					with: [ spec requires: 'SmaCC-Development' ];
 				package: 'SmaCC-Rewrite-Engine'
 					with: [ spec requires: 'SmaCC-Runtime' ];
 				package: 'SmaCC-Rewrite-Engine-Tests'

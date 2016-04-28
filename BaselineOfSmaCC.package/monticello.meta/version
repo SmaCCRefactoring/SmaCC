@@ -1,2 +1,2 @@
-(name 'BaselineOfSmaCC-ThierryGoubier.7' message 'Add SmaCC-Python to Tests group' id '20534011-232d-4a09-bc7a-ad5b34bfa088' date '28 April 2016' time '11:02:43.599333 pm' author 'ThierryGoubier' ancestors ((name 'BaselineOfSmaCC-ThierryGoubier.6' message 'Add SmaCC-Browser
-' id 'b27509df-94c8-5142-a549-f0fd698ad35b' date '21 August 2015' time '2:38:45 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
+(name 'BaselineOfSmaCC-ThierryGoubier.8' message 'Add SmaCC-Development as required by SmaCC-Tests' id '4aedfd00-5555-49c1-ab34-823fb9b6e9c3' date '28 April 2016' time '11:14:32.675405 pm' author 'ThierryGoubier' ancestors ((name 'BaselineOfSmaCC-ThierryGoubier.7' message 'Add SmaCC-Python to Tests group
+' id '452b6285-04a7-5c35-ab33-5a0d09768746' date '28 April 2016' time '11:03:03 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
