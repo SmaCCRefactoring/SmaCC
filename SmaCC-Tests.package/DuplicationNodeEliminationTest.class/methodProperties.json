@@ -2,7 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"testDuplicateLoop" : "ThierryGoubier 2/19/2015 14:36:47",
-		"testNoDuplicates" : "ThierryGoubier 2/19/2015 14:36:47",
-		"testSimpleDuplicateWithEdges" : "ThierryGoubier 2/19/2015 14:36:47",
-		"testSimpleTerminalDuplicate" : "ThierryGoubier 2/19/2015 14:36:47" } }
+		"testDuplicateLoop" : "ThierryGoubier 8/18/2015 18:30:20",
+		"testNoDuplicates" : "ThierryGoubier 8/18/2015 18:30:20",
+		"testSimpleDuplicateWithEdges" : "ThierryGoubier 8/18/2015 18:30:20",
+		"testSimpleTerminalDuplicate" : "ThierryGoubier 8/18/2015 18:30:20" } }
