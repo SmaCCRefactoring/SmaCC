@@ -16,13 +16,13 @@ Integrates:
 
 This is the port for Smalltalk/Pharo 1.3, 2, 3, 4, 5 and 6.
 
-Installing SmaCC as a user:
+Installing SmaCC
+=====
 
-- Use the configuration manager in your Pharo image and install the stable version
+Use the configuration manager in your Pharo image and install the stable version.
 
 Installing a Development version of Pharo for the latest Pharo (with no guarantees):
 
-=====
 ```smalltalk
 Metacello new
     baseline: 'SmaCC';
@@ -31,7 +31,6 @@ Metacello new
 ```
 
 Installing SmaCC if you are a SmaCC developper: create a fork of SmaCC on github, install GitFileTree and do the following:
-=====
 
 ```smalltalk
 Metacello new
