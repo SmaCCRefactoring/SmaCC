@@ -5,8 +5,8 @@ isHexDigit
 
 	self isDigit
 		ifTrue: [ ^ true ].
-	(value >= 97 and: [ value <= 102 ])
+	(self asciiValue >= 97 and: [ self asciiValue <= 102 ])
 		ifTrue: [ ^ true ].
-	(value >= 65 and: [ value <= 70 ])
+	(self asciiValue >= 65 and: [ self asciiValue <= 70 ])
 		ifTrue: [ ^ true ].
 	^ false
