@@ -1,6 +1,6 @@
-instance
+instance creation
 variableName: aString
-	^(self new)
+	^ self new
 		variableName: aString;
 		isCollection: false;
 		yourself

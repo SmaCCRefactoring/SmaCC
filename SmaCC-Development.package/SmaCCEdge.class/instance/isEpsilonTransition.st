@@ -1,3 +1,3 @@
-private
+testing
 isEpsilonTransition
-	^transitionObjects isNil
+	^ transitionObjects isNil

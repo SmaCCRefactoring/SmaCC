@@ -1,4 +1,5 @@
 private
 codeStream
-	codeStream isNil ifTrue: [codeStream := self outputStream].
-	^codeStream
+	codeStream isNil
+		ifTrue: [ codeStream := self outputStream ].
+	^ codeStream

@@ -1,3 +1,3 @@
 accessing
 tokens
-	^scannerDefinition tokens
+	^ scannerDefinition tokens

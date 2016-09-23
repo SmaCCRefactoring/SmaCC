@@ -1,3 +1,3 @@
-code
+code generation templates
 argumentIndex: anInteger
-	^self at: 'nodes' index: anInteger
+	^ self at: 'nodes' index: anInteger

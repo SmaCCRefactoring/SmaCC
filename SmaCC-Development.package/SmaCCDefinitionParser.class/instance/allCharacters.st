@@ -1,3 +1,3 @@
-private
+private-strings
 allCharacters
-	^SmaCCGrammar allCharacters
+	^ SmaCCGrammar allCharacters

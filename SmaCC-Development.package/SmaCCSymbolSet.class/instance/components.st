@@ -1,3 +1,3 @@
 accessing
 components
-	^components
+	^ components

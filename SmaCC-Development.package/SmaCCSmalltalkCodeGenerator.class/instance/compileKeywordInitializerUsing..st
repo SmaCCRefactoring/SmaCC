@@ -1,4 +1,4 @@
-compiling
+compiling-scanner
 compileKeywordInitializerUsing: keywordMapDictionary
 	| stream dataStream |
 	keywordMapDictionary isEmpty
@@ -8,14 +8,24 @@ compileKeywordInitializerUsing: keywordMapDictionary
 	stream nextPutAll: ' keywordMap :=  Dictionary new. '.
 	dataStream := WriteStream with: Array new.
 	keywordMapDictionary
-		keysAndValuesDo: [ :key :value | value keys asSortedCollection do: [ :each | dataStream nextPut: (Array with: key with: each with: (value at: each)) ] ].
+		keysAndValuesDo:
+			[ :key :value | 
+			value keys asSortedCollection
+				do:
+					[ :each | 
+					dataStream
+						nextPut:
+							(Array with: key with: each with: (value at: each)) ] ].
 	stream
 		nextPutAll: '#(';
 		cr.
 	dataStream contents
-		do: [ :each | 
+		do:
+			[ :each | 
 			stream nextPutAll: '#('.
-			each do: [ :item | item storeOn: stream ] separatedBy: [ stream nextPut: $  ].
+			each
+				do: [ :item | item storeOn: stream ]
+				separatedBy: [ stream nextPut: $  ].
 			stream nextPut: $) ]
 		separatedBy: [ stream cr ].
 	stream nextPut: $).

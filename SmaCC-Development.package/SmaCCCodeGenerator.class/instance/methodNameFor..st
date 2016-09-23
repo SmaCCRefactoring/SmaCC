@@ -1,3 +1,3 @@
 private
 methodNameFor: aString
-	^aString
+	^ aString

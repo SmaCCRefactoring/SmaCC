@@ -2,14 +2,14 @@ accessing
 mergeTransitions
 	self groupedTransitions
 		do:
-			[:edges | 
+			[ :edges | 
 			| toMap |
 			toMap := Dictionary new.
 			edges
 				do:
-					[:each | 
+					[ :each | 
 					(toMap includesKey: each to)
 						ifTrue:
-							[(toMap at: each to) mergeWith: each.
-							transitions remove: each]
-						ifFalse: [toMap at: each to put: each]]]
+							[ (toMap at: each to) mergeWith: each.
+							transitions remove: each ]
+						ifFalse: [ toMap at: each to put: each ] ] ]

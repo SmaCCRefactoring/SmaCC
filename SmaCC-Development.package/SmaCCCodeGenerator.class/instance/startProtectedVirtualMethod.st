@@ -1,6 +1,6 @@
 private
 startProtectedVirtualMethod
 	self resetCodeStream.
-	(self codeStream)
+	self codeStream
 		nextPutAll: self protected;
 		nextPutAll: self virtual

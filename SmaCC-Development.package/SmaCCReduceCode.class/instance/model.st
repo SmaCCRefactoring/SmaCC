@@ -1,3 +1,3 @@
 accessing
 model
-	^rhs model
+	^ rhs model

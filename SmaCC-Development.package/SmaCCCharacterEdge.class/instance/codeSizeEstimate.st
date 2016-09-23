@@ -4,7 +4,8 @@ codeSizeEstimate
 	size := 1.
 	last := transitionObjects first asInteger - 1.
 	transitionObjects
-		do: [ :each | 
+		do:
+			[ :each | 
 			each asInteger - 1 = last
 				ifFalse: [ size := size + 1 ].
 			last := each asInteger ].

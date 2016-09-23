@@ -1,3 +1,3 @@
 accessing
 rhs
-	^self lr1Item rhs
+	^ self lr1Item rhs

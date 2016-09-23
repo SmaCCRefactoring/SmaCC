@@ -1,23 +1,16 @@
 generated
 scan13
-	self recordMatch: #(30).
 	self step.
-	currentCharacter = $r
-		ifTrue: [ 
-			self recordMatch: #(30).
-			self step.
-			currentCharacter = $o
-				ifTrue: [ 
-					self recordMatch: #(30).
-					self step.
-					currentCharacter = $r
-						ifTrue: [ 
-							self recordMatch: #(10 30).
-							self step ] ] ].
-	(currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ])
-		ifTrue: [ 
-			[ 
-			self recordMatch: #(30).
-			self step.
-			currentCharacter isAlphaNumeric or: [ currentCharacter = $_ ] ] whileTrue ].
-	^ self reportLastMatch
+	currentCharacter == $c
+		ifTrue: [ self step.
+			(currentCharacter between: $A and: $Z)
+				ifTrue: [ ^ self scan12 ].
+			^ self reportLastMatch ].
+	currentCharacter == $x
+		ifTrue: [ self step.
+			(currentCharacter isDigit
+				or: [ (currentCharacter between: $A and: $F)
+						or: [ currentCharacter between: $a and: $f ] ])
+				ifTrue: [ ^ self scan12 ].
+			^ self reportLastMatch ].
+	^ self scan12

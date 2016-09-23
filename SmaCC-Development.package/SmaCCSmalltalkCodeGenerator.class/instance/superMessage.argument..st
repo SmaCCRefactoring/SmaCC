@@ -1,3 +1,3 @@
-code
+code generation templates
 superMessage: aString argument: argumentString
-	^'super ' , aString , ' (' , argumentString , ')'
+	^ 'super ' , aString , ' (' , argumentString , ')'

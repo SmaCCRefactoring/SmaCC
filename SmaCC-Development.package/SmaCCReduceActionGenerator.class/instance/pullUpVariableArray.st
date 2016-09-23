@@ -1,29 +1,33 @@
-private
+reduction table
 pullUpVariableArray
 	currentSymbol variableDefinitions
 		keysAndValuesDo:
-			[:subIndex :var | 
+			[ :subIndex :var | 
 			generator
 				nextPutStatement:
 					(var isCollection
 						ifTrue:
-							[| collectionType |
+							[ | collectionType |
 							collectionType := generator collectionType.
 							self
 								compileAddToVariable: var
 								from: (self getSubIndex: subIndex ofType: collectionType)
-								collection: true]
+								collection: true ]
 						ifFalse:
-							[| nodesVariable |
-							nodesVariable := rhs nodeType variableDefinitionNamed: var variableName.
+							[ | nodesVariable |
+							nodesVariable := rhs nodeType
+								variableDefinitionNamed: var variableName.
 							nodesVariable isCollection
 								ifTrue:
-									[self
+									[ self
 										compileAddToVariable: nodesVariable
 										from: (self getSubIndex: subIndex ofType: nodesVariable type name)
-										collection: false]
+										collection: false ]
 								ifFalse:
-									[generator
+									[ generator
 										send: nodesVariable setterMethodName
 										to: 'result'
-										with: (generator cast: (generator argumentIndex: currentIndex subIndex: subIndex) to: nodesVariable type name)]])]
+										with:
+											(generator
+												cast: (generator argumentIndex: currentIndex subIndex: subIndex)
+												to: nodesVariable type name) ] ]) ]

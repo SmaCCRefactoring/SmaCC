@@ -1,3 +1,3 @@
-initialize
+initialize-release
 codeGenerator: aSmaCCCodeGenerator
 	codeGenerator := aSmaCCCodeGenerator

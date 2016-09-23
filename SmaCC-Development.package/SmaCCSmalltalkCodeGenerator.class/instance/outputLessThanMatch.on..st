@@ -1,5 +1,5 @@
-compiling
-outputLessThanMatch: each on: stream 
+compiling-scanner
+outputLessThanMatch: each on: stream
 	stream
 		nextPutAll: 'currentCharacter <= ';
 		nextPutAll: each last storeString

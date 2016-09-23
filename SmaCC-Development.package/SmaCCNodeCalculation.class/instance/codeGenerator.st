@@ -1,3 +1,3 @@
 private
 codeGenerator
-	^grammar codeGenerator
+	^ grammar codeGenerator

@@ -1,3 +1,4 @@
 private
 defineNodeClasses
-	self sortedClasses do: [ :each | self codeGenerator compileNodeClassDefinition: each ]
+	self sortedClasses
+		do: [ :each | self codeGenerator compileNodeClassDefinition: each ]

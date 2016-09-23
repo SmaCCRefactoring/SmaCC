@@ -1,2 +1,3 @@
-compiling
+compiling-parser
 initializeArrayContentsToNull: aSmaCCRHS
+	

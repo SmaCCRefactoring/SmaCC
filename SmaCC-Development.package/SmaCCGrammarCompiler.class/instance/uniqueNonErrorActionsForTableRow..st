@@ -1,5 +1,5 @@
-action
+action table
 uniqueNonErrorActionsForTableRow: row
-	^(row asSet)
-		remove: 3 ifAbsent: [];
+	^ row asSet
+		remove: 3 ifAbsent: [  ];
 		asArray

@@ -1,6 +1,6 @@
-instance
-named: aSymbol grammar: aSmaCCGrammar 
-	^(self new)
+instance creation
+named: aSymbol grammar: aSmaCCGrammar
+	^ self new
 		name: aSymbol;
 		grammar: aSmaCCGrammar;
 		yourself

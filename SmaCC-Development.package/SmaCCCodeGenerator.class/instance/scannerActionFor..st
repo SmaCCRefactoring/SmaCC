@@ -1,3 +1,3 @@
-compiling
-scannerActionFor: aString 
+compiling-scanner
+scannerActionFor: aString
 	self subclassResponsibility

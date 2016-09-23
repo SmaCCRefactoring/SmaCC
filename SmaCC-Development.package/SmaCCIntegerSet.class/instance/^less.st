@@ -9,7 +9,8 @@ comparing
 	self do: [ :each | myItems add: each ].
 	i := 1.
 	aSmaCCIntegerCollection
-		do: [ :each | 
+		do:
+			[ :each | 
 			| current |
 			i > myItems size
 				ifTrue: [ ^ true ].

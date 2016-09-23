@@ -1,6 +1,6 @@
 generated
 scan1
-	self step.
-	currentCharacter ~~ $"
+	[ self step.
+	currentCharacter == $"
 		ifTrue: [ ^ self scan2 ].
-	^ self reportLastMatch
+	true ] whileTrue

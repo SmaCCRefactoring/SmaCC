@@ -4,10 +4,10 @@ symbolsComment
 	stream := WriteStream on: String new.
 	scannerCompiler symbols
 		keysAndValuesDo:
-			[:index :each | 
+			[ :index :each | 
 			stream
 				nextPutAll: index printString;
 				nextPutAll: '. ';
 				nextPutAll: each printString;
-				cr].
-	^stream contents
+				cr ].
+	^ stream contents

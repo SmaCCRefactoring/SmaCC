@@ -1,3 +1,3 @@
 accessing
 possibleMatchesSize
-	^self characterNode possibleMatchesSize
+	^ self characterNode possibleMatchesSize

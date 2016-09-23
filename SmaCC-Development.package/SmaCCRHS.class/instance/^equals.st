@@ -1,3 +1,4 @@
 comparing
 = aSmaCCRHS
-	^self class = aSmaCCRHS class and: [collection = aSmaCCRHS collection]
+	^ self class = aSmaCCRHS class
+		and: [ collection = aSmaCCRHS collection ]

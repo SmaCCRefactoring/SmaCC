@@ -1,3 +1,3 @@
 private
 outputStream
-	^self outputStreamClass with: String new
+	^ self outputStreamClass with: String new

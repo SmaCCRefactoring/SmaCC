@@ -1,3 +1,3 @@
-private
+reduce actions
 isNode
-	^self modelType includesClass: (self model classFor: SmaCCParseNode)
+	^ self modelType includesClass: (self model classFor: SmaCCParseNode)

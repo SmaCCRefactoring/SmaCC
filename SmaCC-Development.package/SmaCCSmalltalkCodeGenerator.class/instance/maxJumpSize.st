@@ -1,3 +1,3 @@
-accessing
+compiling-scanner
 maxJumpSize
 	^ MaxJumpSize

@@ -7,12 +7,13 @@ allStartingSymbols
 	startingSymbols := otherStartingSymbols copy.
 	startingSymbols remove: default symbol ifAbsent: [  ].
 	startingSymbols := startingSymbols
-		collect: [ :each | 
+		collect:
+			[ :each | 
 			(self newStartingSymbolNamed: each name)
 				addProduction:
-						(self newRHS
-								add: each;
-								yourself);
+					(self newRHS
+						add: each;
+						yourself);
 				yourself ].
-	default ifNotNil: [ startingSymbols addFirst: default ].
+	startingSymbols addFirst: default.
 	^ startingSymbols

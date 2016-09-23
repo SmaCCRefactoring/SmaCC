@@ -1,1 +1,1 @@
-SmaCCCompilationNotification is a notification that is raised when we discover a problem with the parser. For example, a shift/reduce conflict will raise this notification.
+SmaCCCompilationNotification is a Notification that is signaled when a problem occurs when compiling the parser. It is mainly used to show the user problems with their grammar.

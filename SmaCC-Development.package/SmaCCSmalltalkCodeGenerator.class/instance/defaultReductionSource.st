@@ -1,3 +1,3 @@
-private
+reduction table
 defaultReductionSource
-	^'#reduceFor:'
+	^ '#reduceFor:'

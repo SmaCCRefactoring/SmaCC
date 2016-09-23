@@ -1,3 +1,3 @@
 accessing
 firstTerminals
-	^firstTerminals
+	^ firstTerminals

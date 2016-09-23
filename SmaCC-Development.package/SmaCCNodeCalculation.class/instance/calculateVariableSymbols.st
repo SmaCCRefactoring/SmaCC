@@ -2,9 +2,15 @@ private
 calculateVariableSymbols
 	variableSymbols := Set new.
 	grammar symbols
-		do: [ :each | 
+		do:
+			[ :each | 
 			each requiresNodeType
-				ifTrue: [ each productionsDo: [ :rhs | rhs unnamedSymbolsDo: [ :sym | self calculateVariableSymbolsFor: sym ] ] ] ].
-	variableSymbols := variableSymbols select: [ :each | self hasVariables: each seen: IdentitySet new ].
-	singleVariableSymbols := variableSymbols select: [ :each | self hasSingleVariableName: each ].
+				ifTrue:
+					[ each
+						productionsDo:
+							[ :rhs | rhs unnamedSymbolsDo: [ :sym | self calculateVariableSymbolsFor: sym ] ] ] ].
+	variableSymbols := variableSymbols
+		select: [ :each | self hasVariables: each seen: IdentitySet new ].
+	singleVariableSymbols := variableSymbols
+		select: [ :each | self hasSingleVariableName: each ].
 	variableSymbols removeAll: singleVariableSymbols

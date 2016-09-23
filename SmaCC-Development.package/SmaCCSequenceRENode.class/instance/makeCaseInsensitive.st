@@ -1,3 +1,3 @@
 constructing
 makeCaseInsensitive
-	nodes do: [:each | each makeCaseInsensitive]
+	nodes do: [ :each | each makeCaseInsensitive ]

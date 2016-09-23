@@ -1,3 +1,3 @@
 accessing
 id
-	^self preferredAction id
+	^ self preferredAction id

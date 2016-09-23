@@ -1,7 +1,5 @@
 private
 calculateVariableSymbolsFor: aSmaCCSymbol
-	"This is where the generation"
-
 	aSmaCCSymbol isTerminal
 		ifTrue: [ ^ self ].
 	aSmaCCSymbol requiresNodeType
@@ -9,4 +7,8 @@ calculateVariableSymbolsFor: aSmaCCSymbol
 	(variableSymbols includes: aSmaCCSymbol)
 		ifTrue: [ ^ self ].
 	variableSymbols add: aSmaCCSymbol.
-	aSmaCCSymbol productionsDo: [ :rhs | rhs unnamedSymbolsDo: [ :each | self calculateVariableSymbolsFor: each ] ]
+	aSmaCCSymbol
+		productionsDo:
+			[ :rhs | 
+			rhs
+				unnamedSymbolsDo: [ :each | self calculateVariableSymbolsFor: each ] ]

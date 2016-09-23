@@ -1,8 +1,9 @@
-compiling
+compiling-parser
 compileSymbolTypes
 	| names |
 	names := grammar symbols
-		collect: [ :each | 
+		collect:
+			[ :each | 
 			| types previousSize |
 			types := each modelTypes.
 			previousSize := types size.

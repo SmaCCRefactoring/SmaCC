@@ -1,3 +1,3 @@
 accessing
 pluralNameBlock
-	^PluralNameBlock ifNil: [^[:value | nil]]
+	^ PluralNameBlock ifNil: [ ^ [ :value | nil ] ]

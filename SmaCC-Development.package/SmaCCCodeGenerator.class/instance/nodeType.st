@@ -1,3 +1,3 @@
 private
 nodeType
-	^(model classFor: SmaCCParseNode) name
+	^ (model classFor: SmaCCParseNode) name

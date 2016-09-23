@@ -1,10 +1,10 @@
 accessing
 groupedTransitions
-	^transitions
+	^ transitions
 		inject: OrderedCollection new
 		into:
-			[:sum :each | 
+			[ :sum :each | 
 			(sum
-				detect: [:edgeCollection | edgeCollection first canMergeWith: each]
-				ifNone: [sum add: OrderedCollection new]) add: each.
-			sum]
+				detect: [ :edgeCollection | edgeCollection first canMergeWith: each ]
+				ifNone: [ sum add: OrderedCollection new ]) add: each.
+			sum ]

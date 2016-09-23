@@ -1,3 +1,3 @@
 private
 symbols
-	^symbols
+	^ symbols

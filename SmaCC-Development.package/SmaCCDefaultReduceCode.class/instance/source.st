@@ -1,3 +1,3 @@
 accessing
 source
-	^self codeGenerator defaultReductionSource
+	^ self codeGenerator defaultReductionSource

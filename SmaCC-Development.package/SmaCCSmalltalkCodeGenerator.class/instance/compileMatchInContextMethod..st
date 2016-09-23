@@ -1,2 +1,3 @@
-compiling
+compiling-nodes
 compileMatchInContextMethod: aSmaCCNodeClassDefinition
+	

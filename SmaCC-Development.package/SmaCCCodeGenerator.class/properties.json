@@ -12,7 +12,8 @@
 		"codeStream",
 		"reduceActionCache",
 		"ambiguousActions",
-		"grammar" ],
+		"grammar",
+		"defaultCategory" ],
 	"name" : "SmaCCCodeGenerator",
 	"pools" : [
 		 ],

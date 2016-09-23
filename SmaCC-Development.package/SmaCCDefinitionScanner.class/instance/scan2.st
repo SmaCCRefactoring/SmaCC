@@ -1,11 +1,7 @@
 generated
 scan2
-	[ 
+	self recordMatch: #(27).
 	self step.
-	currentCharacter = $"
-		ifTrue: [ 
-			self recordMatch: #(31).
-			self step.
-			currentCharacter = $"
-				ifTrue: [ ^ self scan1 ].
-			^ self reportLastMatch ] ] repeat
+	currentCharacter == $"
+		ifTrue: [ ^ self scan1 ].
+	^ self reportLastMatch

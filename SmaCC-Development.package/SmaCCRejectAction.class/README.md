@@ -1,1 +1,2 @@
-SmaCCRejectAction represents a reject action in the parsing tables.
+SmaCCRejectAction represents the LR reject action.
+

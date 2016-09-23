@@ -4,9 +4,11 @@ action: aSmaCCSymbol prefer: aClass
 	action := nil.
 	self
 		do:
-			[:each | 
+			[ :each | 
 			| eachAction |
 			eachAction := each action: aSmaCCSymbol.
-			action := action isNil ifTrue: [eachAction] ifFalse: [action mergeWith: eachAction prefer: aClass]].
+			action := action isNil
+				ifTrue: [ eachAction ]
+				ifFalse: [ action mergeWith: eachAction prefer: aClass ] ].
 	action signalAllWarnings.
-	^action
+	^ action

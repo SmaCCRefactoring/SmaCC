@@ -1,3 +1,4 @@
 accessing
 errorSymbol
-	^errorSymbol ifNil: [errorSymbol := self newTerminalSymbolNamed: 'error']
+	^ errorSymbol
+		ifNil: [ errorSymbol := self newTerminalSymbolNamed: 'error' ]

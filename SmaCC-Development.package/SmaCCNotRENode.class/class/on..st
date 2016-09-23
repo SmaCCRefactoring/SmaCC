@@ -1,5 +1,5 @@
-instance
+instance creation
 on: aSmaCCCharacterRENode
-	^(self new)
+	^ self new
 		node: aSmaCCCharacterRENode;
 		yourself

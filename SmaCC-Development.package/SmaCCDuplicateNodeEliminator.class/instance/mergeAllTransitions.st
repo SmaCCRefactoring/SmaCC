@@ -1,3 +1,3 @@
 algorithm
 mergeAllTransitions
-	root allStates do: [:each | each mergeTransitions]
+	root allStates do: [ :each | each mergeTransitions ]

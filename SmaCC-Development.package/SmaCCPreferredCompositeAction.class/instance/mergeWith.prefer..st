@@ -2,13 +2,13 @@ merging
 mergeWith: aSmaCCAction prefer: aClass
 	aSmaCCAction isReduce
 		ifTrue:
-			[self reduceAction = aSmaCCAction ifTrue: [^self].
-			^(SmaCCAmbiguousAction new)
+			[ self reduceAction = aSmaCCAction
+				ifTrue: [ ^ self ].
+			^ SmaCCAmbiguousAction new
 				addAction: aSmaCCAction;
 				addActions: actions;
-				yourself].
+				yourself ].
 	aSmaCCAction isShift
-		ifTrue:
-			[self addAction: aSmaCCAction.
-			^self].
-	^aSmaCCAction mergeWith: self prefer: aClass
+		ifTrue: [ self addAction: aSmaCCAction.
+			^ self ].
+	^ aSmaCCAction mergeWith: self prefer: aClass

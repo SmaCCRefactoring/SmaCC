@@ -1,4 +1,4 @@
-initialize
+initialize-release
 initialize
 	super initialize.
 	characters := ByteArray new: 16r10000 / 8.

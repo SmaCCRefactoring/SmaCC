@@ -1,3 +1,4 @@
 accessing
 codeGenerator
-	^codeGenerator ifNil: [self codeGenerator: SmaCCSmalltalkCodeGenerator new]
+	^ codeGenerator
+		ifNil: [ self codeGenerator: SmaCCSmalltalkCodeGenerator new ]

@@ -1,3 +1,3 @@
-compiling
+compiling-scanner
 outputInvertedMatchFor: aSmaCCCharacterEdge on: stream
 	self subclassResponsibility

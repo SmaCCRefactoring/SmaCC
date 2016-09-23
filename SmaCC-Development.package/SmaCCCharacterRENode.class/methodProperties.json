@@ -1,18 +1,17 @@
 {
 	"class" : {
-		"characters:" : "ThierryGoubier 2/24/2015 14:37:14",
-		"sortedCharactersFor:" : "ThierryGoubier 2/24/2015 14:37:14" },
+		"characters:" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"asNFAStartingWith:" : "ThierryGoubier 2/24/2015 14:37:14",
-		"assignCharacters:" : "ThierryGoubier 2/24/2015 14:37:14",
-		"canMergeWith:" : "ThierryGoubier 2/24/2015 14:37:14",
-		"characters" : "ThierryGoubier 2/24/2015 14:37:14",
-		"characters:" : "ThierryGoubier 2/24/2015 14:37:14",
-		"initialize" : "ThierryGoubier 2/24/2015 14:37:14",
-		"makeCaseInsensitive" : "ThierryGoubier 2/24/2015 14:37:14",
-		"matchingCharacters" : "ThierryGoubier 2/24/2015 14:37:14",
-		"possibleMatchesDo:on:" : "ThierryGoubier 2/24/2015 14:37:14",
-		"possibleMatchesSize" : "ThierryGoubier 2/24/2015 14:37:14",
-		"printCharacter:on:" : "ThierryGoubier 2/24/2015 14:37:14",
-		"printOn:" : "ThierryGoubier 2/24/2015 14:37:14",
-		"|" : "ThierryGoubier 2/24/2015 14:37:14" } }
+		"asNFAStartingWith:" : "JohnBrant 6/24/2016 12:26:52",
+		"assignCharacters:" : "JohnBrant 6/24/2016 12:26:52",
+		"canMergeWith:" : "JohnBrant 6/24/2016 12:26:52",
+		"characters" : "JohnBrant 6/24/2016 12:26:52",
+		"characters:" : "JohnBrant 6/24/2016 12:26:52",
+		"initialize" : "JohnBrant 6/24/2016 12:26:52",
+		"makeCaseInsensitive" : "JohnBrant 6/24/2016 12:26:52",
+		"matchingCharacters" : "JohnBrant 6/24/2016 12:26:52",
+		"possibleMatchesDo:on:" : "JohnBrant 6/24/2016 12:26:52",
+		"possibleMatchesSize" : "JohnBrant 6/24/2016 12:26:52",
+		"printCharacter:on:" : "JohnBrant 6/24/2016 12:26:52",
+		"printOn:" : "JohnBrant 6/24/2016 12:26:52",
+		"|" : "JohnBrant 6/24/2016 12:26:52" } }

@@ -1,3 +1,3 @@
 accessing
 isAlwaysAssigned
-	^isAlwaysAssigned or: [self isCollection]
+	^ isAlwaysAssigned or: [ self isCollection ]

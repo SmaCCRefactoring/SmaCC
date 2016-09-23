@@ -1,3 +1,3 @@
-private
+reduce actions
 nodeType
-	^self nodeType: IdentitySet new
+	^ self nodeType: IdentitySet new

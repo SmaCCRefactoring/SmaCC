@@ -1,3 +1,3 @@
 private
 reduceAction
-	^actions detect: [:each | each isReduce]
+	^ actions detect: [ :each | each isReduce ]

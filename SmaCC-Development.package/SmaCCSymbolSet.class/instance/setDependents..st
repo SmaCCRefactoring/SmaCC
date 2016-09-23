@@ -1,3 +1,3 @@
 public
 setDependents: aCollection
-	^dependents := aCollection
+	^ dependents := aCollection

@@ -1,8 +1,8 @@
 private
 terminalSymbolNamed: aString
-	^self
+	^ self
 		findSymbolNamed: aString
 		ifAbsentAdd:
-			[(self newTerminalSymbolNamed: aString)
+			[ (self newTerminalSymbolNamed: aString)
 				regularExpression: (scannerDefinition tokenNamed: aString);
-				yourself]
+				yourself ]

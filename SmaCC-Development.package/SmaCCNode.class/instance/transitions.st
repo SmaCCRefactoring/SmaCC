@@ -1,3 +1,3 @@
 accessing
 transitions
-	^transitions
+	^ transitions

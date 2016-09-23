@@ -1,6 +1,6 @@
-instance
+instance creation
 forIndex: anInteger symbol: aSmaCCSymbol
-	^(self new)
+	^ self new
 		index: anInteger;
 		symbol: aSmaCCSymbol;
 		yourself

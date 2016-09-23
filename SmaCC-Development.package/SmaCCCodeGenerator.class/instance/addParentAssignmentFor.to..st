@@ -1,22 +1,40 @@
 private
 addParentAssignmentFor: aSmaCCVariableDefinition to: valueString
-	aSmaCCVariableDefinition isBaseNodeType ifFalse: [^self].
+	aSmaCCVariableDefinition isBaseNodeType
+		ifFalse: [ ^ self ].
 	aSmaCCVariableDefinition isCollection
 		ifTrue:
-			[self
+			[ self
 				nextPutStatement:
 					(self
 						send: #setParents:to:
 						to: self receiverName
 						with:
-							(self cast: (self variableReference: aSmaCCVariableDefinition in: self receiverName) to: self collectionType)
-						with: valueString)]
+							(self
+								cast:
+									(self
+										variableReference: aSmaCCVariableDefinition
+										in: self receiverName)
+								to: self collectionType)
+						with: valueString) ]
 		ifFalse:
-			[self nextPutLine: (self notNilCheckFor: (self variableReference: aSmaCCVariableDefinition in: self receiverName)).
+			[ self
+				nextPutLine:
+					(self
+						notNilCheckFor:
+							(self
+								variableReference: aSmaCCVariableDefinition
+								in: self receiverName)).
 			self
 				nextPutStatement:
 					(self
 						send: #parent:
-						to: (self cast: (self variableReference: aSmaCCVariableDefinition in: self receiverName) to: 'ParseNode')
+						to:
+							(self
+								cast:
+									(self
+										variableReference: aSmaCCVariableDefinition
+										in: self receiverName)
+								to: 'ParseNode')
 						with: valueString).
-			self nextPutStatement: self endConditionalString]
+			self nextPutStatement: self endConditionalString ]

@@ -1,3 +1,3 @@
-private
+testing
 isExcludeState: aSymbol
-	^excludeStates includes: aSymbol
+	^ excludeStates includes: aSymbol

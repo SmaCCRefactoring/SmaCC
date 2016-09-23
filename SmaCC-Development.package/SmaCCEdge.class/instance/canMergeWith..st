@@ -1,3 +1,3 @@
-private
-canMergeWith: aSmaCCEdge 
-	^self class = aSmaCCEdge class
+testing
+canMergeWith: aSmaCCEdge
+	^ self class = aSmaCCEdge class

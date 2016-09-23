@@ -1,7 +1,7 @@
 private
 generatedMethodsIn: aRBClass
-	^aRBClass selectors
+	^ aRBClass selectors
 		select:
-			[:each | 
+			[ :each | 
 			(aRBClass protocolsFor: each)
-				anySatisfy: [:protocol | protocol notNil and: ['generated*' match: protocol]]]
+				anySatisfy: [ :protocol | protocol notNil and: [ 'generated*' match: protocol ] ] ]

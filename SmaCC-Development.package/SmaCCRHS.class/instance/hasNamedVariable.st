@@ -1,3 +1,3 @@
-private
+testing
 hasNamedVariable
-	^variableNameMap notEmpty
+	^ variableNameMap notEmpty

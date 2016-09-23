@@ -1,3 +1,3 @@
 accessing
 positionOf: aSmaCCRHS
-	^productions indexOf: aSmaCCRHS
+	^ productions indexOf: aSmaCCRHS

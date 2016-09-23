@@ -1,3 +1,3 @@
 accessing
 characters
-	^characters
+	^ characters

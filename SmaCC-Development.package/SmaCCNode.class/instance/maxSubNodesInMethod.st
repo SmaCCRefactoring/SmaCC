@@ -1,3 +1,0 @@
-private
-maxSubNodesInMethod
-	^ 30

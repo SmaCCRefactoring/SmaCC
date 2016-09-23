@@ -1,3 +1,3 @@
 accessing
 transitionObjects
-	^transitionObjects
+	^ transitionObjects

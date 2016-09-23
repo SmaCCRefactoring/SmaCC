@@ -1,3 +1,3 @@
 accessing
 modelTypes
-	^self modelTypes: IdentitySet new
+	^ self modelTypes: IdentitySet new

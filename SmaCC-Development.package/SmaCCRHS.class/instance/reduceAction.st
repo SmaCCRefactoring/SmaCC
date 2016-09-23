@@ -1,3 +1,3 @@
-private
+reduce actions
 reduceAction
-	^reduceAction
+	^ reduceAction

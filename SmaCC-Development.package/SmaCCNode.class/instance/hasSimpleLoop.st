@@ -1,3 +1,3 @@
-private
+testing
 hasSimpleLoop
-	^transitions anySatisfy: [:each | each to = self]
+	^ transitions anySatisfy: [ :each | each to = self ]

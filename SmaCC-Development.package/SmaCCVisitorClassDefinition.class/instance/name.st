@@ -1,3 +1,3 @@
 accessing
 name
-	^self modelClass name
+	^ self modelClass name

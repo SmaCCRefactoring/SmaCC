@@ -1,3 +1,3 @@
 private
 asNFAStartingWith: aSmaCCNode
-	^self subclassResponsibility
+	^ self subclassResponsibility

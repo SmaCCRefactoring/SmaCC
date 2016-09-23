@@ -1,10 +1,20 @@
-private
+regular expression construction
 addActionsFrom: aRegularExpression to: aKeywordMap at: states
-	^states
+	^ states
 		do:
-			[:state | 
+			[ :state | 
 			state ~= aRegularExpression action
 				ifTrue:
-					[aRegularExpression
+					[ | keywordData |
+					keywordData := grammar hasMultipleScannerStates
+						ifTrue:
+							[ Array
+								with: aRegularExpression action
+								with: aRegularExpression states asSortedCollection asArray ]
+						ifFalse: [ aRegularExpression action ].
+					aRegularExpression
 						possibleMatchesDo:
-							[:string | (aKeywordMap at: state ifAbsentPut: [Dictionary new]) at: string put: aRegularExpression action]]]
+							[ :string | 
+							(aKeywordMap at: state ifAbsentPut: [ Dictionary new ])
+								at: string
+								put: keywordData ] ] ]

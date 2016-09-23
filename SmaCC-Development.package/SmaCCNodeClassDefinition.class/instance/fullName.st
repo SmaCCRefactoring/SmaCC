@@ -1,3 +1,4 @@
 accessing
 fullName
-	^self codeGenerator namespaceName , grammar prefix , name , grammar suffix
+	^ self codeGenerator namespaceName , grammar prefix , name
+		, grammar suffix

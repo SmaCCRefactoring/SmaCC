@@ -1,6 +1,6 @@
 private
 startPublicVirtualMethod
 	self resetCodeStream.
-	(self codeStream)
+	self codeStream
 		nextPutAll: self public;
 		nextPutAll: self virtual

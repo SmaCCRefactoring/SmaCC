@@ -1,3 +1,3 @@
 private
 rootClassName
-	^Object fullName
+	^ Object name

@@ -4,9 +4,9 @@ itemSetsComment
 	stream := WriteStream on: String new.
 	itemSets
 		keysAndValuesDo:
-			[:index :each | 
+			[ :index :each | 
 			stream
 				nextPutAll: index printString;
 				nextPutAll: each printString;
-				cr].
-	^stream contents
+				cr ].
+	^ stream contents

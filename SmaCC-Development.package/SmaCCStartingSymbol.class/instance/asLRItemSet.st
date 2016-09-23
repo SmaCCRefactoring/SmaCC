@@ -4,13 +4,13 @@ asLRItemSet
 	itemSet := self grammar newItemSet.
 	productions
 		do:
-			[:each | 
+			[ :each | 
 			itemSet
 				add:
 					(SmaCCLR1Item
 						rhs: each
 						follow:
-							((SmaCCSymbolSet new)
+							(SmaCCSymbolSet new
 								add: grammar emptySymbol;
-								yourself))].
-	^itemSet
+								yourself)) ].
+	^ itemSet

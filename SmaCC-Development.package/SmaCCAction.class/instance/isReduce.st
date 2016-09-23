@@ -1,3 +1,3 @@
-private
+testing
 isReduce
-	^false
+	^ false

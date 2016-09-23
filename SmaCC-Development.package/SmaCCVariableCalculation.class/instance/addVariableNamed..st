@@ -1,3 +1,3 @@
-initialize
+private
 addVariableNamed: aString
-	^newVariables add: (SmaCCVariableDefinition variableName: aString)
+	^ newVariables add: (SmaCCVariableDefinition variableName: aString)

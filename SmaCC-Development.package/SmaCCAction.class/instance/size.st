@@ -1,3 +1,3 @@
 accessing
 size
-	^self rhs size
+	^ self rhs size

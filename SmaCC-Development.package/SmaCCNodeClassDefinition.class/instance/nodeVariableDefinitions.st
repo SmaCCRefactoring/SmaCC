@@ -1,3 +1,4 @@
 accessing
 nodeVariableDefinitions
-	^self variableDefinitions select: [:each | each isBasePossibleNodeType]
+	^ self variableDefinitions
+		select: [ :each | each isBasePossibleNodeType ]

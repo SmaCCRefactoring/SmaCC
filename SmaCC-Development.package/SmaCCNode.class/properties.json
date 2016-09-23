@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		"NextId" ],
-	"commentStamp" : "<historical>",
+	"commentStamp" : "",
 	"instvars" : [
 		"transitions",
 		"action",

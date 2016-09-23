@@ -1,7 +1,7 @@
-initialize
+initialize-release
 initialize
 	super initialize.
-	model := (RBNamespace new)
+	model := RBNamespace new
 		name: 'Compile Scanner/Parser';
 		yourself.
 	self initializeIsExpressions.

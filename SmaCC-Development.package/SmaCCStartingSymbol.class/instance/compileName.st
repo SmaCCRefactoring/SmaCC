@@ -1,3 +1,3 @@
 accessing
 compileName
-	^(productions first at: 1) safeMethodName
+	^ (productions first at: 1) safeMethodName

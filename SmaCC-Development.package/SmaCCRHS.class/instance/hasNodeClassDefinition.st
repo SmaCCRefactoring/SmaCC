@@ -1,3 +1,3 @@
-private
+testing
 hasNodeClassDefinition
-	^self nodeClassDefinition notNil
+	^ self nodeClassDefinition notNil

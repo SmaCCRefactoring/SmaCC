@@ -1,3 +1,5 @@
 compiling
 compileGetterAndSetter: aSmaCCVariableDefinition
-	self codeGenerator compileGetterAndSetter: aSmaCCVariableDefinition forDefinition: self
+	self codeGenerator
+		compileGetterAndSetter: aSmaCCVariableDefinition
+		forDefinition: self

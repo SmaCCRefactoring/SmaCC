@@ -1,5 +1,5 @@
-instance
+instance creation
 characters: aString
-	^(self new)
+	^ self new
 		assignCharacters: aString;
 		yourself

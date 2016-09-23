@@ -1,3 +1,3 @@
 accessing
-tokenNamed: aString ifAbsentPut: aBlock 
-	^tokens at: aString ifAbsentPut: aBlock
+tokenNamed: aString ifAbsentPut: aBlock
+	^ tokens at: aString ifAbsentPut: aBlock

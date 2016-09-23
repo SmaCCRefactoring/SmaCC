@@ -1,5 +1,5 @@
 edges
 commonTransitionObjectsForEdges: edgeCollection
-	^edgeCollection
+	^ edgeCollection
 		inject: edgeCollection first transitionObjects
-		into: [:sum :each | sum select: [:char | each includes: char]]
+		into: [ :sum :each | sum select: [ :char | each includes: char ] ]

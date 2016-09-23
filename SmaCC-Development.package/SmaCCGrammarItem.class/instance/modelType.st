@@ -1,3 +1,3 @@
-private
+reduce actions
 modelType
-	^self modelType: IdentitySet new
+	^ self modelType: IdentitySet new

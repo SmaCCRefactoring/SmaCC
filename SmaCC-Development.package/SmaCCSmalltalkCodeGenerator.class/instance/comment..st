@@ -1,3 +1,3 @@
-code
+code generation templates
 comment: aString
-	^'"' , (aString trimBoth copyReplaceAll: '"' with: '""') , '"'
+	^ '"' , (aString trim copyReplaceAll: '"' with: '""') , '"'

@@ -1,5 +1,5 @@
-item
+item creation
 newRHS
-	^(SmaCCRHS new)
+	^ SmaCCRHS new
 		grammar: self;
 		yourself

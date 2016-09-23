@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "jmb",
+	"commentStamp" : "",
 	"instvars" : [
 		"productions" ],
 	"name" : "SmaCCNonTerminalSymbol",

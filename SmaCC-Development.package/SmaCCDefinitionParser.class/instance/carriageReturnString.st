@@ -1,3 +1,3 @@
-private
+private-strings
 carriageReturnString
-	^String with: (Character value: 13)
+	^ String with: (Character value: 13)

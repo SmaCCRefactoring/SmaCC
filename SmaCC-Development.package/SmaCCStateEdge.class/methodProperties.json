@@ -2,8 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"<=" : "ThierryGoubier 2/24/2015 14:37:14",
-		"codeSizeEstimate" : "ThierryGoubier 8/17/2015 17:19",
-		"dispatchTo:seen:" : "ThierryGoubier 2/24/2015 14:37:14",
-		"edgeFrequencyUsingTable:" : "ThierryGoubier 2/24/2015 14:37:14",
-		"expression" : "ThierryGoubier 2/24/2015 14:37:14" } }
+		"<=" : "JohnBrant 6/24/2016 12:26:52",
+		"codeSizeEstimate" : "JohnBrant 6/24/2016 12:26:52",
+		"dispatchTo:seen:" : "JohnBrant 6/24/2016 12:26:52" } }

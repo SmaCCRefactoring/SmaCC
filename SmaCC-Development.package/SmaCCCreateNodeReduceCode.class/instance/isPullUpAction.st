@@ -1,3 +1,3 @@
-private
+testing
 isPullUpAction
-	^self index > 0
+	^ self index > 0

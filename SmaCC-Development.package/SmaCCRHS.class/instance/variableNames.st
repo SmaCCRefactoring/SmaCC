@@ -1,3 +1,3 @@
-accessing
+private
 variableNames
 	^ variableNameMap keys

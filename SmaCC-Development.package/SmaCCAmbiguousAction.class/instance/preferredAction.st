@@ -1,3 +1,3 @@
 accessing
 preferredAction
-	^self sortedActions first
+	^ self sortedActions first

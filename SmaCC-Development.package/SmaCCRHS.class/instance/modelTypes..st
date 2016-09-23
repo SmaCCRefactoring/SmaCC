@@ -1,3 +1,3 @@
 accessing
 modelTypes: anIdentitySet
-	^reduceAction modelTypes: anIdentitySet
+	^ reduceAction modelTypes: anIdentitySet

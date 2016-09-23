@@ -1,3 +1,3 @@
 accessing
 size
-	^0
+	^ 0

@@ -1,3 +1,3 @@
 accessing
 modelClass
-	^class
+	^ class

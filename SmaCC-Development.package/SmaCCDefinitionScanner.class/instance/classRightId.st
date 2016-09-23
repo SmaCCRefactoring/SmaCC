@@ -1,3 +1,3 @@
 generated
 classRightId
-	^ 44
+	^ 40

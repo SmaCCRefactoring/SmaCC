@@ -1,3 +1,3 @@
-code
+code generation templates
 variableReference: aSmaCCVariableDefinition
-	^self nonKeywordNameFor: aSmaCCVariableDefinition sourceVariableName
+	^ self nonKeywordNameFor: aSmaCCVariableDefinition sourceVariableName

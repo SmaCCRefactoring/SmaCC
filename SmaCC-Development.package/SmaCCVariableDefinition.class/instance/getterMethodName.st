@@ -1,3 +1,3 @@
 accessing
 getterMethodName
-	^getterMethodName
+	^ getterMethodName

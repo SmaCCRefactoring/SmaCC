@@ -1,3 +1,5 @@
 accessing
 sourceVariableName
-	^self isCollection ifTrue: [self class pluralNameFor: variableName] ifFalse: [variableName]
+	^ self isCollection
+		ifTrue: [ self class pluralNameFor: variableName ]
+		ifFalse: [ variableName ]

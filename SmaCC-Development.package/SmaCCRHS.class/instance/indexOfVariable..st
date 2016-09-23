@@ -1,3 +1,3 @@
-private
+variables
 indexOfVariable: aString
-	^(variableNameMap at: aString ifAbsent: [^nil]) first
+	^ (variableNameMap at: aString ifAbsent: [ ^ nil ]) first

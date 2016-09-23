@@ -1,3 +1,3 @@
-initialize
+initialize-release
 baseType: modelClass
 	baseType := modelClass

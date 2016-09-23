@@ -1,3 +1,3 @@
 private
 basicModelTypes: aSet
-	^Array with: self classDefinition modelClass
+	^ Array with: self classDefinition modelClass

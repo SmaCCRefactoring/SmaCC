@@ -1,4 +1,5 @@
-initialize
+private
 calculateVariables
-	self rhsDo: [:each | self addRHS: each].
-	[todo notEmpty] whileTrue: [self calculateVariablesFor: todo removeFirst]
+	self rhsDo: [ :each | self addRHS: each ].
+	[ todo notEmpty ]
+		whileTrue: [ self calculateVariablesFor: todo removeFirst ]

@@ -1,3 +1,3 @@
-initialize
+initialize-release
 getId
-	^NextId := NextId + 1
+	^ NextId := NextId + 1

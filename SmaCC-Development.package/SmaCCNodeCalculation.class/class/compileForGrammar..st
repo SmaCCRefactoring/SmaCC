@@ -1,5 +1,5 @@
 accessing
 compileForGrammar: aSmaCCGrammar
-	(self new)
+	self new
 		grammar: aSmaCCGrammar;
 		compileNodeClasses

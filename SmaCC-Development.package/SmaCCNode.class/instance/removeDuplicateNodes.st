@@ -1,3 +1,3 @@
 accessing
 removeDuplicateNodes
-	^SmaCCDuplicateNodeEliminator removeDuplicateNodesIn: self
+	^ SmaCCDuplicateNodeEliminator removeDuplicateNodesIn: self

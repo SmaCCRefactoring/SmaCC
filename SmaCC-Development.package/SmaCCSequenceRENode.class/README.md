@@ -1,4 +1,5 @@
-SmaCCSequenceRENode represents a regular expression that is made up of several other regular expressions concatenated together.
+SmaCCSequenceRENode is a SmaCCRegularExpressionNode that matches a sequence of other RE nodes.
 
 Instance Variables:
-	nodes	<Collection of: SmaCCRegularExpressionNode>	our children nodes in left-to-right order
+	nodes	<SequenceableCollection of: SmaCCRegularExpressionNode>	an ordered list of nodes to match
+

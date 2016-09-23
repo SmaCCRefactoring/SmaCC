@@ -1,4 +1,4 @@
-compiling
+compiling-scanner
 statesToMakeIntoMethodsFor: aSmaCCNode
 	| methodStates |
 	methodStates := self initialMethodStatesFor: aSmaCCNode.

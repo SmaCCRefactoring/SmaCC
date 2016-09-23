@@ -1,3 +1,3 @@
 accessing
 codeGenerator
-	^grammar codeGenerator
+	^ grammar codeGenerator

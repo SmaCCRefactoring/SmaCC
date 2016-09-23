@@ -1,3 +1,3 @@
-compiling
+compiling-scanner
 compileMethodIn: modelClass
-	self compileMethodWithoutFormattingIn: modelClass
+	self subclassResponsibility

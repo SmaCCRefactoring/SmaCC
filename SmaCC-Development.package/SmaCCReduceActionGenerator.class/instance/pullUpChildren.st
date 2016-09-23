@@ -1,7 +1,5 @@
-private
+reduction table
 pullUpChildren
-	"Here we pull up. The type may be a variable or a node, and this is when we reach the node that it goes wrong."
-
 	currentSymbol returnsVariableCollection
 		ifTrue: [ ^ self pullUpVariableArray ].
 	currentSymbol returnsSingleVariable

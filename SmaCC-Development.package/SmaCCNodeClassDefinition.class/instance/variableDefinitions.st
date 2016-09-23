@@ -2,7 +2,9 @@ accessing
 variableDefinitions
 	variables isNil
 		ifTrue:
-			[variables := productions isEmpty ifTrue: [self calculateCommonSubclassVariables] ifFalse: [self productionVariables].
+			[ variables := productions isEmpty
+				ifTrue: [ self calculateCommonSubclassVariables ]
+				ifFalse: [ self productionVariables ].
 			self removeDuplicateSubclassVariables.
-			SmaCCVariableDefinition assignIndices: variables].
-	^variables
+			SmaCCVariableDefinition assignIndices: variables ].
+	^ variables

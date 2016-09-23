@@ -1,3 +1,3 @@
-private
+testing
 isDigit: each
-	^each between: $0 and: $9
+	^ each between: $0 and: $9

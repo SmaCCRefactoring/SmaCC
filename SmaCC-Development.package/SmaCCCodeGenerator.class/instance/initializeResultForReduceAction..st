@@ -1,3 +1,4 @@
-compiling
+compiling-parser
 initializeResultForReduceAction: aSmaCCRHS
-	^self newArrayOfSize: aSmaCCRHS productionSymbol variableDefinitions size
+	^ self
+		newArrayOfSize: aSmaCCRHS productionSymbol variableDefinitions size

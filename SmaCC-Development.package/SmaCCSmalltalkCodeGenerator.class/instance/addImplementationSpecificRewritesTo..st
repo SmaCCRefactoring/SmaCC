@@ -2,7 +2,10 @@ private
 addImplementationSpecificRewritesTo: rewriter
 	rewriter
 		replace:
-				'``@.Stmts1.
+			'`{:node :dict | (node isLiteralNode and: [(node value isKindOf: Character) and: [(node value codePoint between: 32 and: 126) not]]) ifTrue: [dict at: ''literal'' put: node. true] ifFalse: [false]}'
+			with: '(Character value: `{:dict | RBLiteralNode value: (dict at: ''literal'') value codePoint})';
+		replace:
+			'``@.Stmts1.
 				(`@a ifTrue: [``@.Stmts2]) `{:node :dictionary | | index myStatements |
 						index := node parent statements indexOf: node.
 						myStatements := node parent statements.
@@ -13,21 +16,29 @@ addImplementationSpecificRewritesTo: rewriter
 						}.
 				``@.Stmts3'
 			with:
-				'``@.Stmts1.
+			'``@.Stmts1.
 				`{:dictionary | RBMessageNode receiver: `@a selector: #ifTrue: arguments: (Array with: (RBBlockNode body: (RBSequenceNode statements: (``@.Stmts2 copyFrom: 1 to: (dictionary at: #size)))))}.
 				``@.Stmts3';
-		replace: 'currentCharacter = `#l1 or: [currentCharacter = `#l2]'
-			with: '`{RBLiteralNode value: (String with: `#l1 value with: `#l2 value)} includes: currentCharacter';
-		replace: 'currentCharacter = `#l1 or: [currentCharacter = `#l2 or: `@a]'
-			with: '(`{RBLiteralNode value: (String with: `#l1 value with: `#l2 value)} includes: currentCharacter) or: `@a';
-		replace: '(`#l1 includes: currentCharacter) or: [currentCharacter = `#l2]'
-			with: '`{RBLiteralNode value: `#l1 value , (String with: `#l2 value)} includes: currentCharacter';
-		replace: '(`#l1 includes: currentCharacter) or: [currentCharacter = `#l2 or: `@a]'
-			with: '(`{RBLiteralNode value: `#l1 value , (String with: `#l2 value)} includes: currentCharacter) or: `@a';
+		replace: 'currentCharacter == `#l1 or: [currentCharacter == `#l2]'
+			with:
+			'`{RBLiteralNode value: (String with: `#l1 value with: `#l2 value)} includes: currentCharacter';
+		replace: 'currentCharacter == `#l1 or: [currentCharacter == `#l2 or: `@a]'
+			with:
+			'(`{RBLiteralNode value: (String with: `#l1 value with: `#l2 value)} includes: currentCharacter) or: `@a';
+		replace: '(`#l1 includes: currentCharacter) or: [currentCharacter == `#l2]'
+			with:
+			'`{RBLiteralNode value: `#l1 value , (String with: `#l2 value)} includes: currentCharacter';
 		replace:
-				'`@.Stmts1.
+			'(`#l1 includes: currentCharacter) or: [currentCharacter == `#l2 or: `@a]'
+			with:
+			'(`{RBLiteralNode value: `#l1 value , (String with: `#l2 value)} includes: currentCharacter) or: `@a';
+		replace:
+			'`@.Stmts1.
 				currentCharacter isLiteral ifTrue: [`@.Stmts2].
 				`@.Stmts3'
 			with:
-				'`@.Stmts1.
-				`@.Stmts2'
+			'`@.Stmts1.
+				`@.Stmts2'.
+	rewriter
+		replace: 'currentCharacter == (Character value: `@a)'
+		with: 'currentCharacter = (Character value: `@a)'

@@ -1,3 +1,3 @@
 accessing
 tokenNamed: aString
-	^tokens at: aString
+	^ tokens at: aString

@@ -1,3 +1,3 @@
 accessing
 path
-	^itemSet path
+	^ itemSet path

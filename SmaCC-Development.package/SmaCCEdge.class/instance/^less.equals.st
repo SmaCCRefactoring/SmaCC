@@ -1,3 +1,3 @@
 comparing
-<= aSmaCCEdge 
-	^true
+<= aSmaCCEdge
+	^ true

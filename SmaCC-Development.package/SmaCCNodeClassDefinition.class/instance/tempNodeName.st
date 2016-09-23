@@ -1,3 +1,3 @@
 compiling
 tempNodeName
-	^self temporaryNameFor: grammar rootDefinition name
+	^ self temporaryNameFor: grammar rootDefinition name

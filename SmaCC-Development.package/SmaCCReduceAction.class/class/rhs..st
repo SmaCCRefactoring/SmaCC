@@ -1,5 +1,5 @@
-instance
+instance creation
 rhs: aSmaCCRHS
-	^(self new)
+	^ self new
 		rhs: aSmaCCRHS;
 		yourself

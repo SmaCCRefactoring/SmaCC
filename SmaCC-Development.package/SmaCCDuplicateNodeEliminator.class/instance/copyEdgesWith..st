@@ -1,17 +1,17 @@
-graph
+graph copying
 copyEdgesWith: aDictionary
 	| todo |
 	todo := OrderedCollection with: root.
-	[todo notEmpty]
+	[ todo notEmpty ]
 		whileTrue:
-			[| node |
+			[ | node |
 			node := todo removeFirst.
 			(aDictionary at: node)
 				transitions:
 					(node sortedTransitions
 						do:
-							[:each | 
+							[ :each | 
 							| copy |
 							copy := each copy.
 							copy to: (aDictionary at: each to).
-							copy])]
+							copy ]) ]

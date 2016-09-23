@@ -1,3 +1,3 @@
 accessing
 calculateFirstTerminals
-	^self subclassResponsibility
+	^ self subclassResponsibility

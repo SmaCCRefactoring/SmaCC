@@ -1,9 +1,8 @@
-compiling
+compiling-parser
 ambiguousTableEntryFor: aCollection
 	| entry |
 	entry := aCollection asArray.
-	^ambiguousActions
+	^ ambiguousActions
 		indexOf: entry
-		ifAbsent:
-			[ambiguousActions add: entry.
-			ambiguousActions size]
+		ifAbsent: [ ambiguousActions add: entry.
+			ambiguousActions size ]

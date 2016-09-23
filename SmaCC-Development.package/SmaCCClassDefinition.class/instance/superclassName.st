@@ -1,3 +1,5 @@
 accessing
 superclassName
-	^self isRoot ifTrue: [self rootClassName] ifFalse: [superclass fullName]
+	^ self isRoot
+		ifTrue: [ self rootClassName ]
+		ifFalse: [ superclass fullName ]

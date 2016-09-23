@@ -1,5 +1,5 @@
-instance
-forClassDefinitions: aCollection 
-	^(self new)
+instance creation
+forClassDefinitions: aCollection
+	^ self new
 		nodeClassDefinitions: aCollection;
 		yourself

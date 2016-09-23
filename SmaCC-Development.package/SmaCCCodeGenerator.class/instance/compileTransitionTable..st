@@ -1,16 +1,12 @@
-compiling
+compiling-parser
 compileTransitionTable: transitionTable
 	| stream |
 	stream := self outputStream.
 	stream nextPutAll: self newUnsignedShortArrayArray.
 	transitionTable
 		do:
-			[:each | 
-			self
-				writeTransitionTableEntry: each
-				on: stream
-				firstIsType: true]
-		separatedBy: [stream nextPutAll: self literalArraySeparator].
+			[ :each | self writeTransitionTableEntry: each on: stream firstIsType: true ]
+		separatedBy: [ stream nextPutAll: self literalArraySeparator ].
 	stream
 		cr;
 		tab;

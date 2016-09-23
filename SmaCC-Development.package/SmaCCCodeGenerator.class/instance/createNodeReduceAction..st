@@ -1,3 +1,3 @@
-private
-createNodeReduceAction: aSmaCCRHS 
-	^self createNodeReduceAction: aSmaCCRHS pullUpFrom: 0.
+reduction table
+createNodeReduceAction: aSmaCCRHS
+	^ self createNodeReduceAction: aSmaCCRHS pullUpFrom: 0

@@ -1,3 +1,0 @@
-private
-maxMethodLength
-	^ 100

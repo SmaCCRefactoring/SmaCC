@@ -1,3 +1,0 @@
-private
-defaultReduceAction
-	^#reduceFor:

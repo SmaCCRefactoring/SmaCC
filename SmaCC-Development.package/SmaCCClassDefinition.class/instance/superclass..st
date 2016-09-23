@@ -1,5 +1,7 @@
-initialize
+initialize-release
 superclass: anObject
-	superclass notNil ifTrue: [superclass removeSubclass: self].
+	superclass notNil
+		ifTrue: [ superclass removeSubclass: self ].
 	superclass := anObject.
-	superclass notNil ifTrue: [superclass addSubclass: self]
+	superclass notNil
+		ifTrue: [ superclass addSubclass: self ]

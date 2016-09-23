@@ -2,7 +2,8 @@ private
 calculateFirstSets
 	| changed |
 	changed := true.
-	[changed]
+	[ changed ]
 		whileTrue:
-			[changed := false.
-			self symbols do: [:each | changed := changed | each calculateFirstTerminals]]
+			[ changed := false.
+			self symbols
+				do: [ :each | changed := changed | each calculateFirstTerminals ] ]

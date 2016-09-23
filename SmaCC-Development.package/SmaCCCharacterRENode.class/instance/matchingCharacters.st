@@ -1,3 +1,5 @@
 accessing
 matchingCharacters
-	^ignoreCase ifTrue: [characters reject: [:each | each isLowercase]] ifFalse: [characters]
+	^ ignoreCase
+		ifTrue: [ characters reject: [ :each | each isLowercase ] ]
+		ifFalse: [ characters ]

@@ -1,3 +1,3 @@
-private
+testing
 isAmbiguous
-	^true
+	^ true

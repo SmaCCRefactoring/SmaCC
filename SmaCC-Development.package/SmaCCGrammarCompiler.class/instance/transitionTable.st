@@ -1,7 +1,6 @@
-action
+action table
 transitionTable
 	actions isNil
-		ifTrue:
-			[self createItemSets.
-			self createTransitionTable].
-	^actions
+		ifTrue: [ self createItemSets.
+			self createTransitionTable ].
+	^ actions

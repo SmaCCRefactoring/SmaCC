@@ -1,3 +1,3 @@
-private
+testing
 isGLR
-	^isGLR
+	^ isGLR

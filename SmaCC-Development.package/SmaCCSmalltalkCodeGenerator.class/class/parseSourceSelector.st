@@ -1,3 +1,3 @@
 accessing
 parseSourceSelector
-	^#canParseSmalltalk:
+	^ #canParseSmalltalk:

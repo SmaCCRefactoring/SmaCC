@@ -1,3 +1,3 @@
 accessing
 source
-	^self subclassResponsibility
+	^ self subclassResponsibility

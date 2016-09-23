@@ -1,3 +1,3 @@
 comparing
 hash
-	^id bitShift: 4
+	^ id bitShift: 4

@@ -1,3 +1,3 @@
 accessing
 rhs
-	^rhs
+	^ rhs

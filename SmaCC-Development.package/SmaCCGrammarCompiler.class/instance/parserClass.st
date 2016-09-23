@@ -1,3 +1,3 @@
 accessing
 parserClass
-	^self codeGenerator parserClass
+	^ self codeGenerator parserClass

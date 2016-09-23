@@ -1,3 +1,3 @@
 private
 ignoredVariables
-	^ignoredVariables
+	^ ignoredVariables

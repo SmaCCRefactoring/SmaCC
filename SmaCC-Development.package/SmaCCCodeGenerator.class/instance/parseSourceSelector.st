@@ -1,3 +1,3 @@
 private
 parseSourceSelector
-	^self class parseSourceSelector
+	^ self class parseSourceSelector

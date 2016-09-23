@@ -1,3 +1,3 @@
 accessing
 preferredActionFor: aSmaCCSymbol
-	^shiftReduceTable at: aSmaCCSymbol ifAbsent: [nil]
+	^ shiftReduceTable at: aSmaCCSymbol ifAbsent: [ nil ]

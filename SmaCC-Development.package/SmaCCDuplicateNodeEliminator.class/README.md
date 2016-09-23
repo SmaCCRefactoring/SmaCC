@@ -1,6 +1,6 @@
-SmaCCDuplicateNodeEliminator removes duplicate nodes in a SmaCCNode graph.
+SmaCCDuplicateNodeEliminator removes duplicate nodes from a scanner's DFA.
 
 Instance Variables:
-	comparisonState	<Dictionary>	dictionary mapping equivalent nodes
-	root	<SmaCCNode>	the root of the graph
+	comparisonState	<Dictionary>	a dictionary of "equal" objects when testing nodes for equality
+	root	<SmaCCNode>	the root node for the DFA
 

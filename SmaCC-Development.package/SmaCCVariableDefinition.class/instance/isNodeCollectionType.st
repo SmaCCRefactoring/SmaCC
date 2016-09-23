@@ -1,3 +1,3 @@
 accessing
 isNodeCollectionType
-	^self isCollection and: [self isBaseNodeType]
+	^ self isCollection and: [ self isBaseNodeType ]

@@ -1,3 +1,3 @@
 accessing
 source
-	^self codeGenerator defaultNodeReductionSource: self
+	^ self codeGenerator defaultNodeReductionSource: self

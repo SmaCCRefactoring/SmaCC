@@ -1,3 +1,3 @@
 accessing
 temporaryVariableName
-	^self temporaryNameFor: self name
+	^ self temporaryNameFor: self name

@@ -1,3 +1,3 @@
-private
+reduction table
 reduceTable
-	^reduceTable
+	^ reduceTable

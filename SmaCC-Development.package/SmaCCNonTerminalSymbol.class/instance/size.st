@@ -1,3 +1,3 @@
 accessing
 size
-	^productions size
+	^ productions size

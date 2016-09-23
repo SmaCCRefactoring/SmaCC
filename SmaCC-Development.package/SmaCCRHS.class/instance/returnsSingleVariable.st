@@ -1,3 +1,3 @@
 testing
 returnsSingleVariable
-	^reduceAction returnsSingleVariable
+	^ reduceAction returnsSingleVariable

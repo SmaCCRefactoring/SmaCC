@@ -4,6 +4,6 @@ generateImplicitToken: aSmaCCToken
 	node := SmaCCGrammar implicitToken: aSmaCCToken value.
 	node isNil
 		ifTrue:
-			[currentToken := aSmaCCToken.
-			self reportErrorMessage: 'Token not specified'].
-	^node
+			[ currentToken := aSmaCCToken.
+			self reportErrorMessage: 'Token not specified' ].
+	^ node

@@ -1,3 +1,4 @@
-private
+testing
 isLALREqualTo: aSmaCCItemSet
-	^ aSmaCCItemSet size = self size and: [ self allSatisfy: [ :each | aSmaCCItemSet includes: each ] ]
+	^ aSmaCCItemSet size = self size
+		and: [ self allSatisfy: [ :each | aSmaCCItemSet includes: each ] ]

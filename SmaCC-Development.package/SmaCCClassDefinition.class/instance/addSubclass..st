@@ -1,3 +1,3 @@
-accessing
-addSubclass: aSmaCCClassDefinition 
+accessing-hierarchy
+addSubclass: aSmaCCClassDefinition
 	subclasses add: aSmaCCClassDefinition

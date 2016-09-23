@@ -1,1 +1,1 @@
-SmaCCShiftAction represents a shift action in the parser's tables.
+SmaCCShiftAction represents the LR shift action.

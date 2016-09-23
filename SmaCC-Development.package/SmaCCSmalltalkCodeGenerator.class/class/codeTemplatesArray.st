@@ -3,7 +3,9 @@ codeTemplatesArray
 	^super codeTemplatesArray ,
 		#(
 			#(#addAllSendTo:with: 'self addAll: (<2s>) to: (<1s>)')
+			#(#addAllFirstSendTo:with: 'self addAllFirst: (<2s>) to: (<1s>)')
 			#(#addSendTo:with: 'self add: (<2s>) to: (<1s>)')
+			#(#addFirstSendTo:with: 'self addFirst: (<2s>) to: (<1s>)')
 			#(#arrayType '')
 			#(#assignArray:index:to: '(<1s>) at: (<2p>) put: (<3s>)')
 			#(#assignmentTo:from: '<1s> := <2s>')

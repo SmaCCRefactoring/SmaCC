@@ -1,3 +1,3 @@
 private
 send: selector to: aString
-	^'(' , aString , ') ' , selector
+	^ '(' , aString , ') ' , selector

@@ -1,3 +1,3 @@
 private
 unsafeMethodName
-	^self printString
+	^ self printString

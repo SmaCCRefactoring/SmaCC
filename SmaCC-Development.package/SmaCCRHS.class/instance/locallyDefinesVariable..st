@@ -1,3 +1,3 @@
-private
+testing
 locallyDefinesVariable: aString
-	^(self indexOfVariable: aString) notNil
+	^ (self indexOfVariable: aString) notNil

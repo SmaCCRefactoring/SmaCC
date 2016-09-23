@@ -1,3 +1,3 @@
-private
+private-strings
 newlineString
-	^String with: (Character value: 10)
+	^ String with: (Character value: 10)

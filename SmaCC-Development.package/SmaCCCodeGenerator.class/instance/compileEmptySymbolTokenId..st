@@ -1,3 +1,5 @@
-compiling
-compileEmptySymbolTokenId: emptySymbolId 
-	self compileTokenIdMethodNamed: 'emptySymbolToken' withId: emptySymbolId
+compiling-scanner
+compileEmptySymbolTokenId: emptySymbolId
+	self
+		compileTokenIdMethodNamed: 'emptySymbolToken'
+		withId: emptySymbolId

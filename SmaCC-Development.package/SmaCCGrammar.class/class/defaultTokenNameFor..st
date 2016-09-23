@@ -3,18 +3,18 @@ defaultTokenNameFor: aString
 	| stream string |
 	stream := WriteStream on: String new.
 	aString
-		do: [ :each | 
+		do:
+			[ :each | 
 			| value |
 			value := self tokenNameMap at: each ifAbsent: [ each ].
 			value isString
-				ifTrue: [ 
-					stream
+				ifTrue:
+					[ stream
 						nextPutAll:
 							(stream position = 0
 								ifTrue: [ value ]
 								ifFalse: [ value capitalized ]) ]
-				ifFalse: [ 
-					stream
+				ifFalse: [ stream
 						nextPut:
 							(value isAlphaNumeric
 								ifTrue: [ value ]

@@ -1,3 +1,3 @@
 private
 modelTypesForVariable: aString
-	^self modelTypesForVariable: aString seen: IdentitySet new
+	^ self modelTypesForVariable: aString seen: IdentitySet new

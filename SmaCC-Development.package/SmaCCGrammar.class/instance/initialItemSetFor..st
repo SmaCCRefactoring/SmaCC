@@ -1,5 +1,5 @@
 accessing
 initialItemSetFor: aSmaCCSymbol
-	^(aSmaCCSymbol asLRItemSet)
+	^ aSmaCCSymbol asLRItemSet
 		type: type;
 		yourself

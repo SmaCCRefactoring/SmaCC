@@ -1,4 +1,4 @@
-private
+simulating
 simulate: aStream
 	| char |
 	aStream atEnd

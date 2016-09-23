@@ -1,3 +1,3 @@
-accessing
+accessing-types
 nodeType: anIdentitySet
-	^self classDefinition
+	^ self classDefinition
