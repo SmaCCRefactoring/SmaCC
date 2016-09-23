@@ -8,8 +8,8 @@
 	"instvars" : [
 		"server",
 		"port" ],
-	"name" : "SmaCCRewriteServerWorkerSessionManager",
+	"name" : "SmaCCRewriteServerWorkerCommandLineHandler",
 	"pools" : [
 		 ],
-	"super" : "SmaCCServerSessionManager",
+	"super" : "CommandLineHandler",
 	"type" : "normal" }
