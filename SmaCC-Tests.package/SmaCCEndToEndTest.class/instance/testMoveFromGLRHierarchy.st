@@ -1,19 +1,18 @@
-public
+tests
 testMoveFromGLRHierarchy
 	| parserCompiler |
 	SmaCCGLRParser
 		subclass: #FooParser
 		instanceVariableNames: ''
 		classVariableNames: ''
-		poolDictionaries: ''
-		category: 'SmaCC-Tests'.
+		category: 'SmaCC_Tests'.
 	(Smalltalk at: #FooParser)
 		subclass: #TestParser
 		instanceVariableNames: ''
 		classVariableNames: ''
-		poolDictionaries: ''
-		category: 'SmaCC-Tests'.
-	parserCompiler := SmaCCGrammarCompiler new.
+		category: 'SmaCC_Tests'.
+	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
+		defaultCategory: self class category.
 	parserCompiler
 		buildDefinition:
 			'%ignorecase;
@@ -25,4 +24,5 @@ testMoveFromGLRHierarchy
 			A : <a> ;
 			All: <_all>;'.
 	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
-	self assert: self parserClass superclass name asString = 'SmaCCParser'
+	self
+		assert: self parserClass superclass name asString = 'SmaCCParser'

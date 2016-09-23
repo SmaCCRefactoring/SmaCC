@@ -8,5 +8,8 @@ testABunch
 	self assert: count = 256.
 	self assert: collection size = 256.
 	self assert: collection notEmpty.
-	self assert: (self byteSizeCollection allSatisfy: [ :each | collection includes: each ]).
+	self
+		assert:
+			(self byteSizeCollection
+				allSatisfy: [ :each | collection includes: each ]).
 	self assert: collection asArray = self byteSizeCollection asArray

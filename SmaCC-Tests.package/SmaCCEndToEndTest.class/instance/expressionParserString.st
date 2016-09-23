@@ -1,6 +1,6 @@
-private
+tests
 expressionParserString
-	^'
+	^ '
 %left "+" "-" ;
 %left "*" "/" ;
 %right "^" ;

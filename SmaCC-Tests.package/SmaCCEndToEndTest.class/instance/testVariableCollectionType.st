@@ -1,7 +1,8 @@
-tests
+public
 testVariableCollectionType
 	| compiler |
-	compiler := SmaCCGrammarCompiler new.
+	(compiler := SmaCCGrammarCompiler new) codeGenerator
+		defaultCategory: self class category.
 	compiler
 		buildDefinition:
 			'<whitespace> : \s+; 
@@ -11,4 +12,5 @@ testVariableCollectionType
 	compiler compileInto: 'TestScanner' andParser: 'TestParser'.
 	self
 		assert:
-			self parserClass basicNew symbolTypes asSet asSortedCollection asArray = #(#FooANode #OrderedCollection #SmaCCToken)
+			self parserClass basicNew symbolTypes asSet asSortedCollection asArray
+				= #(#FooANode #OrderedCollection #SmaCCToken)

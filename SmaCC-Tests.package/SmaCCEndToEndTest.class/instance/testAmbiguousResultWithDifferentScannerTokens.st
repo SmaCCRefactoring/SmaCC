@@ -1,7 +1,8 @@
-public
+tests
 testAmbiguousResultWithDifferentScannerTokens
 	| parserCompiler results result |
-	parserCompiler := SmaCCGrammarCompiler new.
+	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
+		defaultCategory: self class category.
 	parserCompiler
 		buildDefinition:
 			'%id <a> <aa>;
@@ -29,8 +30,10 @@ testAmbiguousResultWithDifferentScannerTokens
 	self assert: (self parserClass parse: 'a') = 1.
 	[ result := self parserClass parse: 'aa' ]
 		on: SmaCCAmbiguousResultNotification
-		do: [ :ex | 
-			results := ex tag collect: [ :each | each performOnSmaCCParser: ex parser ].
+		do:
+			[ :ex | 
+			results := ex tag
+				collect: [ :each | each performOnSmaCCParser: ex parser ].
 			ex resume: 0 ].
 	self assert: result = 0.
 	self assert: results size = 2.

@@ -1,3 +1,3 @@
 private
 largeValue
-	^1000000
+	^ 1000000

@@ -1,13 +1,14 @@
-tests
+tests-parse tree creation
 testNamedSubComponent
 	| compiler node |
-	compiler := SmaCCGrammarCompiler new.
+	(compiler := SmaCCGrammarCompiler new) codeGenerator
+		defaultCategory: self class category.
 	compiler
-		buildDefinition: '<number> : \d+; <whitespace> : \s+; 
+		buildDefinition:
+			'<number> : \d+; <whitespace> : \s+; 
 			%root FooNode;
 			A : {{FooANode}} | "a" ''a'' A ''sub'' {{FooANode}} ;'.
-	compiler compileInto: 'TestScanner'
-		andParser: 'TestParser'.
+	compiler compileInto: 'TestScanner' andParser: 'TestParser'.
 	node := self parserClass parse: 'aaa'.
 	self assert: node class name asString = 'FooANode'.
 	self assert: node a startPosition = 1.

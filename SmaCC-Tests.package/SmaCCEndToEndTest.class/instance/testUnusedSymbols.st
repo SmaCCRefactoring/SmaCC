@@ -1,9 +1,11 @@
-public
+tests
 testUnusedSymbols
 	| parserCompiler |
-	parserCompiler := SmaCCGrammarCompiler new.
+	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
+		defaultCategory: self class category.
 	parserCompiler
-		buildDefinition: '<letters> : \w+ ;
+		buildDefinition:
+			'<letters> : \w+ ;
 			<whitespace>: \s+	;
 			%start Bar;
 			begin : Foo;
@@ -11,24 +13,24 @@ testUnusedSymbols
 			Bar : Baz ;
 			Baz : "test" ;'.
 	self
-		assert: (
-			[parserCompiler compileInto: 'TestScanner'
-				andParser: 'TestParser'.
-			true]
-					on: SmaCCCompilationNotification
-					do: [:ex | ex return: false]).
-	parserCompiler := SmaCCGrammarCompiler new.
+		assert:
+			([ parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
+			true ]
+				on: SmaCCCompilationNotification
+				do: [ :ex | ex return: false ]).
+	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
+		defaultCategory: self class category.
 	parserCompiler
-		buildDefinition: '<letters> : \w+ ;
+		buildDefinition:
+			'<letters> : \w+ ;
 			<whitespace>: \s+	;
 			begin : Foo;
 			Foo :  <letters>;
 			Bar : Baz ;
 			Baz : "test" ;'.
 	self
-		assert: (
-			[parserCompiler compileInto: 'TestScanner'
-				andParser: 'TestParser'.
-			false]
-					on: SmaCCCompilationNotification
-					do: [:ex | ex return: true])
+		assert:
+			([ parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
+			false ]
+				on: SmaCCCompilationNotification
+				do: [ :ex | ex return: true ])

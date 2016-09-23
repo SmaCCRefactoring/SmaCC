@@ -1,7 +1,8 @@
-tests
+tests-parse tree creation
 testBadNode
 	| compiler |
-	compiler := SmaCCGrammarCompiler new.
+	(compiler := SmaCCGrammarCompiler new) codeGenerator
+		defaultCategory: self class category.
 	compiler
 		buildDefinition:
 			'<whitespace> : \s+; 
@@ -11,11 +12,11 @@ testBadNode
 			C : "c" ''c''; '.
 	self
 		assert:
-			([ 
-			compiler compileInto: 'TestScanner' andParser: 'TestParser'.
+			([ compiler compileInto: 'TestScanner' andParser: 'TestParser'.
 			false ]
 				on: SmaCCCompilationNotification
-				do: [ :ex | 
+				do:
+					[ :ex | 
 					('Node creation' = ex messageText and: [ '*>>>A<<<*' match: ex tag ])
 						ifTrue: [ ex return: true ]
 						ifFalse: [ ex resume: nil ] ])

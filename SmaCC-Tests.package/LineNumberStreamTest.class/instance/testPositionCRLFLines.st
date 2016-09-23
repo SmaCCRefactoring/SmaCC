@@ -1,8 +1,8 @@
 tests
 testPositionCRLFLines
 	| stream |
-	stream := SmaCCLineNumberStream 
-				on: (ReadStream on: (self addCRLFsTo: '1\2\3\4')).
+	stream := SmaCCLineNumberStream
+		on: (ReadStream on: (self addCRLFsTo: '1\2\3\4')).
 	self assert: stream lineNumber = 1.
 	stream upTo: $5.
 	self assert: stream lineNumber = 4.

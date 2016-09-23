@@ -1,16 +1,17 @@
-public
+tests
 testScannerState
 	| parserCompiler parser |
-	parserCompiler := SmaCCGrammarCompiler new.
+	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
+		defaultCategory: self class category.
 	parserCompiler
-		buildDefinition: '%states a ;
+		buildDefinition:
+			'%states a ;
 			<foo> : b;
 			a <bar> : a;
 			Start : <foo> {true} | <bar> {false};'.
-	parserCompiler compileInto: 'TestScanner'
-		andParser: 'TestParser'.
+	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
 	self assert: (self parserClass parse: 'b').
-	self should: [self parserClass parse: 'a'] raise: SmaCCParserError.
+	self should: [ self parserClass parse: 'a' ] raise: SmaCCParserError.
 	parser := self parserClass on: (ReadStream on: 'a').
 	parser state: #a.
 	self deny: parser parse.

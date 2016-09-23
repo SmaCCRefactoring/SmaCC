@@ -1,3 +1,3 @@
 private
-addLFsTo: aString 
-	^aString copyReplaceAll: '\' with: (String with: Character lf)
+addLFsTo: aString
+	^ aString copyReplaceAll: '\' with: (String with: Character lf)

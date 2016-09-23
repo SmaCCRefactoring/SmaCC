@@ -1,19 +1,18 @@
-public
+tests
 testExistingVariables
 	| parserCompiler |
 	SmaCCScanner
 		subclass: #TestScanner
 		instanceVariableNames: 'scanner1 scanner2'
 		classVariableNames: ''
-		poolDictionaries: ''
-		category: 'SmaCC-Tests'.
+		category: 'SmaCC_Tests'.
 	SmaCCParser
 		subclass: #TestParser
 		instanceVariableNames: 'parser1 parser2'
 		classVariableNames: ''
-		poolDictionaries: ''
-		category: 'SmaCC-Tests'.
-	parserCompiler := SmaCCGrammarCompiler new.
+		category: 'SmaCC_Tests'.
+	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
+		defaultCategory: self class category.
 	parserCompiler
 		buildDefinition:
 			'%ignorecase;

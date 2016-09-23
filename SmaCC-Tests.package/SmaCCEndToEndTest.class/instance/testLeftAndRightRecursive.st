@@ -1,15 +1,16 @@
-tests
+tests-parse tree creation
 testLeftAndRightRecursive
 	| parserCompiler node |
-	parserCompiler := SmaCCGrammarCompiler new.
+	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
+		defaultCategory: self class category.
 	parserCompiler
-		buildDefinition: '<number> : \d+; <whitespace> : \s+; 
+		buildDefinition:
+			'<number> : \d+; <whitespace> : \s+; 
 			%root Parse ; %prefix Foo; %suffix Node; 
 			Foo : Number ''number'' {{Collection}}
 				| "(" ''leftParen'' Foo ")" ''rightParen'' {{Collection}} ;
 			Number : <number> ''token'' {{Number}} ;'.
-	parserCompiler compileInto: 'TestScanner'
-		andParser: 'TestParser'.
+	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
 	node := self parserClass parse: '(((4)))'.
 	self assert: node leftParens size = 3.
 	self assert: node rightParens size = 3.
