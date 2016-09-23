@@ -1,0 +1,3 @@
+generated
+integer_literalTokens
+	^ integer_literalTokens

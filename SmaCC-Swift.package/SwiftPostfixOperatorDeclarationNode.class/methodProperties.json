@@ -1,0 +1,16 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "JohnBrant 6/24/2016 13:14:22",
+		"compositeTokenVariables" : "JohnBrant 6/24/2016 13:14:22",
+		"initialize" : "JohnBrant 6/24/2016 13:14:22",
+		"leftBraceToken" : "JohnBrant 6/24/2016 13:14:22",
+		"leftBraceToken:" : "JohnBrant 6/24/2016 13:14:22",
+		"operatorTokens" : "JohnBrant 6/24/2016 13:14:22",
+		"operatorTokens:" : "JohnBrant 6/24/2016 13:14:22",
+		"postfixToken" : "JohnBrant 6/24/2016 13:14:22",
+		"postfixToken:" : "JohnBrant 6/24/2016 13:14:22",
+		"rightBraceToken" : "JohnBrant 6/24/2016 13:14:22",
+		"rightBraceToken:" : "JohnBrant 6/24/2016 13:14:22",
+		"tokenVariables" : "JohnBrant 6/24/2016 13:14:22" } }

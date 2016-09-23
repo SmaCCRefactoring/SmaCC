@@ -1,0 +1,3 @@
+generated
+convenienceToken
+	^ convenienceToken

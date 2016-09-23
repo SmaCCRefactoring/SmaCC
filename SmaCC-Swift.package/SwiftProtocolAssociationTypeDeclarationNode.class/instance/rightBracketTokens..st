@@ -1,0 +1,3 @@
+generated
+rightBracketTokens: anOrderedCollection
+	rightBracketTokens := anOrderedCollection

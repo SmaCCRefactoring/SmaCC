@@ -1,0 +1,3 @@
+generated
+visitPostfixSelfExpression: aPostfixSelfExpression
+	^ self visitParse: aPostfixSelfExpression

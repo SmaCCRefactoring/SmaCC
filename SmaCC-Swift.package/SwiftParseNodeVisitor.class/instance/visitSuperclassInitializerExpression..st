@@ -1,0 +1,3 @@
+generated
+visitSuperclassInitializerExpression: aSuperclassInitializerExpression
+	^ self visitParse: aSuperclassInitializerExpression

@@ -1,0 +1,3 @@
+generated
+visitParenthesizedExpression: aParenthesizedExpression
+	^ self visitParse: aParenthesizedExpression

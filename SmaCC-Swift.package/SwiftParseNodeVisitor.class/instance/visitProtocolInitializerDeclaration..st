@@ -1,0 +1,3 @@
+generated
+visitProtocolInitializerDeclaration: aProtocolInitializerDeclaration
+	^ self visitParse: aProtocolInitializerDeclaration

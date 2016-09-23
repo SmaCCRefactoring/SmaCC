@@ -1,0 +1,3 @@
+generated
+visitControlTransferStatement: aControlTransferStatement
+	^ self visitStatement: aControlTransferStatement

@@ -1,0 +1,23 @@
+{
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"extensionToken",
+		"identifierTokens",
+		"lessThanTokens",
+		"commaTokens",
+		"greaterThanTokens",
+		"periodTokens",
+		"colonToken",
+		"leftBraceToken",
+		"declarations",
+		"rightBraceToken" ],
+	"name" : "SwiftExtensionDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "SwiftParseNode",
+	"type" : "normal" }

@@ -1,0 +1,34 @@
+{
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"_Tokens",
+		"identifierTokens",
+		"leftParenTokens",
+		"rightParenTokens",
+		"leftBracketTokens",
+		"rightBracketTokens",
+		"leftBraceTokens",
+		"rightBraceTokens",
+		"integer_literalTokens",
+		"floating_point_literalTokens",
+		"full_string_literalTokens",
+		"operatorTokens",
+		"importToken",
+		"typealiasToken",
+		"structToken",
+		"classToken",
+		"enumToken",
+		"protocolToken",
+		"varToken",
+		"funcToken",
+		"periodTokens" ],
+	"name" : "SwiftImportDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "SwiftParseNode",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+generated
+typealiasToken
+	^ typealiasToken

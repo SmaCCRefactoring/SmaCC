@@ -1,0 +1,3 @@
+generated
+visitFallThroughStatement: aFallThroughStatement
+	^ self visitControlTransferStatement: aFallThroughStatement

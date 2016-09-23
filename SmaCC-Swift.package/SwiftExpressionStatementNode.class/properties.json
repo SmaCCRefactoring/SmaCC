@@ -1,0 +1,15 @@
+{
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"expression",
+		"semicolonToken" ],
+	"name" : "SwiftExpressionStatementNode",
+	"pools" : [
+		 ],
+	"super" : "SwiftStatementNode",
+	"type" : "normal" }

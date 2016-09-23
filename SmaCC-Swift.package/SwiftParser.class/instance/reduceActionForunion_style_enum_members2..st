@@ -1,0 +1,62 @@
+generated-reduction actions
+reduceActionForunion_style_enum_members2: nodes
+	| result |
+	result := nodes at: 2.
+	self addAllFirst: ((nodes at: 1) at: 1) to: (result at: 1).
+	self addAllFirst: ((nodes at: 1) at: 2) to: (result at: 2).
+	self addAllFirst: ((nodes at: 1) at: 3) to: (result at: 3).
+	self addAllFirst: ((nodes at: 1) at: 4) to: (result at: 4).
+	self addAllFirst: ((nodes at: 1) at: 5) to: (result at: 5).
+	self addAllFirst: ((nodes at: 1) at: 6) to: (result at: 6).
+	self addAllFirst: ((nodes at: 1) at: 7) to: (result at: 7).
+	self addAllFirst: ((nodes at: 1) at: 8) to: (result at: 8).
+	self addAllFirst: ((nodes at: 1) at: 9) to: (result at: 9).
+	self addAllFirst: ((nodes at: 1) at: 10) to: (result at: 10).
+	self addAllFirst: ((nodes at: 1) at: 11) to: (result at: 11).
+	self addAllFirst: ((nodes at: 1) at: 12) to: (result at: 12).
+	self addAllFirst: ((nodes at: 1) at: 13) to: (result at: 13).
+	self addAllFirst: ((nodes at: 1) at: 14) to: (result at: 14).
+	self addAllFirst: ((nodes at: 1) at: 15) to: (result at: 15).
+	self addAllFirst: ((nodes at: 1) at: 16) to: (result at: 16).
+	self addAllFirst: ((nodes at: 1) at: 17) to: (result at: 17).
+	self addAllFirst: ((nodes at: 1) at: 18) to: (result at: 18).
+	self addAllFirst: ((nodes at: 1) at: 19) to: (result at: 19).
+	self addAllFirst: ((nodes at: 1) at: 20) to: (result at: 20).
+	self addAllFirst: ((nodes at: 1) at: 21) to: (result at: 21).
+	self addAllFirst: ((nodes at: 1) at: 22) to: (result at: 22).
+	self addAllFirst: ((nodes at: 1) at: 23) to: (result at: 23).
+	self addAllFirst: ((nodes at: 1) at: 24) to: (result at: 24).
+	self addAllFirst: ((nodes at: 1) at: 25) to: (result at: 25).
+	self addAllFirst: ((nodes at: 1) at: 26) to: (result at: 26).
+	self addAllFirst: ((nodes at: 1) at: 27) to: (result at: 27).
+	self addAllFirst: ((nodes at: 1) at: 28) to: (result at: 28).
+	self addAllFirst: ((nodes at: 1) at: 29) to: (result at: 29).
+	self addAllFirst: ((nodes at: 1) at: 30) to: (result at: 30).
+	self addAllFirst: ((nodes at: 1) at: 31) to: (result at: 31).
+	self addAllFirst: ((nodes at: 1) at: 32) to: (result at: 32).
+	self addAllFirst: ((nodes at: 1) at: 33) to: (result at: 33).
+	self addAllFirst: ((nodes at: 1) at: 34) to: (result at: 34).
+	self addAllFirst: ((nodes at: 1) at: 35) to: (result at: 35).
+	self addAllFirst: ((nodes at: 1) at: 36) to: (result at: 36).
+	self addAllFirst: ((nodes at: 1) at: 37) to: (result at: 37).
+	self addAllFirst: ((nodes at: 1) at: 38) to: (result at: 38).
+	self addAllFirst: ((nodes at: 1) at: 39) to: (result at: 39).
+	self addAllFirst: ((nodes at: 1) at: 40) to: (result at: 40).
+	self addAllFirst: ((nodes at: 1) at: 41) to: (result at: 41).
+	self addAllFirst: ((nodes at: 1) at: 42) to: (result at: 42).
+	self addAllFirst: ((nodes at: 1) at: 43) to: (result at: 43).
+	self addAllFirst: ((nodes at: 1) at: 44) to: (result at: 44).
+	self addAllFirst: ((nodes at: 1) at: 45) to: (result at: 45).
+	self addAllFirst: ((nodes at: 1) at: 46) to: (result at: 46).
+	self addAllFirst: ((nodes at: 1) at: 47) to: (result at: 47).
+	self addAllFirst: ((nodes at: 1) at: 48) to: (result at: 48).
+	self addAllFirst: ((nodes at: 1) at: 49) to: (result at: 49).
+	self addAllFirst: ((nodes at: 1) at: 50) to: (result at: 50).
+	self addAllFirst: ((nodes at: 1) at: 51) to: (result at: 51).
+	self addAllFirst: ((nodes at: 1) at: 52) to: (result at: 52).
+	self addAllFirst: ((nodes at: 1) at: 53) to: (result at: 53).
+	self addAllFirst: ((nodes at: 1) at: 54) to: (result at: 54).
+	self addAllFirst: ((nodes at: 1) at: 55) to: (result at: 55).
+	self addAllFirst: ((nodes at: 1) at: 56) to: (result at: 56).
+	self addAllFirst: ((nodes at: 1) at: 57) to: (result at: 57).
+	^ result

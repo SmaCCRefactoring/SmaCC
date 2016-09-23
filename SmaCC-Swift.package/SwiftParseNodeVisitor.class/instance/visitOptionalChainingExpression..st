@@ -1,0 +1,3 @@
+generated
+visitOptionalChainingExpression: anOptionalChainingExpression
+	^ self visitParse: anOptionalChainingExpression

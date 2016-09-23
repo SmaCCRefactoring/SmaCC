@@ -1,0 +1,3 @@
+generated
+visitSubscriptDeclaration: aSubscriptDeclaration
+	^ self visitParse: aSubscriptDeclaration

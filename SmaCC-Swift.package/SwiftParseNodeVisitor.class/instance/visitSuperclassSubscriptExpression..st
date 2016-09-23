@@ -1,0 +1,3 @@
+generated
+visitSuperclassSubscriptExpression: aSuperclassSubscriptExpression
+	^ self visitParse: aSuperclassSubscriptExpression

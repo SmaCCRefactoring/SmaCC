@@ -1,0 +1,3 @@
+generated
+floating_point_literalToken
+	^ floating_point_literalToken
