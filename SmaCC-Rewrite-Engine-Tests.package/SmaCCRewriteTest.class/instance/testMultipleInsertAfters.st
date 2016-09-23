@@ -1,4 +1,4 @@
-private
+tests
 testMultipleInsertAfters
 	| rewriter |
 	rewriter := SmaCCRewriteEngine new.
@@ -13,7 +13,4 @@ testMultipleInsertAfters
 							[self insert: ''()'' after: match.
 							self insert: ''[]'' after: match].
 					self continue]').
-	self
-		compareRewrite: '1+1+1'
-		isEqualTo: '1+1()[]+1'
-		using: rewriter
+	self compareRewrite: '1+1+1' isEqualTo: '1+1()[]+1' using: rewriter

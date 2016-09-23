@@ -23,4 +23,4 @@ lispRewriter
 					>>>`a` `op{beToken}` `b`<<<
 					->
 					>>>(`op` `a` `b`)<<<').
-	^rewriter
+	^ rewriter

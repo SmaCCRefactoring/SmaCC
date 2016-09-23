@@ -1,3 +1,1 @@
-(name 'SmaCC-Rewrite-Engine-Tests-ThierryGoubier.3' message '2.0.5 combined' id 'cca243af-a38d-4f7e-9318-07e0b03cca72' date '19 August 2015' time '3:59:07.133396 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-Rewrite-Engine-Tests-ThierryGoubier.2' message '2.0.4
-' id '8a074e28-112a-54de-9094-55ba28976cc4' date '20 October 2014' time '1:32:53 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-Rewrite-Engine-Tests-ThierryGoubier.1' message 'SmaCC Rewrite Engine Tests ported from SmaCC-Dolphin-2.0.3
-' id '020c49e4-3324-5424-b7a7-5a215fea47d8' date '27 January 2014' time '1:03:51 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())) stepChildren ())
+(name 'SmaCC-Rewrite-Engine-Tests-ThierryGoubier.4' message 'From John Brant' id 'b29fa435-1cb6-4fca-82f3-60d346304ea9' date '23 September 2016' time '8:11:24.599035 pm' author 'ThierryGoubier' ancestors () stepChildren ())

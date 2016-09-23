@@ -1,4 +1,4 @@
-private
+tests
 testTypeAddParens
 	| rewriter |
 	rewriter := SmaCCRewriteEngine new.

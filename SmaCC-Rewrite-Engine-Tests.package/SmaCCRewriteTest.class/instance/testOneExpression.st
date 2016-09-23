@@ -1,4 +1,4 @@
-private
+tests
 testOneExpression
 	self
 		compareRewrite: '2+3'

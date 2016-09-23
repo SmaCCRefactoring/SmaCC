@@ -1,4 +1,4 @@
-private
+tests
 testTwoExpressions
 	self
 		compareRewrite: '1+2*3'

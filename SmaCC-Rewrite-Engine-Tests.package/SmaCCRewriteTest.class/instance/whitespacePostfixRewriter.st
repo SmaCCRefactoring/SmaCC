@@ -10,4 +10,4 @@ whitespacePostfixRewriter
 					>>>`a` `op{beToken}` `b`<<<
 					->
 					>>>`\a\` `\b\` `op`<<<').
-	^rewriter
+	^ rewriter
