@@ -1,3 +1,3 @@
-private
+standard reduction rules
 nil
-	^nil
+	^ nil

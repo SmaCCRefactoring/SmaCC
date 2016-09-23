@@ -1,3 +1,3 @@
 accessing
 reduceTable
-	^self subclassResponsibility
+	^ self subclassResponsibility

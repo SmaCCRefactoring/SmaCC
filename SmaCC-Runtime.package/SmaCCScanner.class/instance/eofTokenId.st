@@ -1,3 +1,3 @@
 accessing
 eofTokenId
-	^Array with: self emptySymbolTokenId
+	^ Array with: self emptySymbolTokenId

@@ -1,3 +1,3 @@
-private
+testing
 atEnd
-	^stream atEnd
+	^ stream atEnd

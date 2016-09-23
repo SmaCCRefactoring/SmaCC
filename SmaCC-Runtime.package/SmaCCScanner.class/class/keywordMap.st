@@ -1,4 +1,5 @@
 accessing
 keywordMap
-	keywordMap isNil ifTrue: [self initializeKeywordMap].
-	^keywordMap
+	keywordMap isNil
+		ifTrue: [ self initializeKeywordMap ].
+	^ keywordMap

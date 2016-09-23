@@ -1,3 +1,3 @@
-class
+class initialization
 initializeKeywordMap
 	keywordMap := Dictionary new

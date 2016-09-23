@@ -1,3 +1,3 @@
 accessing
 state
-	^scanner state
+	^ scanner state

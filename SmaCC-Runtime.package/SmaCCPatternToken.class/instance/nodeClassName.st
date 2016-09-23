@@ -1,3 +1,3 @@
 accessing
 nodeClassName
-	^nodeClassName
+	^ nodeClassName

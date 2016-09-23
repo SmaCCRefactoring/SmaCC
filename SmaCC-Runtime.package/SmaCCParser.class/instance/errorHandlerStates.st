@@ -1,8 +1,10 @@
-error
+error handling
 errorHandlerStates
-	^stateStack
+	^ stateStack
 		collect:
-			[:each | 
+			[ :each | 
 			| action |
 			action := self actionForState: each and: self errorTokenId.
-			(action bitAnd: self actionMask) = 1 ifTrue: [action bitShift: -2] ifFalse: [0]]
+			(action bitAnd: self actionMask) = 1
+				ifTrue: [ action bitShift: -2 ]
+				ifFalse: [ 0 ] ]

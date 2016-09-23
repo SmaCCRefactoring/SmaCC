@@ -1,3 +1,3 @@
 accessing
 lineNumber
-	^self lineNumberFor: self position
+	^ self lineNumberFor: self position

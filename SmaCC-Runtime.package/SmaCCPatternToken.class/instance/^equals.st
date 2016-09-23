@@ -1,3 +1,4 @@
 comparing
 = aSmaCCToken
-	^self class = aSmaCCToken class and: [self name = aSmaCCToken name]
+	^ self class = aSmaCCToken class
+		and: [ self name = aSmaCCToken name ]

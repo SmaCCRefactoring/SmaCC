@@ -1,3 +1,3 @@
 accessing
 comments
-	^self attributeNamed: #comments
+	^ self attributeNamed: #comments

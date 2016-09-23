@@ -1,4 +1,4 @@
-collection
+collection handling
 setParents: aCollection to: anObject
 	aCollection isNil
 		ifTrue: [ ^ self ].

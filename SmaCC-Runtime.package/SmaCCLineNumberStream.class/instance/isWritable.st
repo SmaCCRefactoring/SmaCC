@@ -1,3 +1,3 @@
-private
+testing
 isWritable
-	^sourceStream isWritable
+	^ sourceStream isWritable

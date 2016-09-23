@@ -4,5 +4,6 @@ parse
 	self setDefaultStartingStateIfNone.
 	self performParsingLoop.
 	result := nodeStack last.
-	(result respondsTo: #comments:) ifTrue: [result comments: scanner comments].
-	^result
+	(result respondsTo: #comments:)
+		ifTrue: [ result comments: scanner comments ].
+	^ result

@@ -1,3 +1,3 @@
-error
+error handling
 hasErrorHandler
-	^self errorHandlerStates anySatisfy: [:each | each ~~ 0]
+	^ self errorHandlerStates anySatisfy: [ :each | each ~~ 0 ]

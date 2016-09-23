@@ -1,3 +1,3 @@
-private
+testing
 isReadable
-	^sourceStream isReadable
+	^ sourceStream isReadable

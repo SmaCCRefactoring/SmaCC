@@ -1,3 +1,3 @@
 matching
 copyInContext: aDictionary
-	^aDictionary at: self
+	^ aDictionary at: self

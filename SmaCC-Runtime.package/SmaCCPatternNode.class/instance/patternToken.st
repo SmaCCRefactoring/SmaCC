@@ -1,3 +1,3 @@
 accessing
 patternToken
-	^patternToken
+	^ patternToken

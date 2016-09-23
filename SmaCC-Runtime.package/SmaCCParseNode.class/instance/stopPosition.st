@@ -4,8 +4,8 @@ stopPosition
 
 	^ self
 		attributeNamed: #stopPosition
-		ifAbsentPut: [ 
-			| max doBlock |
+		ifAbsentPut:
+			[ | max doBlock |
 			max := 0.
 			doBlock := [ :each | each stopPosition ifNotNil: [ :pos | max := max max: pos ] ].
 			self nodesDo: doBlock andTokensDo: doBlock.

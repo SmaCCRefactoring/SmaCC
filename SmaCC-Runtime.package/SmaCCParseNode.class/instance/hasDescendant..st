@@ -1,3 +1,3 @@
-public
+testing
 hasDescendant: aSmaCCNode
 	^ aSmaCCNode isDescendantFrom: self

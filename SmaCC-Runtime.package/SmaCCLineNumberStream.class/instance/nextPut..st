@@ -1,3 +1,3 @@
 accessing
-nextPut: anObject 
-	^sourceStream nextPut: anObject
+nextPut: anObject
+	^ sourceStream nextPut: anObject

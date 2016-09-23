@@ -1,3 +1,3 @@
 accessing
 defaultStartingState
-	^1
+	^ 1

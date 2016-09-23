@@ -1,3 +1,3 @@
-private
+utility
 tokenActions
-	^#()
+	^ #()

@@ -1,3 +1,3 @@
-accessing
+accessing-attributes
 attributes
-	^attributes ifNil: [attributes := IdentityDictionary new]
+	^ attributes ifNil: [ attributes := IdentityDictionary new ]

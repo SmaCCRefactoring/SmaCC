@@ -1,3 +1,3 @@
 accessing
 skip: anInteger
-	^self position: self position + anInteger
+	^ self position: self position + anInteger

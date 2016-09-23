@@ -1,4 +1,4 @@
-collection
+collection handling
 addFirstTokens: aSmaCCTokenCollection to: aCollection
 	aSmaCCTokenCollection isNil
 		ifTrue: [ ^ self ].

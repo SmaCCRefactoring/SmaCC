@@ -1,4 +1,4 @@
-collection
+collection handling
 addFirstObject: anObject to: aCollection
 	anObject isNil
 		ifTrue: [ ^ self ].

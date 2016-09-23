@@ -1,3 +1,3 @@
 accessing
 position
-	^sourceStream position
+	^ sourceStream position

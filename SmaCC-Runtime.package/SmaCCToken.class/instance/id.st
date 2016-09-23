@@ -1,3 +1,3 @@
 public
 id
-	^ids
+	^ ids

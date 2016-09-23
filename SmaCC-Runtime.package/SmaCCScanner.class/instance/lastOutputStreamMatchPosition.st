@@ -1,0 +1,3 @@
+private
+lastOutputStreamMatchPosition
+	^ lastOutputStreamMatchPosition

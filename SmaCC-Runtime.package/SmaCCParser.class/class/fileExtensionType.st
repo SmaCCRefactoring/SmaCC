@@ -1,3 +1,3 @@
-file
+file types
 fileExtensionType
-	^'All files'
+	^ 'All files'

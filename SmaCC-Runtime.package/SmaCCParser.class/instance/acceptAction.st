@@ -1,3 +1,3 @@
 private
 acceptAction
-	^0
+	^ 0

@@ -1,3 +1,3 @@
 accessing
 position: anInteger
-	^stream position: anInteger
+	^ stream position: anInteger

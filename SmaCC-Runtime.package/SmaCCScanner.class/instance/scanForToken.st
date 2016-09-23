@@ -1,3 +1,3 @@
 accessing
 scanForToken
-	^self subclassResponsibility
+	^ self subclassResponsibility

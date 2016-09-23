@@ -1,3 +1,3 @@
-private
+testing
 isPattern
-	^false
+	^ false

@@ -1,3 +1,3 @@
 private
 contentsSpecies
-	^sourceStream contentsSpecies
+	^ sourceStream contentsSpecies

@@ -1,3 +1,3 @@
 private
 popNodeStack
-	^nodeStack removeLast
+	^ nodeStack removeLast

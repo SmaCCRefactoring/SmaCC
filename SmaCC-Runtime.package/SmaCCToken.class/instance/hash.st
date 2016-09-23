@@ -1,3 +1,3 @@
 comparing
 hash
-	^self value hash
+	^ self value hash

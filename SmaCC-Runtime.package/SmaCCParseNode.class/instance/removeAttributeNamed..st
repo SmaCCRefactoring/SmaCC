@@ -1,4 +1,4 @@
-accessing
+accessing-attributes
 removeAttributeNamed: aSymbol
 	attributes isNil
 		ifTrue: [ ^ self ].
