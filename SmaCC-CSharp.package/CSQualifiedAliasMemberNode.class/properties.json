@@ -8,7 +8,7 @@
 	"instvars" : [
 		"global",
 		"colonColonToken",
-		"_name",
+		"name",
 		"typeArguments" ],
 	"name" : "CSQualifiedAliasMemberNode",
 	"pools" : [

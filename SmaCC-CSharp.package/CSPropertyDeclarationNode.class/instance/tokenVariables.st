@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#_name #periodToken #leftBraceToken #rightBraceToken)
+	^ #(#name #periodToken #leftBraceToken #rightBraceToken)

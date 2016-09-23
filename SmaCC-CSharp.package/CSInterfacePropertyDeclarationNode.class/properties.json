@@ -9,7 +9,7 @@
 		"_attributes",
 		"modifier",
 		"type",
-		"_name",
+		"name",
 		"leftBrace",
 		"getAccessor",
 		"setAccessor",

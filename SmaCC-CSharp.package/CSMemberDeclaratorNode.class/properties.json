@@ -6,11 +6,11 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"_name",
+		"name",
 		"access",
 		"identifierToken",
 		"equalToken",
-		"_value" ],
+		"value" ],
 	"name" : "CSMemberDeclaratorNode",
 	"pools" : [
 		 ],

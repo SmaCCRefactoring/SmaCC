@@ -10,7 +10,7 @@
 		"modifier",
 		"eventToken",
 		"type",
-		"_name",
+		"name",
 		"semicolon" ],
 	"name" : "CSInterfaceEventDeclarationNode",
 	"pools" : [

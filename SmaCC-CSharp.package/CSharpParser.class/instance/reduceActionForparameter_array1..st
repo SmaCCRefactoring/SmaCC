@@ -5,5 +5,5 @@ reduceActionForparameter_array1: nodes
 	result addNodes: (nodes at: 1) to: result _attributes.
 	result paramsToken: (nodes at: 2).
 	result type: (nodes at: 3).
-	result _name: (nodes at: 4).
+	result name: (nodes at: 4).
 	^ result

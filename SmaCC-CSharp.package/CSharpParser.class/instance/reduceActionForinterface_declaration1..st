@@ -6,7 +6,7 @@ reduceActionForinterface_declaration1: nodes
 	result addTokens: (nodes at: 2) to: result modifiers.
 	result partialToken: (nodes at: 3).
 	result interfaceToken: (nodes at: 4).
-	result _name: (nodes at: 5).
+	result name: (nodes at: 5).
 	result typeParameters: (nodes at: 6).
 	result colon: ((nodes at: 7) at: 1).
 	result addNodes: ((nodes at: 7) at: 2) to: result supertypes.

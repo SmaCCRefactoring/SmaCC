@@ -1,9 +1,8 @@
 generated
 scan9
-	[ 
-	self recordMatch: #(155 156).
+	[ self recordMatch: #(155 156).
 	self step.
-	currentCharacter = $.
+	currentCharacter == $.
 		ifTrue: [ ^ self scan8 ].
 	currentCharacter isDigit ] whileTrue.
 	('Ee' includes: currentCharacter)

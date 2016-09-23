@@ -8,7 +8,7 @@
 	"instvars" : [
 		"identifier",
 		"equalToken",
-		"_value" ],
+		"value" ],
 	"name" : "CSMemberInitializerNode",
 	"pools" : [
 		 ],

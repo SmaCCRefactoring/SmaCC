@@ -20,7 +20,9 @@ reduceActionForquery_expression1: nodes
 	result addTokens: ((nodes at: 2) at: 11) to: result onTokens.
 	result addNodes: ((nodes at: 2) at: 12) to: result joinOnExpressions.
 	result addTokens: ((nodes at: 2) at: 13) to: result equalsTokens.
-	result addNodes: ((nodes at: 2) at: 14) to: result joinEqualsExpressions.
+	result
+		addNodes: ((nodes at: 2) at: 14)
+		to: result joinEqualsExpressions.
 	result addTokens: ((nodes at: 2) at: 15) to: result intoTokens.
 	result addTokens: ((nodes at: 2) at: 16) to: result orderbyTokens.
 	result addTokens: ((nodes at: 2) at: 17) to: result ascendingTokens.

@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#modifier #_name)
+	^ #(#modifier #name)

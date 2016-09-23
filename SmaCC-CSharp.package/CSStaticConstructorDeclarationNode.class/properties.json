@@ -13,8 +13,8 @@
 		"identifierToken",
 		"leftParenToken",
 		"rightParenToken",
-		"semicolonToken",
-		"block" ],
+		"block",
+		"semicolonToken" ],
 	"name" : "CSStaticConstructorDeclarationNode",
 	"pools" : [
 		 ],

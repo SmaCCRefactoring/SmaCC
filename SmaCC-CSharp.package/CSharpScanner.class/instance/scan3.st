@@ -1,6 +1,6 @@
 generated
 scan3
 	self step.
-	currentCharacter = $'
+	currentCharacter == $'
 		ifTrue: [ ^ self recordAndReportMatch: #(157) ].
 	^ self reportLastMatch

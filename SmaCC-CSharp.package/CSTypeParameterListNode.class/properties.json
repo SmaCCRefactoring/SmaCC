@@ -8,9 +8,9 @@
 	"instvars" : [
 		"lessThan",
 		"_attributes",
+		"parameters",
 		"commaTokens",
-		"greaterThan",
-		"parameters" ],
+		"greaterThan" ],
 	"name" : "CSTypeParameterListNode",
 	"pools" : [
 		 ],
