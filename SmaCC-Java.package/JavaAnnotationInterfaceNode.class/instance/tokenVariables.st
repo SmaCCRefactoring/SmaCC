@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#atToken #interfaceToken #_name)
+	^ #(#atToken #interfaceToken #name)

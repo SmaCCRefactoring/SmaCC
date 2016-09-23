@@ -4,5 +4,5 @@ reduceActionForqualified_name1: nodes
 	result := JavaQualifiedNameNode new.
 	result nspace: (nodes at: 1).
 	result period: (nodes at: 2).
-	result _name: (nodes at: 3).
+	result name: (nodes at: 3).
 	^ result

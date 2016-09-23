@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^ #(#_value #typeParameters #type #declarator #throws)
+	^ #(#value #typeParameters #type #declarator #throws)

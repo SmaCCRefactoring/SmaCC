@@ -1,1 +1,0 @@
-I contain a few java source tests. Public domain or MIT licensed.

@@ -26,12 +26,12 @@ definitionComment
 					CastExpression BinaryExpression ConditionalExpression Assignment 
 					ClassProperty FieldAccess MethodInvocation ArrayAccess
 					New Literal Name NewArray LambdaExpression);
-					%hierarchy Name (QualifiedName) ;
+%hierarchy Name (QualifiedName) ;
 %hierarchy SingleTypeImportDeclaration (TypeImportOnDemandDeclaration);
 %hierarchy VariableDeclaration (InitializedVariableDeclaration) ;
 %hierarchy Parameter (VariableArgumentParameter);
 %hierarchy AbstractMethodDeclaration (AnnotationMethodDeclaration);
- 
+
 <GREATER_THAN>
 	: >
 	;
@@ -83,7 +83,7 @@ definitionComment
 	: null	
 	;
 <IDENTIFIER>
-	: [a-zA-Z_$] (\w|$)*	
+	: (<isLetter> | [a-zA-Z_$]) (<isLetter>|\w|$)*	
 	;
 
 <eol>
@@ -95,7 +95,7 @@ definitionComment
 	: \s+
 	;
 <comment>
-	: \/\/ [^\r\n]* <eol>?
+	: \/\/ [^\r\n]* 
 	| /\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+/
  	;
 <patternToken>
@@ -424,7 +424,7 @@ interface_member_declaration
 	: constant_declaration 
 	| abstract_method_declaration 
 	| type_declaration
- 	;
+	;
 constant_declaration 
 	: field_declaration 
 	# need to semantically check that modifiers of field declaration
@@ -690,12 +690,12 @@ dims_opt
 	| dims 
 	;
 dims 
- 	: empty_dim_expr
+	: empty_dim_expr
 	| dims empty_dim_expr
 	;
 empty_dim_expr
 	: ""["" 'left' ""]"" 'right'
- 	;
+	;
 field_access 
 	: primary 'receiver' ""."" 'period' <IDENTIFIER> 'name' {{FieldAccess}}
 	| ""super"" 'superToken' ""."" 'period' <IDENTIFIER> 'name' {{FieldAccess}}
@@ -707,7 +707,7 @@ method_invocation
 	| name 'receiver' ""."" 'period' type_arguments_opt <IDENTIFIER> 'name' ""("" 'left' argument_list_opt "")"" 'right' {{MethodInvocation}}
 	| ""super"" 'superToken' ""."" 'period' type_arguments_opt <IDENTIFIER> 'name' ""("" 'left' argument_list_opt "")"" 'right' {{MethodInvocation}}
 	| name 'receiver' ""."" 'superPeriod' ""super"" 'superToken' ""."" 'period' type_arguments_opt <IDENTIFIER> 'name' ""("" 'left' argument_list_opt "")"" 'right' {{MethodInvocation}}
- 	;
+	;
 array_access 
 	: name 'array' ""["" 'left' expression 'expression' ""]"" 'right' {{ArrayAccess}}
 	| primary_no_new_array 'array' ""["" 'left' expression 'expression' ""]"" 'right' {{ArrayAccess}}
@@ -729,8 +729,8 @@ unary_expression
 	| predecrement_expression 
 	| ""+"" 'plus' unary_expression 'expression' {{UnaryAddition}}
 	| ""-"" 'minus' unary_expression 'expression' {{UnarySubtraction}}
-	| unary_expression_not_plus_minus
-	| assignment # HACK for VAGEN
+	| unary_expression_not_plus_minus 
+| assignment # HACK for VAGEN
 	;
 preincrement_expression 
 	: ""++"" 'plusPlus' unary_expression 'expression' {{PreIncrementExpression}}
@@ -804,10 +804,10 @@ conditional_expression
 	;
 assignment_expression 
 	: conditional_expression 
-	| assignment
+	| assignment 
 	;
 assignment 
-	: left_hand_side 'variable' assignment_operator 'op' assignment_expression 'value' {{Assignment}}
+	: left_hand_side 'variable' assignment_operator 'op' expression 'value' {{Assignment}}
 	;
 left_hand_side 
 	: name 
@@ -833,8 +833,8 @@ expression_opt
 	| expression 
 	;
 expression 
-	: assignment_expression
-	| lambda_expression 
+	: assignment_expression 
+	| lambda_expression
 	;
 constant_expression 
 	: expression 
@@ -940,8 +940,8 @@ type_bound
 	;
 type_arguments_opt
 	:
- 	| ""<"" 'typeArgLeft' type_arguments <GREATER_THAN> 'typeArgRight'
- 	;
+	| ""<"" 'typeArgLeft' type_arguments <GREATER_THAN> 'typeArgRight'
+	;
 type_arguments
 	: type_argument 'argument'
 	| type_arguments "","" 'comma' type_argument 'argument'
@@ -966,8 +966,8 @@ qualified_type_name
 	: type_name 'nspace' ""."" 'period' <IDENTIFIER> 'name' type_arguments_opt {{QualifiedTypeName}}
 	;
 foreach_statement 
-	: ""for"" 'forToken' ""("" 'left' variable_modifiers type 'type' <IDENTIFIER> 'name' "":"" 'colon' expression 'expression' "")"" 'right' statement 'statement' {{ForEachStatement}}
- 	;
+	: ""for"" 'forToken' ""("" 'left' variable_modifiers type 'type' variable_declarator_id 'name' "":"" 'colon' expression 'expression' "")"" 'right' statement 'statement' {{ForEachStatement}}
+	;
 variable_modifiers
 	: 
 	| variable_modifiers variable_modifier 'modifier'

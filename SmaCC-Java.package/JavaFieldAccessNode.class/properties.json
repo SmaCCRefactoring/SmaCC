@@ -8,7 +8,7 @@
 	"instvars" : [
 		"receiver",
 		"period",
-		"_name",
+		"name",
 		"superToken",
 		"superPeriod" ],
 	"name" : "JavaFieldAccessNode",

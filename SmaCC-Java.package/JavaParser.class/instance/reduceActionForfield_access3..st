@@ -6,5 +6,5 @@ reduceActionForfield_access3: nodes
 	result superPeriod: (nodes at: 2).
 	result superToken: (nodes at: 3).
 	result period: (nodes at: 4).
-	result _name: (nodes at: 5).
+	result name: (nodes at: 5).
 	^ result

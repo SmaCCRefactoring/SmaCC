@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#enumToken #_name #implementsToken)
+	^ #(#enumToken #name #implementsToken)

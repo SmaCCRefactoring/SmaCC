@@ -8,7 +8,7 @@
 	"instvars" : [
 		"importToken",
 		"staticToken",
-		"_name",
+		"name",
 		"semicolon" ],
 	"name" : "JavaSingleTypeImportDeclarationNode",
 	"pools" : [

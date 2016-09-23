@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#classToken #_name #extendsToken #implementsToken)
+	^ #(#classToken #name #extendsToken #implementsToken)

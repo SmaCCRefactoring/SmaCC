@@ -1,3 +1,4 @@
 generated
 visitTypeImportOnDemandDeclaration: aTypeImportOnDemandDeclaration
-	^ self visitSingleTypeImportDeclaration: aTypeImportOnDemandDeclaration
+	^ self
+		visitSingleTypeImportDeclaration: aTypeImportOnDemandDeclaration

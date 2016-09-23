@@ -8,10 +8,10 @@
 	"instvars" : [
 		"nspace",
 		"period",
-		"_name",
+		"name",
+		"typeArgLeft",
 		"arguments",
 		"commas",
-		"typeArgLeft",
 		"typeArgRight" ],
 	"name" : "JavaQualifiedTypeNameNode",
 	"pools" : [
