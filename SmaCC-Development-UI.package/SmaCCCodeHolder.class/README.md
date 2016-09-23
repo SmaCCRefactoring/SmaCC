@@ -1,1 +1,0 @@
-The model for the code panes in the SmaCC GUI

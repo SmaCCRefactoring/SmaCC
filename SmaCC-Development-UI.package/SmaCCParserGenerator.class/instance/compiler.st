@@ -1,0 +1,3 @@
+private
+compiler
+	^SmaCCGrammarCompiler new
