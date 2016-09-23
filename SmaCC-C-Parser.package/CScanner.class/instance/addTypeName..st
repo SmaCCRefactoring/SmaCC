@@ -1,3 +1,3 @@
-private
-addTypeName: aString 
+scanning
+addTypeName: aString
 	typeNames add: aString

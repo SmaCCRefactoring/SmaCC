@@ -1,7 +1,6 @@
 generated
 scan5
-	[ 
-	self recordMatch: #(77).
+	[ self recordMatch: #(77).
 	self step.
 	currentCharacter isDigit ] whileTrue.
 	('Ee' includes: currentCharacter)

@@ -1,3 +1,3 @@
-generated
+generated-accessing
 scannerClass
 	^CScanner
