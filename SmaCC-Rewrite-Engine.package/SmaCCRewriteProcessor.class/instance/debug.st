@@ -1,3 +1,3 @@
 accessing
 debug
-	^self class debug
+	^ self class debug

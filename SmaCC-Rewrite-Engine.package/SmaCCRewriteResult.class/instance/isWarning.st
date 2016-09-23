@@ -1,3 +1,3 @@
-public
+testing
 isWarning
-	^type = #warning
+	^ type = #warning

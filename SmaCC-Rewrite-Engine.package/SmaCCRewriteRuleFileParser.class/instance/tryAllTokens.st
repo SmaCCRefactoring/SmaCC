@@ -1,3 +1,3 @@
 private
 tryAllTokens
-	^true
+	^ true

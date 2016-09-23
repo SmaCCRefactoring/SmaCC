@@ -1,3 +1,3 @@
 accessing
 smaccStringClass
-	^SmaCCAnnotatedString
+	^ SmaCCAnnotatedString

@@ -1,3 +1,3 @@
 accessing
 enableDebug
-	^enableDebug
+	^ enableDebug

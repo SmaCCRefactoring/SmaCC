@@ -1,10 +1,10 @@
-public
+running
 localRunOn: aCollection
-	(SmaCCRewriteProcessor new)
+	SmaCCRewriteProcessor new
 		rules: self rewrites;
 		parserClass: self inputParserClass;
 		validationParserClass: self validationParserClass;
 		files: aCollection;
 		outputDirectory: self outputDirectory;
 		baseDirectory: self commonParentDirectory;
-		processAllNotifying: [:each | self trigger: #resultAdded with: each]
+		processAllNotifying: [ :each | self changed: #resultAdded with: each ]

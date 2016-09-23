@@ -1,3 +1,3 @@
 accessing
 nodeInterval
-	^nodeInterval
+	^ nodeInterval

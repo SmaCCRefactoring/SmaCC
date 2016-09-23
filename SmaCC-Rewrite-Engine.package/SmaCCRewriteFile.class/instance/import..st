@@ -1,8 +1,8 @@
 accessing
-import: aFileReference
+import: aString
 	| name rewriteFile |
-	name := self directory / aFileReference.
-	name exists
-		ifFalse: [ name := aFileReference ].
+	name := self directory , aString.
+	name asFileReference exists
+		ifFalse: [ name := aString ].
 	rewriteFile := SmaCCRewriteRuleFileParser parseFile: name.
 	self addTransformation: rewriteFile

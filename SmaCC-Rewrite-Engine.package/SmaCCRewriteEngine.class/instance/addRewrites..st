@@ -1,3 +1,3 @@
 accessing
 addRewrites: aCollection
-	aCollection do: [:each | self rewriteRule: each]
+	aCollection do: [ :each | self rewriteRule: each ]

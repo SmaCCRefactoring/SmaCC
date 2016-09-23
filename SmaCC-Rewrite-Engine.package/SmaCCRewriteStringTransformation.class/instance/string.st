@@ -1,3 +1,3 @@
-initialize
+initialize-release
 string
-	^string ifNil: ['']
+	^ string ifNil: [ '' ]

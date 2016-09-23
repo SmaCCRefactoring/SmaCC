@@ -1,3 +1,3 @@
-accessing
+accessing-properites
 additionalFiles
 	^ rewriteEngine additionalFiles

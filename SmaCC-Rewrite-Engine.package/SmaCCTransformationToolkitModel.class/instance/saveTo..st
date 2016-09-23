@@ -1,8 +1,8 @@
 public
 saveTo: filename
 	| stream |
-	stream := FileStream write: filename.
-	[stream
+	stream := FileStream forceNewFileNamed: filename.
+	[ stream
 		nextPutAll: 'self';
 		crtab;
 		nextPutAll: 'inputParserClass: ';
@@ -34,6 +34,8 @@ saveTo: filename
 		nextPut: $;;
 		crtab;
 		nextPutAll: 'runOnServer: ';
-		nextPutAll: self runOnServer storeString] ensure: [stream close].
+		nextPutAll: self runOnServer storeString ]
+		ensure: [ stream close ].
 	modified := false.
-	self areRewritesModified ifTrue: [self saveRewrites]
+	self areRewritesModified
+		ifTrue: [ self saveRewrites ]

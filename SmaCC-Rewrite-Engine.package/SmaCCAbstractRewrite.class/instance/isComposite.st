@@ -1,3 +1,3 @@
-public
+testing
 isComposite
-	^false
+	^ false

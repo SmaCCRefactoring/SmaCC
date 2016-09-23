@@ -1,3 +1,3 @@
 accessing
 createSubdirectories
-	^createSubdirectories ifNil: [false]
+	^ createSubdirectories ifNil: [ false ]

@@ -1,11 +1,12 @@
 accessing
 parseFile: aString
 	| stream |
-	stream := FileStream read: aString.
-	^[| parser |
+	stream := FileStream readOnlyFileNamed: aString.
+	^ [ | parser |
 	parser := self on: stream.
 	parser filename: aString.
-	(parser parse)
+	parser parse
 		filename: aString;
 		finishedLoading;
-		yourself] ensure: [stream close]
+		yourself ]
+		ensure: [ stream close ]

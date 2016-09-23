@@ -1,3 +1,3 @@
 accessing
 characterAt: anIndex
-	^self source at: anIndex
+	^ self source at: anIndex

@@ -1,3 +1,3 @@
-public
+testing
 isError
-	^type = #error
+	^ type = #error

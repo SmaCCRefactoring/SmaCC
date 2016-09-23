@@ -1,3 +1,3 @@
 accessing
 parserClass
-	^parserClass ifNil: [super parserClass]
+	^ parserClass ifNil: [ super parserClass ]

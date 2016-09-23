@@ -1,3 +1,4 @@
 accessing
 currentFileTimestamp
-	^ filename ifNotNil: [ :name | name modificationTime ]
+	^ filename
+		ifNotNil: [ :name | name asFileReference modificationTime ]

@@ -5,13 +5,16 @@ asTabDelimitedString
 	stream
 		nextPutAll: filename;
 		tab;
-		nextPutAll: (errorString ifNil: ['']);
+		nextPutAll: (errorString ifNil: [ '' ]);
 		tab;
-		nextPutAll: (type ifNil: ['']);
+		nextPutAll: (type ifNil: [ '' ]);
 		tab;
-		nextPutAll: (startLine ifNil: [''] ifNotNil: [:value | value printString]);
+		nextPutAll: (startLine ifNil: [ '' ] ifNotNil: [ :value | value printString ]);
 		tab;
-		nextPutAll: (startColumn ifNil: [''] ifNotNil: [:value | value printString]);
+		nextPutAll: (startColumn ifNil: [ '' ] ifNotNil: [ :value | value printString ]);
 		tab;
-		nextPutAll: (transformation ifNil: [''] ifNotNil: [:value | value displayString]).
-	^stream contents
+		nextPutAll:
+			(transformation
+				ifNil: [ '' ]
+				ifNotNil: [ :value | value displayString ]).
+	^ stream contents

@@ -1,3 +1,3 @@
 accessing
 transformedString
-	^transformedString
+	^ transformedString

@@ -1,3 +1,3 @@
 accessing
 processFile: aString
-	^self processFile: aString usingResult: SmaCCRewriteResult new
+	^ self processFile: aString usingResult: SmaCCRewriteResult new

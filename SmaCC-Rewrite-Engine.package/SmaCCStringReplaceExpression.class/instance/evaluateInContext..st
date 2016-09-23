@@ -1,3 +1,3 @@
 evaluating
 evaluateInContext: aSmaCCRewriteMatchContext
-	^string value
+	^ string value

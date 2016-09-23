@@ -1,3 +1,3 @@
 accessing
 nodeFor: aString
-	^nodes at: aString ifAbsent: [nil]
+	^ nodes at: aString ifAbsent: [ nil ]

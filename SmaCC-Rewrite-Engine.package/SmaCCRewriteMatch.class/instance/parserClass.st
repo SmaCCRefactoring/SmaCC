@@ -1,3 +1,3 @@
 accessing
 parserClass
-	^rewrite parserClass
+	^ rewrite parserClass

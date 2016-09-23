@@ -1,3 +1,3 @@
 accessing
 files
-	^files ifNil: [#()]
+	^ files ifNil: [ #() ]

@@ -1,3 +1,3 @@
 accessing
 properties
-	^properties
+	^ properties

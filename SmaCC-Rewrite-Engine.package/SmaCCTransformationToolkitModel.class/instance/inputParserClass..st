@@ -2,4 +2,4 @@ accessing
 inputParserClass: aSmaCCParserClass
 	inputParserClass := aSmaCCParserClass.
 	modified := true.
-	self trigger: #inputParserClass with: aSmaCCParserClass
+	self changed: #inputParserClass with: aSmaCCParserClass

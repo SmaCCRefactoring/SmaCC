@@ -1,19 +1,24 @@
-accessing
+accessing-methods
 doesNotUnderstand: aMessage
 	| method |
 	method := rewriteEngine methodNamed: aMessage selector.
 	method isNil
-		ifTrue: [ 
-			SilentProperties
-				ifTrue: [ 
-					aMessage arguments size = 1
-						ifTrue: [ 
-							^ rewriteEngine
-								propertyAt: (aMessage selector copyFrom: 1 to: aMessage selector size - 1) asSymbol
+		ifTrue:
+			[ SilentProperties
+				ifTrue:
+					[ aMessage arguments size = 1
+						ifTrue:
+							[ ^ rewriteEngine
+								propertyAt:
+									(aMessage selector copyFrom: 1 to: aMessage selector size - 1)
+										asSymbol
 								put: aMessage arguments first ].
 					aMessage arguments isEmpty
-						ifTrue: [ ^ rewriteEngine propertyAt: aMessage selector ifAbsent: [ nil ] ] ].
+						ifTrue: [ ^ rewriteEngine
+								propertyAt: aMessage selector
+								ifAbsent: [ nil ] ] ].
 			^ super doesNotUnderstand: aMessage ].
-	method argumentCount - 1 = aMessage arguments size
-		ifTrue: [ ^ method valueWithArguments: (Array with: self) , aMessage arguments ].
+	method numArgs - 1 = aMessage arguments size
+		ifTrue: [ ^ method
+				valueWithArguments: (Array with: self) , aMessage arguments ].
 	^ method valueWithArguments: aMessage arguments

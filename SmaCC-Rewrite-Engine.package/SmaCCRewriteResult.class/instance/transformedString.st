@@ -1,3 +1,3 @@
 public
 transformedString
-	^SmaCCAnnotatedString on: ''
+	^ SmaCCAnnotatedString on: ''

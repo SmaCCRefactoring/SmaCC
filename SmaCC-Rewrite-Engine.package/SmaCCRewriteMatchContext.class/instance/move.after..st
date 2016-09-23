@@ -1,6 +1,3 @@
-private
+source editing
 move: anObject after: anotherObject
-	^self
-		move: anObject
-		after: anotherObject
-		withWhitespace: ''
+	^ self move: anObject after: anotherObject withWhitespace: ''

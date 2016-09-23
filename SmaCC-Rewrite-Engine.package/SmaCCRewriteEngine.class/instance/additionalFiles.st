@@ -1,3 +1,3 @@
-accessing
+accessing-properites
 additionalFiles
-	^self propertyAt: #additionalFiles ifAbsentPut: [Dictionary new]
+	^ self propertyAt: #additionalFiles ifAbsentPut: [ Dictionary new ]

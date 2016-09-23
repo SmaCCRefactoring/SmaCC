@@ -1,3 +1,3 @@
 accessing
 next
-	^next
+	^ next

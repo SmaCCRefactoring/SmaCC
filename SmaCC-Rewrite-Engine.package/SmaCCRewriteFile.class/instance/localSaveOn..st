@@ -1,4 +1,4 @@
-public
+saving
 localSaveOn: aStream
 	aStream
 		nextPutAll: 'Import: ''';

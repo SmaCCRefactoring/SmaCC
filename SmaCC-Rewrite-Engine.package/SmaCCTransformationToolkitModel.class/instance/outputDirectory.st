@@ -1,3 +1,3 @@
 accessing
 outputDirectory
-	^outputDirectory ifNil: ['']
+	^ outputDirectory ifNil: [ '' ]

@@ -1,3 +1,3 @@
 accessing
-inputDirectory: aFileReference
-	inputDirectory := aFileReference
+inputDirectory: aString
+	inputDirectory := aString

@@ -1,3 +1,3 @@
 accessing
 outputSource
-	^outputSource
+	^ outputSource

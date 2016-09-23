@@ -1,13 +1,13 @@
 {
 	"class" : {
-		"onNode:rewrite:" : "ThierryGoubier 2/5/2015 15:53:02" },
+		"onNode:rewrite:" : "JohnBrant 6/24/2016 13:12:32" },
 	"instance" : {
-		"=" : "ThierryGoubier 2/5/2015 15:53:02",
-		"hash" : "ThierryGoubier 2/5/2015 15:53:02",
-		"nodeClass" : "ThierryGoubier 2/5/2015 15:53:02",
-		"nodeClass:" : "ThierryGoubier 2/5/2015 15:53:02",
-		"nodeInterval" : "ThierryGoubier 2/5/2015 15:53:02",
-		"nodeInterval:" : "ThierryGoubier 2/5/2015 15:53:02",
-		"printOn:" : "ThierryGoubier 2/5/2015 15:53:02",
-		"rewrite" : "ThierryGoubier 2/5/2015 15:53:02",
-		"rewrite:" : "ThierryGoubier 2/5/2015 15:53:02" } }
+		"=" : "JohnBrant 6/24/2016 13:12:32",
+		"hash" : "JohnBrant 6/24/2016 13:12:32",
+		"nodeClass" : "JohnBrant 6/24/2016 13:12:32",
+		"nodeClass:" : "JohnBrant 6/24/2016 13:12:32",
+		"nodeInterval" : "JohnBrant 6/24/2016 13:12:32",
+		"nodeInterval:" : "JohnBrant 6/24/2016 13:12:32",
+		"printOn:" : "JohnBrant 6/24/2016 13:12:32",
+		"rewrite" : "JohnBrant 6/24/2016 13:12:32",
+		"rewrite:" : "JohnBrant 6/24/2016 13:12:32" } }

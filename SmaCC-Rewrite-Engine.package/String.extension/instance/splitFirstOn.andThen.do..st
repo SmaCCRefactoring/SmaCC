@@ -1,8 +1,12 @@
-*smacc-rewrite-engine
+*SmaCC-Rewrite-Engine
 splitFirstOn: firstCharacter andThen: secondCharacter do: aBlock
-	(self subStrings: firstCharacter)
+	(self substrings: firstCharacter asString)
 		do:
-			[:each | 
+			[ :each | 
 			| index |
 			index := each indexOf: secondCharacter.
-			index ~= 0 ifTrue: [aBlock value: (each copyFrom: 1 to: index - 1) value: (each copyFrom: index + 1 to: each size)]]
+			index ~= 0
+				ifTrue:
+					[ aBlock
+						value: (each copyFrom: 1 to: index - 1)
+						value: (each copyFrom: index + 1 to: each size) ] ]

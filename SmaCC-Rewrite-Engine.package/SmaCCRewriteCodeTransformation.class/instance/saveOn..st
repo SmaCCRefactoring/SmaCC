@@ -1,4 +1,4 @@
-public
+saving
 saveOn: aStream
 	aStream
 		nextPut: $[;

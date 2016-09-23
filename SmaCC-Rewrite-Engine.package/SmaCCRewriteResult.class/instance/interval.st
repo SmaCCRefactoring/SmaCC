@@ -1,3 +1,3 @@
 accessing
 interval
-	^interval
+	^ interval

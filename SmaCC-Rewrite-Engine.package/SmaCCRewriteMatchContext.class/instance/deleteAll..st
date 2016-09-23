@@ -1,4 +1,5 @@
-private
+source editing
 deleteAll: aCollection
-	aCollection isNil ifTrue: [^self].
-	aCollection do: [:each | self delete: each]
+	aCollection isNil
+		ifTrue: [ ^ self ].
+	aCollection do: [ :each | self delete: each ]

@@ -1,3 +1,3 @@
-public
+testing
 canMatch: aClass
-	^true
+	^ true

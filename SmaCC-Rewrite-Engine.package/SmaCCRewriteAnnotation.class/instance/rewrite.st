@@ -1,3 +1,3 @@
 accessing
 rewrite
-	^rewrite
+	^ rewrite

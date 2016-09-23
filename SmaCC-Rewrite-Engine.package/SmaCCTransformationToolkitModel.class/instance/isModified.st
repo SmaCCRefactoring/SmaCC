@@ -1,3 +1,3 @@
-public
+testing
 isModified
-	^modified or: [self areRewritesModified]
+	^ modified or: [ self areRewritesModified ]

@@ -1,4 +1,4 @@
-initialize
+accessing
 match: aSmaCCRewriteMatch
 	match := aSmaCCRewriteMatch.
 	match rewrite: self.
