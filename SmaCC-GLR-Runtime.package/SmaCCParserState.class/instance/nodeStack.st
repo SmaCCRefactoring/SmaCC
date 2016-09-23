@@ -1,3 +1,3 @@
 accessing
 nodeStack
-	^nodeStack
+	^ nodeStack

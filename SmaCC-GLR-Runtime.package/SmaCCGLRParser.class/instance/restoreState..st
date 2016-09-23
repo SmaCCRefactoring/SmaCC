@@ -2,4 +2,5 @@ private
 restoreState: aSmaCCParserState
 	currentState := aSmaCCParserState.
 	nodeStack := aSmaCCParserState nodeStack.
-	stateStack := aSmaCCParserState stateStack
+	stateStack := aSmaCCParserState stateStack.
+	scanner state: currentState scannerState

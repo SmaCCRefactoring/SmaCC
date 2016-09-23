@@ -1,8 +1,7 @@
 {
 	"class" : {
-		"forParser:" : "ThierryGoubier 10/17/2014 17:16:22" },
+		"forParser:" : "JohnBrant 6/21/2016 21:20:17" },
 	"instance" : {
-		"defaultAction" : "ThierryGoubier 10/17/2014 17:16:22",
-		"parser" : "ThierryGoubier 10/17/2014 17:16:22",
-		"parser:" : "ThierryGoubier 10/17/2014 17:16:22",
-		"signal:with:" : "ThierryGoubier 10/17/2014 17:16:22" } }
+		"defaultAction" : "JohnBrant 6/21/2016 21:20:17",
+		"parser" : "JohnBrant 6/21/2016 21:20:17",
+		"parser:" : "JohnBrant 6/21/2016 21:20:17" } }

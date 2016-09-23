@@ -1,3 +1,3 @@
 accessing
 scannerState
-	^scannerState
+	^ scannerState

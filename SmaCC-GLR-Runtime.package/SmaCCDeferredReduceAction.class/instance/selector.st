@@ -1,3 +1,3 @@
 accessing
 selector
-	^selector
+	^ selector

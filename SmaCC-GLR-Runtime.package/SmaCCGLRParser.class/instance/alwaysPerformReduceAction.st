@@ -1,3 +1,3 @@
 private
 alwaysPerformReduceAction
-	^false
+	^ false

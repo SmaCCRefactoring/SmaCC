@@ -1,6 +1,6 @@
-instance
+instance creation
 stateStack: stateStack nodeStack: nodeStack scannerState: aSymbol position: anInteger
-	^(self new)
+	^ self new
 		stateStack: stateStack nodeStack: nodeStack;
 		scannerState: aSymbol;
 		position: anInteger;

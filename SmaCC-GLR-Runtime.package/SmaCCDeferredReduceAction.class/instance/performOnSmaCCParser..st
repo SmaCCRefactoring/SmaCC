@@ -1,5 +1,8 @@
 accessing
 performOnSmaCCParser: aSmaCCParser
-	^ selector isUnary
+	^ selector numArgs = 0
 		ifTrue: [ aSmaCCParser perform: selector ]
-		ifFalse: [ aSmaCCParser perform: selector with: (self argumentsFor: aSmaCCParser) ]
+		ifFalse:
+			[ aSmaCCParser
+				perform: selector
+				with: (self argumentsFor: aSmaCCParser) ]

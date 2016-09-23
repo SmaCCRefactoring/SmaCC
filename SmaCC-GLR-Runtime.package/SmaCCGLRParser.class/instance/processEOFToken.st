@@ -5,22 +5,21 @@ processEOFToken
 	token := currentToken.
 	self symbolTypes
 		keysAndValuesDo:
-			[:i :each | 
+			[ :i :each | 
 			| actions |
-			(each = #SmaCCToken and: [i ~= scanner errorTokenId])
+			(each = #SmaCCToken and: [ i ~= scanner errorTokenId ])
 				ifTrue:
-					[actions := OrderedCollection new.
+					[ actions := OrderedCollection new.
 					self addActionsFor: i to: actions.
 					actions
 						do:
-							[:action | 
+							[ :action | 
 							(performedActions includes: action)
 								ifFalse:
-									[performedActions add: action.
+									[ performedActions add: action.
 									(action bitAnd: self actionMask) = self reduceAction
-										ifTrue:
-											[currentToken := token.
-											self splitWithAction: action]]]]].
-	(nodeStack size = 1 and: [nodeStack first isKindOf: SmaCCParseNode])
-		ifTrue: [currentState markAccepted]
-		ifFalse: [self killState]
+										ifTrue: [ currentToken := token.
+											self splitWithAction: action ] ] ] ] ].
+	(nodeStack size = 1 and: [ nodeStack first isKindOf: SmaCCParseNode ])
+		ifTrue: [ currentState markAccepted ]
+		ifFalse: [ self killState ]

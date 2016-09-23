@@ -1,3 +1,3 @@
-private
+private - actions
 defaultAction
-	^self tag first
+	^ self tag first

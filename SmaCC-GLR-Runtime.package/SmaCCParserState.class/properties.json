@@ -10,7 +10,8 @@
 		"nodeStack",
 		"isAccepted",
 		"position",
-		"scannerState" ],
+		"scannerState",
+		"attributes" ],
 	"name" : "SmaCCParserState",
 	"pools" : [
 		 ],

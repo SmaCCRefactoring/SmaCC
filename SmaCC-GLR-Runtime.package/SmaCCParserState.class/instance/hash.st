@@ -1,3 +1,3 @@
 comparing
 hash
-	^self stateStack hash
+	^ self stateStack hash

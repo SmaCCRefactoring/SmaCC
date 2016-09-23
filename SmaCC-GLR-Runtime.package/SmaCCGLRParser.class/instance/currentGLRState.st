@@ -1,0 +1,3 @@
+private
+currentGLRState
+	^ currentState

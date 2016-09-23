@@ -1,3 +1,3 @@
 accessing
 stateStack
-	^stateStack
+	^ stateStack
