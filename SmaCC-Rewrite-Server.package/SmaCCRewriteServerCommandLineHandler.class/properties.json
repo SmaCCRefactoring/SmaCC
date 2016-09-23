@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "<historical>",
+	"commentStamp" : "",
 	"instvars" : [
 		"port" ],
-	"name" : "SmaCCRewriteServerSessionManager",
+	"name" : "SmaCCRewriteServerCommandLineHandler",
 	"pools" : [
 		 ],
-	"super" : "SmaCCServerSessionManager",
+	"super" : "CommandLineHandler",
 	"type" : "normal" }

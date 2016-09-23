@@ -1,11 +1,13 @@
-public
+activation
 port
 	port isNil
-		ifTrue: [ 
+		ifTrue:
+			[ 
 			port := 36rSM.
 			self arguments notEmpty
-				ifTrue: [ 
-					[ port := Number fromString: self arguments last ]
+				ifTrue:
+					[ 
+					[ port := self arguments last asNumber ]
 						on: Error
 						do: [ :ex |  ] ] ].
 	^ port

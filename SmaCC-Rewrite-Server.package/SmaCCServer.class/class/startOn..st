@@ -1,5 +1,5 @@
-instance
+instance creation
 startOn: anInteger
-	^(self new)
+	^ self new
 		startOn: anInteger;
 		yourself

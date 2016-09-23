@@ -1,3 +1,6 @@
-public
+running
 run
-	[self process: socket accept] repeat
+	[ | accepted |
+	accepted := socket waitForAcceptFor: 1000 ifTimedOut: [ nil ].
+	accepted notNil
+		ifTrue: [ self process: accepted ] ] repeat

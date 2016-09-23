@@ -1,3 +1,3 @@
-public
-readBytesFrom: aSocket
-	^aSocket readStream next: aSocket readStream nextDWORD
+running
+readBytesFrom: aStream
+	^aStream next: (self nextInteger: aStream)

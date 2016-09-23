@@ -1,17 +1,20 @@
-public
-processRequest: aSocket
+running
+processRequest: aSocketStream
 	[ 
 	[ 
 	| string items canceled results |
-	string := (self readBytesFrom: aSocket) asString.
-	items := string subStrings: (Character value: 0).
-	canceled := ValueHolder with: false.
+	string := (self readBytesFrom: aSocketStream) asString.
+	items := string substrings: (Character value: 0) asString.
+	canceled := ValueHolder new.
+	canceled contents: false.
 	results := SharedQueue new.
 	[ 
 	items
-		do: [ :each | 
-			canceled value
-				ifFalse: [ 
+		do:
+			[ :each | 
+			canceled contents
+				ifFalse:
+					[ 
 					| server |
 					server := availableServers next.
 					[ 
@@ -22,10 +25,11 @@ processRequest: aSocket
 						canceled: canceled ] fork ] ] ] fork.
 	[ 
 	items size
-		timesRepeat: [ 
+		timesRepeat:
+			[ 
 			| bytes |
 			bytes := results next.
-			self writeBytes: bytes on: aSocket ] ]
+			self writeBytes: bytes on: aSocketStream ] ]
 		on: Error
-		do: [ :ex | canceled value: true ] ]
-		ensure: [ aSocket close ] ] fork
+		do: [ :ex | canceled contents: true ] ]
+		ensure: [ aSocketStream close ] ] fork
