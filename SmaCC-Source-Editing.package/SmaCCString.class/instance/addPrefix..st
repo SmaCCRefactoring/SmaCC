@@ -1,3 +1,3 @@
 editing
 addPrefix: aString
-	^self insert: aString at: self startIndex
+	^ self insert: aString at: self startIndex

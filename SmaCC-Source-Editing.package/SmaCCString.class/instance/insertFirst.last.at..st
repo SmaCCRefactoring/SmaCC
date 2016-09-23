@@ -5,4 +5,4 @@ insertFirst: first last: last at: anInteger
 	interval := interval splitAt: (self indexFor: anInteger).
 	interval previous next: first.
 	last next: interval.
-	^first startIndex
+	^ first startIndex

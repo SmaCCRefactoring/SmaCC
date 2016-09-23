@@ -1,5 +1,5 @@
 copying
 , aString
-	^(self copy)
+	^ self copy
 		append: aString;
 		yourself

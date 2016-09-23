@@ -7,4 +7,4 @@ copyFrom: startIndex to: stopIndex
 		to: stopIndex
 		into: result
 		at: 1.
-	^result
+	^ result

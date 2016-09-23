@@ -1,4 +1,4 @@
-initialize
+initialize-release
 on: aString
 	| firstInterval |
 	firstInterval := self intervalClass

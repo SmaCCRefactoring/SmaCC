@@ -1,17 +1,18 @@
 editing
 insert: aString at: anInteger
 	| newFirstInterval |
-	aString isEmpty ifTrue: [^anInteger].
+	aString isEmpty
+		ifTrue: [ ^ anInteger ].
 	(aString isKindOf: SmaCCString)
 		ifTrue:
-			[^aString
+			[ ^ aString
 				copyFrom: aString startIndex
 				to: aString stopIndex
 				into: self
-				at: anInteger]
+				at: anInteger ]
 		ifFalse:
-			[newFirstInterval := self newIntervalFor: aString.
-			^self
+			[ newFirstInterval := self newIntervalFor: aString.
+			^ self
 				insertFirst: newFirstInterval
 				last: newFirstInterval
-				at: anInteger]
+				at: anInteger ]

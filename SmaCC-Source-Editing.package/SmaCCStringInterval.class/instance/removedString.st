@@ -1,3 +1,3 @@
 accessing
 removedString
-	^string copyFrom: start to: stop
+	^ string copyFrom: start to: stop

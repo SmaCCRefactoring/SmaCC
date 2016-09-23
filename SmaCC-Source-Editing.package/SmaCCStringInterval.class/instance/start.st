@@ -1,3 +1,3 @@
 accessing
 start
-	^start
+	^ start

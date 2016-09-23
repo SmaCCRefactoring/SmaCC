@@ -1,3 +1,3 @@
 arithmetic
 + anInteger
-	^self class index: index + anInteger intervalId: intervalId
+	^ self class index: index + anInteger intervalId: intervalId

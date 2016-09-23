@@ -1,3 +1,3 @@
 accessing
 stop
-	^stop
+	^ stop

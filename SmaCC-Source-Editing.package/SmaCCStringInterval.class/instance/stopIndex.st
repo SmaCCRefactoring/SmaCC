@@ -1,3 +1,3 @@
 accessing
 stopIndex
-	^SmaCCStringIndex index: stop intervalId: id
+	^ SmaCCStringIndex index: stop intervalId: id

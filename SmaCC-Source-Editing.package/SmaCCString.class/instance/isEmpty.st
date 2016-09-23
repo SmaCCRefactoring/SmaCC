@@ -1,4 +1,7 @@
-private
+testing
 isEmpty
-	firstSentinel next do: [:each | each isEmpty ifFalse: [^false]].
-	^true
+	firstSentinel next
+		do: [ :each | 
+			each isEmpty
+				ifFalse: [ ^ false ] ].
+	^ true

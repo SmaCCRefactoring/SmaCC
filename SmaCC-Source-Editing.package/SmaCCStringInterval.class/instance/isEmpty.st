@@ -1,3 +1,3 @@
-private
+testing
 isEmpty
-	^start > stop
+	^ start > stop
