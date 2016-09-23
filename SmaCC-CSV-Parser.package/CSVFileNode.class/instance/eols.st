@@ -1,0 +1,3 @@
+generated
+eols
+	^ eols
