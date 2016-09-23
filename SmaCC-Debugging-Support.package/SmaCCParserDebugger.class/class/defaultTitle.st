@@ -1,0 +1,4 @@
+accessing
+defaultTitle
+
+	^ 'SmaCCParser'

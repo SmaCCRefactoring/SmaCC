@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Debugging-Support",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"rootContext" ],
+	"name" : "SmaCCParserDebugSession",
+	"pools" : [
+		 ],
+	"super" : "DebugSession",
+	"type" : "normal" }

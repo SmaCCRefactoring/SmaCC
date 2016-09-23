@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Debugging-Support",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"isGLR" ],
+	"name" : "SmaCCParserDebugger",
+	"pools" : [
+		 ],
+	"super" : "GTGenericStackDebugger",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Debugging-Support",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SmaCCParserStepAction",
+	"pools" : [
+		 ],
+	"super" : "SmaCCDebuggingAction",
+	"type" : "normal" }
