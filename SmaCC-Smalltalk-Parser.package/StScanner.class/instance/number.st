@@ -1,4 +1,4 @@
-scanning
+private
 number
 	stream skip: -1.
-	^ self scanNumber: self numberId
+	^self scanNumber: self numberId
