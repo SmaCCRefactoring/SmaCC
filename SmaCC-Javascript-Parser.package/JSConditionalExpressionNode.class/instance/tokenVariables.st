@@ -1,0 +1,3 @@
+generated
+tokenVariables
+	^ #(#questionMarkToken #colonToken)

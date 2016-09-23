@@ -1,0 +1,3 @@
+generated
+lhs
+	^ lhs

@@ -1,0 +1,3 @@
+generated
+startingStateForProgram
+	^ 4

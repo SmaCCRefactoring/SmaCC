@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Javascript-Parser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "JSStringLiteralNode",
+	"pools" : [
+		 ],
+	"super" : "JSLiteralNode",
+	"type" : "normal" }

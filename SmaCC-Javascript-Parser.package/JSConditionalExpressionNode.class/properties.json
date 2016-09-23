@@ -1,0 +1,18 @@
+{
+	"category" : "SmaCC-Javascript-Parser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"condition",
+		"questionMarkToken",
+		"trueExpression",
+		"colonToken",
+		"falseExpression" ],
+	"name" : "JSConditionalExpressionNode",
+	"pools" : [
+		 ],
+	"super" : "JSExpressionNode",
+	"type" : "normal" }

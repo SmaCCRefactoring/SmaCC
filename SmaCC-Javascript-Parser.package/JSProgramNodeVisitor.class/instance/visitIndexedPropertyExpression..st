@@ -1,0 +1,3 @@
+generated
+visitIndexedPropertyExpression: anIndexedPropertyExpression
+	^ self visitExpression: anIndexedPropertyExpression
