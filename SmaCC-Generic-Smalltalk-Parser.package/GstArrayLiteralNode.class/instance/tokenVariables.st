@@ -1,0 +1,3 @@
+generated
+tokenVariables
+	^ #(#arrayStart #arrayStop)

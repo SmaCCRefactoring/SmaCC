@@ -1,0 +1,3 @@
+generated
+startingStateForSequence
+	^ 2

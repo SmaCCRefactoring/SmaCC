@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Generic-Smalltalk-Parser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"selectorPart" ],
+	"name" : "GstUnaryMessageNode",
+	"pools" : [
+		 ],
+	"super" : "GstMessageNode",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Generic-Smalltalk-Parser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "GstProgramNode",
+	"pools" : [
+		 ],
+	"super" : "SmaCCParseNode",
+	"type" : "normal" }
