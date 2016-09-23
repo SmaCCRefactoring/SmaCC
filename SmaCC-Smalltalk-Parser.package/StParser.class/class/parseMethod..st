@@ -1,3 +1,3 @@
 accessing
-parseMethod: aString 
-	^self parse: aString startingAt: self startingStateForMethod
+parseMethod: aString
+	^ self parse: aString startingAt: self startingStateForMethod

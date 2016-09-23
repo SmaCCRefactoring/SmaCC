@@ -141,7 +141,7 @@ Statements
 	: 		{OrderedCollection new}
 	| StatementList OptionalPeriod
 			{#liftFirstValue:}
-	| StatementList Periods ""^"" Expression OptionalPeriod
+	| StatementList ""."" ""^"" Expression OptionalPeriod
 			{'1' 
 				add: (RBReturnNode value: '4'); 
 				yourself}
@@ -150,22 +150,15 @@ Statements
 	;
 OptionalPeriod
 	: 
-	| Periods
+	| "".""
 	;
-
 StatementList
 	: Expression
-	| StatementList Periods Expression 
+	| StatementList ""."" Expression 
 			{'1' 
 				add: '3'; 
 				yourself}
 	;
-
-Periods:
-	"".""
-	| ""."" Periods
-	;
-
 Block
 	: ""["" BlockArgs ""|"" SequenceNode ""]"" 
 			{RBBlockNode arguments: '2' body: '4'}
@@ -288,10 +281,6 @@ Primary
 			{#liftFirstValue:}
 	| Block 
 			{#liftFirstValue:}
-	| ""{"" StatementList OptionalPeriod ""}""
-			{ RBArrayNode statements: '2' }
-	| ""{"" ""}""
-			{ RBArrayNode new }
 	;
 Variable
 	: <name> 
@@ -340,7 +329,6 @@ ByteArray
 				nextPut: '2' value; 
 				yourself}
 	;
-
 Array
 	: 		{WriteStream on: Array new}
 	| Array ArrayLiteral 
