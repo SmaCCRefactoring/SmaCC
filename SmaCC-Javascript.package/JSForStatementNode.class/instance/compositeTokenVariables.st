@@ -1,3 +1,0 @@
-generated
-compositeTokenVariables
-	^ #(#semicolons #commas)

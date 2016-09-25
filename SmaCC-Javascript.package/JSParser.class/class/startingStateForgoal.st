@@ -1,3 +1,0 @@
-generated
-startingStateForgoal
-	^ 1

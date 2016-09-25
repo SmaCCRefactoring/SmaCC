@@ -1,1 +1,0 @@
-I contain a test by downloading js code from the internet

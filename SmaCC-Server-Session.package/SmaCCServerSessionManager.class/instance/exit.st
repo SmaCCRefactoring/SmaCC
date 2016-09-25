@@ -1,3 +1,0 @@
-public
-exit
-	^ nil

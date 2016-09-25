@@ -1,3 +1,0 @@
-generated
-visitSetPropertyAssignment: aSetPropertyAssignment
-	^ self visitProgram: aSetPropertyAssignment
