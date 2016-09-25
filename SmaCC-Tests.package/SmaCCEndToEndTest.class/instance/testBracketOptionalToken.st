@@ -1,7 +1,7 @@
 tests
 testBracketOptionalToken
 	| parserCompiler |
-	parserCompiler := SmaCCGrammarCompiler new.
+	parserCompiler := SmaCCGrammarCompiler new category: self class category.
 	parserCompiler
 		buildDefinition:
 			'<LETTER> : [a-zA-Z_] ;

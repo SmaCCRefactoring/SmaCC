@@ -1,8 +1,8 @@
 tests
 testAmbiguousReduceReduceConflict
 	| parserCompiler |
-	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
-		defaultCategory: self class category.
+	parserCompiler := SmaCCGrammarCompiler new
+		category: self class category.
 	parserCompiler
 		buildDefinition:
 			'<int> : \d+; <whitespace>: \s+;
