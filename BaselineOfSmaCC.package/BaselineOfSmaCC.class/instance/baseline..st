@@ -49,7 +49,9 @@ baseline: spec
 					with: [ spec requires: 'SmaCC-GLR-Runtime' ];
 				package: 'SmaCC-Java'
 					with: [ spec requires: 'SmaCC-GLR-Runtime' ];
-				package: 'SmaCC-Python' with: [ spec requires: 'SmaCC-Runtime' ].
+				package: 'SmaCC-Python' with: [ spec requires: 'SmaCC-Runtime' ];
+				package: 'SmaCC-Python-Tests'
+					with: [ spec requires: 'SmaCC-Python' ].
 			spec
 				group: 'default' with: #('Tools');
 				group: 'Runtime' with: #('SmaCC-GLR-Runtime');
