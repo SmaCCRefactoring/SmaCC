@@ -1,28 +1,31 @@
-tests
-testHierarchy
+public
+testSystemCategory
 	| parserCompiler |
 	SmaCCScanner
 		subclass: #FooScanner
 		instanceVariableNames: ''
 		classVariableNames: ''
-		category: self class category.
+		poolDictionaries: ''
+		category: 'SmaCC-Tests'.
 	(Smalltalk at: #FooScanner)
 		subclass: #TestScanner
 		instanceVariableNames: ''
 		classVariableNames: ''
-		category: self class category.
+		poolDictionaries: ''
+		category: 'SmaCC-Tests'.
 	SmaCCParser
 		subclass: #FooParser
 		instanceVariableNames: ''
 		classVariableNames: ''
-		category: self class category.
+		poolDictionaries: ''
+		category: 'SmaCC-Tests'.
 	(Smalltalk at: #FooParser)
 		subclass: #TestParser
 		instanceVariableNames: ''
 		classVariableNames: ''
-		category: self class category.
-	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
-		defaultCategory: self class category.
+		poolDictionaries: ''
+		category: '_UnpackagedPackage'.
+	parserCompiler := SmaCCGrammarCompiler new.
 	parserCompiler
 		buildDefinition:
 			'%ignorecase;
@@ -34,6 +37,7 @@ testHierarchy
 			A : <a> ;
 			All: <_all>;'.
 	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
-	self
-		assert: self scannerClass superclass name asString = 'FooScanner'.
-	self assert: self parserClass superclass name asString = 'FooParser'
+	self assert: self scannerClass superclass name asString = 'FooScanner'.
+	self assert: self parserClass superclass name asString = 'FooParser'.
+	self assert: self parserClass category = '_UnpackagedPackage'.
+	self removeClass: self parserClass

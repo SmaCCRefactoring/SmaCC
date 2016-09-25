@@ -5,7 +5,7 @@ testPriority
 		subclass: #TestScanner
 		instanceVariableNames: ''
 		classVariableNames: ''
-		category: 'SmaCC_Tests'.
+		category: self class category.
 	(self lookupType: #TestScanner)
 		compile: 'all ^self recordAndReportMatch: (Array with: self _allId)'.
 	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator

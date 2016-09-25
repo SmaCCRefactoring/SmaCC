@@ -5,12 +5,12 @@ testGLRHierarchy
 		subclass: #FooParser
 		instanceVariableNames: ''
 		classVariableNames: ''
-		category: 'SmaCC_Tests'.
+		category: self class category.
 	(Smalltalk at: #FooParser)
 		subclass: #TestParser
 		instanceVariableNames: ''
 		classVariableNames: ''
-		category: 'SmaCC_Tests'.
+		category: self class category.
 	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
 		defaultCategory: self class category.
 	parserCompiler

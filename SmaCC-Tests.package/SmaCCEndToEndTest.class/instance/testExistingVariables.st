@@ -5,12 +5,12 @@ testExistingVariables
 		subclass: #TestScanner
 		instanceVariableNames: 'scanner1 scanner2'
 		classVariableNames: ''
-		category: 'SmaCC_Tests'.
+		category: self class category.
 	SmaCCParser
 		subclass: #TestParser
 		instanceVariableNames: 'parser1 parser2'
 		classVariableNames: ''
-		category: 'SmaCC_Tests'.
+		category: self class category.
 	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
 		defaultCategory: self class category.
 	parserCompiler
