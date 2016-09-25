@@ -5,7 +5,7 @@ defineClass: aString asSubclassOf: aBehavior
 	| current variables currentCategory |
 	current := Smalltalk at: aString asSymbol ifAbsent: [ Object ].
 	currentCategory := current == Object
-		ifTrue: [ self category ]
+		ifTrue: [ defaultCategory ifNil: [ RPackage defaultPackageName ] ]
 		ifFalse: [ current category ].
 	variables := ''.
 	(current includesBehavior: SmaCCParser) | (current includesBehavior: SmaCCScanner)

@@ -9,8 +9,7 @@
 	"commentStamp" : "<historical>",
 	"instvars" : [
 		"isExpressions",
-		"parseTreeCache",
-		"category" ],
+		"parseTreeCache" ],
 	"name" : "SmaCCSmalltalkCodeGenerator",
 	"pools" : [
 		 ],

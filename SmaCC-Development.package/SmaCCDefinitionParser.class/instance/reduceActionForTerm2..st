@@ -11,8 +11,7 @@ reduceActionForTerm2: nodes
 						regularExpression:
 							(scannerDefinition tokenNamed:
 								(nodes at: 1) value) ]
-				ifFalse: [ node := SmaCCGrammar implicitToken:
-						(nodes at: 1) value.
+				ifFalse: [ node := self generateImplicitToken: (nodes at: 1).
 					node notNil
 						ifTrue: [ node addStates: scannerDefinition nonExcludeStates.
 							symbol regularExpression: node ] ].

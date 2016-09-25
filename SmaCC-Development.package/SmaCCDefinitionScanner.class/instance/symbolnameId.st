@@ -1,3 +1,3 @@
 generated
 symbolnameId
-	^ 26
+	^ 30

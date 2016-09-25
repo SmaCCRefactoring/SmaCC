@@ -1,10 +1,10 @@
 generated
-scan11X5
-	self recordMatch: #(24 37).
+scan12X6
+	self recordMatch: #(28 41).
 	self step.
 	(currentCharacter isSeparator
 		or: [ currentCharacter == Character pageUp ])
-		ifTrue: [ [ self recordMatch: #(24).
+		ifTrue: [ [ self recordMatch: #(28).
 			self step.
 			currentCharacter isSeparator
 				or: [ currentCharacter == Character pageUp ] ] whileTrue ].

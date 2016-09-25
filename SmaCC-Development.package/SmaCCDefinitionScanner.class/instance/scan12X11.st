@@ -1,7 +1,7 @@
 generated
-scan11X10
-	self recordMatch: #(31 37).
+scan12X11
+	self recordMatch: #(35 41).
 	self step.
 	currentCharacter == $:
-		ifTrue: [ ^ self scan8 ].
+		ifTrue: [ ^ self scan9 ].
 	^ self reportLastMatch

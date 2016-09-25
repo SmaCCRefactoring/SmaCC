@@ -1,8 +1,9 @@
 generated
-scan11X3
+scan12X3
+	self recordMatch: #(7).
 	self step.
 	currentCharacter == $\
-		ifTrue: [ ^ self scan13 ].
+		ifTrue: [ ^ self scan14 ].
 	(currentCharacter <= $[ or: [ currentCharacter >= $^ ])
-		ifTrue: [ ^ self scan12 ].
+		ifTrue: [ ^ self scan13 ].
 	^ self reportLastMatch
