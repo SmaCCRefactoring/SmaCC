@@ -1,10 +1,9 @@
 generated
 scan13
-	[ 
-	self step.
-	currentCharacter = $.
+	[ self step.
+	currentCharacter == $.
 		ifTrue: [ ^ self scan10 ].
-	currentCharacter = $j
+	currentCharacter == $j
 		ifTrue: [ ^ self recordAndReportMatch: #(73) ].
 	currentCharacter isDigit ] whileTrue.
 	('Ee' includes: currentCharacter)

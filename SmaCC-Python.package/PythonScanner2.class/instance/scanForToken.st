@@ -1,29 +1,25 @@
 generated
 scanForToken
 	state == #lineBegin
-		ifTrue: [ 
-			self step.
-			currentCharacter = Character lf
+		ifTrue: [ self step.
+			currentCharacter == Character lf
 				ifTrue: [ ^ self recordAndReportMatch: #(74 75 77) ].
-			currentCharacter = Character cr
-				ifTrue: [ 
-					self recordMatch: #(74 75 77).
+			currentCharacter == Character cr
+				ifTrue: [ self recordMatch: #(74 75 77).
 					self step.
-					currentCharacter = Character lf
+					currentCharacter == Character lf
 						ifTrue: [ ^ self recordAndReportMatch: #(74 75) ].
 					^ self reportLastMatch ].
-			currentCharacter = $#
+			currentCharacter == $#
 				ifTrue: [ ^ self scan16 ].
 			currentCharacter isSeparator
-				ifTrue: [ 
-					[ 
-					self recordMatch: #(76).
+				ifTrue: [ [ self recordMatch: #(76).
 					self step.
-					currentCharacter = Character lf
+					currentCharacter == Character lf
 						ifTrue: [ ^ self recordAndReportMatch: #(75) ].
-					currentCharacter = Character cr
+					currentCharacter == Character cr
 						ifTrue: [ ^ self scan15 ].
-					currentCharacter = $#
+					currentCharacter == $#
 						ifTrue: [ ^ self scan16 ].
 					currentCharacter isSeparator ] whileTrue.
 					^ self reportLastMatch ].

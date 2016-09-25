@@ -1,2 +1,2 @@
-(name 'SmaCC-Python-ThierryGoubier.44' message 'Move tests to SmaCC-Tests' id '2d9bf98a-038c-40d9-9c29-99dc3d7cad56' date '28 April 2016' time '11:04:16.427854 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-Python-ThierryGoubier.43' message '2.0.5 combined
+(name 'SmaCC-Python-ThierryGoubier.45' message 'Regenerated the python parser' id 'f572a802-09ae-4b69-8e68-ee6e16a7e0af' date '25 September 2016' time '7:12:53.719335 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-Python-ThierryGoubier.43' message '2.0.5 combined
 ' id '8cb8c659-a4ed-5e65-9071-9c6b79417412' date '19 August 2015' time '3:57:25 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
