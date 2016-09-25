@@ -10,11 +10,11 @@
 		"left",
 		"modifiers",
 		"type",
+		"name",
 		"colon",
 		"expression",
 		"right",
-		"statement",
-		"_name" ],
+		"statement" ],
 	"name" : "JavaForEachStatementNode",
 	"pools" : [
 		 ],

@@ -1,3 +1,3 @@
 accessing
 collectionType
-	^self baseType model classFor: OrderedCollection
+	^ self baseType model classFor: OrderedCollection

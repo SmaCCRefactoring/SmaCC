@@ -1,6 +1,6 @@
-private
+testing
 isSortedBefore: aSmaCCClassDefinition
-	^self hierarchyCount < aSmaCCClassDefinition hierarchyCount
+	^ self hierarchyCount < aSmaCCClassDefinition hierarchyCount
 		or:
-			[self hierarchyCount = aSmaCCClassDefinition hierarchyCount
-				and: [self name < aSmaCCClassDefinition name]]
+			[ self hierarchyCount = aSmaCCClassDefinition hierarchyCount
+				and: [ self name < aSmaCCClassDefinition name ] ]

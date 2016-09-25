@@ -1,0 +1,3 @@
+generated
+visitContinueStatement: aContinueStatement
+	^ self visitControlTransferStatement: aContinueStatement

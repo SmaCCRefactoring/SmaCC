@@ -1,3 +1,3 @@
-public
+testing
 returnsVariableCollection
-	^productions anySatisfy: [:each | each returnsVariableCollection]
+	^ productions anySatisfy: [ :each | each returnsVariableCollection ]

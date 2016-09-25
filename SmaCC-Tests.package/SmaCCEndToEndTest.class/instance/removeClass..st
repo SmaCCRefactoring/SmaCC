@@ -1,3 +1,3 @@
 private
-removeClass: aBehavior 
+removeClass: aBehavior
 	aBehavior removeFromSystem

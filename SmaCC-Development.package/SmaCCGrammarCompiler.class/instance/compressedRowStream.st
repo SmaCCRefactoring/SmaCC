@@ -1,3 +1,3 @@
-action
+action table
 compressedRowStream
-	^WriteStream with: Array new
+	^ WriteStream with: Array new

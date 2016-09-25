@@ -1,12 +1,19 @@
-private
+regular expression construction
 addSpecificREsWithoutActionsTo: aRegularExpression
 	| dfa regex |
 	regex := aRegularExpression.
-	dfa := regex isNil ifTrue: [nil] ifFalse: [regex asDFA].
+	dfa := regex isNil
+		ifTrue: [ nil ]
+		ifFalse: [ regex asDFA ].
 	self
 		specificRegularExpressionsDo:
-			[:each | 
+			[ :each | 
 			| actions |
-			actions := dfa isNil ifTrue: [nil] ifFalse: [dfa actionForSpecificRegularExpression: each].
-			actions isNil ifTrue: [regex := regex isNil ifTrue: [each] ifFalse: [regex | each]]].
-	^regex
+			actions := dfa isNil
+				ifTrue: [ nil ]
+				ifFalse: [ dfa actionForSpecificRegularExpression: each ].
+			actions isNil
+				ifTrue: [ regex := regex isNil
+						ifTrue: [ each ]
+						ifFalse: [ regex | each ] ] ].
+	^ regex

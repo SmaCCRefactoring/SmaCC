@@ -4,8 +4,8 @@ startPosition
 
 	^ self
 		attributeNamed: #startPosition
-		ifAbsentPut: [ 
-			| min doBlock |
+		ifAbsentPut:
+			[ | min doBlock |
 			min := SmallInteger maxVal.
 			doBlock := [ :each | each startPosition ifNotNil: [ :pos | min := min min: pos ] ].
 			self nodesDo: doBlock andTokensDo: doBlock.

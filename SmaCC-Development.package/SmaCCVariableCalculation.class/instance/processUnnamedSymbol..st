@@ -1,5 +1,7 @@
-initialize
+private
 processUnnamedSymbol: aSmaCCSymbol
 	aSmaCCSymbol
 		productionsDo:
-			[:rhs | (self shouldAddVariablesFrom: rhs) ifTrue: [self addExternallyDefinedVariablesFrom: rhs]]
+			[ :rhs | 
+			(self shouldAddVariablesFrom: rhs)
+				ifTrue: [ self addExternallyDefinedVariablesFrom: rhs ] ]

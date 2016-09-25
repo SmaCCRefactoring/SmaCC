@@ -13,7 +13,8 @@ testSimpleDuplicateWithEdges
 	node1 := node1 removeDuplicateNodes.
 	self assert: node1 allStates size = 2.
 	self assert: node1 transitions size = 1.
-	self assert: node1 transitions first transitionObjects asString = 'ab'.
+	self
+		assert: node1 transitions first transitionObjects asString = 'ab'.
 	node2 := node1 transitions first to.
 	self deny: node1 = node2.
 	self assert: node2 transitions size = 1.

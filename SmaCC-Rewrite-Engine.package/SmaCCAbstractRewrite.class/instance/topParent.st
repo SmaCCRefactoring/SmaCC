@@ -1,3 +1,3 @@
 accessing
 topParent
-	^parent ifNil: [self] ifNotNil: [:value | value topParent]
+	^ parent ifNil: [ self ] ifNotNil: [ :value | value topParent ]

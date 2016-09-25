@@ -1,0 +1,3 @@
+generated
+selectorParts
+	^ selectorParts

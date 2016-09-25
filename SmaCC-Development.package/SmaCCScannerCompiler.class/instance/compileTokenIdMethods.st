@@ -1,5 +1,8 @@
-compiling
+compiling-scanner
 compileTokenIdMethods
-	(self symbols select: [:each | each createIdMethod])
+	(self symbols select: [ :each | each createIdMethod ])
 		do:
-			[:each | codeGenerator compileTokenIdMethodNamed: each safeMethodName withId: (self symbols indexOf: each)]
+			[ :each | 
+			codeGenerator
+				compileTokenIdMethodNamed: each safeMethodName
+				withId: (self symbols indexOf: each) ]

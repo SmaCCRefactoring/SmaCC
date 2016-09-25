@@ -1,3 +1,3 @@
-private
+testing
 isRemoved
-	^isRemoved
+	^ isRemoved

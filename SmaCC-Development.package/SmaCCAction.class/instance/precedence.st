@@ -1,3 +1,3 @@
 accessing
 precedence
-	^self lr1Item precedence
+	^ self lr1Item precedence

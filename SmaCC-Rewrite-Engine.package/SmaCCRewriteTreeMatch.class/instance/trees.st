@@ -1,7 +1,9 @@
-initialize
+accessing
 trees
-	^trees
+	^ trees
 		ifNil:
-			[trees := [self parserClass parseAndCacheAll: source startingAt: self startingStateIndex]
+			[ trees := [ self parserClass
+				parseAndCacheAll: source
+				startingAt: self startingStateIndex ]
 				on: SmaCCParserError
-				do: [:ex | ex return: #()]]
+				do: [ :ex | ex return: #() ] ]

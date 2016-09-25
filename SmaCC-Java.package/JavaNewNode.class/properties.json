@@ -12,7 +12,7 @@
 		"commas",
 		"primary",
 		"period",
-		"_name" ],
+		"name" ],
 	"name" : "JavaNewNode",
 	"pools" : [
 		 ],

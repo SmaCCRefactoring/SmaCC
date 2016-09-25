@@ -1,3 +1,3 @@
 merging
 mergeWith: aSmaCCAction prefer: aClass
-	^self
+	^ self

@@ -1,12 +1,13 @@
-tests
+tests-parse tree creation
 testSimpleNode
 	| parserCompiler node |
-	parserCompiler := SmaCCGrammarCompiler new.
+	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
+		defaultCategory: self class category.
 	parserCompiler
-		buildDefinition: '%root FooNode ;
+		buildDefinition:
+			'%root FooNode ;
 			test : "a" ''letter'' {{FooNode}};'.
-	parserCompiler compileInto: 'TestScanner'
-		andParser: 'TestParser'.
+	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
 	node := self parserClass parse: 'a'.
 	self assert: node class name asString = 'FooNode'.
 	self assert: node letter value = 'a'.

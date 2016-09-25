@@ -1,3 +1,4 @@
-private
+testing
 isTerminalNode
-	^transitions isEmpty or: [transitions size = 1 and: [self hasSimpleLoop]]
+	^ transitions isEmpty
+		or: [ transitions size = 1 and: [ self hasSimpleLoop ] ]

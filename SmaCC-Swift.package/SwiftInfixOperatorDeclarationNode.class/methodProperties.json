@@ -1,0 +1,28 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "JohnBrant 6/24/2016 13:14:22",
+		"associativityToken" : "JohnBrant 6/24/2016 13:14:22",
+		"associativityToken:" : "JohnBrant 6/24/2016 13:14:22",
+		"compositeTokenVariables" : "JohnBrant 6/24/2016 13:14:22",
+		"infixToken" : "JohnBrant 6/24/2016 13:14:22",
+		"infixToken:" : "JohnBrant 6/24/2016 13:14:22",
+		"initialize" : "JohnBrant 6/24/2016 13:14:22",
+		"integer_literalToken" : "JohnBrant 6/24/2016 13:14:22",
+		"integer_literalToken:" : "JohnBrant 6/24/2016 13:14:22",
+		"leftBraceToken" : "JohnBrant 6/24/2016 13:14:22",
+		"leftBraceToken:" : "JohnBrant 6/24/2016 13:14:22",
+		"leftToken" : "JohnBrant 6/24/2016 13:14:22",
+		"leftToken:" : "JohnBrant 6/24/2016 13:14:22",
+		"noneToken" : "JohnBrant 6/24/2016 13:14:22",
+		"noneToken:" : "JohnBrant 6/24/2016 13:14:22",
+		"operatorTokens" : "JohnBrant 6/24/2016 13:14:22",
+		"operatorTokens:" : "JohnBrant 6/24/2016 13:14:22",
+		"precedenceToken" : "JohnBrant 6/24/2016 13:14:22",
+		"precedenceToken:" : "JohnBrant 6/24/2016 13:14:22",
+		"rightBraceToken" : "JohnBrant 6/24/2016 13:14:22",
+		"rightBraceToken:" : "JohnBrant 6/24/2016 13:14:22",
+		"rightToken" : "JohnBrant 6/24/2016 13:14:22",
+		"rightToken:" : "JohnBrant 6/24/2016 13:14:22",
+		"tokenVariables" : "JohnBrant 6/24/2016 13:14:22" } }

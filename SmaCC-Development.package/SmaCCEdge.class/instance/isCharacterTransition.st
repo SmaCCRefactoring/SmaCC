@@ -1,3 +1,3 @@
-private
+testing
 isCharacterTransition
-	^false
+	^ false

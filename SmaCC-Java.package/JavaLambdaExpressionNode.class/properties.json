@@ -11,7 +11,7 @@
 		"commas",
 		"rightParen",
 		"arrowToken",
-		"_value" ],
+		"value" ],
 	"name" : "JavaLambdaExpressionNode",
 	"pools" : [
 		 ],

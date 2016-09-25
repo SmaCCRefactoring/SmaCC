@@ -1,14 +1,15 @@
-public
+tests
 testPriority
 	| parserCompiler |
 	SmaCCScanner
 		subclass: #TestScanner
 		instanceVariableNames: ''
 		classVariableNames: ''
-		poolDictionaries: ''
-		category: 'SmaCC-Tests'.
-	(self lookupType: #TestScanner) compile: 'all ^self recordAndReportMatch: (Array with: self _allId)'.
-	parserCompiler := SmaCCGrammarCompiler new.
+		category: self class category.
+	(self lookupType: #TestScanner)
+		compile: 'all ^self recordAndReportMatch: (Array with: self _allId)'.
+	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
+		defaultCategory: self class category.
 	parserCompiler
 		buildDefinition:
 			'%ignorecase;

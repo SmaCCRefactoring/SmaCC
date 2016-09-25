@@ -4,5 +4,5 @@ reduceActionForpointer_member_access1: nodes
 	result := CSPointerMemberAccessNode new.
 	result expression: (nodes at: 1).
 	result arrowToken: (nodes at: 2).
-	result _name: (nodes at: 3).
+	result name: (nodes at: 3).
 	^ result

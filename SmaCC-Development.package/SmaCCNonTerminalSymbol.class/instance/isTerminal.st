@@ -1,3 +1,3 @@
-private
+testing
 isTerminal
-	^false
+	^ false

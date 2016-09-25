@@ -7,9 +7,10 @@ keywordRegularExpressionFor: aString
 	regex := regularExpressionString
 		inject: nil
 		into:
-			[:sum :each | 
+			[ :sum :each | 
 			sum isNil
-				ifTrue: [SmaCCCharacterRENode characters: (String with: each)]
-				ifFalse: [sum , (SmaCCCharacterRENode characters: (String with: each))]].
-	regex addStates: scannerDefinition states.
-	^regex
+				ifTrue: [ SmaCCCharacterRENode characters: (String with: each) ]
+				ifFalse: [ sum
+						, (SmaCCCharacterRENode characters: (String with: each)) ] ].
+	regex addStates: self scannerStates.
+	^ regex

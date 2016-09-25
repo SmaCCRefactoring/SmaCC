@@ -1,3 +1,3 @@
 compiling
 compileOptimizedMethodIn: modelClass
-	self compileMethodIn: modelClass
+	self subclassResponsibility

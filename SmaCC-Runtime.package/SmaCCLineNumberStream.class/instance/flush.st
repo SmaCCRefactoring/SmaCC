@@ -1,3 +1,3 @@
 accessing
 flush
-	^sourceStream flush
+	^ sourceStream flush

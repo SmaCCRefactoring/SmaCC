@@ -1,10 +1,9 @@
 public
 saveOn: aStream
 	startingState notNil
-		ifTrue:
-			[aStream
+		ifTrue: [ aStream
 				nextPutAll: startingState;
-				cr].
+				cr ].
 	aStream
 		nextPutAll: '>>>';
 		nextPutAll: source;

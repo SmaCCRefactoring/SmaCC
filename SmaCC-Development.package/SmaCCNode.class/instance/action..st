@@ -1,4 +1,4 @@
-initialize
+initialize-release
 action: anObject
 	anObject isNil
 		ifTrue: [ ^ self ].

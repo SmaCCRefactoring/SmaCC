@@ -1,3 +1,3 @@
 constructing
 repeat
-	^SmaCCRepeatingRENode component: self
+	^ SmaCCRepeatingRENode component: self

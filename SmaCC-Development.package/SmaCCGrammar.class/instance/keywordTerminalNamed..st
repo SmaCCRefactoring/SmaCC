@@ -1,8 +1,8 @@
 private
 keywordTerminalNamed: aString
-	^self
+	^ self
 		findSymbolNamed: aString
 		ifAbsentAddFirst:
-			[(self newTerminalSymbolNamed: aString)
+			[ (self newTerminalSymbolNamed: aString)
 				regularExpression: (self keywordRegularExpressionFor: aString);
-				yourself]
+				yourself ]

@@ -1,4 +1,4 @@
-compiling
+compiling-scanner
 outputGreaterThanMatch: each on: stream
 	stream
 		nextPutAll: 'currentCharacter >= ';

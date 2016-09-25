@@ -1,3 +1,3 @@
 accessing
 suffix
-	^suffix
+	^ suffix

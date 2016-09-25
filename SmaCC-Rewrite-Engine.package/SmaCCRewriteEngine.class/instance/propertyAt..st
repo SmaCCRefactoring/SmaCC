@@ -1,3 +1,3 @@
-accessing
+accessing-properites
 propertyAt: aString
-	^properties at: aString ifAbsent: [nil]
+	^ properties at: aString ifAbsent: [ nil ]

@@ -1,3 +1,4 @@
 private
 makeCaseInsensitive
-	regularExpression notNil ifTrue: [regularExpression makeCaseInsensitive]
+	regularExpression notNil
+		ifTrue: [ regularExpression makeCaseInsensitive ]

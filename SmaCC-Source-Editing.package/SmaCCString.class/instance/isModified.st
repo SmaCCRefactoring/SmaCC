@@ -1,3 +1,3 @@
-public
+testing
 isModified
-	^firstSentinel next ~~ lastSentinel previous
+	^ firstSentinel next ~~ lastSentinel previous

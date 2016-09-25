@@ -1,3 +1,3 @@
-private
+testing
 includes: aSmaCCSymbol
-	^symbols includes: aSmaCCSymbol
+	^ symbols includes: aSmaCCSymbol

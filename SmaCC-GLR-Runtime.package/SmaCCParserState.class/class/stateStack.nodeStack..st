@@ -1,5 +1,5 @@
-instance
+instance creation
 stateStack: stateStack nodeStack: nodeStack
-	^(self new)
+	^ self new
 		stateStack: stateStack nodeStack: nodeStack;
 		yourself

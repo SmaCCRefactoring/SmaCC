@@ -1,3 +1,3 @@
-initialize
+initialize-release
 node: aSmaCCCharacterRENode
 	node := aSmaCCCharacterRENode

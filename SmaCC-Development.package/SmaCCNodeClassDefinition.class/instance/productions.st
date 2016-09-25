@@ -1,3 +1,3 @@
 accessing
 productions
-	^productions
+	^ productions

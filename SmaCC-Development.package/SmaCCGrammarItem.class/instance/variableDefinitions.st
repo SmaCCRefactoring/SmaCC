@@ -1,3 +1,3 @@
-private
+variables
 variableDefinitions
-	^variableDefinitions ifNil: [self computeVariableDefinitions]
+	^ variableDefinitions ifNil: [ self computeVariableDefinitions ]

@@ -1,4 +1,4 @@
-initialize
+initialize-release
 initialize
 	super initialize.
 	newStarts := IdentityDictionary new.

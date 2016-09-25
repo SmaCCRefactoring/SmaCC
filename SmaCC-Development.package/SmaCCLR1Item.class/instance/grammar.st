@@ -1,3 +1,3 @@
 accessing
 grammar
-	^rhs grammar
+	^ rhs grammar

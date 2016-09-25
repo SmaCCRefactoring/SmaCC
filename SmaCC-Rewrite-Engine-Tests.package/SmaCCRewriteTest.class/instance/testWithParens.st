@@ -1,4 +1,4 @@
-private
+tests
 testWithParens
 	self
 		compareRewrite: '1+(2+3)'

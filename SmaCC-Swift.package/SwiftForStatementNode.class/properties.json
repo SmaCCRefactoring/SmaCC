@@ -1,0 +1,21 @@
+{
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"forToken",
+		"expressions",
+		"commaTokens",
+		"testExpression",
+		"incrementExpression",
+		"block",
+		"leftParenToken",
+		"rightParenToken" ],
+	"name" : "SwiftForStatementNode",
+	"pools" : [
+		 ],
+	"super" : "SwiftLoopStatementNode",
+	"type" : "normal" }

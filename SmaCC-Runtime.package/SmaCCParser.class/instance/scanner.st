@@ -1,3 +1,3 @@
 accessing
 scanner
-	^scanner
+	^ scanner

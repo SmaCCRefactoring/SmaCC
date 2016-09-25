@@ -1,17 +1,17 @@
 {
 	"class" : {
-		"comment:match:transformation:" : "ThierryGoubier 2/5/2015 15:53:02",
-		"newInstance" : "ThierryGoubier 2/5/2015 15:53:02" },
+		"comment:match:transformation:" : "JohnBrant 6/24/2016 13:12:32",
+		"newInstance" : "JohnBrant 6/24/2016 13:12:32" },
 	"instance" : {
-		"comment" : "ThierryGoubier 2/5/2015 15:53:02",
-		"comment:" : "ThierryGoubier 2/5/2015 15:53:02",
-		"displayOn:" : "ThierryGoubier 2/5/2015 15:53:02",
-		"engine:" : "ThierryGoubier 2/5/2015 15:53:02",
-		"listForClass:into:" : "ThierryGoubier 2/5/2015 15:53:02",
-		"localSaveOn:" : "ThierryGoubier 2/5/2015 15:53:02",
-		"match" : "ThierryGoubier 2/5/2015 15:53:02",
-		"match:" : "ThierryGoubier 2/5/2015 15:53:02",
-		"performOn:continuation:" : "ThierryGoubier 2/5/2015 15:53:02",
-		"postCopy" : "ThierryGoubier 2/5/2015 15:53:02",
-		"transformation" : "ThierryGoubier 2/5/2015 15:53:02",
-		"transformation:" : "ThierryGoubier 2/5/2015 15:53:02" } }
+		"comment" : "JohnBrant 6/24/2016 13:12:32",
+		"comment:" : "JohnBrant 6/24/2016 13:12:32",
+		"displayOn:" : "JohnBrant 6/24/2016 13:12:32",
+		"engine:" : "JohnBrant 6/24/2016 13:12:32",
+		"listForClass:into:" : "JohnBrant 6/24/2016 13:12:32",
+		"localSaveOn:" : "JohnBrant 6/24/2016 13:12:32",
+		"match" : "JohnBrant 6/24/2016 13:12:32",
+		"match:" : "JohnBrant 6/24/2016 13:12:32",
+		"performOn:continuation:" : "JohnBrant 6/24/2016 13:12:32",
+		"postCopy" : "JohnBrant 6/24/2016 13:12:32",
+		"transformation" : "JohnBrant 6/24/2016 13:12:32",
+		"transformation:" : "JohnBrant 6/24/2016 13:12:32" } }

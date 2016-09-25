@@ -1,4 +1,4 @@
-initialize
+initialize-release
 fixParentPointers
 	self
 		nodesDo: [ :each | 

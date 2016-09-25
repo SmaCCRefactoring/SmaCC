@@ -1,3 +1,3 @@
 accessing
 preferredAction
-	^preferredAction
+	^ preferredAction

@@ -1,3 +1,3 @@
-private
+testing
 hasReduceAction
-	^false
+	^ false

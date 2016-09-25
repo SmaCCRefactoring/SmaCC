@@ -1,3 +1,3 @@
 accessing
-parse: aString 
-	^self parse: aString startingAt: self defaultStartingState
+parse: aString
+	^ self parse: aString startingAt: self defaultStartingState

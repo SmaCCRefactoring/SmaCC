@@ -6,7 +6,7 @@ reduceActionForevent_declaration2: nodes
 	result addTokens: (nodes at: 2) to: result modifiers.
 	result eventToken: (nodes at: 3).
 	result type: (nodes at: 4).
-	result _name: ((nodes at: 5) at: 1).
+	result name: ((nodes at: 5) at: 1).
 	result interface: ((nodes at: 5) at: 2).
 	result periodToken: ((nodes at: 5) at: 3).
 	result leftBraceToken: (nodes at: 6).

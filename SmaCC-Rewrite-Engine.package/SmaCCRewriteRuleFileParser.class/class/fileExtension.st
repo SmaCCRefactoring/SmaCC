@@ -1,3 +1,3 @@
-file
+file types
 fileExtension
-	^'.rw'
+	^ '.rw'

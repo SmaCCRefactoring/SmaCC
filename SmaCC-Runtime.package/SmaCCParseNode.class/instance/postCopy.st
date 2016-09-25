@@ -2,7 +2,8 @@ copying
 postCopy
 	super postCopy.
 	self
-		allGettersDo: [ :each | 
+		allGettersDo:
+			[ :each | 
 			self
 				perform: (self convertToSetter: each)
 				with:

@@ -1,6 +1,9 @@
-private
+reduce actions
 componentIndex
 	collection
 		keysAndValuesDo:
-			[:index :each | ((self variableNameForIndex: index) isNil and: [each isSubtypeOf: self]) ifTrue: [^index]].
-	^0
+			[ :index :each | 
+			((self variableNameForIndex: index) isNil
+				and: [ each isSubtypeOf: self ])
+				ifTrue: [ ^ index ] ].
+	^ 0

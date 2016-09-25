@@ -1,3 +1,3 @@
 private
 actionMask
-	^2r11
+	^ 2r11

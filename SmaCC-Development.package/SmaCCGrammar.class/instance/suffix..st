@@ -1,3 +1,3 @@
-initialize
+initialize-release
 suffix: aString
 	suffix := aString

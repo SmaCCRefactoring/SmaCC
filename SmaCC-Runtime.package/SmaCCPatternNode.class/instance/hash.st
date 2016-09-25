@@ -1,3 +1,3 @@
 comparing
 hash
-	^self patternToken hash
+	^ self patternToken hash

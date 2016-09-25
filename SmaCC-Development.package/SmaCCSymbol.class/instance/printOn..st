@@ -1,3 +1,3 @@
 printing
-printOn: aStream 
+printOn: aStream
 	aStream nextPutAll: name

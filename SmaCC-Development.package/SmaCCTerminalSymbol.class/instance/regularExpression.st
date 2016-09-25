@@ -1,3 +1,3 @@
 accessing
 regularExpression
-	^regularExpression
+	^ regularExpression

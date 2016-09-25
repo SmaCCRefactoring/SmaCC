@@ -1,3 +1,3 @@
 accessing
 possibleMatchesSize
-	^self matchingCharacters size
+	^ self matchingCharacters size

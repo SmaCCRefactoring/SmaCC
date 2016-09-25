@@ -1,3 +1,3 @@
 private
 baseClassType
-	^rhs grammar rootDefinition
+	^ rhs grammar rootDefinition

@@ -1,3 +1,3 @@
 private
 scannerClass
-	^self lookupType: #TestScanner
+	^ self lookupType: #TestScanner

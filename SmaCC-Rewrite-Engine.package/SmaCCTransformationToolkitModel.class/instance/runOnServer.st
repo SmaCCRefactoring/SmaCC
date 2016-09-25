@@ -1,3 +1,3 @@
 accessing
 runOnServer
-	^runOnServer ifNil: [false]
+	^ runOnServer ifNil: [ false ]

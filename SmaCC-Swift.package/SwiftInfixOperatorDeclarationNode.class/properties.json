@@ -1,0 +1,23 @@
+{
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"operatorTokens",
+		"infixToken",
+		"leftBraceToken",
+		"precedenceToken",
+		"integer_literalToken",
+		"associativityToken",
+		"leftToken",
+		"rightToken",
+		"noneToken",
+		"rightBraceToken" ],
+	"name" : "SwiftInfixOperatorDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "SwiftParseNode",
+	"type" : "normal" }

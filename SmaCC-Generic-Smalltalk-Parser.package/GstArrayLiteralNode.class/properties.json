@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-Generic-Smalltalk-Parser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"arrayStart",
+		"values",
+		"arrayStop" ],
+	"name" : "GstArrayLiteralNode",
+	"pools" : [
+		 ],
+	"super" : "GstLiteralNode",
+	"type" : "normal" }

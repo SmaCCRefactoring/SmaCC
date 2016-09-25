@@ -1,0 +1,3 @@
+generated
+tokenVariables
+	^ #(#structToken #whereToken)

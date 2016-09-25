@@ -1,0 +1,3 @@
+generated
+visitProtocolSubscriptDeclaration: aProtocolSubscriptDeclaration
+	^ self visitParse: aProtocolSubscriptDeclaration

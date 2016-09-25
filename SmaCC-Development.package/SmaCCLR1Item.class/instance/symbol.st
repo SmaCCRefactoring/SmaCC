@@ -1,3 +1,3 @@
 accessing
 symbol
-	^self rhs productionSymbol
+	^ self rhs productionSymbol

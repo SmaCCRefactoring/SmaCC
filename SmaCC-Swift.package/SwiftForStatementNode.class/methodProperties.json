@@ -1,0 +1,26 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "JohnBrant 6/24/2016 13:14:22",
+		"block" : "JohnBrant 6/24/2016 13:14:22",
+		"block:" : "JohnBrant 6/24/2016 13:14:22",
+		"commaTokens" : "JohnBrant 6/24/2016 13:14:22",
+		"commaTokens:" : "JohnBrant 6/24/2016 13:14:22",
+		"compositeTokenVariables" : "JohnBrant 6/24/2016 13:14:22",
+		"expressions" : "JohnBrant 6/24/2016 13:14:22",
+		"expressions:" : "JohnBrant 6/24/2016 13:14:22",
+		"forToken" : "JohnBrant 6/24/2016 13:14:22",
+		"forToken:" : "JohnBrant 6/24/2016 13:14:22",
+		"incrementExpression" : "JohnBrant 6/24/2016 13:14:22",
+		"incrementExpression:" : "JohnBrant 6/24/2016 13:14:22",
+		"initialize" : "JohnBrant 6/24/2016 13:14:22",
+		"leftParenToken" : "JohnBrant 6/24/2016 13:14:22",
+		"leftParenToken:" : "JohnBrant 6/24/2016 13:14:22",
+		"nodeVariables" : "JohnBrant 6/24/2016 13:14:22",
+		"otherVariables" : "JohnBrant 6/24/2016 13:14:22",
+		"rightParenToken" : "JohnBrant 6/24/2016 13:14:22",
+		"rightParenToken:" : "JohnBrant 6/24/2016 13:14:22",
+		"testExpression" : "JohnBrant 6/24/2016 13:14:22",
+		"testExpression:" : "JohnBrant 6/24/2016 13:14:22",
+		"tokenVariables" : "JohnBrant 6/24/2016 13:14:22" } }

@@ -1,3 +1,3 @@
 accessing
 symbols
-	^grammar symbols
+	^ grammar symbols

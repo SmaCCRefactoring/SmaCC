@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Javascript-Parser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"thisToken" ],
+	"name" : "JSThisExpressionNode",
+	"pools" : [
+		 ],
+	"super" : "JSExpressionNode",
+	"type" : "normal" }

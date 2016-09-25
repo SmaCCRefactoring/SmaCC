@@ -1,6 +1,6 @@
-instance
+instance creation
 newInstance
-	^self
+	^ self
 		comment: ''
 		match: (SmaCCRewriteTypeMatch on: SmaCCParseNode)
 		transformation: (SmaCCRewriteCodeTransformation on: 'self continue')

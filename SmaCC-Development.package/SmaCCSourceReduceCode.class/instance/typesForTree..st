@@ -2,18 +2,24 @@ private
 typesForTree: aRBProgramNode
 	aRBProgramNode isReturn
 		ifTrue: [ ^ self typesForTree: aRBProgramNode value ].
-	(aRBProgramNode isSequence and: [ aRBProgramNode statements notEmpty ])
-		ifTrue: [ 
-			| types |
-			types := Set withAll: (self typesForTree: aRBProgramNode statements last).
+	(aRBProgramNode isSequence
+		and: [ aRBProgramNode statements notEmpty ])
+		ifTrue:
+			[ | types |
+			types := Set
+				withAll: (self typesForTree: aRBProgramNode statements last).
 			aRBProgramNode
-				nodesDo: [ :each | 
+				nodesDo:
+					[ :each | 
 					each isReturn
 						ifTrue: [ types addAll: (self typesForTree: each value) ] ].
 			^ types asArray ].
 	aRBProgramNode isLiteralNode
-		ifTrue: [ ^ Array with: (self model classFor: aRBProgramNode value class) ].
+		ifTrue: [ ^ Array
+				with: (self model classFor: aRBProgramNode value class) ].
 	(aRBProgramNode isMessage
-		and: [ aRBProgramNode receiver isVariable and: [ aRBProgramNode receiver name = 'SmaCCToken' ] ])
+		and:
+			[ aRBProgramNode receiver isVariable
+				and: [ aRBProgramNode receiver name = 'SmaCCToken' ] ])
 		ifTrue: [ ^ Array with: (self model classFor: SmaCCToken) ].
 	^ Array with: (self model classFor: Object)

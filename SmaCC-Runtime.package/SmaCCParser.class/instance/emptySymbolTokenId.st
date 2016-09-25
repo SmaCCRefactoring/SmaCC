@@ -1,3 +1,3 @@
 accessing
 emptySymbolTokenId
-	^scanner emptySymbolTokenId
+	^ scanner emptySymbolTokenId

@@ -1,4 +1,4 @@
-private
+visiting
 acceptNodes: aCollection
-	aCollection do: [:each | self acceptNode: each].
-	^aCollection
+	aCollection do: [ :each | self acceptNode: each ].
+	^ aCollection

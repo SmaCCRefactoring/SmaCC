@@ -1,3 +1,3 @@
 accessing
 symbols
-	^symbols
+	^ symbols

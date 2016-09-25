@@ -1,1 +1,0 @@
-I parse javascript code. I have a adjusted parser implementation for specific reasons (see actionsForCurrentToken and handleErrors)

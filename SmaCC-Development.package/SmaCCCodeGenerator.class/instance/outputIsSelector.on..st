@@ -1,3 +1,3 @@
-compiling
-outputIsSelector: isSelector on: stream 
+compiling-scanner
+outputIsSelector: isSelector on: stream
 	self subclassResponsibility

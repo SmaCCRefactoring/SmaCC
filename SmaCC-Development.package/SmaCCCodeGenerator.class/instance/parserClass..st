@@ -1,4 +1,4 @@
-compiling
+compiling-parser
 parserClass: aClassOrString
 	| name existingClass superclass |
 	name := (aClassOrString isKindOf: Behavior)
@@ -7,6 +7,10 @@ parserClass: aClassOrString
 	superclass := SmaCCParser.
 	existingClass := Smalltalk at: name asSymbol ifAbsent: [ nil ].
 	(existingClass notNil
-		and: [ (existingClass superclass includesBehavior: superclass) and: [ (existingClass includesBehavior: SmaCCGLRParser) not ] ])
+		and:
+			[ (existingClass superclass includesBehavior: superclass)
+				and: [ (existingClass includesBehavior: SmaCCGLRParser) not ] ])
 		ifTrue: [ superclass := existingClass superclass ].
+	(existingClass notNil and: [ defaultCategory isNil ])
+		ifTrue: [ defaultCategory := existingClass category ].
 	parserClass := self defineClass: name asSubclassOf: superclass

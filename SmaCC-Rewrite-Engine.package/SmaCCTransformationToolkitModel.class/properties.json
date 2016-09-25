@@ -14,7 +14,8 @@
 		"outputDirectory",
 		"server",
 		"runOnServer",
-		"createSubdirectories" ],
+		"createSubdirectories",
+		"commonParentDirectory" ],
 	"name" : "SmaCCTransformationToolkitModel",
 	"pools" : [
 		 ],

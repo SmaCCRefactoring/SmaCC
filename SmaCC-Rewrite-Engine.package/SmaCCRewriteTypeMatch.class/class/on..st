@@ -1,6 +1,6 @@
-instance
+instance creation
 on: aClass
-	^(self new)
+	^ self new
 		enableDebug: false;
 		nodeClass: aClass;
 		yourself

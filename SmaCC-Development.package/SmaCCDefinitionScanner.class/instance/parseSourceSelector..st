@@ -1,3 +1,3 @@
-initialize
-parseSourceSelector: aSymbol 
+initialize-release
+parseSourceSelector: aSymbol
 	parseSourceSelector := aSymbol

@@ -1,14 +1,15 @@
-tests
+tests-parse tree creation
 testMultipleComponents
 	| compiler node |
-	compiler := SmaCCGrammarCompiler new.
+	(compiler := SmaCCGrammarCompiler new) codeGenerator
+		defaultCategory: self class category.
 	compiler
-		buildDefinition: '%root FooNode;
+		buildDefinition:
+			'%root FooNode;
 			A : B C {{FooANode}} ;
 			B : "b" ''b'' ;
 			C : "c" ''c'';'.
-	compiler compileInto: 'TestScanner'
-		andParser: 'TestParser'.
+	compiler compileInto: 'TestScanner' andParser: 'TestParser'.
 	node := self parserClass parse: 'bc'.
 	self assert: node class name asString = 'FooANode'.
 	self assert: node b startPosition = 1.

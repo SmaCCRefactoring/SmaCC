@@ -1,3 +1,3 @@
 accessing
 isAtEnd
-	^location > rhs size
+	^ location > rhs size

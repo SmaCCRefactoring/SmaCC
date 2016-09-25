@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-Javascript-Parser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"key",
+		"colonToken",
+		"value" ],
+	"name" : "JSPropertyAssignmentNode",
+	"pools" : [
+		 ],
+	"super" : "JSProgramNode",
+	"type" : "normal" }

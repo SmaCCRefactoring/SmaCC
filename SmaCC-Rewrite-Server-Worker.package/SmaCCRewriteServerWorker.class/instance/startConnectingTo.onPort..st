@@ -1,12 +1,15 @@
-public
+running
 startConnectingTo: aString onPort: anInteger
 	rewriteFiles := Dictionary new.
-	socket := [ Socket port: anInteger host: aString ]
+	socket := [ Socket newTCP
+		connectTo: (NetNameResolver addressForName: aString) port: anInteger;
+		yourself ]
 		on: Error
-		do: [ :ex | SmaCCServerSessionManager current quit ].
-	socket connect.
-	[ 
-	socket writeStream
+		do: [ :ex | Exit signalFailure: ex messageText ].
+	serverStream := SocketStream on: socket.
+	serverStream binary.
+	serverStream noTimeout.
+	[ serverStream
 		nextPut: $0 asInteger;
 		flush.
 	self processRequests ]

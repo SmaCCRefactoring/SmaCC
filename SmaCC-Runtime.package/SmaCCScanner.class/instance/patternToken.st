@@ -1,4 +1,4 @@
-default
+private
 patternToken
 	| token |
 	token := SmaCCPatternToken
@@ -6,4 +6,4 @@ patternToken
 		start: start + 1
 		ids: matchActions.
 	outputStream reset.
-	^token
+	^ token

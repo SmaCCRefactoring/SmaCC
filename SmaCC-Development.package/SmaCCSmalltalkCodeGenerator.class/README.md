@@ -1,7 +1,5 @@
-The SmaCCSmalltalkCodeGenerator generates code for Smalltalk / Pharo.
+SmaCCSmalltalkCodeGenerator represents a code generator for Smalltalk.
 
-Two things have to be removed from the Dolphin version :
-
-## optimisations. It seems to be in two places, at least.
-
-splitting methods that are too long.
+Instance Variables
+	isExpressions	<Dictionary key: String value: Symbol>	a map of strings to is??? methods on String that answer true for those strings (e.g., '0123456789' -> #isDigit)
+	parseTreeCache	<Dictionary key: Symbol value: RBProgramNode>	mapping from selector names to code compiled in the method

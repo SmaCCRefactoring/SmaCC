@@ -1,4 +1,5 @@
 public
 loadRewriteFile: aString
-	aString isNil ifTrue: [^self].
+	aString isNil
+		ifTrue: [ ^ self ].
 	self rewrites: (self openRewriteFile: aString)

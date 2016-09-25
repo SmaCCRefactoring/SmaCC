@@ -10,7 +10,7 @@
 		"modifiers",
 		"delegateToken",
 		"type",
-		"_name",
+		"name",
 		"typeParameters",
 		"leftParen",
 		"parameters",

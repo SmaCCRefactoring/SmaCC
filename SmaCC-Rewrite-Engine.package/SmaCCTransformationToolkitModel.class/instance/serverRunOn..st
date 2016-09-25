@@ -1,34 +1,52 @@
-public
+running
 serverRunOn: aCollection
-	"TODO: Probably not working yet, will have to look into network uses."
-
-	| baseString stream socket request |
-	baseString := 'INPUTPARSER=' , self inputParserClass name , ';REWRITEFILE=' , self rewrites filename.
+	| baseString stream socket request serverStream |
+	baseString := 'INPUTPARSER=' , self inputParserClass name
+		, ';REWRITEFILE=' , self rewrites filename.
 	self outputDirectory notEmpty
-		ifTrue: [ baseString := baseString , ';OUTPUTDIRECTORY=' , self outputDirectory ].
-	baseString := baseString , ';BASEDIRECTORY=' , self commonParentDirectory.
+		ifTrue:
+			[ baseString := baseString , ';OUTPUTDIRECTORY='
+				, self outputDirectory ].
+	baseString := baseString , ';BASEDIRECTORY='
+		, self commonParentDirectory.
 	self validationParserClass notNil
-		ifTrue: [ baseString := baseString , ';OUTPUTPARSER=' , self validationParserClass name ].
+		ifTrue:
+			[ baseString := baseString , ';OUTPUTPARSER='
+				, self validationParserClass name ].
 	stream := WriteStream on: String new.
 	aCollection
-		do: [ :each | 
+		do:
+			[ :each | 
 			stream
 				nextPutAll: baseString;
 				nextPutAll: ';FILE=';
 				nextPutAll: each;
 				nextPut: (Character value: 0) ].
 	request := stream contents.
-	socket := Socket port: self serverPort host: self serverName.
-	socket connect.
-	[ 
-	socket writeStream
+	socket := Socket newTCP
+		connectTo:
+			(NetNameResolver addressForName: self serverName)
+			port: self serverPort;
+		yourself.
+	(serverStream := SocketStream on: socket) binary.
+	[ serverStream
 		nextPut: $1 asInteger;
-		nextDWORDPut: request size;
+		nextPut: (request size bitAnd: 255);
+		nextPut: (request size >> 8 bitAnd: 255);
+		nextPut: (request size >> 16 bitAnd: 255);
+		nextPut: (request size >> 24 bitAnd: 255);
 		nextPutAll: request asByteArray;
 		flush.
 	aCollection size
-		timesRepeat: [ 
-			self
-				trigger: #resultAdded
-				with: (SmaCCRewriteResult fromSocketString: (socket readStream next: socket readStream nextDWORD) asString) ] ]
+		timesRepeat:
+			[ self
+				changed: #resultAdded
+				with:
+					(SmaCCRewriteResult
+						fromSocketString:
+							(serverStream
+								next:
+									serverStream next + (serverStream next << 8)
+										+ (serverStream next << 16) + (serverStream next << 24))
+								asString) ] ]
 		ensure: [ socket close ]

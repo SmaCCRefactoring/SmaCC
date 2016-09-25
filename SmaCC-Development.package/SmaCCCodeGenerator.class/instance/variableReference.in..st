@@ -1,3 +1,3 @@
-code
+code generation templates
 variableReference: aSmaCCVariableDefinition in: aString
 	self subclassResponsibility

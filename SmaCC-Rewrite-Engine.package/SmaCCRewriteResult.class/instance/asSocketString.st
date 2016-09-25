@@ -9,40 +9,40 @@ asSocketString
 		nextPut: null.
 	errorString notNil
 		ifTrue:
-			[stream
+			[ stream
 				nextPutAll: 'ERRORSTRING=';
 				nextPutAll: errorString;
-				nextPut: null].
+				nextPut: null ].
 	type notNil
 		ifTrue:
-			[stream
+			[ stream
 				nextPutAll: 'TYPE=';
 				nextPutAll: type;
-				nextPut: null].
+				nextPut: null ].
 	startLine notNil
 		ifTrue:
-			[stream
+			[ stream
 				nextPutAll: 'STARTLINE=';
 				print: startLine;
-				nextPut: null].
+				nextPut: null ].
 	startColumn notNil
 		ifTrue:
-			[stream
+			[ stream
 				nextPutAll: 'STARTCOLUMN=';
 				print: startColumn;
-				nextPut: null].
+				nextPut: null ].
 	interval notNil
 		ifTrue:
-			[stream
+			[ stream
 				nextPutAll: 'INTERVAL=';
 				print: interval start;
 				nextPut: $-;
 				print: interval stop;
-				nextPut: null].
+				nextPut: null ].
 	transformation notNil
 		ifTrue:
-			[stream
+			[ stream
 				nextPutAll: 'TRANSFORMATION=';
 				nextPutAll: transformation displayString;
-				nextPut: null].
-	^stream contents
+				nextPut: null ].
+	^ stream contents

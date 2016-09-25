@@ -1,7 +1,8 @@
-tests
+public
 testRenamedNullableVariable
 	| compiler node |
-	compiler := SmaCCGrammarCompiler new.
+	(compiler := SmaCCGrammarCompiler new) codeGenerator
+		defaultCategory: self class category.
 	compiler
 		buildDefinition:
 			'<whitespace> : \s+; 

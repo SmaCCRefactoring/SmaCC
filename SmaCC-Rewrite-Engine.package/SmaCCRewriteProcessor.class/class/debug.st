@@ -1,3 +1,3 @@
 accessing
 debug
-	^Debug ifNil: [false]
+	^ Debug ifNil: [ false ]

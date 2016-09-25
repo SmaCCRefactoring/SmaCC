@@ -1,5 +1,5 @@
-instance
-new: anInteger 
-	^(super new: anInteger)
+instance creation
+new: anInteger
+	^ (super new: anInteger)
 		initialize;
 		yourself

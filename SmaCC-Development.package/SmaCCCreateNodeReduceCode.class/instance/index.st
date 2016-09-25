@@ -1,3 +1,3 @@
 accessing
 index
-	^index ifNil: [index := rhs componentIndex]
+	^ index ifNil: [ index := rhs componentIndex ]

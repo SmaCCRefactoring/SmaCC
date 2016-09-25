@@ -1,3 +1,3 @@
 accessing
 createIdMethod
-	^createIdMethod
+	^ createIdMethod

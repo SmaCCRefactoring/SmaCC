@@ -2,10 +2,10 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptVisitor:" : "ThierryGoubier 10/20/2014 13:32:53",
-		"ignoredCompositeTokenVariables" : "ThierryGoubier 10/20/2014 13:32:53",
-		"initialize" : "ThierryGoubier 10/20/2014 13:32:53",
-		"leftParens" : "ThierryGoubier 10/20/2014 13:32:53",
-		"leftParens:" : "ThierryGoubier 10/20/2014 13:32:53",
-		"rightParens" : "ThierryGoubier 10/20/2014 13:32:53",
-		"rightParens:" : "ThierryGoubier 10/20/2014 13:32:53" } }
+		"acceptVisitor:" : "JohnBrant 6/20/2016 21:55:20",
+		"ignoredCompositeTokenVariables" : "JohnBrant 6/20/2016 21:55:20",
+		"initialize" : "JohnBrant 6/20/2016 21:55:20",
+		"leftParens" : "JohnBrant 6/20/2016 21:55:20",
+		"leftParens:" : "JohnBrant 6/20/2016 21:55:20",
+		"rightParens" : "JohnBrant 6/20/2016 21:55:20",
+		"rightParens:" : "JohnBrant 6/20/2016 21:55:20" } }

@@ -1,3 +1,3 @@
 private
 rootClassName
-	^SmaCCParseNode name
+	^ SmaCCParseNode name

@@ -1,4 +1,4 @@
-private
+source editing
 delete: anObject
 	| start stop |
 	start := self startIndexFor: anObject.

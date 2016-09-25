@@ -1,9 +1,11 @@
-public
+tests-parse tree creation
 testChildrenWhenNodeTypeNotSpecifiedAndCouldBeToken
 	| compiler node values |
-	compiler := SmaCCGrammarCompiler new.
+	(compiler := SmaCCGrammarCompiler new) codeGenerator
+		defaultCategory: self class category.
 	compiler
-		buildDefinition: '%root Program;
+		buildDefinition:
+			'%root Program;
 			%prefix Test;
 			%suffix Node;
 			<id> : [a-zA-Z]+;
@@ -20,9 +22,8 @@ testChildrenWhenNodeTypeNotSpecifiedAndCouldBeToken
 			        | <id> ''name'' "(" Expr ''argument'' ")"        {{Function}}
 				  | "(" Q ")" ;
 			Q : Expr | <id> ;'.
-	compiler compileInto: 'TestScanner'
-		andParser: 'TestParser'.
+	compiler compileInto: 'TestScanner' andParser: 'TestParser'.
 	node := self parserClass parse: '1 + 2;'.
 	self assert: node children size = 2.
 	values := #('1' '2') asSet.
-	node children do: [:each | values remove: each _value value]
+	node children do: [ :each | values remove: each value value ]

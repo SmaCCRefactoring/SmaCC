@@ -1,3 +1,4 @@
 accessing
 directory
-	^ filename parent
+	^ filename asFileReference parent pathString
+		, FileSystem disk delimiter asString

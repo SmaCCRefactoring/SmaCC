@@ -1,0 +1,21 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptVisitor:" : "JohnBrant 6/24/2016 12:29:07",
+		"doToken" : "JohnBrant 6/24/2016 12:29:07",
+		"doToken:" : "JohnBrant 6/24/2016 12:29:07",
+		"expression" : "JohnBrant 6/24/2016 12:29:07",
+		"expression:" : "JohnBrant 6/24/2016 12:29:07",
+		"leftParen" : "JohnBrant 6/24/2016 12:29:07",
+		"leftParen:" : "JohnBrant 6/24/2016 12:29:07",
+		"nodeVariables" : "JohnBrant 6/24/2016 12:29:07",
+		"rightParen" : "JohnBrant 6/24/2016 12:29:07",
+		"rightParen:" : "JohnBrant 6/24/2016 12:29:07",
+		"semicolon" : "JohnBrant 6/24/2016 12:29:07",
+		"semicolon:" : "JohnBrant 6/24/2016 12:29:07",
+		"statement" : "JohnBrant 6/24/2016 12:29:07",
+		"statement:" : "JohnBrant 6/24/2016 12:29:07",
+		"tokenVariables" : "JohnBrant 6/24/2016 12:29:07",
+		"whileToken" : "JohnBrant 6/24/2016 12:29:07",
+		"whileToken:" : "JohnBrant 6/24/2016 12:29:07" } }

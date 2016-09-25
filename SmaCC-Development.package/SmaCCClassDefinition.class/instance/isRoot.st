@@ -1,3 +1,3 @@
-private
+testing
 isRoot
-	^isRoot
+	^ isRoot

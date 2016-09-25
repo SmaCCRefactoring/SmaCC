@@ -741,7 +741,7 @@ query_expression
 	;
 from_clause
 	: ""from"" _type <Identifier> ""in"" expression 'expression'
- 	;
+	;
 query_body
 	: _query_body_clauses select_or_group_clause _query_continuation
 	;
@@ -768,7 +768,7 @@ where_clause
 	: ""where"" boolean_expression 'expression'
 	;
 join_clause
-	: ""join"" _type <Identifier> ""in"" expression 'joinInExpression' ""on"" expression 'joinOnExpression' ""equals"" expression 'joinEqualsExpression'
+	: ""join"" _type <Identifier> ""in"" expression 'joinInExpression'""on"" expression 'joinOnExpression' ""equals"" expression 'joinEqualsExpression'
 	;
 join_into_clause
 	: ""join"" _type <Identifier> ""in"" expression 'joinInExpression' ""on"" expression 'joinOnExpression' ""equals"" expression 'joinEqualsExpression' ""into"" <Identifier>
@@ -782,7 +782,7 @@ orderings
 	;
 ordering
 	: expression 'expression' _ordering_direction
- 	;
+	;
 _ordering_direction
 	: 
 	| ordering_direction
@@ -797,10 +797,10 @@ select_or_group_clause
 	;
 select_clause
 	: ""select"" expression 'expression'
- 	;
+	;
 group_clause
 	: ""group"" expression 'groupExpression' ""by"" expression 'groupByExpression'
- 	;
+	;
 _query_continuation
 	: 
 	| query_continuation
@@ -1222,7 +1222,7 @@ constant_declarator
 	;
 field_declaration
 	: _attributes _field_modifiers type 'type' variable_declarators "";"" {{}}
- 	;
+	;
 _field_modifiers
 	: 
 	| field_modifiers
@@ -1438,7 +1438,7 @@ indexer_modifier
 indexer_declarator
 	: type 'returnType' ""this"" ""["" formal_parameters_list ""]""
 	| type 'returnType' interface_type 'type' ""."" ""this"" ""["" formal_parameters_list ""]""
- 	;
+	;
 operator_declaration
 	: _attributes operator_modifiers operator_declarator operator_body 'body' {{}}
 	;
@@ -1941,7 +1941,7 @@ embedded_statement
 	;
 unsafe_statement
 	: ""unsafe"" block 'block' {{UnsafeStatement}}
- 	;
+	;
 type
 	: pointer_type
 	;

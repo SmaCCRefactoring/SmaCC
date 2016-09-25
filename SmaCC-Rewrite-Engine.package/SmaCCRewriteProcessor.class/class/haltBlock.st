@@ -1,3 +1,3 @@
 public
 haltBlock
-	^HaltBlock ifNil: [[:rewrite :node | false]]
+	^ HaltBlock ifNil: [ [ :rewrite :node | false ] ]

@@ -1,3 +1,3 @@
 algorithm
-removeDuplicateNodesIn: aSmaCCNode 
-	^self new removeDuplicateNodesIn: aSmaCCNode
+removeDuplicateNodesIn: aSmaCCNode
+	^ self new removeDuplicateNodesIn: aSmaCCNode

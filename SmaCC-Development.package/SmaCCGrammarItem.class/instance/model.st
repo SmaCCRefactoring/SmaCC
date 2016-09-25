@@ -1,3 +1,3 @@
 accessing
 model
-	^self grammar codeGenerator model
+	^ self grammar codeGenerator model

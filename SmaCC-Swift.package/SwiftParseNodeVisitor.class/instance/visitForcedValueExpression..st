@@ -1,0 +1,3 @@
+generated
+visitForcedValueExpression: aForcedValueExpression
+	^ self visitParse: aForcedValueExpression

@@ -1,3 +1,3 @@
-private
-liftLastValue: aCollection 
-	^aCollection last
+standard reduction rules
+liftLastValue: aCollection
+	^ aCollection last

@@ -1,3 +1,3 @@
 accessing
 emptySymbolTokenId
-	^self subclassResponsibility
+	^ self subclassResponsibility

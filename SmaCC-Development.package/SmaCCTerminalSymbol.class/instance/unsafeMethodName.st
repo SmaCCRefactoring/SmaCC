@@ -1,3 +1,3 @@
 private
 unsafeMethodName
-	^name copyFrom: 2 to: name size - 1
+	^ name copyFrom: 2 to: name size - 1

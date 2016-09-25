@@ -1,3 +1,6 @@
-public
+running
 readBytes
-	^socket readStream next: socket readStream nextDWORD
+	^ serverStream
+		next:
+			serverStream next + (serverStream next << 8) + (serverStream next << 16)
+				+ (serverStream next << 24)

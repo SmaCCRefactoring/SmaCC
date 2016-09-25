@@ -1,3 +1,3 @@
 accessing
-rules: aCollection
-	rules := aCollection
+rules: aSmaCCAbstractRewrite
+	rules := aSmaCCAbstractRewrite

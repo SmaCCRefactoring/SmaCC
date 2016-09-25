@@ -1,0 +1,3 @@
+generated
+dynamicTypeTokens: anOrderedCollection
+	dynamicTypeTokens := anOrderedCollection

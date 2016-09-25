@@ -1,3 +1,3 @@
-file
+file types
 fileExtensionType
-	^'Java files'
+	^ 'Java files'

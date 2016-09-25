@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Python-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PythonParserTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

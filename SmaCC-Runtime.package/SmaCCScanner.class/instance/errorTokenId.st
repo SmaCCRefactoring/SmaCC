@@ -1,3 +1,3 @@
 accessing
 errorTokenId
-	^self subclassResponsibility
+	^ self subclassResponsibility

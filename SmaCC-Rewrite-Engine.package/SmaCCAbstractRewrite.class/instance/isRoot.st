@@ -1,3 +1,3 @@
-public
+testing
 isRoot
-	^parent isNil
+	^ parent isNil

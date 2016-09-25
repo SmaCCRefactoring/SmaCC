@@ -1,0 +1,27 @@
+{
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"integer_literalToken",
+		"floating_point_literalToken",
+		"full_string_literalToken",
+		"leftBracketToken",
+		"expressions",
+		"commaTokens",
+		"rightBracketToken",
+		"keyExpressions",
+		"colonTokens",
+		"valueExpressions",
+		"__FILE__Token",
+		"__LINE__Token",
+		"__COLUMN__Token",
+		"__FUNCTION__Token" ],
+	"name" : "SwiftLiteralExpressionNode",
+	"pools" : [
+		 ],
+	"super" : "SwiftParseNode",
+	"type" : "normal" }

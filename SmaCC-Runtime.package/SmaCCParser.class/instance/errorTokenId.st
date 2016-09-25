@@ -1,3 +1,3 @@
 accessing
 errorTokenId
-	^scanner errorTokenId
+	^ scanner errorTokenId

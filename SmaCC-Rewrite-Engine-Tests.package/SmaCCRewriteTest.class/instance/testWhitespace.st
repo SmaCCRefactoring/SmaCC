@@ -1,4 +1,4 @@
-private
+tests
 testWhitespace
 	self
 		compareRewrite:

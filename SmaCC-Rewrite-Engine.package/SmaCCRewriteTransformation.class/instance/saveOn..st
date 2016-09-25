@@ -1,3 +1,3 @@
-public
+saving
 saveOn: aStream
 	self subclassResponsibility

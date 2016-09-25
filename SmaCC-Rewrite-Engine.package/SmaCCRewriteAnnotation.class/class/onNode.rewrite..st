@@ -1,6 +1,6 @@
-instance
+instance creation
 onNode: aSmaCCParseNode rewrite: aSmaCCRewrite
-	^(self new)
+	^ self new
 		nodeClass: aSmaCCParseNode class;
 		nodeInterval: (aSmaCCParseNode startPosition to: aSmaCCParseNode stopPosition);
 		rewrite: aSmaCCRewrite;

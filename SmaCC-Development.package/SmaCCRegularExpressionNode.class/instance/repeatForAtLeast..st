@@ -1,3 +1,3 @@
 constructing
 repeatForAtLeast: minimum
-	^SmaCCRepeatingRENode component: self minimum: minimum
+	^ SmaCCRepeatingRENode component: self minimum: minimum

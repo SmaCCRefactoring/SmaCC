@@ -2,7 +2,7 @@ private
 possibleMatchesDo: aBlock on: aStream
 	self matchingCharacters
 		do:
-			[:each | 
+			[ :each | 
 			aStream nextPut: each.
 			aBlock value.
-			aStream skip: -1]
+			aStream skip: -1 ]

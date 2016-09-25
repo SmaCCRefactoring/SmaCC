@@ -1,3 +1,3 @@
-private
+testing
 hasChildAtEndOf: anObject
-	^self hasChild: anObject position: #stopPosition
+	^ self hasChild: anObject position: #stopPosition

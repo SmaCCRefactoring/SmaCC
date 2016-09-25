@@ -1,3 +1,3 @@
-public
+testing
 areRewritesModified
-	^self rewrites notNil and: [self rewrites isModified]
+	^ self rewrites notNil and: [ self rewrites isModified ]

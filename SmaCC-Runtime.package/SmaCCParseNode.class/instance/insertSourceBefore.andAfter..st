@@ -1,4 +1,4 @@
-private
+source
 insertSourceBefore: beginString andAfter: endString
 	self
 		insertSourceBefore: beginString;

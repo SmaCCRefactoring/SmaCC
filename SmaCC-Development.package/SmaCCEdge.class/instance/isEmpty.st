@@ -1,3 +1,3 @@
-private
+testing
 isEmpty
-	^transitionObjects isEmpty
+	^ transitionObjects isEmpty

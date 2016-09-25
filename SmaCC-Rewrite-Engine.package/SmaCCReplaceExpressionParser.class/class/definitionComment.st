@@ -5,7 +5,7 @@ definitionComment
 
 expression <name>
 	: (<isLetter> | _) (<isLetter> | _ | <isDigit>) *
- 	;
+	;
 expression <newline>
 	: \\
 	;

@@ -1,3 +1,3 @@
-private
+testing
 includes: anObject
-	^transitionObjects includes: anObject
+	^ transitionObjects includes: anObject

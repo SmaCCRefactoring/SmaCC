@@ -1,3 +1,3 @@
 private
 tokenClass
-	^SmaCCToken
+	^ SmaCCToken

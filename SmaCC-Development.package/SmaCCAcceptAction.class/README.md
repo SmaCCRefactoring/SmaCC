@@ -1,1 +1,2 @@
-SmaCCAcceptAction represents an accept action in the parser (i.e., we have parsed a valid string).
+SmaCCAcceptAction represents the LR accept action.
+

@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#period #_name #typeArgLeft #typeArgRight)
+	^ #(#period #name #typeArgLeft #typeArgRight)

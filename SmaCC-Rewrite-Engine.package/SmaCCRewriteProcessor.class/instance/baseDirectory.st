@@ -1,3 +1,3 @@
 accessing
 baseDirectory
-	^baseDirectory ifNil: ['']
+	^ baseDirectory ifNil: [ '' ]

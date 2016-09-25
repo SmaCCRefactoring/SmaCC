@@ -1,0 +1,35 @@
+{
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"_Tokens",
+		"identifierTokens",
+		"leftParenTokens",
+		"rightParenTokens",
+		"leftBracketTokens",
+		"rightBracketTokens",
+		"leftBraceTokens",
+		"rightBraceTokens",
+		"integer_literalTokens",
+		"floating_point_literalTokens",
+		"full_string_literalTokens",
+		"operatorTokens",
+		"classToken",
+		"lessThanTokens",
+		"colonTokens",
+		"commaTokens",
+		"greaterThanTokens",
+		"periodTokens",
+		"protocolTokens",
+		"whereToken",
+		"equalEqualTokens",
+		"declarations" ],
+	"name" : "SwiftClassDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "SwiftParseNode",
+	"type" : "normal" }

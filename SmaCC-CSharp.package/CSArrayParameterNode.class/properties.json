@@ -9,7 +9,7 @@
 		"_attributes",
 		"paramsToken",
 		"type",
-		"_name" ],
+		"name" ],
 	"name" : "CSArrayParameterNode",
 	"pools" : [
 		 ],

@@ -1,3 +1,3 @@
-file
+file types
 fileExtensionType
-	^'SmaCC Rewrite files'
+	^ 'SmaCC Rewrite files'

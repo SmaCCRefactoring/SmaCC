@@ -1,3 +1,5 @@
 accessing
 classNamed: aSymbol
-	^classDefinitions at: aSymbol ifAbsentPut: [SmaCCNodeClassDefinition named: aSymbol grammar: self]
+	^ classDefinitions
+		at: aSymbol
+		ifAbsentPut: [ SmaCCNodeClassDefinition named: aSymbol grammar: self ]

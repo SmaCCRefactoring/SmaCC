@@ -1,4 +1,4 @@
-collection
+collection handling
 addNode: aSmaCCParseNode to: aCollection
 	aSmaCCParseNode isNil
 		ifTrue: [ ^ self ].

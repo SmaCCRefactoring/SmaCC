@@ -1,3 +1,3 @@
 testing
 returnsVariableCollection
-	^false
+	^ false

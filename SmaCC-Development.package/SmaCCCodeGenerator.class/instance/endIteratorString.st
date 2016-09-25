@@ -1,3 +1,3 @@
-code
+code generation templates
 endIteratorString
-	^self endConditionalString
+	^ self endConditionalString

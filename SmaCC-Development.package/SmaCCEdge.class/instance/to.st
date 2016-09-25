@@ -1,3 +1,3 @@
 accessing
 to
-	^toNode
+	^ toNode

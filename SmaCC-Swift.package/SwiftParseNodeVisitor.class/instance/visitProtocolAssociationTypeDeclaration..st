@@ -1,0 +1,3 @@
+generated
+visitProtocolAssociationTypeDeclaration: aProtocolAssociationTypeDeclaration
+	^ self visitParse: aProtocolAssociationTypeDeclaration

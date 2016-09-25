@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Generic-Smalltalk-Parser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"value" ],
+	"name" : "GstSymbolLiteralNode",
+	"pools" : [
+		 ],
+	"super" : "GstLiteralNode",
+	"type" : "normal" }

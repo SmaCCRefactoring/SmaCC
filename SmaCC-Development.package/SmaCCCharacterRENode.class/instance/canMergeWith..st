@@ -1,8 +1,8 @@
-private
+testing
 canMergeWith: aSmaCCRegularExpressionNode
-	^self class = aSmaCCRegularExpressionNode class
+	^ self class = aSmaCCRegularExpressionNode class
 		and:
-			[characters notNil
+			[ characters notNil
 				and:
-					[aSmaCCRegularExpressionNode characters notNil
-						and: [self action = aSmaCCRegularExpressionNode action]]]
+					[ aSmaCCRegularExpressionNode characters notNil
+						and: [ self action = aSmaCCRegularExpressionNode action ] ] ]

@@ -1,6 +1,6 @@
-instance
+instance creation
 forNode: aSmaCCParseNode rewriter: aSmaCCRewriteEngine continuation: aBlock
-	^(self new)
+	^ self new
 		forNode: aSmaCCParseNode
 			rewriter: aSmaCCRewriteEngine
 			continuation: aBlock;

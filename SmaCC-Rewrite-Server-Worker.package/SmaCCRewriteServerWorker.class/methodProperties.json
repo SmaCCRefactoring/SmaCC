@@ -2,15 +2,15 @@
 	"class" : {
 		 },
 	"instance" : {
-		"classNamed:" : "",
-		"loadRewrites:" : "",
-		"localPrefix" : "",
-		"localPrefix:" : "",
-		"localizeFilename:" : "ThierryGoubier 1/28/2014 10:01",
-		"processRequest:" : "",
-		"processRequests" : "ThierryGoubier 1/28/2014 10:04",
-		"readBytes" : "",
-		"remotePrefix" : "",
-		"remotePrefix:" : "",
-		"startConnectingTo:onPort:" : "ThierryGoubier 1/28/2014 10:02",
-		"writeBytes:" : "" } }
+		"classNamed:" : "JohnBrant 6/20/2016 21:56:32",
+		"loadRewrites:" : "JohnBrant 6/20/2016 21:56:32",
+		"localPrefix" : "JohnBrant 6/20/2016 21:56:32",
+		"localPrefix:" : "JohnBrant 6/20/2016 21:56:32",
+		"localizeFilename:" : "JohnBrant 8/10/2016 18:35",
+		"processRequest:" : "JohnBrant 6/20/2016 21:56:32",
+		"processRequests" : "JohnBrant 6/20/2016 21:56:32",
+		"readBytes" : "JohnBrant 8/9/2016 16:41",
+		"remotePrefix" : "JohnBrant 6/20/2016 21:56:32",
+		"remotePrefix:" : "JohnBrant 6/20/2016 21:56:32",
+		"startConnectingTo:onPort:" : "JohnBrant 6/20/2016 21:56:32",
+		"writeBytes:" : "JohnBrant 6/20/2016 21:56:32" } }

@@ -1,15 +1,15 @@
 {
 	"category" : "SmaCC-Development",
 	"classinstvars" : [
-		 ],
+		"keywords" ],
 	"classvars" : [
-		"MaxJumpSize" ],
+		"IsExpressions",
+		"MaxJumpSize",
+		"MaxLiterals" ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
 		"isExpressions",
-		"parseTreeCache",
-		"category",
-		"splitIndex" ],
+		"parseTreeCache" ],
 	"name" : "SmaCCSmalltalkCodeGenerator",
 	"pools" : [
 		 ],

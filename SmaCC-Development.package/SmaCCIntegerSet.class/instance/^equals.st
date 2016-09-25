@@ -11,7 +11,8 @@ comparing
 	self do: [ :each | myItems add: each ].
 	i := 1.
 	anObject
-		do: [ :each | 
+		do:
+			[ :each | 
 			| current |
 			i > myItems size
 				ifTrue: [ ^ false ].

@@ -9,7 +9,7 @@
 		"modifiers",
 		"atToken",
 		"interfaceToken",
-		"_name",
+		"name",
 		"left",
 		"declarations",
 		"right" ],

@@ -9,7 +9,7 @@
 		"catchToken",
 		"leftParenToken",
 		"type",
-		"_name",
+		"name",
 		"rightParenToken",
 		"block" ],
 	"name" : "CSSpecificCatchClauseNode",

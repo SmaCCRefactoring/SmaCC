@@ -1,5 +1,5 @@
-instance
+instance creation
 new
-	^(super new)
+	^ super new
 		initialize;
 		yourself

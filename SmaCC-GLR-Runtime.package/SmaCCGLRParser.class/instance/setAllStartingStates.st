@@ -3,11 +3,11 @@ setAllStartingStates
 	tryAllStates := true.
 	self statesThatShift
 		do:
-			[:each | 
+			[ :each | 
 			states
 				add:
 					(SmaCCParserState
 						stateStack: (OrderedCollection with: each)
 						nodeStack: OrderedCollection new
 						scannerState: scanner state
-						position: scanner position)]
+						position: scanner position) ]

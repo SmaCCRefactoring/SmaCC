@@ -1,7 +1,7 @@
 tests
 testNodeAccess
 	| parserCompiler |
-	parserCompiler := SmaCCGrammarCompiler new.
+	parserCompiler := SmaCCGrammarCompiler new category: self class category.
 	parserCompiler
 		buildDefinition: 'start : "a" ''x'' { Array with: ''1'' value with: ''1'' value with: x value with: x value } ;'.
 	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.

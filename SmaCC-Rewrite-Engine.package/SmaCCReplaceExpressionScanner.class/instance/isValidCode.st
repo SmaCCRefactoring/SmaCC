@@ -1,4 +1,6 @@
-public
+testing
 isValidCode
-	RBParser parseExpression: outputStream contents onError: [ :s :p | ^ false ].
+	RBParser
+		parseExpression: outputStream contents
+		onError: [ :s :p | ^ false ].
 	^ true

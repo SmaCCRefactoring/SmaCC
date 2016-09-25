@@ -1,3 +1,3 @@
-initialize
+initialize-release
 grammar: aSmaCCGrammar
 	grammar := aSmaCCGrammar

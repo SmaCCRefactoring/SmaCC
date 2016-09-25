@@ -7,4 +7,10 @@ mergeAll: anOrderedCollection
 	symbols add: new before: first.
 	symbols removeAll: anOrderedCollection.
 	set := anOrderedCollection asSet.
-	self rhsDo: [:each | 1 to: each size do: [:i | (set includes: (each at: i)) ifTrue: [each collection at: i put: new]]]
+	self
+		rhsDo:
+			[ :each | 
+			1 to: each size do:
+				[ :i | 
+				(set includes: (each at: i))
+					ifTrue: [ each collection at: i put: new ] ] ]

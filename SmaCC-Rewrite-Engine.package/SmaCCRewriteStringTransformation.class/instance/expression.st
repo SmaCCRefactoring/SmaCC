@@ -1,3 +1,4 @@
 accessing
 expression
-	^expression ifNil: [expression := SmaCCReplaceExpressionParser parse: self string]
+	^ expression
+		ifNil: [ expression := SmaCCReplaceExpressionParser parse: self string ]

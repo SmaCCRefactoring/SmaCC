@@ -1,20 +1,21 @@
 private
 convertToRemoved
 	| interval |
-	(self isRemoved or: [self isSentinel]) ifTrue: [^self].
+	(self isRemoved or: [ self isSentinel ])
+		ifTrue: [ ^ self ].
 	isRemoved := true.
 	(previous canBeMergedWith: self)
 		ifTrue:
-			[interval := previous.
+			[ interval := previous.
 			interval stop: self stop.
 			interval next: next.
 			self removed.
-			^interval].
+			^ interval ].
 	(self canBeMergedWith: next)
 		ifTrue:
-			[interval := next.
+			[ interval := next.
 			next start: self start.
 			previous next: next.
 			self removed.
-			^interval].
-	^self
+			^ interval ].
+	^ self

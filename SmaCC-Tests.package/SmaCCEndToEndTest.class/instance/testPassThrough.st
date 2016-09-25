@@ -1,16 +1,17 @@
-tests
+tests-parse tree creation
 testPassThrough
 	| compiler node |
-	compiler := SmaCCGrammarCompiler new.
+	(compiler := SmaCCGrammarCompiler new) codeGenerator
+		defaultCategory: self class category.
 	compiler
-		buildDefinition: '<number> : \d+; <whitespace> : \s+; 
+		buildDefinition:
+			'<number> : \d+; <whitespace> : \s+; 
 			%root FooNode;
 			A : B ''b'' {{FooANode}} ;
 			B : C ;
 			C : Number;
 			Number : <number> ''number'' {{FooNumberNode}}; '.
-	compiler compileInto: 'TestScanner'
-		andParser: 'TestParser'.
+	compiler compileInto: 'TestScanner' andParser: 'TestParser'.
 	node := self parserClass parse: '12'.
 	self assert: node class name asString = 'FooANode'.
 	self assert: node b parent == node.

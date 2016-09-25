@@ -1,3 +1,3 @@
-instance
-component: aSmaCCRegularExpressionNode 
-	^self component: aSmaCCRegularExpressionNode minimum: 0
+instance creation
+component: aSmaCCRegularExpressionNode
+	^ self component: aSmaCCRegularExpressionNode minimum: 0

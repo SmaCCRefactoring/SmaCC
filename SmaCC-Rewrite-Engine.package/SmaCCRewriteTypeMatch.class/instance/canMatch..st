@@ -1,3 +1,3 @@
-public
+testing
 canMatch: aClass
-	^aClass includesBehavior: nodeClass
+	^ aClass includesBehavior: nodeClass

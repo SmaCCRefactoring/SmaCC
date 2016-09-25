@@ -1,3 +1,3 @@
 accessing
 localPrefix
-	^localPrefix ifNil: ['']
+	^ localPrefix ifNil: [ '' ]

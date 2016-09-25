@@ -1,3 +1,3 @@
 private
 reduceAction
-	^2r10
+	^ 2r10

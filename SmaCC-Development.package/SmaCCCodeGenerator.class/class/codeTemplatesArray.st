@@ -1,6 +1,3 @@
-code
+code generation templates
 codeTemplatesArray
-	^#(
-		#(#override '')
-		#(#trueValue 'true')
-	)
+	^ #(#(#override '') #(#trueValue 'true'))

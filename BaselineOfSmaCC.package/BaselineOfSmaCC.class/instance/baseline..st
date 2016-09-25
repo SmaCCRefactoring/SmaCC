@@ -6,10 +6,10 @@ baseline: spec
 		do: [ spec blessing: #baseline.
 			spec
 				package: 'SmaCC-Source-Editing';
-				package: 'SmaCC-Browser';
-				package: 'SmaCC-Runtime'
-					with: [ spec requires: 'SmaCC-Source-Editing' ];
+				package: 'SmaCC-Runtime';
 				package: 'SmaCC-GLR-Runtime'
+					with: [ spec requires: 'SmaCC-Runtime' ];
+				package: 'SmaCC-Debugging-Support'
 					with: [ spec requires: 'SmaCC-Runtime' ];
 				package: 'SmaCC-Development'
 					with: [ spec requires: 'SmaCC-GLR-Runtime' ];
@@ -17,41 +17,53 @@ baseline: spec
 					with: [ spec requires: 'SmaCC-Development' ];
 				package: 'SmaCC-Tests'
 					with: [ spec requires: 'SmaCC-Development' ];
-				package: 'SmaCC-Rewrite-Engine'
+				package: 'SmaCC-Browser' with: [ spec requires: 'SmaCC-Runtime' ];
+				package: 'SmaCC-Parse-Tree-Comparison'
 					with: [ spec requires: 'SmaCC-Runtime' ];
+				package: 'SmaCC-Rewrite-Engine'
+					with: [ spec
+						requires: 'SmaCC-Runtime';
+						requires: 'SmaCC-Source-Editing' ];
 				package: 'SmaCC-Rewrite-Engine-Tests'
 					with: [ spec requires: 'SmaCC-Rewrite-Engine' ];
-				package: 'SmaCC-Server-Session';
-				package: 'SmaCC-Rewrite-Server'
-					with: [ spec requires: 'SmaCC-Server-Session' ];
+				package: 'SmaCC-Rewrite-Engine-Command-Line'
+					with: [ spec requires: 'SmaCC-Rewrite-Engine' ];
+				package: 'SmaCC-Rewrite-Server';
 				package: 'SmaCC-Rewrite-Server-Worker'
-					with: [ spec
-						requires: 'SmaCC-Rewrite-Engine';
-						requires: 'SmaCC-Server-Session' ];
+					with: [ spec requires: 'SmaCC-Rewrite-Engine' ];
+				package: 'SmaCC-Swift'
+					with: [ spec requires: 'SmaCC-GLR-Runtime' ];
 				package: 'SmaCC-Smalltalk-Parser'
 					with: [ spec requires: 'SmaCC-Runtime' ];
+				package: 'SmaCC-Generic-Smalltalk-Parser'
+					with: [ spec requires: 'SmaCC-GLR-Runtime' ];
 				package: 'SmaCC-C-Parser'
 					with: [ spec requires: 'SmaCC-Runtime' ];
-				package: 'SmaCC-CSV' with: [ spec requires: 'SmaCC-Runtime' ];
+				package: 'SmaCC-CSV-Parser'
+					with: [ spec requires: 'SmaCC-Runtime' ];
 				package: 'SmaCC-CSharp'
 					with: [ spec requires: 'SmaCC-GLR-Runtime' ];
 				package: 'SmaCC-Cucumber'
 					with: [ spec requires: 'SmaCC-GLR-Runtime' ];
-				package: 'SmaCC-Javascript'
+				package: 'SmaCC-Javascript-Parser'
 					with: [ spec requires: 'SmaCC-GLR-Runtime' ];
 				package: 'SmaCC-Java'
 					with: [ spec requires: 'SmaCC-GLR-Runtime' ];
-				package: 'SmaCC-Python' with: [ spec requires: 'SmaCC-Runtime' ].
+				package: 'SmaCC-Python' with: [ spec requires: 'SmaCC-Runtime' ];
+				package: 'SmaCC-Python-Tests'
+					with: [ spec requires: 'SmaCC-Python' ].
 			spec
 				group: 'default' with: #('Tools');
 				group: 'Runtime' with: #('SmaCC-GLR-Runtime');
 				group: 'Rewrite' with: #('SmaCC-Rewrite-Engine');
 				group: 'Rewrite-Server'
-					with: #('SmaCC-Rewrite-Server-Worker' 'SmaCC-Rewrite-Server' 'Rewrite');
+					with:
+					#('SmaCC-Rewrite-Server-Worker' 'SmaCC-Rewrite-Server' 'Rewrite' 'SmaCC-Rewrite-Engine-Command-Line');
 				group: 'Tools'
-					with: #('SmaCC-Development-UI' 'Examples' 'Rewrite');
+					with:
+					#('SmaCC-Development-UI' 'Examples' 'Rewrite' 'SmaCC-Parse-Tree-Comparison' 'SmaCC-Debugging-Support');
 				group: 'Examples'
 					with:
-					#('SmaCC-Smalltalk-Parser' 'SmaCC-C-Parser' 'SmaCC-CSharp' 'SmaCC-Java' 'SmaCC-Python' 'SmaCC-Javascript' 'SmaCC-CSV' 'SmaCC-Cucumber');
+					#('SmaCC-Smalltalk-Parser' 'SmaCC-C-Parser' 'SmaCC-CSharp' 'SmaCC-Line-Parser' 'SmaCC-Java' 'SmaCC-Python' 'SmaCC-Javascript-Parser' 'SmaCC-CSV-Parser' 'SmaCC-Cucumber' 'SmaCC-Swift');
 				group: 'Tests'
-					with: #('SmaCC-Tests' 'SmaCC-Rewrite-Engine-Tests' 'SmaCC-Python') ]
+					with: #('SmaCC-Tests' 'SmaCC-Rewrite-Engine-Tests' 'SmaCC-Python-Tests') ]

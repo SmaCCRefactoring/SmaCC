@@ -7,7 +7,7 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"defaultToken",
-		"_value" ],
+		"value" ],
 	"name" : "JavaAnnotationMethodDeclarationNode",
 	"pools" : [
 		 ],

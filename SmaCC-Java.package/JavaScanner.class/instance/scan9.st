@@ -1,8 +1,7 @@
 generated
 scan9
-	[ 
-	self step.
-	currentCharacter = $.
+	[ self step.
+	currentCharacter == $.
 		ifTrue: [ ^ self scan4 ].
 	currentCharacter isDigit ] whileTrue.
 	('Ee' includes: currentCharacter)

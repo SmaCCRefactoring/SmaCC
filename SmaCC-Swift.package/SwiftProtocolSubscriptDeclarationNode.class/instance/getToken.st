@@ -1,0 +1,3 @@
+generated
+getToken
+	^ getToken

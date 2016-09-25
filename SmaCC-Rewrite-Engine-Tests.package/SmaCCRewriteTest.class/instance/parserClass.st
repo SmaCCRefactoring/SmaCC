@@ -1,3 +1,3 @@
 private
 parserClass
-	^SmaCCRewriteTestParser
+	^ SmaCCRewriteTestParser

@@ -1,3 +1,3 @@
 private
 asNFAStartingWith: aSmaCCNode
-	^self characterNode asNFAStartingWith: aSmaCCNode
+	^ self characterNode asNFAStartingWith: aSmaCCNode

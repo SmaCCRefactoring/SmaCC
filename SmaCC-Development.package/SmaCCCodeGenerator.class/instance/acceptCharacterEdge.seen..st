@@ -1,16 +1,20 @@
-compiling
+compiling-scanner
 acceptCharacterEdge: aSmaCCCharacterEdge seen: aCollection
 	| stream |
 	stream := WriteStream with: String new.
-	aSmaCCCharacterEdge transitionObjects size + aCollection size > SmaCCGrammar maximumCharacterValue
-		ifTrue: [^self trueValue].
+	aSmaCCCharacterEdge transitionObjects size + aCollection size
+		> SmaCCGrammar maximumCharacterValue
+		ifTrue: [ ^ self trueValue ].
 	stream nextPut: $(.
-	aSmaCCCharacterEdge transitionObjects size = SmaCCGrammar maximumCharacterValue
-		ifTrue: [self outputInvertedMatchFor: aSmaCCCharacterEdge on: stream]
+	aSmaCCCharacterEdge transitionObjects size
+		= SmaCCGrammar maximumCharacterValue
+		ifTrue: [ self
+				outputInvertedMatchFor: aSmaCCCharacterEdge
+				on: stream ]
 		ifFalse:
-			[self
+			[ self
 				outputMatchFor: aSmaCCCharacterEdge
 				seen: aCollection
-				on: stream].
+				on: stream ].
 	stream nextPut: $).
-	^stream contents
+	^ stream contents

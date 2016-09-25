@@ -1,5 +1,5 @@
 private
 nextPutLine: aString
-	(self codeStream)
+	self codeStream
 		nextPutAll: aString;
 		cr

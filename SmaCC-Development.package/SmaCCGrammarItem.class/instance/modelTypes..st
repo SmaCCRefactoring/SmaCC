@@ -1,3 +1,3 @@
 accessing
 modelTypes: anIdentitySet
-	^self subclassResponsibility
+	^ self subclassResponsibility

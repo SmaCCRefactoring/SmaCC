@@ -1,3 +1,3 @@
 comparing
 <= aSmaCCNode
-	^self id <= aSmaCCNode id
+	^ self id <= aSmaCCNode id

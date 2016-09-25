@@ -1,5 +1,5 @@
-instance
+instance creation
 forParser: aSmaCCParser
-	^(self new)
+	^ self new
 		parser: aSmaCCParser;
 		yourself

@@ -7,11 +7,11 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"modifiers",
+		"typeParameters",
 		"type",
 		"declarator",
 		"throws",
-		"body",
-		"typeParameters" ],
+		"body" ],
 	"name" : "JavaMethodDeclarationNode",
 	"pools" : [
 		 ],

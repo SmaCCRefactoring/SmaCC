@@ -1,3 +1,3 @@
-private
+testing
 isListMatch
-	^patternToken isListMatch
+	^ patternToken isListMatch

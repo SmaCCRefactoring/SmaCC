@@ -1,3 +1,3 @@
 accessing
 arguments
-	^arguments
+	^ arguments

@@ -1,8 +1,8 @@
-compiling
+compiling-scanner
 commonIfTrueCodeRewriter
 	^ RBParseTreeRewriter new
 		replace:
-				'``@.Stmts1.
+			'``@.Stmts1.
 				(`@a ifTrue: ``@block) `{:node :dictionary | | index myStatements |
 						index := node parent statements indexOf: node.
 						myStatements := node parent statements.
@@ -13,7 +13,7 @@ commonIfTrueCodeRewriter
 						}.
 				``@.Stmts3'
 			with:
-				'``@.Stmts1.
+			'``@.Stmts1.
 				`{:dictionary | RBMessageNode receiver: `@a selector: #ifTrue: arguments: (Array with: (RBBlockNode body: (RBSequenceNode statements: (``@block body statements copyFrom: 1 to: (dictionary at: #size)))))}.
 				``@.Stmts3';
 		yourself

@@ -1,3 +1,3 @@
 comparing
 hash
-	^self value asUppercase hash
+	^ self value asUppercase hash

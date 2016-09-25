@@ -4,5 +4,5 @@ reduceActionForfield_access2: nodes
 	result := JavaFieldAccessNode new.
 	result superToken: (nodes at: 1).
 	result period: (nodes at: 2).
-	result _name: (nodes at: 3).
+	result name: (nodes at: 3).
 	^ result

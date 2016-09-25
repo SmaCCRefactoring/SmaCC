@@ -7,4 +7,4 @@ newIntervalFor: aString
 		string: aString.
 	currentId := currentId + 1.
 	newInterval id: currentId.
-	^newInterval
+	^ newInterval

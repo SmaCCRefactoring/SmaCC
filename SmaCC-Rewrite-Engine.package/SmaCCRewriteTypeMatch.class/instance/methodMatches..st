@@ -1,3 +1,4 @@
 matching
 methodMatches: aSmaCCParseNode
-	^(self method value: aSmaCCParseNode withArguments: #()) = true
+	^ (self method valueWithReceiver: aSmaCCParseNode arguments: #())
+		= true

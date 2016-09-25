@@ -4,21 +4,26 @@ actionForSpecificRegularExpression: aSmaCCRegularExpression
 	strings := aSmaCCRegularExpression possibleMatches.
 	startingStates := transitions first isCharacterTransition
 		ifTrue: [ Array with: self ]
-		ifFalse: [ 
-			aSmaCCRegularExpression states
-				collect: [ :each | (transitions detect: [ :edge | edge includes: each ] ifNone: [ nil ]) ifNotNil: [ :edge | edge to ] ] ].
+		ifFalse:
+			[ aSmaCCRegularExpression states
+				collect:
+					[ :each | 
+					(transitions detect: [ :edge | edge includes: each ] ifNone: [ nil ])
+						ifNotNil: [ :edge | edge to ] ] ].
 	(startingStates includes: nil)
 		ifTrue: [ ^ nil ].
 	first := true.
 	strings
-		do: [ :each | 
+		do:
+			[ :each | 
 			startingStates
-				do: [ :node | 
+				do:
+					[ :node | 
 					first
-						ifTrue: [ 
-							matchedAction := node simulate: (ReadStream on: each).
+						ifTrue:
+							[ matchedAction := node simulate: (ReadStream on: each).
 							first := false ]
-						ifFalse: [ 
-							matchedAction = (node simulate: (ReadStream on: each))
+						ifFalse:
+							[ matchedAction = (node simulate: (ReadStream on: each))
 								ifFalse: [ ^ nil ] ] ] ].
 	^ matchedAction

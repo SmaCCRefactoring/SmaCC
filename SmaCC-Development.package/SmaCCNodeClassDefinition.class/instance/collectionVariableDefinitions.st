@@ -1,3 +1,3 @@
-private
+private-variables
 collectionVariableDefinitions
-	^self variableDefinitions select: [:each | each isCollection]
+	^ self variableDefinitions select: [ :each | each isCollection ]

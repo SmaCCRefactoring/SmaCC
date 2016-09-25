@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "<historical>",
+	"commentStamp" : "",
 	"instvars" : [
 		"mergedStates" ],
 	"name" : "SmaCCNFAtoDFA",

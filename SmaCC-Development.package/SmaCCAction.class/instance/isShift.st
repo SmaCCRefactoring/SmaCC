@@ -1,3 +1,3 @@
-private
+testing
 isShift
-	^false
+	^ false

@@ -8,7 +8,7 @@
 	"instvars" : [
 		"annotations",
 		"packageToken",
-		"_name",
+		"name",
 		"semicolon" ],
 	"name" : "JavaPackageDeclarationNode",
 	"pools" : [

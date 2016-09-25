@@ -1,0 +1,27 @@
+{
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"_Tokens",
+		"identifierTokens",
+		"leftParenTokens",
+		"rightParenTokens",
+		"leftBracketTokens",
+		"rightBracketTokens",
+		"leftBraceTokens",
+		"rightBraceTokens",
+		"integer_literalTokens",
+		"floating_point_literalTokens",
+		"full_string_literalTokens",
+		"operatorTokens",
+		"deinitToken",
+		"block" ],
+	"name" : "SwiftDeinitializerDeclarationNode",
+	"pools" : [
+		 ],
+	"super" : "SwiftParseNode",
+	"type" : "normal" }

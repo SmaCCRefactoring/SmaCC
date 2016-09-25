@@ -1,4 +1,4 @@
-accessing
+accessing-attributes
 attributeNamed: aSymbol
 	attributes isNil
 		ifTrue: [ ^ nil ].

@@ -1,3 +1,3 @@
 accessing
 size
-	^collection size
+	^ collection size

@@ -1,3 +1,3 @@
-private
+testing
 isWhitespace: each
-	^self whitespaceValues includes: each asInteger
+	^ self whitespaceValues includes: each asInteger

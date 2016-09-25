@@ -1,3 +1,3 @@
-public
+testing
 isUpToDate
-	^true
+	^ true

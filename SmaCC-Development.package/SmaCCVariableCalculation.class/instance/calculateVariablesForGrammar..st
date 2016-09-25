@@ -1,4 +1,4 @@
-initialize
+private
 calculateVariablesForGrammar: aSmaCCGrammar
 	grammar := aSmaCCGrammar.
 	dependentsMap := IdentityDictionary new.

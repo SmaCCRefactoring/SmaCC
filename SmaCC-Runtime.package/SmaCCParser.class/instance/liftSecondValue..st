@@ -1,3 +1,3 @@
-private
-liftSecondValue: aCollection 
-	^aCollection at: 2
+standard reduction rules
+liftSecondValue: aCollection
+	^ aCollection at: 2

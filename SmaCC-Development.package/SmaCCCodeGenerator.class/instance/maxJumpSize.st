@@ -1,3 +1,3 @@
 private
 maxJumpSize
-	^ SmallInteger maximum
+	^ SmallInteger maxVal

@@ -1,3 +1,6 @@
-private
+source
 replaceWithSource: aString
-	^ self completeSource replaceFrom: self startPosition to: self stopPosition with: aString
+	^ self completeSource
+		replaceFrom: self startPosition
+		to: self stopPosition
+		with: aString

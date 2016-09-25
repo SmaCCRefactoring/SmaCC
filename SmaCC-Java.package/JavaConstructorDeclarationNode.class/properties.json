@@ -7,14 +7,14 @@
 	"commentStamp" : "",
 	"instvars" : [
 		"modifiers",
-		"_name",
+		"typeParameters",
+		"name",
 		"left",
 		"parameters",
 		"commas",
 		"right",
 		"throws",
-		"body",
-		"typeParameters" ],
+		"body" ],
 	"name" : "JavaConstructorDeclarationNode",
 	"pools" : [
 		 ],

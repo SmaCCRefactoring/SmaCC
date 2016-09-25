@@ -1,0 +1,3 @@
+generated
+visitTypealiasDeclaration: aTypealiasDeclaration
+	^ self visitParse: aTypealiasDeclaration

@@ -1,19 +1,19 @@
-public
+saving
 save
 	| stream |
-	stream := FileStream write: filename.
-	[parserClass notNil
+	stream := FileStream forceNewFileNamed: filename.
+	[ parserClass notNil
 		ifTrue:
-			[stream
+			[ stream
 				nextPutAll: 'Parser: ';
 				nextPutAll: parserClass name;
 				cr;
-				cr].
+				cr ].
 	rewrites
-		do: [:each | each saveOn: stream]
-		separatedBy:
-			[stream
+		do: [ :each | each saveOn: stream ]
+		separatedBy: [ stream
 				cr;
-				cr].
-	isModified := false] ensure: [stream close].
+				cr ].
+	isModified := false ]
+		ensure: [ stream close ].
 	timestamp := self currentFileTimestamp

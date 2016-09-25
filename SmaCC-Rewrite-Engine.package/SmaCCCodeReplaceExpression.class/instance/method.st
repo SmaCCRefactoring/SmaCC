@@ -1,21 +1,27 @@
 evaluating
 method
-	"TODO: check if we are really looking for notifications or any error."
-
-	^ self
-		attributeNamed: #method
-		ifAbsentPut: [ 
-			| source method tree |
+	^self attributeNamed: #method
+		ifAbsentPut: 
+			[| source method tree |
 			source := 'code ' , code value.
 			tree := RBParser parseMethod: source.
-			tree body statements isEmpty
-				ifTrue: [ tree := RBParser parseMethod: 'code ^''''' ].
+			tree body statements isEmpty 
+				ifTrue: [tree := RBParser parseMethod: 'code ^'''''].
 			tree body addReturn.
 			source := tree formattedCode.
-			method := [ 
-			OpalCompiler new
-				class: SmaCCRewriteMatchContext;
-				compile: source ]
-				on: SyntaxErrorNotification , OCSemanticError
-				do: [ :ex | Error signal: ex errorMessage , ' (' , ex range printString , ')' ].
-			method ]
+			method := 
+					[((SmaCCRewriteMatchContext compiler)
+						source: source;
+						requestor: nil;
+						failBlock: [^nil];
+						compile) copyWithSource: source] 
+							on: Error
+							do: 
+								[:ex | 
+								ex 
+									return: (SmaCCRewriteMatchContext 
+											compile: source
+											notifying: nil
+											trailer: SmaCCRewriteMatchContext defaultMethodTrailer
+											ifFail: [^nil]) method].
+			method]

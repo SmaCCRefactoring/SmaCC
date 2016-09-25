@@ -1,4 +1,4 @@
-public
-register: aSocket
-	availableServers nextPut: aSocket.
-	registeredServers add: aSocket
+running
+register: aSocketStream
+	availableServers nextPut: aSocketStream.
+	registeredServers add: aSocketStream

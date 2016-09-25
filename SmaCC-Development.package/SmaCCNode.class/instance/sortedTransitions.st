@@ -1,3 +1,3 @@
 converting
 sortedTransitions
-	^transitions asSortedCollection: [:a :b | a <= b]
+	^ transitions asSortedCollection: [ :a :b | a <= b ]

@@ -1,5 +1,5 @@
-item
+item creation
 newItemSet
-	^(SmaCCItemSet new)
+	^ SmaCCItemSet new
 		grammar: self;
 		yourself

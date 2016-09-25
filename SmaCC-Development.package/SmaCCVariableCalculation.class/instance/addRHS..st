@@ -1,4 +1,5 @@
-initialize
+private
 addRHS: aSmaCCRHS
-	(todo identityIncludes: aSmaCCRHS) ifTrue: [^self].
+	(todo identityIncludes: aSmaCCRHS)
+		ifTrue: [ ^ self ].
 	todo add: aSmaCCRHS

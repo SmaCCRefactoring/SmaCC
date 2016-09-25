@@ -1,0 +1,14 @@
+{
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SwiftParseNodeVisitor",
+	"pools" : [
+		 ],
+	"super" : "SmaCCParseNodeVisitor",
+	"type" : "normal" }

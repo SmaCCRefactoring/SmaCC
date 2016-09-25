@@ -1,3 +1,3 @@
-private
+testing
 ignoreCase
-	^ignoreCase
+	^ ignoreCase

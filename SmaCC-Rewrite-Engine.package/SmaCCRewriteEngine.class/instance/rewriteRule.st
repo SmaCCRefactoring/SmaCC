@@ -1,3 +1,3 @@
 accessing
 rewriteRule
-	^rewriteRule
+	^ rewriteRule

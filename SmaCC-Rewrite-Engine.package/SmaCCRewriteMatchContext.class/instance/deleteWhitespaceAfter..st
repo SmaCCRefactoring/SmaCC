@@ -1,4 +1,4 @@
-private
+source editing
 deleteWhitespaceAfter: anObject
 	| anIndex |
 	anIndex := self stopIndexFor: anObject.

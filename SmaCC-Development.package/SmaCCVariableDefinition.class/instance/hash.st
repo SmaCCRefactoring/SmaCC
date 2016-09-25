@@ -1,3 +1,3 @@
 comparing
 hash
-	^self variableName hash bitXor: self isCollection hash
+	^ self variableName hash bitXor: self isCollection hash

@@ -1,3 +1,3 @@
 arithmetic
 - anInteger
-	^self + anInteger negated
+	^ self + anInteger negated

@@ -1,5 +1,5 @@
-compiling
-outputRangeMatch: each on: stream 
+compiling-scanner
+outputRangeMatch: each on: stream
 	stream
 		nextPutAll: '(currentCharacter between: ';
 		nextPutAll: each first storeString;

@@ -1,3 +1,3 @@
 accessing
 stringFor: aString
-	^(strings at: aString ifAbsent: [['']]) value
+	^ (strings at: aString ifAbsent: [ [ '' ] ]) value

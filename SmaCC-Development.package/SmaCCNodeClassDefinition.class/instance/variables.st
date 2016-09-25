@@ -1,8 +1,8 @@
 accessing
 variables
-	^superclass isNil
-		ifTrue: [self instanceVariableNames copy]
+	^ superclass isNil
+		ifTrue: [ self instanceVariableNames copy ]
 		ifFalse:
-			[(superclass variables)
+			[ superclass variables
 				addAll: self instanceVariableNames;
-				yourself]
+				yourself ]

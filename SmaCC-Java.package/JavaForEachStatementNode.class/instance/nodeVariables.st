@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^ #(#type #expression #statement)
+	^ #(#type #name #expression #statement)

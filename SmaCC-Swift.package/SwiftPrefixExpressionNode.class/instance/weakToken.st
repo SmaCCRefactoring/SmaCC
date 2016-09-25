@@ -1,0 +1,3 @@
+generated
+weakToken
+	^ weakToken

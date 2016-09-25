@@ -1,3 +1,3 @@
 private
 package
-	^ self class package
+	^ RPackageOrganizer default packageNamed: self class category

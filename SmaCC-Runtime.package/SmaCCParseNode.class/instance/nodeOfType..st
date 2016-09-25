@@ -3,7 +3,10 @@ nodeOfType: aSmaCCParseNodeClassOrCollection
 	| isCollection |
 	isCollection := aSmaCCParseNodeClassOrCollection isKindOf: Collection.
 	^ self
-		lookupNode: [ :each | 
+		lookupNode:
+			[ :each | 
 			isCollection
-				ifTrue: [ aSmaCCParseNodeClassOrCollection anySatisfy: [ :class | each isKindOf: class ] ]
+				ifTrue:
+					[ aSmaCCParseNodeClassOrCollection
+						anySatisfy: [ :class | each isKindOf: class ] ]
 				ifFalse: [ each isKindOf: aSmaCCParseNodeClassOrCollection ] ]

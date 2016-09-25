@@ -1,3 +1,3 @@
-private
+processing
 processChildren: aCollection
-	aCollection do: [:each | self processChild: each]
+	aCollection do: [ :each | self processChild: each ]

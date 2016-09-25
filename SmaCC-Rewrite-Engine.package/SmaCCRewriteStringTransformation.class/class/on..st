@@ -1,5 +1,5 @@
-instance
+instance creation
 on: aString
-	^(self new)
+	^ self new
 		string: aString;
 		yourself

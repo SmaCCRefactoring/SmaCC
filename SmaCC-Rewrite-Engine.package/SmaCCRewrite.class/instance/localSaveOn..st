@@ -1,12 +1,12 @@
-public
+saving
 localSaveOn: aStream
 	self comment notEmpty
 		ifTrue:
-			[aStream
+			[ aStream
 				nextPut: $";
 				nextPutAll: (self comment copyReplaceAll: '"' with: '""');
 				nextPut: $";
-				cr].
+				cr ].
 	match saveOn: aStream.
 	aStream
 		cr;

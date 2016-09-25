@@ -1,5 +1,5 @@
-instance
+instance creation
 onToken: aSmaCCPatternToken
-	^(self new)
+	^ self new
 		patternToken: aSmaCCPatternToken;
 		yourself

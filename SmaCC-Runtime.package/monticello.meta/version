@@ -1,2 +1,1 @@
-(name 'SmaCC-Runtime-ThierryGoubier.10' message 'Character are immediates, so use asciiValue' id 'addcdd92-a3da-47e7-8430-2ea17658f641' date '28 April 2016' time '10:48:01.354668 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-Runtime-ThierryGoubier.9' message 'Small cleanup
-' id '6bac51fe-ee41-597b-aac5-c2f2b8d3f353' date '8 September 2015' time '9:45:26 am' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
+(name 'SmaCC-Runtime-ThierryGoubier.3' message 'From John Brant' id 'd8aaea1a-fbc5-4f70-ad5f-b8c0b96e7698' date '23 September 2016' time '7:26:48.474965 pm' author 'ThierryGoubier' ancestors () stepChildren ())

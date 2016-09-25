@@ -1,3 +1,3 @@
 private
 errorAction
-	^3
+	^ 3

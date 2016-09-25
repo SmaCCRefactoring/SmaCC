@@ -1,13 +1,14 @@
 {
 	"class" : {
-		"definitionComment" : "ThierryGoubier 8/19/2015 15:19",
-		"fileExtension" : "ThierryGoubier 2/24/2015 14:37:41",
-		"fileExtensionType" : "ThierryGoubier 2/24/2015 14:37:41",
-		"scannerClass" : "ThierryGoubier 2/24/2015 14:37:41",
-		"startingStateFortranslationUnit" : "ThierryGoubier 2/24/2015 14:37:41" },
+		"definitionComment" : "JohnBrant 6/24/2016 12:23:45",
+		"fileExtension" : "JohnBrant 6/24/2016 12:23:45",
+		"fileExtensionType" : "JohnBrant 6/24/2016 12:23:45",
+		"scannerClass" : "JohnBrant 6/24/2016 12:23:45",
+		"startingStateFortranslationUnit" : "JohnBrant 6/24/2016 12:23:45" },
 	"instance" : {
-		"addTypeName:" : "ThierryGoubier 2/24/2015 14:37:41",
-		"reduceActionForenum_specifier3:" : "ThierryGoubier 2/24/2015 14:37:41",
-		"reduceActionForinit_declaration1:" : "ThierryGoubier 2/24/2015 14:37:41",
-		"reduceTable" : "ThierryGoubier 8/19/2015 15:19",
-		"transitionTable" : "ThierryGoubier 8/19/2015 15:19" } }
+		"addTypeName:" : "JohnBrant 6/24/2016 12:23:45",
+		"reduceActionForenum_specifier3:" : "JohnBrant 6/24/2016 12:23:45",
+		"reduceActionForinit_declaration1:" : "JohnBrant 6/24/2016 12:23:45",
+		"reduceTable" : "JohnBrant 6/24/2016 12:23:45",
+		"symbolNames" : "JohnBrant 6/24/2016 12:23:45",
+		"transitionTable" : "JohnBrant 6/24/2016 12:23:45" } }

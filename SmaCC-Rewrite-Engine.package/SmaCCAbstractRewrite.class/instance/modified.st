@@ -1,3 +1,4 @@
 public
 modified
-	parent notNil ifTrue: [parent modified]
+	parent notNil
+		ifTrue: [ parent modified ]

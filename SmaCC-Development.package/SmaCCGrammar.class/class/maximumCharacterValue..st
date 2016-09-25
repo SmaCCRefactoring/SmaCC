@@ -1,3 +1,3 @@
 accessing
-maximumCharacterValue: anInteger 
+maximumCharacterValue: anInteger
 	MaximumCharacterValue := anInteger

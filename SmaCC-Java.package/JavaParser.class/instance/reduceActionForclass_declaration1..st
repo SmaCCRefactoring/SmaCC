@@ -4,7 +4,7 @@ reduceActionForclass_declaration1: nodes
 	result := JavaClassDeclarationNode new.
 	result addNodes: (nodes at: 1) to: result modifiers.
 	result classToken: (nodes at: 2).
-	result _name: (nodes at: 3).
+	result name: (nodes at: 3).
 	result typeParameters: (nodes at: 4).
 	result extendsToken: ((nodes at: 5) at: 1).
 	result superclass: ((nodes at: 5) at: 2).

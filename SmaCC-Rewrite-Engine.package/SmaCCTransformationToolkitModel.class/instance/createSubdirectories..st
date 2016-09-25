@@ -2,4 +2,4 @@ accessing
 createSubdirectories: aBoolean
 	createSubdirectories := aBoolean.
 	modified := true.
-	self trigger: #createSubdirectories with: aBoolean
+	self changed: #createSubdirectories with: aBoolean

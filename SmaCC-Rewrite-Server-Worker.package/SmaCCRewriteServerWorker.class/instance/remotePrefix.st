@@ -1,3 +1,3 @@
 accessing
 remotePrefix
-	^remotePrefix ifNil: ['']
+	^ remotePrefix ifNil: [ '' ]

@@ -1,3 +1,3 @@
-private
+testing
 isSentinel
-	^id = -1
+	^ id = -1

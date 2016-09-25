@@ -1,0 +1,3 @@
+generated
+visitPostfixOperatorDeclaration: aPostfixOperatorDeclaration
+	^ self visitParse: aPostfixOperatorDeclaration

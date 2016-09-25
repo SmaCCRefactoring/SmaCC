@@ -1,7 +1,7 @@
 tests
 testNextKeyword
 	| compiler node |
-	compiler := SmaCCGrammarCompiler new.
+	compiler := SmaCCGrammarCompiler new category: self class category.
 	compiler
 		buildDefinition:
 			'<name> : \w+; <whitespace> : \s+; 

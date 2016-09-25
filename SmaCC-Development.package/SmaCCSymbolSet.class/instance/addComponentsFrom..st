@@ -1,3 +1,3 @@
 accessing
 addComponentsFrom: aSmaCCSymbolSet
-	aSmaCCSymbolSet components do: [:each | self addComponent: each]
+	aSmaCCSymbolSet components do: [ :each | self addComponent: each ]

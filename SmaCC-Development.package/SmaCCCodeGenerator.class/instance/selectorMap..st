@@ -1,3 +1,3 @@
-compiling
-selectorMap: aDictionary 
+compiling-scanner
+selectorMap: aDictionary
 	self subclassResponsibility

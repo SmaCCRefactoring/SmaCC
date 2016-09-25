@@ -1,5 +1,6 @@
-SmaCCCharacterRENode represents a regular expression that matches one of a set of characters.
+SmaCCCharacterRENode is a SmaCCRegularExpressionNode that matches a character.
 
 Instance Variables:
-	characters	<SortedCollection of: Character>	The characters that this node can accept. Note that there are no duplicates and all characters are sorted.
+	characters	<String>	the characters we accept
+	ignoreCase	<Boolean>	should we ignore case when accepting the characters
 

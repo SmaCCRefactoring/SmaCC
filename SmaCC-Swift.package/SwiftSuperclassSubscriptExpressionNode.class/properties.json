@@ -1,0 +1,17 @@
+{
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"superToken",
+		"leftBracketToken",
+		"expression",
+		"rightBracketToken" ],
+	"name" : "SwiftSuperclassSubscriptExpressionNode",
+	"pools" : [
+		 ],
+	"super" : "SwiftParseNode",
+	"type" : "normal" }

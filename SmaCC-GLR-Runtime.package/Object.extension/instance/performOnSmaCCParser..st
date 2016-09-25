@@ -1,3 +1,3 @@
-*smacc-glr-runtime
+*SmaCC-GLR-Runtime
 performOnSmaCCParser: aSmaCCParser
-	^self
+	^ self

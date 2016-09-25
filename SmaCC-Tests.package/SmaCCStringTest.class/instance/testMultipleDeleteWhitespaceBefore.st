@@ -2,7 +2,8 @@ tests
 testMultipleDeleteWhitespaceBefore
 	| string |
 	string := SmaCCString on: '0 asdf 9'.
-	3 to: 6 do: [ :i | 
+	3 to: 6 do:
+		[ :i | 
 		string
 			deleteWhitespaceBeforeIndex: i;
 			deleteCharacter: i ].

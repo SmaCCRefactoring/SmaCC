@@ -5,4 +5,4 @@ parseAllPossibleStates: aString
 	parser
 		parseAll: true;
 		setAllStartingStates.
-	^parser parse
+	^ parser parse

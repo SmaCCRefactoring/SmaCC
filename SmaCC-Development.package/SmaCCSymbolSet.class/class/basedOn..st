@@ -1,5 +1,5 @@
-instance
-basedOn: aSmaCCSymbolSet 
-	^(self new)
+instance creation
+basedOn: aSmaCCSymbolSet
+	^ self new
 		baseOn: aSmaCCSymbolSet;
 		yourself

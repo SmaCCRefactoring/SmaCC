@@ -1,3 +1,3 @@
 private
 firstTerminals
-	^self subclassResponsibility
+	^ self subclassResponsibility

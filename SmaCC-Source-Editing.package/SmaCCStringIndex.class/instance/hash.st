@@ -1,3 +1,3 @@
 comparing
 hash
-	^index bitXor: intervalId
+	^ index bitXor: intervalId

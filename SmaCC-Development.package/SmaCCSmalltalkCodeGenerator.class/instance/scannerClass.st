@@ -1,3 +1,3 @@
 accessing
 scannerClass
-	^scannerClass
+	^ scannerClass

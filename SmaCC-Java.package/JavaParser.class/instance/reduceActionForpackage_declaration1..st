@@ -4,6 +4,6 @@ reduceActionForpackage_declaration1: nodes
 	result := JavaPackageDeclarationNode new.
 	result addNodes: (nodes at: 1) to: result annotations.
 	result packageToken: (nodes at: 2).
-	result _name: (nodes at: 3).
+	result name: (nodes at: 3).
 	result semicolon: (nodes at: 4).
 	^ result

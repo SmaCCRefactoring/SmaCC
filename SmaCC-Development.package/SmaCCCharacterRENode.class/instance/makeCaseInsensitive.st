@@ -5,8 +5,8 @@ makeCaseInsensitive
 	newCharacters := Set new.
 	characters
 		do:
-			[:each | 
+			[ :each | 
 			newCharacters
 				add: each asLowercase;
-				add: each asUppercase].
+				add: each asUppercase ].
 	self assignCharacters: newCharacters

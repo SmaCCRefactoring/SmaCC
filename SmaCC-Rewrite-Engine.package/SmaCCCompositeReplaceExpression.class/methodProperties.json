@@ -2,9 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"acceptVisitor:" : "ThierryGoubier 2/5/2015 15:53:02",
-		"compositeNodeVariables" : "ThierryGoubier 2/5/2015 15:53:02",
-		"evaluateInContext:" : "ThierryGoubier 2/5/2015 15:53:02",
-		"expressions" : "ThierryGoubier 2/5/2015 15:53:02",
-		"expressions:" : "ThierryGoubier 2/5/2015 15:53:02",
-		"initialize" : "ThierryGoubier 2/5/2015 15:53:02" } }
+		"acceptVisitor:" : "JohnBrant 6/24/2016 13:12:32",
+		"compositeNodeVariables" : "JohnBrant 6/24/2016 13:12:32",
+		"evaluateInContext:" : "JohnBrant 6/24/2016 13:12:32",
+		"expressions" : "JohnBrant 6/24/2016 13:12:32",
+		"expressions:" : "JohnBrant 6/24/2016 13:12:32",
+		"initialize" : "JohnBrant 6/24/2016 13:12:32" } }

@@ -1,4 +1,4 @@
-compiling
+compiling-scanner
 compileMethodsFor: regex
 	| keywordmap dfa selectorMap |
 	dfa := regex asDFA.
@@ -7,6 +7,8 @@ compileMethodsFor: regex
 	codeGenerator selectorMap: selectorMap.
 	codeGenerator compileKeywordInitializerUsing: keywordmap.
 	codeGenerator compileNode: dfa.
-	codeGenerator compileEmptySymbolTokenId: (self symbols indexOf: grammar emptySymbol).
-	codeGenerator compileErrorSymbolTokenId: (self symbols indexOf: grammar errorSymbol).
+	codeGenerator
+		compileEmptySymbolTokenId: (self symbols indexOf: grammar emptySymbol).
+	codeGenerator
+		compileErrorSymbolTokenId: (self symbols indexOf: grammar errorSymbol).
 	codeGenerator compileIgnoreCaseMethods

@@ -1,14 +1,14 @@
 {
 	"class" : {
-		"component:" : "ThierryGoubier 2/24/2015 14:37:14",
-		"component:minimum:" : "ThierryGoubier 2/24/2015 14:37:14",
-		"component:minimum:maximum:" : "ThierryGoubier 2/24/2015 14:37:14",
-		"finiteInfinity" : "ThierryGoubier 2/24/2015 14:37:14" },
+		"component:" : "JohnBrant 6/24/2016 12:26:52",
+		"component:minimum:" : "JohnBrant 6/24/2016 12:26:52",
+		"component:minimum:maximum:" : "JohnBrant 6/24/2016 12:26:52",
+		"finiteInfinity" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"asNFAStartingWith:" : "ThierryGoubier 2/24/2015 14:37:14",
-		"component:minimum:maximum:" : "ThierryGoubier 2/24/2015 14:37:14",
-		"makeCaseInsensitive" : "ThierryGoubier 2/24/2015 14:37:14",
-		"possibleMatchesDo:on:" : "ThierryGoubier 2/24/2015 14:37:14",
-		"possibleMatchesDo:on:startingAt:" : "ThierryGoubier 2/24/2015 14:37:14",
-		"possibleMatchesSize" : "ThierryGoubier 8/18/2015 10:05",
-		"printOn:" : "ThierryGoubier 8/17/2015 17:50" } }
+		"asNFAStartingWith:" : "JohnBrant 6/24/2016 12:26:52",
+		"component:minimum:maximum:" : "JohnBrant 6/24/2016 12:26:52",
+		"makeCaseInsensitive" : "JohnBrant 6/24/2016 12:26:52",
+		"possibleMatchesDo:on:" : "JohnBrant 6/24/2016 12:26:52",
+		"possibleMatchesDo:on:startingAt:" : "JohnBrant 6/24/2016 12:26:52",
+		"possibleMatchesSize" : "JohnBrant 6/24/2016 12:26:52",
+		"printOn:" : "JohnBrant 6/24/2016 12:26:52" } }

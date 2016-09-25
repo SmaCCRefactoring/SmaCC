@@ -1,3 +1,3 @@
-private
+testing
 isSubtypeOf: aSmaCCGrammarItem
-	^self modelType includesClass: aSmaCCGrammarItem modelType
+	^ self modelType includesClass: aSmaCCGrammarItem modelType

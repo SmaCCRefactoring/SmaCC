@@ -1,5 +1,3 @@
-instance
+instance creation
 new
-	^ super new
-		initialize;
-		yourself
+	^self new: 5

@@ -1,3 +1,3 @@
-accessing
+accessing-properites
 removeProperty: aString
-	^properties removeKey: aString ifAbsent: [nil]
+	^ properties removeKey: aString ifAbsent: [ nil ]

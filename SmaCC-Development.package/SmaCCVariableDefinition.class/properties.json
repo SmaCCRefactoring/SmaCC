@@ -5,7 +5,7 @@
 	"classvars" : [
 		"PluralNameBlock",
 		"PluralNames" ],
-	"commentStamp" : "",
+	"commentStamp" : "<historical>",
 	"instvars" : [
 		"variableName",
 		"isCollection",

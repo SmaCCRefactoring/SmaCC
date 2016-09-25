@@ -1,3 +1,3 @@
-private
+testing
 isReject
-	^true
+	^ true

@@ -1,8 +1,7 @@
-actions
+actions-rewrites
 openRewriteFile: filename
-	^ filename exists
+	^ filename asFileReference exists
 		ifTrue: [ SmaCCRewriteRuleFileParser parseFile: filename ]
-		ifFalse: [ 
-			SmaCCRewriteFile new
+		ifFalse: [ SmaCCRewriteFile new
 				filename: filename;
 				yourself ]

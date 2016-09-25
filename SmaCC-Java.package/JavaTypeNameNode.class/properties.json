@@ -6,10 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"_name",
+		"name",
+		"typeArgLeft",
 		"arguments",
 		"commas",
-		"typeArgLeft",
 		"typeArgRight" ],
 	"name" : "JavaTypeNameNode",
 	"pools" : [

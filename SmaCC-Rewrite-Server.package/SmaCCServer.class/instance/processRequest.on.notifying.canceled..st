@@ -1,18 +1,22 @@
-public
-processRequest: aByteArray on: aSocket notifying: aSharedQueue canceled: aValueHolder
+running
+processRequest: aByteArray on: aSocketStream notifying: aSharedQueue canceled: aValueHolder
 	| resultBytes |
-	[self writeBytes: aByteArray on: aSocket.
-	resultBytes := self readBytesFrom: aSocket.
-	availableServers nextPut: aSocket]
+	[ 
+	self writeBytes: aByteArray on: aSocketStream.
+	resultBytes := self readBytesFrom: aSocketStream.
+	availableServers nextPut: aSocketStream ]
 		on: Error
 		do:
-			[:ex | 
-			registeredServers remove: aSocket.
-			[aSocket close] on: Error do: [:e | ].
-			aValueHolder value ifFalse: [^self].
-			^self
+			[ :ex | 
+			registeredServers remove: aSocketStream.
+			[ aSocketStream close ]
+				on: Error
+				do: [ :e |  ].
+			aValueHolder contents
+				ifFalse: [ ^ self ].
+			^ self
 				processRequest: aByteArray
 				on: availableServers next
 				notifying: aSharedQueue
-				canceled: aValueHolder].
+				canceled: aValueHolder ].
 	aSharedQueue nextPut: resultBytes

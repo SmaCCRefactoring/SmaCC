@@ -1,1 +1,1 @@
-SmaCCStateEdge is a SmaCCEdge for Symbol (state) transitions
+SmaCCStateEdge is a SmaCCEdge on states (that are represented by symbols) in the scanner.

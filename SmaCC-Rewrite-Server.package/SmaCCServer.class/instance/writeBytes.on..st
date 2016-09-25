@@ -1,6 +1,6 @@
-public
-writeBytes: bytes on: aSocket
-	(aSocket writeStream)
-		nextDWORDPut: bytes size;
-		nextPutAll: bytes;
+running
+writeBytes: bytes on: aStream
+	self nextPutInteger: bytes size on: aStream.
+	aStream
+		nextPutAll: bytes asByteArray;
 		flush

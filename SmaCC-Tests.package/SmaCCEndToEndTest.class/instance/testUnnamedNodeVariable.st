@@ -1,7 +1,8 @@
-tests
+public
 testUnnamedNodeVariable
 	| compiler |
-	compiler := SmaCCGrammarCompiler new.
+	(compiler := SmaCCGrammarCompiler new) codeGenerator
+		defaultCategory: self class category.
 	compiler
 		buildDefinition:
 			'%glr;
@@ -12,11 +13,11 @@ testUnnamedNodeVariable
 			D : <number> ''c''; '.
 	self
 		assert:
-			([ 
-			compiler compileInto: 'TestScanner' andParser: 'TestParser'.
+			([ compiler compileInto: 'TestScanner' andParser: 'TestParser'.
 			false ]
 				on: SmaCCCompilationNotification
-				do: [ :ex | 
+				do:
+					[ :ex | 
 					('Node creation' = ex messageText and: [ '*>>>B<<<*' match: ex tag ])
 						ifTrue: [ ex return: true ]
 						ifFalse: [ ex resume: nil ] ])

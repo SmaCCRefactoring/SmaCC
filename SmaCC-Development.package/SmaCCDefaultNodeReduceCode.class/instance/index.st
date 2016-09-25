@@ -1,8 +1,8 @@
 accessing
 index
 	index isNil
-		ifTrue: [ 
-			rhs size to: 1 by: -1 do: [ :i | 
+		ifTrue:
+			[ rhs size to: 1 by: -1 do: [ :i | 
 				(rhs at: i) isTerminal
 					ifFalse: [ index := i ] ].
 			index isNil

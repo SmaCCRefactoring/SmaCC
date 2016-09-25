@@ -1,3 +1,3 @@
 printing
 displayOn: aStream
-	aStream nextPutAll: filename basename
+	aStream nextPutAll: filename asFileReference basename

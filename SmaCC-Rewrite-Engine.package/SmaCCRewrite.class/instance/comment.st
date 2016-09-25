@@ -1,3 +1,3 @@
 accessing
 comment
-	^comment ifNil: ['']
+	^ comment ifNil: [ '' ]

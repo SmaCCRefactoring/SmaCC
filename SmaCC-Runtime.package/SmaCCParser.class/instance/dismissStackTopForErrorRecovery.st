@@ -1,4 +1,4 @@
-error
+error handling
 dismissStackTopForErrorRecovery
 	stateStack removeLast.
-	^nodeStack removeLast
+	^ nodeStack removeLast

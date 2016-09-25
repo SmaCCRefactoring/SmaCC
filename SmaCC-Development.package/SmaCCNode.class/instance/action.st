@@ -1,3 +1,3 @@
 accessing
 action
-	^action
+	^ action

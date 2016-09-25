@@ -1,1 +1,0 @@
-This session manager is used by the rewrite server and the rewrite worker.

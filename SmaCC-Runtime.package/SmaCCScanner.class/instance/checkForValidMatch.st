@@ -1,3 +1,4 @@
 private
 checkForValidMatch
-	matchActions isNil ifTrue: [self scannerError]
+	matchActions isNil
+		ifTrue: [ self scannerError ]

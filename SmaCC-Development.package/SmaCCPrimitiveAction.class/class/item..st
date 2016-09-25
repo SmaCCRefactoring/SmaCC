@@ -1,5 +1,5 @@
-instance
+instance creation
 item: aSmaCCLR1Item
-	^(self new)
+	^ self new
 		lr1Item: aSmaCCLR1Item;
 		yourself

@@ -1,3 +1,3 @@
 accessing
 contents
-	^sourceStream contents
+	^ sourceStream contents

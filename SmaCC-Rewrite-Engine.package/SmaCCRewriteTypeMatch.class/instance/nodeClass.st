@@ -1,3 +1,3 @@
 accessing
 nodeClass
-	^nodeClass
+	^ nodeClass

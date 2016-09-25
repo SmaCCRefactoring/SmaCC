@@ -1,3 +1,4 @@
 constructing
 | aSmaCCRegularExpressionNode
-	^SmaCCOrRENode nodes: (OrderedCollection with: self with: aSmaCCRegularExpressionNode)
+	^ SmaCCOrRENode
+		nodes: (OrderedCollection with: self with: aSmaCCRegularExpressionNode)

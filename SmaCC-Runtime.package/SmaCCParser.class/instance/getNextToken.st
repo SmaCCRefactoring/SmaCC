@@ -1,3 +1,4 @@
 private
 getNextToken
-	currentToken isNil ifTrue: [currentToken := scanner next]
+	currentToken isNil
+		ifTrue: [ currentToken := scanner next ]

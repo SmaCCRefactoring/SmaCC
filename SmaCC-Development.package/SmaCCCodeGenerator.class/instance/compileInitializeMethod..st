@@ -1,3 +1,3 @@
-compiling
+compiling-nodes
 compileInitializeMethod: aSmaCCNodeClassDefinition
 	self subclassResponsibility

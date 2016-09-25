@@ -1,3 +1,3 @@
 accessing
 inputSource
-	^inputSource
+	^ inputSource

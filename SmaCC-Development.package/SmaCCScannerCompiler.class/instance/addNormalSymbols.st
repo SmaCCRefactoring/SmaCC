@@ -1,3 +1,4 @@
-private
+regular expression construction
 addNormalSymbols
-	grammar symbols: (self symbols asSortedCollection: self filePositionSortBlock)
+	grammar
+		symbols: (self symbols asSortedCollection: self filePositionSortBlock)

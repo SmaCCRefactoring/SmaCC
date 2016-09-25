@@ -1,3 +1,3 @@
 accessing
 scannerClass
-	^self subclassResponsibility
+	^ self subclassResponsibility

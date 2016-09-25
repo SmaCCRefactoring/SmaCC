@@ -4,4 +4,4 @@ parseAll: aString startingAt: anInteger
 	parser := self on: (ReadStream on: aString).
 	parser setStartingState: anInteger.
 	parser parseAll: true.
-	^parser parse
+	^ parser parse

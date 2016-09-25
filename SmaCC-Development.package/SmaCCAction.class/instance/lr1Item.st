@@ -1,3 +1,3 @@
 accessing
 lr1Item
-	^self subclassResponsibility
+	^ self subclassResponsibility

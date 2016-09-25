@@ -2,14 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"addCRLFsTo:" : "ThierryGoubier 8/18/2015 18:30:20",
-		"addCRsTo:" : "ThierryGoubier 8/18/2015 18:30:20",
-		"addLFsTo:" : "ThierryGoubier 8/18/2015 18:30:20",
-		"testCRLFLines" : "ThierryGoubier 8/18/2015 18:30:20",
-		"testCRLines" : "ThierryGoubier 8/18/2015 18:30:20",
-		"testEmptyLines" : "ThierryGoubier 8/18/2015 18:30:20",
-		"testForwardPositionCRLFLines" : "ThierryGoubier 8/18/2015 18:30:20",
-		"testLFLines" : "ThierryGoubier 8/18/2015 18:30:20",
-		"testNoLines" : "ThierryGoubier 8/18/2015 18:30:20",
-		"testPositionCRLFLines" : "ThierryGoubier 8/18/2015 18:30:20",
-		"testPositionCRLines" : "ThierryGoubier 8/18/2015 18:30:20" } }
+		"addCRLFsTo:" : "JohnBrant 7/4/2016 11:47:44",
+		"addCRsTo:" : "JohnBrant 7/4/2016 11:47:44",
+		"addLFsTo:" : "JohnBrant 7/4/2016 11:47:44",
+		"testCRLFLines" : "JohnBrant 7/4/2016 11:47:44",
+		"testCRLines" : "JohnBrant 7/4/2016 11:47:44",
+		"testEmptyLines" : "JohnBrant 7/4/2016 11:47:44",
+		"testForwardPositionCRLFLines" : "JohnBrant 7/4/2016 11:47:44",
+		"testLFLines" : "JohnBrant 7/4/2016 11:47:44",
+		"testNoLines" : "JohnBrant 7/4/2016 11:47:44",
+		"testPositionCRLFLines" : "JohnBrant 7/4/2016 11:47:44",
+		"testPositionCRLines" : "JohnBrant 7/4/2016 11:47:44" } }

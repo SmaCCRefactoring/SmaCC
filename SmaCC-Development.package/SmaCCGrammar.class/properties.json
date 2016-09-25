@@ -6,7 +6,7 @@
 		"MaximumCharacterValue",
 		"TokenNameBlock",
 		"TokenNameMap" ],
-	"commentStamp" : "<historical>",
+	"commentStamp" : "",
 	"instvars" : [
 		"type",
 		"shiftReduceTable",

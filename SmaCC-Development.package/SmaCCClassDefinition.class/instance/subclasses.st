@@ -1,3 +1,3 @@
-accessing
+accessing-hierarchy
 subclasses
-	^subclasses
+	^ subclasses

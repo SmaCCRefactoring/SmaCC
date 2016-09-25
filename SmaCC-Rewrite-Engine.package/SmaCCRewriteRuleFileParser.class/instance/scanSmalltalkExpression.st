@@ -1,3 +1,3 @@
 private
 scanSmalltalkExpression
-	^scanner scanSmalltalkExpression
+	^ scanner scanSmalltalkExpression

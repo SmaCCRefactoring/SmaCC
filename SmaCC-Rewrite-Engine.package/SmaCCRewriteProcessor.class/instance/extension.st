@@ -1,3 +1,3 @@
 accessing
 extension
-	^self parserClass fileExtension
+	^ self parserClass fileExtension

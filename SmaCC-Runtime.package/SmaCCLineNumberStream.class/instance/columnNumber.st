@@ -1,3 +1,3 @@
 accessing
 columnNumber
-	^self columnNumberFor: self position
+	^ self columnNumberFor: self position

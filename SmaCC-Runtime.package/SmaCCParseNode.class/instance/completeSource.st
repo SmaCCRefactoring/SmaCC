@@ -1,4 +1,4 @@
-private
+source
 completeSource
 	^ parent isNil
 		ifTrue: [ self attributeNamed: #source ]

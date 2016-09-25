@@ -1,0 +1,3 @@
+file types
+fileExtension
+	^ '.js'

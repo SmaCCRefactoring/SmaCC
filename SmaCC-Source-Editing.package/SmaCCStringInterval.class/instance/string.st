@@ -1,3 +1,3 @@
 accessing
 string
-	^string
+	^ string

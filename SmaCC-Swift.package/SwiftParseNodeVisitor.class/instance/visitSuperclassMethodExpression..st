@@ -1,0 +1,3 @@
+generated
+visitSuperclassMethodExpression: aSuperclassMethodExpression
+	^ self visitParse: aSuperclassMethodExpression

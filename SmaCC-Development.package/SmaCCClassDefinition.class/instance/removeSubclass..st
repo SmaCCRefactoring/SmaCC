@@ -1,3 +1,3 @@
-accessing
+accessing-hierarchy
 removeSubclass: aSmaCCClassDefinition
-	subclasses remove: aSmaCCClassDefinition ifAbsent: []
+	subclasses remove: aSmaCCClassDefinition ifAbsent: [  ]

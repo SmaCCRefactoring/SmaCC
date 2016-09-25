@@ -1,3 +1,3 @@
 public
 getDependents
-	^dependents
+	^ dependents

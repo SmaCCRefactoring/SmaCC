@@ -1,3 +1,3 @@
 accessing
 fullName
-	^self codeGenerator namespaceName , self name
+	^ self codeGenerator namespaceName , self name

@@ -1,3 +1,3 @@
 accessing
 typeName
-	^#Smalltalk
+	^ #Smalltalk

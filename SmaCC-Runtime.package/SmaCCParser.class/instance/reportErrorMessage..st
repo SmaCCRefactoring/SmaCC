@@ -1,3 +1,6 @@
-error
+error handling
 reportErrorMessage: aString
-	SmaCCParserError signal: aString with: self
+	SmaCCParserError new
+		messageText: aString;
+		tag: self;
+		signal

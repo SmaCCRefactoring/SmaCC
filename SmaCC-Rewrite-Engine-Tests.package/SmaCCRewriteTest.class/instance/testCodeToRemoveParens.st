@@ -1,4 +1,4 @@
-private
+tests
 testCodeToRemoveParens
 	| rewriter |
 	rewriter := SmaCCRewriteEngine new.

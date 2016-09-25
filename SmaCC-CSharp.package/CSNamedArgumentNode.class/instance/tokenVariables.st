@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#_name #equal)
+	^ #(#name #equal)

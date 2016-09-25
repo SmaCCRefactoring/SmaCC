@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"_name",
+		"name",
 		"equal",
-		"_value" ],
+		"value" ],
 	"name" : "CSNamedArgumentNode",
 	"pools" : [
 		 ],

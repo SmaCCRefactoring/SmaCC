@@ -1,6 +1,6 @@
-instance
+instance creation
 comment: aString match: aSmaCCRewriteMatch transformation: aSmaCCRewriteTransformation
-	^(self new)
+	^ self new
 		comment: aString;
 		match: aSmaCCRewriteMatch;
 		transformation: aSmaCCRewriteTransformation;

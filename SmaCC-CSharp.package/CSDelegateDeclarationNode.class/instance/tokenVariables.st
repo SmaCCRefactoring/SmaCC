@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#delegateToken #_name #leftParen #rightParen #semicolon)
+	^ #(#delegateToken #name #leftParen #rightParen #semicolon)

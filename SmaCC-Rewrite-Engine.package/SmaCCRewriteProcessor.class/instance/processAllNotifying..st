@@ -1,3 +1,3 @@
 accessing
 processAllNotifying: postBlock
-	self files do: [:each | postBlock value: (self processFile: each)]
+	self files do: [ :each | postBlock value: (self processFile: each) ]

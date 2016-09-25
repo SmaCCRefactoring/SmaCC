@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#foreachToken #leftParenToken #_name #inToken #rightParenToken)
+	^ #(#foreachToken #leftParenToken #name #inToken #rightParenToken)

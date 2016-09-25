@@ -1,5 +1,6 @@
 accessing
-parseFile: aFile
-	^ aFile readStreamDo: [ :stream |
-		 self parseStream: stream startingAt: self defaultStartingState ]
-		
+parseFile: aString
+	| stream |
+	stream := FileStream readOnlyFileNamed: aString.
+	^ [ self parseStream: stream startingAt: self defaultStartingState ]
+		ensure: [ stream close ]

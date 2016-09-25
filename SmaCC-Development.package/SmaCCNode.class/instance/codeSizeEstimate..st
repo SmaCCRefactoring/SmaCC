@@ -6,7 +6,8 @@ codeSizeEstimate: methodStates
 		+
 			(self transitions
 				inject: 0
-				into: [ :sum :each | 
+				into:
+					[ :sum :each | 
 					sum
 						+
 							(each codeSizeEstimate

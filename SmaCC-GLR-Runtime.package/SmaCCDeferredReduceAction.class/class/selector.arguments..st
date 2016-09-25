@@ -1,5 +1,5 @@
-instance
+instance creation
 selector: aSymbol arguments: aCollection
-	^(self new)
+	^ self new
 		selector: aSymbol arguments: aCollection;
 		yourself

@@ -1,4 +1,4 @@
-compiling
+compiling-scanner
 compileTokenIdMethodNamed: aString withId: symbolId
 	self
 		startPublicOverrideMethod;

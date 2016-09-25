@@ -1,3 +1,3 @@
 accessing
 assignIndices: aCollection
-	aCollection keysAndValuesDo: [:index :each | each index: index]
+	aCollection keysAndValuesDo: [ :index :each | each index: index ]

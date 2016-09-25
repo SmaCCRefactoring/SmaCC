@@ -5,7 +5,7 @@ reduceActionForenum_declaration1: nodes
 	result addNodes: (nodes at: 1) to: result _attributes.
 	result addTokens: (nodes at: 2) to: result modifiers.
 	result enumToken: (nodes at: 3).
-	result _name: (nodes at: 4).
+	result name: (nodes at: 4).
 	result colonToken: ((nodes at: 5) at: 1).
 	result type: ((nodes at: 5) at: 2).
 	result leftBrace: ((nodes at: 6) at: 1).

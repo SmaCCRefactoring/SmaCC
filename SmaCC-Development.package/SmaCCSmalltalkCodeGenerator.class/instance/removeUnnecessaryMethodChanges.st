@@ -1,27 +1,28 @@
 compiling
 removeUnnecessaryMethodChanges
-	"Removing then defining instance variables optimization is done when defining the instance variables."
-
 	| allChanges |
 	allChanges := self changes changes copy.
-	(allChanges allSatisfy: [ :each | (each isKindOf: RBCompositeRefactoryChange) not ])
+	(allChanges
+		allSatisfy: [ :each | (each isKindOf: RBCompositeRefactoryChange) not ])
 		ifFalse: [ ^ self ].
 	allChanges
-		keysAndValuesDo: [ :key :each | 
+		keysAndValuesDo:
+			[ :key :each | 
 			(each isKindOf: RBRemoveMethodChange)
-				ifTrue: [ 
-					key + 1 to: allChanges size do: [ :i | 
+				ifTrue:
+					[ key + 1 to: allChanges size do:
+						[ :i | 
 						| other |
 						other := allChanges at: i.
-						[ 
-						((other isKindOf: RBAddMethodChange)
-							and: [ 
-								each selector = other selector
-									and: [ 
-										each changeClassName = other changeClassName
-											and: [ (other methodSourceFor: other selector) asString = other parseTree source asString ] ] ])
-							ifTrue: [ 
-								self
+						[ ((other isKindOf: RBAddMethodChange)
+							and:
+								[ each selector = other selector
+									and:
+										[ each changeClassName = other changeClassName
+											and:
+												[ (other changeClass sourceCodeAt: other selector) asString
+													= other parseTree source asString ] ] ])
+							ifTrue: [ self
 									removeChange: each;
 									removeChange: other ] ]
 							on: Error

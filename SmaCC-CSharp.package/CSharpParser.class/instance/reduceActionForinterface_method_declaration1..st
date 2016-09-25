@@ -5,7 +5,7 @@ reduceActionForinterface_method_declaration1: nodes
 	result addNodes: (nodes at: 1) to: result _attributes.
 	result modifier: (nodes at: 2).
 	result type: (nodes at: 3).
-	result _name: (nodes at: 4).
+	result name: (nodes at: 4).
 	result typeParameters: (nodes at: 5).
 	result leftParen: (nodes at: 6).
 	result addNodes: ((nodes at: 7) at: 1) to: result parameters.

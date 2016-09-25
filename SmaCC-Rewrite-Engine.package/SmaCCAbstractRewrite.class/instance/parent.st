@@ -1,3 +1,3 @@
 accessing
 parent
-	^parent
+	^ parent

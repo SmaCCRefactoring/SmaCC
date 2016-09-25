@@ -1,3 +1,3 @@
 public
 returnsVariableCollection
-	^true
+	^ true

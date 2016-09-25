@@ -1,12 +1,10 @@
 private
 possibleMatchesDo: aBlock on: aStream startingAt: anInteger
-	(anInteger between: minimumMatches and: maximumMatches) ifTrue: [aBlock value].
+	(anInteger between: minimumMatches and: maximumMatches)
+		ifTrue: [ aBlock value ].
 	anInteger < maximumMatches
 		ifTrue:
-			[node
+			[ node
 				possibleMatchesDo:
-					[self
-						possibleMatchesDo: aBlock
-						on: aStream
-						startingAt: anInteger + 1]
-				on: aStream]
+					[ self possibleMatchesDo: aBlock on: aStream startingAt: anInteger + 1 ]
+				on: aStream ]

@@ -1,3 +1,3 @@
 accessing
 size
-	^symbols size
+	^ symbols size

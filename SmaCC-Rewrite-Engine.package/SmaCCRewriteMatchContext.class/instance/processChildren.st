@@ -1,3 +1,3 @@
-private
+processing
 processChildren
-	match nodesDo: [:each | self processChild: each]
+	match nodesDo: [ :each | self processChild: each ]

@@ -1,19 +1,19 @@
 accessing
 unusedSymbols
 	| nonTerminals problemSymbols todo |
-	nonTerminals := self symbols reject: [:each | each isTerminal].
+	nonTerminals := self symbols reject: [ :each | each isTerminal ].
 	todo := OrderedCollection withAll: self allStartingSymbols.
-	problemSymbols := nonTerminals asSet reject: [:each | todo includes: each].
-	[todo isEmpty]
+	problemSymbols := nonTerminals asSet
+		reject: [ :each | todo includes: each ].
+	[ todo isEmpty ]
 		whileFalse:
-			[todo removeFirst
+			[ todo removeFirst
 				productionsDo:
-					[:rhs | 
+					[ :rhs | 
 					rhs
 						do:
-							[:each | 
+							[ :each | 
 							(problemSymbols includes: each)
-								ifTrue:
-									[todo add: each.
-									problemSymbols remove: each]]]].
-	^problemSymbols
+								ifTrue: [ todo add: each.
+									problemSymbols remove: each ] ] ] ].
+	^ problemSymbols

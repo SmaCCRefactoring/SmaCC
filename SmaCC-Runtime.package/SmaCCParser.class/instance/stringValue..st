@@ -1,3 +1,3 @@
-private
-stringValue: anOrderedCollection 
-	^anOrderedCollection first value
+standard reduction rules
+stringValue: anOrderedCollection
+	^ anOrderedCollection first value

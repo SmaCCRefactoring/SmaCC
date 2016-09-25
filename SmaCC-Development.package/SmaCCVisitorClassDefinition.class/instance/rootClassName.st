@@ -1,3 +1,3 @@
 private
 rootClassName
-	^SmaCCParseNodeVisitor fullName
+	^ SmaCCParseNodeVisitor name

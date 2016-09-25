@@ -1,3 +1,3 @@
 private
 parserClass
-	^self lookupType: #TestParser
+	^ self lookupType: #TestParser

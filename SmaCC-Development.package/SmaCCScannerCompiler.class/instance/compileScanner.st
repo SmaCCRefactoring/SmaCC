@@ -1,4 +1,4 @@
-compiling
+compiling-scanner
 compileScanner
 	| regex |
 	regex := self createRegex.

@@ -6,7 +6,7 @@ reduceActionFormethod_header1: nodes
 	result addTokens: (nodes at: 2) to: result modifiers.
 	result partialToken: (nodes at: 3).
 	result returnType: (nodes at: 4).
-	result _name: ((nodes at: 5) at: 1).
+	result name: ((nodes at: 5) at: 1).
 	result interface: ((nodes at: 5) at: 2).
 	result periodToken: ((nodes at: 5) at: 3).
 	result typeParameters: (nodes at: 6).

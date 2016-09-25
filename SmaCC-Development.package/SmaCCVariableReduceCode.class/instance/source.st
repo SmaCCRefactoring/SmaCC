@@ -1,3 +1,3 @@
 accessing
 source
-	^self codeGenerator variableArrayAction: rhs
+	^ self codeGenerator variableArrayAction: rhs

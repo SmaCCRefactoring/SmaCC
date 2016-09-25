@@ -2,5 +2,7 @@ accessing
 inputFilenames
 	| names |
 	names := OrderedCollection new.
-	(self inputDirectory entries select: [ :e | e extension = self extension ]) do: [ :each | names add: each ].
+	(self inputDirectory asFileReference
+		allChildrenMatching: '*' , self extension)
+		do: [ :each | names add: each path ].
 	^ names

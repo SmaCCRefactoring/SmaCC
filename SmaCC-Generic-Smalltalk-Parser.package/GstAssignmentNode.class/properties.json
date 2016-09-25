@@ -1,0 +1,16 @@
+{
+	"category" : "SmaCC-Generic-Smalltalk-Parser",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"variable",
+		"assignmentToken",
+		"value" ],
+	"name" : "GstAssignmentNode",
+	"pools" : [
+		 ],
+	"super" : "GstValueNode",
+	"type" : "normal" }

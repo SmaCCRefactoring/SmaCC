@@ -1,6 +1,6 @@
 constructing
 repeatFor: minimum to: maximum
-	^SmaCCRepeatingRENode
+	^ SmaCCRepeatingRENode
 		component: self
 		minimum: minimum
 		maximum: maximum

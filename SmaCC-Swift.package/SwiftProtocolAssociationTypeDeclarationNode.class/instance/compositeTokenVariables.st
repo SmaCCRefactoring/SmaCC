@@ -1,0 +1,3 @@
+generated
+compositeTokenVariables
+	^ #(#identifierTokens #colonTokens #lessThanTokens #commaTokens #greaterThanTokens #periodTokens #leftBracketTokens #protocolTokens #rightBracketTokens #minusGreaterThanTokens #leftParenTokens #rightParenTokens #questionMarkTokens #bangTokens #typeTokens #periodPeriodPeriodTokens #inoutTokens #_Tokens #leftBraceTokens #rightBraceTokens #integer_literalTokens #floating_point_literalTokens #operatorTokens #full_string_literalTokens)

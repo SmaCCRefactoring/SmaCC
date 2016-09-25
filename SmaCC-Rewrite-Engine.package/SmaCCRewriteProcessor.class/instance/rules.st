@@ -1,3 +1,3 @@
 accessing
 rules
-	^rules
+	^ rules

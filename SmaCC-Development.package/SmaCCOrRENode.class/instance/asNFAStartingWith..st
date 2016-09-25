@@ -6,9 +6,9 @@ asNFAStartingWith: aSmaCCNode
 	endNode action: action.
 	nodes
 		do:
-			[:each | 
+			[ :each | 
 			| componentStart |
 			componentStart := SmaCCNode new.
 			startNode addEdgeTo: componentStart.
-			(each asNFAStartingWith: componentStart) addEdgeTo: endNode].
-	^endNode
+			(each asNFAStartingWith: componentStart) addEdgeTo: endNode ].
+	^ endNode

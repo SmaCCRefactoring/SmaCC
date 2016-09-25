@@ -6,4 +6,4 @@ createTokenFor: string
 		start: start + 1
 		ids: matchActions.
 	outputStream reset.
-	^token
+	^ token

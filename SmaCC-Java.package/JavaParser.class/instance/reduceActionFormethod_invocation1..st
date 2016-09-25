@@ -6,7 +6,7 @@ reduceActionFormethod_invocation1: nodes
 	result addNodes: ((nodes at: 1) at: 2) to: result arguments.
 	result addTokens: ((nodes at: 1) at: 3) to: result commas.
 	result typeArgRight: ((nodes at: 1) at: 4).
-	result _name: (nodes at: 2).
+	result name: (nodes at: 2).
 	result addToken: (nodes at: 3) to: result lefts.
 	result addNodes: ((nodes at: 4) at: 1) to: result expressions.
 	result addTokens: ((nodes at: 4) at: 2) to: result commas.

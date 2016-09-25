@@ -1,3 +1,3 @@
 matching
 copyInContext: aDictionary
-	^(aDictionary at: self ifAbsent: [nil]) copy
+	^ (aDictionary at: self ifAbsent: [ nil ]) copy

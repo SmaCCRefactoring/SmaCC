@@ -1,5 +1,5 @@
-SmaCCEpsilonRemoval removes epsilon nodes from a NFA.
+SmaCCEpsilonRemoval removes all epsilon edges from the scanner's NFA.
 
 Instance Variables:
-	nodeMap	<Dictionary>	Dictionary mapping sets of states to a new state in the new graph
+	nodeMap	<Dictionary key: SmaCCNode value: SmaCCNode>	map from nodes in old graph to nodes in new graph
 

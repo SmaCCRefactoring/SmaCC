@@ -1,3 +1,3 @@
 compiling
 parserClass
-	^parserClass
+	^ parserClass

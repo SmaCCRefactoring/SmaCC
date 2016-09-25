@@ -5,4 +5,4 @@ asNFAStartingWith: aSmaCCNode
 	endNode := SmaCCNode new.
 	endNode action: action.
 	startNode addEdgeTo: endNode onCharacters: characters.
-	^endNode
+	^ endNode
