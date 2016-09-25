@@ -1,0 +1,22 @@
+{
+	"class" : {
+		"owner:" : "ThierryGoubier 9/8/2015 09:45:56",
+		"owner:ownerAcceptSelector:" : "ThierryGoubier 9/8/2015 09:45:56" },
+	"instance" : {
+		"clearUserEditFlag" : "ThierryGoubier 9/8/2015 09:45:56",
+		"contents" : "ThierryGoubier 9/8/2015 09:45:56",
+		"contents:" : "ThierryGoubier 9/8/2015 09:45:56",
+		"contents:notifying:" : "ThierryGoubier 9/8/2015 09:45:56",
+		"contentsMenu:shifted:" : "ThierryGoubier 9/8/2015 09:45:56",
+		"contentsMorph" : "ThierryGoubier 9/8/2015 09:45:56",
+		"hasUnacceptedEdits" : "ThierryGoubier 9/8/2015 09:45:56",
+		"initialize" : "ThierryGoubier 9/8/2015 09:45:56",
+		"okToChange" : "ThierryGoubier 9/8/2015 09:45:56",
+		"owner" : "ThierryGoubier 9/8/2015 09:45:56",
+		"owner:" : "ThierryGoubier 9/8/2015 09:45:56",
+		"owner:ownerAcceptSelector:" : "ThierryGoubier 9/8/2015 09:45:56",
+		"ownerAcceptSelector" : "ThierryGoubier 9/8/2015 09:45:56",
+		"ownerAcceptSelector:" : "ThierryGoubier 9/8/2015 09:45:56",
+		"perform:orSendTo:" : "ThierryGoubier 9/8/2015 09:45:56",
+		"readContentsFromFile" : "ThierryGoubier 9/8/2015 09:45:56",
+		"saveContentsInFile" : "ThierryGoubier 9/8/2015 09:45:56" } }

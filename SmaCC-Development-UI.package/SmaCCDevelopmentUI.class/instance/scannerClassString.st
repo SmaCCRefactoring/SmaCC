@@ -1,0 +1,3 @@
+accessing
+scannerClassString
+	^scannerClassMorph contents string
