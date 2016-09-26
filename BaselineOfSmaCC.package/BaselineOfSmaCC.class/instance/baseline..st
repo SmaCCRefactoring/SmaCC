@@ -51,7 +51,9 @@ baseline: spec
 					with: [ spec requires: 'SmaCC-GLR-Runtime' ];
 				package: 'SmaCC-Python' with: [ spec requires: 'SmaCC-Runtime' ];
 				package: 'SmaCC-Python-Tests'
-					with: [ spec requires: 'SmaCC-Python' ].
+					with: [ spec requires: 'SmaCC-Python' ];
+				package: 'SmaCC-Line-Parser'
+					with: [ spec requires: 'SmaCC-Runtime' ].
 			spec
 				group: 'default' with: #('Tools');
 				group: 'Runtime' with: #('SmaCC-GLR-Runtime');
