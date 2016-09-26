@@ -1,9 +1,9 @@
 generated
 scanForTokenX9
-	self recordMatch: #(27 32).
+	self recordMatch: #(6 26 32).
 	self step.
-	currentCharacter isSeparator
-		ifTrue: [ [ self recordMatch: #(27).
+	currentCharacter isSpecial
+		ifTrue: [ [ self recordMatch: #(26).
 			self step.
-			currentCharacter isSeparator ] whileTrue ].
+			currentCharacter isSpecial ] whileTrue ].
 	^ self reportLastMatch

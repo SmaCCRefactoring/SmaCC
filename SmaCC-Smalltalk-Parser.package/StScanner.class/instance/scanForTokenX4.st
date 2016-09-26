@@ -1,13 +1,12 @@
 generated
 scanForTokenX4
-	self recordMatch: #(7 26 32).
+	self recordMatch: #(32).
 	self step.
-	(currentCharacter == $!
-		or: [ (currentCharacter between: $% and: $&)
-				or: [ (currentCharacter between: $* and: $,)
-						or: [ currentCharacter == $/
-								or: [ (currentCharacter between: $< and: $@)
-										or:
-											[ '\|~' includes: currentCharacter ] ] ] ] ])
-		ifTrue: [ ^ self recordAndReportMatch: #(26) ].
+	currentCharacter == $"
+		ifTrue: [ ^ self recordAndReportMatch: #(28) ].
+	true
+		ifTrue: [ [ self step.
+			currentCharacter == $"
+				ifTrue: [ ^ self recordAndReportMatch: #(28) ].
+			true ] whileTrue ].
 	^ self reportLastMatch

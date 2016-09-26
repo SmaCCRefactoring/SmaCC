@@ -1,13 +1,11 @@
 generated
 scanForTokenX3
-	self recordMatch: #(9 26 32).
+	self recordMatch: #(26 32).
 	self step.
-	(currentCharacter == $!
-		or: [ (currentCharacter between: $% and: $&)
-				or: [ (currentCharacter between: $* and: $,)
-						or: [ currentCharacter == $/
-								or: [ (currentCharacter between: $< and: $@)
-										or:
-											[ '\|~' includes: currentCharacter ] ] ] ] ])
-		ifTrue: [ ^ self recordAndReportMatch: #(26) ].
+	currentCharacter isDigit
+		ifTrue: [ ^ self recordAndReportMatch: #(22) ].
+	currentCharacter isSpecial
+		ifTrue: [ [ self recordMatch: #(26).
+			self step.
+			currentCharacter isSpecial ] whileTrue ].
 	^ self reportLastMatch

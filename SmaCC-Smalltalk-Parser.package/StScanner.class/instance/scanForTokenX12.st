@@ -2,7 +2,7 @@ generated
 scanForTokenX12
 	currentCharacter == $>
 		ifTrue:
-			[ ^ self scanForTokenX4 ].
+			[ ^ self scanForTokenX8 ].
 	currentCharacter == $[
 		ifTrue: [ ^ self recordAndReportMatch: #(17 32) ].
 	currentCharacter == $]
@@ -13,18 +13,19 @@ scanForTokenX12
 		ifTrue: [ ^ self recordAndReportMatch: #(3 32) ].
 	currentCharacter == $|
 		ifTrue:
-			[ ^ self scanForTokenX3 ].
+			[ ^ self scanForTokenX7 ].
 	currentCharacter == $}
 		ifTrue: [ ^ self recordAndReportMatch: #(8 32) ].
 	currentCharacter isDigit
 		ifTrue: [ ^ self recordAndReportMatch: #(21 32) ].
-	currentCharacter isSeparator
-		ifTrue:
-			[ ^ self scanForTokenX9 ].
-	currentCharacter isSpecial
+	(currentCharacter isSeparator
+		or: [ currentCharacter == Character null ])
 		ifTrue:
 			[ ^ self scanForTokenX2 ].
-	(currentCharacter isLetter or: [ currentCharacter isSafeForHTTP ])
+	currentCharacter isSpecial
 		ifTrue:
 			[ ^ self scanForTokenX6 ].
+	(currentCharacter isLetter or: [ currentCharacter isSafeForHTTP ])
+		ifTrue:
+			[ ^ self scanForTokenX1 ].
 	^ self recordAndReportMatch: #(32)

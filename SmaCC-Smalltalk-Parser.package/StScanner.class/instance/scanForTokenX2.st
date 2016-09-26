@@ -1,13 +1,11 @@
 generated
 scanForTokenX2
-	self recordMatch: #(26 32).
+	self recordMatch: #(27 32).
 	self step.
-	(currentCharacter == $!
-		or: [ (currentCharacter between: $% and: $&)
-				or: [ (currentCharacter between: $* and: $,)
-						or: [ currentCharacter == $/
-								or: [ (currentCharacter between: $< and: $@)
-										or:
-											[ '\|~' includes: currentCharacter ] ] ] ] ])
-		ifTrue: [ ^ self recordAndReportMatch: #(26) ].
+	(currentCharacter isSeparator
+		or: [ currentCharacter == Character null ])
+		ifTrue: [ [ self recordMatch: #(27).
+			self step.
+			currentCharacter isSeparator
+				or: [ currentCharacter == Character null ] ] whileTrue ].
 	^ self reportLastMatch

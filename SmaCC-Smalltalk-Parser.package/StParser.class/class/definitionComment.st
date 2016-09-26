@@ -19,10 +19,10 @@ definitionComment
 	: <name> \: (<name> \: )+
 	;
 <binarySymbol>
-	: [\~\-\!\@\%\&\*\+\=\\\|\?\/\>\<\,] [\~\!\@\%\&\*\+\=\\\|\?\/\>\<\,]?
+	: [\~\-\!\@\%\&\*\+\=\\\|\?\/\>\<\,] [\~\-\!\@\%\&\*\+\=\\\|\?\/\>\<\,]*
 	;
 <whitespace>
-	: <isSeparator>+
+	: (<isSeparator> | \cA)+
 	;
 <comment>
 	: \"" [^\""]* \""
@@ -138,15 +138,15 @@ TemporaryVariables
 				yourself}
 	;
 Statements
-	: 		{OrderedCollection new}
-	| StatementList OptionalPeriod
-			{#liftFirstValue:}
-	| StatementList Periods ""^"" Expression OptionalPeriod
-			{'1' 
-				add: (RBReturnNode value: '4'); 
+	: OptionalPeriod		{OrderedCollection new}
+	| OptionalPeriod StatementList OptionalPeriod
+			{ '2' }
+	| OptionalPeriod StatementList Periods ""^"" Expression OptionalPeriod
+			{'2' 
+				add: (RBReturnNode value: '5'); 
 				yourself}
-	| ""^"" Expression OptionalPeriod
-			{OrderedCollection with: (RBReturnNode value: '2')}
+	| OptionalPeriod ""^"" Expression OptionalPeriod
+			{OrderedCollection with: (RBReturnNode value: '3')}
 	;
 OptionalPeriod
 	: 
