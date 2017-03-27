@@ -1,0 +1,1 @@
+I compile a grammar and generates the code for the parser. I hold an instance of a scanner compiler for the scanner part of the grammar.
