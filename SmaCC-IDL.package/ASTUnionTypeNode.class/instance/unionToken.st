@@ -1,0 +1,3 @@
+generated
+unionToken
+	^ unionToken

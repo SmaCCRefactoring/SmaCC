@@ -1,0 +1,3 @@
+generated
+startingStateForspecification
+	^ 1

@@ -1,0 +1,3 @@
+generated
+lessThanLessThanToken
+	^ lessThanLessThanToken

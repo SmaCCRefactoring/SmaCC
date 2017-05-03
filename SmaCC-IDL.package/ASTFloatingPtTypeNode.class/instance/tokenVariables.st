@@ -1,0 +1,3 @@
+generated
+tokenVariables
+	^ #(#floatToken #doubleToken)

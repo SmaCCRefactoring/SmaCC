@@ -1,0 +1,3 @@
+generated
+module
+	^ module

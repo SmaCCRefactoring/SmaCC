@@ -1,0 +1,3 @@
+generated
+visitSimpleDeclarators: aSimpleDeclarators
+	^ self visitspecification: aSimpleDeclarators

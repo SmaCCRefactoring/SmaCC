@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ASTspecificationNode",
+	"category" : "SmaCC-IDL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"longToken"
+	],
+	"name" : "ASTSignedLongIntNode",
+	"type" : "normal"
+}

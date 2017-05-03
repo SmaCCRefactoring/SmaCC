@@ -1,0 +1,3 @@
+generated
+constType
+	^ constType

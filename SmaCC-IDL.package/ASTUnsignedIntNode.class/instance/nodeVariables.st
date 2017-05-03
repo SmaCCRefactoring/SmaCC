@@ -1,0 +1,3 @@
+generated
+nodeVariables
+	^ #(#unsignedLongInt #unsignedShortInt)

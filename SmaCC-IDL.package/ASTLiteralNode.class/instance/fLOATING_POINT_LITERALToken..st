@@ -1,0 +1,3 @@
+generated
+fLOATING_POINT_LITERALToken: aSmaCCToken
+	fLOATING_POINT_LITERALToken := aSmaCCToken

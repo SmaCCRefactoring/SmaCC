@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "ASTspecificationNode",
+	"category" : "SmaCC-IDL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"caseToken",
+		"constExp",
+		"colonToken",
+		"defaultToken"
+	],
+	"name" : "ASTCaseLabelNode",
+	"type" : "normal"
+}

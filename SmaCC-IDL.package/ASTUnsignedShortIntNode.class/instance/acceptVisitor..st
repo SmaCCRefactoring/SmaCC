@@ -1,0 +1,3 @@
+generated
+acceptVisitor: aspecificationVisitor
+	^ aspecificationVisitor visitUnsignedShortInt: self

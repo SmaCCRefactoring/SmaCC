@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "ASTspecificationNode",
+	"category" : "SmaCC-IDL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"integerType",
+		"charType",
+		"booleanType",
+		"floatingPtType",
+		"stringType",
+		"scopedName"
+	],
+	"name" : "ASTConstTypeNode",
+	"type" : "normal"
+}

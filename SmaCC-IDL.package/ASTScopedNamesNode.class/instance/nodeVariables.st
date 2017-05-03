@@ -1,0 +1,3 @@
+generated
+nodeVariables
+	^ #(#scopedName #scopedNames)

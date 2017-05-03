@@ -1,0 +1,16 @@
+{
+	"instance" : {
+		"greaterThanGreaterThanToken:" : "MichelBany 10/14/2016 17:34",
+		"shiftExpr:" : "MichelBany 10/14/2016 17:34",
+		"lessThanLessThanToken" : "MichelBany 10/14/2016 17:34",
+		"shiftExpr" : "MichelBany 10/14/2016 17:34",
+		"addExpr:" : "MichelBany 10/14/2016 17:34",
+		"lessThanLessThanToken:" : "MichelBany 10/14/2016 17:34",
+		"greaterThanGreaterThanToken" : "MichelBany 10/14/2016 17:34",
+		"acceptVisitor:" : "MichelBany 10/14/2016 17:34",
+		"tokenVariables" : "MichelBany 10/14/2016 17:34",
+		"addExpr" : "MichelBany 10/14/2016 17:34",
+		"nodeVariables" : "MichelBany 10/14/2016 17:34"
+	},
+	"class" : { }
+}

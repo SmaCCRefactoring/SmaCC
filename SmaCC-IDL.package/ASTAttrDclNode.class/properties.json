@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "ASTspecificationNode",
+	"category" : "SmaCC-IDL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"attributeToken",
+		"paramTypeSpec",
+		"simpleDeclarators",
+		"readonlyToken"
+	],
+	"name" : "ASTAttrDclNode",
+	"type" : "normal"
+}

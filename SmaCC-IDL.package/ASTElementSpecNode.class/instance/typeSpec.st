@@ -1,0 +1,3 @@
+generated
+typeSpec
+	^ typeSpec

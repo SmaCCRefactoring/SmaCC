@@ -1,0 +1,3 @@
+generated
+scopedNames
+	^ scopedNames

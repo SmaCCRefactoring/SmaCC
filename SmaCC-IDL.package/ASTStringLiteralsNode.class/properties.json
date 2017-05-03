@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "ASTspecificationNode",
+	"category" : "SmaCC-IDL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"sTRING_LITERALToken",
+		"stringLiterals",
+		"commaToken"
+	],
+	"name" : "ASTStringLiteralsNode",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "ASTspecificationNode",
+	"category" : "SmaCC-IDL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"xorExpr",
+		"orExpr",
+		"orToken"
+	],
+	"name" : "ASTOrExprNode",
+	"type" : "normal"
+}

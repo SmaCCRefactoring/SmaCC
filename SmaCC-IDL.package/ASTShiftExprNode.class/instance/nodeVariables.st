@@ -1,0 +1,3 @@
+generated
+nodeVariables
+	^ #(#addExpr #shiftExpr)

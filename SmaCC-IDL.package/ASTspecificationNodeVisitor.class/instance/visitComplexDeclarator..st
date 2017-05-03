@@ -1,0 +1,3 @@
+generated
+visitComplexDeclarator: aComplexDeclarator
+	^ self visitspecification: aComplexDeclarator

@@ -1,0 +1,3 @@
+generated
+tokenVariables
+	^ #(#interfaceToken #id)

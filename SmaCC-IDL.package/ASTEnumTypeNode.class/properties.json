@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "ASTspecificationNode",
+	"category" : "SmaCC-IDL",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"enumToken",
+		"id",
+		"leftBraceToken",
+		"enumerators",
+		"rightBraceToken"
+	],
+	"name" : "ASTEnumTypeNode",
+	"type" : "normal"
+}

@@ -1,0 +1,20 @@
+{
+	"instance" : {
+		"opDcl:" : "MichelBany 10/14/2016 17:33",
+		"typeDcl:" : "MichelBany 10/14/2016 17:33",
+		"semicolonToken:" : "MichelBany 10/14/2016 17:33",
+		"semicolonToken" : "MichelBany 10/14/2016 17:33",
+		"constDcl:" : "MichelBany 10/14/2016 17:33",
+		"exceptDcl:" : "MichelBany 10/14/2016 17:33",
+		"opDcl" : "MichelBany 10/14/2016 17:33",
+		"exceptDcl" : "MichelBany 10/14/2016 17:33",
+		"acceptVisitor:" : "MichelBany 10/14/2016 17:34",
+		"tokenVariables" : "MichelBany 10/14/2016 17:33",
+		"constDcl" : "MichelBany 10/14/2016 17:33",
+		"attrDcl:" : "MichelBany 10/14/2016 17:33",
+		"attrDcl" : "MichelBany 10/14/2016 17:33",
+		"nodeVariables" : "MichelBany 10/14/2016 17:33",
+		"typeDcl" : "MichelBany 10/14/2016 17:33"
+	},
+	"class" : { }
+}
