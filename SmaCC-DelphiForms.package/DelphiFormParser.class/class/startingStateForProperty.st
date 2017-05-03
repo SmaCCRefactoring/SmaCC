@@ -1,0 +1,3 @@
+generated
+startingStateForProperty
+	^ 2

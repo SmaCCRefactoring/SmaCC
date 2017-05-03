@@ -1,0 +1,3 @@
+generated
+symbolNames
+	^ #('"."' '"]"' '"inherited"' '"inline"' '"="' '":"' '"end"' '"object"' '"["' '"+"' '">"' '","' '"item"' '"<"' '"}"' '"("' '")"' '"{"' '<boolean>' '<name>' '<integer>' '<float>' '<string>' '<bytes>' '<whitespace>' '<patternToken>' 'Form' 'Index' 'Properties' 'Item' 'Assignment' 'QualifiedName' 'Number' 'String' 'Set' 'Array' 'ByteArray' 'Boolean' 'ObjectArray' 'Value' 'Object' 'SetItems_' 'SetItems' 'Values' 'ByteData' 'Property' 'Items' 'E O F' 'error' 'B e g i n' 'ObjectType')

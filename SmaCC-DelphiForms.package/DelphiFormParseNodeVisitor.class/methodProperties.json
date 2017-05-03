@@ -1,0 +1,21 @@
+{
+	"instance" : {
+		"visitNamedValue:" : "ThierryGoubier 5/3/2017 19:29",
+		"visitBoolean:" : "ThierryGoubier 5/3/2017 19:29",
+		"visitInteger:" : "ThierryGoubier 5/3/2017 19:29",
+		"visitLiteral:" : "ThierryGoubier 5/3/2017 19:29",
+		"visitCombinedString:" : "ThierryGoubier 5/3/2017 19:29",
+		"visitFloat:" : "ThierryGoubier 5/3/2017 19:29",
+		"visitProperty:" : "ThierryGoubier 5/3/2017 19:29",
+		"visitArray:" : "ThierryGoubier 5/3/2017 19:29",
+		"visitItem:" : "ThierryGoubier 5/3/2017 19:29",
+		"visitByteArray:" : "ThierryGoubier 5/3/2017 19:29",
+		"visitSet:" : "ThierryGoubier 5/3/2017 19:29",
+		"visitParse:" : "ThierryGoubier 5/3/2017 19:29",
+		"visitString:" : "ThierryGoubier 5/3/2017 19:29",
+		"visitObjectArray:" : "ThierryGoubier 5/3/2017 19:29",
+		"visitObject:" : "ThierryGoubier 5/3/2017 19:29",
+		"visitQualifiedName:" : "ThierryGoubier 5/3/2017 19:29"
+	},
+	"class" : { }
+}

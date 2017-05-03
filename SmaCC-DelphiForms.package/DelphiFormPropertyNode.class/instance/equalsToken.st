@@ -1,0 +1,3 @@
+generated
+equalsToken
+	^ equalsToken

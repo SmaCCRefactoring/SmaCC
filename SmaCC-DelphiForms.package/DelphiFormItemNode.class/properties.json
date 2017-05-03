@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiFormParseNode",
+	"category" : "SmaCC-DelphiForms",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"itemToken",
+		"properties",
+		"endToken"
+	],
+	"name" : "DelphiFormItemNode",
+	"type" : "normal"
+}

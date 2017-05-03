@@ -1,0 +1,3 @@
+generated
+indexToken
+	^ indexToken

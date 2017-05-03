@@ -1,0 +1,3 @@
+generated
+startingStateForObject
+	^ 3
