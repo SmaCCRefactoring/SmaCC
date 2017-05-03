@@ -1,0 +1,34 @@
+{
+	"instance" : {
+		"rewriteCode" : "JohnBrant 12/28/2016 15:24",
+		"debuggerStructureIn:" : "JohnBrant 12/21/2016 20:34",
+		"findFirstContext:" : "JohnBrant 3/13/2017 10:26",
+		"sourceForSelection:" : "JohnBrant 12/22/2016 14:59",
+		"buildRuleSourceIn:" : "JohnBrant 1/2/2017 12:04",
+		"rewriteCodePane" : "JohnBrant 12/28/2016 15:25",
+		"saveMethod:in:" : "JohnBrant 1/2/2017 12:18",
+		"currentInputSelectionInterval" : "JohnBrant 12/28/2016 11:24",
+		"save:into:" : "JohnBrant 1/2/2017 12:23",
+		"saveRule:in:" : "JohnBrant 1/2/2017 12:18",
+		"intervalFromMethodNode:inSource:" : "JohnBrant 12/23/2016 07:52",
+		"debuggerTransmissionsIn:" : "JohnBrant 12/21/2016 08:05",
+		"buildInputOutputSourceIn:" : "JohnBrant 1/2/2017 15:15",
+		"codeObjectForSelection:" : "JohnBrant 1/2/2017 11:56",
+		"sourceSelectionIntervalFor:" : "JohnBrant 12/30/2016 09:09",
+		"equivalentNodeTo:in:" : "JohnBrant 12/23/2016 11:32",
+		"buildRuleStackIn:" : "JohnBrant 1/2/2017 12:18",
+		"isTransformation:" : "JohnBrant 1/2/2017 11:44",
+		"inputSelectionIntervalFor:" : "JohnBrant 12/30/2016 09:09",
+		"outputSelectionIntervalFor:" : "JohnBrant 12/30/2016 09:11"
+	},
+	"class" : {
+		"availableAutomatically" : "JohnBrant 12/31/2016 20:32",
+		"initialize" : "JohnBrant 12/20/2016 15:17",
+		"handlesContext:" : "JohnBrant 12/20/2016 15:17",
+		"registerToolsOn:" : "JohnBrant 12/20/2016 15:21",
+		"isTransformationContext:" : "JohnBrant 12/20/2016 15:18",
+		"sessionClass" : "JohnBrant 12/20/2016 15:16",
+		"defaultTitle" : "JohnBrant 12/21/2016 07:41",
+		"register" : "JohnBrant 12/20/2016 15:21"
+	}
+}

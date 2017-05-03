@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "DebugSession",
+	"category" : "SmaCC-Rewrite-Engine-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"rootContext"
+	],
+	"name" : "SmaCCTransformationToolkitDebugSession",
+	"type" : "normal"
+}

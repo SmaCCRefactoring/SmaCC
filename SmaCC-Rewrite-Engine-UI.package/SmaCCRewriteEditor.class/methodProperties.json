@@ -1,0 +1,14 @@
+{
+	"instance" : {
+		"compose" : "JohnBrant 1/2/2017 12:37",
+		"deleteRule:" : "JohnBrant 12/22/2016 13:49",
+		"treeInitializer:" : "JohnBrant 12/27/2016 14:48",
+		"addMethodRuleTo:" : "JohnBrant 1/2/2017 12:30",
+		"initialize" : "JohnBrant 12/27/2016 14:46",
+		"addFileRuleTo:" : "JohnBrant 12/29/2016 14:48",
+		"addPropertyRuleTo:" : "JohnBrant 1/2/2017 12:30",
+		"addRewrite:to:" : "JohnBrant 1/2/2017 12:44",
+		"addRuleTo:" : "JohnBrant 12/22/2016 11:41"
+	},
+	"class" : { }
+}

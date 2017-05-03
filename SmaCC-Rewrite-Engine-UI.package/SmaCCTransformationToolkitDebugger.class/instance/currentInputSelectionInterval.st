@@ -1,0 +1,3 @@
+accessing
+currentInputSelectionInterval
+	^ self selectionIntervalForPane: #originalSource

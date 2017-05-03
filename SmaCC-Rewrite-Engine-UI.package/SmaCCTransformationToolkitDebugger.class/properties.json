@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GTGenericStackDebugger",
+	"category" : "SmaCC-Rewrite-Engine-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SmaCCTransformationToolkitDebugger",
+	"type" : "normal"
+}
