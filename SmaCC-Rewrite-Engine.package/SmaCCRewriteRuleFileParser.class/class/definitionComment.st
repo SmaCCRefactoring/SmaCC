@@ -12,6 +12,9 @@ definitionComment
 <cmt>
 	: (\""[^\""]*\"")+
 	;
+<method>
+	: \#([^!]|!!)+ !
+	;
 <whitespace>
 	: <isSeparator>+
 	;
@@ -32,10 +35,23 @@ Import
 	;
 Rule
 	: Comment 'comment' Match 'match' ""->"" Transformation 'transformation' {SmaCCRewrite comment: comment match: match transformation: transformation}
+	| Comment 'comment' <method> 'method' {SmaCCRewriteMethodDefinition comment: comment source: ((method value copyFrom: 2 to: method value size - 1) copyReplaceAll: '!!' with: '!')}
+	| Comment 'comment' Variables 'variables' {SmaCCRewritePropertyDefinition comment: comment locals: ((variables reject: [:each | each first]) collect: [:each | each last]) globals: ((variables select: [:each | each first]) collect: [:each | each last])}
 	;
 Comment
 	: {nil}
 	| <cmt> {('1' value copyFrom: 2 to: '1' value size - 1) copyReplaceAll: '""""' with: '""'}
+	;
+Variables
+	: ""("" VariableList 'vars' "")"" {vars}
+	;
+VariableList
+	: {OrderedCollection new}
+	| VariableList 'vars' Variable 'var' {vars add: var; yourself}
+	;
+Variable
+	: ""-"" <name> 'name' {Array with: false with: name value}
+	| ""+"" <name> 'name' {Array with: true with: name value}
 	;
 Match
 	: StringExpression {SmaCCRewriteTreeMatch new source: '1'; yourself}

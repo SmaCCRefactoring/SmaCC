@@ -1,9 +1,10 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 12:29:25",
-		"compositeTokenVariables" : "JohnBrant 6/24/2016 12:29:25",
-		"initialize" : "JohnBrant 6/24/2016 12:29:25",
-		"lines" : "JohnBrant 6/24/2016 12:29:25",
-		"lines:" : "JohnBrant 6/24/2016 12:29:25" } }
+		"initialize" : "ThierryGoubier 9/23/2016 19:26:24",
+		"lines" : "ThierryGoubier 9/23/2016 19:26:24",
+		"lines:" : "ThierryGoubier 9/23/2016 19:26:24",
+		"acceptVisitor:" : "ThierryGoubier 9/23/2016 19:26:24",
+		"compositeTokenVariables" : "ThierryGoubier 9/23/2016 19:26:24"
+	},
+	"class" : { }
+}

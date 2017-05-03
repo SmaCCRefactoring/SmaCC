@@ -1,0 +1,3 @@
+generated
+visitNullConditionalMemberAccess: aNullConditionalMemberAccess
+	^ self visitMemberAccess: aNullConditionalMemberAccess

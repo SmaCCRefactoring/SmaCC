@@ -1,17 +1,16 @@
 {
-	"category" : "SmaCC-Rewrite-Engine",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "SmaCCRewriteMatch",
+	"category" : "SmaCC-Rewrite-Engine",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"nodeClass",
 		"code",
 		"method",
-		"enableDebug" ],
+		"enableDebug"
+	],
 	"name" : "SmaCCRewriteTypeMatch",
-	"pools" : [
-		 ],
-	"super" : "SmaCCRewriteMatch",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -1,0 +1,4 @@
+generated
+visitNullConditionalInvocationExpression: aNullConditionalInvocationExpression
+	^ self
+		visitInvocationExpression: aNullConditionalInvocationExpression

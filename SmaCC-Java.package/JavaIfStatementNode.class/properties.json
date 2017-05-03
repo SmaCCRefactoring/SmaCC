@@ -1,18 +1,17 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JavaStatementNode",
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"ifToken",
-		"left",
+		"leftParen",
 		"expression",
-		"right",
-		"trueStatement" ],
+		"rightParen",
+		"trueStatement"
+	],
 	"name" : "JavaIfStatementNode",
-	"pools" : [
-		 ],
-	"super" : "JavaStatementNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

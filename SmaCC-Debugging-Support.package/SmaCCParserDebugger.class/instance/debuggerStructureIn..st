@@ -5,7 +5,7 @@ debuggerStructureIn: browser
 			row
 				column: #stackState span: 6;
 				column: #potential span: 6.
-			isGLR
+			self isGLR
 				ifTrue: [ row column: #glrStates ] ].
 	browser
 		row: [ :row | 

@@ -1,13 +1,7 @@
 transforming
 transformUsingContext: aSmaCCRewriteMatchContext
-	(SmaCCRewriteProcessor haltBlock
-		value: rewrite
-		value: aSmaCCRewriteMatchContext match)
-		ifTrue:
-			[ Processor activeProcess
-				debug: 'Debugging ' , rewrite displayString
-				topFrame: thisContext
-				resumable: true ].
-	^ self method
-		valueWithReceiver: aSmaCCRewriteMatchContext
-		arguments: #()
+	self class haltBlock
+		ifNotNil: [ :block | 
+			(block value: rewrite value: aSmaCCRewriteMatchContext match)
+				ifTrue: [ ^ aSmaCCRewriteMatchContext debugMethod: self method message: rewrite displayString ] ].
+	^ self method valueWithReceiver: aSmaCCRewriteMatchContext arguments: #()

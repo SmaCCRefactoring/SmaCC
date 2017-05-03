@@ -1,7 +1,8 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"basicModelTypes:" : "JohnBrant 6/24/2016 12:26:52",
-		"hasReduceAction" : "JohnBrant 6/24/2016 12:26:52",
-		"source" : "JohnBrant 6/24/2016 12:26:52" } }
+		"source" : "ThierryGoubier 3/27/2017 22:53:01",
+		"hasReduceAction" : "ThierryGoubier 3/27/2017 22:53:01",
+		"basicModelTypes:" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : { }
+}

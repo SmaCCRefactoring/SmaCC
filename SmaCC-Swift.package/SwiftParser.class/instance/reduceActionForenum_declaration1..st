@@ -85,14 +85,14 @@ reduceActionForenum_declaration1: nodes
 	result addObjects: ((nodes at: 2) at: 47) to: result expressions.
 	result addTokens: ((nodes at: 2) at: 48) to: result willSetTokens.
 	result addTokens: ((nodes at: 2) at: 49) to: result didSetTokens.
+	result addNodes: ((nodes at: 2) at: 50) to: result declarations.
+	result addTokens: ((nodes at: 2) at: 51) to: result convenienceTokens.
+	result addTokens: ((nodes at: 2) at: 52) to: result initTokens.
+	result addTokens: ((nodes at: 2) at: 53) to: result deinitTokens.
+	result addTokens: ((nodes at: 2) at: 54) to: result extensionTokens.
+	result addTokens: ((nodes at: 2) at: 55) to: result subscriptTokens.
+	result addTokens: ((nodes at: 2) at: 56) to: result caseTokens.
 	result
-		addTokens: ((nodes at: 2) at: 50)
+		addTokens: ((nodes at: 2) at: 57)
 		to: result full_string_literalTokens.
-	result addTokens: ((nodes at: 2) at: 51) to: result deinitTokens.
-	result addTokens: ((nodes at: 2) at: 52) to: result extensionTokens.
-	result addTokens: ((nodes at: 2) at: 53) to: result caseTokens.
-	result addNodes: ((nodes at: 2) at: 54) to: result declarations.
-	result addTokens: ((nodes at: 2) at: 55) to: result convenienceTokens.
-	result addTokens: ((nodes at: 2) at: 56) to: result initTokens.
-	result addTokens: ((nodes at: 2) at: 57) to: result subscriptTokens.
 	^ result

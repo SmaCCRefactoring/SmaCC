@@ -6,6 +6,8 @@ definitionComment
 
 %start Expression Statement Program ;
 
+%ignore_variables semicolon comma leftParen rightParen leftBracket rightBracket leftBrace rightBrace colonToken;
+
 %hierarchy Literal (
 	NullLiteral 
 	BooleanLiteral 
@@ -55,7 +57,7 @@ definitionComment
 
 %glr;
 
-%id <semicolon> <identifier> <slash> <slashEqual> <regular_expression>;
+%id <semicolon> <identifier> <slash> <slashEqual> <regular_expression> <identifierName>;
 
 %right ""else"";
 
@@ -84,6 +86,9 @@ definitionComment
 ;
 <identifier>
 :	<identifier_start> <identifier_part>*
+;
+<identifierName>
+:	<identifier>
 ;
 <whitespace>
 :	<isSeparator>+
@@ -208,7 +213,7 @@ PropertyAssignment
 |	""set"" 'setToken' PropertyName 'key' ""("" 'leftParen' PropertySetParameterList "")"" 'rightParen' ""{"" 'leftBrace' FunctionBody ""}"" 'rightBrace' {{SetPropertyAssignment}}
 ;
 PropertyName 
-:	IdentifierName 'name' {{NameExpression}}
+:	<identifierName> 'name' {{NameExpression}}
 |	StringLiteral 'name' {{NameExpression}}
 |	NumericLiteral 'name' {{NameExpression}}
 ;
@@ -219,7 +224,7 @@ MemberExpression
 :	PrimaryExpression 
 |	FunctionExpression 
 |	MemberExpression 'expression' ""["" 'leftBracket' Expression 'fieldExpression' ""]"" 'rightBracket' {{IndexedPropertyExpression}}
-|	MemberExpression 'expression' ""."" 'periodToken' IdentifierName 'name' {{NamedPropertyExpression}}
+|	MemberExpression 'expression' ""."" 'periodToken' <identifierName> 'name' {{NamedPropertyExpression}}
 |	""new"" 'newToken' MemberExpression 'expression' Arguments {{NewExpression}}
 ;
 NewExpression 
@@ -230,7 +235,7 @@ CallExpression
 :	MemberExpression 'expression' Arguments {{}}
 |	CallExpression 'expression' Arguments {{}}
 |	CallExpression 'expression' ""["" 'leftBracket' Expression 'fieldExpression' ""]"" 'rightBracket' {{IndexedPropertyExpression}}
-|	CallExpression 'expression' ""."" 'periodToken' IdentifierName 'name' {{NamedPropertyExpression}}
+|	CallExpression 'expression' ""."" 'periodToken' <identifierName> 'name' {{NamedPropertyExpression}}
 ;
 Arguments 
 :	""("" 'left' "")"" 'right'
@@ -592,9 +597,9 @@ BooleanLiteral
 #Identifier
 #:	IdentifierName
 #;
-IdentifierName
-:	<identifier>
-;
+#IdentifierName
+#:	<identifierName>
+#;
 StringLiteral
 :	<string>
 ;

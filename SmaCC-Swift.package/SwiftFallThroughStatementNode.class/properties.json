@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Swift",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"fallthroughToken" ],
-	"name" : "SwiftFallThroughStatementNode",
-	"pools" : [
-		 ],
 	"super" : "SwiftControlTransferStatementNode",
-	"type" : "normal" }
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fallthroughToken"
+	],
+	"name" : "SwiftFallThroughStatementNode",
+	"type" : "normal"
+}

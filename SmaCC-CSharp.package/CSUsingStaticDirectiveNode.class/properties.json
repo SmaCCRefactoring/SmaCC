@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "CSUsingDirectiveNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"staticToken"
+	],
+	"name" : "CSUsingStaticDirectiveNode",
+	"type" : "normal"
+}

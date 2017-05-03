@@ -1,22 +1,21 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JavaStatementNode",
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"forToken",
-		"left",
+		"leftParen",
 		"modifiers",
 		"type",
 		"name",
 		"colon",
 		"expression",
-		"right",
-		"statement" ],
+		"rightParen",
+		"statement"
+	],
 	"name" : "JavaForEachStatementNode",
-	"pools" : [
-		 ],
-	"super" : "JavaStatementNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

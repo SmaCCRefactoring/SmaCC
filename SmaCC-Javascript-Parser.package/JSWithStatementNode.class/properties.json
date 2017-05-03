@@ -1,18 +1,17 @@
 {
-	"category" : "SmaCC-Javascript-Parser",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JSStatementNode",
+	"category" : "SmaCC-Javascript-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"withToken",
 		"leftParen",
 		"expression",
 		"rightParen",
-		"statement" ],
+		"statement"
+	],
 	"name" : "JSWithStatementNode",
-	"pools" : [
-		 ],
-	"super" : "JSStatementNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -1,14 +1,18 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"canMatch:" : "JohnBrant 6/24/2016 13:12:32",
-		"displayOn:" : "JohnBrant 6/24/2016 13:12:32",
-		"displayString" : "JohnBrant 6/24/2016 13:12:32",
-		"match:" : "JohnBrant 6/24/2016 13:12:32",
-		"modified" : "JohnBrant 6/24/2016 13:12:32",
-		"parserClass" : "JohnBrant 6/24/2016 13:12:32",
-		"postCopy" : "JohnBrant 6/24/2016 13:12:32",
-		"rewrite" : "JohnBrant 6/24/2016 13:12:32",
-		"rewrite:" : "JohnBrant 6/24/2016 13:12:32",
-		"saveOn:" : "JohnBrant 6/24/2016 13:12:32" } }
+		"displayOn:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"match:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"displayString" : "ThierryGoubier 9/23/2016 20:11:02",
+		"saveOn:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"postCopy" : "ThierryGoubier 9/23/2016 20:11:02",
+		"rewrite" : "ThierryGoubier 9/23/2016 20:11:02",
+		"parserClass" : "ThierryGoubier 9/23/2016 20:11:02",
+		"modified" : "ThierryGoubier 9/23/2016 20:11:02",
+		"rewrite:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"canMatch:" : "ThierryGoubier 9/23/2016 20:11:02"
+	},
+	"class" : {
+		"haltBlock" : "JohnBrant 12/28/2016 09:32",
+		"haltBlock:" : "JohnBrant 12/28/2016 09:32"
+	}
+}

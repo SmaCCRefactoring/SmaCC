@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "CSMemberAccessNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"baseOperations",
+		"questionMarkToken",
+		"identifierToken"
+	],
+	"name" : "CSNullConditionalMemberAccessNode",
+	"type" : "normal"
+}

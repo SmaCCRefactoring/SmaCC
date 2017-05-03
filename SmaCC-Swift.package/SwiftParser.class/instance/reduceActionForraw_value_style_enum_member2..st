@@ -70,7 +70,7 @@ reduceActionForraw_value_style_enum_member2: nodes
 	self addAll: ((nodes at: 1) at: 9) to: (result at: 9).
 	self addAll: ((nodes at: 1) at: 10) to: (result at: 10).
 	self addAll: ((nodes at: 1) at: 11) to: (result at: 11).
-	self add: ((nodes at: 1) at: 12) to: (result at: 53).
+	self add: ((nodes at: 1) at: 12) to: (result at: 57).
 	self addAll: ((nodes at: 1) at: 13) to: (result at: 44).
 	self addAll: ((nodes at: 1) at: 14) to: (result at: 50).
 	self addAll: ((nodes at: 1) at: 15) to: (result at: 31).

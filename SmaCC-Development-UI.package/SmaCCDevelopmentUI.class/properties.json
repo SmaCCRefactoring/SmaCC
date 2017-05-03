@@ -1,10 +1,12 @@
 {
-	"category" : "SmaCC-Development-UI",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		"ShowPrecedenceConflicts" ],
 	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "SmaCC-Development-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"ShowPrecedenceConflicts"
+	],
 	"instvars" : [
 		"tabList",
 		"parserClassMorph",
@@ -21,9 +23,8 @@
 		"isGLR",
 		"itemsTextMorph",
 		"symbolsTextMorph",
-		"grammarCompiler" ],
+		"grammarCompiler"
+	],
 	"name" : "SmaCCDevelopmentUI",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

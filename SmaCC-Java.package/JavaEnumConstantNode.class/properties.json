@@ -1,10 +1,10 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JavaProgramNode",
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"annotations",
 		"name",
@@ -12,11 +12,10 @@
 		"expressions",
 		"commas",
 		"rightParen",
-		"left",
+		"leftBrace",
 		"declarations",
-		"right" ],
+		"rightBrace"
+	],
 	"name" : "JavaEnumConstantNode",
-	"pools" : [
-		 ],
-	"super" : "JavaProgramNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

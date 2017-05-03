@@ -1,0 +1,28 @@
+{
+	"instance" : {
+		"initialize" : "JohnBrant 9/10/2016 14:43",
+		"followed:" : "JohnBrant 9/10/2016 07:59",
+		"name" : "JohnBrant 9/9/2016 20:09",
+		"stack" : "JohnBrant 10/8/2016 17:21",
+		"isFollowed" : "JohnBrant 9/10/2016 07:58",
+		"state:" : "JohnBrant 9/10/2016 07:45",
+		"parser:" : "JohnBrant 10/8/2016 17:10",
+		"gtGraphInspectorViewIn:" : "JohnBrant 10/8/2016 17:21",
+		"name:" : "JohnBrant 9/9/2016 20:09",
+		"addReduction:" : "JohnBrant 9/10/2016 08:28",
+		"addDirectLinkToNodeNamed:state:" : "JohnBrant 10/8/2016 17:11",
+		"allNodesInto:" : "JohnBrant 9/10/2016 10:48",
+		"description" : "JohnBrant 9/10/2016 10:48",
+		"success:" : "JohnBrant 9/10/2016 10:47",
+		"followed" : "JohnBrant 9/9/2016 20:11",
+		"state" : "JohnBrant 9/10/2016 07:45",
+		"addPrevious:" : "JohnBrant 9/10/2016 07:52",
+		"success" : "JohnBrant 9/10/2016 10:47",
+		"allNodes" : "JohnBrant 9/9/2016 22:32",
+		"directLinks" : "JohnBrant 9/9/2016 22:38"
+	},
+	"class" : {
+		"gtExampleSmaCCGraphNode" : "PavelKrivanek 4/21/2017 16:25",
+		"named:state:parser:" : "JohnBrant 10/8/2016 17:11"
+	}
+}

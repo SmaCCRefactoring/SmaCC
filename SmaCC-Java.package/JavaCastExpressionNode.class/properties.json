@@ -1,15 +1,16 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"type",
-		"expression" ],
-	"name" : "JavaCastExpressionNode",
-	"pools" : [
-		 ],
 	"super" : "JavaExpressionNode",
-	"type" : "normal" }
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"leftParen",
+		"type",
+		"rightParen",
+		"expression"
+	],
+	"name" : "JavaCastExpressionNode",
+	"type" : "normal"
+}

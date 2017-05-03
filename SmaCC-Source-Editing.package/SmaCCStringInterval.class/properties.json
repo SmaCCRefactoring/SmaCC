@@ -1,10 +1,10 @@
 {
-	"category" : "SmaCC-Source-Editing",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "SmaCC-Source-Editing",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"id",
 		"start",
@@ -12,9 +12,8 @@
 		"next",
 		"previous",
 		"string",
-		"isRemoved" ],
+		"isRemoved"
+	],
 	"name" : "SmaCCStringInterval",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

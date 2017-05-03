@@ -1,18 +1,17 @@
 {
-	"category" : "SmaCC-CSharp",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "CSProgramNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"_attributes",
 		"modifiers",
 		"getToken",
 		"body",
-		"semicolonToken" ],
+		"semicolonToken"
+	],
 	"name" : "CSGetAccessorDeclarationNode",
-	"pools" : [
-		 ],
-	"super" : "CSProgramNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

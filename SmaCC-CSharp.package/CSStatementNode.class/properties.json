@@ -1,14 +1,11 @@
 {
-	"category" : "SmaCC-CSharp",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "CSStatementNode",
-	"pools" : [
-		 ],
 	"super" : "CSProgramNode",
-	"type" : "normal" }
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CSStatementNode",
+	"type" : "normal"
+}

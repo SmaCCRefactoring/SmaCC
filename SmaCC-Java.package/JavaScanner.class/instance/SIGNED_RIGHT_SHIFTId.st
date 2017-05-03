@@ -1,3 +1,3 @@
 generated
 SIGNED_RIGHT_SHIFTId
-	^ 96
+	^ 97

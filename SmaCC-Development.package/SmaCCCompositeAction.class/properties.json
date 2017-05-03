@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Development",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		"actions" ],
-	"name" : "SmaCCCompositeAction",
-	"pools" : [
-		 ],
 	"super" : "SmaCCAction",
-	"type" : "normal" }
+	"category" : "SmaCC-Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"actions"
+	],
+	"name" : "SmaCCCompositeAction",
+	"type" : "normal"
+}

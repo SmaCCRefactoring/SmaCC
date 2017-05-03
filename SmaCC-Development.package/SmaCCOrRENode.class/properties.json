@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Development",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		"nodes" ],
-	"name" : "SmaCCOrRENode",
-	"pools" : [
-		 ],
 	"super" : "SmaCCRegularExpressionNode",
-	"type" : "normal" }
+	"category" : "SmaCC-Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nodes"
+	],
+	"name" : "SmaCCOrRENode",
+	"type" : "normal"
+}

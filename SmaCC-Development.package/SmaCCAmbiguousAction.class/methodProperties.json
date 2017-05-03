@@ -1,10 +1,11 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"addAction:" : "JohnBrant 6/24/2016 12:26:52",
-		"errorType" : "JohnBrant 6/24/2016 12:26:52",
-		"isAmbiguous" : "JohnBrant 6/24/2016 12:26:52",
-		"mergeWith:prefer:" : "JohnBrant 6/24/2016 12:26:52",
-		"preferredAction" : "JohnBrant 6/24/2016 12:26:52",
-		"sortedActions" : "JohnBrant 6/24/2016 12:26:52" } }
+		"mergeWith:prefer:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"sortedActions" : "ThierryGoubier 3/27/2017 22:53:01",
+		"isAmbiguous" : "ThierryGoubier 3/27/2017 22:53:01",
+		"addAction:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"errorType" : "ThierryGoubier 3/27/2017 22:53:01",
+		"preferredAction" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : { }
+}

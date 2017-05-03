@@ -1,21 +1,24 @@
 {
-	"class" : {
-		"onRHS:" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"=" : "JohnBrant 6/24/2016 12:26:52",
-		"baseClassType" : "JohnBrant 6/24/2016 12:26:52",
-		"basicModelTypes:" : "JohnBrant 6/24/2016 12:26:52",
-		"basicModelTypes:forIndex:" : "JohnBrant 6/24/2016 12:26:52",
-		"codeGenerator" : "JohnBrant 6/24/2016 12:26:52",
-		"hasReduceAction" : "JohnBrant 6/24/2016 12:26:52",
-		"hash" : "JohnBrant 6/24/2016 12:26:52",
-		"model" : "JohnBrant 6/24/2016 12:26:52",
-		"modelTypes:" : "JohnBrant 6/24/2016 12:26:52",
-		"nodeType:" : "JohnBrant 6/24/2016 12:26:52",
-		"reduceExpressionParseTree" : "JohnBrant 6/24/2016 12:26:52",
-		"returnedNodeIndex" : "JohnBrant 6/24/2016 12:26:52",
-		"returnsSingleVariable" : "JohnBrant 6/24/2016 12:26:52",
-		"returnsVariableCollection" : "JohnBrant 6/24/2016 12:26:52",
-		"rhs" : "JohnBrant 6/24/2016 12:26:52",
-		"rhs:" : "JohnBrant 6/24/2016 12:26:52",
-		"source" : "JohnBrant 6/24/2016 12:26:52" } }
+		"source" : "ThierryGoubier 3/27/2017 22:53:01",
+		"modelTypes:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"basicModelTypes:forIndex:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"model" : "ThierryGoubier 3/27/2017 22:53:01",
+		"returnedNodeIndex" : "ThierryGoubier 3/27/2017 22:53:01",
+		"basicModelTypes:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"=" : "ThierryGoubier 3/27/2017 22:53:01",
+		"nodeType:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"returnsSingleVariable" : "ThierryGoubier 3/27/2017 22:53:01",
+		"rhs" : "ThierryGoubier 3/27/2017 22:53:01",
+		"returnsVariableCollection" : "ThierryGoubier 3/27/2017 22:53:01",
+		"hash" : "ThierryGoubier 3/27/2017 22:53:01",
+		"rhs:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"codeGenerator" : "ThierryGoubier 3/27/2017 22:53:01",
+		"hasReduceAction" : "ThierryGoubier 3/27/2017 22:53:01",
+		"baseClassType" : "ThierryGoubier 3/27/2017 22:53:01",
+		"reduceExpressionParseTree" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : {
+		"onRHS:" : "ThierryGoubier 3/27/2017 22:53:01"
+	}
+}

@@ -1,4 +1,3 @@
 matching
-methodMatches: aSmaCCParseNode
-	^ (self method valueWithReceiver: aSmaCCParseNode arguments: #())
-		= true
+methodMatches: aSmaCCRewriteMatchContext
+	^ (self method valueWithReceiver: aSmaCCRewriteMatchContext arguments: #()) = true

@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"_Token" : "JohnBrant 6/24/2016 13:14:22",
-		"_Token:" : "JohnBrant 6/24/2016 13:14:22",
-		"acceptVisitor:" : "JohnBrant 6/24/2016 13:14:22",
-		"tokenVariables" : "JohnBrant 6/24/2016 13:14:22" } }
+		"tokenVariables" : "ThierryGoubier 9/23/2016 19:27:29",
+		"_Token:" : "ThierryGoubier 9/23/2016 19:27:29",
+		"_Token" : "ThierryGoubier 9/23/2016 19:27:29",
+		"acceptVisitor:" : "ThierryGoubier 9/23/2016 19:27:29"
+	},
+	"class" : { }
+}

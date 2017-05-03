@@ -1,17 +1,16 @@
 {
-	"category" : "SmaCC-CSharp",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "CSProgramNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"_attributes",
 		"paramsToken",
 		"type",
-		"name" ],
+		"name"
+	],
 	"name" : "CSArrayParameterNode",
-	"pools" : [
-		 ],
-	"super" : "CSProgramNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

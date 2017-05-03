@@ -59,6 +59,6 @@ reduceActionForparameter_clause2: nodes
 	self addAll: ((nodes at: 2) at: 26) to: (result at: 26).
 	self addAll: ((nodes at: 2) at: 27) to: (result at: 27).
 	self addAll: ((nodes at: 2) at: 28) to: (result at: 28).
-	self add: (nodes at: 3) to: (result at: 25).
+	self add: (nodes at: 3) to: (result at: 24).
 	self add: (nodes at: 4) to: (result at: 2).
 	^ result

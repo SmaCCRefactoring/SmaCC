@@ -1,16 +1,15 @@
 {
-	"category" : "SmaCC-CSharp",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "CSProgramNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"name",
 		"equal",
-		"value" ],
+		"value"
+	],
 	"name" : "CSNamedArgumentNode",
-	"pools" : [
-		 ],
-	"super" : "CSProgramNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

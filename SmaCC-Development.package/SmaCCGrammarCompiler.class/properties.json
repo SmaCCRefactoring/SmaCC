@@ -1,10 +1,10 @@
 {
-	"category" : "SmaCC-Development",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "SmaCC-Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"shiftTable",
 		"itemSets",
@@ -14,9 +14,8 @@
 		"scannerCompiler",
 		"grammar",
 		"codeGenerator",
-		"reduceTable" ],
+		"reduceTable"
+	],
 	"name" : "SmaCCGrammarCompiler",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

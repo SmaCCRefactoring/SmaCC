@@ -1,17 +1,16 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JavaProgramNode",
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"modifiers",
 		"type",
 		"variableDeclarations",
-		"commas" ],
+		"commas"
+	],
 	"name" : "JavaLocalVariableDeclarationNode",
-	"pools" : [
-		 ],
-	"super" : "JavaProgramNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

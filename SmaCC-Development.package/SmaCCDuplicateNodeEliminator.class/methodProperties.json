@@ -1,13 +1,16 @@
 {
-	"class" : {
-		"removeDuplicateNodesIn:" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"copyEdgesWith:" : "JohnBrant 6/24/2016 12:26:52",
-		"copyGraph" : "JohnBrant 6/24/2016 12:26:52",
-		"copyNodesInto:" : "JohnBrant 6/24/2016 12:26:52",
-		"isNode:equivalentTo:" : "JohnBrant 6/24/2016 12:26:52",
-		"mergeAllTransitions" : "JohnBrant 6/24/2016 12:26:52",
-		"mergeNodeUsing:" : "JohnBrant 6/24/2016 12:26:52",
-		"pairsDo:" : "JohnBrant 6/24/2016 12:26:52",
-		"removeDuplicateNodesIn:" : "JohnBrant 6/24/2016 12:26:52",
-		"removeDuplicates" : "JohnBrant 6/24/2016 12:26:52" } }
+		"isNode:equivalentTo:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"removeDuplicates" : "ThierryGoubier 3/27/2017 22:53:01",
+		"copyEdgesWith:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"copyGraph" : "ThierryGoubier 3/27/2017 22:53:01",
+		"mergeNodeUsing:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"removeDuplicateNodesIn:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"pairsDo:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"mergeAllTransitions" : "ThierryGoubier 3/27/2017 22:53:01",
+		"copyNodesInto:" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : {
+		"removeDuplicateNodesIn:" : "ThierryGoubier 3/27/2017 22:53:01"
+	}
+}

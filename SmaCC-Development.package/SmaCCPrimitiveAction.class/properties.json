@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Development",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		"lr1Item" ],
-	"name" : "SmaCCPrimitiveAction",
-	"pools" : [
-		 ],
 	"super" : "SmaCCAction",
-	"type" : "normal" }
+	"category" : "SmaCC-Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"lr1Item"
+	],
+	"name" : "SmaCCPrimitiveAction",
+	"type" : "normal"
+}

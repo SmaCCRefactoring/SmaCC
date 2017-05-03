@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Development",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		"parseSourceSelector" ],
-	"name" : "SmaCCDefinitionScanner",
-	"pools" : [
-		 ],
 	"super" : "SmaCCScanner",
-	"type" : "normal" }
+	"category" : "SmaCC-Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"parseSourceSelector"
+	],
+	"name" : "SmaCCDefinitionScanner",
+	"type" : "normal"
+}

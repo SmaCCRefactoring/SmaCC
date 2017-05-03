@@ -1,15 +1,14 @@
 {
-	"category" : "SmaCC-Swift",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "SwiftControlTransferStatementNode",
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"breakToken",
-		"name" ],
+		"name"
+	],
 	"name" : "SwiftBreakStatementNode",
-	"pools" : [
-		 ],
-	"super" : "SwiftControlTransferStatementNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

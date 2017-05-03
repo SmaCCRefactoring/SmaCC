@@ -1,7 +1,9 @@
 generated
 definitionComment
 "%glr;
-%id <Identifier> <gt> <gtgt>;
+%id <Identifier> <gt> <gtgt> <rightBrace>;
+
+%states default interpolatedString interpolatedVerbatimString;
 
 %start compilation_unit namespace_member_declaration statement expression block;
 
@@ -13,6 +15,14 @@ definitionComment
 
 %annotate_tokens;
 
+%hierarchy TypeParameterList (
+	VariantTypeParameterList
+);
+%hierarchy UsingDirective (
+	UsingAliasDirective
+	UsingNamespaceDirective
+	UsingStaticDirective
+);
 %hierarchy Declaration (
 	ClassDeclaration
 	ConstantDeclaration
@@ -69,7 +79,9 @@ definitionComment
 	AnonymousObjectCreationExpression
 	ArrayCreationExpression
 	Assignment
+	AwaitExpression
 	BaseAccess
+	BaseExpression
 	BinaryExpression
 	CastExpression
 	CheckedExpression
@@ -77,10 +89,14 @@ definitionComment
 	DefaultValueExpression
 	DelegateCreationExpression
 	ElementAccess
+	InterpolatedStringExpression
 	InvocationExpression
 	LambdaExpression
 	LiteralExpression
 	MemberAccess
+	NamedEntity
+	NameofExpression
+	NullConditionalExpression
 	ObjectCreationExpression
 	PrefixExpression
 	PointerElementAccess
@@ -90,8 +106,18 @@ definitionComment
 	SimpleName
 	SizeofExpression
 	ThisAccess
+	TypeExpression
 	TypeofExpression
 	UncheckedExpression
+);
+%hierarchy ElementAccess (
+	NullConditionalElementAccess
+);
+%hierarchy InvocationExpression (
+	NullConditionalInvocationExpression
+);
+%hierarchy MemberAccess (
+	NullConditionalMemberAccess
 );
 %hierarchy Type (
 	ArrayType
@@ -104,11 +130,14 @@ definitionComment
 	VoidType
 );
 
-<gt>
+default <gt>
 	: \>
 	;
-<gtgt>
+default <gtgt>
 	: <gt> <gt>
+	;
+default <rightBrace>
+	: \}
 	;
 <LineTerminator>
 	: \r
@@ -118,7 +147,7 @@ definitionComment
 #	| \x2028
 #	| \x2029
 	;
-<comment>
+default <comment>
 	: \/\/ [^\r\n]*
 	| (\/\* [^\*]* \*+ ([^\/\*] [^\*]* \*+)* \/)
 	;
@@ -132,7 +161,7 @@ definitionComment
 	| [Uu][Ll]
 	| [Ll][Uu]
 	;
-<IntegerLiteral>
+default <IntegerLiteral>
 	: \d+ <IntegerSuffix>?
 	| 0[Xx] [0-9A-Fa-f]+ <IntegerSuffix>?
 	;
@@ -144,7 +173,7 @@ definitionComment
 	| [Dd]
 	| [Mm]
 	;
-<RealLiteral>
+default <RealLiteral>
 	: \d* \. \d+ <ExponentPart>? <RealSuffix>?
 	| \d+ <ExponentPart>? <RealSuffix>?
 	| \d+ <RealSuffix>
@@ -174,7 +203,7 @@ definitionComment
 	| <HexadecimalEscapeSequence>
 	| <UnicodeCharacterEscapeSequence>
 	;
-<CharacterLiteral>
+default <CharacterLiteral>
 	: \' <Character> \'
 	;
 <SingleRegularStringLiteralCharacter>
@@ -189,6 +218,28 @@ definitionComment
 <RegularStringLiteral>
 	: \"" <RegularStringLiteralCharacter>* \""
 	;
+<InterpolatedSingleRegularStringLiteralCharacter>
+	: [^\""\\\n\{]
+	;
+<InterpolatedRegularStringLiteralCharacter>
+	: <InterpolatedSingleRegularStringLiteralCharacter>
+	| <SimpleEscapeSequence>
+	| <HexadecimalEscapeSequence>
+	| <UnicodeCharacterEscapeSequence>
+	| \{ \{
+	;
+default <InterpolatedRegularStringWhole>
+	: \$\"" <InterpolatedRegularStringLiteralCharacter>* \""
+	;
+default <InterpolatedRegularStringStart>
+	: \$\"" <InterpolatedRegularStringLiteralCharacter>* \{ 
+	;
+interpolatedString <InterpolatedRegularStringEnd>
+	: \} <InterpolatedRegularStringLiteralCharacter>* \""
+	;
+interpolatedString <InterpolatedRegularStringMid>
+	: \} <InterpolatedRegularStringLiteralCharacter>* \{
+	;
 <VerbatimStringLiteralCharacter>
 	: [^\""]
 	| \""\""
@@ -196,14 +247,31 @@ definitionComment
 <VerbatimStringLiteral>
 	: \@\"" <VerbatimStringLiteralCharacter>* \""
 	;
-<StringLiteral>
+<InterpolatedVerbatimStringLiteralCharacter>
+	: [^\""\{]
+	| \""\""
+	| \{ \{
+	;
+default <InterpolatedVerbatimStringLiteral>
+	: \$\@\"" <InterpolatedVerbatimStringLiteralCharacter>* \""
+	;
+default <InterpolatedVerbatimStringStart>
+	: \$\@\"" <InterpolatedVerbatimStringLiteralCharacter>* \{
+	;
+interpolatedVerbatimString <InterpolatedVerbatimStringEnd>
+	: \} <InterpolatedVerbatimStringLiteralCharacter>* \""
+	;
+interpolatedVerbatimString <InterpolatedVerbatimStringMid>
+	: \} <InterpolatedVerbatimStringLiteralCharacter>* \{
+	;
+default <StringLiteral>
 	: <RegularStringLiteral>
 	| <VerbatimStringLiteral>
 	;
-<NullLiteral>
+default <NullLiteral>
 	: null
 	;
-<whitespace>
+default <whitespace>
 	: \s+
 	| \# [^\r\n]*
 	;
@@ -227,7 +295,7 @@ qualified_identifier
 	| qualified_identifier ""."" <Identifier> 'name' {{}}
 	;
 namespace_body
-	: ""{"" _extern_alias_directives _using_directives _namespace_member_declarations ""}""
+	: ""{"" _extern_alias_directives _using_directives _namespace_member_declarations <rightBrace>
 	;
 _extern_alias_directives
 	:
@@ -251,12 +319,16 @@ using_directives
 using_directive
 	: using_alias_directive
 	| using_namespace_directive
+	| using_static_directive
 	;
 using_alias_directive
 	: ""using"" <Identifier> 'name' ""="" namespace_or_type_name 'namespace' "";"" {{}}
 	;
 using_namespace_directive
 	: ""using"" namespace_name 'namespace' "";"" {{}}
+	;
+using_static_directive
+	: ""using"" ""static"" type_name 'namespace' "";"" {{}}
 	;
 _namespace_member_declarations
 	: 
@@ -416,9 +488,19 @@ argument_list
 	| argument_list "","" argument 'argument'
 	;
 argument
-	: expression 'expression' {{}}
-	| ""ref"" variable_reference 'expression' {{}}
-	| ""out"" variable_reference 'expression' {{}}
+	: _argument_name argument_value {{}}
+	;
+_argument_name
+	:
+	| argument_name
+	;
+argument_name
+	: <Identifier> 'identifier' "":""
+	;
+argument_value
+	: expression 'expression' 
+	| ""ref"" variable_reference 'expression' 
+	| ""out"" variable_reference 'expression'
 	;
 primary_expression
 	: primary_no_array_creation_expression
@@ -426,6 +508,7 @@ primary_expression
 	;
 primary_no_array_creation_expression
 	: literal 
+    | interpolated_string_expression
 	| simple_name 
 	| parenthesized_expression 
 	| member_access 
@@ -442,7 +525,38 @@ primary_no_array_creation_expression
 	| checked_expression 
 	| unchecked_expression 
 	| default_value_expression 
+	| nameof_expression
 	| anonymous_method_expression 
+	;
+interpolated_string_expression
+	: interpolated_regular_string {{}}
+	| interpolated_verbatim_string {{}}
+	;
+interpolated_regular_string
+	: <InterpolatedRegularStringWhole> 'stringPart'
+	| StartInterpolatedString <InterpolatedRegularStringStart> 'stringPart' interpolated_regular_string_body <InterpolatedRegularStringEnd> 'stringPart'
+	;
+StartInterpolatedString
+	: {#interpolatedString}
+	;
+interpolated_regular_string_body
+	: interpolation 'interpolation'
+	| interpolation 'interpolation' <InterpolatedRegularStringMid> 'stringPart' interpolation 'interpolation'
+	;
+interpolation
+	: expression 'expression' {{}}
+	| expression 'expression' "","" constant_expression 'constant' {{}}
+	;
+interpolated_verbatim_string
+	: <InterpolatedVerbatimStringLiteral> 'stringPart'
+	| StartInterpolatedVerbatimString <InterpolatedVerbatimStringStart> 'stringPart' interpolated_verbatim_string_body <InterpolatedVerbatimStringEnd> 'stringPart'
+	;
+StartInterpolatedVerbatimString
+	: {#interpolatedVerbatimString}
+	;
+interpolated_verbatim_string_body
+	: interpolation 'interpolation'
+	| interpolation 'interpolation' <InterpolatedVerbatimStringMid> 'stringPart' interpolation 'interpolation'
 	;
 simple_name
 	: <Identifier> _type_argument_list 'typeArguments' {{}}
@@ -456,8 +570,14 @@ parenthesized_expression
 	;
 member_access
 	: primary_expression 'expression' ""."" <Identifier> 'identifier' _type_argument_list 'typeArguments' {{}}
-	| predefined_type 'expression' ""."" <Identifier> 'identifier' _type_argument_list 'typeArguments' {{}}
-	| qualified_alias_member 'expression' ""."" <Identifier> 'identifier' {{}}
+	| predefined_type_expression 'expression' ""."" <Identifier> 'identifier' _type_argument_list 'typeArguments' {{}}
+	| qualified_alias_member_expression 'expression' ""."" <Identifier> 'identifier' {{}}
+	;
+qualified_alias_member_expression
+	: qualified_alias_member 'type' {{TypeExpression}}
+	;
+predefined_type_expression
+	: predefined_type 'type' {{TypeExpression}}
 	;
 predefined_type
 	: ""bool"" 'token' {{SimpleType}}
@@ -512,8 +632,8 @@ object_or_collection_initializer
 	| collection_initializer
 	;
 object_initializer
-	: ""{"" _member_initializer_list ""}"" {{}}
-	| ""{"" member_initializer_list "","" ""}"" {{}}
+	: ""{"" _member_initializer_list <rightBrace> {{}}
+	| ""{"" member_initializer_list "","" <rightBrace> {{}}
 	;
 _member_initializer_list
 	: 
@@ -524,15 +644,19 @@ member_initializer_list
 	| member_initializer_list "","" member_initializer 'initializer'
 	;
 member_initializer
-	: <Identifier> 'identifier' ""="" initializer_value 'value' {{}}
+	: initializer_target ""="" initializer_value 'value' {{}}
+	;
+initializer_target
+	: <Identifier> 'identifier'
+	| ""["" argument_list ""]""
 	;
 initializer_value
 	: expression
 	| object_or_collection_initializer
 	;
 collection_initializer
-	: ""{"" element_initializer_list ""}"" {{}}
-	| ""{"" element_initializer_list "","" ""}"" {{}}
+	: ""{"" element_initializer_list <rightBrace> {{}}
+	| ""{"" element_initializer_list "","" <rightBrace> {{}}
 	;
 element_initializer_list
 	: element_initializer 'initializer'
@@ -540,7 +664,7 @@ element_initializer_list
 	;
 element_initializer
 	: non_assignment_expression 'expression' {{}}
-	| ""{"" expression_list ""}"" {{}}
+	| ""{"" expression_list <rightBrace> {{}}
 	;
 array_creation_expression
 	: ""new"" non_array_type 'type' ""["" expression_list ""]"" _rank_specifiers _array_initializer 'arrayInitializer' {{}}
@@ -554,8 +678,8 @@ anonymous_object_creation_expression
 	: ""new"" anonymous_object_initializer {{}}
 	;
 anonymous_object_initializer
-	: ""{"" _member_declarator_list ""}""
-	| ""{"" member_declarator_list "","" ""}""
+	: ""{"" _member_declarator_list <rightBrace>
+	| ""{"" member_declarator_list "","" <rightBrace>
 	;
 _member_declarator_list
 	: 
@@ -568,6 +692,8 @@ member_declarator_list
 member_declarator
 	: simple_name 'name' {{}}
 	| member_access 'access' {{}}
+	| base_access 'access' {{}}
+	| null_conditional_member_access 'access' {{}}
 	| <Identifier> ""="" expression 'value' {{}}
 	;
 typeof_expression
@@ -604,8 +730,23 @@ unchecked_expression
 default_value_expression
 	: ""default"" ""("" type 'type' "")"" {{}}
 	;
+nameof_expression
+	: ""nameof"" ""("" named_entity 'name' "")"" {{}}
+	;
+named_entity
+	: simple_name
+	| named_entity_target 'target' ""."" <Identifier> _type_argument_list 'typeArguments' {{}}
+	;
+named_entity_target 
+	: ""this"" {{ThisAccess}}
+	| ""base"" {{BaseExpression}}
+	| named_entity
+	| predefined_type_expression
+	| qualified_alias_member_expression
+	;
 unary_expression
 	: primary_expression
+	| null_conditional_expression
 	| ""+"" 'operator' unary_expression 'expression' {{PrefixExpression}}
 	| ""-"" 'operator' unary_expression 'expression' {{PrefixExpression}}
 	| ""!"" 'operator' unary_expression 'expression' {{PrefixExpression}}
@@ -613,6 +754,28 @@ unary_expression
 	| pre_increment_expression
 	| pre_decrement_expression
 	| cast_expression
+	| await_expression
+	;
+null_conditional_expression
+	: primary_expression 'expression' null_conditional_operations 'nullConditionalOperation' {{}}
+	;
+_null_conditional_operations
+	:
+	| null_conditional_operations
+	;
+null_conditional_operations
+	: _null_conditional_operations 'baseOperations' ""?"" ""."" <Identifier> _type_argument_list 'typeArguments' {{NullConditionalMemberAccess}}
+	| _null_conditional_operations 'baseOperations' ""?"" ""["" argument_list ""]"" {{NullConditionalElementAccess}}
+	| null_conditional_operations 'baseOperations' ""."" <Identifier> _type_argument_list 'typeArguments' {{NullConditionalMemberAccess}}
+	| null_conditional_operations 'baseOperations' ""["" argument_list ""]"" {{NullConditionalElementAccess}}
+	| null_conditional_operations 'baseOperations' ""("" _argument_list "")"" {{NullConditionalInvocationExpression}}
+	;
+null_conditional_member_access
+	: primary_expression 'expression' _null_conditional_operations 'baseOperations' ""?"" ""."" <Identifier> _type_argument_list 'typeArguments' {{}}
+	| primary_expression 'expression' null_conditional_operations 'baseOperations' ""."" <Identifier> _type_argument_list 'typeArguments' {{}}
+	;
+null_conditional_invocation_expression
+	: primary_expression 'expression' null_conditional_operations 'baseOperations' ""("" _argument_list "")"" {{}}
 	;
 pre_increment_expression
 	: ""++"" 'operator' unary_expression 'expression' {{PrefixExpression}}
@@ -622,6 +785,9 @@ pre_decrement_expression
 	;
 cast_expression
 	: ""("" type 'type' "")"" unary_expression 'expression' {{}}
+	;
+await_expression
+	: ""await"" unary_expression 'expression' {{}}
 	;
 multiplicative_expression
 	: unary_expression
@@ -865,7 +1031,7 @@ embedded_statement
 	| yield_statement
 	;
 block
-	: ""{"" _statement_list ""}"" {{BlockStatement}}
+	: ""{"" _statement_list <rightBrace> {{BlockStatement}}
 	;
 _statement_list
 	: 
@@ -924,12 +1090,14 @@ expression_statement
 	;
 statement_expression
 	: invocation_expression
+	| null_conditional_invocation_expression
 	| object_creation_expression
 	| assignment
 	| post_increment_expression
 	| post_decrement_expression
 	| pre_increment_expression
 	| pre_decrement_expression
+	| await_expression
 	;
 selection_statement
 	: if_statement
@@ -943,7 +1111,7 @@ switch_statement
 	: ""switch"" ""("" expression 'expression' "")"" switch_block {{}}
 	;
 switch_block
-	: ""{"" _switch_sections ""}""
+	: ""{"" _switch_sections <rightBrace>
 	;
 _switch_sections
 	:
@@ -1038,26 +1206,25 @@ try_statement
 	| ""try"" block 'block' catch_clauses finally_clause 'finally' {{}}
 	;
 catch_clauses
-	: specific_catch_clauses _general_catch_clause
-	| _specific_catch_clauses general_catch_clause 'clause'
+	: catch_clause 'clause'
+	| catch_clauses catch_clause 'clause'
 	;
-_specific_catch_clauses
-	: 
-	| specific_catch_clauses
+catch_clause
+	: ""catch"" _exception_specifier _exception_filter block 'block' {{}}
 	;
-specific_catch_clauses
-	: specific_catch_clause 'clause'
-	| specific_catch_clauses specific_catch_clause 'clause'
-	;
-specific_catch_clause
-	: ""catch"" ""("" class_type 'type' _identifier "")"" block 'block' {{}}
-	;
-_general_catch_clause
+_exception_specifier
 	:
-	| general_catch_clause 'clause'
+	| exception_specifier
 	;
-general_catch_clause
-	: ""catch"" block 'block' {{}}
+exception_specifier
+	: ""("" type 'type' _identifier "")""
+	;
+_exception_filter
+	:
+	| exception_filter 'filter'
+	;
+exception_filter
+	: ""when"" ""("" expression 'expression' "")"" {{}}
 	;
 finally_clause
 	: ""finally"" block 'block' {{}}
@@ -1172,7 +1339,7 @@ constructor_constraint
 	: ""new"" ""("" "")"" {{}}
 	;
 class_body
-	: ""{"" _class_member_declarations ""}""
+	: ""{"" _class_member_declarations <rightBrace>
 	;
 _class_member_declarations
 	: 
@@ -1228,8 +1395,8 @@ _field_modifiers
 	| field_modifiers
 	;
 field_modifiers
-	: field_modifier
-	| field_modifiers field_modifier
+	: field_modifier 'modifier'
+	| field_modifiers field_modifier 'modifier'
 	;
 field_modifier
 	: ""new""
@@ -1290,6 +1457,7 @@ member_name
 	;
 method_body
 	: block 'block' {{}}
+	| ""=>"" expression 'expression' "";"" {{}}
 	| "";"" {{}}
 	;
 _formal_parameters_list
@@ -1306,7 +1474,14 @@ fixed_parameters
 	| fixed_parameters "","" 'comma' fixed_parameter 'parameter'
 	;
 fixed_parameter
-	: _attributes _parameter_modifier type 'type' <Identifier> 'name' {{FixedParameter}}
+	: _attributes _parameter_modifier type 'type' <Identifier> 'name' _default_argument {{FixedParameter}}
+	;
+_default_argument
+	:
+	| default_argument
+	;
+default_argument
+	: ""="" expression 'expression'
 	;
 _parameter_modifier
 	:
@@ -1321,7 +1496,7 @@ parameter_array
 	: _attributes ""params"" 'paramsToken' array_type 'type' <Identifier> 'name' {{ArrayParameter}}
 	;
 property_declaration
-	: _attributes _property_modifiers type 'type' member_name ""{"" accessor_declarations ""}"" {{}}
+	: _attributes _property_modifiers type 'type' member_name property_body {{}}
 	;
 _property_modifiers
 	:
@@ -1343,6 +1518,17 @@ property_modifier
 	| ""override""
 	| ""abstract""
 	| ""extern""
+	;
+property_body
+	: ""{"" accessor_declarations <rightBrace> _property_initializer
+	| ""=>"" expression 'expression'
+	;
+_property_initializer
+	:
+	| property_initializer
+	;
+property_initializer
+	: ""="" variable_initializer 'initializer'
 	;
 accessor_declarations
 	: get_accessor_declaration 'getAccessor' _set_accessor_declaration 'setAccessor'
@@ -1379,7 +1565,7 @@ accessor_body
 	;
 event_declaration
 	: _attributes _event_modifiers ""event"" type 'type' variable_declarators "";"" {{}}
-	| _attributes _event_modifiers ""event"" type 'type' member_name ""{"" event_accessor_declarations ""}"" {{}}
+	| _attributes _event_modifiers ""event"" type 'type' member_name ""{"" event_accessor_declarations <rightBrace> {{}}
 	;
 _event_modifiers
 	:
@@ -1413,7 +1599,7 @@ remove_accessor_declaration
 	: _attributes ""remove"" block 'block' {{}}
 	;
 indexer_declaration
-	: _attributes _indexer_modifiers indexer_declarator ""{"" accessor_declarations ""}"" {{}}
+	: _attributes _indexer_modifiers indexer_declarator indexer_body {{}}
 	;
 _indexer_modifiers
 	:
@@ -1438,6 +1624,10 @@ indexer_modifier
 indexer_declarator
 	: type 'returnType' ""this"" ""["" formal_parameters_list ""]""
 	| type 'returnType' interface_type 'type' ""."" ""this"" ""["" formal_parameters_list ""]""
+	;
+indexer_body
+	: ""{"" accessor_declarations <rightBrace>
+	| ""=>"" expression 'expression' "";""
 	;
 operator_declaration
 	: _attributes operator_modifiers operator_declarator operator_body 'body' {{}}
@@ -1496,6 +1686,7 @@ conversion_operator_declarator
 	;
 operator_body
 	: block 'block' {{MethodBody}}
+	| ""=>"" expression 'expression' "";"" {{MethodBody}}
 	| "";"" {{MethodBody}}
 	;
 constructor_declaration
@@ -1579,7 +1770,7 @@ struct_interfaces
 	: "":"" interface_type_list
 	;
 struct_body
-	: ""{"" _struct_member_declarations ""}""
+	: ""{"" _struct_member_declarations <rightBrace>
 	;
 _struct_member_declarations
 	: 
@@ -1608,8 +1799,8 @@ _array_initializer
 	| array_initializer
 	;
 array_initializer
-	: ""{"" _variable_initializer_list ""}"" {{}}
-	| ""{"" variable_initializer_list "","" ""}"" {{}}
+	: ""{"" _variable_initializer_list <rightBrace> {{}}
+	| ""{"" variable_initializer_list "","" <rightBrace> {{}}
 	;
 _variable_initializer_list
 	:
@@ -1626,7 +1817,7 @@ variable_initializer
 
 # B.2.10 Interfaces
 interface_declaration
-	: _attributes _interface_modifiers _partial ""interface"" 'interfaceToken' <Identifier> 'name' _type_parameter_list _interface_base _type_parameter_constraints_clauses interface_body _semicolon {{}}
+	: _attributes _interface_modifiers _partial ""interface"" 'interfaceToken' <Identifier> 'name' _variant_type_parameter_list _interface_base _type_parameter_constraints_clauses interface_body _semicolon {{}}
 	;
 _interface_modifiers
 	:
@@ -1643,6 +1834,25 @@ interface_modifier
 	| ""internal""
 	| ""private""
 	;
+_variant_type_parameter_list
+	:
+	| variant_type_parameter_list 'typeParameters'
+	;
+variant_type_parameter_list
+	: ""<"" 'lessThan' variant_type_parameters <gt> 'greaterThan' {{}}
+	;
+variant_type_parameters
+	: _attributes _variance_annotation type_parameter 'parameter'
+	| variant_type_parameters "","" _attributes _variance_annotation type_parameter 'parameter'
+	;
+_variance_annotation
+	:
+	| variance_annotation 'annotation'
+	;
+variance_annotation
+	: ""in""
+	| ""out""
+	;
 _interface_base
 	: 
 	| interface_base
@@ -1651,7 +1861,7 @@ interface_base
 	: "":"" 'colon' interface_type_list
 	;
 interface_body
-	: ""{"" 'leftBrace' _interface_member_declarations ""}"" 'rightBrace'
+	: ""{"" 'leftBrace' _interface_member_declarations <rightBrace> 'rightBrace'
 	;
 _interface_member_declarations
 	:
@@ -1671,7 +1881,7 @@ interface_method_declaration
 	: _attributes _new 'modifier' return_type 'type' <Identifier> 'name' _type_parameter_list ""("" 'leftParen' _formal_parameters_list "")"" 'rightParen' _type_parameter_constraints_clauses "";"" 'semicolon' {{}}
 	;
 interface_property_declaration
-	: _attributes _new 'modifier' type 'type' <Identifier> 'name' ""{"" 'leftBrace' interface_accessors ""}"" 'rightBrace' {{}}
+	: _attributes _new 'modifier' type 'type' <Identifier> 'name' ""{"" 'leftBrace' interface_accessors <rightBrace> 'rightBrace' {{}}
 	;
 interface_accessors	#This was changed to use the interface_(g/s)et_accessor
 	: interface_get_accessor 'getAccessor'
@@ -1689,7 +1899,7 @@ interface_event_declaration
 	: _attributes _new 'modifier' ""event"" 'eventToken' type 'type' <Identifier> 'name' "";"" 'semicolon' {{}}
 	;
 interface_indexer_declaration
-	: _attributes _new 'modifier' type 'type' ""this"" 'thisToken' ""["" 'leftBracket' formal_parameters_list ""]"" 'rightBracket' ""{"" 'leftBrace' interface_accessors ""}"" 'rightBrace' {{}}
+	: _attributes _new 'modifier' type 'type' ""this"" 'thisToken' ""["" 'leftBracket' formal_parameters_list ""]"" 'rightBracket' ""{"" 'leftBrace' interface_accessors <rightBrace> 'rightBrace' {{}}
 	;
 
 # B.2.11 Enums
@@ -1704,8 +1914,8 @@ enum_base
 	: "":"" integral_type 'type'
 	;
 enum_body
-	: ""{"" 'leftBrace' _enum_member_declarations ""}"" 'rightBrace'
-	| ""{"" 'leftBrace' enum_member_declarations "","" 'comma' ""}"" 'rightBrace'
+	: ""{"" 'leftBrace' _enum_member_declarations <rightBrace> 'rightBrace'
+	| ""{"" 'leftBrace' enum_member_declarations "","" 'comma' <rightBrace> 'rightBrace'
 	;
 _enum_modifers
 	:
@@ -1737,7 +1947,7 @@ enum_member_declaration
 
 # B.2.12 Delegates
 delegate_declaration
-	: _attributes _delegate_modifiers ""delegate"" 'delegateToken' return_type 'type' <Identifier> 'name' _type_parameter_list ""("" 'leftParen' _formal_parameters_list "")"" 'rightParen' _type_parameter_constraints_clauses "";"" 'semicolon' {{}}
+	: _attributes _delegate_modifiers ""delegate"" 'delegateToken' return_type 'type' <Identifier> 'name' _variant_type_parameter_list ""("" 'leftParen' _formal_parameters_list "")"" 'rightParen' _type_parameter_constraints_clauses "";"" 'semicolon' {{}}
 	;
 _delegate_modifiers
 	:

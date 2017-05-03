@@ -1,14 +1,11 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "JavaIntTypeNode",
-	"pools" : [
-		 ],
 	"super" : "JavaPrimitiveTypeNode",
-	"type" : "normal" }
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "JavaIntTypeNode",
+	"type" : "normal"
+}

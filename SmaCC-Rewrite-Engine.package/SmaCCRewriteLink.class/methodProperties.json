@@ -1,9 +1,10 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"next" : "JohnBrant 6/24/2016 13:12:32",
-		"next:" : "JohnBrant 6/24/2016 13:12:32",
-		"printOn:" : "JohnBrant 6/24/2016 13:12:32",
-		"rewrite" : "JohnBrant 6/24/2016 13:12:32",
-		"rewrite:" : "JohnBrant 6/24/2016 13:12:32" } }
+		"rewrite" : "ThierryGoubier 9/23/2016 20:11:02",
+		"printOn:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"next:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"next" : "ThierryGoubier 9/23/2016 20:11:02",
+		"rewrite:" : "ThierryGoubier 9/23/2016 20:11:02"
+	},
+	"class" : { }
+}

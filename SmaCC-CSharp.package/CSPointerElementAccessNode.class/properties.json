@@ -1,17 +1,16 @@
 {
-	"category" : "SmaCC-CSharp",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "CSExpressionNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"expression",
 		"leftBracketToken",
 		"indexExpression",
-		"rightBracketToken" ],
+		"rightBracketToken"
+	],
 	"name" : "CSPointerElementAccessNode",
-	"pools" : [
-		 ],
-	"super" : "CSExpressionNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

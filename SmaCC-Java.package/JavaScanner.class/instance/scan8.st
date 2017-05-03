@@ -1,13 +1,13 @@
 generated
 scan8
-	self recordMatch: #(98).
+	self recordMatch: #(99).
 	self step.
 	currentCharacter == $.
 		ifTrue: [ ^ self scan4 ].
 	(currentCharacter between: $8 and: $9)
 		ifTrue: [ ^ self scan9 ].
 	currentCharacter isDigit
-		ifTrue: [ [ self recordMatch: #(98).
+		ifTrue: [ [ self recordMatch: #(99).
 			self step.
 			currentCharacter == $.
 				ifTrue: [ ^ self scan4 ].
@@ -17,20 +17,20 @@ scan8
 			('Ee' includes: currentCharacter)
 				ifTrue: [ ^ self scan5 ].
 			('Ll' includes: currentCharacter)
-				ifTrue: [ ^ self recordAndReportMatch: #(98) ].
-			('DFdf' includes: currentCharacter)
 				ifTrue: [ ^ self recordAndReportMatch: #(99) ].
+			('DFdf' includes: currentCharacter)
+				ifTrue: [ ^ self recordAndReportMatch: #(100) ].
 			^ self reportLastMatch ].
 	('Ee' includes: currentCharacter)
 		ifTrue: [ ^ self scan5 ].
 	('Ll' includes: currentCharacter)
-		ifTrue: [ ^ self recordAndReportMatch: #(98) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(99) ].
 	('Xx' includes: currentCharacter)
 		ifTrue: [ self step.
 			(currentCharacter isDigit
 				or: [ (currentCharacter between: $A and: $F)
 						or: [ currentCharacter between: $a and: $f ] ])
-				ifTrue: [ [ self recordMatch: #(98).
+				ifTrue: [ [ self recordMatch: #(99).
 					self step.
 					currentCharacter == $.
 						ifTrue: [ self step.
@@ -45,11 +45,11 @@ scan8
 												or: [ currentCharacter between: $a and: $f ] ] ] whileTrue ].
 							^ self reportLastMatch ].
 					('Ll' includes: currentCharacter)
-						ifTrue: [ ^ self recordAndReportMatch: #(98) ].
+						ifTrue: [ ^ self recordAndReportMatch: #(99) ].
 					currentCharacter isDigit
 						or: [ (currentCharacter between: $A and: $F)
 								or: [ currentCharacter between: $a and: $f ] ] ] whileTrue ].
 			^ self reportLastMatch ].
 	('DFdf' includes: currentCharacter)
-		ifTrue: [ ^ self recordAndReportMatch: #(99) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(100) ].
 	^ self reportLastMatch

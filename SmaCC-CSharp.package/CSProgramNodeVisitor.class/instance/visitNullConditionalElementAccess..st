@@ -1,0 +1,3 @@
+generated
+visitNullConditionalElementAccess: aNullConditionalElementAccess
+	^ self visitElementAccess: aNullConditionalElementAccess

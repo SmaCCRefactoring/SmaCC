@@ -1,17 +1,16 @@
 {
-	"category" : "SmaCC-Javascript-Parser",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JSExpressionNode",
+	"category" : "SmaCC-Javascript-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"leftBracket",
 		"expressions",
 		"commas",
-		"rightBracket" ],
+		"rightBracket"
+	],
 	"name" : "JSArrayLiteralNode",
-	"pools" : [
-		 ],
-	"super" : "JSExpressionNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

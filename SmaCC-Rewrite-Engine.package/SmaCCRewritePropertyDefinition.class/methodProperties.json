@@ -1,0 +1,24 @@
+{
+	"instance" : {
+		"displayOn:" : "JohnBrant 1/1/2017 14:42",
+		"addLocal:" : "JohnBrant 1/1/2017 16:33",
+		"addAllGlobals:" : "JohnBrant 1/1/2017 12:52",
+		"addGlobal:" : "JohnBrant 1/1/2017 16:34",
+		"comment:" : "JohnBrant 1/1/2017 12:56",
+		"comment" : "JohnBrant 1/1/2017 12:57",
+		"performOn:continuation:" : "JohnBrant 1/1/2017 13:06",
+		"initialize" : "JohnBrant 1/1/2017 14:37",
+		"clearLocalVariablesIn:" : "JohnBrant 1/20/2017 10:32",
+		"updateClass:" : "JohnBrant 1/1/2017 15:23",
+		"removeGlobal:" : "JohnBrant 1/1/2017 16:34",
+		"removeLocal:" : "JohnBrant 1/1/2017 16:34",
+		"createPropertyMethodsFor:in:" : "JohnBrant 1/1/2017 15:23",
+		"addAllLocals:" : "JohnBrant 1/1/2017 12:52",
+		"localSaveOn:" : "JohnBrant 1/1/2017 17:08"
+	},
+	"class" : {
+		"readerPrototype" : "JohnBrant 1/1/2017 14:52",
+		"writerPrototype" : "JohnBrant 1/1/2017 14:53",
+		"comment:locals:globals:" : "JohnBrant 1/1/2017 12:51"
+	}
+}

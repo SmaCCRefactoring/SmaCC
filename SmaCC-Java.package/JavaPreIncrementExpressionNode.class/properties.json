@@ -1,15 +1,14 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JavaExpressionNode",
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"plusPlus",
-		"expression" ],
+		"expression"
+	],
 	"name" : "JavaPreIncrementExpressionNode",
-	"pools" : [
-		 ],
-	"super" : "JavaExpressionNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

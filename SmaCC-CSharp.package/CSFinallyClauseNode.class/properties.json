@@ -1,15 +1,14 @@
 {
-	"category" : "SmaCC-CSharp",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "CSProgramNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"finallyToken",
-		"block" ],
+		"block"
+	],
 	"name" : "CSFinallyClauseNode",
-	"pools" : [
-		 ],
-	"super" : "CSProgramNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -1,10 +1,13 @@
 {
-	"class" : {
-		"forIndex:symbol:" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"=" : "JohnBrant 6/24/2016 12:26:52",
-		"hash" : "JohnBrant 6/24/2016 12:26:52",
-		"index" : "JohnBrant 6/24/2016 12:26:52",
-		"index:" : "JohnBrant 6/24/2016 12:26:52",
-		"symbol" : "JohnBrant 6/24/2016 12:26:52",
-		"symbol:" : "JohnBrant 6/24/2016 12:26:52" } }
+		"symbol" : "ThierryGoubier 3/27/2017 22:53:01",
+		"=" : "ThierryGoubier 3/27/2017 22:53:01",
+		"symbol:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"hash" : "ThierryGoubier 3/27/2017 22:53:01",
+		"index:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"index" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : {
+		"forIndex:symbol:" : "ThierryGoubier 3/27/2017 22:53:01"
+	}
+}

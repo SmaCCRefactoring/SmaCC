@@ -1,33 +1,30 @@
 generated
 scanForTokenX19
-	currentCharacter == $-
+	currentCharacter == $]
+		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
+	currentCharacter == $^
 		ifTrue:
-			[ ^ self scanForTokenX5 ].
-	currentCharacter == $.
+			[ ^ self scanForTokenX12 ].
+	currentCharacter == $`
+		ifTrue: [ ^ self scan10 ].
+	currentCharacter == ${
+		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
+	currentCharacter == $|
 		ifTrue:
-			[ ^ self scanForTokenX8 ].
-	currentCharacter == $/
+			[ ^ self scanForTokenX7 ].
+	currentCharacter == $}
+		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
+	currentCharacter == $~
+		ifTrue: [ ^ self recordAndReportMatch: #(85) ].
+	currentCharacter isDigit
 		ifTrue:
-			[ ^ self scanForTokenX2 ].
-	currentCharacter == $0
-		ifTrue: [ ^ self scan8 ].
-	currentCharacter == $:
-		ifTrue: [ ^ self recordAndReportMatch: #(17) ].
-	currentCharacter == $;
-		ifTrue: [ ^ self recordAndReportMatch: #(45) ].
-	currentCharacter == $<
+			[ ^ self scanForTokenX3 ].
+	(currentCharacter isSeparator
+		or: [ currentCharacter == Character pageUp ])
 		ifTrue:
-			[ ^ self scanForTokenX6 ].
-	currentCharacter == $=
+			[ ^ self scanForTokenX11 ].
+	(currentCharacter isLetter
+		or: [ currentCharacter isSafeForHTTP or: [ currentCharacter == $$ ] ])
 		ifTrue:
-			[ ^ self scanForTokenX13 ].
-	currentCharacter == $>
-		ifTrue:
-			[ ^ self scanForTokenX4 ].
-	currentCharacter == $?
-		ifTrue: [ ^ self recordAndReportMatch: #(54) ].
-	currentCharacter == $@
-		ifTrue: [ ^ self recordAndReportMatch: #(13) ].
-	currentCharacter == $[
-		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
-	^ self scanForTokenX18
+			[ self scanForTokenX18 ].
+	^ self reportLastMatch

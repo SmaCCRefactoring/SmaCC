@@ -1,14 +1,11 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "JavaScanner",
-	"pools" : [
-		 ],
 	"super" : "SmaCCScanner",
-	"type" : "normal" }
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "JavaScanner",
+	"type" : "normal"
+}

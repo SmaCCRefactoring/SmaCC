@@ -1,10 +1,10 @@
 {
-	"category" : "SmaCC-CSharp",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "CSStatementNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"fixedToken",
 		"leftParenToken",
@@ -12,9 +12,8 @@
 		"declarators",
 		"commaTokens",
 		"rightParenToken",
-		"statement" ],
+		"statement"
+	],
 	"name" : "CSFixedStatementNode",
-	"pools" : [
-		 ],
-	"super" : "CSStatementNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

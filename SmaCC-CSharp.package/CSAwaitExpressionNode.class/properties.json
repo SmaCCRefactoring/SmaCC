@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CSExpressionNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"awaitToken",
+		"expression"
+	],
+	"name" : "CSAwaitExpressionNode",
+	"type" : "normal"
+}

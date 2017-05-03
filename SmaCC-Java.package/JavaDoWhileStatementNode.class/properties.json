@@ -1,20 +1,19 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JavaStatementNode",
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"doToken",
 		"statement",
 		"whileToken",
-		"left",
+		"leftParen",
 		"expression",
-		"right",
-		"semicolon" ],
+		"rightParen",
+		"semicolon"
+	],
 	"name" : "JavaDoWhileStatementNode",
-	"pools" : [
-		 ],
-	"super" : "JavaStatementNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

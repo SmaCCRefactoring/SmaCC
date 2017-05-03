@@ -1,14 +1,11 @@
 {
-	"category" : "SmaCC-Runtime",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		 ],
-	"name" : "SmaCCCaseInsensitiveToken",
-	"pools" : [
-		 ],
 	"super" : "SmaCCToken",
-	"type" : "normal" }
+	"category" : "SmaCC-Runtime",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SmaCCCaseInsensitiveToken",
+	"type" : "normal"
+}

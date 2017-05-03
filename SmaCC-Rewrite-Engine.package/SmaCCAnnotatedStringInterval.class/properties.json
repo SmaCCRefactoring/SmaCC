@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Rewrite-Engine",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"annotations" ],
-	"name" : "SmaCCAnnotatedStringInterval",
-	"pools" : [
-		 ],
 	"super" : "SmaCCStringInterval",
-	"type" : "normal" }
+	"category" : "SmaCC-Rewrite-Engine",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"annotations"
+	],
+	"name" : "SmaCCAnnotatedStringInterval",
+	"type" : "normal"
+}

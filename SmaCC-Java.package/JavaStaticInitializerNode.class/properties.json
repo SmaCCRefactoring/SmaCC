@@ -1,15 +1,14 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JavaProgramNode",
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"staticToken",
-		"block" ],
+		"block"
+	],
 	"name" : "JavaStaticInitializerNode",
-	"pools" : [
-		 ],
-	"super" : "JavaProgramNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

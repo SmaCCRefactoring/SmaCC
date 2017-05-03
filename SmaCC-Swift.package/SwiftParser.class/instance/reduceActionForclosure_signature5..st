@@ -35,7 +35,7 @@ reduceActionForclosure_signature5: nodes
 	result at: 31 put: ((nodes at: 1) at: 3).
 	result at: 32 put: ((nodes at: 1) at: 4).
 	result at: 33 put: ((nodes at: 1) at: 5).
-	self add: ((nodes at: 1) at: 6) to: (result at: 21).
-	self add: ((nodes at: 1) at: 7) to: (result at: 13).
+	self add: ((nodes at: 1) at: 6) to: (result at: 26).
+	self add: ((nodes at: 1) at: 7) to: (result at: 9).
 	result at: 29 put: (nodes at: 2).
 	^ result

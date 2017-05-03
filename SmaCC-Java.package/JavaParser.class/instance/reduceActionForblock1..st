@@ -2,7 +2,7 @@ generated-reduction actions
 reduceActionForblock1: nodes
 	| result |
 	result := JavaBlockNode new.
-	result left: (nodes at: 1).
+	result leftBrace: (nodes at: 1).
 	result addNodes: (nodes at: 2) to: result statements.
-	result right: (nodes at: 3).
+	result rightBrace: (nodes at: 3).
 	^ result

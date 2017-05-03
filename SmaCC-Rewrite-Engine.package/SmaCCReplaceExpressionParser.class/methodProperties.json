@@ -1,23 +1,27 @@
 {
-	"class" : {
-		"definitionComment" : "JohnBrant 6/24/2016 13:12:32",
-		"scannerClass" : "JohnBrant 6/24/2016 13:12:32",
-		"startingStateForExpression" : "JohnBrant 6/24/2016 13:12:32" },
 	"instance" : {
-		"reduceActionForCodeReplace1:" : "JohnBrant 6/24/2016 13:12:32",
-		"reduceActionForExpression1:" : "JohnBrant 6/24/2016 13:12:32",
-		"reduceActionForNodeReplace1:" : "JohnBrant 6/24/2016 13:12:32",
-		"reduceActionForPostfixModifiers1:" : "JohnBrant 6/24/2016 13:12:32",
-		"reduceActionForPrefixModifiers1:" : "JohnBrant 6/24/2016 13:12:32",
-		"reduceActionForPrefixModifiers2:" : "JohnBrant 6/24/2016 13:12:32",
-		"reduceActionForRewriteExpression3:" : "JohnBrant 6/24/2016 13:12:32",
-		"reduceActionForRewriteExpressions1:" : "JohnBrant 6/24/2016 13:12:32",
-		"reduceActionForRewriteExpressions2:" : "JohnBrant 6/24/2016 13:12:32",
-		"reduceActionForStringReplace1:" : "JohnBrant 6/24/2016 13:12:32",
-		"reduceActionForSwitchStateToCode1:" : "JohnBrant 6/24/2016 13:12:32",
-		"reduceActionForSwitchStateToDefault1:" : "JohnBrant 6/24/2016 13:12:32",
-		"reduceActionForSwitchStateToExpression1:" : "JohnBrant 6/24/2016 13:12:32",
-		"reduceTable" : "JohnBrant 6/24/2016 13:12:32",
-		"symbolNames" : "JohnBrant 6/24/2016 13:12:32",
-		"symbolTypes" : "JohnBrant 6/24/2016 13:12:32",
-		"transitionTable" : "JohnBrant 6/24/2016 13:12:32" } }
+		"symbolNames" : "ThierryGoubier 9/23/2016 20:11:02",
+		"reduceActionForExpression1:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"reduceActionForNodeReplace1:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"reduceActionForSwitchStateToCode1:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"reduceActionForPrefixModifiers2:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"reduceActionForRewriteExpressions2:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"reduceActionForSwitchStateToDefault1:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"reduceActionForSwitchStateToExpression1:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"reduceActionForStringReplace1:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"reduceTable" : "ThierryGoubier 9/23/2016 20:11:02",
+		"transitionTable" : "ThierryGoubier 9/23/2016 20:11:02",
+		"symbolTypes" : "ThierryGoubier 9/23/2016 20:11:02",
+		"reduceActionForPostfixModifiers1:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"reduceActionForPrefixModifiers1:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"reduceActionForRewriteExpression3:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"reduceActionForRewriteExpressions1:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"reduceActionForCodeReplace1:" : "ThierryGoubier 9/23/2016 20:11:02"
+	},
+	"class" : {
+		"startingStateForExpression" : "ThierryGoubier 9/23/2016 20:11:02",
+		"definitionComment" : "JohnBrant 3/3/2016 15:57:29",
+		"scannerClass" : "ThierryGoubier 9/23/2016 20:11:02",
+		"cacheId" : "ThierryGoubier 5/3/2017 19:52"
+	}
+}

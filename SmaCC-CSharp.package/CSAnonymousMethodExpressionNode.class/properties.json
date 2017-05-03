@@ -1,16 +1,15 @@
 {
-	"category" : "SmaCC-CSharp",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "CSExpressionNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"delegateToken",
 		"signature",
-		"block" ],
+		"block"
+	],
 	"name" : "CSAnonymousMethodExpressionNode",
-	"pools" : [
-		 ],
-	"super" : "CSExpressionNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

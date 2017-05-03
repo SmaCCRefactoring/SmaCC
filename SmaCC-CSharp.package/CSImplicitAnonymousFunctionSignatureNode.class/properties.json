@@ -1,17 +1,16 @@
 {
-	"category" : "SmaCC-CSharp",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "CSProgramNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"leftParenToken",
 		"names",
 		"commaTokens",
-		"rightParenToken" ],
+		"rightParenToken"
+	],
 	"name" : "CSImplicitAnonymousFunctionSignatureNode",
-	"pools" : [
-		 ],
-	"super" : "CSProgramNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

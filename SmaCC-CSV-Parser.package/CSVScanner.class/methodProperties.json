@@ -1,9 +1,10 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"emptySymbolTokenId" : "JohnBrant 6/24/2016 12:06:13",
-		"errorTokenId" : "JohnBrant 6/24/2016 12:06:13",
-		"scan1" : "JohnBrant 6/24/2016 12:06:13",
-		"scan2" : "JohnBrant 6/24/2016 12:06:13",
-		"scanForToken" : "JohnBrant 6/24/2016 12:06:13" } }
+		"scanForToken" : "ThierryGoubier 9/23/2016 19:23:32",
+		"emptySymbolTokenId" : "ThierryGoubier 9/23/2016 19:23:32",
+		"scan1" : "ThierryGoubier 9/23/2016 19:23:32",
+		"scan2" : "ThierryGoubier 9/23/2016 19:23:32",
+		"errorTokenId" : "ThierryGoubier 9/23/2016 19:23:32"
+	},
+	"class" : { }
+}

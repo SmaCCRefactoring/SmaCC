@@ -1,6 +1,7 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 13:12:32",
-		"evaluateInContext:" : "JohnBrant 6/24/2016 13:12:32" } }
+		"evaluateInContext:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"acceptVisitor:" : "ThierryGoubier 9/23/2016 20:11:02"
+	},
+	"class" : { }
+}

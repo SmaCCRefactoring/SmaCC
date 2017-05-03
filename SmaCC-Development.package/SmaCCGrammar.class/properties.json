@@ -1,12 +1,14 @@
 {
+	"commentStamp" : "",
+	"super" : "Object",
 	"category" : "SmaCC-Development",
-	"classinstvars" : [
-		 ],
+	"classinstvars" : [ ],
+	"pools" : [ ],
 	"classvars" : [
 		"MaximumCharacterValue",
 		"TokenNameBlock",
-		"TokenNameMap" ],
-	"commentStamp" : "",
+		"TokenNameMap"
+	],
 	"instvars" : [
 		"type",
 		"shiftReduceTable",
@@ -23,9 +25,8 @@
 		"annotateTokens",
 		"errorSymbol",
 		"emptySymbol",
-		"sentinelSymbol" ],
+		"sentinelSymbol"
+	],
 	"name" : "SmaCCGrammar",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

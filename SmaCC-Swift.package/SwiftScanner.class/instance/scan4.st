@@ -14,8 +14,7 @@ scan4
 								or: [ (currentCharacter between: $* and: $+)
 										or: [ (currentCharacter between: $- and: $/)
 												or: [ (currentCharacter between: $< and: $>)
-														or:
-															[ '^|~' includes: currentCharacter ] ] ] ] ])
+														or: [ '^|~' includes: currentCharacter ] ] ] ] ])
 						ifTrue: [ [ self recordMatch: #(90).
 							self step.
 							currentCharacter == $!
@@ -23,8 +22,7 @@ scan4
 										or: [ (currentCharacter between: $* and: $+)
 												or: [ (currentCharacter between: $- and: $/)
 														or: [ (currentCharacter between: $< and: $>)
-																or:
-																	[ '^|~' includes: currentCharacter ] ] ] ] ] ]
+																or: [ '^|~' includes: currentCharacter ] ] ] ] ] ]
 								whileTrue ].
 					^ self reportLastMatch ].
 			(currentCharacter == $!
@@ -32,8 +30,7 @@ scan4
 						or: [ currentCharacter == $+
 								or: [ (currentCharacter between: $- and: $.)
 										or: [ (currentCharacter between: $< and: $>)
-												or:
-													[ '^|~' includes: currentCharacter ] ] ] ] ])
+												or: [ '^|~' includes: currentCharacter ] ] ] ] ])
 				ifTrue: [ ^ self scan4 ].
 			^ self scan5 ].
 	currentCharacter == $!
@@ -41,6 +38,5 @@ scan4
 				or: [ currentCharacter == $+
 						or: [ (currentCharacter between: $- and: $/)
 								or: [ (currentCharacter between: $< and: $>)
-										or:
-											[ '^|~' includes: currentCharacter ] ] ] ] ] ] whileTrue.
+										or: [ '^|~' includes: currentCharacter ] ] ] ] ] ] whileTrue.
 	^ self scan5

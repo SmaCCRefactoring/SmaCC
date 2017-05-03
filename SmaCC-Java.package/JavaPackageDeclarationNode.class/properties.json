@@ -1,17 +1,16 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JavaProgramNode",
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"annotations",
 		"packageToken",
 		"name",
-		"semicolon" ],
+		"semicolon"
+	],
 	"name" : "JavaPackageDeclarationNode",
-	"pools" : [
-		 ],
-	"super" : "JavaProgramNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

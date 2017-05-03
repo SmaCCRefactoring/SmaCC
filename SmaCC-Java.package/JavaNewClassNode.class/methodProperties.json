@@ -1,9 +1,15 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 10:40:06",
-		"compositeNodeVariables" : "JohnBrant 6/24/2016 10:40:06",
-		"declarations" : "JohnBrant 6/24/2016 10:40:06",
-		"declarations:" : "JohnBrant 6/24/2016 10:40:06",
-		"initialize" : "JohnBrant 6/24/2016 10:40:06" } }
+		"ignoredTokenVariables" : "ThierryGoubier 5/3/2017 19:41",
+		"leftBrace" : "ThierryGoubier 5/3/2017 19:41",
+		"rightBrace:" : "ThierryGoubier 5/3/2017 19:41",
+		"leftBrace:" : "ThierryGoubier 5/3/2017 19:41",
+		"rightBrace" : "ThierryGoubier 5/3/2017 19:41",
+		"initialize" : "ThierryGoubier 5/3/2017 19:41",
+		"declarations:" : "ThierryGoubier 5/3/2017 19:41",
+		"declarations" : "ThierryGoubier 5/3/2017 19:41",
+		"acceptVisitor:" : "ThierryGoubier 5/3/2017 19:41",
+		"compositeNodeVariables" : "ThierryGoubier 5/3/2017 19:41"
+	},
+	"class" : { }
+}

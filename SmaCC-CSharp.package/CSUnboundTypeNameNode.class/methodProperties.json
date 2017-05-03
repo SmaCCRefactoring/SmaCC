@@ -1,20 +1,21 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 12:08:16",
-		"colonColonToken" : "JohnBrant 6/24/2016 12:08:16",
-		"colonColonToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"commas" : "JohnBrant 6/24/2016 12:08:16",
-		"commas:" : "JohnBrant 6/24/2016 12:08:16",
-		"compositeTokenVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"gtTokens" : "JohnBrant 6/24/2016 12:08:16",
-		"gtTokens:" : "JohnBrant 6/24/2016 12:08:16",
-		"identifierTokens" : "JohnBrant 6/24/2016 12:08:16",
-		"identifierTokens:" : "JohnBrant 6/24/2016 12:08:16",
-		"initialize" : "JohnBrant 6/24/2016 12:08:16",
-		"lessThanTokens" : "JohnBrant 6/24/2016 12:08:16",
-		"lessThanTokens:" : "JohnBrant 6/24/2016 12:08:16",
-		"periodTokens" : "JohnBrant 6/24/2016 12:08:16",
-		"periodTokens:" : "JohnBrant 6/24/2016 12:08:16",
-		"tokenVariables" : "JohnBrant 6/24/2016 12:08:16" } }
+		"compositeTokenVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"identifierTokens" : "ThierryGoubier 9/23/2016 19:23:52",
+		"lessThanTokens:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"commas" : "ThierryGoubier 9/23/2016 19:23:52",
+		"periodTokens:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"gtTokens" : "ThierryGoubier 9/23/2016 19:23:52",
+		"initialize" : "ThierryGoubier 9/23/2016 19:23:52",
+		"lessThanTokens" : "ThierryGoubier 9/23/2016 19:23:52",
+		"gtTokens:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"commas:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"identifierTokens:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"acceptVisitor:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"colonColonToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"periodTokens" : "ThierryGoubier 9/23/2016 19:23:52",
+		"tokenVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"colonColonToken" : "ThierryGoubier 9/23/2016 19:23:52"
+	},
+	"class" : { }
+}

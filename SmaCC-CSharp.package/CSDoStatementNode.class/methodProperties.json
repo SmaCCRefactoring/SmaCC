@@ -1,22 +1,23 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 12:08:16",
-		"doToken" : "JohnBrant 6/24/2016 12:08:16",
-		"doToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"expression" : "JohnBrant 6/24/2016 12:08:16",
-		"expression:" : "JohnBrant 6/24/2016 12:08:16",
-		"ignoredTokenVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"leftParenToken" : "JohnBrant 6/24/2016 12:08:16",
-		"leftParenToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"nodeVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"rightParenToken" : "JohnBrant 6/24/2016 12:08:16",
-		"rightParenToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"semicolonToken" : "JohnBrant 6/24/2016 12:08:16",
-		"semicolonToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"statement" : "JohnBrant 6/24/2016 12:08:16",
-		"statement:" : "JohnBrant 6/24/2016 12:08:16",
-		"tokenVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"whileToken" : "JohnBrant 6/24/2016 12:08:16",
-		"whileToken:" : "JohnBrant 6/24/2016 12:08:16" } }
+		"rightParenToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"statement:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"leftParenToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"ignoredTokenVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"semicolonToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"semicolonToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"leftParenToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"whileToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"whileToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"expression:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"statement" : "ThierryGoubier 9/23/2016 19:23:52",
+		"doToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"acceptVisitor:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"tokenVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"doToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"rightParenToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"nodeVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"expression" : "ThierryGoubier 9/23/2016 19:23:52"
+	},
+	"class" : { }
+}

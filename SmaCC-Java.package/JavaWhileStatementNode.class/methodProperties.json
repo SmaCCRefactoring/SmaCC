@@ -1,18 +1,19 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 10:40:06",
-		"expression" : "JohnBrant 6/24/2016 10:40:06",
-		"expression:" : "JohnBrant 6/24/2016 10:40:06",
-		"ignoredTokenVariables" : "JohnBrant 6/24/2016 10:40:06",
-		"left" : "JohnBrant 6/24/2016 10:40:06",
-		"left:" : "JohnBrant 6/24/2016 10:40:06",
-		"nodeVariables" : "JohnBrant 6/24/2016 10:40:06",
-		"right" : "JohnBrant 6/24/2016 10:40:06",
-		"right:" : "JohnBrant 6/24/2016 10:40:06",
-		"statement" : "JohnBrant 6/24/2016 10:40:06",
-		"statement:" : "JohnBrant 6/24/2016 10:40:06",
-		"tokenVariables" : "JohnBrant 6/24/2016 10:40:06",
-		"whileToken" : "JohnBrant 6/24/2016 10:40:06",
-		"whileToken:" : "JohnBrant 6/24/2016 10:40:06" } }
+		"statement:" : "ThierryGoubier 5/3/2017 19:41",
+		"whileToken" : "ThierryGoubier 5/3/2017 19:41",
+		"ignoredTokenVariables" : "ThierryGoubier 5/3/2017 19:41",
+		"leftParen:" : "ThierryGoubier 5/3/2017 19:41",
+		"whileToken:" : "ThierryGoubier 5/3/2017 19:41",
+		"leftParen" : "ThierryGoubier 5/3/2017 19:41",
+		"statement" : "ThierryGoubier 5/3/2017 19:41",
+		"expression:" : "ThierryGoubier 5/3/2017 19:41",
+		"rightParen" : "ThierryGoubier 5/3/2017 19:41",
+		"acceptVisitor:" : "ThierryGoubier 5/3/2017 19:41",
+		"tokenVariables" : "ThierryGoubier 5/3/2017 19:41",
+		"expression" : "ThierryGoubier 5/3/2017 19:41",
+		"nodeVariables" : "ThierryGoubier 5/3/2017 19:41",
+		"rightParen:" : "ThierryGoubier 5/3/2017 19:41"
+	},
+	"class" : { }
+}

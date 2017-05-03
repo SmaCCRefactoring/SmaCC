@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Development",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		"nodeClassDefinitions" ],
-	"name" : "SmaCCVisitorClassDefinition",
-	"pools" : [
-		 ],
 	"super" : "SmaCCClassDefinition",
-	"type" : "normal" }
+	"category" : "SmaCC-Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nodeClassDefinitions"
+	],
+	"name" : "SmaCCVisitorClassDefinition",
+	"type" : "normal"
+}

@@ -1,17 +1,16 @@
 {
-	"category" : "SmaCC-Swift",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "SwiftStatementNode",
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"name",
 		"colonToken",
 		"statement",
-		"semicolonToken" ],
+		"semicolonToken"
+	],
 	"name" : "SwiftLabeledStatementNode",
-	"pools" : [
-		 ],
-	"super" : "SwiftStatementNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

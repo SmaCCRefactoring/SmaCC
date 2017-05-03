@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "CSElementAccessNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"baseOperations",
+		"questionMarkToken",
+		"arguments"
+	],
+	"name" : "CSNullConditionalElementAccessNode",
+	"type" : "normal"
+}

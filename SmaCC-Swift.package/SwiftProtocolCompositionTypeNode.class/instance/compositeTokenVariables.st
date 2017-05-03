@@ -1,3 +1,3 @@
 generated
 compositeTokenVariables
-	^ #(#lessThanTokens #identifierTokens #periodTokens #commaTokens #greaterThanTokens)
+	^ #(#lessThanTokens #identifierTokens #commaTokens #greaterThanTokens #periodTokens)

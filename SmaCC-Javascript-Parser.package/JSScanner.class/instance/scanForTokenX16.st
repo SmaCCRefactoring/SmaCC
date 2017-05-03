@@ -23,6 +23,7 @@ scanForTokenX16
 	currentCharacter isSeparator
 		ifTrue:
 			[ ^ self scanForTokenX15 ].
-	(currentCharacter isLetter or: [ '$_' includes: currentCharacter ])
+	(currentCharacter isLetter
+		or: [ currentCharacter isSafeForHTTP or: [ currentCharacter == $$ ] ])
 		ifTrue: [ ^ self scan4 ].
 	^ self reportLastMatch

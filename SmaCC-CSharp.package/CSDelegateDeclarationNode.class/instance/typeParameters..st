@@ -1,7 +1,7 @@
 generated
-typeParameters: aCSTypeParameterListNode
+typeParameters: aCSVariantTypeParameterListNode
 	self typeParameters notNil
 		ifTrue: [ self typeParameters parent: nil ].
-	typeParameters := aCSTypeParameterListNode.
+	typeParameters := aCSVariantTypeParameterListNode.
 	self typeParameters notNil
 		ifTrue: [ self typeParameters parent: self ]

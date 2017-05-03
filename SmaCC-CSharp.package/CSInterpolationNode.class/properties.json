@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "CSProgramNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"expression",
+		"commaToken",
+		"constant"
+	],
+	"name" : "CSInterpolationNode",
+	"type" : "normal"
+}

@@ -1,13 +1,16 @@
 {
-	"class" : {
-		"onToken:" : "JohnBrant 6/21/2016 21:17:22" },
 	"instance" : {
-		"=" : "JohnBrant 6/21/2016 21:17:22",
-		"copyInContext:" : "JohnBrant 6/21/2016 21:17:22",
-		"hash" : "JohnBrant 6/21/2016 21:17:22",
-		"isListMatch" : "JohnBrant 6/21/2016 21:17:22",
-		"match:inContext:" : "JohnBrant 6/21/2016 21:17:22",
-		"name" : "JohnBrant 6/21/2016 21:17:22",
-		"patternToken" : "JohnBrant 6/21/2016 21:17:22",
-		"patternToken:" : "JohnBrant 6/21/2016 21:17:22",
-		"tokenVariables" : "JohnBrant 6/21/2016 21:17:22" } }
+		"patternToken" : "ThierryGoubier 9/23/2016 19:26:49",
+		"match:inContext:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"isListMatch" : "ThierryGoubier 9/23/2016 19:26:49",
+		"=" : "ThierryGoubier 9/23/2016 19:26:49",
+		"hash" : "ThierryGoubier 9/23/2016 19:26:49",
+		"patternToken:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"copyInContext:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"name" : "ThierryGoubier 9/23/2016 19:26:49",
+		"tokenVariables" : "ThierryGoubier 9/23/2016 19:26:49"
+	},
+	"class" : {
+		"onToken:" : "ThierryGoubier 9/23/2016 19:26:49"
+	}
+}

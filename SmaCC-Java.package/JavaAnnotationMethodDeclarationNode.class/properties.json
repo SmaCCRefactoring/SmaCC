@@ -1,15 +1,14 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JavaAbstractMethodDeclarationNode",
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"defaultToken",
-		"value" ],
+		"value"
+	],
 	"name" : "JavaAnnotationMethodDeclarationNode",
-	"pools" : [
-		 ],
-	"super" : "JavaAbstractMethodDeclarationNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

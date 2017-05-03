@@ -1,21 +1,22 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"_attributes" : "JohnBrant 6/24/2016 12:08:16",
-		"_attributes:" : "JohnBrant 6/24/2016 12:08:16",
-		"acceptVisitor:" : "JohnBrant 6/24/2016 12:08:16",
-		"body" : "JohnBrant 6/24/2016 12:08:16",
-		"body:" : "JohnBrant 6/24/2016 12:08:16",
-		"compositeNodeVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"compositeTokenVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"getToken" : "JohnBrant 6/24/2016 12:08:16",
-		"getToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"ignoredTokenVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"initialize" : "JohnBrant 6/24/2016 12:08:16",
-		"modifiers" : "JohnBrant 6/24/2016 12:08:16",
-		"modifiers:" : "JohnBrant 6/24/2016 12:08:16",
-		"nodeVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"semicolonToken" : "JohnBrant 6/24/2016 12:08:16",
-		"semicolonToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"tokenVariables" : "JohnBrant 6/24/2016 12:08:16" } }
+		"body:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"nodeVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"compositeTokenVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"ignoredTokenVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"_attributes" : "ThierryGoubier 9/23/2016 19:23:52",
+		"getToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"semicolonToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"semicolonToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"tokenVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"initialize" : "ThierryGoubier 9/23/2016 19:23:52",
+		"acceptVisitor:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"modifiers" : "ThierryGoubier 9/23/2016 19:23:52",
+		"getToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"body" : "ThierryGoubier 9/23/2016 19:23:52",
+		"_attributes:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"compositeNodeVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"modifiers:" : "ThierryGoubier 9/23/2016 19:23:52"
+	},
+	"class" : { }
+}

@@ -9,7 +9,7 @@ reduceActionForinterface_declaration1: nodes
 	result extendsToken: ((nodes at: 5) at: 1).
 	result addNodes: ((nodes at: 5) at: 2) to: result interfaceTypes.
 	result addTokens: ((nodes at: 5) at: 3) to: result commas.
-	result left: ((nodes at: 6) at: 1).
+	result leftBrace: ((nodes at: 6) at: 1).
 	result addNodes: ((nodes at: 6) at: 2) to: result declarations.
-	result right: ((nodes at: 6) at: 3).
+	result rightBrace: ((nodes at: 6) at: 3).
 	^ result

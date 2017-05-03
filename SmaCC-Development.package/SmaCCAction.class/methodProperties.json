@@ -1,19 +1,22 @@
 {
-	"class" : {
-		"new" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"=" : "JohnBrant 6/24/2016 12:26:52",
-		"hash" : "JohnBrant 6/24/2016 12:26:52",
-		"id" : "JohnBrant 6/24/2016 12:26:52",
-		"isAmbiguous" : "JohnBrant 6/24/2016 12:26:52",
-		"isReduce" : "JohnBrant 6/24/2016 12:26:52",
-		"isReject" : "JohnBrant 6/24/2016 12:26:52",
-		"isShift" : "JohnBrant 6/24/2016 12:26:52",
-		"lr1Item" : "JohnBrant 6/24/2016 12:26:52",
-		"mergeWith:prefer:" : "JohnBrant 6/24/2016 12:26:52",
-		"precedence" : "JohnBrant 6/24/2016 12:26:52",
-		"preferredAction" : "JohnBrant 6/24/2016 12:26:52",
-		"rhs" : "JohnBrant 6/24/2016 12:26:52",
-		"signalAllWarnings" : "JohnBrant 6/24/2016 12:26:52",
-		"size" : "JohnBrant 6/24/2016 12:26:52",
-		"symbol" : "JohnBrant 6/24/2016 12:26:52" } }
+		"isReject" : "ThierryGoubier 3/27/2017 22:53:01",
+		"symbol" : "ThierryGoubier 3/27/2017 22:53:01",
+		"lr1Item" : "ThierryGoubier 3/27/2017 22:53:01",
+		"signalAllWarnings" : "ThierryGoubier 3/27/2017 22:53:01",
+		"=" : "ThierryGoubier 3/27/2017 22:53:01",
+		"isAmbiguous" : "ThierryGoubier 3/27/2017 22:53:01",
+		"id" : "ThierryGoubier 3/27/2017 22:53:01",
+		"rhs" : "ThierryGoubier 3/27/2017 22:53:01",
+		"size" : "ThierryGoubier 3/27/2017 22:53:01",
+		"preferredAction" : "ThierryGoubier 3/27/2017 22:53:01",
+		"hash" : "ThierryGoubier 3/27/2017 22:53:01",
+		"mergeWith:prefer:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"isReduce" : "ThierryGoubier 3/27/2017 22:53:01",
+		"precedence" : "ThierryGoubier 3/27/2017 22:53:01",
+		"isShift" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : {
+		"new" : "ThierryGoubier 3/27/2017 22:53:01"
+	}
+}

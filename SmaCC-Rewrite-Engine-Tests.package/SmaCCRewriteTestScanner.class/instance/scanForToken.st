@@ -16,22 +16,18 @@ scanForToken
 	currentCharacter == $^
 		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
 	currentCharacter == $`
-		ifTrue:
-			[ [ self step.
+		ifTrue: [ [ self step.
 			currentCharacter == $`
 				ifTrue: [ ^ self recordAndReportMatch: #(10) ].
-			true ] whileTrue.
-			^ self reportLastMatch ].
+			true ] whileTrue ].
 	currentCharacter isDigit
-		ifTrue:
-			[ [ self recordMatch: #(8).
+		ifTrue: [ [ self recordMatch: #(8).
 			self step.
 			currentCharacter isDigit ] whileTrue.
 			^ self reportLastMatch ].
 	(currentCharacter isSeparator
 		or: [ currentCharacter == Character pageUp ])
-		ifTrue:
-			[ [ self recordMatch: #(9).
+		ifTrue: [ [ self recordMatch: #(9).
 			self step.
 			currentCharacter isSeparator
 				or: [ currentCharacter == Character pageUp ] ] whileTrue ].

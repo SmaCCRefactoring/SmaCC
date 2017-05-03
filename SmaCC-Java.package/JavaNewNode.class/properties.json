@@ -1,20 +1,26 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JavaExpressionNode",
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"newToken",
 		"type",
+		"leftParen",
 		"expressions",
 		"commas",
+		"rightParen",
 		"primary",
 		"period",
-		"name" ],
+		"lt",
+		"arguments",
+		"gt",
+		"name",
+		"typeArgLeft",
+		"typeArgRight"
+	],
 	"name" : "JavaNewNode",
-	"pools" : [
-		 ],
-	"super" : "JavaExpressionNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

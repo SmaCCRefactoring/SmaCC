@@ -5,7 +5,7 @@ scanForTokenX5
 	currentCharacter == $-
 		ifTrue: [ ^ self recordAndReportMatch: #(94) ].
 	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(71) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(70) ].
 	currentCharacter == $>
-		ifTrue: [ ^ self recordAndReportMatch: #(87) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(88) ].
 	^ self reportLastMatch

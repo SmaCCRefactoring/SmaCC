@@ -1,14 +1,15 @@
 {
+	"commentStamp" : "",
+	"super" : "SmaCCGLRParser",
 	"category" : "SmaCC-Javascript-Parser",
 	"classinstvars" : [
-		"keywords" ],
-	"classvars" : [
-		 ],
-	"commentStamp" : "",
+		"keywords"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
-		"lastInsertedSemicolonPosition" ],
+		"lastInsertedSemicolonPosition"
+	],
 	"name" : "JSParser",
-	"pools" : [
-		 ],
-	"super" : "SmaCCGLRParser",
-	"type" : "normal" }
+	"type" : "normal"
+}

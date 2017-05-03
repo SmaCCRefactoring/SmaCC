@@ -1,14 +1,11 @@
 {
-	"category" : "SmaCC-CSV-Parser",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "CSVFileNodeVisitor",
-	"pools" : [
-		 ],
 	"super" : "SmaCCParseNodeVisitor",
-	"type" : "normal" }
+	"category" : "SmaCC-CSV-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CSVFileNodeVisitor",
+	"type" : "normal"
+}

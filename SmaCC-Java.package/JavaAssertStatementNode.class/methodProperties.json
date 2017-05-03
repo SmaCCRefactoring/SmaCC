@@ -1,18 +1,19 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 10:40:06",
-		"assertToken" : "JohnBrant 6/24/2016 10:40:06",
-		"assertToken:" : "JohnBrant 6/24/2016 10:40:06",
-		"colon" : "JohnBrant 6/24/2016 10:40:06",
-		"colon:" : "JohnBrant 6/24/2016 10:40:06",
-		"ignoredTokenVariables" : "JohnBrant 6/24/2016 10:40:06",
-		"messageExpression" : "JohnBrant 6/24/2016 10:40:06",
-		"messageExpression:" : "JohnBrant 6/24/2016 10:40:06",
-		"nodeVariables" : "JohnBrant 6/24/2016 10:40:06",
-		"semicolon" : "JohnBrant 6/24/2016 10:40:06",
-		"semicolon:" : "JohnBrant 6/24/2016 10:40:06",
-		"testExpression" : "JohnBrant 6/24/2016 10:40:06",
-		"testExpression:" : "JohnBrant 6/24/2016 10:40:06",
-		"tokenVariables" : "JohnBrant 6/24/2016 10:40:06" } }
+		"messageExpression" : "ThierryGoubier 5/3/2017 19:40",
+		"testExpression:" : "ThierryGoubier 5/3/2017 19:40",
+		"ignoredTokenVariables" : "ThierryGoubier 5/3/2017 19:40",
+		"colon:" : "ThierryGoubier 5/3/2017 19:40",
+		"assertToken:" : "ThierryGoubier 5/3/2017 19:40",
+		"messageExpression:" : "ThierryGoubier 5/3/2017 19:40",
+		"semicolon" : "ThierryGoubier 5/3/2017 19:40",
+		"colon" : "ThierryGoubier 5/3/2017 19:40",
+		"assertToken" : "ThierryGoubier 5/3/2017 19:40",
+		"acceptVisitor:" : "ThierryGoubier 5/3/2017 19:41",
+		"testExpression" : "ThierryGoubier 5/3/2017 19:40",
+		"semicolon:" : "ThierryGoubier 5/3/2017 19:40",
+		"tokenVariables" : "ThierryGoubier 5/3/2017 19:40",
+		"nodeVariables" : "ThierryGoubier 5/3/2017 19:40"
+	},
+	"class" : { }
+}

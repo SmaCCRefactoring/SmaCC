@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "CSInvocationExpressionNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"baseOperations"
+	],
+	"name" : "CSNullConditionalInvocationExpressionNode",
+	"type" : "normal"
+}

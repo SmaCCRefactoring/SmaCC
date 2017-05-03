@@ -1,10 +1,14 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"modified" : "JohnBrant 6/24/2016 13:12:32",
-		"postCopy" : "JohnBrant 6/24/2016 13:12:32",
-		"rewrite" : "JohnBrant 6/24/2016 13:12:32",
-		"rewrite:" : "JohnBrant 6/24/2016 13:12:32",
-		"saveOn:" : "JohnBrant 6/24/2016 13:12:32",
-		"transformUsingContext:" : "JohnBrant 6/24/2016 13:12:32" } }
+		"rewrite" : "ThierryGoubier 9/23/2016 20:11:02",
+		"postCopy" : "ThierryGoubier 9/23/2016 20:11:02",
+		"modified" : "ThierryGoubier 9/23/2016 20:11:02",
+		"transformUsingContext:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"saveOn:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"rewrite:" : "ThierryGoubier 9/23/2016 20:11:02"
+	},
+	"class" : {
+		"haltBlock" : "JohnBrant 12/28/2016 09:28",
+		"haltBlock:" : "JohnBrant 12/28/2016 09:28"
+	}
+}

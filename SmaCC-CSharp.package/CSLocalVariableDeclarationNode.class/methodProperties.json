@@ -1,15 +1,16 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 12:08:16",
-		"commaTokens" : "JohnBrant 6/24/2016 12:08:16",
-		"commaTokens:" : "JohnBrant 6/24/2016 12:08:16",
-		"compositeNodeVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"declarators" : "JohnBrant 6/24/2016 12:08:16",
-		"declarators:" : "JohnBrant 6/24/2016 12:08:16",
-		"ignoredCompositeTokenVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"initialize" : "JohnBrant 6/24/2016 12:08:16",
-		"nodeVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"type" : "JohnBrant 6/24/2016 12:08:16",
-		"type:" : "JohnBrant 6/24/2016 12:08:16" } }
+		"ignoredCompositeTokenVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"declarators" : "ThierryGoubier 9/23/2016 19:23:52",
+		"commaTokens:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"declarators:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"initialize" : "ThierryGoubier 9/23/2016 19:23:52",
+		"commaTokens" : "ThierryGoubier 9/23/2016 19:23:52",
+		"acceptVisitor:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"type" : "ThierryGoubier 9/23/2016 19:23:52",
+		"compositeNodeVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"nodeVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"type:" : "ThierryGoubier 9/23/2016 19:23:52"
+	},
+	"class" : { }
+}

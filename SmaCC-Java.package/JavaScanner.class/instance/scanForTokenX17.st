@@ -1,6 +1,7 @@
 generated
 scanForTokenX17
-	[ self recordMatch: #(104).
+	self recordMatch: #(86).
 	self step.
-	currentCharacter isAlphaNumeric
-		or: [ '$_' includes: currentCharacter ] ] whileTrue
+	currentCharacter == $=
+		ifTrue: [ ^ self recordAndReportMatch: #(53) ].
+	^ self reportLastMatch

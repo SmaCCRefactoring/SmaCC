@@ -7,5 +7,5 @@ scan9
 	('Ee' includes: currentCharacter)
 		ifTrue: [ ^ self scan5 ].
 	('DFdf' includes: currentCharacter)
-		ifTrue: [ ^ self recordAndReportMatch: #(99) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(100) ].
 	^ self reportLastMatch

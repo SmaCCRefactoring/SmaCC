@@ -1,22 +1,26 @@
 {
-	"class" : {
-		"dataValueFrom:" : "JohnBrant 6/24/2016 12:06:13",
-		"definitionComment" : "JohnBrant 6/24/2016 12:06:13",
-		"fileExtension" : "JohnBrant 6/24/2016 12:06:13",
-		"fileExtensionType" : "JohnBrant 6/24/2016 12:06:13",
-		"parseFileWithHeader:" : "JohnBrant 6/24/2016 12:06:13",
-		"parseFileWithoutHeader:" : "JohnBrant 6/24/2016 12:06:13",
-		"scannerClass" : "JohnBrant 6/24/2016 12:06:13",
-		"startingStateForFile" : "JohnBrant 6/24/2016 12:06:13" },
 	"instance" : {
-		"reduceActionForFile1:" : "JohnBrant 6/24/2016 12:06:13",
-		"reduceActionForLine1:" : "JohnBrant 6/24/2016 12:06:13",
-		"reduceActionForLine2:" : "JohnBrant 6/24/2016 12:06:13",
-		"reduceActionForLines1:" : "JohnBrant 6/24/2016 12:06:13",
-		"reduceActionForLines2:" : "JohnBrant 6/24/2016 12:06:13",
-		"reduceActionForMissing1:" : "JohnBrant 6/24/2016 12:06:13",
-		"reduceActionForValue1:" : "JohnBrant 6/24/2016 12:06:13",
-		"reduceTable" : "JohnBrant 6/24/2016 12:06:13",
-		"symbolNames" : "JohnBrant 6/24/2016 12:06:13",
-		"symbolTypes" : "JohnBrant 6/24/2016 12:06:13",
-		"transitionTable" : "JohnBrant 6/24/2016 12:06:13" } }
+		"symbolNames" : "ThierryGoubier 9/23/2016 19:23:32",
+		"reduceTable" : "ThierryGoubier 9/23/2016 19:23:32",
+		"reduceActionForLines2:" : "ThierryGoubier 9/23/2016 19:23:32",
+		"reduceActionForFile1:" : "ThierryGoubier 9/23/2016 19:23:32",
+		"transitionTable" : "ThierryGoubier 9/23/2016 19:23:32",
+		"reduceActionForValue1:" : "ThierryGoubier 9/23/2016 19:23:32",
+		"reduceActionForLine1:" : "ThierryGoubier 9/23/2016 19:23:32",
+		"symbolTypes" : "ThierryGoubier 9/23/2016 19:23:32",
+		"reduceActionForMissing1:" : "ThierryGoubier 9/23/2016 19:23:32",
+		"reduceActionForLines1:" : "ThierryGoubier 9/23/2016 19:23:32",
+		"reduceActionForLine2:" : "ThierryGoubier 9/23/2016 19:23:32"
+	},
+	"class" : {
+		"fileExtension" : "ThierryGoubier 9/23/2016 19:23:32",
+		"cacheId" : "ThierryGoubier 5/2/2017 22:47",
+		"definitionComment" : "ThierryGoubier 9/23/2016 19:23:32",
+		"dataValueFrom:" : "ThierryGoubier 9/23/2016 19:23:32",
+		"parseFileWithHeader:" : "ThierryGoubier 9/23/2016 19:23:32",
+		"fileExtensionType" : "ThierryGoubier 9/23/2016 19:23:32",
+		"parseFileWithoutHeader:" : "ThierryGoubier 9/23/2016 19:23:32",
+		"startingStateForFile" : "ThierryGoubier 9/23/2016 19:23:32",
+		"scannerClass" : "ThierryGoubier 9/23/2016 19:23:32"
+	}
+}

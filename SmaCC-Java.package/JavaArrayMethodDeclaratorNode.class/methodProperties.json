@@ -1,13 +1,14 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 10:40:06",
-		"declarator" : "JohnBrant 6/24/2016 10:40:06",
-		"declarator:" : "JohnBrant 6/24/2016 10:40:06",
-		"ignoredTokenVariables" : "JohnBrant 6/24/2016 10:40:06",
-		"left" : "JohnBrant 6/24/2016 10:40:06",
-		"left:" : "JohnBrant 6/24/2016 10:40:06",
-		"nodeVariables" : "JohnBrant 6/24/2016 10:40:06",
-		"right" : "JohnBrant 6/24/2016 10:40:06",
-		"right:" : "JohnBrant 6/24/2016 10:40:06" } }
+		"nodeVariables" : "ThierryGoubier 5/3/2017 19:39",
+		"rightBracket" : "ThierryGoubier 5/3/2017 19:39",
+		"leftBracket:" : "ThierryGoubier 5/3/2017 19:39",
+		"rightBracket:" : "ThierryGoubier 5/3/2017 19:39",
+		"declarator:" : "ThierryGoubier 5/3/2017 19:39",
+		"leftBracket" : "ThierryGoubier 5/3/2017 19:39",
+		"ignoredTokenVariables" : "ThierryGoubier 5/3/2017 19:39",
+		"declarator" : "ThierryGoubier 5/3/2017 19:39",
+		"acceptVisitor:" : "ThierryGoubier 5/3/2017 19:41"
+	},
+	"class" : { }
+}

@@ -1,16 +1,16 @@
 {
-	"category" : "SmaCC-Rewrite-Engine",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "SmaCCRewriteResult",
+	"category" : "SmaCC-Rewrite-Engine",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"inputSource",
 		"outputSource",
-		"transformedString" ],
+		"transformedString",
+		"additionalFiles"
+	],
 	"name" : "SmaCCRewriteCompleteResult",
-	"pools" : [
-		 ],
-	"super" : "SmaCCRewriteResult",
-	"type" : "normal" }
+	"type" : "normal"
+}

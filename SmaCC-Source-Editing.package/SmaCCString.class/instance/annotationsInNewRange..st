@@ -3,14 +3,13 @@ annotationsInNewRange: range
 	| startIndex first last annotations current |
 	annotations := Set new.
 	startIndex := 0.
-	first := range start.
+	first := range first.
 	last := range isEmpty
 		ifTrue: [ first ]
-		ifFalse: [ range stop ].
+		ifFalse: [ range last ].
 	current := firstSentinel next.
 	[ current isSentinel ]
-		whileFalse:
-			[ startIndex > last
+		whileFalse: [ startIndex > last
 				ifTrue: [ ^ annotations asOrderedCollection ].
 			startIndex := startIndex + current size.
 			startIndex >= first

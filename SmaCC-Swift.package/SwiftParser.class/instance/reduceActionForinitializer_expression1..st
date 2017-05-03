@@ -36,22 +36,22 @@ reduceActionForinitializer_expression1: nodes
 	result addTokens: ((nodes at: 1) at: 24) to: result inoutTokens.
 	result addTokens: ((nodes at: 1) at: 25) to: result letTokens.
 	result addTokens: ((nodes at: 1) at: 26) to: result _Tokens.
-	result addTokens: ((nodes at: 1) at: 27) to: result protocolTokens.
+	result addTokens: ((nodes at: 1) at: 27) to: result rightBraceTokens.
+	result addTokens: ((nodes at: 1) at: 28) to: result operatorTokens.
+	result addTokens: ((nodes at: 1) at: 29) to: result protocolTokens.
 	result
-		addTokens: ((nodes at: 1) at: 28)
+		addTokens: ((nodes at: 1) at: 30)
 		to: result minusGreaterThanTokens.
 	result
-		addTokens: ((nodes at: 1) at: 29)
+		addTokens: ((nodes at: 1) at: 31)
 		to: result questionMarkTokens.
-	result addTokens: ((nodes at: 1) at: 30) to: result bangTokens.
-	result addTokens: ((nodes at: 1) at: 31) to: result typeTokens.
+	result addTokens: ((nodes at: 1) at: 32) to: result bangTokens.
+	result addTokens: ((nodes at: 1) at: 33) to: result typeTokens.
 	result
-		addTokens: ((nodes at: 1) at: 32)
+		addTokens: ((nodes at: 1) at: 34)
 		to: result periodPeriodPeriodTokens.
-	result addTokens: ((nodes at: 1) at: 33) to: result equalTokens.
-	result addTokens: ((nodes at: 1) at: 34) to: result varTokens.
-	result addTokens: ((nodes at: 1) at: 35) to: result rightBraceTokens.
-	result addTokens: ((nodes at: 1) at: 36) to: result operatorTokens.
+	result addTokens: ((nodes at: 1) at: 35) to: result equalTokens.
+	result addTokens: ((nodes at: 1) at: 36) to: result varTokens.
 	result inToken: ((nodes at: 1) at: 37).
 	result weakToken: ((nodes at: 1) at: 38).
 	result unownedToken: ((nodes at: 1) at: 39).

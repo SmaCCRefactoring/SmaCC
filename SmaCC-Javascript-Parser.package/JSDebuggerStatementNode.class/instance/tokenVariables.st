@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#debuggerToken #semicolon)
+	^ #(#debuggerToken)

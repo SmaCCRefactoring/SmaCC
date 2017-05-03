@@ -1,16 +1,15 @@
 {
-	"category" : "SmaCC-Javascript-Parser",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JSExpressionNode",
+	"category" : "SmaCC-Javascript-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"lhs",
 		"operator",
-		"rhs" ],
+		"rhs"
+	],
 	"name" : "JSAssignmentExpressionNode",
-	"pools" : [
-		 ],
-	"super" : "JSExpressionNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

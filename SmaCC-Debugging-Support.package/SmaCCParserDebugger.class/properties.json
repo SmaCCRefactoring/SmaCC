@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Debugging-Support",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"isGLR" ],
-	"name" : "SmaCCParserDebugger",
-	"pools" : [
-		 ],
 	"super" : "GTGenericStackDebugger",
-	"type" : "normal" }
+	"category" : "SmaCC-Debugging-Support",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"isGLR"
+	],
+	"name" : "SmaCCParserDebugger",
+	"type" : "normal"
+}

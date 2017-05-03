@@ -1,7 +1,8 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"visitBinaryExpression:" : "JohnBrant 6/20/2016 21:55:20",
-		"visitExpression:" : "JohnBrant 6/20/2016 21:55:20",
-		"visitNumber:" : "JohnBrant 6/20/2016 21:55:20" } }
+		"visitBinaryExpression:" : "ThierryGoubier 9/23/2016 20:11:25",
+		"visitExpression:" : "ThierryGoubier 9/23/2016 20:11:25",
+		"visitNumber:" : "ThierryGoubier 9/23/2016 20:11:25"
+	},
+	"class" : { }
+}

@@ -1,12 +1,15 @@
 {
-	"class" : {
-		"on:" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"asNFAStartingWith:" : "JohnBrant 6/24/2016 12:26:52",
-		"characterNode" : "JohnBrant 6/24/2016 12:26:52",
-		"characters" : "JohnBrant 6/24/2016 12:26:52",
-		"makeCaseInsensitive" : "JohnBrant 6/24/2016 12:26:52",
-		"node:" : "JohnBrant 6/24/2016 12:26:52",
-		"possibleMatchesDo:on:" : "JohnBrant 6/24/2016 12:26:52",
-		"possibleMatchesSize" : "JohnBrant 6/24/2016 12:26:52",
-		"printOn:" : "JohnBrant 6/24/2016 12:26:52" } }
+		"makeCaseInsensitive" : "ThierryGoubier 3/27/2017 22:53:01",
+		"asNFAStartingWith:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"characters" : "ThierryGoubier 3/27/2017 22:53:01",
+		"node:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"possibleMatchesDo:on:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"possibleMatchesSize" : "ThierryGoubier 3/27/2017 22:53:01",
+		"printOn:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"characterNode" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : {
+		"on:" : "ThierryGoubier 3/27/2017 22:53:01"
+	}
+}

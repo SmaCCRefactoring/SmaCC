@@ -1,15 +1,14 @@
 {
-	"category" : "SmaCC-CSharp",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "CSStatementNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"checkedToken",
-		"block" ],
+		"block"
+	],
 	"name" : "CSCheckedStatementNode",
-	"pools" : [
-		 ],
-	"super" : "CSStatementNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

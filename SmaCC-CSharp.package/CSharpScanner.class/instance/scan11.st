@@ -1,7 +1,7 @@
 generated
 scan11
-	self recordMatch: #(155).
+	self recordMatch: #(4).
 	self step.
-	('Ll' includes: currentCharacter)
-		ifTrue: [ ^ self recordAndReportMatch: #(155) ].
+	currentCharacter == $=
+		ifTrue: [ ^ self recordAndReportMatch: #(134) ].
 	^ self reportLastMatch

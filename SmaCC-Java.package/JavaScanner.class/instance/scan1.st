@@ -2,7 +2,7 @@ generated
 scan1
 	[ self step.
 	currentCharacter == $"
-		ifTrue: [ ^ self recordAndReportMatch: #(102) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(103) ].
 	currentCharacter == $\
 		ifTrue: [ self step.
 			currentCharacter == $u
@@ -26,8 +26,7 @@ scan1
 					^ self reportLastMatch ].
 			(('"''' includes: currentCharacter)
 				or: [ (currentCharacter between: $0 and: $7)
-						or:
-							[ '\bfnrt' includes: currentCharacter ] ])
+						or: [ '\bfnrt' includes: currentCharacter ] ])
 				ifTrue: [ ^ self scan1 ].
 			^ self reportLastMatch ].
 	true ] whileTrue

@@ -1,14 +1,11 @@
 {
-	"category" : "SmaCC-Rewrite-Engine-Tests",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "SmaCCRewriteTestParser",
-	"pools" : [
-		 ],
 	"super" : "SmaCCGLRParser",
-	"type" : "normal" }
+	"category" : "SmaCC-Rewrite-Engine-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SmaCCRewriteTestParser",
+	"type" : "normal"
+}

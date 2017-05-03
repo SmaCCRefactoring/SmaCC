@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#tryToken #catchToken #leftParen #exceptionType #rightParen #finallyToken)
+	^ #(#tryToken #catchToken #exceptionType #finallyToken)

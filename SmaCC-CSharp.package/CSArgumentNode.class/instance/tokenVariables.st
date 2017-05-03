@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#refToken #outToken)
+	^ #(#identifier #colonToken #refToken #outToken)

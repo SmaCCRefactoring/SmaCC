@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Rewrite-Engine",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"expressions" ],
-	"name" : "SmaCCCompositeReplaceExpression",
-	"pools" : [
-		 ],
 	"super" : "SmaCCReplaceExpression",
-	"type" : "normal" }
+	"category" : "SmaCC-Rewrite-Engine",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"expressions"
+	],
+	"name" : "SmaCCCompositeReplaceExpression",
+	"type" : "normal"
+}

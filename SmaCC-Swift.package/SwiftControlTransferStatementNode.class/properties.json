@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Swift",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"semicolonToken" ],
-	"name" : "SwiftControlTransferStatementNode",
-	"pools" : [
-		 ],
 	"super" : "SwiftStatementNode",
-	"type" : "normal" }
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"semicolonToken"
+	],
+	"name" : "SwiftControlTransferStatementNode",
+	"type" : "normal"
+}

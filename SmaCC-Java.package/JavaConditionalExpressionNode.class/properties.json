@@ -1,18 +1,17 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JavaExpressionNode",
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"testExpression",
 		"questionMark",
 		"trueExpression",
 		"colon",
-		"falseExpression" ],
+		"falseExpression"
+	],
 	"name" : "JavaConditionalExpressionNode",
-	"pools" : [
-		 ],
-	"super" : "JavaExpressionNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

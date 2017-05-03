@@ -1,10 +1,10 @@
 {
-	"category" : "SmaCC-Swift",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "SwiftParseNode",
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"selfToken",
 		"periodToken",
@@ -12,9 +12,8 @@
 		"leftBracketToken",
 		"expression",
 		"rightBracketToken",
-		"initToken" ],
+		"initToken"
+	],
 	"name" : "SwiftSelfExpressionNode",
-	"pools" : [
-		 ],
-	"super" : "SwiftParseNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

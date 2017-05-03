@@ -1,24 +1,27 @@
 {
-	"class" : {
-		"calculateVariablesForGrammar:" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"addDependent:to:" : "JohnBrant 6/24/2016 12:26:52",
-		"addExternallyDefinedVariablesFrom:" : "JohnBrant 6/24/2016 12:26:52",
-		"addLocallyDefinedVariable:" : "JohnBrant 6/24/2016 12:26:52",
-		"addRHS:" : "JohnBrant 6/24/2016 12:26:52",
-		"addRenamedVariableName:from:" : "JohnBrant 6/24/2016 12:26:52",
-		"addVariableNamed:" : "JohnBrant 6/24/2016 12:26:52",
-		"assignVariables" : "JohnBrant 6/24/2016 12:26:52",
-		"calculateNewVariables" : "JohnBrant 6/24/2016 12:26:52",
-		"calculateVariables" : "JohnBrant 6/24/2016 12:26:52",
-		"calculateVariablesFor:" : "JohnBrant 6/24/2016 12:26:52",
-		"calculateVariablesForGrammar:" : "JohnBrant 6/24/2016 12:26:52",
-		"hasVariableChanges" : "JohnBrant 6/24/2016 12:26:52",
-		"hasVariableNamed:" : "JohnBrant 6/24/2016 12:26:52",
-		"processUnnamedSymbol:" : "JohnBrant 6/24/2016 12:26:52",
-		"recalculateDependents" : "JohnBrant 6/24/2016 12:26:52",
-		"rhsDo:" : "JohnBrant 6/24/2016 12:26:52",
-		"setupVariableDependents" : "JohnBrant 6/24/2016 12:26:52",
-		"setupVariableDependentsFor:" : "JohnBrant 6/24/2016 12:26:52",
-		"shouldAddVariablesFrom:" : "JohnBrant 6/24/2016 12:26:52",
-		"variableNamed:" : "JohnBrant 6/24/2016 12:26:52" } }
+		"rhsDo:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"addVariableNamed:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"addLocallyDefinedVariable:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"addDependent:to:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"variableNamed:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"setupVariableDependents" : "ThierryGoubier 3/27/2017 22:53:01",
+		"hasVariableChanges" : "ThierryGoubier 3/27/2017 22:53:01",
+		"recalculateDependents" : "ThierryGoubier 3/27/2017 22:53:01",
+		"addRHS:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"addRenamedVariableName:from:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"setupVariableDependentsFor:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"processUnnamedSymbol:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"assignVariables" : "ThierryGoubier 3/27/2017 22:53:01",
+		"addExternallyDefinedVariablesFrom:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"calculateVariablesFor:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"shouldAddVariablesFrom:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"calculateNewVariables" : "ThierryGoubier 3/27/2017 22:53:01",
+		"calculateVariablesForGrammar:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"calculateVariables" : "ThierryGoubier 3/27/2017 22:53:01",
+		"hasVariableNamed:" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : {
+		"calculateVariablesForGrammar:" : "ThierryGoubier 3/27/2017 22:53:01"
+	}
+}

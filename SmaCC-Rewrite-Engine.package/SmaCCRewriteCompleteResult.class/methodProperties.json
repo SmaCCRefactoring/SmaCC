@@ -1,11 +1,14 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"inputSource" : "JohnBrant 6/24/2016 13:12:32",
-		"inputSource:" : "JohnBrant 6/24/2016 13:12:32",
-		"outputSource" : "JohnBrant 6/24/2016 13:12:32",
-		"outputSource:" : "JohnBrant 6/24/2016 13:12:32",
-		"smaccStringClass" : "JohnBrant 6/24/2016 13:12:32",
-		"transformedString" : "JohnBrant 6/24/2016 13:12:32",
-		"transformedString:" : "JohnBrant 6/24/2016 13:12:32" } }
+		"inputSource" : "ThierryGoubier 9/23/2016 20:11:02",
+		"outputSource" : "ThierryGoubier 9/23/2016 20:11:02",
+		"additionalFiles" : "JohnBrant 12/29/2016 13:44",
+		"outputSource:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"addFile:named:" : "JohnBrant 12/29/2016 13:45",
+		"smaccStringClass" : "ThierryGoubier 9/23/2016 20:11:02",
+		"inputSource:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"transformedString" : "ThierryGoubier 9/23/2016 20:11:02",
+		"transformedString:" : "ThierryGoubier 9/23/2016 20:11:02"
+	},
+	"class" : { }
+}

@@ -1,17 +1,21 @@
 {
-	"class" : {
-		"comment:match:transformation:" : "JohnBrant 6/24/2016 13:12:32",
-		"newInstance" : "JohnBrant 6/24/2016 13:12:32" },
 	"instance" : {
-		"comment" : "JohnBrant 6/24/2016 13:12:32",
-		"comment:" : "JohnBrant 6/24/2016 13:12:32",
-		"displayOn:" : "JohnBrant 6/24/2016 13:12:32",
-		"engine:" : "JohnBrant 6/24/2016 13:12:32",
-		"listForClass:into:" : "JohnBrant 6/24/2016 13:12:32",
-		"localSaveOn:" : "JohnBrant 6/24/2016 13:12:32",
-		"match" : "JohnBrant 6/24/2016 13:12:32",
-		"match:" : "JohnBrant 6/24/2016 13:12:32",
-		"performOn:continuation:" : "JohnBrant 6/24/2016 13:12:32",
-		"postCopy" : "JohnBrant 6/24/2016 13:12:32",
-		"transformation" : "JohnBrant 6/24/2016 13:12:32",
-		"transformation:" : "JohnBrant 6/24/2016 13:12:32" } }
+		"match:" : "JohnBrant 1/1/2017 18:46",
+		"displayOn:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"transformation" : "ThierryGoubier 9/23/2016 20:11:02",
+		"engine:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"matches:" : "JohnBrant 1/3/2017 21:36",
+		"listForClass:into:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"transformation:" : "JohnBrant 1/1/2017 18:46",
+		"match" : "ThierryGoubier 9/23/2016 20:11:02",
+		"comment:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"comment" : "ThierryGoubier 9/23/2016 20:11:02",
+		"performOn:continuation:" : "JohnBrant 12/31/2016 19:10",
+		"postCopy" : "ThierryGoubier 9/23/2016 20:11:02",
+		"localSaveOn:" : "ThierryGoubier 9/23/2016 20:11:02"
+	},
+	"class" : {
+		"newInstance" : "ThierryGoubier 9/23/2016 20:11:02",
+		"comment:match:transformation:" : "ThierryGoubier 9/23/2016 20:11:02"
+	}
+}

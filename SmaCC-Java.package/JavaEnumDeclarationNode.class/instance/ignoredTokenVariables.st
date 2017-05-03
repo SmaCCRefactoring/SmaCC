@@ -1,3 +1,3 @@
 generated
 ignoredTokenVariables
-	^ #(#left #semicolon #right)
+	^ #(#leftBrace #semicolon #rightBrace)

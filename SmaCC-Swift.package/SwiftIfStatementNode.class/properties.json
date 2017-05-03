@@ -1,18 +1,17 @@
 {
-	"category" : "SmaCC-Swift",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "SwiftBranchStatementNode",
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"ifToken",
 		"expression",
 		"then",
 		"elseToken",
-		"else" ],
+		"else"
+	],
 	"name" : "SwiftIfStatementNode",
-	"pools" : [
-		 ],
-	"super" : "SwiftBranchStatementNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

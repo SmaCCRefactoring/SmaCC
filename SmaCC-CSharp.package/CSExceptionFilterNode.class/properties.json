@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "CSProgramNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"whenToken",
+		"leftParenToken",
+		"expression",
+		"rightParenToken"
+	],
+	"name" : "CSExceptionFilterNode",
+	"type" : "normal"
+}

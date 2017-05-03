@@ -1,17 +1,20 @@
 {
+	"commentStamp" : "<historical>",
+	"super" : "SmaCCCodeGenerator",
 	"category" : "SmaCC-Development",
 	"classinstvars" : [
-		"keywords" ],
+		"keywords"
+	],
+	"pools" : [ ],
 	"classvars" : [
 		"IsExpressions",
 		"MaxJumpSize",
-		"MaxLiterals" ],
-	"commentStamp" : "<historical>",
+		"MaxLiterals"
+	],
 	"instvars" : [
 		"isExpressions",
-		"parseTreeCache" ],
+		"parseTreeCache"
+	],
 	"name" : "SmaCCSmalltalkCodeGenerator",
-	"pools" : [
-		 ],
-	"super" : "SmaCCCodeGenerator",
-	"type" : "normal" }
+	"type" : "normal"
+}

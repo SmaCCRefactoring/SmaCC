@@ -1,10 +1,10 @@
 {
-	"category" : "SmaCC-Rewrite-Engine",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SmaCC-Rewrite-Engine",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"rewriteRule",
 		"source",
@@ -14,9 +14,9 @@
 		"methods",
 		"processedNodes",
 		"outputDirectory",
-		"outputFilename" ],
+		"outputFilename",
+		"contextClass"
+	],
 	"name" : "SmaCCRewriteEngine",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

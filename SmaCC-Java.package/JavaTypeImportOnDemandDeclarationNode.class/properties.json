@@ -1,15 +1,14 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JavaSingleTypeImportDeclarationNode",
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"period",
-		"star" ],
+		"star"
+	],
 	"name" : "JavaTypeImportOnDemandDeclarationNode",
-	"pools" : [
-		 ],
-	"super" : "JavaSingleTypeImportDeclarationNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

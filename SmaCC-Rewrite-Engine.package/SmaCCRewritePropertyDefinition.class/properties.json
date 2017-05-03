@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "SmaCCAbstractRewrite",
+	"category" : "SmaCC-Rewrite-Engine",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Reader",
+		"Writer"
+	],
+	"instvars" : [
+		"comment",
+		"propertyNames",
+		"globalValues",
+		"methods"
+	],
+	"name" : "SmaCCRewritePropertyDefinition",
+	"type" : "normal"
+}

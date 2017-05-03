@@ -1,9 +1,13 @@
 {
-	"class" : {
-		"on:" : "JohnBrant 6/24/2016 13:12:32" },
 	"instance" : {
-		"expression" : "JohnBrant 6/24/2016 13:12:32",
-		"saveOn:" : "JohnBrant 6/24/2016 13:12:32",
-		"string" : "JohnBrant 6/24/2016 13:12:32",
-		"string:" : "JohnBrant 6/24/2016 13:12:32",
-		"transformUsingContext:" : "JohnBrant 6/24/2016 13:12:32" } }
+		"string" : "ThierryGoubier 9/23/2016 20:11:02",
+		"transformUsingContext:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"string:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"initialize" : "JohnBrant 12/20/2016 09:53",
+		"saveOn:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"expression" : "ThierryGoubier 9/23/2016 20:11:02"
+	},
+	"class" : {
+		"on:" : "ThierryGoubier 9/23/2016 20:11:02"
+	}
+}

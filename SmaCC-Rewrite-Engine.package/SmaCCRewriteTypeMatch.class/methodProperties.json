@@ -1,17 +1,21 @@
 {
-	"class" : {
-		"on:" : "JohnBrant 6/24/2016 13:12:32" },
 	"instance" : {
-		"canMatch:" : "JohnBrant 6/24/2016 13:12:32",
-		"code" : "JohnBrant 6/24/2016 13:12:32",
-		"code:" : "JohnBrant 6/24/2016 13:12:32",
-		"codeMatches:" : "JohnBrant 6/24/2016 13:12:32",
-		"displayOn:" : "JohnBrant 6/24/2016 13:12:32",
-		"enableDebug" : "JohnBrant 6/24/2016 13:12:32",
-		"enableDebug:" : "JohnBrant 6/24/2016 13:12:32",
-		"match:" : "JohnBrant 6/24/2016 13:12:32",
-		"method" : "JohnBrant 6/24/2016 13:12:32",
-		"methodMatches:" : "JohnBrant 6/24/2016 13:12:32",
-		"nodeClass" : "JohnBrant 6/24/2016 13:12:32",
-		"nodeClass:" : "JohnBrant 6/24/2016 13:12:32",
-		"saveOn:" : "JohnBrant 6/24/2016 13:12:32" } }
+		"displayOn:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"match:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"code" : "ThierryGoubier 9/23/2016 20:11:02",
+		"enableDebug" : "ThierryGoubier 9/23/2016 20:11:02",
+		"saveOn:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"nodeClass:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"code:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"initialize" : "JohnBrant 12/20/2016 09:51",
+		"enableDebug:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"methodMatches:" : "JohnBrant 12/28/2016 09:47",
+		"codeMatches:" : "JohnBrant 12/30/2016 08:27",
+		"nodeClass" : "ThierryGoubier 9/23/2016 20:11:02",
+		"method" : "JohnBrant 12/31/2016 18:37",
+		"canMatch:" : "ThierryGoubier 9/23/2016 20:11:02"
+	},
+	"class" : {
+		"on:" : "ThierryGoubier 9/23/2016 20:11:02"
+	}
+}

@@ -48,16 +48,16 @@ reduceActionForprotocol_method_declaration1: nodes
 	result addTokens: ((nodes at: 4) at: 1) to: result leftParenTokens.
 	result addTokens: ((nodes at: 4) at: 2) to: result rightParenTokens.
 	result addTokens: ((nodes at: 4) at: 3) to: result commaTokens.
-	result addTokens: ((nodes at: 4) at: 4) to: result colonTokens.
-	result addTokens: ((nodes at: 4) at: 5) to: result identifierTokens.
-	result addTokens: ((nodes at: 4) at: 6) to: result periodTokens.
-	result addTokens: ((nodes at: 4) at: 7) to: result protocolTokens.
-	result addTokens: ((nodes at: 4) at: 8) to: result lessThanTokens.
-	result addTokens: ((nodes at: 4) at: 9) to: result greaterThanTokens.
-	result addTokens: ((nodes at: 4) at: 10) to: result varTokens.
 	result
-		addTokens: ((nodes at: 4) at: 11)
+		addTokens: ((nodes at: 4) at: 4)
 		to: result periodPeriodPeriodTokens.
+	result addTokens: ((nodes at: 4) at: 5) to: result colonTokens.
+	result addTokens: ((nodes at: 4) at: 6) to: result identifierTokens.
+	result addTokens: ((nodes at: 4) at: 7) to: result periodTokens.
+	result addTokens: ((nodes at: 4) at: 8) to: result protocolTokens.
+	result addTokens: ((nodes at: 4) at: 9) to: result lessThanTokens.
+	result addTokens: ((nodes at: 4) at: 10) to: result greaterThanTokens.
+	result addTokens: ((nodes at: 4) at: 11) to: result varTokens.
 	result addTokens: ((nodes at: 4) at: 12) to: result inoutTokens.
 	result addTokens: ((nodes at: 4) at: 13) to: result letTokens.
 	result addTokens: ((nodes at: 4) at: 14) to: result _Tokens.

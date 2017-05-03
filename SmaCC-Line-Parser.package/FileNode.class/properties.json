@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Line-Parser",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"lines" ],
-	"name" : "FileNode",
-	"pools" : [
-		 ],
 	"super" : "SmaCCParseNode",
-	"type" : "normal" }
+	"category" : "SmaCC-Line-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"lines"
+	],
+	"name" : "FileNode",
+	"type" : "normal"
+}

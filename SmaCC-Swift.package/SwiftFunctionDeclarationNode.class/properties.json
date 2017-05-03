@@ -1,10 +1,10 @@
 {
-	"category" : "SmaCC-Swift",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "SwiftParseNode",
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"_Tokens",
 		"identifierTokens",
@@ -46,9 +46,8 @@
 		"questionMarkTokens",
 		"bangTokens",
 		"typeTokens",
-		"block" ],
+		"block"
+	],
 	"name" : "SwiftFunctionDeclarationNode",
-	"pools" : [
-		 ],
-	"super" : "SwiftParseNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

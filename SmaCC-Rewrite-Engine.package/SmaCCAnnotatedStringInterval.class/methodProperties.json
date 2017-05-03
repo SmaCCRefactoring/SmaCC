@@ -1,10 +1,11 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"addAllAnnotations:" : "JohnBrant 6/24/2016 13:12:32",
-		"addAnnotation:" : "JohnBrant 6/24/2016 13:12:32",
-		"annotations" : "JohnBrant 6/24/2016 13:12:32",
-		"annotations:" : "JohnBrant 6/24/2016 13:12:32",
-		"canBeMergedWith:" : "JohnBrant 6/24/2016 13:12:32",
-		"postCopy" : "JohnBrant 6/24/2016 13:12:32" } }
+		"annotations" : "ThierryGoubier 9/23/2016 20:11:02",
+		"annotations:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"canBeMergedWith:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"postCopy" : "ThierryGoubier 9/23/2016 20:11:02",
+		"addAllAnnotations:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"addAnnotation:" : "ThierryGoubier 9/23/2016 20:11:02"
+	},
+	"class" : { }
+}

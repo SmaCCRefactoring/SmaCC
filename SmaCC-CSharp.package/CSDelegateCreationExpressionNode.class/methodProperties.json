@@ -1,17 +1,18 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 12:08:16",
-		"expression" : "JohnBrant 6/24/2016 12:08:16",
-		"expression:" : "JohnBrant 6/24/2016 12:08:16",
-		"leftParenToken" : "JohnBrant 6/24/2016 12:08:16",
-		"leftParenToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"newToken" : "JohnBrant 6/24/2016 12:08:16",
-		"newToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"nodeVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"rightParenToken" : "JohnBrant 6/24/2016 12:08:16",
-		"rightParenToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"tokenVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"type" : "JohnBrant 6/24/2016 12:08:16",
-		"type:" : "JohnBrant 6/24/2016 12:08:16" } }
+		"expression" : "ThierryGoubier 9/23/2016 19:23:52",
+		"type:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"leftParenToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"newToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"leftParenToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"expression:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"acceptVisitor:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"tokenVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"type" : "ThierryGoubier 9/23/2016 19:23:52",
+		"rightParenToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"rightParenToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"nodeVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"newToken:" : "ThierryGoubier 9/23/2016 19:23:52"
+	},
+	"class" : { }
+}

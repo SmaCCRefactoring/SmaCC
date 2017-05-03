@@ -1,12 +1,13 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"=" : "JohnBrant 6/24/2016 12:26:52",
-		"basicModelTypes:" : "JohnBrant 6/24/2016 12:26:52",
-		"classDefinition" : "JohnBrant 6/24/2016 12:26:52",
-		"index" : "JohnBrant 6/24/2016 12:26:52",
-		"index:" : "JohnBrant 6/24/2016 12:26:52",
-		"isPullUpAction" : "JohnBrant 6/24/2016 12:26:52",
-		"nodeType:" : "JohnBrant 6/24/2016 12:26:52",
-		"source" : "JohnBrant 6/24/2016 12:26:52" } }
+		"classDefinition" : "ThierryGoubier 3/27/2017 22:53:01",
+		"source" : "ThierryGoubier 3/27/2017 22:53:01",
+		"=" : "ThierryGoubier 3/27/2017 22:53:01",
+		"basicModelTypes:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"index:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"index" : "ThierryGoubier 3/27/2017 22:53:01",
+		"isPullUpAction" : "ThierryGoubier 3/27/2017 22:53:01",
+		"nodeType:" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : { }
+}

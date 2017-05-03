@@ -1,8 +1,11 @@
 {
-	"class" : {
-		"rhs:" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"id" : "JohnBrant 6/24/2016 12:26:52",
-		"isReduce" : "JohnBrant 6/24/2016 12:26:52",
-		"mergeWith:prefer:" : "JohnBrant 6/24/2016 12:26:52",
-		"mergeWithReduceAction:" : "JohnBrant 6/24/2016 12:26:52" } }
+		"mergeWith:prefer:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"isReduce" : "ThierryGoubier 3/27/2017 22:53:01",
+		"mergeWithReduceAction:" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : {
+		"rhs:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"id" : "JohnBrant 10/23/2016 13:41"
+	}
+}

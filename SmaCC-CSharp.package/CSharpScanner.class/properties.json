@@ -1,14 +1,11 @@
 {
-	"category" : "SmaCC-CSharp",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "CSharpScanner",
-	"pools" : [
-		 ],
 	"super" : "SmaCCScanner",
-	"type" : "normal" }
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CSharpScanner",
+	"type" : "normal"
+}

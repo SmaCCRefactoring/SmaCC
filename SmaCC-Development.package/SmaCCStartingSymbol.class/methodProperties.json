@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"asLRItemSet" : "JohnBrant 6/24/2016 12:26:52",
-		"compileName" : "JohnBrant 6/24/2016 12:26:52",
-		"isStartingSymbol" : "JohnBrant 6/24/2016 12:26:52",
-		"symbol" : "JohnBrant 6/24/2016 12:26:52" } }
+		"compileName" : "ThierryGoubier 3/27/2017 22:53:01",
+		"isStartingSymbol" : "ThierryGoubier 3/27/2017 22:53:01",
+		"asLRItemSet" : "ThierryGoubier 3/27/2017 22:53:01",
+		"symbol" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : { }
+}

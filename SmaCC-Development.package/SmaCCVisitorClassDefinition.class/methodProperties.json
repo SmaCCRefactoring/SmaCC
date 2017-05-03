@@ -1,9 +1,12 @@
 {
-	"class" : {
-		"forClassDefinitions:" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"compileMethodsAndVariables" : "JohnBrant 6/24/2016 12:26:52",
-		"compileVisitMethodFor:" : "JohnBrant 6/24/2016 12:26:52",
-		"name" : "JohnBrant 6/24/2016 12:26:52",
-		"nodeClassDefinitions:" : "JohnBrant 6/24/2016 12:26:52",
-		"rootClassName" : "JohnBrant 6/24/2016 12:26:52" } }
+		"compileVisitMethodFor:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"compileMethodsAndVariables" : "ThierryGoubier 3/27/2017 22:53:01",
+		"rootClassName" : "ThierryGoubier 3/27/2017 22:53:01",
+		"name" : "ThierryGoubier 3/27/2017 22:53:01",
+		"nodeClassDefinitions:" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : {
+		"forClassDefinitions:" : "ThierryGoubier 3/27/2017 22:53:01"
+	}
+}

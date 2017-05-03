@@ -1,17 +1,16 @@
 {
-	"category" : "SmaCC-Javascript-Parser",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JSProgramNode",
+	"category" : "SmaCC-Javascript-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"caseToken",
 		"caseExpression",
 		"colonToken",
-		"statements" ],
+		"statements"
+	],
 	"name" : "JSCaseClauseNode",
-	"pools" : [
-		 ],
-	"super" : "JSProgramNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

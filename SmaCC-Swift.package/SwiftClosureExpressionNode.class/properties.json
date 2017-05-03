@@ -1,10 +1,10 @@
 {
-	"category" : "SmaCC-Swift",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "SwiftParseNode",
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"leftBraceTokens",
 		"leftParenTokens",
@@ -39,9 +39,8 @@
 		"unownedToken",
 		"unownedLeftParensafeRightParenToken",
 		"unownedLeftParenunsafeRightParenToken",
-		"statements" ],
+		"statements"
+	],
 	"name" : "SwiftClosureExpressionNode",
-	"pools" : [
-		 ],
-	"super" : "SwiftParseNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

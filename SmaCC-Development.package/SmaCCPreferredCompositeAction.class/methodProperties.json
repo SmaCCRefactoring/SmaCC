@@ -1,9 +1,10 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"errorType" : "JohnBrant 6/24/2016 12:26:52",
-		"mergeWith:prefer:" : "JohnBrant 6/24/2016 12:26:52",
-		"preferredAction" : "JohnBrant 6/24/2016 12:26:52",
-		"preferredAction:" : "JohnBrant 6/24/2016 12:26:52",
-		"reduceAction" : "JohnBrant 6/24/2016 12:26:52" } }
+		"mergeWith:prefer:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"reduceAction" : "ThierryGoubier 3/27/2017 22:53:01",
+		"errorType" : "ThierryGoubier 3/27/2017 22:53:01",
+		"preferredAction" : "ThierryGoubier 3/27/2017 22:53:01",
+		"preferredAction:" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : { }
+}

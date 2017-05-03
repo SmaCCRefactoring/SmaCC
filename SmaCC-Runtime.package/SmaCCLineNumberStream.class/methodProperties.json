@@ -1,22 +1,25 @@
 {
-	"class" : {
-		"on:" : "JohnBrant 6/21/2016 21:17:22" },
 	"instance" : {
-		"atEnd" : "JohnBrant 6/21/2016 21:17:22",
-		"columnNumber" : "JohnBrant 6/21/2016 21:17:22",
-		"columnNumberFor:" : "JohnBrant 6/21/2016 21:17:22",
-		"contents" : "JohnBrant 6/21/2016 21:17:22",
-		"contentsSpecies" : "JohnBrant 6/21/2016 21:17:22",
-		"doesNotUnderstand:" : "JohnBrant 6/21/2016 21:17:22",
-		"flush" : "JohnBrant 6/21/2016 21:17:22",
-		"isReadable" : "JohnBrant 6/21/2016 21:17:22",
-		"isWritable" : "JohnBrant 6/21/2016 21:17:22",
-		"lineNumber" : "JohnBrant 6/21/2016 21:17:22",
-		"lineNumberFor:" : "JohnBrant 6/21/2016 21:17:22",
-		"next" : "JohnBrant 6/21/2016 21:17:22",
-		"nextPut:" : "JohnBrant 6/21/2016 21:17:22",
-		"on:" : "JohnBrant 6/21/2016 21:17:22",
-		"peek" : "JohnBrant 6/21/2016 21:17:22",
-		"position" : "JohnBrant 6/21/2016 21:17:22",
-		"position:" : "JohnBrant 6/21/2016 21:17:22",
-		"skip:" : "JohnBrant 6/21/2016 21:17:22" } }
+		"columnNumber" : "ThierryGoubier 9/23/2016 19:26:49",
+		"isReadable" : "ThierryGoubier 9/23/2016 19:26:49",
+		"doesNotUnderstand:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"next" : "ThierryGoubier 9/23/2016 19:26:49",
+		"flush" : "ThierryGoubier 9/23/2016 19:26:49",
+		"contentsSpecies" : "ThierryGoubier 9/23/2016 19:26:49",
+		"isWritable" : "ThierryGoubier 9/23/2016 19:26:49",
+		"lineNumber" : "ThierryGoubier 9/23/2016 19:26:49",
+		"atEnd" : "ThierryGoubier 9/23/2016 19:26:49",
+		"on:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"peek" : "ThierryGoubier 9/23/2016 19:26:49",
+		"position:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"skip:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"lineNumberFor:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"nextPut:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"columnNumberFor:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"position" : "ThierryGoubier 9/23/2016 19:26:49",
+		"contents" : "ThierryGoubier 9/23/2016 19:26:49"
+	},
+	"class" : {
+		"on:" : "ThierryGoubier 9/23/2016 19:26:49"
+	}
+}

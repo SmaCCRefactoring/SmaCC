@@ -1,12 +1,15 @@
 {
-	"class" : {
-		"convertToDFA:" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"commonTransitionObjectsForEdges:" : "JohnBrant 6/24/2016 12:26:52",
-		"convertToDFA:" : "JohnBrant 6/24/2016 12:26:52",
-		"createEdgeMerging:" : "JohnBrant 6/24/2016 12:26:52",
-		"eliminateDuplicateTransitionsIn:" : "JohnBrant 6/24/2016 12:26:52",
-		"initialize" : "JohnBrant 6/24/2016 12:26:52",
-		"mergedNodeFor:" : "JohnBrant 6/24/2016 12:26:52",
-		"setTransitionsOn:to:" : "JohnBrant 6/24/2016 12:26:52",
-		"someDuplicateIn:" : "JohnBrant 6/24/2016 12:26:52" } }
+		"setTransitionsOn:to:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"commonTransitionObjectsForEdges:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"createEdgeMerging:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"eliminateDuplicateTransitionsIn:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"initialize" : "ThierryGoubier 3/27/2017 22:53:01",
+		"someDuplicateIn:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"convertToDFA:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"mergedNodeFor:" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : {
+		"convertToDFA:" : "ThierryGoubier 3/27/2017 22:53:01"
+	}
+}

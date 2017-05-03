@@ -1,18 +1,17 @@
 {
-	"category" : "SmaCC-CSharp",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "CSStatementNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"whileToken",
 		"leftParenToken",
 		"expression",
 		"rightParenToken",
-		"statement" ],
+		"statement"
+	],
 	"name" : "CSWhileStatementNode",
-	"pools" : [
-		 ],
-	"super" : "CSStatementNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

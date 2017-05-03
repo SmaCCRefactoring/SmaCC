@@ -1,3 +1,0 @@
-file types
-fileExtension
-	^ '.java'

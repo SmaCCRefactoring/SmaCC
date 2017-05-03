@@ -1,10 +1,12 @@
 {
+	"commentStamp" : "<historical>",
+	"super" : "Object",
 	"category" : "SmaCC-Development",
 	"classinstvars" : [
-		"codeTemplates" ],
-	"classvars" : [
-		 ],
-	"commentStamp" : "<historical>",
+		"codeTemplates"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"parserClass",
 		"scannerClass",
@@ -13,9 +15,8 @@
 		"reduceActionCache",
 		"ambiguousActions",
 		"grammar",
-		"defaultCategory" ],
+		"defaultCategory"
+	],
 	"name" : "SmaCCCodeGenerator",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

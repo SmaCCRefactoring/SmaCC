@@ -50,11 +50,11 @@ initialize
 	expressions := OrderedCollection new: 2.
 	willSetTokens := OrderedCollection new: 2.
 	didSetTokens := OrderedCollection new: 2.
-	inoutTokens := OrderedCollection new: 2.
 	deinitTokens := OrderedCollection new: 2.
 	extensionTokens := OrderedCollection new: 2.
 	caseTokens := OrderedCollection new: 2.
 	declarations := OrderedCollection new: 2.
 	convenienceTokens := OrderedCollection new: 2.
 	initTokens := OrderedCollection new: 2.
+	inoutTokens := OrderedCollection new: 2.
 	subscriptTokens := OrderedCollection new: 2.

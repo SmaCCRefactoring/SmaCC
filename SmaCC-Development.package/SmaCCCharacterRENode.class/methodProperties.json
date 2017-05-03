@@ -1,17 +1,20 @@
 {
-	"class" : {
-		"characters:" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"asNFAStartingWith:" : "JohnBrant 6/24/2016 12:26:52",
-		"assignCharacters:" : "JohnBrant 6/24/2016 12:26:52",
-		"canMergeWith:" : "JohnBrant 6/24/2016 12:26:52",
-		"characters" : "JohnBrant 6/24/2016 12:26:52",
-		"characters:" : "JohnBrant 6/24/2016 12:26:52",
-		"initialize" : "JohnBrant 6/24/2016 12:26:52",
-		"makeCaseInsensitive" : "JohnBrant 6/24/2016 12:26:52",
-		"matchingCharacters" : "JohnBrant 6/24/2016 12:26:52",
-		"possibleMatchesDo:on:" : "JohnBrant 6/24/2016 12:26:52",
-		"possibleMatchesSize" : "JohnBrant 6/24/2016 12:26:52",
-		"printCharacter:on:" : "JohnBrant 6/24/2016 12:26:52",
-		"printOn:" : "JohnBrant 6/24/2016 12:26:52",
-		"|" : "JohnBrant 6/24/2016 12:26:52" } }
+		"possibleMatchesSize" : "ThierryGoubier 3/27/2017 22:53:01",
+		"makeCaseInsensitive" : "ThierryGoubier 3/27/2017 22:53:01",
+		"characters" : "ThierryGoubier 3/27/2017 22:53:01",
+		"canMergeWith:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"characters:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"initialize" : "ThierryGoubier 3/27/2017 22:53:01",
+		"printCharacter:on:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"printOn:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"asNFAStartingWith:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"assignCharacters:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"matchingCharacters" : "ThierryGoubier 3/27/2017 22:53:01",
+		"possibleMatchesDo:on:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"|" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : {
+		"characters:" : "ThierryGoubier 3/27/2017 22:53:01"
+	}
+}

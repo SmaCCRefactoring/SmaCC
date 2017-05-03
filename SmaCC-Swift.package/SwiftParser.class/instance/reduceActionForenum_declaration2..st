@@ -70,15 +70,15 @@ reduceActionForenum_declaration2: nodes
 	result
 		addTokens: ((nodes at: 2) at: 38)
 		to: result periodPeriodPeriodTokens.
-	result addNodes: ((nodes at: 2) at: 39) to: result blocks.
-	result addTokens: ((nodes at: 2) at: 40) to: result getTokens.
-	result addTokens: ((nodes at: 2) at: 41) to: result setTokens.
-	result addTokens: ((nodes at: 2) at: 42) to: result rightBraceTokens.
-	result addTokens: ((nodes at: 2) at: 43) to: result equalTokens.
-	result addObjects: ((nodes at: 2) at: 44) to: result expressions.
-	result addTokens: ((nodes at: 2) at: 45) to: result willSetTokens.
-	result addTokens: ((nodes at: 2) at: 46) to: result didSetTokens.
-	result addTokens: ((nodes at: 2) at: 47) to: result inoutTokens.
+	result addTokens: ((nodes at: 2) at: 39) to: result inoutTokens.
+	result addNodes: ((nodes at: 2) at: 40) to: result blocks.
+	result addTokens: ((nodes at: 2) at: 41) to: result getTokens.
+	result addTokens: ((nodes at: 2) at: 42) to: result setTokens.
+	result addTokens: ((nodes at: 2) at: 43) to: result rightBraceTokens.
+	result addTokens: ((nodes at: 2) at: 44) to: result equalTokens.
+	result addObjects: ((nodes at: 2) at: 45) to: result expressions.
+	result addTokens: ((nodes at: 2) at: 46) to: result willSetTokens.
+	result addTokens: ((nodes at: 2) at: 47) to: result didSetTokens.
 	result addNodes: ((nodes at: 2) at: 48) to: result declarations.
 	result addTokens: ((nodes at: 2) at: 49) to: result initTokens.
 	result addTokens: ((nodes at: 2) at: 50) to: result deinitTokens.

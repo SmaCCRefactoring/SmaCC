@@ -1,7 +1,10 @@
 {
-	"class" : {
-		"new" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"createMergedNodeFrom:" : "JohnBrant 6/24/2016 12:26:52",
-		"mergeActionsFrom:into:" : "JohnBrant 6/24/2016 12:26:52",
-		"mergeTransitionsFrom:into:" : "JohnBrant 6/24/2016 12:26:52" } }
+		"mergeTransitionsFrom:into:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"mergeActionsFrom:into:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"createMergedNodeFrom:" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : {
+		"new" : "ThierryGoubier 3/27/2017 22:53:01"
+	}
+}

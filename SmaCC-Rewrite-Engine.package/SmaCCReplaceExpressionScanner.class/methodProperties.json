@@ -1,12 +1,13 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"codeExpressionId" : "JohnBrant 6/24/2016 13:12:32",
-		"emptySymbolTokenId" : "JohnBrant 6/24/2016 13:12:32",
-		"errorTokenId" : "JohnBrant 6/24/2016 13:12:32",
-		"isValidCode" : "JohnBrant 6/24/2016 13:12:32",
-		"next" : "JohnBrant 6/24/2016 13:12:32",
-		"scanCode" : "JohnBrant 6/24/2016 13:12:32",
-		"scanForToken" : "JohnBrant 6/24/2016 13:12:32",
-		"scanForTokenX1" : "JohnBrant 6/24/2016 13:12:32" } }
+		"emptySymbolTokenId" : "ThierryGoubier 9/23/2016 20:11:02",
+		"isValidCode" : "ThierryGoubier 9/23/2016 20:11:02",
+		"codeExpressionId" : "ThierryGoubier 9/23/2016 20:11:02",
+		"scanForToken" : "ThierryGoubier 9/23/2016 20:11:02",
+		"next" : "ThierryGoubier 9/23/2016 20:11:02",
+		"scanForTokenX1" : "ThierryGoubier 9/23/2016 20:11:02",
+		"scanCode" : "ThierryGoubier 9/23/2016 20:11:02",
+		"errorTokenId" : "ThierryGoubier 9/23/2016 20:11:02"
+	},
+	"class" : { }
+}

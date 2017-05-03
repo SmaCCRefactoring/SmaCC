@@ -1,8 +1,11 @@
 {
-	"class" : {
-		"gtExampleSimple" : "TudorGirba 8/14/2016 13:03" },
 	"instance" : {
-		"gtCollectionItems:type:" : "JohnBrant 6/23/2016 09:54:16",
-		"gtInspectorItems" : "JohnBrant 6/23/2016 09:54:16",
-		"gtInspectorSourceIn:" : "JohnBrant 6/23/2016 09:54:16",
-		"gtInspectorTreeIn:" : "JohnBrant 8/13/2016 09:24" } }
+		"gtCollectionItems:type:" : "ThierryGoubier 9/23/2016 19:24:04",
+		"gtInspectorItems" : "ThierryGoubier 9/23/2016 19:24:04",
+		"gtInspectorTreeIn:" : "ThierryGoubier 9/23/2016 19:24:04",
+		"gtInspectorSourceIn:" : "ThierryGoubier 5/3/2017 06:58"
+	},
+	"class" : {
+		"gtExampleSimple" : "ThierryGoubier 9/23/2016 19:24:04"
+	}
+}

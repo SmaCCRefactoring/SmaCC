@@ -1,16 +1,15 @@
 {
-	"category" : "SmaCC-Development",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
+	"super" : "SmaCCParser",
+	"category" : "SmaCC-Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"scannerDefinition",
 		"grammar",
-		"defaultClasses" ],
+		"defaultClasses"
+	],
 	"name" : "SmaCCDefinitionParser",
-	"pools" : [
-		 ],
-	"super" : "SmaCCParser",
-	"type" : "normal" }
+	"type" : "normal"
+}

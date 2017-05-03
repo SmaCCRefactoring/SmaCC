@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"isActive" : "JohnBrant 6/23/2016 09:54:16",
-		"parser" : "JohnBrant 6/23/2016 09:54:16",
-		"rootContext" : "JohnBrant 6/23/2016 09:54:16",
-		"scanner" : "JohnBrant 6/23/2016 09:54:16" } }
+		"parser" : "ThierryGoubier 9/23/2016 19:24:04",
+		"rootContext" : "ThierryGoubier 9/23/2016 19:24:04",
+		"scanner" : "ThierryGoubier 9/23/2016 19:24:04",
+		"isActive" : "JohnBrant 9/8/2016 17:47"
+	},
+	"class" : { }
+}

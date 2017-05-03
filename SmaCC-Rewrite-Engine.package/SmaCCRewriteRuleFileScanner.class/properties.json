@@ -1,14 +1,13 @@
 {
+	"commentStamp" : "",
+	"super" : "SmaCCScanner",
 	"category" : "SmaCC-Rewrite-Engine",
 	"classinstvars" : [
-		"rewriter" ],
-	"classvars" : [
-		 ],
-	"commentStamp" : "",
-	"instvars" : [
-		 ],
+		"rewriter"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
 	"name" : "SmaCCRewriteRuleFileScanner",
-	"pools" : [
-		 ],
-	"super" : "SmaCCScanner",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -29,8 +29,8 @@ initialize
 	periodTokens := OrderedCollection new: 2.
 	protocolTokens := OrderedCollection new: 2.
 	equalEqualTokens := OrderedCollection new: 2.
-	varTokens := OrderedCollection new: 2.
 	periodPeriodPeriodTokens := OrderedCollection new: 2.
+	varTokens := OrderedCollection new: 2.
 	inoutTokens := OrderedCollection new: 2.
 	letTokens := OrderedCollection new: 2.
 	equalTokens := OrderedCollection new: 2.

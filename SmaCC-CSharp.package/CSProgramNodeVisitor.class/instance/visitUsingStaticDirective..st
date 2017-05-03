@@ -1,0 +1,3 @@
+generated
+visitUsingStaticDirective: anUsingStaticDirective
+	^ self visitUsingDirective: anUsingStaticDirective

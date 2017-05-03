@@ -57,18 +57,18 @@ reduceActionForsubscript_head1: nodes
 	self addAll: ((nodes at: 3) at: 12) to: (result at: 9).
 	self addAll: ((nodes at: 3) at: 13) to: (result at: 10).
 	self addAll: ((nodes at: 3) at: 14) to: (result at: 11).
-	self addAll: ((nodes at: 3) at: 15) to: (result at: 12).
-	self addAll: ((nodes at: 3) at: 16) to: (result at: 17).
-	self addAll: ((nodes at: 3) at: 17) to: (result at: 18).
-	self addAll: ((nodes at: 3) at: 18) to: (result at: 19).
-	self addAll: ((nodes at: 3) at: 19) to: (result at: 20).
-	self addAll: ((nodes at: 3) at: 20) to: (result at: 21).
-	self addAll: ((nodes at: 3) at: 21) to: (result at: 22).
-	self addAll: ((nodes at: 3) at: 22) to: (result at: 23).
-	self addAll: ((nodes at: 3) at: 23) to: (result at: 24).
-	self addAll: ((nodes at: 3) at: 24) to: (result at: 25).
-	self addAll: ((nodes at: 3) at: 25) to: (result at: 26).
-	self addAll: ((nodes at: 3) at: 26) to: (result at: 27).
-	self addAll: ((nodes at: 3) at: 27) to: (result at: 28).
-	self addAll: ((nodes at: 3) at: 28) to: (result at: 29).
+	self addAll: ((nodes at: 3) at: 15) to: (result at: 17).
+	self addAll: ((nodes at: 3) at: 16) to: (result at: 18).
+	self addAll: ((nodes at: 3) at: 17) to: (result at: 19).
+	self addAll: ((nodes at: 3) at: 18) to: (result at: 20).
+	self addAll: ((nodes at: 3) at: 19) to: (result at: 21).
+	self addAll: ((nodes at: 3) at: 20) to: (result at: 22).
+	self addAll: ((nodes at: 3) at: 21) to: (result at: 23).
+	self addAll: ((nodes at: 3) at: 22) to: (result at: 24).
+	self addAll: ((nodes at: 3) at: 23) to: (result at: 25).
+	self addAll: ((nodes at: 3) at: 24) to: (result at: 26).
+	self addAll: ((nodes at: 3) at: 25) to: (result at: 27).
+	self addAll: ((nodes at: 3) at: 26) to: (result at: 28).
+	self addAll: ((nodes at: 3) at: 27) to: (result at: 29).
+	self addAll: ((nodes at: 3) at: 28) to: (result at: 12).
 	^ result

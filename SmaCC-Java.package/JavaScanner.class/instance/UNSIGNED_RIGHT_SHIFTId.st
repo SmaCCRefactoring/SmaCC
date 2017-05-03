@@ -1,3 +1,3 @@
 generated
 UNSIGNED_RIGHT_SHIFTId
-	^ 97
+	^ 98

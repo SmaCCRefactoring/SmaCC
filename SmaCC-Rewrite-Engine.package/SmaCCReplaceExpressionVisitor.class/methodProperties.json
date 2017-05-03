@@ -1,9 +1,10 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"visitCodeReplace:" : "JohnBrant 6/24/2016 13:12:32",
-		"visitCompositeReplace:" : "JohnBrant 6/24/2016 13:12:32",
-		"visitNodeReplace:" : "JohnBrant 6/24/2016 13:12:32",
-		"visitReplace:" : "JohnBrant 6/24/2016 13:12:32",
-		"visitStringReplace:" : "JohnBrant 6/24/2016 13:12:32" } }
+		"visitCompositeReplace:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"visitStringReplace:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"visitReplace:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"visitCodeReplace:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"visitNodeReplace:" : "ThierryGoubier 9/23/2016 20:11:02"
+	},
+	"class" : { }
+}

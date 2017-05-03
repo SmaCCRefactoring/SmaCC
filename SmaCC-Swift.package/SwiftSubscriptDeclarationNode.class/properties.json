@@ -1,10 +1,10 @@
 {
-	"category" : "SmaCC-Swift",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "SwiftParseNode",
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"_Tokens",
 		"identifierTokens",
@@ -37,9 +37,8 @@
 		"periodPeriodPeriodTokens",
 		"blocks",
 		"getToken",
-		"setToken" ],
+		"setToken"
+	],
 	"name" : "SwiftSubscriptDeclarationNode",
-	"pools" : [
-		 ],
-	"super" : "SwiftParseNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

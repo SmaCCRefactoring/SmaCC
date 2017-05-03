@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-CSharp",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"type" ],
-	"name" : "CSTypeConstraintNode",
-	"pools" : [
-		 ],
 	"super" : "CSProgramNode",
-	"type" : "normal" }
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"type"
+	],
+	"name" : "CSTypeConstraintNode",
+	"type" : "normal"
+}

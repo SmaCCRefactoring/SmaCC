@@ -1,10 +1,11 @@
 generated
 scan13
-	[ self step.
-	currentCharacter == $`
-		ifTrue: [ self recordMatch: #(161).
-			self step.
-			currentCharacter == $`
-				ifTrue: [ ^ self scan13 ].
-			^ self reportLastMatch ].
-	true ] whileTrue
+	self recordMatch: #(9).
+	self step.
+	currentCharacter == $-
+		ifTrue: [ ^ self recordAndReportMatch: #(12) ].
+	currentCharacter == $=
+		ifTrue: [ ^ self recordAndReportMatch: #(131) ].
+	currentCharacter == $>
+		ifTrue: [ ^ self recordAndReportMatch: #(99) ].
+	^ self reportLastMatch

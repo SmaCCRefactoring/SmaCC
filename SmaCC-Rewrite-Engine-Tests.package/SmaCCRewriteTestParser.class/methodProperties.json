@@ -1,13 +1,17 @@
 {
-	"class" : {
-		"definitionComment" : "JohnBrant 6/20/2016 21:55:20",
-		"scannerClass" : "JohnBrant 6/20/2016 21:55:20",
-		"startingStateForExpression" : "JohnBrant 6/20/2016 21:55:20" },
 	"instance" : {
-		"reduceActionForExpression1:" : "JohnBrant 6/20/2016 21:55:20",
-		"reduceActionForExpression3:" : "JohnBrant 6/20/2016 21:55:20",
-		"reduceActionForExpression7:" : "JohnBrant 6/20/2016 21:55:20",
-		"reduceTable" : "JohnBrant 6/20/2016 21:55:20",
-		"symbolNames" : "JohnBrant 6/20/2016 21:55:20",
-		"symbolTypes" : "JohnBrant 6/20/2016 21:55:20",
-		"transitionTable" : "JohnBrant 6/20/2016 21:55:20" } }
+		"reduceActionForExpression3:" : "ThierryGoubier 9/23/2016 20:11:25",
+		"reduceActionForExpression1:" : "ThierryGoubier 9/23/2016 20:11:25",
+		"symbolTypes" : "ThierryGoubier 9/23/2016 20:11:25",
+		"reduceActionForExpression7:" : "ThierryGoubier 9/23/2016 20:11:25",
+		"transitionTable" : "ThierryGoubier 9/23/2016 20:11:25",
+		"reduceTable" : "ThierryGoubier 9/23/2016 20:11:25",
+		"symbolNames" : "ThierryGoubier 9/23/2016 20:11:25"
+	},
+	"class" : {
+		"startingStateForExpression" : "ThierryGoubier 9/23/2016 20:11:25",
+		"definitionComment" : "ThierryGoubier 9/23/2016 20:11:25",
+		"scannerClass" : "ThierryGoubier 9/23/2016 20:11:25",
+		"cacheId" : "ThierryGoubier 5/3/2017 21:10"
+	}
+}

@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-CSharp",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"varToken" ],
-	"name" : "CSVarTypeNode",
-	"pools" : [
-		 ],
 	"super" : "CSTypeNode",
-	"type" : "normal" }
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"varToken"
+	],
+	"name" : "CSVarTypeNode",
+	"type" : "normal"
+}

@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#ifToken #leftParen #rightParen #elseToken)
+	^ #(#ifToken #elseToken)

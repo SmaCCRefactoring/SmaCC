@@ -1,13 +1,29 @@
 generated
 scan1
-	[ self step.
+	self step.
+	currentCharacter == $!
+		ifTrue: [ ^ self scan2 ].
 	currentCharacter == $"
-		ifTrue: [ ^ self recordAndReportMatch: #(158) ].
-	currentCharacter == $\
+		ifTrue: [ ^ self scan3 ].
+	currentCharacter == $#
+		ifTrue:
+			[ ^ self scan1X4 ].
+	currentCharacter == $$
+		ifTrue:
+			[ ^ self scan1X9 ].
+	currentCharacter == $%
+		ifTrue: [ ^ self scan8 ].
+	currentCharacter == $&
+		ifTrue: [ ^ self scan9 ].
+	currentCharacter == $'
 		ifTrue:
 			[ ^ self scan1X1 ].
-	currentCharacter <= Character tab
-		or: [ (currentCharacter between: Character pageUp and: $!)
-				or: [ (currentCharacter between: $# and: $[)
-						or: [ currentCharacter >= $] ] ] ] ] whileTrue.
-	^ self reportLastMatch
+	currentCharacter == $(
+		ifTrue: [ ^ self recordAndReportMatch: #(65) ].
+	currentCharacter == $)
+		ifTrue: [ ^ self recordAndReportMatch: #(64) ].
+	currentCharacter == $*
+		ifTrue: [ ^ self scan11 ].
+	currentCharacter == $+
+		ifTrue: [ ^ self scan12 ].
+	^ self scan1X12

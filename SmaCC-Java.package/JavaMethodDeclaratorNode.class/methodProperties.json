@@ -1,20 +1,21 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 10:40:06",
-		"commas" : "JohnBrant 6/24/2016 10:40:06",
-		"commas:" : "JohnBrant 6/24/2016 10:40:06",
-		"compositeNodeVariables" : "JohnBrant 6/24/2016 10:40:06",
-		"ignoredCompositeTokenVariables" : "JohnBrant 6/24/2016 10:40:06",
-		"ignoredTokenVariables" : "JohnBrant 6/24/2016 10:40:06",
-		"initialize" : "JohnBrant 6/24/2016 10:40:06",
-		"left" : "JohnBrant 6/24/2016 10:40:06",
-		"left:" : "JohnBrant 6/24/2016 10:40:06",
-		"name" : "JohnBrant 6/24/2016 10:40:06",
-		"name:" : "JohnBrant 6/24/2016 10:40:06",
-		"parameters" : "JohnBrant 6/24/2016 10:40:06",
-		"parameters:" : "JohnBrant 6/24/2016 10:40:06",
-		"right" : "JohnBrant 6/24/2016 10:40:06",
-		"right:" : "JohnBrant 6/24/2016 10:40:06",
-		"tokenVariables" : "JohnBrant 6/24/2016 10:40:06" } }
+		"ignoredCompositeTokenVariables" : "ThierryGoubier 5/3/2017 19:39",
+		"ignoredTokenVariables" : "ThierryGoubier 5/3/2017 19:39",
+		"leftParen:" : "ThierryGoubier 5/3/2017 19:39",
+		"parameters" : "ThierryGoubier 5/3/2017 19:39",
+		"name" : "ThierryGoubier 5/3/2017 19:39",
+		"leftParen" : "ThierryGoubier 5/3/2017 19:39",
+		"commas" : "ThierryGoubier 5/3/2017 19:39",
+		"parameters:" : "ThierryGoubier 5/3/2017 19:39",
+		"name:" : "ThierryGoubier 5/3/2017 19:39",
+		"initialize" : "ThierryGoubier 5/3/2017 19:39",
+		"commas:" : "ThierryGoubier 5/3/2017 19:39",
+		"acceptVisitor:" : "ThierryGoubier 5/3/2017 19:41",
+		"rightParen" : "ThierryGoubier 5/3/2017 19:39",
+		"tokenVariables" : "ThierryGoubier 5/3/2017 19:39",
+		"compositeNodeVariables" : "ThierryGoubier 5/3/2017 19:39",
+		"rightParen:" : "ThierryGoubier 5/3/2017 19:39"
+	},
+	"class" : { }
+}

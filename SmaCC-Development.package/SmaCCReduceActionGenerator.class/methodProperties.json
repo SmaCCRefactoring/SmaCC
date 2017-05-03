@@ -1,11 +1,14 @@
 {
-	"class" : {
-		"generate:pullUp:on:" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"compileAddToVariable:from:collection:" : "JohnBrant 6/24/2016 12:26:52",
-		"connectChild" : "JohnBrant 6/24/2016 12:26:52",
-		"generate:pullUp:on:" : "JohnBrant 6/24/2016 12:26:52",
-		"getSubIndex:ofType:" : "JohnBrant 6/24/2016 12:26:52",
-		"pullUpChildren" : "JohnBrant 6/24/2016 12:26:52",
-		"pullUpVariable" : "JohnBrant 6/24/2016 12:26:52",
-		"pullUpVariableArray" : "JohnBrant 6/24/2016 12:26:52" } }
+		"connectChild" : "ThierryGoubier 3/27/2017 22:53:01",
+		"getSubIndex:ofType:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"pullUpVariable" : "ThierryGoubier 3/27/2017 22:53:01",
+		"pullUpChildren" : "ThierryGoubier 3/27/2017 22:53:01",
+		"generate:pullUp:on:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"compileAddToVariable:from:collection:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"pullUpVariableArray" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : {
+		"generate:pullUp:on:" : "ThierryGoubier 3/27/2017 22:53:01"
+	}
+}

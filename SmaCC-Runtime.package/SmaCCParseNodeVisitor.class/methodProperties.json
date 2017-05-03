@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"accept:" : "JohnBrant 6/21/2016 21:17:22",
-		"acceptNode:" : "JohnBrant 6/21/2016 21:17:22",
-		"acceptNodes:" : "JohnBrant 6/21/2016 21:17:22",
-		"visitSmaCCParseNode:" : "JohnBrant 6/21/2016 21:17:22" } }
+		"accept:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"acceptNodes:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"visitSmaCCParseNode:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"acceptNode:" : "ThierryGoubier 9/23/2016 19:26:49"
+	},
+	"class" : { }
+}

@@ -1,17 +1,16 @@
 {
-	"category" : "SmaCC-Source-Editing",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "SmaCC-Source-Editing",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"firstSentinel",
 		"lastSentinel",
 		"currentId",
-		"cachedInterval" ],
+		"cachedInterval"
+	],
 	"name" : "SmaCCString",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

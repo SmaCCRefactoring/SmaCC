@@ -49,27 +49,27 @@ reduceActionForinitializer_declaration1: nodes
 		addTokens: ((nodes at: 3) at: 13)
 		to: result floating_point_literalTokens.
 	result addTokens: ((nodes at: 3) at: 14) to: result operatorTokens.
+	result addTokens: ((nodes at: 3) at: 15) to: result periodTokens.
+	result addTokens: ((nodes at: 3) at: 16) to: result protocolTokens.
+	result addTokens: ((nodes at: 3) at: 17) to: result lessThanTokens.
+	result addTokens: ((nodes at: 3) at: 18) to: result greaterThanTokens.
 	result
-		addTokens: ((nodes at: 3) at: 15)
-		to: result full_string_literalTokens.
-	result addTokens: ((nodes at: 3) at: 16) to: result periodTokens.
-	result addTokens: ((nodes at: 3) at: 17) to: result protocolTokens.
-	result addTokens: ((nodes at: 3) at: 18) to: result lessThanTokens.
-	result addTokens: ((nodes at: 3) at: 19) to: result greaterThanTokens.
-	result
-		addTokens: ((nodes at: 3) at: 20)
+		addTokens: ((nodes at: 3) at: 19)
 		to: result minusGreaterThanTokens.
-	result addTokens: ((nodes at: 3) at: 21) to: result commaTokens.
+	result addTokens: ((nodes at: 3) at: 20) to: result commaTokens.
 	result
-		addTokens: ((nodes at: 3) at: 22)
+		addTokens: ((nodes at: 3) at: 21)
 		to: result questionMarkTokens.
-	result addTokens: ((nodes at: 3) at: 23) to: result bangTokens.
-	result addTokens: ((nodes at: 3) at: 24) to: result typeTokens.
+	result addTokens: ((nodes at: 3) at: 22) to: result bangTokens.
+	result addTokens: ((nodes at: 3) at: 23) to: result typeTokens.
 	result
-		addTokens: ((nodes at: 3) at: 25)
+		addTokens: ((nodes at: 3) at: 24)
 		to: result periodPeriodPeriodTokens.
-	result addTokens: ((nodes at: 3) at: 26) to: result equalTokens.
-	result addObjects: ((nodes at: 3) at: 27) to: result expressions.
-	result addTokens: ((nodes at: 3) at: 28) to: result varTokens.
+	result addTokens: ((nodes at: 3) at: 25) to: result equalTokens.
+	result addObjects: ((nodes at: 3) at: 26) to: result expressions.
+	result addTokens: ((nodes at: 3) at: 27) to: result varTokens.
+	result
+		addTokens: ((nodes at: 3) at: 28)
+		to: result full_string_literalTokens.
 	result block: (nodes at: 4).
 	^ result

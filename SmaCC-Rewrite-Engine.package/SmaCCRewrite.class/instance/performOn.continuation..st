@@ -6,17 +6,13 @@ performOn: aSmaCCNode continuation: aBlock
 	engine source
 		node: aSmaCCNode;
 		rule: self.
-	matchedContext := SmaCCRewriteMatchContext
-		forNode: aSmaCCNode
-		rewriter: engine
-		continuation: aBlock.
+	matchedContext := engine contextClass new.
+	matchedContext forNode: aSmaCCNode rewriter: engine continuation: aBlock.
 	dictionary := match match: matchedContext.
 	result := dictionary notNil.
 	result
-		ifTrue:
-			[ matchedContext context: dictionary.
-			result := (transformation transformUsingContext: matchedContext)
-				~~ SmaCCRewriteMatchContext continue ].
+		ifTrue: [ matchedContext context: dictionary.
+			result := (transformation transformUsingContext: matchedContext) ~~ SmaCCRewriteMatchContext continue ].
 	engine source
 		node: previousNode;
 		rule: previousRule.

@@ -1,15 +1,14 @@
 {
-	"category" : "SmaCC-Rewrite-Engine",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "SmaCCRewriteTransformation",
+	"category" : "SmaCC-Rewrite-Engine",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"code",
-		"method" ],
+		"method"
+	],
 	"name" : "SmaCCRewriteCodeTransformation",
-	"pools" : [
-		 ],
-	"super" : "SmaCCRewriteTransformation",
-	"type" : "normal" }
+	"type" : "normal"
+}

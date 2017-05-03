@@ -1,20 +1,21 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 12:08:16",
-		"colon" : "JohnBrant 6/24/2016 12:08:16",
-		"colon:" : "JohnBrant 6/24/2016 12:08:16",
-		"commaTokens" : "JohnBrant 6/24/2016 12:08:16",
-		"commaTokens:" : "JohnBrant 6/24/2016 12:08:16",
-		"compositeNodeVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"constraints" : "JohnBrant 6/24/2016 12:08:16",
-		"constraints:" : "JohnBrant 6/24/2016 12:08:16",
-		"ignoredCompositeTokenVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"initialize" : "JohnBrant 6/24/2016 12:08:16",
-		"nodeVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"parameter" : "JohnBrant 6/24/2016 12:08:16",
-		"parameter:" : "JohnBrant 6/24/2016 12:08:16",
-		"tokenVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"whereToken" : "JohnBrant 6/24/2016 12:08:16",
-		"whereToken:" : "JohnBrant 6/24/2016 12:08:16" } }
+		"ignoredCompositeTokenVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"parameter:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"constraints" : "ThierryGoubier 9/23/2016 19:23:52",
+		"whereToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"whereToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"commaTokens:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"colon:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"initialize" : "ThierryGoubier 9/23/2016 19:23:52",
+		"parameter" : "ThierryGoubier 9/23/2016 19:23:52",
+		"commaTokens" : "ThierryGoubier 9/23/2016 19:23:52",
+		"colon" : "ThierryGoubier 9/23/2016 19:23:52",
+		"acceptVisitor:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"tokenVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"compositeNodeVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"constraints:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"nodeVariables" : "ThierryGoubier 9/23/2016 19:23:52"
+	},
+	"class" : { }
+}

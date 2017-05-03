@@ -1,10 +1,10 @@
 {
-	"category" : "SmaCC-Rewrite-Engine",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "Model",
+	"category" : "SmaCC-Rewrite-Engine",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"modified",
 		"files",
@@ -15,9 +15,8 @@
 		"server",
 		"runOnServer",
 		"createSubdirectories",
-		"commonParentDirectory" ],
+		"commonParentDirectory"
+	],
 	"name" : "SmaCCTransformationToolkitModel",
-	"pools" : [
-		 ],
-	"super" : "Model",
-	"type" : "normal" }
+	"type" : "normal"
+}

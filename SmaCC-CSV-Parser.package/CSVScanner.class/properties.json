@@ -1,14 +1,11 @@
 {
-	"category" : "SmaCC-CSV-Parser",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "CSVScanner",
-	"pools" : [
-		 ],
 	"super" : "SmaCCScanner",
-	"type" : "normal" }
+	"category" : "SmaCC-CSV-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CSVScanner",
+	"type" : "normal"
+}

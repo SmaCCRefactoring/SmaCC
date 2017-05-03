@@ -1,10 +1,12 @@
 {
+	"commentStamp" : "<historical>",
+	"super" : "Object",
 	"category" : "SmaCC-Runtime",
 	"classinstvars" : [
-		"keywordMap" ],
-	"classvars" : [
-		 ],
-	"commentStamp" : "<historical>",
+		"keywordMap"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"stream",
 		"start",
@@ -16,9 +18,8 @@
 		"lastMatchWasEmpty",
 		"returnMatchBlock",
 		"state",
-		"comments" ],
+		"comments"
+	],
 	"name" : "SmaCCScanner",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -7,4 +7,5 @@ compileParser
 		compileReductionTable: self reduceTable;
 		compileReductionActions;
 		compileScannerClassIntoParser;
-		compileSymbolNames
+		compileSymbolNames;
+		compileCacheId

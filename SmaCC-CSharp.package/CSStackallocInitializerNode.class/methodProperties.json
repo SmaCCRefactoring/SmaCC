@@ -1,17 +1,18 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 12:08:16",
-		"expression" : "JohnBrant 6/24/2016 12:08:16",
-		"expression:" : "JohnBrant 6/24/2016 12:08:16",
-		"leftBracketToken" : "JohnBrant 6/24/2016 12:08:16",
-		"leftBracketToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"nodeVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"rightBracketToken" : "JohnBrant 6/24/2016 12:08:16",
-		"rightBracketToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"stackallocToken" : "JohnBrant 6/24/2016 12:08:16",
-		"stackallocToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"tokenVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"type" : "JohnBrant 6/24/2016 12:08:16",
-		"type:" : "JohnBrant 6/24/2016 12:08:16" } }
+		"stackallocToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"rightBracketToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"rightBracketToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"leftBracketToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"leftBracketToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"expression:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"acceptVisitor:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"tokenVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"type" : "ThierryGoubier 9/23/2016 19:23:52",
+		"stackallocToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"expression" : "ThierryGoubier 9/23/2016 19:23:52",
+		"nodeVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"type:" : "ThierryGoubier 9/23/2016 19:23:52"
+	},
+	"class" : { }
+}

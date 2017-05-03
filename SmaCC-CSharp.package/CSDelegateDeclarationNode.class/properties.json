@@ -1,10 +1,10 @@
 {
-	"category" : "SmaCC-CSharp",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "CSDeclarationNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"_attributes",
 		"modifiers",
@@ -17,9 +17,8 @@
 		"commas",
 		"rightParen",
 		"constraintClauses",
-		"semicolon" ],
+		"semicolon"
+	],
 	"name" : "CSDelegateDeclarationNode",
-	"pools" : [
-		 ],
-	"super" : "CSDeclarationNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

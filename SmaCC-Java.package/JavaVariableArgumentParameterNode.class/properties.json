@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"varArgsToken" ],
-	"name" : "JavaVariableArgumentParameterNode",
-	"pools" : [
-		 ],
 	"super" : "JavaParameterNode",
-	"type" : "normal" }
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"varArgsToken"
+	],
+	"name" : "JavaVariableArgumentParameterNode",
+	"type" : "normal"
+}

@@ -52,11 +52,11 @@ reduceActionForraw_value_style_enum_members2: nodes
 	self addAll: ((nodes at: 2) at: 48) to: (result at: 48).
 	self addAll: ((nodes at: 2) at: 49) to: (result at: 49).
 	self addAll: ((nodes at: 2) at: 50) to: (result at: 57).
-	self addAll: ((nodes at: 2) at: 51) to: (result at: 53).
-	self addAll: ((nodes at: 2) at: 52) to: (result at: 54).
-	self addAll: ((nodes at: 2) at: 53) to: (result at: 56).
-	self addAll: ((nodes at: 2) at: 54) to: (result at: 50).
-	self addAll: ((nodes at: 2) at: 55) to: (result at: 51).
-	self addAll: ((nodes at: 2) at: 56) to: (result at: 52).
-	self addAll: ((nodes at: 2) at: 57) to: (result at: 55).
+	self addAll: ((nodes at: 2) at: 51) to: (result at: 50).
+	self addAll: ((nodes at: 2) at: 52) to: (result at: 51).
+	self addAll: ((nodes at: 2) at: 53) to: (result at: 52).
+	self addAll: ((nodes at: 2) at: 54) to: (result at: 53).
+	self addAll: ((nodes at: 2) at: 55) to: (result at: 54).
+	self addAll: ((nodes at: 2) at: 56) to: (result at: 55).
+	self addAll: ((nodes at: 2) at: 57) to: (result at: 56).
 	^ result

@@ -1,20 +1,23 @@
 {
-	"class" : {
-		"value:" : "JohnBrant 6/21/2016 21:17:22",
-		"value:start:id:" : "JohnBrant 6/21/2016 21:17:22",
-		"value:start:ids:" : "JohnBrant 6/21/2016 21:17:22" },
 	"instance" : {
-		"=" : "JohnBrant 6/21/2016 21:17:22",
-		"copyInContext:" : "JohnBrant 6/21/2016 21:17:22",
-		"hash" : "JohnBrant 6/21/2016 21:17:22",
-		"id" : "JohnBrant 6/21/2016 21:17:22",
-		"ids" : "JohnBrant 6/21/2016 21:17:22",
-		"ids:" : "JohnBrant 6/21/2016 21:17:22",
-		"isListMatch" : "JohnBrant 6/21/2016 21:17:22",
-		"isPattern" : "JohnBrant 6/21/2016 21:17:22",
-		"match:inContext:" : "JohnBrant 6/21/2016 21:17:22",
-		"printOn:" : "JohnBrant 6/21/2016 21:17:22",
-		"startPosition" : "JohnBrant 6/21/2016 21:17:22",
-		"stopPosition" : "JohnBrant 6/21/2016 21:17:22",
-		"value" : "JohnBrant 6/21/2016 21:17:22",
-		"value:start:ids:" : "JohnBrant 6/21/2016 21:17:22" } }
+		"value:start:ids:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"isListMatch" : "ThierryGoubier 9/23/2016 19:26:49",
+		"isPattern" : "ThierryGoubier 9/23/2016 19:26:49",
+		"=" : "ThierryGoubier 9/23/2016 19:26:49",
+		"id" : "ThierryGoubier 9/23/2016 19:26:49",
+		"value" : "ThierryGoubier 9/23/2016 19:26:49",
+		"printOn:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"startPosition" : "ThierryGoubier 9/23/2016 19:26:49",
+		"copyInContext:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"stopPosition" : "ThierryGoubier 9/23/2016 19:26:49",
+		"match:inContext:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"hash" : "ThierryGoubier 9/23/2016 19:26:49",
+		"ids" : "ThierryGoubier 9/23/2016 19:26:49",
+		"ids:" : "ThierryGoubier 9/23/2016 19:26:49"
+	},
+	"class" : {
+		"value:start:ids:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"value:start:id:" : "ThierryGoubier 9/23/2016 19:26:49",
+		"value:" : "ThierryGoubier 9/23/2016 19:26:49"
+	}
+}

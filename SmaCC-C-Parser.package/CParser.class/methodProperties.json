@@ -1,14 +1,18 @@
 {
-	"class" : {
-		"definitionComment" : "JohnBrant 6/24/2016 12:23:45",
-		"fileExtension" : "JohnBrant 6/24/2016 12:23:45",
-		"fileExtensionType" : "JohnBrant 6/24/2016 12:23:45",
-		"scannerClass" : "JohnBrant 6/24/2016 12:23:45",
-		"startingStateFortranslationUnit" : "JohnBrant 6/24/2016 12:23:45" },
 	"instance" : {
-		"addTypeName:" : "JohnBrant 6/24/2016 12:23:45",
-		"reduceActionForenum_specifier3:" : "JohnBrant 6/24/2016 12:23:45",
-		"reduceActionForinit_declaration1:" : "JohnBrant 6/24/2016 12:23:45",
-		"reduceTable" : "JohnBrant 6/24/2016 12:23:45",
-		"symbolNames" : "JohnBrant 6/24/2016 12:23:45",
-		"transitionTable" : "JohnBrant 6/24/2016 12:23:45" } }
+		"transitionTable" : "ThierryGoubier 9/23/2016 19:23:21",
+		"reduceTable" : "ThierryGoubier 9/23/2016 19:23:21",
+		"symbolNames" : "ThierryGoubier 9/23/2016 19:23:21",
+		"addTypeName:" : "ThierryGoubier 9/23/2016 19:23:21",
+		"reduceActionForenum_specifier3:" : "ThierryGoubier 9/23/2016 19:23:21",
+		"reduceActionForinit_declaration1:" : "ThierryGoubier 9/23/2016 19:23:21"
+	},
+	"class" : {
+		"fileExtension" : "ThierryGoubier 9/23/2016 19:23:21",
+		"cacheId" : "ThierryGoubier 5/2/2017 23:04",
+		"definitionComment" : "ThierryGoubier 9/23/2016 19:23:21",
+		"startingStateFortranslationUnit" : "ThierryGoubier 9/23/2016 19:23:21",
+		"fileExtensionType" : "ThierryGoubier 9/23/2016 19:23:21",
+		"scannerClass" : "ThierryGoubier 9/23/2016 19:23:21"
+	}
+}

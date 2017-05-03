@@ -1,5 +1,5 @@
 private
 symbolForTransitionFrom: fromState to: toState
 	| id |
-	id := self symbolIdForTransitionFrom: fromState to: toState.
-	^ self symbolLabelFor: id
+	id := self parser symbolIdForTransitionFrom: fromState to: toState.
+	^ self parser symbolNameFor: id

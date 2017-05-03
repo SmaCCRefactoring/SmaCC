@@ -1,0 +1,3 @@
+generated
+nameofToken
+	^ nameofToken

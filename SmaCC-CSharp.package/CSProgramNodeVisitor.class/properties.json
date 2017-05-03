@@ -1,14 +1,11 @@
 {
-	"category" : "SmaCC-CSharp",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "CSProgramNodeVisitor",
-	"pools" : [
-		 ],
 	"super" : "SmaCCParseNodeVisitor",
-	"type" : "normal" }
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CSProgramNodeVisitor",
+	"type" : "normal"
+}

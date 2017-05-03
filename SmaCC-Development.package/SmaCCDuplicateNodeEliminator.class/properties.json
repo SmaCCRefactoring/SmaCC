@@ -1,15 +1,14 @@
 {
-	"category" : "SmaCC-Development",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
+	"super" : "SmaCCGraphAlgorithm",
+	"category" : "SmaCC-Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"comparisonState",
-		"root" ],
+		"root"
+	],
 	"name" : "SmaCCDuplicateNodeEliminator",
-	"pools" : [
-		 ],
-	"super" : "SmaCCGraphAlgorithm",
-	"type" : "normal" }
+	"type" : "normal"
+}

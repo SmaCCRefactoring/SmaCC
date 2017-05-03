@@ -1,11 +1,13 @@
 {
+	"commentStamp" : "<historical>",
+	"super" : "Object",
 	"category" : "SmaCC-Development",
-	"classinstvars" : [
-		 ],
+	"classinstvars" : [ ],
+	"pools" : [ ],
 	"classvars" : [
 		"PluralNameBlock",
-		"PluralNames" ],
-	"commentStamp" : "<historical>",
+		"PluralNames"
+	],
 	"instvars" : [
 		"variableName",
 		"isCollection",
@@ -13,9 +15,8 @@
 		"isAlwaysAssigned",
 		"getterMethodName",
 		"setterMethodName",
-		"index" ],
+		"index"
+	],
 	"name" : "SmaCCVariableDefinition",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

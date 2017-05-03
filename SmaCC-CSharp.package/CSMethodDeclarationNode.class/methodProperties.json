@@ -1,10 +1,11 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 12:08:16",
-		"body" : "JohnBrant 6/24/2016 12:08:16",
-		"body:" : "JohnBrant 6/24/2016 12:08:16",
-		"header" : "JohnBrant 6/24/2016 12:08:16",
-		"header:" : "JohnBrant 6/24/2016 12:08:16",
-		"nodeVariables" : "JohnBrant 6/24/2016 12:08:16" } }
+		"header:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"body" : "ThierryGoubier 9/23/2016 19:23:52",
+		"nodeVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"body:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"acceptVisitor:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"header" : "ThierryGoubier 9/23/2016 19:23:52"
+	},
+	"class" : { }
+}

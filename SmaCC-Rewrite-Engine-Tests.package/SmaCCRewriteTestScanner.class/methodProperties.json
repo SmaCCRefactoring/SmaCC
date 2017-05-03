@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"emptySymbolTokenId" : "JohnBrant 6/20/2016 21:55:20",
-		"errorTokenId" : "JohnBrant 6/20/2016 21:55:20",
-		"scanForToken" : "JohnBrant 6/20/2016 21:55:20",
-		"tokenActions" : "JohnBrant 6/20/2016 21:55:20" } }
+		"scanForToken" : "ThierryGoubier 5/3/2017 21:10",
+		"tokenActions" : "ThierryGoubier 9/23/2016 20:11:25",
+		"emptySymbolTokenId" : "ThierryGoubier 9/23/2016 20:11:25",
+		"errorTokenId" : "ThierryGoubier 9/23/2016 20:11:25"
+	},
+	"class" : { }
+}

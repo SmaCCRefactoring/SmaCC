@@ -11,37 +11,35 @@ reduceActionForclosure_expression1: nodes
 	result addTokens: ((nodes at: 2) at: 6) to: result identifierTokens.
 	result addTokens: ((nodes at: 2) at: 7) to: result colonTokens.
 	result addTokens: ((nodes at: 2) at: 8) to: result leftBracketTokens.
-	result addTokens: ((nodes at: 2) at: 9) to: result periodTokens.
-	result addTokens: ((nodes at: 2) at: 10) to: result protocolTokens.
-	result addTokens: ((nodes at: 2) at: 11) to: result lessThanTokens.
-	result addTokens: ((nodes at: 2) at: 12) to: result greaterThanTokens.
+	result addTokens: ((nodes at: 2) at: 9) to: result rightBracketTokens.
+	result addTokens: ((nodes at: 2) at: 10) to: result leftBraceTokens.
+	result addTokens: ((nodes at: 2) at: 11) to: result rightBraceTokens.
 	result
-		addTokens: ((nodes at: 2) at: 13)
-		to: result rightBracketTokens.
-	result
-		addTokens: ((nodes at: 2) at: 14)
-		to: result minusGreaterThanTokens.
-	result addTokens: ((nodes at: 2) at: 15) to: result commaTokens.
-	result
-		addTokens: ((nodes at: 2) at: 16)
-		to: result questionMarkTokens.
-	result addTokens: ((nodes at: 2) at: 17) to: result bangTokens.
-	result addTokens: ((nodes at: 2) at: 18) to: result typeTokens.
-	result
-		addTokens: ((nodes at: 2) at: 19)
-		to: result periodPeriodPeriodTokens.
-	result addTokens: ((nodes at: 2) at: 20) to: result equalTokens.
-	result addObjects: ((nodes at: 2) at: 21) to: result expressions.
-	result addTokens: ((nodes at: 2) at: 22) to: result varTokens.
-	result addTokens: ((nodes at: 2) at: 23) to: result leftBraceTokens.
-	result addTokens: ((nodes at: 2) at: 24) to: result rightBraceTokens.
-	result
-		addTokens: ((nodes at: 2) at: 25)
+		addTokens: ((nodes at: 2) at: 12)
 		to: result integer_literalTokens.
 	result
-		addTokens: ((nodes at: 2) at: 26)
+		addTokens: ((nodes at: 2) at: 13)
 		to: result floating_point_literalTokens.
-	result addTokens: ((nodes at: 2) at: 27) to: result operatorTokens.
+	result addTokens: ((nodes at: 2) at: 14) to: result operatorTokens.
+	result addTokens: ((nodes at: 2) at: 15) to: result periodTokens.
+	result addTokens: ((nodes at: 2) at: 16) to: result protocolTokens.
+	result addTokens: ((nodes at: 2) at: 17) to: result lessThanTokens.
+	result addTokens: ((nodes at: 2) at: 18) to: result greaterThanTokens.
+	result
+		addTokens: ((nodes at: 2) at: 19)
+		to: result minusGreaterThanTokens.
+	result addTokens: ((nodes at: 2) at: 20) to: result commaTokens.
+	result
+		addTokens: ((nodes at: 2) at: 21)
+		to: result questionMarkTokens.
+	result addTokens: ((nodes at: 2) at: 22) to: result bangTokens.
+	result addTokens: ((nodes at: 2) at: 23) to: result typeTokens.
+	result
+		addTokens: ((nodes at: 2) at: 24)
+		to: result periodPeriodPeriodTokens.
+	result addTokens: ((nodes at: 2) at: 25) to: result equalTokens.
+	result addObjects: ((nodes at: 2) at: 26) to: result expressions.
+	result addTokens: ((nodes at: 2) at: 27) to: result varTokens.
 	result
 		addTokens: ((nodes at: 2) at: 28)
 		to: result full_string_literalTokens.

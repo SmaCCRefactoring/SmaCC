@@ -1,6 +1,7 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"appliesToContext:" : "JohnBrant 6/23/2016 09:54:16",
-		"stepUntil:" : "JohnBrant 8/6/2016 16:59:44" } }
+		"appliesToContext:" : "ThierryGoubier 9/23/2016 19:24:04",
+		"stepUntil:" : "ThierryGoubier 9/23/2016 19:24:04"
+	},
+	"class" : { }
+}

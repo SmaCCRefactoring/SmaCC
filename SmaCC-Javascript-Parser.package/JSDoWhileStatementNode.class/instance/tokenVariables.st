@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#doToken #whileToken #leftParen #rightParen #semicolon)
+	^ #(#doToken #whileToken)

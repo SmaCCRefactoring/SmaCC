@@ -1,13 +1,14 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"<=" : "JohnBrant 6/24/2016 12:26:52",
-		"codeSizeEstimate" : "JohnBrant 6/24/2016 12:26:52",
-		"dispatchTo:seen:" : "JohnBrant 6/24/2016 12:26:52",
-		"edgeLabel" : "JohnBrant 6/24/2016 12:26:52",
-		"isCharacterTransition" : "JohnBrant 6/24/2016 12:26:52",
-		"mergeWith:" : "JohnBrant 6/24/2016 12:26:52",
-		"remove:" : "JohnBrant 6/24/2016 12:26:52",
-		"setClass" : "JohnBrant 6/24/2016 12:26:52",
-		"to:on:" : "JohnBrant 6/24/2016 12:26:52" } }
+		"remove:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"setClass" : "ThierryGoubier 3/27/2017 22:53:01",
+		"dispatchTo:seen:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"<=" : "ThierryGoubier 3/27/2017 22:53:01",
+		"to:on:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"mergeWith:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"codeSizeEstimate" : "ThierryGoubier 3/27/2017 22:53:01",
+		"edgeLabel" : "ThierryGoubier 3/27/2017 22:53:01",
+		"isCharacterTransition" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : { }
+}

@@ -1,17 +1,16 @@
 {
-	"category" : "SmaCC-Rewrite-Engine-Command-Line",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "CommandLineHandler",
+	"category" : "SmaCC-Rewrite-Engine-Command-Line",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"failingFiles",
 		"doneCount",
 		"totalCount",
-		"doneSemaphore" ],
+		"doneSemaphore"
+	],
 	"name" : "SmaCCRewriteEngineCommandLineHandler",
-	"pools" : [
-		 ],
-	"super" : "CommandLineHandler",
-	"type" : "normal" }
+	"type" : "normal"
+}

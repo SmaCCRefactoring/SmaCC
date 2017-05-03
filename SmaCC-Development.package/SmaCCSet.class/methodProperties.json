@@ -1,9 +1,12 @@
 {
-	"class" : {
-		"new" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"add:" : "JohnBrant 6/24/2016 12:26:52",
-		"do:" : "JohnBrant 6/24/2016 12:26:52",
-		"includes:" : "JohnBrant 6/24/2016 12:26:52",
-		"initialize" : "JohnBrant 6/24/2016 12:26:52",
-		"remove:ifAbsent:" : "JohnBrant 6/24/2016 12:26:52" } }
+		"includes:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"do:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"initialize" : "ThierryGoubier 3/27/2017 22:53:01",
+		"remove:ifAbsent:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"add:" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : {
+		"new" : "ThierryGoubier 3/27/2017 22:53:01"
+	}
+}

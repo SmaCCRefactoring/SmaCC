@@ -1,0 +1,20 @@
+{
+	"instance" : {
+		"isAcceptState:" : "JohnBrant 9/10/2016 10:48",
+		"maxReturnSizeTable" : "JohnBrant 9/9/2016 22:25",
+		"symbolIdForTransitionFrom:to:" : "JohnBrant 9/9/2016 18:44",
+		"fillInGraphFromStack:returnTable:size:" : "JohnBrant 9/28/2016 21:55",
+		"roassalView" : "JohnBrant 10/8/2016 17:14",
+		"roassalViewForStack:" : "JohnBrant 10/8/2016 17:14",
+		"symbolNameFor:" : "JohnBrant 9/8/2016 17:42",
+		"allActionsAndSymbolsForState:do:" : "JohnBrant 9/9/2016 18:44",
+		"actionsAndSymbolsForState:do:" : "JohnBrant 9/8/2016 17:42",
+		"gtGraphInspectorViewIn:" : "JohnBrant 10/8/2016 16:49",
+		"layout:from:position:" : "JohnBrant 10/8/2016 16:50",
+		"graphForStack:" : "JohnBrant 10/8/2016 17:12"
+	},
+	"class" : {
+		"gtGraphInspectorViewIn:" : "JohnBrant 10/8/2016 16:50",
+		"gtExampleSmaCCParser" : "PavelKrivanek 4/25/2017 11:47"
+	}
+}

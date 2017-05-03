@@ -1,10 +1,10 @@
 {
-	"category" : "SmaCC-Swift",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "SwiftParseNode",
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"expressions",
 		"leftParenTokens",
@@ -39,9 +39,8 @@
 		"unownedToken",
 		"unownedLeftParensafeRightParenToken",
 		"unownedLeftParenunsafeRightParenToken",
-		"statements" ],
+		"statements"
+	],
 	"name" : "SwiftFunctionCallExpressionNode",
-	"pools" : [
-		 ],
-	"super" : "SwiftParseNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

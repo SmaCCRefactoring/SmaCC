@@ -1,6 +1,9 @@
 {
-	"class" : {
-		"gtActionFor:" : "JohnBrant 6/23/2016 09:54:16" },
 	"instance" : {
-		"defaultLabel" : "JohnBrant 6/23/2016 09:54:16",
-		"stepToIndex" : "JohnBrant 6/23/2016 09:54:16" } }
+		"stepToIndex" : "ThierryGoubier 9/23/2016 19:24:04",
+		"defaultLabel" : "ThierryGoubier 9/23/2016 19:24:04"
+	},
+	"class" : {
+		"gtActionFor:" : "ThierryGoubier 9/23/2016 19:24:04"
+	}
+}

@@ -1,10 +1,10 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JavaProgramNode",
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"modifiers",
 		"classToken",
@@ -15,11 +15,10 @@
 		"implementsToken",
 		"interfaces",
 		"commas",
-		"left",
+		"leftBrace",
 		"declarations",
-		"right" ],
+		"rightBrace"
+	],
 	"name" : "JavaClassDeclarationNode",
-	"pools" : [
-		 ],
-	"super" : "JavaProgramNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

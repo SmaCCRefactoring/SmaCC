@@ -1,14 +1,11 @@
 {
-	"category" : "SmaCC-Swift",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "SwiftParser",
-	"pools" : [
-		 ],
 	"super" : "SmaCCGLRParser",
-	"type" : "normal" }
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SwiftParser",
+	"type" : "normal"
+}

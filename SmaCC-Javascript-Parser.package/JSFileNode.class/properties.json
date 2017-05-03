@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Javascript-Parser",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"statements" ],
-	"name" : "JSFileNode",
-	"pools" : [
-		 ],
 	"super" : "JSProgramNode",
-	"type" : "normal" }
+	"category" : "SmaCC-Javascript-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"statements"
+	],
+	"name" : "JSFileNode",
+	"type" : "normal"
+}

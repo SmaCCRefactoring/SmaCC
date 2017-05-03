@@ -1,15 +1,16 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"actions" : "JohnBrant 6/24/2016 12:26:52",
-		"addAction:" : "JohnBrant 6/24/2016 12:26:52",
-		"addActions:" : "JohnBrant 6/24/2016 12:26:52",
-		"errorType" : "JohnBrant 6/24/2016 12:26:52",
-		"id" : "JohnBrant 6/24/2016 12:26:52",
-		"initialize" : "JohnBrant 6/24/2016 12:26:52",
-		"lr1Item" : "JohnBrant 6/24/2016 12:26:52",
-		"preferredAction" : "JohnBrant 6/24/2016 12:26:52",
-		"printPathOn:" : "JohnBrant 6/24/2016 12:26:52",
-		"raiseXReduceNotification" : "JohnBrant 6/24/2016 12:26:52",
-		"signalAllWarnings" : "JohnBrant 6/24/2016 12:26:52" } }
+		"errorType" : "ThierryGoubier 3/27/2017 22:53:01",
+		"actions" : "ThierryGoubier 3/27/2017 22:53:01",
+		"lr1Item" : "ThierryGoubier 3/27/2017 22:53:01",
+		"addAction:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"addActions:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"id" : "ThierryGoubier 3/27/2017 22:53:01",
+		"signalAllWarnings" : "ThierryGoubier 3/27/2017 22:53:01",
+		"initialize" : "ThierryGoubier 3/27/2017 22:53:01",
+		"preferredAction" : "ThierryGoubier 3/27/2017 22:53:01",
+		"printPathOn:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"raiseXReduceNotification" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : { }
+}

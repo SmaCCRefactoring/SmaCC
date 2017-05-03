@@ -1,6 +1,6 @@
 generated
 scanForTokenX8
-	self recordMatch: #(30).
+	self recordMatch: #(28).
 	self step.
 	currentCharacter == $.
 		ifTrue: [ self step.

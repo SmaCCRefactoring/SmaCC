@@ -1,16 +1,11 @@
 {
-	"category" : "SmaCC-CSharp",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"usingToken",
-		"namespace",
-		"semicolonToken" ],
-	"name" : "CSUsingNamespaceDirectiveNode",
-	"pools" : [
-		 ],
 	"super" : "CSProgramNode",
-	"type" : "normal" }
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CSUsingNamespaceDirectiveNode",
+	"type" : "normal"
+}

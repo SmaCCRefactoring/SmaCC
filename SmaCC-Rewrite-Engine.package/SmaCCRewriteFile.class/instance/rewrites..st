@@ -1,4 +1,4 @@
 accessing
 rewrites: aCollection
 	rewrites := aCollection.
-	self modified
+	self changed: #rewrites

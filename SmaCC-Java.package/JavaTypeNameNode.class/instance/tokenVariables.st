@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#name #typeArgLeft #typeArgRight)
+	^ #(#name)

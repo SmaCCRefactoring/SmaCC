@@ -1,6 +1,6 @@
 building
 buildGLRTransmissionsIn: browser
-	isGLR
+	self isGLR
 		ifTrue:
 			[ browser transmit
 				from: #stack port: #selection;

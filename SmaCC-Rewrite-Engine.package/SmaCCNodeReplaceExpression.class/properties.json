@@ -1,10 +1,10 @@
 {
-	"category" : "SmaCC-Rewrite-Engine",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "SmaCCReplaceExpression",
+	"category" : "SmaCC-Rewrite-Engine",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"beforeWhitespace",
 		"beforePrefix",
@@ -12,9 +12,8 @@
 		"name",
 		"postfix",
 		"afterPostfix",
-		"afterWhitespace" ],
+		"afterWhitespace"
+	],
 	"name" : "SmaCCNodeReplaceExpression",
-	"pools" : [
-		 ],
-	"super" : "SmaCCReplaceExpression",
-	"type" : "normal" }
+	"type" : "normal"
+}

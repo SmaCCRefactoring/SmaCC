@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Javascript-Parser",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"semicolon" ],
-	"name" : "JSEmptyStatementNode",
-	"pools" : [
-		 ],
 	"super" : "JSStatementNode",
-	"type" : "normal" }
+	"category" : "SmaCC-Javascript-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"semicolon"
+	],
+	"name" : "JSEmptyStatementNode",
+	"type" : "normal"
+}

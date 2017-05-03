@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#functionToken #name #leftBrace #rightBrace)
+	^ #(#functionToken #name)

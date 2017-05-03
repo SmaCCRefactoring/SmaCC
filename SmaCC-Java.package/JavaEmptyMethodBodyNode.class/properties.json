@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"semicolon" ],
-	"name" : "JavaEmptyMethodBodyNode",
-	"pools" : [
-		 ],
 	"super" : "JavaProgramNode",
-	"type" : "normal" }
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"semicolon"
+	],
+	"name" : "JavaEmptyMethodBodyNode",
+	"type" : "normal"
+}

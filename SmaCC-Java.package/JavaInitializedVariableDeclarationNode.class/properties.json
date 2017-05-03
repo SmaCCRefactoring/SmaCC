@@ -1,15 +1,14 @@
 {
-	"category" : "SmaCC-Java",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "JavaVariableDeclarationNode",
+	"category" : "SmaCC-Java",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"equals",
-		"initializer" ],
+		"initializer"
+	],
 	"name" : "JavaInitializedVariableDeclarationNode",
-	"pools" : [
-		 ],
-	"super" : "JavaVariableDeclarationNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

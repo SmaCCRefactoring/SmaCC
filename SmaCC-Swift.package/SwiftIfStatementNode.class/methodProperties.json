@@ -1,18 +1,19 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 13:14:22",
-		"else" : "JohnBrant 6/24/2016 13:14:22",
-		"else:" : "JohnBrant 6/24/2016 13:14:22",
-		"elseToken" : "JohnBrant 6/24/2016 13:14:22",
-		"elseToken:" : "JohnBrant 6/24/2016 13:14:22",
-		"expression" : "JohnBrant 6/24/2016 13:14:22",
-		"expression:" : "JohnBrant 6/24/2016 13:14:22",
-		"ifToken" : "JohnBrant 6/24/2016 13:14:22",
-		"ifToken:" : "JohnBrant 6/24/2016 13:14:22",
-		"nodeVariables" : "JohnBrant 6/24/2016 13:14:22",
-		"otherVariables" : "JohnBrant 6/24/2016 13:14:22",
-		"then" : "JohnBrant 6/24/2016 13:14:22",
-		"then:" : "JohnBrant 6/24/2016 13:14:22",
-		"tokenVariables" : "JohnBrant 6/24/2016 13:14:22" } }
+		"elseToken:" : "ThierryGoubier 9/23/2016 19:27:29",
+		"else" : "ThierryGoubier 9/23/2016 19:27:29",
+		"elseToken" : "ThierryGoubier 9/23/2016 19:27:29",
+		"then:" : "ThierryGoubier 9/23/2016 19:27:29",
+		"ifToken:" : "ThierryGoubier 9/23/2016 19:27:29",
+		"expression:" : "ThierryGoubier 9/23/2016 19:27:29",
+		"otherVariables" : "ThierryGoubier 9/23/2016 19:27:29",
+		"then" : "ThierryGoubier 9/23/2016 19:27:29",
+		"else:" : "ThierryGoubier 9/23/2016 19:27:29",
+		"acceptVisitor:" : "ThierryGoubier 9/23/2016 19:27:29",
+		"tokenVariables" : "ThierryGoubier 9/23/2016 19:27:29",
+		"ifToken" : "ThierryGoubier 9/23/2016 19:27:29",
+		"expression" : "ThierryGoubier 9/23/2016 19:27:29",
+		"nodeVariables" : "ThierryGoubier 9/23/2016 19:27:29"
+	},
+	"class" : { }
+}

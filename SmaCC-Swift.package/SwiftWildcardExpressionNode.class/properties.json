@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Swift",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"_Token" ],
-	"name" : "SwiftWildcardExpressionNode",
-	"pools" : [
-		 ],
 	"super" : "SwiftParseNode",
-	"type" : "normal" }
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"_Token"
+	],
+	"name" : "SwiftWildcardExpressionNode",
+	"type" : "normal"
+}

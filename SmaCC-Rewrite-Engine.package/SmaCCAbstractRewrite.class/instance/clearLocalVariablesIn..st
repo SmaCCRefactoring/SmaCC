@@ -1,0 +1,3 @@
+rewriting
+clearLocalVariablesIn: aClass
+	

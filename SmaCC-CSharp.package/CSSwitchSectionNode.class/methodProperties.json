@@ -1,11 +1,12 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 12:08:16",
-		"compositeNodeVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"initialize" : "JohnBrant 6/24/2016 12:08:16",
-		"labels" : "JohnBrant 6/24/2016 12:08:16",
-		"labels:" : "JohnBrant 6/24/2016 12:08:16",
-		"statements" : "JohnBrant 6/24/2016 12:08:16",
-		"statements:" : "JohnBrant 6/24/2016 12:08:16" } }
+		"initialize" : "ThierryGoubier 9/23/2016 19:23:52",
+		"labels:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"statements" : "ThierryGoubier 9/23/2016 19:23:52",
+		"compositeNodeVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"statements:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"labels" : "ThierryGoubier 9/23/2016 19:23:52",
+		"acceptVisitor:" : "ThierryGoubier 9/23/2016 19:23:52"
+	},
+	"class" : { }
+}

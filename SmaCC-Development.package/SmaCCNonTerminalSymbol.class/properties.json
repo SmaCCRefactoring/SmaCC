@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Development",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"productions" ],
-	"name" : "SmaCCNonTerminalSymbol",
-	"pools" : [
-		 ],
 	"super" : "SmaCCSymbol",
-	"type" : "normal" }
+	"category" : "SmaCC-Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"productions"
+	],
+	"name" : "SmaCCNonTerminalSymbol",
+	"type" : "normal"
+}

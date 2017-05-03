@@ -1,9 +1,9 @@
 action table
 createTransitionTable
-	| table |
+	| table optimizedTable |
 	table := (1 to: itemSets size)
-		collect:
-			[ :index | 
+		collect: [ :index | 
 			scannerCompiler symbols
 				collect: [ :each | self actionForState: index on: each ] ].
-	actions := self compressTable: table
+	optimizedTable := self optimizeTransitionTable: table.
+	actions := self compressTable: optimizedTable

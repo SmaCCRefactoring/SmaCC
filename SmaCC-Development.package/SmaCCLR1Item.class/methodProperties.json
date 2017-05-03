@@ -1,25 +1,28 @@
 {
-	"class" : {
-		"rhs:follow:" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"=" : "JohnBrant 6/24/2016 12:26:52",
-		"action:" : "JohnBrant 6/24/2016 12:26:52",
-		"followers" : "JohnBrant 6/24/2016 12:26:52",
-		"followers:" : "JohnBrant 6/24/2016 12:26:52",
-		"grammar" : "JohnBrant 6/24/2016 12:26:52",
-		"hash" : "JohnBrant 6/24/2016 12:26:52",
-		"isAtEnd" : "JohnBrant 6/24/2016 12:26:52",
-		"isLR1EqualTo:" : "JohnBrant 6/24/2016 12:26:52",
-		"itemSet:" : "JohnBrant 6/24/2016 12:26:52",
-		"location" : "JohnBrant 6/24/2016 12:26:52",
-		"location:" : "JohnBrant 6/24/2016 12:26:52",
-		"mergeWith:" : "JohnBrant 6/24/2016 12:26:52",
-		"moveNext" : "JohnBrant 6/24/2016 12:26:52",
-		"nextSymbol" : "JohnBrant 6/24/2016 12:26:52",
-		"path" : "JohnBrant 6/24/2016 12:26:52",
-		"precedence" : "JohnBrant 6/24/2016 12:26:52",
-		"printOn:" : "JohnBrant 6/24/2016 12:26:52",
-		"rest" : "JohnBrant 6/24/2016 12:26:52",
-		"rhs" : "JohnBrant 6/24/2016 12:26:52",
-		"rhs:follow:" : "JohnBrant 6/24/2016 12:26:52",
-		"symbol" : "JohnBrant 6/24/2016 12:26:52" } }
+		"precedence" : "ThierryGoubier 3/27/2017 22:53:01",
+		"moveNext" : "ThierryGoubier 3/27/2017 22:53:01",
+		"rhs" : "ThierryGoubier 3/27/2017 22:53:01",
+		"rest" : "ThierryGoubier 3/27/2017 22:53:01",
+		"followers:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"location:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"path" : "ThierryGoubier 3/27/2017 22:53:01",
+		"mergeWith:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"nextSymbol" : "ThierryGoubier 3/27/2017 22:53:01",
+		"rhs:follow:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"grammar" : "ThierryGoubier 3/27/2017 22:53:01",
+		"isLR1EqualTo:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"action:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"location" : "ThierryGoubier 3/27/2017 22:53:01",
+		"itemSet:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"hash" : "ThierryGoubier 3/27/2017 22:53:01",
+		"isAtEnd" : "ThierryGoubier 3/27/2017 22:53:01",
+		"=" : "ThierryGoubier 3/27/2017 22:53:01",
+		"printOn:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"followers" : "ThierryGoubier 3/27/2017 22:53:01",
+		"symbol" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : {
+		"rhs:follow:" : "ThierryGoubier 3/27/2017 22:53:01"
+	}
+}

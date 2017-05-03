@@ -1,9 +1,10 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"add:" : "JohnBrant 6/24/2016 12:26:52",
-		"asString" : "JohnBrant 6/24/2016 12:26:52",
-		"do:" : "JohnBrant 6/24/2016 12:26:52",
-		"includes:" : "JohnBrant 6/24/2016 12:26:52",
-		"remove:ifAbsent:" : "JohnBrant 6/24/2016 12:26:52" } }
+		"asString" : "ThierryGoubier 3/27/2017 22:53:01",
+		"includes:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"do:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"remove:ifAbsent:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"add:" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : { }
+}

@@ -1,1 +1,2 @@
-(name 'SmaCC-C-Parser-ThierryGoubier.6' message 'From John Brant' id 'bf25f129-c616-43a3-b7ac-a70a867b944f' date '23 September 2016' time '7:23:20.569084 pm' author 'ThierryGoubier' ancestors () stepChildren ())
+(name 'SmaCC-C-Parser-ThierryGoubier.7' message 'Update from John Brant (and Tudor Girda).' id '5fa23451-0000-0000-adb2-5b580635c312' date '3 May 2017' time '9:22:42.38477 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-C-Parser-ThierryGoubier.6' message 'From John Brant
+' id '04212039-b3a2-5f78-bc72-73dbdfb3de49' date '23 September 2016' time '7:23:21 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())

@@ -1,7 +1,8 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"<=" : "JohnBrant 6/24/2016 12:26:52",
-		"codeSizeEstimate" : "JohnBrant 6/24/2016 12:26:52",
-		"dispatchTo:seen:" : "JohnBrant 6/24/2016 12:26:52" } }
+		"codeSizeEstimate" : "ThierryGoubier 3/27/2017 22:53:01",
+		"dispatchTo:seen:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"<=" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : { }
+}

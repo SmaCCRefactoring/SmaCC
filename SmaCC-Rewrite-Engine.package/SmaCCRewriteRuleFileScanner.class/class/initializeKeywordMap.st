@@ -1,7 +1,7 @@
 generated-initialization
 initializeKeywordMap
 	keywordMap := Dictionary new.
-	#(#(9 'Import' 3) #(9 'Parser' 2))
+	#(#(13 'Import' 2) #(13 'Parser' 4))
 		do: [ :each | 
 			(keywordMap at: each first ifAbsentPut: [ Dictionary new ])
 				at: (each at: 2)

@@ -1,12 +1,13 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"addAnnotationTo:" : "JohnBrant 6/24/2016 13:12:32",
-		"intervalClass" : "JohnBrant 6/24/2016 13:12:32",
-		"newIntervalFor:" : "JohnBrant 6/24/2016 13:12:32",
-		"node" : "JohnBrant 6/24/2016 13:12:32",
-		"node:" : "JohnBrant 6/24/2016 13:12:32",
-		"removeInterval:" : "JohnBrant 6/24/2016 13:12:32",
-		"rule" : "JohnBrant 6/24/2016 13:12:32",
-		"rule:" : "JohnBrant 6/24/2016 13:12:32" } }
+		"rule" : "ThierryGoubier 9/23/2016 20:11:02",
+		"newIntervalFor:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"removeInterval:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"node" : "ThierryGoubier 9/23/2016 20:11:02",
+		"node:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"intervalClass" : "ThierryGoubier 9/23/2016 20:11:02",
+		"addAnnotationTo:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"rule:" : "ThierryGoubier 9/23/2016 20:11:02"
+	},
+	"class" : { }
+}

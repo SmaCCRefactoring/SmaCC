@@ -1,2 +1,2 @@
-(name 'SmaCC-Smalltalk-Parser-ThierryGoubier.9' message 'issue #11: corrected' id '45ef0ab3-ce57-4370-abf1-2370e10d4890' date '26 September 2016' time '9:44:48.329011 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-Smalltalk-Parser-ThierryGoubier.8' message 'Reuse 2.0.5 smalltalk parser (has { } ), regenerate and is a tad faster.
-' id '15bf97d0-69c6-5f4e-979d-49e3a5d93e4e' date '23 September 2016' time '9:02:28 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
+(name 'SmaCC-Smalltalk-Parser-ThierryGoubier.10' message 'Update from John Brant (and Tudor Girda).' id '3c14dd53-0000-0000-adbc-ea250635c312' date '3 May 2017' time '9:23:26.978232 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-Smalltalk-Parser-ThierryGoubier.9' message 'issue #11: corrected
+' id '2bc98dde-5382-5b10-a886-f6efb671de65' date '26 September 2016' time '9:45:27 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())

@@ -1,7 +1,7 @@
 generated
-access: aCSMemberAccessNode
+access: aCSExpressionNode
 	self access notNil
 		ifTrue: [ self access parent: nil ].
-	access := aCSMemberAccessNode.
+	access := aCSExpressionNode.
 	self access notNil
 		ifTrue: [ self access parent: self ]

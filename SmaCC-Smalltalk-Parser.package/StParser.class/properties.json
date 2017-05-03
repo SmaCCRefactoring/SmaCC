@@ -1,14 +1,11 @@
 {
-	"category" : "SmaCC-Smalltalk-Parser",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "StParser",
-	"pools" : [
-		 ],
 	"super" : "SmaCCParser",
-	"type" : "normal" }
+	"category" : "SmaCC-Smalltalk-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "StParser",
+	"type" : "normal"
+}

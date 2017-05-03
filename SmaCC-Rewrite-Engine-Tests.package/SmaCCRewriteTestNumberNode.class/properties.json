@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Rewrite-Engine-Tests",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"number" ],
-	"name" : "SmaCCRewriteTestNumberNode",
-	"pools" : [
-		 ],
 	"super" : "SmaCCRewriteTestExpressionNode",
-	"type" : "normal" }
+	"category" : "SmaCC-Rewrite-Engine-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"number"
+	],
+	"name" : "SmaCCRewriteTestNumberNode",
+	"type" : "normal"
+}

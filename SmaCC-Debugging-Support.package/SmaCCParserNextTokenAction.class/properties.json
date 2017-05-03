@@ -1,14 +1,11 @@
 {
-	"category" : "SmaCC-Debugging-Support",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "SmaCCParserNextTokenAction",
-	"pools" : [
-		 ],
 	"super" : "SmaCCParserStepAction",
-	"type" : "normal" }
+	"category" : "SmaCC-Debugging-Support",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SmaCCParserNextTokenAction",
+	"type" : "normal"
+}

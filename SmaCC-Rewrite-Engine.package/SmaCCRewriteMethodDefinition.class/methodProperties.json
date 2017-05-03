@@ -1,0 +1,18 @@
+{
+	"instance" : {
+		"displayOn:" : "JohnBrant 1/1/2017 13:03",
+		"updateClass:" : "JohnBrant 1/1/2017 12:40",
+		"comment:" : "JohnBrant 12/31/2016 18:21",
+		"source:" : "JohnBrant 12/31/2016 20:16",
+		"comment" : "JohnBrant 12/31/2016 18:21",
+		"code:" : "JohnBrant 1/2/2017 12:06",
+		"performOn:continuation:" : "JohnBrant 12/31/2016 20:22",
+		"method" : "JohnBrant 12/31/2016 18:40",
+		"source" : "JohnBrant 12/31/2016 19:20",
+		"localSaveOn:" : "JohnBrant 1/1/2017 07:50"
+	},
+	"class" : {
+		"comment:source:" : "JohnBrant 12/31/2016 19:28",
+		"source:" : "JohnBrant 12/31/2016 19:24"
+	}
+}

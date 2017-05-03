@@ -1,10 +1,10 @@
 {
-	"category" : "SmaCC-Swift",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "SwiftLoopStatementNode",
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"doToken",
 		"block",
@@ -53,9 +53,8 @@
 		"statements",
 		"dynamicTypeTokens",
 		"andToken",
-		"operators" ],
+		"operators"
+	],
 	"name" : "SwiftDoWhileStatementNode",
-	"pools" : [
-		 ],
-	"super" : "SwiftLoopStatementNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

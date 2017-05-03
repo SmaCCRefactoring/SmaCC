@@ -6,7 +6,7 @@ definitionComment
 
 %id <UNSIGNED_RIGHT_SHIFT> <SIGNED_RIGHT_SHIFT> <GREATER_THAN>;
 
-%ignore_variables semicolon comma left right;
+%ignore_variables semicolon comma leftParen rightParen _leftParen _rightParen lt gt leftBracket rightBracket leftBrace rightBrace;
 
 %prefix Java ;
 %suffix Node ;
@@ -25,7 +25,7 @@ definitionComment
 					PreIncrementExpression PreDecrementExpression UnaryBitInvert UnaryNot
 					CastExpression BinaryExpression ConditionalExpression Assignment 
 					ClassProperty FieldAccess MethodInvocation ArrayAccess
-					New Literal Name NewArray LambdaExpression);
+					New Literal Name NewArray LambdaExpression MethodReference);
 %hierarchy Name (QualifiedName) ;
 %hierarchy SingleTypeImportDeclaration (TypeImportOnDemandDeclaration);
 %hierarchy VariableDeclaration (InitializedVariableDeclaration) ;
@@ -261,7 +261,7 @@ interface_type_list
 	| interface_type_list "","" 'comma' interface_type 'interface' 
 	;
 class_body 
-	: ""{"" 'left' class_body_declarations_opt ""}"" 'right'
+	: ""{"" 'leftBrace' class_body_declarations_opt ""}"" 'rightBrace'
 	;
 class_body_declarations_opt 
 	: 
@@ -292,11 +292,14 @@ variable_declarators
 	;
 variable_declarator 
 	: variable_declarator_id 'variable' {{VariableDeclaration}}
-	| variable_declarator_id 'variable' ""="" 'equals' variable_initializer 'initializer' {{InitializedVariableDeclaration}}
+	| initialized_variable_declarator
+	;
+initialized_variable_declarator
+	: variable_declarator_id 'variable' ""="" 'equals' variable_initializer 'initializer' {{InitializedVariableDeclaration}}
 	;
 variable_declarator_id 
 	: <IDENTIFIER> 'name' {{VariableName}}
-	| variable_declarator_id 'variable' ""["" 'left' ""]"" 'right' {{ArrayVariableName}}
+	| variable_declarator_id 'variable' ""["" 'leftBracket' ""]"" 'rightBracket' {{ArrayVariableName}}
 	;
 variable_initializer 
 	: expression 
@@ -316,8 +319,8 @@ void
 	;
 ####
 method_declarator 
-	: <IDENTIFIER> 'name' ""("" 'left' formal_parameter_list_opt "")"" 'right' {{MethodDeclarator}}
-	| method_declarator 'declarator' ""["" 'left' ""]"" 'right' {{ArrayMethodDeclarator}} # deprecated
+	: <IDENTIFIER> 'name' ""("" 'leftParen' formal_parameter_list_opt "")"" 'rightParen' {{MethodDeclarator}}
+	| method_declarator 'declarator' ""["" 'leftBracket' ""]"" 'rightBracket' {{ArrayMethodDeclarator}} # deprecated
 	# be careful; the above production also allows 'void foo() []'
 	;
 formal_parameter_list_opt 
@@ -357,20 +360,20 @@ constructor_declaration
 			constructor_body 'body' {{ConstructorDeclaration}}
 	;
 constructor_declarator 
-	: type_parameters_opt 'typeParameters' simple_name 'name' ""("" 'left' formal_parameter_list_opt "")"" 'right'
+	: type_parameters_opt 'typeParameters' simple_name 'name' ""("" 'leftParen' formal_parameter_list_opt "")"" 'rightParen'
 	;
 constructor_body 
-	: ""{"" 'left' explicit_constructor_invocation 'constructorInvocation'
-			block_statements ""}"" 'right' {{ConstructorBody}}
-	| ""{"" 'left' explicit_constructor_invocation 'constructorInvocation' ""}"" 'right' {{ConstructorBody}}
-	| ""{"" 'left' block_statements ""}"" 'right' {{ConstructorBody}}
-	| ""{"" 'left' ""}"" 'right' {{ConstructorBody}}
+	: ""{"" 'leftBrace' explicit_constructor_invocation 'constructorInvocation'
+			block_statements ""}"" 'rightBrace' {{ConstructorBody}}
+	| ""{"" 'leftBrace' explicit_constructor_invocation 'constructorInvocation' ""}"" 'rightBrace' {{ConstructorBody}}
+	| ""{"" 'leftBrace' block_statements ""}"" 'rightBrace' {{ConstructorBody}}
+	| ""{"" 'leftBrace' ""}"" 'rightBrace' {{ConstructorBody}}
 	;
 explicit_constructor_invocation 
-	: ""this"" 'thisToken' ""("" 'left' argument_list_opt "")"" 'right' "";"" 'semicolon' {{ThisConstructorInvocation}}
-	| ""super"" 'superToken' ""("" 'left' argument_list_opt "")"" 'right' "";"" 'semicolon' {{SuperConstructorInvocation}}
-	| primary 'primary' ""."" 'period' ""this"" 'thisToken' ""("" 'left' argument_list_opt "")"" 'right' "";"" 'semicolon' {{ThisConstructorInvocation}}
-	| primary 'primary' ""."" 'period' ""super"" 'superToken' ""("" 'left' argument_list_opt "")"" 'right' "";"" 'semicolon' {{SuperConstructorInvocation}}
+	: ""this"" 'thisToken' ""("" 'leftParen' argument_list_opt "")"" 'rightParen' "";"" 'semicolon' {{ThisConstructorInvocation}}
+	| ""super"" 'superToken' ""("" 'leftParen' argument_list_opt "")"" 'rightParen' "";"" 'semicolon' {{SuperConstructorInvocation}}
+	| primary 'primary' ""."" 'period' ""this"" 'thisToken' ""("" 'leftParen' argument_list_opt "")"" 'rightParen' "";"" 'semicolon' {{ThisConstructorInvocation}}
+	| primary 'primary' ""."" 'period' ""super"" 'superToken' ""("" 'leftParen' argument_list_opt "")"" 'rightParen' "";"" 'semicolon' {{SuperConstructorInvocation}}
 	;
 # 19.9) Interfaces
 # 19.9.1) Interface Declarations
@@ -382,7 +385,7 @@ annotation_interface_declaration
 	: modifiers_opt ""@"" 'atToken' ""interface"" 'interfaceToken' <IDENTIFIER> 'name' annotation_interface_body {{AnnotationInterface}}
 	;
 annotation_interface_body
-	: ""{"" 'left' annotation_interface_member_declarations_opt ""}"" 'right'
+	: ""{"" 'leftBrace' annotation_interface_member_declarations_opt ""}"" 'rightBrace'
 	;
 annotation_interface_member_declarations_opt
 	: 
@@ -400,6 +403,7 @@ annotation_interface_member_declaration
 annotation_method_declaration
 	: abstract_method_declaration
 	| method_header ""default"" 'defaultToken' variable_initializer 'value' "";"" 'semicolon' {{AnnotationMethodDeclaration}}
+	| method_header ""default"" 'defaultToken' annotation 'value' "";"" 'semicolon' {{AnnotationMethodDeclaration}}
 	;
 extends_interfaces_opt 
 	: 
@@ -410,7 +414,7 @@ extends_interfaces
 	| extends_interfaces "","" 'comma' interface_type 'interfaceType' 
 	;
 interface_body 
-	: ""{"" 'left' interface_member_declarations_opt ""}"" 'right'
+	: ""{"" 'leftBrace' interface_member_declarations_opt ""}"" 'rightBrace'
 	;
 interface_member_declarations_opt 
 	: 
@@ -436,10 +440,10 @@ abstract_method_declaration
 	;
 # 19.10) Arrays
 array_initializer 
-	: ""{"" 'left' variable_initializers "","" 'comma' ""}"" 'right' {{ArrayInitializer}}
-	| ""{"" 'left' variable_initializers ""}"" 'right' {{ArrayInitializer}}
-	| ""{"" 'left' "","" 'comma' ""}"" 'right' {{ArrayInitializer}}
-	| ""{"" 'left' ""}"" 'right' {{ArrayInitializer}}
+	: ""{"" 'leftBrace' variable_initializers "","" 'comma' ""}"" 'rightBrace' {{ArrayInitializer}}
+	| ""{"" 'leftBrace' variable_initializers ""}"" 'rightBrace' {{ArrayInitializer}}
+	| ""{"" 'leftBrace' "","" 'comma' ""}"" 'rightBrace' {{ArrayInitializer}}
+	| ""{"" 'leftBrace' ""}"" 'rightBrace' {{ArrayInitializer}}
 	;
 variable_initializers 
 	: variable_initializer 'initializer' 
@@ -447,7 +451,7 @@ variable_initializers
 	;
 # 19.11) Blocks and Statements
 block 
-	:	""{"" 'left' block_statements_opt ""}"" 'right' {{Block}}
+	:	""{"" 'leftBrace' block_statements_opt ""}"" 'rightBrace' {{Block}}
 	;
 block_statements_opt 
 	: 
@@ -511,20 +515,20 @@ statement_expression
 	| class_instance_creation_expression 
 	;
 if_then_statement 
-	: ""if"" 'ifToken' ""("" 'left' expression 'expression' "")"" 'right' statement 'trueStatement' {{IfStatement}}
+	: ""if"" 'ifToken' ""("" 'leftParen' expression 'expression' "")"" 'rightParen' statement 'trueStatement' {{IfStatement}}
 	;
 if_then_else_statement 
-	: ""if"" 'ifToken' ""("" 'left' expression 'expression' "")"" 'right' statement 'trueStatement'
+	: ""if"" 'ifToken' ""("" 'leftParen' expression 'expression' "")"" 'rightParen' statement 'trueStatement'
 			""else"" 'elseToken' statement 'falseStatement' {{IfElseStatement}}
 	;
 switch_statement 
-	: ""switch"" 'switchToken' ""("" 'left' expression 'expression' "")"" 'right' switch_block 'block' {{SwitchStatement}}
+	: ""switch"" 'switchToken' ""("" 'leftParen' expression 'expression' "")"" 'rightParen' switch_block 'block' {{SwitchStatement}}
 	;
 switch_block 
-	: ""{"" 'left' switch_block_statement_groups switch_labels ""}"" 'right' {{SwitchBlock}}
-	| ""{"" 'left' switch_block_statement_groups ""}"" 'right' {{SwitchBlock}}
-	| ""{"" 'left' switch_labels ""}"" 'right' {{SwitchBlock}}
-	| ""{"" 'left' ""}"" 'right' {{SwitchBlock}}
+	: ""{"" 'leftBrace' switch_block_statement_groups switch_labels ""}"" 'rightBrace' {{SwitchBlock}}
+	| ""{"" 'leftBrace' switch_block_statement_groups ""}"" 'rightBrace' {{SwitchBlock}}
+	| ""{"" 'leftBrace' switch_labels ""}"" 'rightBrace' {{SwitchBlock}}
+	| ""{"" 'leftBrace' ""}"" 'rightBrace' {{SwitchBlock}}
 	;
 switch_block_statement_groups 
 	: switch_block_statement_group 'statementGroup' 
@@ -542,14 +546,14 @@ switch_label
 	| ""default"" 'defaultToken' "":"" 'colon' {{DefaultLabel}}
 	;
 while_statement 
-	: ""while"" 'whileToken' ""("" 'left' expression 'expression' "")"" 'right' statement 'statement' {{WhileStatement}}
+	: ""while"" 'whileToken' ""("" 'leftParen' expression 'expression' "")"" 'rightParen' statement 'statement' {{WhileStatement}}
 	;
 do_statement 
-	: ""do"" 'doToken' statement 'statement' ""while"" 'whileToken' ""("" 'left' expression 'expression' "")"" 'right' "";"" 'semicolon' {{DoWhileStatement}}
+	: ""do"" 'doToken' statement 'statement' ""while"" 'whileToken' ""("" 'leftParen' expression 'expression' "")"" 'rightParen' "";"" 'semicolon' {{DoWhileStatement}}
 	;
 for_statement 
-	: ""for"" 'forToken' ""("" 'left' for_init_opt 'initial' "";"" 'firstSemicolon' expression_opt 'test' "";"" 'secondSemicolon'
-			for_update_opt 'update' "")"" 'right' statement 'statement' {{ForStatement}}
+	: ""for"" 'forToken' ""("" 'leftParen' for_init_opt 'initial' "";"" 'firstSemicolon' expression_opt 'test' "";"" 'secondSemicolon'
+			for_update_opt 'update' "")"" 'rightParen' statement 'statement' {{ForStatement}}
 	;
 for_init_opt 
 	: 
@@ -587,11 +591,26 @@ throw_statement
 	: ""throw"" 'throwToken' expression 'expression' "";"" 'semicolon' {{ThrowStatement}}
 	;
 synchronized_statement 
-	: ""synchronized"" 'synchronizedToken' ""("" 'left' expression 'expression' "")"" 'right' block 'block' {{SynchronizedStatement}}
+	: ""synchronized"" 'synchronizedToken' ""("" 'leftParen' expression 'expression' "")"" 'rightParen' block 'block' {{SynchronizedStatement}}
 	;
 try_statement 
-	: ""try"" 'tryToken' block 'block' catches {{TryStatement}}
-	| ""try"" 'tryToken' block 'block' catches_opt finally 'finally' {{TryStatement}}
+	: ""try"" 'tryToken' try_resources_opt block 'block' catches {{TryStatement}}
+	| ""try"" 'tryToken' try_resources_opt block 'block' catches_opt finally 'finally' {{TryStatement}}
+	;
+try_resources_opt
+	:
+	| ""("" 'leftParen' try_resources semicolon_opt "")"" 'rightParen'
+	;
+try_resources
+	: try_resource 'resource'
+	| try_resources "";"" 'semicolon' try_resource 'resource' 
+	;
+try_resource
+	: variable_modifiers type 'type' initialized_variable_declarator 'variableDeclaration' {{LocalVariableDeclaration}}
+	;
+semicolon_opt
+	:
+	| "";"" 'semicolon'
 	;
 catches_opt 
 	: 
@@ -602,7 +621,7 @@ catches
 	| catches catch_clause 'catch'
 	;
 catch_clause 
-	: ""catch"" 'catchToken' ""("" 'left' formal_parameter 'parameter' "")"" 'right' block 'block' {{CatchClause}}
+	: ""catch"" 'catchToken' ""("" 'leftParen' formal_parameter 'parameter' "")"" 'rightParen' block 'block' {{CatchClause}}
 	;
 finally 
 	: ""finally"" 'finallyToken' block 'block' {{FinallyClause}}
@@ -619,7 +638,7 @@ primary
 primary_no_new_array 
 	: literal 
 	| ""this"" 'name' {{Name}}
-	| ""("" 'left' expression "")"" 'right' {{Expression}}
+	| ""("" '_leftParen' expression "")"" '_rightParen' {{Expression}}
 	| class_instance_creation_expression 
 	| field_access 
 	| method_invocation 
@@ -656,13 +675,17 @@ lambda_function
 	: block 'value'
 	| expression 'value'
 	;
+method_reference_expression
+	: assignment_expression
+	| assignment_expression 'receiver' ""::"" 'colonColonToken' <IDENTIFIER> 'name' {{MethodReference}}
+	;
 class_instance_creation_expression 
-	: ""new"" 'newToken' class_type 'type' ""("" 'left' argument_list_opt "")"" 'right' {{New}}
-	| ""new"" 'newToken' class_type 'type' ""("" 'left' argument_list_opt "")"" 'right' class_body {{NewClass}}
-	| primary 'primary' ""."" 'period' ""new"" 'newToken' <IDENTIFIER> 'name' 
-			""("" 'left' argument_list_opt "")"" 'right' {{New}}
-	| primary 'primary' ""."" 'period' ""new"" 'newToken' <IDENTIFIER> 'name' 
-			""("" 'left' argument_list_opt "")"" 'right' class_body {{NewClass}}
+	: ""new"" 'newToken' class_type 'type' ""("" 'leftParen' argument_list_opt "")"" 'rightParen' {{New}}
+	| ""new"" 'newToken' class_type 'type' ""("" 'leftParen' argument_list_opt "")"" 'rightParen' class_body {{NewClass}}
+	| primary_or_name 'primary' ""."" 'period' ""new"" 'newToken' type_arguments_opt <IDENTIFIER> 'name' 
+			type_arguments_or_diamond_opt ""("" 'leftParen' argument_list_opt "")"" 'rightParen' {{New}}
+	| primary_or_name 'primary' ""."" 'period' ""new"" 'newToken' type_arguments_opt <IDENTIFIER> 'name' 
+			type_arguments_or_diamond_opt ""("" 'leftParen' argument_list_opt "")"" 'rightParen' class_body {{NewClass}}
 	;
 argument_list_opt 
 	: 
@@ -683,7 +706,7 @@ dim_exprs
 	| dim_exprs dim_expr 'dimExpression' 
 	;
 dim_expr 
-	: ""["" 'left' expression 'expression' ""]"" 'right' {{DimensionExpression}}
+	: ""["" 'leftBracket' expression 'expression' ""]"" 'rightBracket' {{DimensionExpression}}
 	;
 dims_opt 
 	: 
@@ -694,7 +717,7 @@ dims
 	| dims empty_dim_expr
 	;
 empty_dim_expr
-	: ""["" 'left' ""]"" 'right'
+	: ""["" 'leftBracket' ""]"" 'rightBracket'
 	;
 field_access 
 	: primary 'receiver' ""."" 'period' <IDENTIFIER> 'name' {{FieldAccess}}
@@ -702,15 +725,14 @@ field_access
 	| name 'receiver' ""."" 'superPeriod' ""super"" 'superToken' ""."" 'period' <IDENTIFIER> 'name' {{FieldAccess}}###???
 	;
 method_invocation 
-	: type_arguments_opt <IDENTIFIER> 'name' ""("" 'left' argument_list_opt "")"" 'right' {{MethodInvocation}}
-	| primary 'receiver' ""."" 'period' type_arguments_opt <IDENTIFIER> 'name' ""("" 'left' argument_list_opt "")"" 'right' {{MethodInvocation}}
-	| name 'receiver' ""."" 'period' type_arguments_opt <IDENTIFIER> 'name' ""("" 'left' argument_list_opt "")"" 'right' {{MethodInvocation}}
-	| ""super"" 'superToken' ""."" 'period' type_arguments_opt <IDENTIFIER> 'name' ""("" 'left' argument_list_opt "")"" 'right' {{MethodInvocation}}
-	| name 'receiver' ""."" 'superPeriod' ""super"" 'superToken' ""."" 'period' type_arguments_opt <IDENTIFIER> 'name' ""("" 'left' argument_list_opt "")"" 'right' {{MethodInvocation}}
+	: type_arguments_opt <IDENTIFIER> 'name' ""("" 'leftParen' argument_list_opt "")"" 'rightParen' {{MethodInvocation}}
+	| primary_or_name 'receiver' ""."" 'period' type_arguments_opt <IDENTIFIER> 'name' ""("" 'leftParen' argument_list_opt "")"" 'rightParen' {{MethodInvocation}}
+	| ""super"" 'superToken' ""."" 'period' type_arguments_opt <IDENTIFIER> 'name' ""("" 'leftParen' argument_list_opt "")"" 'rightParen' {{MethodInvocation}}
+	| name 'receiver' ""."" 'superPeriod' ""super"" 'superToken' ""."" 'period' type_arguments_opt <IDENTIFIER> 'name' ""("" 'leftParen' argument_list_opt "")"" 'rightParen' {{MethodInvocation}}
 	;
 array_access 
-	: name 'array' ""["" 'left' expression 'expression' ""]"" 'right' {{ArrayAccess}}
-	| primary_no_new_array 'array' ""["" 'left' expression 'expression' ""]"" 'right' {{ArrayAccess}}
+	: name 'array' ""["" 'leftBracket' expression 'expression' ""]"" 'rightBracket' {{ArrayAccess}}
+	| primary_no_new_array 'array' ""["" 'leftBracket' expression 'expression' ""]"" 'rightBracket' {{ArrayAccess}}
 	;
 postfix_expression 
 	: primary 
@@ -745,7 +767,7 @@ unary_expression_not_plus_minus
 	| cast_expression 
 	;
 cast_expression 
-	: ""("" 'left' type 'type' "")"" 'right' unary_expression_not_plus_minus 'expression' {{CastExpression}}
+	: ""("" 'leftParen' type 'type' "")"" 'rightParen' unary_expression_not_plus_minus 'expression' {{CastExpression}}
 	;
 multiplicative_expression 
 	: unary_expression 
@@ -833,7 +855,7 @@ expression_opt
 	| expression 
 	;
 expression 
-	: assignment_expression 
+	: method_reference_expression 
 	| lambda_expression
 	;
 constant_expression 
@@ -849,7 +871,7 @@ annotation
 	;
 annotation_args_opt
 	:
-	| ""("" 'left' annotation_args "")"" 'right'
+	| ""("" 'leftParen' annotation_args "")"" 'rightParen'
 	;
 annotation_args
 	: 
@@ -869,7 +891,7 @@ elementValue
 	| elementValueArrayInitializer
 	;
 elementValueArrayInitializer
-	: ""{"" 'left' elementValues_opt comma_opt ""}"" 'right' {{ElementArrayInitializer}}
+	: ""{"" 'leftBrace' elementValues_opt comma_opt ""}"" 'rightBrace' {{ElementArrayInitializer}}
 	;
 elementValues_opt
 	:
@@ -891,7 +913,7 @@ enum_declaration
 	: modifiers_opt ""enum"" 'enumToken' <IDENTIFIER> 'name' interfaces_opt enum_body {{EnumDeclaration}}
 	;
 enum_body
-	: ""{"" 'left' enum_constants_opt comma_opt enum_body_declarations_opt ""}"" 'right'
+	: ""{"" 'leftBrace' enum_constants_opt comma_opt enum_body_declarations_opt ""}"" 'rightBrace'
 	;
 enum_constants_opt
 	:
@@ -921,7 +943,7 @@ enum_body_declarations
 	;
 type_parameters_opt
 	:
-	| ""<"" 'left' type_parameters <GREATER_THAN> 'right' {{TypeParameters}}
+	| ""<"" 'lt' type_parameters <GREATER_THAN> 'gt' {{TypeParameters}}
 	;
 type_parameters
 	: type_parameter 'parameter'
@@ -938,9 +960,15 @@ type_bound
 	: type 'type'
 	| type_bound ""&"" 'amp' type 'type'
 	;
-type_arguments_opt
+type_arguments_or_diamond_opt
 	:
 	| ""<"" 'typeArgLeft' type_arguments <GREATER_THAN> 'typeArgRight'
+	| ""<"" 'typeArgLeft'  <GREATER_THAN> 'typeArgRight'
+	;
+type_arguments_opt
+	:
+	| ""<"" 'lt' type_arguments <GREATER_THAN> 'gt'
+	| ""<"" 'lt'  <GREATER_THAN> 'gt'
 	;
 type_arguments
 	: type_argument 'argument'
@@ -966,7 +994,7 @@ qualified_type_name
 	: type_name 'nspace' ""."" 'period' <IDENTIFIER> 'name' type_arguments_opt {{QualifiedTypeName}}
 	;
 foreach_statement 
-	: ""for"" 'forToken' ""("" 'left' variable_modifiers type 'type' variable_declarator_id 'name' "":"" 'colon' expression 'expression' "")"" 'right' statement 'statement' {{ForEachStatement}}
+	: ""for"" 'forToken' ""("" 'leftParen' variable_modifiers type 'type' variable_declarator_id 'name' "":"" 'colon' expression 'expression' "")"" 'rightParen' statement 'statement' {{ForEachStatement}}
 	;
 variable_modifiers
 	: 
@@ -975,4 +1003,8 @@ variable_modifiers
 variable_modifier
 	: ""final"" 'token' {{Modifier}}
 	| annotation
+	;
+primary_or_name
+	: primary
+	| name
 	;"

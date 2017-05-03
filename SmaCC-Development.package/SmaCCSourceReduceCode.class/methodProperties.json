@@ -1,9 +1,12 @@
 {
-	"class" : {
-		"onRHS:source:" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"=" : "JohnBrant 6/24/2016 12:26:52",
-		"basicModelTypes:" : "JohnBrant 6/24/2016 12:26:52",
-		"source" : "JohnBrant 6/24/2016 12:26:52",
-		"source:" : "JohnBrant 6/24/2016 12:26:52",
-		"typesForTree:" : "JohnBrant 6/24/2016 12:26:52" } }
+		"source" : "ThierryGoubier 3/27/2017 22:53:01",
+		"source:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"=" : "ThierryGoubier 3/27/2017 22:53:01",
+		"typesForTree:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"basicModelTypes:" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : {
+		"onRHS:source:" : "ThierryGoubier 3/27/2017 22:53:01"
+	}
+}

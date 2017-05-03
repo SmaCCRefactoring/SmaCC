@@ -3,8 +3,8 @@ reduceActionForwhile_statement1: nodes
 	| result |
 	result := JavaWhileStatementNode new.
 	result whileToken: (nodes at: 1).
-	result left: (nodes at: 2).
+	result leftParen: (nodes at: 2).
 	result expression: (nodes at: 3).
-	result right: (nodes at: 4).
+	result rightParen: (nodes at: 4).
 	result statement: (nodes at: 5).
 	^ result

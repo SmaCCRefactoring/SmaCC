@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 12:08:16",
-		"ignoredTokenVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"semicolonToken" : "JohnBrant 6/24/2016 12:08:16",
-		"semicolonToken:" : "JohnBrant 6/24/2016 12:08:16" } }
+		"ignoredTokenVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"semicolonToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"semicolonToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"acceptVisitor:" : "ThierryGoubier 9/23/2016 19:23:52"
+	},
+	"class" : { }
+}

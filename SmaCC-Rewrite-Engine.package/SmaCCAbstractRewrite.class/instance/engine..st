@@ -1,3 +1,3 @@
 initialize-release
 engine: aSmaCCRewriteEngine
-	self subclassResponsibility
+	

@@ -1,15 +1,16 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 12:08:16",
-		"colonColonToken" : "JohnBrant 6/24/2016 12:08:16",
-		"colonColonToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"global" : "JohnBrant 6/24/2016 12:08:16",
-		"global:" : "JohnBrant 6/24/2016 12:08:16",
-		"name" : "JohnBrant 6/24/2016 12:08:16",
-		"name:" : "JohnBrant 6/24/2016 12:08:16",
-		"nodeVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"tokenVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"typeArguments" : "JohnBrant 6/24/2016 12:08:16",
-		"typeArguments:" : "JohnBrant 6/24/2016 12:08:16" } }
+		"colonColonToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"typeArguments:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"name" : "ThierryGoubier 9/23/2016 19:23:52",
+		"name:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"typeArguments" : "ThierryGoubier 9/23/2016 19:23:52",
+		"tokenVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"acceptVisitor:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"colonColonToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"global:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"nodeVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"global" : "ThierryGoubier 9/23/2016 19:23:52"
+	},
+	"class" : { }
+}

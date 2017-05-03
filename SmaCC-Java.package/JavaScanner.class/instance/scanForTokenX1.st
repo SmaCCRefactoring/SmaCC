@@ -25,7 +25,7 @@ scanForTokenX1
 			(currentCharacter between: $0 and: $3)
 				ifTrue: [ self step.
 					currentCharacter == $'
-						ifTrue: [ ^ self recordAndReportMatch: #(101) ].
+						ifTrue: [ ^ self recordAndReportMatch: #(102) ].
 					(currentCharacter between: $0 and: $7)
 						ifTrue: [ ^ self scan3 ].
 					^ self reportLastMatch ].

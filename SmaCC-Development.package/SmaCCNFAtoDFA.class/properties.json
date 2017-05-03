@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Development",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"mergedStates" ],
-	"name" : "SmaCCNFAtoDFA",
-	"pools" : [
-		 ],
 	"super" : "SmaCCGraphAlgorithm",
-	"type" : "normal" }
+	"category" : "SmaCC-Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"mergedStates"
+	],
+	"name" : "SmaCCNFAtoDFA",
+	"type" : "normal"
+}

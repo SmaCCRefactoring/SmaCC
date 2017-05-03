@@ -1,12 +1,13 @@
 {
+	"instance" : { },
 	"class" : {
-		"asts" : "ThierryGoubier 9/25/2016 15:18:01",
-		"bookName" : "ThierryGoubier 9/25/2016 15:18:01",
-		"directives" : "ThierryGoubier 9/25/2016 15:18:01",
-		"pages" : "ThierryGoubier 9/25/2016 15:18:01",
-		"parser" : "ThierryGoubier 9/25/2016 15:18:01",
-		"scanner" : "ThierryGoubier 9/25/2016 15:18:01",
-		"transformations" : "ThierryGoubier 9/25/2016 15:18:01",
-		"tutorial" : "ThierryGoubier 9/25/2016 15:18:01" },
-	"instance" : {
-		 } }
+		"pages" : "ThierryGoubier 3/29/2017 15:18:13",
+		"bookName" : "ThierryGoubier 3/29/2017 15:18:13",
+		"parser" : "ThierryGoubier 3/29/2017 15:18:13",
+		"transformations" : "ThierryGoubier 3/29/2017 15:18:13",
+		"tutorial" : "ThierryGoubier 3/29/2017 15:18:13",
+		"scanner" : "ThierryGoubier 3/29/2017 15:18:13",
+		"directives" : "ThierryGoubier 3/29/2017 15:18:13",
+		"asts" : "ThierryGoubier 3/29/2017 15:18:13"
+	}
+}

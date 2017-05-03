@@ -1,18 +1,17 @@
 {
-	"category" : "SmaCC-Swift",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "SwiftParseNode",
+	"category" : "SmaCC-Swift",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"identifierTokens",
 		"lessThanTokens",
 		"commaTokens",
 		"greaterThanTokens",
-		"periodTokens" ],
+		"periodTokens"
+	],
 	"name" : "SwiftTypeIdentifierNode",
-	"pools" : [
-		 ],
-	"super" : "SwiftParseNode",
-	"type" : "normal" }
+	"type" : "normal"
+}

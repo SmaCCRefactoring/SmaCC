@@ -1,15 +1,14 @@
 {
-	"category" : "SmaCC-Source-Editing",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
+	"super" : "Magnitude",
+	"category" : "SmaCC-Source-Editing",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"index",
-		"intervalId" ],
+		"intervalId"
+	],
 	"name" : "SmaCCStringIndex",
-	"pools" : [
-		 ],
-	"super" : "Magnitude",
-	"type" : "normal" }
+	"type" : "normal"
+}

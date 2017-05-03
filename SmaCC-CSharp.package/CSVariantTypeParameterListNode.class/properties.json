@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "CSTypeParameterListNode",
+	"category" : "SmaCC-CSharp",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"annotations"
+	],
+	"name" : "CSVariantTypeParameterListNode",
+	"type" : "normal"
+}

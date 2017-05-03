@@ -1,17 +1,18 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 10:40:06",
-		"classToken" : "JohnBrant 6/24/2016 10:40:06",
-		"classToken:" : "JohnBrant 6/24/2016 10:40:06",
-		"name" : "JohnBrant 6/24/2016 10:40:06",
-		"name:" : "JohnBrant 6/24/2016 10:40:06",
-		"nodeVariables" : "JohnBrant 6/24/2016 10:40:06",
-		"period" : "JohnBrant 6/24/2016 10:40:06",
-		"period:" : "JohnBrant 6/24/2016 10:40:06",
-		"thisToken" : "JohnBrant 6/24/2016 10:40:06",
-		"thisToken:" : "JohnBrant 6/24/2016 10:40:06",
-		"tokenVariables" : "JohnBrant 6/24/2016 10:40:06",
-		"type" : "JohnBrant 6/24/2016 10:40:06",
-		"type:" : "JohnBrant 6/24/2016 10:40:06" } }
+		"thisToken:" : "ThierryGoubier 5/3/2017 19:40",
+		"classToken" : "ThierryGoubier 5/3/2017 19:40",
+		"type:" : "ThierryGoubier 5/3/2017 19:40",
+		"name" : "ThierryGoubier 5/3/2017 19:40",
+		"name:" : "ThierryGoubier 5/3/2017 19:40",
+		"period" : "ThierryGoubier 5/3/2017 19:40",
+		"thisToken" : "ThierryGoubier 5/3/2017 19:40",
+		"classToken:" : "ThierryGoubier 5/3/2017 19:40",
+		"acceptVisitor:" : "ThierryGoubier 5/3/2017 19:41",
+		"tokenVariables" : "ThierryGoubier 5/3/2017 19:40",
+		"type" : "ThierryGoubier 5/3/2017 19:40",
+		"nodeVariables" : "ThierryGoubier 5/3/2017 19:40",
+		"period:" : "ThierryGoubier 5/3/2017 19:40"
+	},
+	"class" : { }
+}

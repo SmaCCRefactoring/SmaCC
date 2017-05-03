@@ -1,8 +1,8 @@
 generated
 scan6
-	[ self recordMatch: #(156).
 	self step.
-	currentCharacter isDigit ] whileTrue.
-	('DFMdfm' includes: currentCharacter)
-		ifTrue: [ ^ self recordAndReportMatch: #(156) ].
+	(currentCharacter isDigit
+		or: [ (currentCharacter between: $A and: $F)
+				or: [ currentCharacter between: $a and: $f ] ])
+		ifTrue: [ ^ self scan5 ].
 	^ self reportLastMatch

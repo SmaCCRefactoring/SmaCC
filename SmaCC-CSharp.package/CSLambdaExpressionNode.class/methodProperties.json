@@ -1,13 +1,14 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 12:08:16",
-		"body" : "JohnBrant 6/24/2016 12:08:16",
-		"body:" : "JohnBrant 6/24/2016 12:08:16",
-		"equalGreaterThanToken" : "JohnBrant 6/24/2016 12:08:16",
-		"equalGreaterThanToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"nodeVariables" : "JohnBrant 6/24/2016 12:08:16",
-		"signature" : "JohnBrant 6/24/2016 12:08:16",
-		"signature:" : "JohnBrant 6/24/2016 12:08:16",
-		"tokenVariables" : "JohnBrant 6/24/2016 12:08:16" } }
+		"nodeVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"body" : "ThierryGoubier 9/23/2016 19:23:52",
+		"signature:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"tokenVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"equalGreaterThanToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"body:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"acceptVisitor:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"signature" : "ThierryGoubier 9/23/2016 19:23:52",
+		"equalGreaterThanToken:" : "ThierryGoubier 9/23/2016 19:23:52"
+	},
+	"class" : { }
+}

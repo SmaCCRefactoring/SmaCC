@@ -1,11 +1,14 @@
 {
-	"class" : {
-		"initialize" : "JohnBrant 6/24/2016 12:26:52" },
 	"instance" : {
-		"=" : "JohnBrant 6/24/2016 12:26:52",
-		"basicModelTypes:" : "JohnBrant 6/24/2016 12:26:52",
-		"index" : "JohnBrant 6/24/2016 12:26:52",
-		"modelTypes:" : "JohnBrant 6/24/2016 12:26:52",
-		"returnedNodeIndex" : "JohnBrant 6/24/2016 12:26:52",
-		"signalNodeCreationWarning" : "JohnBrant 6/24/2016 12:26:52",
-		"source" : "JohnBrant 6/24/2016 12:26:52" } }
+		"source" : "ThierryGoubier 3/27/2017 22:53:01",
+		"=" : "ThierryGoubier 3/27/2017 22:53:01",
+		"basicModelTypes:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"returnedNodeIndex" : "ThierryGoubier 3/27/2017 22:53:01",
+		"index" : "ThierryGoubier 3/27/2017 22:53:01",
+		"modelTypes:" : "ThierryGoubier 3/27/2017 22:53:01",
+		"signalNodeCreationWarning" : "ThierryGoubier 3/27/2017 22:53:01"
+	},
+	"class" : {
+		"initialize" : "ThierryGoubier 3/27/2017 22:53:01"
+	}
+}

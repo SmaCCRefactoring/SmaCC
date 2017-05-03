@@ -1,12 +1,13 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"acceptVisitor:" : "JohnBrant 6/24/2016 12:08:16",
-		"leftParenToken" : "JohnBrant 6/24/2016 12:08:16",
-		"leftParenToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"newToken" : "JohnBrant 6/24/2016 12:08:16",
-		"newToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"rightParenToken" : "JohnBrant 6/24/2016 12:08:16",
-		"rightParenToken:" : "JohnBrant 6/24/2016 12:08:16",
-		"tokenVariables" : "JohnBrant 6/24/2016 12:08:16" } }
+		"tokenVariables" : "ThierryGoubier 9/23/2016 19:23:52",
+		"rightParenToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"newToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"leftParenToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"leftParenToken" : "ThierryGoubier 9/23/2016 19:23:52",
+		"newToken:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"acceptVisitor:" : "ThierryGoubier 9/23/2016 19:23:52",
+		"rightParenToken:" : "ThierryGoubier 9/23/2016 19:23:52"
+	},
+	"class" : { }
+}

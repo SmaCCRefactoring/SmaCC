@@ -1,10 +1,14 @@
 {
-	"class" : {
-		"on:" : "JohnBrant 6/24/2016 13:12:32" },
 	"instance" : {
-		"code" : "JohnBrant 6/24/2016 13:12:32",
-		"code:" : "JohnBrant 6/24/2016 13:12:32",
-		"method" : "JohnBrant 6/24/2016 13:12:32",
-		"saveOn:" : "JohnBrant 6/24/2016 13:12:32",
-		"string" : "JohnBrant 6/24/2016 13:12:32",
-		"transformUsingContext:" : "JohnBrant 6/24/2016 13:12:32" } }
+		"string" : "ThierryGoubier 9/23/2016 20:11:02",
+		"transformUsingContext:" : "JohnBrant 12/30/2016 08:28",
+		"initialize" : "JohnBrant 12/20/2016 09:53",
+		"method" : "JohnBrant 12/31/2016 18:35",
+		"code" : "ThierryGoubier 9/23/2016 20:11:02",
+		"code:" : "ThierryGoubier 9/23/2016 20:11:02",
+		"saveOn:" : "ThierryGoubier 9/23/2016 20:11:02"
+	},
+	"class" : {
+		"on:" : "ThierryGoubier 9/23/2016 20:11:02"
+	}
+}

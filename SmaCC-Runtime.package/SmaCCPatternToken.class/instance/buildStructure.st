@@ -1,6 +1,6 @@
 private
 buildStructure
-	| index code |
+	| index code source |
 	isList := isToken := false.
 	isNode := true.
 	testBlock := [ :node | true ].
@@ -8,4 +8,6 @@ buildStructure
 	index > 0
 		ifFalse: [ ^ self ].
 	code := value copyFrom: index + 1 to: (value lastIndexOf: $}) - 1.
-	Compiler evaluate: 'self ' , code for: self logged: false
+	source := 'self ' , code.
+	RBParser parseExpression: source onError: [ :s :p | self error: 'Invalid pattern expression' ].
+	Compiler evaluate: source for: self logged: false
