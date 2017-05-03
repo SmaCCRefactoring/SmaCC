@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SmaCCParseNodeVisitor",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "DelphiProgramNodeVisitor",
+	"type" : "normal"
+}

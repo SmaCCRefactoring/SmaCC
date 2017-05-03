@@ -1,0 +1,3 @@
+generated
+visitClassFunctionHeader: aClassFunctionHeader
+	^ self visitFunctionHeader: aClassFunctionHeader

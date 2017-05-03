@@ -1,0 +1,3 @@
+generated
+visitAnonymousProcedureType: anAnonymousProcedureType
+	^ self visitAnonymousMethodType: anAnonymousProcedureType

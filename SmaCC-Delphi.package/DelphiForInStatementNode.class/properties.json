@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiStatementNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"forToken",
+		"variable",
+		"inToken",
+		"fromExpr",
+		"doToken",
+		"statement"
+	],
+	"name" : "DelphiForInStatementNode",
+	"type" : "normal"
+}

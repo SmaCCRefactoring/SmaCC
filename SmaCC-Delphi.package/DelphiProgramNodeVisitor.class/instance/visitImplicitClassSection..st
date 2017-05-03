@@ -1,0 +1,3 @@
+generated
+visitImplicitClassSection: anImplicitClassSection
+	^ self visitClassSection: anImplicitClassSection

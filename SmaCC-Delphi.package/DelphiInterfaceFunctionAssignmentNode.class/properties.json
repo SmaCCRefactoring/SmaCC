@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiProgramNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"function",
+		"qualifiedName",
+		"equalToken",
+		"name",
+		"semicolon"
+	],
+	"name" : "DelphiInterfaceFunctionAssignmentNode",
+	"type" : "normal"
+}

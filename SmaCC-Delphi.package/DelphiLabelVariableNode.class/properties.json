@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiProgramNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"labelToken",
+		"names",
+		"commas",
+		"semicolon"
+	],
+	"name" : "DelphiLabelVariableNode",
+	"type" : "normal"
+}

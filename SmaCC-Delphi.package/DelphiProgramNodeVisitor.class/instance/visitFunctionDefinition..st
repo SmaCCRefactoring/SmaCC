@@ -1,0 +1,3 @@
+generated
+visitFunctionDefinition: aFunctionDefinition
+	^ self visitMethodDefinition: aFunctionDefinition

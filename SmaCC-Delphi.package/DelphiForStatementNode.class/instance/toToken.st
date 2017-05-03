@@ -1,0 +1,3 @@
+generated
+toToken
+	^ toToken

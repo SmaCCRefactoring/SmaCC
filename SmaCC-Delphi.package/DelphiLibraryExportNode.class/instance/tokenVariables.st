@@ -1,0 +1,3 @@
+generated
+tokenVariables
+	^ #(#exportsToken #name)

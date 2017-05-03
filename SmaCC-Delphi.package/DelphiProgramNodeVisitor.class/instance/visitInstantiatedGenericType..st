@@ -1,0 +1,3 @@
+generated
+visitInstantiatedGenericType: anInstantiatedGenericType
+	^ self visitType: anInstantiatedGenericType

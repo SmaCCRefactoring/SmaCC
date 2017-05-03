@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiMultiStatementNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"beginToken",
+		"endToken"
+	],
+	"name" : "DelphiStatementBlockNode",
+	"type" : "normal"
+}

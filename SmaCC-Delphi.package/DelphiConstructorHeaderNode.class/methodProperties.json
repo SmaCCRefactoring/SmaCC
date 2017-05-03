@@ -1,0 +1,16 @@
+{
+	"instance" : {
+		"ignoredCompositeTokenVariables" : "ThierryGoubier 5/3/2017 19:18",
+		"semicolons" : "ThierryGoubier 5/3/2017 19:18",
+		"arguments" : "ThierryGoubier 5/3/2017 19:18",
+		"initialize" : "ThierryGoubier 5/3/2017 19:18",
+		"arguments:" : "ThierryGoubier 5/3/2017 19:18",
+		"constructorToken" : "ThierryGoubier 5/3/2017 19:18",
+		"constructorToken:" : "ThierryGoubier 5/3/2017 19:18",
+		"acceptVisitor:" : "ThierryGoubier 5/3/2017 19:20",
+		"semicolons:" : "ThierryGoubier 5/3/2017 19:18",
+		"tokenVariables" : "ThierryGoubier 5/3/2017 19:18",
+		"compositeNodeVariables" : "ThierryGoubier 5/3/2017 19:18"
+	},
+	"class" : { }
+}

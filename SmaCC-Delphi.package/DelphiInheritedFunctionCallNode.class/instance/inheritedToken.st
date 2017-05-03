@@ -1,0 +1,3 @@
+generated
+inheritedToken
+	^ inheritedToken

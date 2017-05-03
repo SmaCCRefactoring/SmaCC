@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiStatementNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"whileToken",
+		"expression",
+		"doToken",
+		"statement"
+	],
+	"name" : "DelphiWhileStatementNode",
+	"type" : "normal"
+}

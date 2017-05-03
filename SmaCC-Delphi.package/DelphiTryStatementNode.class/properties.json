@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiMultiStatementNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"tryToken",
+		"except",
+		"finally",
+		"endToken"
+	],
+	"name" : "DelphiTryStatementNode",
+	"type" : "normal"
+}

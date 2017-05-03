@@ -1,0 +1,3 @@
+generated
+tokenVariables
+	^ #(#asmToken #endToken)

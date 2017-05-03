@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiExpressionNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"lhs",
+		"assignment",
+		"value"
+	],
+	"name" : "DelphiAssignmentExpressionNode",
+	"type" : "normal"
+}

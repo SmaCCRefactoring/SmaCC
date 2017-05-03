@@ -1,0 +1,3 @@
+generated
+visitVariableExpression: aVariableExpression
+	^ self visitExpression: aVariableExpression

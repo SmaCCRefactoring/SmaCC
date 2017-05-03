@@ -1,0 +1,3 @@
+generated
+objectToken
+	^ objectToken

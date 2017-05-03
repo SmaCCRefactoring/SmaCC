@@ -1,0 +1,25 @@
+{
+	"instance" : {
+		"onToken" : "ThierryGoubier 5/3/2017 19:17",
+		"statements" : "ThierryGoubier 5/3/2017 19:18",
+		"initialize" : "ThierryGoubier 5/3/2017 19:18",
+		"type" : "ThierryGoubier 5/3/2017 19:18",
+		"type:" : "ThierryGoubier 5/3/2017 19:18",
+		"doToken" : "ThierryGoubier 5/3/2017 19:18",
+		"doToken:" : "ThierryGoubier 5/3/2017 19:18",
+		"colon" : "ThierryGoubier 5/3/2017 19:18",
+		"exception:" : "ThierryGoubier 5/3/2017 19:17",
+		"compositeNodeVariables" : "ThierryGoubier 5/3/2017 19:18",
+		"nodeVariables" : "ThierryGoubier 5/3/2017 19:18",
+		"tokenVariables" : "ThierryGoubier 5/3/2017 19:18",
+		"semicolons:" : "ThierryGoubier 5/3/2017 19:18",
+		"statements:" : "ThierryGoubier 5/3/2017 19:18",
+		"exception" : "ThierryGoubier 5/3/2017 19:17",
+		"semicolons" : "ThierryGoubier 5/3/2017 19:18",
+		"acceptVisitor:" : "ThierryGoubier 5/3/2017 19:20",
+		"ignoredCompositeTokenVariables" : "ThierryGoubier 5/3/2017 19:18",
+		"colon:" : "ThierryGoubier 5/3/2017 19:18",
+		"onToken:" : "ThierryGoubier 5/3/2017 19:17"
+	},
+	"class" : { }
+}

@@ -1,0 +1,3 @@
+generated
+visitClassOperatorHeader: aClassOperatorHeader
+	^ self visitMethodHeader: aClassOperatorHeader

@@ -1,0 +1,3 @@
+generated
+visitMainMethodDefinition: aMainMethodDefinition
+	^ self visitProgram: aMainMethodDefinition

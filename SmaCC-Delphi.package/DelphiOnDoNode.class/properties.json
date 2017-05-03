@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiProgramNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"onToken",
+		"exception",
+		"colon",
+		"type",
+		"doToken",
+		"statements",
+		"semicolons"
+	],
+	"name" : "DelphiOnDoNode",
+	"type" : "normal"
+}

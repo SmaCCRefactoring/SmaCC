@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiProgramNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"dispidToken",
+		"expression",
+		"readOnlyToken",
+		"writeOnlyToken"
+	],
+	"name" : "DelphiPropertyDispidNode",
+	"type" : "normal"
+}

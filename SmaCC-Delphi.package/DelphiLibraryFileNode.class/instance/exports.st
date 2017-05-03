@@ -1,0 +1,3 @@
+generated
+exports
+	^ exports

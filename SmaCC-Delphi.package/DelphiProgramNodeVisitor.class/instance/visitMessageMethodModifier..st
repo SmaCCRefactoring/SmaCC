@@ -1,0 +1,3 @@
+generated
+visitMessageMethodModifier: aMessageMethodModifier
+	^ self visitMethodModifier: aMessageMethodModifier

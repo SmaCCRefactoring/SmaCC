@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiAnonymousMethodTypeNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"procedureToken"
+	],
+	"name" : "DelphiAnonymousProcedureTypeNode",
+	"type" : "normal"
+}

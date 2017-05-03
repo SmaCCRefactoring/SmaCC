@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiMethodModifierNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"library",
+		"nameToken",
+		"methodName"
+	],
+	"name" : "DelphiExternalMethodModifierNode",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+generated
+visitProcedureDefinition: aProcedureDefinition
+	^ self visitMethodDefinition: aProcedureDefinition

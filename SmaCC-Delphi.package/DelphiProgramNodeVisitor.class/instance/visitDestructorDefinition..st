@@ -1,0 +1,3 @@
+generated
+visitDestructorDefinition: aDestructorDefinition
+	^ self visitMethodDefinition: aDestructorDefinition

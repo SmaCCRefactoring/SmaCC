@@ -1,0 +1,3 @@
+generated
+visitInterfaceProcedureAssignment: anInterfaceProcedureAssignment
+	^ self visitProgram: anInterfaceProcedureAssignment

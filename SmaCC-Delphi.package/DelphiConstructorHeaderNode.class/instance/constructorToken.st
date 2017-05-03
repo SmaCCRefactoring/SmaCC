@@ -1,0 +1,3 @@
+generated
+constructorToken
+	^ constructorToken

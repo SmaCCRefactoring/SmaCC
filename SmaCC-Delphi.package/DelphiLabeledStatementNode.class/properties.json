@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiStatementNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"label",
+		"colon",
+		"statement"
+	],
+	"name" : "DelphiLabeledStatementNode",
+	"type" : "normal"
+}

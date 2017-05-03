@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiProgramNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"implementsToken",
+		"interfaces",
+		"commas"
+	],
+	"name" : "DelphiPropertyImplementsNode",
+	"type" : "normal"
+}

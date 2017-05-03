@@ -1,0 +1,3 @@
+generated
+visitConstantArrayExpression: aConstantArrayExpression
+	^ self visitExpression: aConstantArrayExpression

@@ -1,0 +1,3 @@
+generated
+tokenVariables
+	^ #(#strictToken #privateToken)

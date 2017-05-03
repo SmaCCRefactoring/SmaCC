@@ -1,0 +1,3 @@
+generated
+readToken
+	^ readToken

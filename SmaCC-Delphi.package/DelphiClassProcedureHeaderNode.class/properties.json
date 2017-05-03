@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiProcedureHeaderNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classToken"
+	],
+	"name" : "DelphiClassProcedureHeaderNode",
+	"type" : "normal"
+}

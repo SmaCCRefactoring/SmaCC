@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiTypeNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"packedToken",
+		"recordToken",
+		"sections",
+		"caseToken",
+		"value",
+		"colon",
+		"type",
+		"ofToken",
+		"variantTypes",
+		"semicolons",
+		"endToken"
+	],
+	"name" : "DelphiRecordTypeNode",
+	"type" : "normal"
+}

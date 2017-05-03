@@ -1,0 +1,3 @@
+generated
+startingStateForNamedDefinedType
+	^ 4

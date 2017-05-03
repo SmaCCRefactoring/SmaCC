@@ -1,0 +1,3 @@
+generated
+helperToken
+	^ helperToken

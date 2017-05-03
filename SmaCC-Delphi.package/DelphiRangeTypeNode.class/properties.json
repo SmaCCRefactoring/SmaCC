@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiTypeNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"startValue",
+		"dots",
+		"endValue"
+	],
+	"name" : "DelphiRangeTypeNode",
+	"type" : "normal"
+}

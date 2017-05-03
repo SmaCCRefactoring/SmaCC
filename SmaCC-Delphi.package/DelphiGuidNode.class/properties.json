@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiProgramNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"left",
+		"string",
+		"right"
+	],
+	"name" : "DelphiGuidNode",
+	"type" : "normal"
+}

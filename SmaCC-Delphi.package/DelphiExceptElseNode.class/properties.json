@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiProgramNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"elseToken",
+		"statements",
+		"semicolons"
+	],
+	"name" : "DelphiExceptElseNode",
+	"type" : "normal"
+}

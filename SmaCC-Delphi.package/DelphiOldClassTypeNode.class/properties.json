@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiClassTypeNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"objectToken"
+	],
+	"name" : "DelphiOldClassTypeNode",
+	"type" : "normal"
+}

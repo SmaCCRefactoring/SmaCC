@@ -1,0 +1,3 @@
+generated
+visitMultiValueCaseLabel: aMultiValueCaseLabel
+	^ self visitProgram: aMultiValueCaseLabel

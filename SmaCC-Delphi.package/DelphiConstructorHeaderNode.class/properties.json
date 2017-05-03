@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiMethodHeaderNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"constructorToken",
+		"semicolons",
+		"arguments"
+	],
+	"name" : "DelphiConstructorHeaderNode",
+	"type" : "normal"
+}

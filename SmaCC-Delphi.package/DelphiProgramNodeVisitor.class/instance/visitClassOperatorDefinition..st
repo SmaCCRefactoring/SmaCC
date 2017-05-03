@@ -1,0 +1,3 @@
+generated
+visitClassOperatorDefinition: aClassOperatorDefinition
+	^ self visitFunctionDefinition: aClassOperatorDefinition

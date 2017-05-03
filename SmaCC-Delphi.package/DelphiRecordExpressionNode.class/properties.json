@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "DelphiExpressionNode",
+	"category" : "SmaCC-Delphi",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"left",
+		"fields",
+		"semicolons",
+		"right"
+	],
+	"name" : "DelphiRecordExpressionNode",
+	"type" : "normal"
+}

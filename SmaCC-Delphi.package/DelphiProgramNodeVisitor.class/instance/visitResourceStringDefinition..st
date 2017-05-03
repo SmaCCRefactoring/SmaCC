@@ -1,0 +1,3 @@
+generated
+visitResourceStringDefinition: aResourceStringDefinition
+	^ self visitProgram: aResourceStringDefinition

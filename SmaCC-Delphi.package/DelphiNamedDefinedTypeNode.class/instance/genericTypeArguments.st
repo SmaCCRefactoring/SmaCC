@@ -1,0 +1,3 @@
+generated
+genericTypeArguments
+	^ genericTypeArguments
