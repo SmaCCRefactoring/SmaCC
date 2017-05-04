@@ -22,7 +22,7 @@ baseline: spec
 					with: [ spec requires: 'SmaCC-Runtime' ];
 				package: 'SmaCC-Rewrite-Engine'
 					with: [ spec
-						requires: 'SmaCC-Runtime';
+						requires: 'SmaCC-GLR-Runtime';
 						requires: 'SmaCC-Source-Editing' ];
 				package: 'SmaCC-Rewrite-Engine-Tests'
 					with: [ spec requires: 'SmaCC-Rewrite-Engine' ];
@@ -53,7 +53,12 @@ baseline: spec
 				package: 'SmaCC-Python-Tests'
 					with: [ spec requires: 'SmaCC-Python' ];
 				package: 'SmaCC-Line-Parser'
-					with: [ spec requires: 'SmaCC-Runtime' ].
+					with: [ spec requires: 'SmaCC-Runtime' ];
+				package: 'SmaCC-Delphi'
+					with: [ spec requires: 'SmaCC-GLR-Runtime' ];
+				package: 'SmaCC-Delphi-Forms'
+					with: [ spec requires: 'SmaCC-GLR-Runtime' ];
+				package: 'SmaCC-IDL' with: [ spec requires: 'SmaCC-Runtime' ].
 			spec
 				group: 'default' with: #('Tools');
 				group: 'Runtime' with: #('SmaCC-GLR-Runtime');
@@ -63,9 +68,10 @@ baseline: spec
 					#('SmaCC-Rewrite-Server-Worker' 'SmaCC-Rewrite-Server' 'Rewrite' 'SmaCC-Rewrite-Engine-Command-Line');
 				group: 'Tools'
 					with:
-					#('SmaCC-Development-UI' 'Examples' 'Rewrite' 'SmaCC-Parse-Tree-Comparison' 'SmaCC-Debugging-Support');
+					#('SmaCC-Development-UI' 'Examples' 'Rewrite' 'SmaCC-Parse-Tree-Comparison');
+				group: 'Debugging' with: #('SmaCC-Debugging-Support');
 				group: 'Examples'
 					with:
-					#('SmaCC-Smalltalk-Parser' 'SmaCC-C-Parser' 'SmaCC-CSharp' 'SmaCC-Line-Parser' 'SmaCC-Java' 'SmaCC-Python' 'SmaCC-Javascript-Parser' 'SmaCC-CSV-Parser' 'SmaCC-Cucumber' 'SmaCC-Swift');
+					#('SmaCC-Smalltalk-Parser' 'SmaCC-C-Parser' 'SmaCC-CSharp' 'SmaCC-Line-Parser' 'SmaCC-Java' 'SmaCC-Python' 'SmaCC-Javascript-Parser' 'SmaCC-CSV-Parser' 'SmaCC-Cucumber' 'SmaCC-Swift' 'SmaCC-Delphi' 'SmaCC-DelphiForms' 'SmaCC-IDL');
 				group: 'Tests'
 					with: #('SmaCC-Tests' 'SmaCC-Rewrite-Engine-Tests' 'SmaCC-Python-Tests') ]
