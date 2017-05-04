@@ -10,7 +10,7 @@ baseline: spec
 				package: 'SmaCC-GLR-Runtime'
 					with: [ spec requires: 'SmaCC-Runtime' ];
 				package: 'SmaCC-Debugging-Support'
-					with: [ spec requires: 'SmaCC-Runtime' ];
+					with: [ spec requires: 'SmaCC-Development-UI' ];
 				package: 'SmaCC-Development'
 					with: [ spec requires: 'SmaCC-GLR-Runtime' ];
 				package: 'SmaCC-Development-UI'
