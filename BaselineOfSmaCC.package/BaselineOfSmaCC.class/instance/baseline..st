@@ -56,7 +56,7 @@ baseline: spec
 					with: [ spec requires: 'SmaCC-Runtime' ];
 				package: 'SmaCC-Delphi'
 					with: [ spec requires: 'SmaCC-GLR-Runtime' ];
-				package: 'SmaCC-Delphi-Forms'
+				package: 'SmaCC-DelphiForms'
 					with: [ spec requires: 'SmaCC-GLR-Runtime' ];
 				package: 'SmaCC-IDL' with: [ spec requires: 'SmaCC-Runtime' ].
 			spec
