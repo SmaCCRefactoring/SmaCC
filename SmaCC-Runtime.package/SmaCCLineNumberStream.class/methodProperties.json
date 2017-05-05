@@ -1,25 +1,25 @@
 {
 	"instance" : {
-		"columnNumber" : "ThierryGoubier 9/23/2016 19:26:49",
-		"isReadable" : "ThierryGoubier 9/23/2016 19:26:49",
-		"doesNotUnderstand:" : "ThierryGoubier 9/23/2016 19:26:49",
-		"next" : "ThierryGoubier 9/23/2016 19:26:49",
-		"flush" : "ThierryGoubier 9/23/2016 19:26:49",
-		"contentsSpecies" : "ThierryGoubier 9/23/2016 19:26:49",
-		"isWritable" : "ThierryGoubier 9/23/2016 19:26:49",
-		"lineNumber" : "ThierryGoubier 9/23/2016 19:26:49",
-		"atEnd" : "ThierryGoubier 9/23/2016 19:26:49",
-		"on:" : "ThierryGoubier 9/23/2016 19:26:49",
-		"peek" : "ThierryGoubier 9/23/2016 19:26:49",
-		"position:" : "ThierryGoubier 9/23/2016 19:26:49",
-		"skip:" : "ThierryGoubier 9/23/2016 19:26:49",
-		"lineNumberFor:" : "ThierryGoubier 9/23/2016 19:26:49",
-		"nextPut:" : "ThierryGoubier 9/23/2016 19:26:49",
-		"columnNumberFor:" : "ThierryGoubier 9/23/2016 19:26:49",
-		"position" : "ThierryGoubier 9/23/2016 19:26:49",
-		"contents" : "ThierryGoubier 9/23/2016 19:26:49"
+		"columnNumber" : "ThierryGoubier 5/3/2017 21:24:18",
+		"isReadable" : "ThierryGoubier 5/3/2017 21:24:18",
+		"doesNotUnderstand:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"next" : "ThierryGoubier 5/3/2017 21:24:18",
+		"flush" : "ThierryGoubier 5/3/2017 21:24:18",
+		"contentsSpecies" : "ThierryGoubier 5/3/2017 21:24:18",
+		"isWritable" : "ThierryGoubier 5/3/2017 21:24:18",
+		"lineNumber" : "ThierryGoubier 5/3/2017 21:24:18",
+		"atEnd" : "ThierryGoubier 5/3/2017 21:24:18",
+		"on:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"peek" : "ThierryGoubier 5/3/2017 21:24:18",
+		"position:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"skip:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"lineNumberFor:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"nextPut:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"columnNumberFor:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"position" : "ThierryGoubier 5/3/2017 21:24:18",
+		"contents" : "ThierryGoubier 5/3/2017 21:24:18"
 	},
 	"class" : {
-		"on:" : "ThierryGoubier 9/23/2016 19:26:49"
+		"on:" : "ThierryGoubier 5/3/2017 21:24:18"
 	}
 }

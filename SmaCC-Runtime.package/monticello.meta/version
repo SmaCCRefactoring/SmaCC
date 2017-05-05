@@ -1,2 +1,2 @@
-(name 'SmaCC-Runtime-ThierryGoubier.12' message 'Update from John Brant (and Tudor Girda).' id 'c7e7b653-0000-0000-adbb-e5020635c312' date '3 May 2017' time '9:23:24.476533 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-Runtime-ThierryGoubier.11' message 'From John Brant
-' id '36b5ca6b-afc1-5411-9417-6e005c1a6e0e' date '23 September 2016' time '7:26:49 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
+(name 'SmaCC-Runtime-ThierryGoubier.13' message 'Documenting some of the SmaCCPatternNode stuff.' id '94caf55b-0000-0000-8036-c5d70f99dd23' date '5 May 2017' time '11:36:21.769308 am' author 'ThierryGoubier' ancestors ((name 'SmaCC-Runtime-ThierryGoubier.12' message 'Update from John Brant (and Tudor Girda).
+' id '716090b7-659e-5998-b2fe-afb6f11bca3c' date '3 May 2017' time '9:24:18 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
