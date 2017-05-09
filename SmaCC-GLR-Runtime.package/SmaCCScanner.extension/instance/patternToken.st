@@ -1,4 +1,4 @@
-private
+*smacc-glr-runtime
 patternToken
 	| token |
 	token := SmaCCPatternToken

@@ -1,25 +1,25 @@
 {
 	"instance" : {
-		"columnNumber" : "ThierryGoubier 5/3/2017 21:24:18",
-		"isReadable" : "ThierryGoubier 5/3/2017 21:24:18",
-		"doesNotUnderstand:" : "ThierryGoubier 5/3/2017 21:24:18",
-		"next" : "ThierryGoubier 5/3/2017 21:24:18",
-		"flush" : "ThierryGoubier 5/3/2017 21:24:18",
-		"contentsSpecies" : "ThierryGoubier 5/3/2017 21:24:18",
-		"isWritable" : "ThierryGoubier 5/3/2017 21:24:18",
-		"lineNumber" : "ThierryGoubier 5/3/2017 21:24:18",
-		"atEnd" : "ThierryGoubier 5/3/2017 21:24:18",
-		"on:" : "ThierryGoubier 5/3/2017 21:24:18",
-		"peek" : "ThierryGoubier 5/3/2017 21:24:18",
-		"position:" : "ThierryGoubier 5/3/2017 21:24:18",
-		"skip:" : "ThierryGoubier 5/3/2017 21:24:18",
-		"lineNumberFor:" : "ThierryGoubier 5/3/2017 21:24:18",
-		"nextPut:" : "ThierryGoubier 5/3/2017 21:24:18",
-		"columnNumberFor:" : "ThierryGoubier 5/3/2017 21:24:18",
-		"position" : "ThierryGoubier 5/3/2017 21:24:18",
-		"contents" : "ThierryGoubier 5/3/2017 21:24:18"
+		"columnNumber" : "ThierryGoubier 5/5/2017 11:36:24",
+		"isReadable" : "ThierryGoubier 5/5/2017 11:36:24",
+		"doesNotUnderstand:" : "ThierryGoubier 5/5/2017 11:36:24",
+		"next" : "ThierryGoubier 5/5/2017 11:36:24",
+		"flush" : "ThierryGoubier 5/5/2017 11:36:24",
+		"contentsSpecies" : "ThierryGoubier 5/5/2017 11:36:24",
+		"isWritable" : "ThierryGoubier 5/5/2017 11:36:24",
+		"lineNumber" : "ThierryGoubier 5/5/2017 11:36:24",
+		"atEnd" : "ThierryGoubier 5/5/2017 11:36:24",
+		"on:" : "ThierryGoubier 5/5/2017 11:36:24",
+		"peek" : "ThierryGoubier 5/5/2017 11:36:24",
+		"position:" : "ThierryGoubier 5/5/2017 11:36:24",
+		"skip:" : "ThierryGoubier 5/5/2017 11:36:24",
+		"lineNumberFor:" : "ThierryGoubier 5/5/2017 11:36:24",
+		"nextPut:" : "ThierryGoubier 5/5/2017 11:36:24",
+		"columnNumberFor:" : "ThierryGoubier 5/5/2017 11:36:24",
+		"position" : "ThierryGoubier 5/5/2017 11:36:24",
+		"contents" : "ThierryGoubier 5/5/2017 11:36:24"
 	},
 	"class" : {
-		"on:" : "ThierryGoubier 5/3/2017 21:24:18"
+		"on:" : "ThierryGoubier 5/5/2017 11:36:24"
 	}
 }

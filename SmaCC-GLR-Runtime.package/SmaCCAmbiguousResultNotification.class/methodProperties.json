@@ -1,7 +1,10 @@
 {
-	"class" : {
-		"forParser:" : "JohnBrant 6/21/2016 21:20:17" },
 	"instance" : {
-		"defaultAction" : "JohnBrant 6/21/2016 21:20:17",
-		"parser" : "JohnBrant 6/21/2016 21:20:17",
-		"parser:" : "JohnBrant 6/21/2016 21:20:17" } }
+		"parser" : "ThierryGoubier 9/23/2016 19:25:24",
+		"parser:" : "ThierryGoubier 9/23/2016 19:25:24",
+		"defaultAction" : "ThierryGoubier 9/23/2016 19:25:24"
+	},
+	"class" : {
+		"forParser:" : "ThierryGoubier 9/23/2016 19:25:24"
+	}
+}

@@ -1,19 +1,18 @@
 {
-	"category" : "SmaCC-GLR-Runtime",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "SmaCC-GLR-Runtime",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"stateStack",
 		"nodeStack",
 		"isAccepted",
 		"position",
 		"scannerState",
-		"attributes" ],
+		"attributes"
+	],
 	"name" : "SmaCCParserState",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

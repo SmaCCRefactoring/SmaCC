@@ -1,11 +1,14 @@
 {
-	"class" : {
-		"selector:arguments:" : "JohnBrant 6/21/2016 21:20:17" },
 	"instance" : {
-		"=" : "JohnBrant 6/21/2016 21:20:17",
-		"arguments" : "JohnBrant 6/21/2016 21:20:17",
-		"argumentsFor:" : "JohnBrant 6/21/2016 21:20:17",
-		"hash" : "JohnBrant 6/21/2016 21:20:17",
-		"performOnSmaCCParser:" : "JohnBrant 6/21/2016 21:20:17",
-		"selector" : "JohnBrant 6/21/2016 21:20:17",
-		"selector:arguments:" : "JohnBrant 6/21/2016 21:20:17" } }
+		"performOnSmaCCParser:" : "ThierryGoubier 9/23/2016 19:25:24",
+		"selector:arguments:" : "ThierryGoubier 9/23/2016 19:25:24",
+		"=" : "ThierryGoubier 9/23/2016 19:25:24",
+		"hash" : "ThierryGoubier 9/23/2016 19:25:24",
+		"arguments" : "ThierryGoubier 9/23/2016 19:25:24",
+		"selector" : "ThierryGoubier 9/23/2016 19:25:24",
+		"argumentsFor:" : "ThierryGoubier 9/23/2016 19:25:24"
+	},
+	"class" : {
+		"selector:arguments:" : "ThierryGoubier 9/23/2016 19:25:24"
+	}
+}

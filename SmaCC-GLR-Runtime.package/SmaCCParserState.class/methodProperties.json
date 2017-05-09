@@ -1,22 +1,25 @@
 {
-	"class" : {
-		"stateStack:nodeStack:" : "JohnBrant 6/21/2016 21:20:17",
-		"stateStack:nodeStack:scannerState:position:" : "JohnBrant 6/21/2016 21:20:17" },
 	"instance" : {
-		"=" : "JohnBrant 6/21/2016 21:20:17",
-		"attributeNamed:" : "JohnBrant 6/21/2016 21:20:17",
-		"attributeNamed:put:" : "JohnBrant 6/21/2016 21:20:17",
-		"canBeMergedWith:" : "JohnBrant 6/21/2016 21:20:17",
-		"hash" : "JohnBrant 6/21/2016 21:20:17",
-		"isAccepted" : "JohnBrant 6/21/2016 21:20:17",
-		"markAccepted" : "JohnBrant 6/21/2016 21:20:17",
-		"mergeWith:" : "JohnBrant 6/21/2016 21:20:17",
-		"nodeStack" : "JohnBrant 6/21/2016 21:20:17",
-		"position" : "JohnBrant 6/21/2016 21:20:17",
-		"position:" : "JohnBrant 6/21/2016 21:20:17",
-		"postCopy" : "JohnBrant 6/21/2016 21:20:17",
-		"runDeferredActionsFor:" : "JohnBrant 6/21/2016 21:20:17",
-		"scannerState" : "JohnBrant 6/21/2016 21:20:17",
-		"scannerState:" : "JohnBrant 6/21/2016 21:20:17",
-		"stateStack" : "JohnBrant 6/21/2016 21:20:17",
-		"stateStack:nodeStack:" : "JohnBrant 6/21/2016 21:20:17" } }
+		"stateStack:nodeStack:" : "ThierryGoubier 9/23/2016 19:25:24",
+		"scannerState" : "ThierryGoubier 9/23/2016 19:25:24",
+		"scannerState:" : "ThierryGoubier 9/23/2016 19:25:24",
+		"attributeNamed:put:" : "ThierryGoubier 9/23/2016 19:25:24",
+		"attributeNamed:" : "ThierryGoubier 9/23/2016 19:25:24",
+		"markAccepted" : "ThierryGoubier 9/23/2016 19:25:24",
+		"runDeferredActionsFor:" : "ThierryGoubier 9/23/2016 19:25:24",
+		"=" : "ThierryGoubier 9/23/2016 19:25:24",
+		"mergeWith:" : "ThierryGoubier 9/23/2016 19:25:24",
+		"isAccepted" : "ThierryGoubier 9/23/2016 19:25:24",
+		"nodeStack" : "ThierryGoubier 9/23/2016 19:25:24",
+		"position:" : "ThierryGoubier 9/23/2016 19:25:24",
+		"postCopy" : "ThierryGoubier 9/23/2016 19:25:24",
+		"stateStack" : "ThierryGoubier 9/23/2016 19:25:24",
+		"canBeMergedWith:" : "ThierryGoubier 9/23/2016 19:25:24",
+		"hash" : "ThierryGoubier 9/23/2016 19:25:24",
+		"position" : "ThierryGoubier 9/23/2016 19:25:24"
+	},
+	"class" : {
+		"stateStack:nodeStack:scannerState:position:" : "ThierryGoubier 9/23/2016 19:25:24",
+		"stateStack:nodeStack:" : "ThierryGoubier 9/23/2016 19:25:24"
+	}
+}

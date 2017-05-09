@@ -1,10 +1,12 @@
 {
+	"commentStamp" : "<historical>",
+	"super" : "SmaCCParser",
 	"category" : "SmaCC-GLR-Runtime",
 	"classinstvars" : [
-		"cachedTrees" ],
-	"classvars" : [
-		 ],
-	"commentStamp" : "<historical>",
+		"cachedTrees"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"states",
 		"parseAll",
@@ -14,9 +16,8 @@
 		"lastPosition",
 		"lastState",
 		"nextScannerState",
-		"nextScannerPosition" ],
+		"nextScannerPosition"
+	],
 	"name" : "SmaCCGLRParser",
-	"pools" : [
-		 ],
-	"super" : "SmaCCParser",
-	"type" : "normal" }
+	"type" : "normal"
+}

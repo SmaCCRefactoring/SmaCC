@@ -1,1 +1,6 @@
-(name 'SmaCC-GLR-Runtime-ThierryGoubier.5' message 'From John Brant' id '2728557e-4f64-4fd6-bd3f-d262ac61e066' date '23 September 2016' time '7:25:24.221032 pm' author 'ThierryGoubier' ancestors () stepChildren ())
+(name 'SmaCC-GLR-Runtime-ThierryGoubier.6' message 'Move SmaCCPatternNode and SmaCCPatternToken to GLR-Runtime: they only work there.' id 'b9a63376-0000-0000-9ece-42c00221c9b6' date '9 May 2017' time '11:06:09.087387 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-GLR-Runtime-ThierryGoubier.5' message 'From John Brant
+' id 'cef87b54-0b8b-57f7-91f5-329abee68213' date '23 September 2016' time '7:25:24 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-GLR-Runtime-ThierryGoubier.4' message '2.0.5
+' id '6a46e79b-7191-5c24-8381-70d0e73c4f61' date '18 August 2015' time '10:02:59 am' author 'ThierryGoubier' ancestors ((name 'SmaCC-GLR-Runtime-ThierryGoubier.3' message 'SmaCC 2.0.4
+' id 'b1da8928-5c95-54fe-916b-9fcc00b85895' date '17 October 2014' time '5:16:22 pm' author 'ThierryGoubier' ancestors ((name 'SmaCC-GLR-Runtime-ThierryGoubier.2' message 'Added extension
+' id 'aeb26294-8ed1-52e3-8801-4076f53fe4be' date '24 January 2014' time '10:09:16 am' author 'ThierryGoubier' ancestors ((name 'SmaCC-GLR-Runtime-ThierryGoubier.1' message 'SmaCC GLR Runtime ported from SmaCC-Dolphin-2.0.3
+' id 'a0109c0d-751e-5df4-ad47-f64975df9cb6' date '24 January 2014' time '10:04:36 am' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())) stepChildren ())
