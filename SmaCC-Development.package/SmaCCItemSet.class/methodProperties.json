@@ -1,29 +1,29 @@
 {
 	"instance" : {
-		"itemFor:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"isLALREqualTo:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"pathInto:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"initialize" : "ThierryGoubier 3/27/2017 22:53:01",
-		"action:prefer:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"type:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"mergeWith:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"previousItemSets:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"path" : "ThierryGoubier 3/27/2017 22:53:01",
-		"grammar" : "ThierryGoubier 3/27/2017 22:53:01",
-		"add:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"grammar:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"performClosureOn:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"previousState" : "ThierryGoubier 3/27/2017 22:53:01",
-		"moveOn:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"hash" : "ThierryGoubier 3/27/2017 22:53:01",
-		"isLREqualTo:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"=" : "ThierryGoubier 3/27/2017 22:53:01",
-		"addPrevious:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"printOn:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"previousItemSets" : "ThierryGoubier 3/27/2017 22:53:01"
+		"itemFor:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"isLALREqualTo:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"pathInto:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"initialize" : "ThierryGoubier 5/3/2017 21:24:18",
+		"action:prefer:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"type:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"mergeWith:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"previousItemSets:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"path" : "ThierryGoubier 5/3/2017 21:24:18",
+		"grammar" : "ThierryGoubier 5/3/2017 21:24:18",
+		"add:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"grammar:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"performClosureOn:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"previousState" : "ThierryGoubier 5/3/2017 21:24:18",
+		"moveOn:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"hash" : "ThierryGoubier 5/3/2017 21:24:18",
+		"isLREqualTo:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"=" : "ThierryGoubier 5/3/2017 21:24:18",
+		"addPrevious:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"printOn:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"previousItemSets" : "ThierryGoubier 5/3/2017 21:24:18"
 	},
 	"class" : {
-		"new" : "ThierryGoubier 3/27/2017 22:53:01",
-		"new:" : "ThierryGoubier 3/27/2017 22:53:01"
+		"new" : "ThierryGoubier 5/3/2017 21:24:18",
+		"new:" : "ThierryGoubier 5/3/2017 21:24:18"
 	}
 }

@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"testDuplicateLoop" : "JohnBrant 7/4/2016 11:47:44",
-		"testNoDuplicates" : "JohnBrant 7/4/2016 11:47:44",
-		"testSimpleDuplicateWithEdges" : "JohnBrant 7/4/2016 11:47:44",
-		"testSimpleTerminalDuplicate" : "JohnBrant 7/4/2016 11:47:44" } }
+		"testNoDuplicates" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testSimpleTerminalDuplicate" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testSimpleDuplicateWithEdges" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testDuplicateLoop" : "ThierryGoubier 9/25/2016 19:00:39"
+	},
+	"class" : { }
+}

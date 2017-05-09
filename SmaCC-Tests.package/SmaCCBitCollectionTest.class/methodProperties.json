@@ -1,21 +1,22 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"byteSizeCollection" : "JohnBrant 7/4/2016 11:47:44",
-		"largeCollection" : "JohnBrant 7/4/2016 11:47:44",
-		"largeValue" : "JohnBrant 7/4/2016 11:47:44",
-		"mediumCollection" : "JohnBrant 7/4/2016 11:47:44",
-		"newCollection" : "JohnBrant 7/4/2016 11:47:44",
-		"supportsLargeValues" : "JohnBrant 7/4/2016 11:47:44",
-		"testABunch" : "JohnBrant 7/4/2016 11:47:44",
-		"testAddToNextByte" : "JohnBrant 7/4/2016 11:47:44",
-		"testAdding" : "JohnBrant 7/4/2016 11:47:44",
-		"testComparing" : "JohnBrant 7/4/2016 11:47:44",
-		"testCopying" : "JohnBrant 7/4/2016 11:47:44",
-		"testGrowing" : "JohnBrant 7/4/2016 11:47:44",
-		"testLessThan" : "JohnBrant 7/4/2016 11:47:44",
-		"testNew" : "JohnBrant 7/4/2016 11:47:44",
-		"testPerformance" : "JohnBrant 7/4/2016 11:47:44",
-		"testRemoving" : "JohnBrant 7/4/2016 11:47:44",
-		"value:" : "JohnBrant 7/4/2016 11:47:44" } }
+		"largeValue" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testNew" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testABunch" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testAddToNextByte" : "ThierryGoubier 9/25/2016 19:00:39",
+		"newCollection" : "ThierryGoubier 9/25/2016 19:00:39",
+		"byteSizeCollection" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testPerformance" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testCopying" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testAdding" : "ThierryGoubier 9/25/2016 19:00:39",
+		"value:" : "ThierryGoubier 9/25/2016 19:00:39",
+		"largeCollection" : "ThierryGoubier 9/25/2016 19:00:39",
+		"mediumCollection" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testLessThan" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testComparing" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testGrowing" : "ThierryGoubier 9/25/2016 19:00:39",
+		"supportsLargeValues" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testRemoving" : "ThierryGoubier 9/25/2016 19:00:39"
+	},
+	"class" : { }
+}

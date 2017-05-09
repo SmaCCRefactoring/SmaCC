@@ -1,14 +1,11 @@
 {
-	"category" : "SmaCC-Tests",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "SmaCCCharacterSetTest",
-	"pools" : [
-		 ],
 	"super" : "SmaCCBitCollectionTest",
-	"type" : "normal" }
+	"category" : "SmaCC-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SmaCCCharacterSetTest",
+	"type" : "normal"
+}

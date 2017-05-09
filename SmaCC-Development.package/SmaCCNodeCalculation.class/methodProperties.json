@@ -1,22 +1,22 @@
 {
 	"instance" : {
-		"calculateVariableSymbols" : "ThierryGoubier 3/27/2017 22:53:01",
-		"compileMethodsAndVariables" : "ThierryGoubier 3/27/2017 22:53:01",
-		"hasVariables:seen:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"sortedClasses" : "ThierryGoubier 3/27/2017 22:53:01",
-		"defineNodeClasses" : "ThierryGoubier 3/27/2017 22:53:01",
-		"hasSingleVariableName:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"calculateVariableSymbolsFor:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"grammar:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"calculateReduceActions" : "ThierryGoubier 3/27/2017 22:53:01",
-		"compileVisitor" : "ThierryGoubier 3/27/2017 22:53:01",
-		"hasSingleVariableName:using:seen:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"codeGenerator" : "ThierryGoubier 3/27/2017 22:53:01",
-		"compileTypes" : "ThierryGoubier 3/27/2017 22:53:01",
-		"calculateVariables" : "ThierryGoubier 3/27/2017 22:53:01",
-		"compileNodeClasses" : "ThierryGoubier 3/27/2017 22:53:01"
+		"calculateVariableSymbols" : "ThierryGoubier 5/3/2017 21:24:18",
+		"compileMethodsAndVariables" : "ThierryGoubier 5/3/2017 21:24:18",
+		"hasVariables:seen:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"sortedClasses" : "ThierryGoubier 5/3/2017 21:24:18",
+		"defineNodeClasses" : "ThierryGoubier 5/3/2017 21:24:18",
+		"hasSingleVariableName:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"calculateVariableSymbolsFor:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"grammar:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"calculateReduceActions" : "ThierryGoubier 5/3/2017 21:24:18",
+		"compileVisitor" : "ThierryGoubier 5/3/2017 21:24:18",
+		"hasSingleVariableName:using:seen:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"codeGenerator" : "ThierryGoubier 5/3/2017 21:24:18",
+		"compileTypes" : "ThierryGoubier 5/3/2017 21:24:18",
+		"calculateVariables" : "ThierryGoubier 5/3/2017 21:24:18",
+		"compileNodeClasses" : "ThierryGoubier 5/3/2017 21:24:18"
 	},
 	"class" : {
-		"compileForGrammar:" : "ThierryGoubier 3/27/2017 22:53:01"
+		"compileForGrammar:" : "ThierryGoubier 5/3/2017 21:24:18"
 	}
 }

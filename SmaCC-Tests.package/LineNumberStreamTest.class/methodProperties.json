@@ -1,15 +1,16 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"addCRLFsTo:" : "JohnBrant 7/4/2016 11:47:44",
-		"addCRsTo:" : "JohnBrant 7/4/2016 11:47:44",
-		"addLFsTo:" : "JohnBrant 7/4/2016 11:47:44",
-		"testCRLFLines" : "JohnBrant 7/4/2016 11:47:44",
-		"testCRLines" : "JohnBrant 7/4/2016 11:47:44",
-		"testEmptyLines" : "JohnBrant 7/4/2016 11:47:44",
-		"testForwardPositionCRLFLines" : "JohnBrant 7/4/2016 11:47:44",
-		"testLFLines" : "JohnBrant 7/4/2016 11:47:44",
-		"testNoLines" : "JohnBrant 7/4/2016 11:47:44",
-		"testPositionCRLFLines" : "JohnBrant 7/4/2016 11:47:44",
-		"testPositionCRLines" : "JohnBrant 7/4/2016 11:47:44" } }
+		"testPositionCRLFLines" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testCRLFLines" : "ThierryGoubier 9/25/2016 19:00:39",
+		"addLFsTo:" : "ThierryGoubier 9/25/2016 19:00:39",
+		"addCRLFsTo:" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testPositionCRLines" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testLFLines" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testCRLines" : "ThierryGoubier 9/25/2016 19:00:39",
+		"addCRsTo:" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testForwardPositionCRLFLines" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testNoLines" : "ThierryGoubier 9/25/2016 19:00:39",
+		"testEmptyLines" : "ThierryGoubier 9/25/2016 19:00:39"
+	},
+	"class" : { }
+}

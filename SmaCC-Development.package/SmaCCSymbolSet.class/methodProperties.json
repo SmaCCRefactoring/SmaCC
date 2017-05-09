@@ -1,24 +1,24 @@
 {
 	"instance" : {
-		"addAll:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"getDependents" : "ThierryGoubier 3/27/2017 22:53:01",
-		"add:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"mergeWith:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"includes:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"initialize" : "ThierryGoubier 3/27/2017 22:53:01",
-		"addComponentsFrom:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"printOn:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"size" : "ThierryGoubier 3/27/2017 22:53:01",
-		"addComponent:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"symbols" : "ThierryGoubier 3/27/2017 22:53:01",
-		"baseOn:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"setDependents:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"components" : "ThierryGoubier 3/27/2017 22:53:01",
-		"update:with:from:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"allSatisfy:" : "ThierryGoubier 3/27/2017 22:53:01"
+		"addAll:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"getDependents" : "ThierryGoubier 5/3/2017 21:24:18",
+		"add:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"mergeWith:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"includes:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"initialize" : "ThierryGoubier 5/3/2017 21:24:18",
+		"addComponentsFrom:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"printOn:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"size" : "ThierryGoubier 5/3/2017 21:24:18",
+		"addComponent:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"symbols" : "ThierryGoubier 5/3/2017 21:24:18",
+		"baseOn:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"setDependents:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"components" : "ThierryGoubier 5/3/2017 21:24:18",
+		"update:with:from:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"allSatisfy:" : "ThierryGoubier 5/3/2017 21:24:18"
 	},
 	"class" : {
-		"new" : "ThierryGoubier 3/27/2017 22:53:01",
-		"basedOn:" : "ThierryGoubier 3/27/2017 22:53:01"
+		"new" : "ThierryGoubier 5/3/2017 21:24:18",
+		"basedOn:" : "ThierryGoubier 5/3/2017 21:24:18"
 	}
 }

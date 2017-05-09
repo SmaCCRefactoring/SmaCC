@@ -1,16 +1,16 @@
 {
 	"instance" : {
-		"isNode:equivalentTo:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"removeDuplicates" : "ThierryGoubier 3/27/2017 22:53:01",
-		"copyEdgesWith:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"copyGraph" : "ThierryGoubier 3/27/2017 22:53:01",
-		"mergeNodeUsing:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"removeDuplicateNodesIn:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"pairsDo:" : "ThierryGoubier 3/27/2017 22:53:01",
-		"mergeAllTransitions" : "ThierryGoubier 3/27/2017 22:53:01",
-		"copyNodesInto:" : "ThierryGoubier 3/27/2017 22:53:01"
+		"isNode:equivalentTo:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"removeDuplicates" : "ThierryGoubier 5/3/2017 21:24:18",
+		"copyEdgesWith:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"copyGraph" : "ThierryGoubier 5/3/2017 21:24:18",
+		"mergeNodeUsing:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"removeDuplicateNodesIn:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"pairsDo:" : "ThierryGoubier 5/3/2017 21:24:18",
+		"mergeAllTransitions" : "ThierryGoubier 5/3/2017 21:24:18",
+		"copyNodesInto:" : "ThierryGoubier 5/3/2017 21:24:18"
 	},
 	"class" : {
-		"removeDuplicateNodesIn:" : "ThierryGoubier 3/27/2017 22:53:01"
+		"removeDuplicateNodesIn:" : "ThierryGoubier 5/3/2017 21:24:18"
 	}
 }
