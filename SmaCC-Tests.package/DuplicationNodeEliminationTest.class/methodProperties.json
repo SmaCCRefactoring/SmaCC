@@ -1,9 +1,0 @@
-{
-	"instance" : {
-		"testNoDuplicates" : "ThierryGoubier 9/25/2016 19:00:39",
-		"testSimpleTerminalDuplicate" : "ThierryGoubier 9/25/2016 19:00:39",
-		"testSimpleDuplicateWithEdges" : "ThierryGoubier 9/25/2016 19:00:39",
-		"testDuplicateLoop" : "ThierryGoubier 9/25/2016 19:00:39"
-	},
-	"class" : { }
-}
