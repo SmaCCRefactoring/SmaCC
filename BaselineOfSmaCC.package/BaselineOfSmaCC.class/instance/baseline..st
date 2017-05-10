@@ -22,8 +22,7 @@ baseline: spec
 					with: [ spec requires: 'SmaCC-Runtime' ];
 				package: 'SmaCC-Rewrite-Engine'
 					with: [ spec
-						requires: 'SmaCC-GLR-Runtime';
-						requires: 'SmaCC-Source-Editing' ];
+						requires: #('SmaCC-GLR-Runtime' 'SmaCC-Source-Editing' 'SmaCC-CSV-Parser') ];
 				package: 'SmaCC-Rewrite-Engine-Tests'
 					with: [ spec requires: 'SmaCC-Rewrite-Engine' ];
 				package: 'SmaCC-Rewrite-Engine-Command-Line'
