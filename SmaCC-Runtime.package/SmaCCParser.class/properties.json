@@ -2,7 +2,9 @@
 	"commentStamp" : "<historical>",
 	"super" : "Object",
 	"category" : "SmaCC-Runtime",
-	"classinstvars" : [ ],
+	"classinstvars" : [
+		"cacheId"
+	],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
