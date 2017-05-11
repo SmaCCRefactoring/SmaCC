@@ -1,12 +1,12 @@
 generated
-scan12X7
-	self recordMatch: #(33).
+scan11X6
+	self recordMatch: #(31).
 	self step.
 	currentCharacter == $,
-		ifTrue: [ ^ self scan15 ].
+		ifTrue: [ ^ self scan14 ].
 	currentCharacter isDigit
 		ifTrue: [ [ self step.
 			currentCharacter == $,
-				ifTrue: [ ^ self scan15 ].
+				ifTrue: [ ^ self scan14 ].
 			currentCharacter isDigit ] whileTrue ].
 	^ self reportLastMatch

@@ -1,7 +1,7 @@
 accessing
 makeGroupFor: aSmaCCRHSCollection
 	| symbol name |
-	name := aSmaCCRHSCollection inject: '' into: [ :sum :each | sum , ' | ' , each printString ].
+	name := aSmaCCRHSCollection inject: '' into: [ :sum :each | sum , ' ' , each printString ].
 	symbol := self nonTerminalSymbolNamed: '(' , name, ')'.
 	symbol isEmpty
 		ifTrue: [ 

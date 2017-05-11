@@ -4,7 +4,7 @@ scanForToken
 		ifTrue:
 			[ ^ self scanForTokenX1 ].
 	state == #scanner
-		ifTrue: [ ^ self scan12 ].
+		ifTrue: [ ^ self scan11 ].
 	(#(#default #directives) includes: state)
 		ifTrue: [ self step.
 			currentCharacter == $"
@@ -13,35 +13,35 @@ scanForToken
 				ifTrue:
 					[ ^ self scanForTokenX2 ].
 			currentCharacter == $%
-				ifTrue: [ ^ self scan3 ].
+				ifTrue: [ ^ self recordAndReportMatch: #(34) ].
 			currentCharacter == $'
-				ifTrue: [ ^ self scan4 ].
+				ifTrue: [ ^ self scan3 ].
 			currentCharacter == $(
-				ifTrue: [ ^ self recordAndReportMatch: #(3) ].
-			currentCharacter == $)
-				ifTrue: [ ^ self recordAndReportMatch: #(5) ].
-			currentCharacter == $*
 				ifTrue: [ ^ self recordAndReportMatch: #(2) ].
-			currentCharacter == $+
+			currentCharacter == $)
+				ifTrue: [ ^ self recordAndReportMatch: #(9) ].
+			currentCharacter == $*
 				ifTrue: [ ^ self recordAndReportMatch: #(1) ].
+			currentCharacter == $+
+				ifTrue: [ ^ self recordAndReportMatch: #(3) ].
 			currentCharacter == $/
-				ifTrue: [ ^ self scan6 ].
+				ifTrue: [ ^ self scan5 ].
 			currentCharacter == $:
-				ifTrue: [ ^ self scan8 ].
+				ifTrue: [ ^ self scan7 ].
 			currentCharacter == $;
-				ifTrue: [ ^ self recordAndReportMatch: #(37) ].
+				ifTrue: [ ^ self recordAndReportMatch: #(35) ].
 			currentCharacter == $<
-				ifTrue: [ ^ self scan10 ].
+				ifTrue: [ ^ self scan9 ].
 			currentCharacter == $?
-				ifTrue: [ ^ self recordAndReportMatch: #(6) ].
-			currentCharacter == $[
-				ifTrue: [ ^ self recordAndReportMatch: #(7) ].
-			currentCharacter == $]
-				ifTrue: [ ^ self recordAndReportMatch: #(11) ].
-			currentCharacter == ${
-				ifTrue: [ ^ self recordAndReportMatch: #(33) ].
-			currentCharacter == $|
 				ifTrue: [ ^ self recordAndReportMatch: #(4) ].
+			currentCharacter == $[
+				ifTrue: [ ^ self recordAndReportMatch: #(6) ].
+			currentCharacter == $]
+				ifTrue: [ ^ self recordAndReportMatch: #(8) ].
+			currentCharacter == ${
+				ifTrue: [ ^ self recordAndReportMatch: #(31) ].
+			currentCharacter == $|
+				ifTrue: [ ^ self recordAndReportMatch: #(5) ].
 			(currentCharacter isSeparator
 				or: [ currentCharacter == Character pageUp ])
 				ifTrue:

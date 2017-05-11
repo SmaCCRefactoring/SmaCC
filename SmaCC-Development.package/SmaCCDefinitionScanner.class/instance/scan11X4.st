@@ -1,9 +1,9 @@
 generated
-scan12X5
-	self recordMatch: #(30 41).
+scan11X4
+	self recordMatch: #(28 39).
 	self step.
 	(currentCharacter isAlphaNumeric or: [ currentCharacter == $_ ])
-		ifTrue: [ [ self recordMatch: #(30).
+		ifTrue: [ [ self recordMatch: #(28).
 			self step.
 			currentCharacter isAlphaNumeric or: [ currentCharacter == $_ ] ]
 				whileTrue ].
