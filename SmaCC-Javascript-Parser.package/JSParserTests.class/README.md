@@ -1,0 +1,1 @@
+I store tests for the javascript parser
