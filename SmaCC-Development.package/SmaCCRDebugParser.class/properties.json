@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "SmaCCParser",
+	"category" : "SmaCC-Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"announcer",
+		"decompiler"
+	],
+	"name" : "SmaCCRDebugParser",
+	"type" : "normal"
+}

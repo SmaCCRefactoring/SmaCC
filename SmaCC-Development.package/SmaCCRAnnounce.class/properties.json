@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Announcement",
+	"category" : "SmaCC-Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stack",
+		"nodeStack",
+		"action"
+	],
+	"name" : "SmaCCRAnnounce",
+	"type" : "normal"
+}

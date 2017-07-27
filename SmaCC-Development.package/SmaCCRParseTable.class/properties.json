@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "SmaCC-Development",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"transitions",
+		"reduces",
+		"symbols",
+		"decode"
+	],
+	"name" : "SmaCCRParseTable",
+	"type" : "normal"
+}
