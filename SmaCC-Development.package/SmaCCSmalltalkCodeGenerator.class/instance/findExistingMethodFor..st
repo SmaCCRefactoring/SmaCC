@@ -4,7 +4,7 @@ findExistingMethodFor: aRBMethodNode
 	potentialSelectors := #(#liftFirstValue: #liftLastValue: #liftSecondValue: #nil #stringValue:)
 		asSet.
 	aClass := self parserClass.
-	[ aClass name = 'Object' ]
+	[ aClass name = 'SmaCCParser' ]
 		whileFalse: [ (aClass selectors select: [ :each | each numArgs <= 1 ])
 				do: [ :each | 
 					| parseTree |
@@ -15,4 +15,13 @@ findExistingMethodFor: aRBMethodNode
 								exceptForVariables: aRBMethodNode argumentNames ])
 						ifTrue: [ ^ each ] ].
 			aClass := aClass superclass ].
+	#(#liftFirstValue: #liftLastValue: #liftSecondValue: #nil #stringValue:)
+		do: [ :each | 
+			| parseTree |
+			parseTree := self parserParseTreeFor: each.
+			(parseTree notNil
+				and: [ aRBMethodNode body
+						equalTo: parseTree body
+						exceptForVariables: aRBMethodNode argumentNames ])
+				ifTrue: [ ^ each ] ].
 	^ nil
