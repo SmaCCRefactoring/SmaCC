@@ -1,8 +1,8 @@
 accessing
 trees
 	^ trees
-		ifNil: [ trees := [ self parserClass
-				parseAndCacheAll: source
-				startingAt: self startingStateIndex ]
+		ifNil: [ trees := [ startingState isNil
+				ifTrue: [ self parserClass parseAndCacheAllPossibleStates: source ]
+				ifFalse: [ self parserClass parseAndCacheAll: source startingAt: self startingStateIndex ] ]
 				on: SmaCCParserError
 				do: [ :ex | ex return: #() ] ]
