@@ -1,25 +1,23 @@
 private
 processEOFToken
-	| performedActions token |
-	performedActions := Set new.
-	token := currentToken.
-	self symbolTypes
-		keysAndValuesDo:
-			[ :i :each | 
-			| actions |
-			(each = #SmaCCToken and: [ i ~= scanner errorTokenId ])
-				ifTrue:
-					[ actions := OrderedCollection new.
-					self addActionsFor: i to: actions.
-					actions
-						do:
-							[ :action | 
-							(performedActions includes: action)
-								ifFalse:
-									[ performedActions add: action.
-									(action bitAnd: self actionMask) = self reduceAction
-										ifTrue: [ currentToken := token.
-											self splitWithAction: action ] ] ] ] ].
+	| originalState performed eofToken |
+	currentState isAccepted
+		ifTrue: [ ^ self ].
+	eofToken := currentToken.
+	originalState := currentState.
+	performed := Set new.
+	self
+		reduceActionsDo: [ :each | 
+			(performed includes: each)
+				ifFalse: [ performed add: each.
+					self restoreState: self duplicateState.
+					currentToken := eofToken.
+					self performAction: each.
+					(nodeStack size = 1 and: [ nodeStack first isKindOf: SmaCCParseNode ])
+						ifTrue: [ currentState markAccepted ]
+						ifFalse: [ self killState ].
+					self restoreState: originalState ] ].
+	currentToken := eofToken.
 	(nodeStack size = 1 and: [ nodeStack first isKindOf: SmaCCParseNode ])
 		ifTrue: [ currentState markAccepted ]
 		ifFalse: [ self killState ]
