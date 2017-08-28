@@ -1,6 +1,6 @@
 tests
-testReduceActionReuse
-	"This test in fact check that this method isn't reused."
+testReduceActionReuse2
+	"This test in fact check that this method is reused."
 
 	| parserCompiler |
 	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
@@ -8,9 +8,9 @@ testReduceActionReuse
 	parserCompiler
 		buildDefinition:
 			'<a> : a ;
-			begin : <a> {#()};'.
+			begin : <a> {nil};'.
 	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
 	self
 		assert:
 			(self parserClass selectors
-				anySatisfy: [ :each | each beginsWith: 'reduceActionFor' ])
+				noneSatisfy: [ :each | each beginsWith: 'reduceActionFor' ])
