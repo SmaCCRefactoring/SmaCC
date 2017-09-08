@@ -13,7 +13,7 @@ scanForToken
 				ifTrue:
 					[ ^ self scanForTokenX2 ].
 			currentCharacter == $%
-				ifTrue: [ ^ self recordAndReportMatch: #(34) ].
+				ifTrue: [ ^ self recordAndReportMatch: #(35) ].
 			currentCharacter == $'
 				ifTrue: [ ^ self scan3 ].
 			currentCharacter == $(
@@ -23,23 +23,23 @@ scanForToken
 			currentCharacter == $*
 				ifTrue: [ ^ self recordAndReportMatch: #(1) ].
 			currentCharacter == $+
-				ifTrue: [ ^ self recordAndReportMatch: #(3) ].
+				ifTrue: [ ^ self recordAndReportMatch: #(4) ].
 			currentCharacter == $/
 				ifTrue: [ ^ self scan5 ].
 			currentCharacter == $:
 				ifTrue: [ ^ self scan7 ].
 			currentCharacter == $;
-				ifTrue: [ ^ self recordAndReportMatch: #(35) ].
+				ifTrue: [ ^ self recordAndReportMatch: #(36) ].
 			currentCharacter == $<
 				ifTrue: [ ^ self scan9 ].
 			currentCharacter == $?
-				ifTrue: [ ^ self recordAndReportMatch: #(4) ].
+				ifTrue: [ ^ self recordAndReportMatch: #(8) ].
 			currentCharacter == $[
 				ifTrue: [ ^ self recordAndReportMatch: #(6) ].
 			currentCharacter == $]
-				ifTrue: [ ^ self recordAndReportMatch: #(8) ].
+				ifTrue: [ ^ self recordAndReportMatch: #(3) ].
 			currentCharacter == ${
-				ifTrue: [ ^ self recordAndReportMatch: #(31) ].
+				ifTrue: [ ^ self recordAndReportMatch: #(32) ].
 			currentCharacter == $|
 				ifTrue: [ ^ self recordAndReportMatch: #(5) ].
 			(currentCharacter isSeparator

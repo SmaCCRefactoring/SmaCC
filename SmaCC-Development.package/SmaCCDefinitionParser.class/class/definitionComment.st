@@ -50,6 +50,9 @@ directives <ignorevariables>
 directives <annotate_tokens>
 	: annotate_tokens
 	;
+directives <unicode>
+	: unicode
+	;
 <name> 
 	: (<isLetter> | _) (<isLetter> | _ | <isDigit>)*
 	;
@@ -164,6 +167,7 @@ Directive
 	| IdMethodLine
 	| StartLine 
 	| GLR
+	| Unicode
 	| IgnoreCase
 	| IgnoredVariables
 	| AnnotateTokens
@@ -279,6 +283,10 @@ StartingTokens
 GLR
 	: <glr>
 			{grammar isGLR: true}
+	;
+Unicode:
+	<unicode>
+			{SmaCCGrammar maximumCharacterValue: 16rFFFF}
 	;
 IgnoredVariables
 	: EndDirective <ignorevariables> IgnoredVariableList 'variables'

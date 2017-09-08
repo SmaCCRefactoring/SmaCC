@@ -4,5 +4,5 @@ scan12
 	currentCharacter == $\
 		ifTrue: [ ^ self scan13 ].
 	currentCharacter == $]
-		ifTrue: [ ^ self recordAndReportMatch: #(37) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(38) ].
 	true ] whileTrue

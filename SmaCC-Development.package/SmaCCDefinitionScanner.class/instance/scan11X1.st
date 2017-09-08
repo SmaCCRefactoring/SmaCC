@@ -4,28 +4,28 @@ scan11X1
 	currentCharacter == $c
 		ifTrue: [ self step.
 			(currentCharacter between: $A and: $Z)
-				ifTrue: [ ^ self recordAndReportMatch: #(36) ].
+				ifTrue: [ ^ self recordAndReportMatch: #(37) ].
 			^ self reportLastMatch ].
 	currentCharacter == $x
 		ifTrue: [ self step.
 			(currentCharacter isDigit
 				or: [ (currentCharacter between: $A and: $F)
 						or: [ currentCharacter between: $a and: $f ] ])
-				ifTrue: [ self recordMatch: #(36).
+				ifTrue: [ self recordMatch: #(37).
 					self step.
 					(currentCharacter isDigit
 						or: [ (currentCharacter between: $A and: $F)
 								or: [ currentCharacter between: $a and: $f ] ])
-						ifTrue: [ self recordMatch: #(36).
+						ifTrue: [ self recordMatch: #(37).
 							self step.
 							(currentCharacter isDigit
 								or: [ (currentCharacter between: $A and: $F)
 										or: [ currentCharacter between: $a and: $f ] ])
-								ifTrue: [ self recordMatch: #(36).
+								ifTrue: [ self recordMatch: #(37).
 									self step.
 									(currentCharacter isDigit
 										or: [ (currentCharacter between: $A and: $F)
 												or: [ currentCharacter between: $a and: $f ] ])
-										ifTrue: [ ^ self recordAndReportMatch: #(36) ] ] ] ].
+										ifTrue: [ ^ self recordAndReportMatch: #(37) ] ] ] ].
 			^ self reportLastMatch ].
-	^ self recordAndReportMatch: #(36)
+	^ self recordAndReportMatch: #(37)
