@@ -1,2 +1,0 @@
-(name 'SmaCC-Runtime-ThierryGoubier.15' message 'Add class instance variable cacheId to SmaCCParser' id 'dedc98c9-0000-0000-bcd6-60400230fa7c' date '10 May 2017' time '6:38:58.033274 am' author 'ThierryGoubier' ancestors ((name 'SmaCC-Runtime-ThierryGoubier.14' message 'Move SmaCCPatternNode and SmaCCPatternToken to GLR-Runtime: they only work there.
-' id '61dfb642-5a46-5aa8-9909-0d3b158cfecf' date '9 May 2017' time '11:06:10 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
