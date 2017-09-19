@@ -1,8 +1,6 @@
 actions
 findParserClass
 	| className class text |
-	self scannerClassString isEmpty
-		ifTrue: [ ^ UIManager default inform: 'Undefined scanner class' ].
 	className := self
 		choose: 'What class do you want to use?'
 		from:
@@ -13,6 +11,14 @@ findParserClass
 			parserClassMorph
 				newContents: '';
 				newContents: className.
+			scannerClassMorph
+				hResizing: #rigid;
+				newContents: ''.
+			self parserClass
+				ifNotNil: [ :c | scannerClassMorph newContents: c scannerClass name ]
+				ifNil: [ scannerClassMorph
+						newContents: (className copyReplaceAll: 'Parser' with: 'Scanner') ].
+			scannerClassMorph changed: #updateWindowLabel.
 			parserClassMorph changed: #updateWindowLabel.
 			class := Smalltalk at: className asSymbol ifAbsent: [ ^ self ].
 			self setPackage: class package name.
