@@ -1,5 +1,5 @@
 actions
-updateWindowLabel
+updateTitle
 	| scannerLabel parserLabel |
 	scannerLabel := self scannerClassString isEmpty
 		ifFalse: [ self scannerClassString ]
@@ -7,4 +7,5 @@ updateWindowLabel
 	parserLabel := self parserClassString isEmpty
 		ifFalse: [ self parserClassString ]
 		ifTrue: [ 'Undefined' ].
-	^ self mainWindow setLabel: self defaultWindowLabelPrefix , ': ' , scannerLabel , '/' , parserLabel
+	^ self mainWindow
+		setLabel: 'SmaCCParserGenerator: ' , scannerLabel , '/' , parserLabel

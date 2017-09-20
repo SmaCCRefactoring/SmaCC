@@ -1,3 +1,3 @@
 accessing
 scannerClassString
-	^scannerClassMorph contents string
+	^scannerClassMorph content

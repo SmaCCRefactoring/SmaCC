@@ -23,7 +23,8 @@
 		"isGLR",
 		"itemsTextMorph",
 		"symbolsTextMorph",
-		"grammarCompiler"
+		"grammarCompiler",
+		"package"
 	],
 	"name" : "SmaCCDevelopmentUI",
 	"type" : "normal"

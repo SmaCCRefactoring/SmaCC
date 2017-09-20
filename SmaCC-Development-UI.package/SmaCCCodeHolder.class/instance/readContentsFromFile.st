@@ -1,9 +1,11 @@
 menus
 readContentsFromFile
 	| result |
-	(result := UIManager default chooseFileMatching: nil label: 'Choose file to open' translated)
-		ifNotNil: [ 
-			result asFileReference exists
-				ifFalse: [ ^ UIManager default inform: ' ' , result , ' doesn''t exists ' ].
-			self acceptContents: result asFileReference readStream contents.
+	(result := UITheme current
+		fileOpenIn: World
+		title: 'Choose file to open'
+		extensions: nil
+		path: FileSystem workingDirectory
+		preview: nil)
+		ifNotNil: [ self contents: result contents.
 			self changed: #contents ]

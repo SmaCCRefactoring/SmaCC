@@ -1,3 +1,3 @@
 accessing
 parserClassString
-	^ parserClassMorph contents string
+	^ parserClassMorph content

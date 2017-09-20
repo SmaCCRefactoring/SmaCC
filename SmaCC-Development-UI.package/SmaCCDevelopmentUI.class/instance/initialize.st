@@ -1,6 +1,6 @@
 initialize-release
 initialize
-	mainWindow := StandardWindow labelled: self defaultWindowLabelPrefix.
+	mainWindow := StandardWindow new.
 	mainWindow model: self.
 	self createDefinitionPage.
-	self updateWindowLabel
+	self updateTitle

@@ -6,8 +6,8 @@ saveContentsInFile
 		title: 'Choose file to open' translated
 		extensions: nil
 		path: FileSystem workingDirectory)
-		ifNotNil: [ 
-			result asFileReference exists
+		ifNotNil: [ result asFileReference exists
 				ifTrue: [ ^ UIManager default inform: ' ' , result , ' already exists ' ].
-			result asFileReference writeStream nextPutAll: contents.
+			result asFileReference
+				writeStreamDo: [ :s | s nextPutAll: contents ].
 			self changed: #contents ]

@@ -15,42 +15,12 @@ addClassSelectorsToCompilePage: aCompilePage
 	paLine addMorphBack: ('Package:' asMorph hResizing: #spaceFill).
 	scLine addMorphBack: ('Scanner class:' asMorph hResizing: #spaceFill).
 	psLine addMorphBack: ('Parser class:' asMorph hResizing: #spaceFill).
-	packageButton := PluggableButtonMorph on: self getState: nil action: #findPackage.
-	packageButton label: ' ... '.
-	scannerClassButton := PluggableButtonMorph on: self getState: nil action: #findScannerClass.
-	scannerClassButton label: ' ... '.
-	parserClassButton := PluggableButtonMorph on: self getState: nil action: #findParserClass.
-	parserClassButton label: ' ... '.
-	paLine
-		addMorphBack:
-			(packageMorph := TextMorph new
-				newContents: 'SmaCC-Tutorial';
-				extent: 300 @ 70).
-	packageMorph addDependent: self.
-	scLine
-		addMorphBack:
-			(scannerClassMorph := TextMorph new
-				newContents: '';
-				extent: 300 @ 70).
-	scannerClassMorph on: #keyStroke send: #updateWindowLabel to: self.
-	scannerClassMorph addDependent: self.
-	psLine
-		addMorphBack:
-			(parserClassMorph := TextMorph new
-				newContents: '';
-				extent: 300 @ 70).
-	parserClassMorph on: #keyStroke send: #updateWindowLabel to: self.
-	parserClassMorph addDependent: self.
-	paLine
-		addMorphBack: packageButton;
-		addMorphBack: AlignmentMorph newVariableTransparentSpacer.
-
-	scLine
-		addMorphBack: scannerClassButton;
-		addMorphBack: AlignmentMorph newVariableTransparentSpacer.
-	psLine
-		addMorphBack: parserClassButton;
-		addMorphBack: AlignmentMorph newVariableTransparentSpacer.
+	paLine addMorphBack: self buildPackageMorph.
+	scLine addMorphBack: self buildScannerClassMorph.
+	psLine addMorphBack: self buildParserClassMorph.
+	paLine addMorphBack: AlignmentMorph newVariableTransparentSpacer.
+	scLine addMorphBack: AlignmentMorph newVariableTransparentSpacer.
+	psLine addMorphBack: AlignmentMorph newVariableTransparentSpacer.
 	aCompilePage
 		addMorph: psLine;
 		addMorph: scLine;

@@ -1,3 +1,3 @@
 accessing
 packageString
-	^ packageMorph contents string
+	^ packageMorph content
