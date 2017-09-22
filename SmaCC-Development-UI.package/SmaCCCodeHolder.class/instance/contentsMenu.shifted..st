@@ -16,6 +16,7 @@ contentsMenu: aMenu shifted: shifted
 		('accept (s)' accept)
 		('cancel (l)' cancel)
 		-
+		('browse versions' versions)
 		('save contents in file...' saveContentsInFile)
 		('read contents from file...' readContentsFromFile) )
 		

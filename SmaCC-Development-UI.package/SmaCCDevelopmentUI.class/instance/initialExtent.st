@@ -1,3 +1,3 @@
 private
 initialExtent
-	^ 750 @ 650
+	^ 650 @ 750
