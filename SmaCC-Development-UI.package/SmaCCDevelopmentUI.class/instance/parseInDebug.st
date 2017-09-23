@@ -7,5 +7,5 @@ parseInDebug
 		selector: #now;
 		control: #before.
 	(class >> #performParsingLoop) ast link: link.
-	[ self parse ]
+	[ self parseNoErrorHandling ]
 		ensure: [ link uninstall ]
