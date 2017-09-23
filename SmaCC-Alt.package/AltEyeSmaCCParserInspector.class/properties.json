@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "AltEyeInspector",
+	"category" : "SmaCC-Alt",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "AltEyeSmaCCParserInspector",
+	"type" : "normal"
+}

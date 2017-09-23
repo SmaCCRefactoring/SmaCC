@@ -1,0 +1,1 @@
+I add special fields to a SmaCC parser if I am inspecting it (Decompilation)
