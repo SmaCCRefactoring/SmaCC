@@ -1,4 +1,4 @@
-*SmaCC_Debugging_Support
+*smacc-debugging-support
 gtInspectorSourceIn: aComposite inContext: aGTInspector
 	<gtInspectorPresentationOrder: 40>
 	aComposite text

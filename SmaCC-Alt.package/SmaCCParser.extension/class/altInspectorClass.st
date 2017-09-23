@@ -1,0 +1,3 @@
+*smacc-alt
+altInspectorClass
+	^ AltEyeSmaCCParserInspector

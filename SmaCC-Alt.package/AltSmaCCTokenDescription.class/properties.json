@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "SmaCC-Alt",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"start",
+		"value",
+		"ids"
+	],
+	"name" : "AltSmaCCTokenDescription",
+	"type" : "normal"
+}

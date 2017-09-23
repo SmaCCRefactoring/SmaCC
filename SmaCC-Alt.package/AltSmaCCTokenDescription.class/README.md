@@ -1,0 +1,3 @@
+I am the description of a SmaCCToken instance in the inspector. I just provide a better text by reusing parser information on the symbol names, not changing anything about the inspected token.
+
+The EyeInspector framework is very cool...

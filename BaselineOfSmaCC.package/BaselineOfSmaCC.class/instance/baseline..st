@@ -1,4 +1,4 @@
-accessing
+baseline
 baseline: spec
 	<baseline>
 	spec
@@ -10,11 +10,22 @@ baseline: spec
 				package: 'SmaCC-GLR-Runtime'
 					with: [ spec requires: 'SmaCC-Runtime' ];
 				package: 'SmaCC-Debugging-Support'
-					with: [ spec requires: 'SmaCC-Development-UI' ];
+					with: [ spec requires: 'SmaCC-Development-UI' ].
+			spec
 				package: 'SmaCC-Development'
-					with: [ spec requires: 'SmaCC-GLR-Runtime' ];
-				package: 'SmaCC-Development-UI'
-					with: [ spec requires: 'SmaCC-Development' ];
+				with: [ spec requires: 'SmaCC-GLR-Runtime' ].
+			spec
+				for: #Alt
+				do: [ spec
+						package: 'SmaCC-Alt' with: [ spec requires: 'SmaCC-Runtime' ];
+						package: 'SmaCC-Development-UI'
+							with: [ spec requires: #('SmaCC-Development' 'SmaCC-Alt') ] ].
+			spec
+				for: #NoAlt
+				do: [ spec
+						package: 'SmaCC-Development-UI'
+						with: [ spec requires: 'SmaCC-Development' ] ].
+			spec
 				package: 'SmaCC-Tests'
 					with: [ spec requires: 'SmaCC-Development' ];
 				package: 'SmaCC-Browser' with: [ spec requires: 'SmaCC-Runtime' ];
@@ -71,6 +82,7 @@ baseline: spec
 				group: 'Debugging' with: #('SmaCC-Debugging-Support');
 				group: 'Examples'
 					with:
-					#('SmaCC-Smalltalk-Parser' 'SmaCC-C-Parser' 'SmaCC-CSharp' 'SmaCC-Line-Parser' 'SmaCC-Java' 'SmaCC-Python' 'SmaCC-Javascript-Parser' 'SmaCC-CSV-Parser' 'SmaCC-Cucumber' 'SmaCC-Swift' 'SmaCC-Delphi' 'SmaCC-DelphiForms' 'SmaCC-IDL');
+					#('SmaCC-Smalltalk-Parser' 'SmaCC-C-Parser' 'SmaCC-CSharp' 'SmaCC-Line-Parser' 'SmaCC-Java' 'SmaCC-Python' 'SmaCC-Javascript-Parser' 'SmaCC-CSV-Parser' 'SmaCC-Cucumber' 'SmaCC-Swift' 'SmaCC-Delphi' 'SmaCC-DelphiForms');
+				group: 'Examples-Additional' with: #('SmaCC-IDL');
 				group: 'Tests'
 					with: #('SmaCC-Tests' 'SmaCC-Rewrite-Engine-Tests' 'SmaCC-Python-Tests') ]
