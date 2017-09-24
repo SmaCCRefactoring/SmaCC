@@ -82,7 +82,9 @@ baseline: spec
 				group: 'Debugging' with: #('SmaCC-Debugging-Support');
 				group: 'Examples'
 					with:
-					#('SmaCC-Smalltalk-Parser' 'SmaCC-C-Parser' 'SmaCC-CSharp' 'SmaCC-Line-Parser' 'SmaCC-Java' 'SmaCC-Python' 'SmaCC-Javascript-Parser' 'SmaCC-CSV-Parser' 'SmaCC-Cucumber' 'SmaCC-Swift' 'SmaCC-Delphi' 'SmaCC-DelphiForms');
-				group: 'Examples-Additional' with: #('SmaCC-IDL');
+					#('SmaCC-Smalltalk-Parser' 'SmaCC-C-Parser' 'SmaCC-Java' 'SmaCC-CSV-Parser'  'SmaCC-Line-Parser');
+				group: 'Examples-Extra'
+					with:
+					#('SmaCC-IDL' 'SmaCC-CSharp' 'SmaCC-Cucumber' 'SmaCC-Swift' 'SmaCC-Delphi' 'SmaCC-DelphiForms' 'SmaCC-Python' 'SmaCC-Javascript-Parser');
 				group: 'Tests'
 					with: #('SmaCC-Tests' 'SmaCC-Rewrite-Engine-Tests' 'SmaCC-Python-Tests') ]
