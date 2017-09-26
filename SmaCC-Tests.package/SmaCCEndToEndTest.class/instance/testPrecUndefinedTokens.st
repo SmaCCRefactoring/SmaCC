@@ -6,10 +6,10 @@ testPrecUndefinedTokens
 	parserCompiler
 		buildDefinition:
 			'<IDENTIFIER> : \w+ ; <whitespace> : \s+ ;
+			<and> : and;
 			%left <and> ;
 			%nonassoc "=" "<=";
 			%left "+" ;
-			<and> : and;
 			expr : expr "=" expr {true} | expr "<=" expr {true} | expr <and> expr {true} | expr "+" expr {true} | <IDENTIFIER> {true};'.
 	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
 	self

@@ -5,6 +5,7 @@ testSpecialCharacterArrowNoUnicode
 		on: Error
 		do: [ :ex | ^ self ].	"Unicode characters not supported"
 	maxValue := SmaCCGrammar maximumCharacterValue.
+	SmaCCGrammar maximumCharacterValue: 255.
 	[ (parserCompiler := SmaCCGrammarCompiler new) codeGenerator
 		defaultCategory: self class category.
 	parserCompiler

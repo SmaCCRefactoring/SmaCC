@@ -14,7 +14,6 @@ acceptDefinition: aStringOrAText notifying: aRequestor
 	true ]
 		on: SmaCCParserError
 		do: [ :ex | 
-			self tabList selectedPageIndex: 1.
 			self
 				displayError: ex description
 				at: ex tag position
