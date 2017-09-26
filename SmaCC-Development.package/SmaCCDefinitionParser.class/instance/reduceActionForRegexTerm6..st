@@ -1,3 +1,5 @@
 generated-reduction actions
 reduceActionForRegexTerm6: nodes
-	^ self parseCharacterBlock: (nodes at: 1)
+	^ (scannerDefinition
+		tokenNamed: (nodes at: 1) value
+		ifAbsentPut: [ self generateImplicitToken: (nodes at: 1) ]) copy
