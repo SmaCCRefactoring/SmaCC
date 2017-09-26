@@ -1,12 +1,12 @@
 list
 addSpecialFields: elements
 	elements
-"		add:
+		add:
 			(DynamicEyeElement
 				host: self object
 				label: 'decompiled'
 				description: [ self decompiledParser printString ]
-				value: [ self decompiledParser ]);"
+				value: [ self decompiledParser ]);
 		add:
 			(DynamicEyeElement
 				host: self object

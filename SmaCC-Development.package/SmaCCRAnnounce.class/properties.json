@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "<historical>",
 	"super" : "Announcement",
-	"category" : "SmaCC-Development",
+	"category" : "SmaCC-Development-Debug",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
