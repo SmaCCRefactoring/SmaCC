@@ -1,5 +1,5 @@
 generated
-scan11X1
+scan9X1
 	self step.
 	currentCharacter == $c
 		ifTrue: [ self step.

@@ -85,7 +85,7 @@ directives <unicode>
 	: \: (\: \=)? 
 	;
 <directive>
-	: % 
+	: \% 
 	;
 <semicolon>
 	: \; 
@@ -102,7 +102,7 @@ scanner <repeat>
 	: \{ [0-9]* \, [0-9]* \}
 	;
 scanner <character>
-	: [^\ \t\v\\\r\n\{\(\[\.\%]
+	: [^\ \t\v\\\r\n\{\(\[\.\%\:\<]
 	; 
 scanner <anycharacter>
 	: \.
@@ -112,12 +112,6 @@ parser <optionalLeft>
 	;
 parser <optionalRight>
 	: \] 
-	;
-parser <repeatLeft> 
-	: \<\% 
-	;
-parser <repeatRight> 
-	: \%\> 
 	;
 parser <classLeft> 
 	: \{\{ 
@@ -342,8 +336,6 @@ Regex
 RegexTerm
 	: <character> 
 			{SmaCCCharacterRENode characters: '1' value}
-#	| <directive>
-#			{SmaCCCharacterRENode characters: '1' value}
 	| <anycharacter> 
 			{SmaCCCharacterRENode characters: self allCharacters}
 	| <backslashcharacter> 

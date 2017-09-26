@@ -1,5 +1,5 @@
 generated
-scan11X4
+scan9X4
 	self recordMatch: #(29 40).
 	self step.
 	(currentCharacter isAlphaNumeric or: [ currentCharacter == $_ ])

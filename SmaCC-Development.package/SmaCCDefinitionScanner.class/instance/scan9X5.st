@@ -1,5 +1,5 @@
 generated
-scan11X5
+scan9X5
 	self recordMatch: #(27 40).
 	self step.
 	(currentCharacter isSeparator

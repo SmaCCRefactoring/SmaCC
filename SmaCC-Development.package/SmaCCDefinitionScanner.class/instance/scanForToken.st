@@ -4,7 +4,7 @@ scanForToken
 		ifTrue:
 			[ ^ self scanForTokenX1 ].
 	state == #scanner
-		ifTrue: [ ^ self scan11 ].
+		ifTrue: [ ^ self scan9 ].
 	(#(#default #directives) includes: state)
 		ifTrue: [ self step.
 			currentCharacter == $"
@@ -31,7 +31,7 @@ scanForToken
 			currentCharacter == $;
 				ifTrue: [ ^ self recordAndReportMatch: #(36) ].
 			currentCharacter == $<
-				ifTrue: [ ^ self scan9 ].
+				ifTrue: [ ^ self scan8 ].
 			currentCharacter == $?
 				ifTrue: [ ^ self recordAndReportMatch: #(8) ].
 			currentCharacter == $[

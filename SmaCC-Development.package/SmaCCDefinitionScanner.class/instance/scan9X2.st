@@ -1,5 +1,5 @@
 generated
-scan11X2
+scan9X2
 	self recordMatch: #(31 40).
 	self step.
 	(currentCharacter <= Character tab

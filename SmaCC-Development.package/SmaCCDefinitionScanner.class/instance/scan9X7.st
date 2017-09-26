@@ -1,5 +1,5 @@
 generated
-scan11X8
+scan9X7
 	self recordMatch: #(40).
 	self step.
 	(currentCharacter isLetter or: [ currentCharacter == $_ ])
