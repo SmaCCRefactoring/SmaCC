@@ -5,8 +5,8 @@ addSpecialFields: elements
 			(DynamicEyeElement
 				host: self object
 				label: 'decompiled'
-				description: [ self decompiledParser printString ]
-				value: [ self decompiledParser ]);
+				description: [self object printString ]
+				value: self decompiledParser);
 		add:
 			(DynamicEyeElement
 				host: self object
