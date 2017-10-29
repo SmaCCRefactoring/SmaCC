@@ -1,4 +1,4 @@
-initialize-release
+initialization
 initialize
 	mainWindow := StandardWindow new.
 	mainWindow model: self.

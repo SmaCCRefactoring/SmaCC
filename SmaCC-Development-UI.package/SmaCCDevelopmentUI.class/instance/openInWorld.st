@@ -1,3 +1,3 @@
-initialize-release
+display
 openInWorld
 	self mainWindow openInWorld
