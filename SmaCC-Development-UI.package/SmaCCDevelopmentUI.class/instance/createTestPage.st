@@ -1,4 +1,4 @@
-initialize-release
+initialization
 createTestPage
 	| aTestPage |
 	aTestPage := AlignmentMorph newColumn

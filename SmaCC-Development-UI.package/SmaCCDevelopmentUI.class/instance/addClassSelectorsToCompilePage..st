@@ -1,8 +1,8 @@
-initialize-release
+initialization
 addClassSelectorsToCompilePage: aCompilePage
 	"The scanner class hasn't got the same meaning as before, since the definition is for both scanner and parser at the same time. Left it for now, since it allows the reuse of a scanner class later on."
 
-	| paLine packageButton scannerClassButton parserClassButton |
+	| paLine |
 	paLine := AlignmentMorph newRow
 		color: Color transparent;
 		vResizing: #shrinkWrap.

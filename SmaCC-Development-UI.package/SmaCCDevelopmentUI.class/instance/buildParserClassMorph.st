@@ -1,4 +1,4 @@
-initialize-release
+initialization
 buildParserClassMorph
 	^ parserClassMorph := (EditableDropListMorph
 		on: self

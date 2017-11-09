@@ -1,6 +1,6 @@
-initialize-release
+initialization
 addButtonsToTestPage: aTestPage
-	| aParserButton aParserInspectButton aParserExploreButton |
+	| aParserButton aParserInspectButton aParserDebugButton |
 	aParserButton := PluggableButtonMorph
 		on: self
 		getState: nil
@@ -17,11 +17,11 @@ addButtonsToTestPage: aTestPage
 		hResizing: #spaceFill;
 		vResizing: #shrinkWrap;
 		label: 'Parse and inspect'.
-	aParserExploreButton := PluggableButtonMorph
+	aParserDebugButton := PluggableButtonMorph
 		on: self
 		getState: nil
 		action: #parseInDebug.
-	aParserExploreButton
+	aParserDebugButton
 		hResizing: #spaceFill;
 		vResizing: #shrinkWrap;
 		label: 'Parse in debug'.
@@ -33,5 +33,5 @@ addButtonsToTestPage: aTestPage
 				layoutInset: 0;
 				addMorph: aParserButton;
 				addMorph: aParserInspectButton;
-				addMorph: aParserExploreButton;
+				addMorph: aParserDebugButton;
 				yourself)

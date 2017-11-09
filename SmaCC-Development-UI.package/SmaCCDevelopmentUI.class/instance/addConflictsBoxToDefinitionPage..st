@@ -1,4 +1,4 @@
-initialize-release
+initialization
 addConflictsBoxToDefinitionPage: aDefinitionPageTabPalette
 	self
 		conflictTextMorph:

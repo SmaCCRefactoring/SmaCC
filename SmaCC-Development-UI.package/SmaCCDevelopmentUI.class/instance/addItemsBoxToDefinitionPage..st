@@ -1,4 +1,4 @@
-initialize-release
+initialization
 addItemsBoxToDefinitionPage: aDefinitionPageTabPalette
 	self
 		itemsTextMorph:

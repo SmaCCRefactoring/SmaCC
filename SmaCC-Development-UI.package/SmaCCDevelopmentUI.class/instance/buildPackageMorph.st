@@ -1,4 +1,4 @@
-initialize-release
+initialization
 buildPackageMorph
 	^ packageMorph := (EditableDropListMorph
 		on: self

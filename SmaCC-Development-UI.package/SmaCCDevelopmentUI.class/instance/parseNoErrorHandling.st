@@ -8,5 +8,5 @@ parseNoErrorHandling
 		ifTrue: [ UIManager default inform: 'No parser defined'.
 			^ false ]
 		ifFalse:
-			[ Cursor wait showWhile: [ class parse: self testText ] ].
+			[ Cursor wait showWhile: [ class parse: self testText asString ] ].
 	^ true

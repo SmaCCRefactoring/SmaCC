@@ -1,4 +1,4 @@
-initialize-release
+initialization
 buildScannerClassMorph
 	^ scannerClassMorph := (EditableDropListMorph
 		on: self

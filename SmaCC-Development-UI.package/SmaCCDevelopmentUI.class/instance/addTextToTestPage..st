@@ -1,4 +1,4 @@
-initialize-release
+initialization
 addTextToTestPage: aTestPage
 	| aTestText |
 	testCodeHolder := SmaCCCodeHolder

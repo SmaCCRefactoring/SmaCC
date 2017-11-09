@@ -14,7 +14,7 @@ parseAndEvaluate: aBlock
 					aBlock
 						value:
 							(class
-								parse: self testText
+								parse: self testText asString 
 								onError: [ :aString :position | 
 									self displayError: aString at: position notifying: self testCodeHolder contentsMorph.
 									self testCodeHolder contentsMorph hasUnacceptedEdits: true.

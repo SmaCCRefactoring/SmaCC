@@ -1,4 +1,4 @@
-initialize-release
+initialization
 addTestPageToDefinitionPage: aDefinitionPagePalette
 	| aTestPage |
 	aTestPage := AlignmentMorph newColumn

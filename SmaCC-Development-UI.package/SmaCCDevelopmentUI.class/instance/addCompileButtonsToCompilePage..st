@@ -1,4 +1,4 @@
-initialize-release
+initialization
 addCompileButtonsToCompilePage: aCompilePage
 	aCompilePage
 		addMorph:

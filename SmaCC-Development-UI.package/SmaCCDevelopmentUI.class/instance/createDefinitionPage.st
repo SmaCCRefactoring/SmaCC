@@ -1,4 +1,4 @@
-initialize-release
+initialization
 createDefinitionPage
 	| aDefinitionPage group |
 	aDefinitionPage := PanelMorph new
@@ -22,7 +22,9 @@ createDefinitionPage
 	group
 		addMorph:
 			(ProportionalSplitterMorph new
-				layoutFrame: (LayoutFrame fractions: (0.0 @ 0.7 corner: 1 @ 0.7) offsets: (0 @ 0 corner: 0 @ 4));
+				layoutFrame: (LayoutFrame new
+						topFraction: 0.7 offset: 0;
+						bottomFraction: 0.7 offset: 4);
 				addLeftOrTop: group submorphs first;
 				addRightOrBottom: group submorphs last;
 				beSplitsTopAndBottom).
