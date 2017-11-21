@@ -12,19 +12,14 @@
 		"parserClassMorph",
 		"scannerClassMorph",
 		"packageMorph",
-		"findScannerClassButton",
-		"findParserClassButton",
 		"conflicts",
-		"ignoreCase",
 		"mainWindow",
 		"definitionCodeHolder",
 		"testCodeHolder",
 		"conflictTextMorph",
-		"isGLR",
 		"itemsTextMorph",
 		"symbolsTextMorph",
-		"grammarCompiler",
-		"package"
+		"grammarCompiler"
 	],
 	"name" : "SmaCCDevelopmentUI",
 	"type" : "normal"

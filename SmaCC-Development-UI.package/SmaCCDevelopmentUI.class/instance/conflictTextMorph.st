@@ -1,3 +1,3 @@
-accessing
+accessing-ui
 conflictTextMorph
 	^ conflictTextMorph
