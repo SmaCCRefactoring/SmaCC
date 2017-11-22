@@ -6,8 +6,7 @@ testCRLines
 	1 to: 4 do:
 		[ :each | 
 		self assert: stream lineNumber = each.
-		4
-			timesRepeat:
-				[ self
-					assert: stream columnNumber = (stream next asInteger - $0 asInteger) ].
+		4 timesRepeat: [ | ch |	
+				ch := stream next.
+				self assert: stream columnNumber equals: ch digitValue ].
 		stream upTo: Character cr ]

@@ -1,3 +1,3 @@
 accessing
 columnNumberFor: anInteger
-	^ anInteger - (eolPositions at: (self lineNumberFor: anInteger)) + 1
+	^ anInteger - (eolPositions at: (self lineNumberFor: anInteger))
