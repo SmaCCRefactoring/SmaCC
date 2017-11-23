@@ -6,4 +6,4 @@ checkForErrors
 	errorToken isNil
 		ifTrue: [ ^ self ].
 	currentToken := errorToken.
-	self reportErrorMessage: 'Token not expected'
+	self reportErrorMessage: 'Token ' , currentToken printString , ' not expected'
