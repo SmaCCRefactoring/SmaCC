@@ -6,12 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"stateStack",
-		"nodeStack",
-		"isAccepted",
-		"scannerState",
-		"attributes"
+		"position",
+		"state"
 	],
-	"name" : "SmaCCParserState",
+	"name" : "SmaCCScannerState",
 	"type" : "normal"
 }

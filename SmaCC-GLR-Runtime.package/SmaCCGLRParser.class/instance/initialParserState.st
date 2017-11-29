@@ -4,6 +4,5 @@ initialParserState
 	state := SmaCCParserState
 		stateStack: stateStack
 		nodeStack: nodeStack
-		scannerState: scanner state
-		position: scanner position.
+		scannerState: scanner currentState.
 	^ state

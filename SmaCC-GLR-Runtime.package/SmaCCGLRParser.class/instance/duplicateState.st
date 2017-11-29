@@ -5,7 +5,6 @@ duplicateState
 	stateStack := stateStack copy.
 	state := currentState copy.
 	state stateStack: stateStack nodeStack: nodeStack.
-	state position: scanner position.
-	state scannerState: scanner state.
+	state scannerState: scanner currentState.
 	states add: state.
 	^state

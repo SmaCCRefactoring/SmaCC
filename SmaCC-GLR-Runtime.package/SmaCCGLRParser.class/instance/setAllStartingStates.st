@@ -9,5 +9,4 @@ setAllStartingStates
 					(SmaCCParserState
 						stateStack: (OrderedCollection with: each)
 						nodeStack: OrderedCollection new
-						scannerState: scanner state
-						position: scanner position) ]
+						scannerState: scanner currentState) ]
