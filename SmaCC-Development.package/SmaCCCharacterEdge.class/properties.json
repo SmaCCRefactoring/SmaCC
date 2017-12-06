@@ -5,7 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"codeSizeEstimate"
+	],
 	"name" : "SmaCCCharacterEdge",
 	"type" : "normal"
 }

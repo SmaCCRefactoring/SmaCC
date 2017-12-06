@@ -5,12 +5,10 @@ splitLargeNodes: methodStates
 	| todo |
 	todo := OrderedCollection withAll: methodStates.
 	[ todo notEmpty ]
-		whileTrue:
-			[ | node |
+		whileTrue: [ | node |
 			node := todo removeFirst.
 			node transitions
-				do:
-					[ :edge | 
-					(edge to codeSizeEstimate: methodStates) > self maxJumpSize
+				do: [ :edge | 
+					((methodStates includes: edge to) not and: [ (edge to codeSizeEstimate: methodStates) > self maxJumpSize ])
 						ifTrue: [ methodStates add: edge to.
 							todo addLast: edge to ] ] ]
