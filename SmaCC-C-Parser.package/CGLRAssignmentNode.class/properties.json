@@ -1,13 +1,15 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "SmaCCScanner",
+	"commentStamp" : "",
+	"super" : "CGLRAbstractNode",
 	"category" : "SmaCC-C-Parser",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"typeNames"
+		"lvalue",
+		"op",
+		"rvalue"
 	],
-	"name" : "CScanner",
+	"name" : "CGLRAssignmentNode",
 	"type" : "normal"
 }

@@ -1,11 +1,11 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "SmaCCParser",
+	"commentStamp" : "",
+	"super" : "CGLRAbstractNode",
 	"category" : "SmaCC-C-Parser",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "CParser",
+	"name" : "CGLRUnaryExpressionNode",
 	"type" : "normal"
 }

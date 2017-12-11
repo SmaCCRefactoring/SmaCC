@@ -1,0 +1,3 @@
+generated
+startingStateFortranslationUnit
+	^ 1
