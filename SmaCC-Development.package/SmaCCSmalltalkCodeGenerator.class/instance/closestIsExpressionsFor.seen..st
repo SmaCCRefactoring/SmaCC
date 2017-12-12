@@ -3,7 +3,7 @@ closestIsExpressionsFor: aSmaCCCharacterEdge seen: aCollection
 	| expressions |
 	expressions := OrderedCollection new.
 	self class isExpressions
-		keysAndValuesDo: [ :string :selector | 
+		keysAndValuesDo: [ :selector :string | 
 			| isInString |
 			isInString := false.
 			((string
@@ -22,14 +22,14 @@ closestIsExpressionsFor: aSmaCCCharacterEdge seen: aCollection
 				collect: [ :each | 
 					each
 						->
-							((self class isExpressions keyAtValue: each)
+							((self class isExpressions at: each)
 								select: [ :char | aSmaCCCharacterEdge transitionObjects includes: char ]) ].
 			strings := strings
 				asSortedCollection: [ :a :b | 
 					a value size > b value size
 						or: [ a value size = b value size
-								and: [ (self class isExpressions keyAtValue: a key) size
-										< (self class isExpressions keyAtValue: b key) size ] ] ].
+								and: [ (self class isExpressions at: a key) size
+										< (self class isExpressions at: b key) size ] ] ].
 			newExpressions := OrderedCollection with: strings first.
 			2 to: strings size do: [ :i | 
 				| left |

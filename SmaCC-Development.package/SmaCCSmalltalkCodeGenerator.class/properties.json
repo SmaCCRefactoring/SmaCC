@@ -7,7 +7,6 @@
 	],
 	"pools" : [ ],
 	"classvars" : [
-		"IsExpressions",
 		"MaxJumpSize",
 		"MaxLiterals"
 	],

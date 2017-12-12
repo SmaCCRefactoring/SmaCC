@@ -1,4 +1,8 @@
 accessing
 isExpressions
-	IsExpressions ifNil: [ self initializeIsExpressions: nil ].
-	^ IsExpressions
+	| oldSize |
+	oldSize := SmaCCGrammar maximumCharacterValue.
+	^ [ SmaCCGrammar
+		maximumCharacterValue: SmaCCGrammar maximumUnicodeCharacterValue.
+	SmaCCGrammar isExpressionMap ]
+		ensure: [ SmaCCGrammar maximumCharacterValue: oldSize ]

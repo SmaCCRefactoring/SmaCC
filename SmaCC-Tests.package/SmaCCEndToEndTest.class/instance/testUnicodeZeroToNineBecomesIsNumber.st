@@ -1,6 +1,6 @@
 tests-unicode
 testUnicodeZeroToNineBecomesIsNumber
-	"This test shows that SmaCC will expand a [0-9] category into a <isDigit> test, and that this test will also include all unicode digit characters."
+	"This test shows that SmaCC may expand a [0-9] category into a <isDigit> test, and that this test will also include all unicode digit characters. Here we make sure that only a direct use of isDigit , even on a parser limited to 0-255, would generate an isDigit."
 
 	| parserCompiler maxValue |
 	[ String with: (Character value: 16rFF00) ]
