@@ -12,7 +12,6 @@
 		"MaxLiterals"
 	],
 	"instvars" : [
-		"isExpressions",
 		"parseTreeCache"
 	],
 	"name" : "SmaCCSmalltalkCodeGenerator",

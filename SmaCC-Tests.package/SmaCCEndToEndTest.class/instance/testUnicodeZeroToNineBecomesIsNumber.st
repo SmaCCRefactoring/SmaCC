@@ -13,10 +13,11 @@ testUnicodeZeroToNineBecomesIsNumber
 		buildDefinition:
 			'<hash> : \#;
 <number> : [0-9];
-begin : <hash> <number> + {true} ;'.
+<any> : . ;
+begin : <hash> <number> + {true} | <hash> <any> + {false};'.
 	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
 	self
-		assert:
+		deny:
 			(self parserClass
 				parse: (String with: $# with: (Character value: 16r662))) ]
 		ensure: [ SmaCCGrammar maximumCharacterValue: maxValue ]

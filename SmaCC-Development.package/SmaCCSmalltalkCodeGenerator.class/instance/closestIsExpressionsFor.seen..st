@@ -2,45 +2,36 @@ compiling-scanner
 closestIsExpressionsFor: aSmaCCCharacterEdge seen: aCollection
 	| expressions |
 	expressions := OrderedCollection new.
-	isExpressions
-		keysAndValuesDo:
-			[ :string :selector | 
+	self class isExpressions
+		keysAndValuesDo: [ :string :selector | 
 			| isInString |
 			isInString := false.
 			((string
-				allSatisfy:
-					[ :each | 
+				allSatisfy: [ :each | 
 					(aSmaCCCharacterEdge transitionObjects includes: each)
 						ifTrue: [ isInString := true ]
 						ifFalse: [ aCollection includes: each ] ]) and: [ isInString ])
 				ifTrue: [ expressions add: selector ] ].
 	(expressions isEmpty
-		or:
-			[ (self minMaxPairsFor: aSmaCCCharacterEdge without: expressions) size
+		or: [ (self minMaxPairsFor: aSmaCCCharacterEdge without: expressions) size
 				> (self minMaxPairsFor: aSmaCCCharacterEdge without: #()) size ])
 		ifTrue: [ ^ #() ].
 	expressions size > 1
-		ifTrue:
-			[ | strings newExpressions |
+		ifTrue: [ | strings newExpressions |
 			strings := expressions
-				collect:
-					[ :each | 
+				collect: [ :each | 
 					each
 						->
-							((isExpressions keyAtValue: each)
+							((self class isExpressions keyAtValue: each)
 								select: [ :char | aSmaCCCharacterEdge transitionObjects includes: char ]) ].
 			strings := strings
-				asSortedCollection:
-					[ :a :b | 
+				asSortedCollection: [ :a :b | 
 					a value size > b value size
-						or:
-							[ a value size = b value size
-								and:
-									[ (isExpressions keyAtValue: a key) size
-										< (isExpressions keyAtValue: b key) size ] ] ].
+						or: [ a value size = b value size
+								and: [ (self class isExpressions keyAtValue: a key) size
+										< (self class isExpressions keyAtValue: b key) size ] ] ].
 			newExpressions := OrderedCollection with: strings first.
-			2 to: strings size do:
-				[ :i | 
+			2 to: strings size do: [ :i | 
 				| left |
 				left := (strings at: i) value.
 				newExpressions

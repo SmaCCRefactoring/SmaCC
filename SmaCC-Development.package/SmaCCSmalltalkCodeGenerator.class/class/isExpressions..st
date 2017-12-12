@@ -6,4 +6,4 @@ isExpressions: aCollection
 	
 	"
 
-	IsExpressions := aCollection
+	self initializeIsExpressions: aCollection

@@ -4,7 +4,7 @@ scan10
 	self step.
 	currentCharacter == $.
 		ifTrue: [ ^ self scan9 ].
-	currentCharacter isDigit ] whileTrue.
+	currentCharacter between: $0 and: $9 ] whileTrue.
 	('Ee' includes: currentCharacter)
 		ifTrue: [ ^ self scan6 ].
 	('LUlu' includes: currentCharacter)
