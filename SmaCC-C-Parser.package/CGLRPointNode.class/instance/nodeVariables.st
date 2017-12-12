@@ -1,0 +1,3 @@
+generated
+nodeVariables
+	^ #(#object #member)

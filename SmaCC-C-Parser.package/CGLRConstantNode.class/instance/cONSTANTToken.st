@@ -1,0 +1,3 @@
+generated
+cONSTANTToken
+	^ cONSTANTToken

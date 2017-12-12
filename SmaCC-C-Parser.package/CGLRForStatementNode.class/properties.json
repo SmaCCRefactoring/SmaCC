@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "CGLRAbstractNode",
+	"category" : "SmaCC-C-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"init",
+		"until",
+		"statement",
+		"forToken",
+		"leftParenToken",
+		"rightParenToken",
+		"step"
+	],
+	"name" : "CGLRForStatementNode",
+	"type" : "normal"
+}

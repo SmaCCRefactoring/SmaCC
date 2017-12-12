@@ -1,7 +1,7 @@
 generated
-then: aCGLRAbstractNode
+then: aCGLRExpressionNode
 	self then notNil
 		ifTrue: [ self then parent: nil ].
-	then := aCGLRAbstractNode.
+	then := aCGLRExpressionNode.
 	self then notNil
 		ifTrue: [ self then parent: self ]

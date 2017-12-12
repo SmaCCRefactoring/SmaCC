@@ -5,7 +5,12 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"array",
+		"lEFT_BLOCKToken",
+		"rIGHT_BLOCKToken",
+		"index"
+	],
 	"name" : "CGLRArrayNode",
 	"type" : "normal"
 }

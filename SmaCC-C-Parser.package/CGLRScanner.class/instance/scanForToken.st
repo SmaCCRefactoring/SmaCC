@@ -21,4 +21,7 @@ scanForToken
 	currentCharacter == $*
 		ifTrue:
 			[ ^ self scanForTokenX17 ].
+	currentCharacter == $+
+		ifTrue:
+			[ ^ self scanForTokenX10 ].
 	^ self scanForTokenX20

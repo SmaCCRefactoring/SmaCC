@@ -5,7 +5,12 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"expr",
+		"type",
+		"leftParenToken",
+		"rightParenToken"
+	],
 	"name" : "CGLRCastExpressionNode",
 	"type" : "normal"
 }

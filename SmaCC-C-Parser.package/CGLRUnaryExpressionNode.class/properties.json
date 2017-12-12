@@ -5,7 +5,13 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"op",
+		"expr",
+		"sizeofToken",
+		"leftParenToken",
+		"type"
+	],
 	"name" : "CGLRUnaryExpressionNode",
 	"type" : "normal"
 }

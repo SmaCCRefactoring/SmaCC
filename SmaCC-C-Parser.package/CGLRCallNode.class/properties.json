@@ -5,7 +5,13 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"arguments",
+		"commaTokens",
+		"f",
+		"leftParenToken",
+		"rightParenToken"
+	],
 	"name" : "CGLRCallNode",
 	"type" : "normal"
 }

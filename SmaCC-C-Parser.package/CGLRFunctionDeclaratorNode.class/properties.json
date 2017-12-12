@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "CGLRAbstractNode",
+	"category" : "SmaCC-C-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"identifiers",
+		"declarator",
+		"parameters",
+		"ellipsis",
+		"leftParenToken",
+		"commaTokens",
+		"rightParenToken"
+	],
+	"name" : "CGLRFunctionDeclaratorNode",
+	"type" : "normal"
+}

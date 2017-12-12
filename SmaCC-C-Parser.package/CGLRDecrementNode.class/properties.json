@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"object",
+		"minusMinusToken"
+	],
 	"name" : "CGLRDecrementNode",
 	"type" : "normal"
 }

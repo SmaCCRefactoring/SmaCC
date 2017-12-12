@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "CGLRAbstractNode",
+	"category" : "SmaCC-C-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"breakToken",
+		"semicolonToken"
+	],
+	"name" : "CGLRBreakStatementNode",
+	"type" : "normal"
+}

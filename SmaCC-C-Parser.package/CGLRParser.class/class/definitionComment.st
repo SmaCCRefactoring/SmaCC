@@ -60,39 +60,39 @@ definitionComment
 %root Abstract;
 %prefix CGLR;
 %suffix Node;
-
+%annotate_tokens;
 
 translationUnit
-	: external_declaration {{}}
-	| translationUnit external_declaration {{}}
+	: external_declaration 'declaration' {{}}
+	| translationUnit external_declaration 'declaration' {{}}
 	;
 primary_expression
-	: identifier
+	: identifier 'symbol' {{IdentifierExpression}}
 	| <CONSTANT> {{Constant}}
 	| <STRING_LITERAL> {{StringLiteral}}
-	| ""("" expression "")""
+	| ""("" expression 'expression' "")"" {{ParenthesizedExpression}}
 	;
 postfix_expression
 	: primary_expression
-	| postfix_expression <LEFT_BLOCK> expression <RIGHT_BLOCK> {{Array}}
-	| postfix_expression ""("" "")"" {{Call}}
-	| postfix_expression ""("" argument_expression_list "")"" {{Call}}
-	| postfix_expression ""."" identifier {{Point}}
-	| postfix_expression ""->"" identifier {{Arrow}}
-	| postfix_expression ""++"" {{Increment}}
-	| postfix_expression ""--"" {{Decrement}}
+	| postfix_expression 'array' <LEFT_BLOCK> expression 'index' <RIGHT_BLOCK> {{Array}}
+	| postfix_expression 'f' ""("" "")"" {{Call}}
+	| postfix_expression 'f' ""("" argument_expression_list "")"" {{Call}}
+	| postfix_expression 'object' ""."" identifier 'member' {{Point}}
+	| postfix_expression 'pointer' ""->"" identifier 'member' {{Arrow}}
+	| postfix_expression 'object' ""++"" {{Increment}}
+	| postfix_expression 'object' ""--"" {{Decrement}}
 	;
 argument_expression_list
-	: assignment_expression
-	| argument_expression_list "","" assignment_expression
+	: assignment_expression 'argument'
+	| argument_expression_list "","" assignment_expression 'argument'
 	;
 unary_expression
 	: postfix_expression
-	| ""++"" unary_expression {{}}
-	| ""--"" unary_expression {{}}
-	| unary_operator cast_expression {{}}
-	| ""sizeof"" unary_expression {{}}
-	| ""sizeof"" ""("" type_name "")"" {{}}
+	| ""++"" 'op' unary_expression 'expr' {{}}
+	| ""--"" 'op' unary_expression 'expr' {{}}
+	| unary_operator 'op' cast_expression 'expr' {{}}
+	| ""sizeof"" unary_expression 'expr' {{}}
+	| ""sizeof"" ""("" type_name 'type' "")"" 'expr' {{}}
 	;
 unary_operator
 	: ""&""
@@ -104,7 +104,7 @@ unary_operator
 	;
 cast_expression
 	: unary_expression
-	| ""("" type_name "")"" cast_expression {{}}
+	| ""("" type_name 'type' "")"" cast_expression 'expr' {{}}
 	;
 multiplicative_expression
 	: cast_expression
@@ -176,9 +176,9 @@ assignment_operator
 	| ""|=""
 	;
 expression
-	: assignment_expression
-	| expression "","" assignment_expression
-	;
+	: assignment_expression 'expression' {{}}
+	| expression "","" assignment_expression 'expression' {{}}
+	; 
 constant_expression
 	: conditional_expression
 	;
@@ -190,20 +190,20 @@ init_declaration
 	: declaration_specifiers init_declarator_list 
 	;
 declaration_specifiers
-	: storage_class_specifier
-	| storage_class_specifier declaration_specifiers
-	| type_specifier
-	| type_specifier declaration_specifiers
-	| type_qualifier
-	| type_qualifier declaration_specifiers
+	: storage_class_specifier 'specifier'
+	| storage_class_specifier 'specifier' declaration_specifiers
+	| type_specifier 'specifier'
+	| type_specifier 'specifier' declaration_specifiers
+	| type_qualifier 'specifier'
+	| type_qualifier 'specifier' declaration_specifiers
 	;
 init_declarator_list
-	: init_declarator
-	| init_declarator_list "","" init_declarator
+	: init_declarator 'declarator'
+	| init_declarator_list "","" init_declarator 'declarator'
 	;
 init_declarator
-	: declarator
-	| declarator ""="" initializer
+	: declarator 'declarator' {{}}
+	| declarator 'declarator' ""="" initializer 'initializer' {{}}
 	;
 storage_class_specifier
 	: ""typedef""
@@ -227,124 +227,124 @@ type_specifier
 	| typename
 	;
 struct_or_union_specifier
-	: struct_or_union identifier <LEFT_BRACE> struct_declaration_list <RIGHT_BRACE>
-	| struct_or_union <LEFT_BRACE> struct_declaration_list <RIGHT_BRACE>
-	| struct_or_union identifier
+	: struct_or_union 'prefix' identifier 'symbol' <LEFT_BRACE> struct_declaration_list <RIGHT_BRACE> {{}}
+	| struct_or_union 'prefix' <LEFT_BRACE> struct_declaration_list <RIGHT_BRACE> {{}}
+	| struct_or_union 'prefix' identifier 'symbol' {{}}
 	;
 struct_or_union
 	: ""struct""
 	| ""union""
 	;
 struct_declaration_list
-	: struct_declaration
-	| struct_declaration_list struct_declaration
+	: struct_declaration 'member'
+	| struct_declaration_list struct_declaration 'member'
 	;
 struct_declaration
-	: specifier_qualifier_list struct_declarator_list "";""
+	: specifier_qualifier_list struct_declarator_list "";"" {{}}
 	;
 specifier_qualifier_list
-	: type_specifier specifier_qualifier_list
-	| type_specifier
-	| type_qualifier specifier_qualifier_list
-	| type_qualifier
+	: type_specifier 'specifier' specifier_qualifier_list
+	| type_specifier 'specifier'
+	| type_qualifier 'qualifier' specifier_qualifier_list
+	| type_qualifier 'qualifier'
 	;
 struct_declarator_list
-	: struct_declarator
-	| struct_declarator_list "","" struct_declarator
+	: struct_declarator 'declarator'
+	| struct_declarator_list "","" struct_declarator 'declarator'
 	;
 struct_declarator
-	: declarator
-	| "":"" constant_expression
-	| declarator "":"" constant_expression
+	: declarator 'declarator' {{}}
+	| "":"" constant_expression 'size' {{}}
+	| declarator 'declarator' "":"" constant_expression 'size' {{}}
 	;
 enum_specifier
-	: ""enum"" <LEFT_BRACE> enumerator_list <RIGHT_BRACE>
-	| ""enum"" identifier <LEFT_BRACE> enumerator_list <RIGHT_BRACE> 
-	| ""enum"" identifier
+	: ""enum"" <LEFT_BRACE> enumerator_list <RIGHT_BRACE> {{Enum}}
+	| ""enum"" identifier 'identifier' <LEFT_BRACE> enumerator_list <RIGHT_BRACE> {{Enum}} 
+	| ""enum"" identifier 'identifier' {{Enum}}
 	;
 enumerator_list
-	: enumerator
-	| enumerator_list "","" enumerator
+	: enumerator 'enumerator'
+	| enumerator_list "","" enumerator 'enumerator'
 	;
 enumerator
-	: identifier
-	| identifier ""="" constant_expression
+	: identifier 'symbol' {{}}
+	| identifier 'symbol' ""="" constant_expression 'expr' {{}}
 	;
 type_qualifier
 	: ""const""
 	| ""volatile""
 	;
 declarator
-	: pointer direct_declarator
-	| direct_declarator
+	: pointer direct_declarator 'direct' {{}}
+	| direct_declarator 'direct' {{}}
 	;
 direct_declarator
-	: identifier
-	| typename
-	| ""("" declarator "")""
-	| direct_declarator <LEFT_BLOCK> constant_expression <RIGHT_BLOCK>
-	| direct_declarator <LEFT_BLOCK> <RIGHT_BLOCK>
-	| direct_declarator ""("" parameter_type_list "")""
-	| direct_declarator ""("" identifier_list "")""
-	| direct_declarator ""("" "")""
+	: identifier 'identifier'
+	| typename 'identifier'
+	| ""("" declarator 'declarator' "")"" {{FunctionPointerDeclarator}}
+	| direct_declarator 'declarator' <LEFT_BLOCK> constant_expression 'size' <RIGHT_BLOCK> {{ArrayDeclarator}}
+	| direct_declarator 'declarator' <LEFT_BLOCK> <RIGHT_BLOCK> {{ArrayDeclarator}}
+	| direct_declarator 'declarator' ""("" parameter_type_list "")"" {{FunctionDeclarator}}
+	| direct_declarator 'declarator' ""("" identifier_list "")"" {{FunctionDeclarator}}
+	| direct_declarator 'declarator' ""("" "")"" {{FunctionDeclarator}}
 	;
 pointer
-	: ""*""
-	| ""*"" type_qualifier_list
-	| ""*"" pointer
-	| ""*"" type_qualifier_list pointer
+	: ""*"" 'pointer'
+	| ""*"" 'pointer' type_qualifier_list
+	| ""*"" 'pointer' pointer
+	| ""*"" 'pointer' type_qualifier_list pointer
 	;
 type_qualifier_list
-	: type_qualifier
-	| type_qualifier_list type_qualifier
+	: type_qualifier 'qualifier'
+	| type_qualifier_list type_qualifier 'qualifier'
 	;
 parameter_type_list
 	: parameter_list
-	| parameter_list "","" <ELLIPSIS>
+	| parameter_list "","" <ELLIPSIS> 'ellipsis'
 	;
 parameter_list
-	: parameter_declaration
-	| parameter_list "","" parameter_declaration
+	: parameter_declaration 'parameter'
+	| parameter_list "","" parameter_declaration 'parameter'
 	;
 parameter_declaration
-	: declaration_specifiers declarator
-	| declaration_specifiers abstract_declarator
-	| declaration_specifiers
+	: declaration_specifiers 'specifier' declarator 'declarator' {{}}
+	| declaration_specifiers 'specifier' abstract_declarator 'declarator' {{}}
+	| declaration_specifiers 'specifier' {{}}
 	;
 identifier_list
-	: identifier
-	| typename
-	| identifier_list "","" identifier
-	| identifier_list "","" typename
+	: identifier 'identifier'
+	| typename 'identifier'
+	| identifier_list "","" identifier 'identifier'
+	| identifier_list "","" typename 'identifier'
 	;
 type_name
-	: specifier_qualifier_list
-	| specifier_qualifier_list abstract_declarator
+	: specifier_qualifier_list {{}}
+	| specifier_qualifier_list abstract_declarator 'abstract' {{}}
 	;
 abstract_declarator
-	: pointer
-	| direct_abstract_declarator
-	| pointer direct_abstract_declarator
+	: pointer {{}}
+	| direct_abstract_declarator 'direct' {{}}
+	| pointer direct_abstract_declarator 'direct' {{}}
 	;
 direct_abstract_declarator
-	: ""("" abstract_declarator "")""
-	| <LEFT_BLOCK> <RIGHT_BLOCK>
-	| <LEFT_BLOCK> constant_expression <RIGHT_BLOCK>
-	| direct_abstract_declarator <LEFT_BLOCK> <RIGHT_BLOCK>
-	| direct_abstract_declarator <LEFT_BLOCK> constant_expression <RIGHT_BLOCK>
-	| ""("" "")""
-	| ""("" parameter_type_list "")""
-	| direct_abstract_declarator ""("" "")""
-	| direct_abstract_declarator ""("" parameter_type_list "")""
+	: ""("" abstract_declarator 'declarator' "")"" {{FunctionPointerDeclarator}}
+	| <LEFT_BLOCK> <RIGHT_BLOCK> {{ArrayDeclarator}}
+	| <LEFT_BLOCK> constant_expression 'size' <RIGHT_BLOCK> {{ArrayDeclarator}}
+	| direct_abstract_declarator 'declarator' <LEFT_BLOCK> <RIGHT_BLOCK> {{ArrayDeclarator}}
+	| direct_abstract_declarator 'declarator' <LEFT_BLOCK> constant_expression 'size' <RIGHT_BLOCK> {{ArrayDeclarator}}
+	| ""("" "")"" {{FunctionDeclarator}}
+	| ""("" parameter_type_list "")"" {{FunctionDeclarator}}
+	| direct_abstract_declarator 'declarator' ""("" "")"" {{FunctionDeclarator}}
+	| direct_abstract_declarator 'declarator' ""("" parameter_type_list "")"" {{FunctionDeclarator}}
 	;
 initializer
 	: assignment_expression
-	| <LEFT_BRACE> initializer_list <RIGHT_BRACE>
-	| <LEFT_BRACE> initializer_list "","" <RIGHT_BRACE>
+	| <LEFT_BRACE> initializer_list <RIGHT_BRACE> {{}}
+	| <LEFT_BRACE> initializer_list "","" <RIGHT_BRACE> {{}}
 	;
 initializer_list
-	: initializer
-	| initializer_list "","" initializer
+	: initializer 'initializer'
+	| initializer_list "","" initializer 'initializer'
 	;
 statement
 	: labeled_statement
@@ -355,55 +355,55 @@ statement
 	| jump_statement
 	;
 labeled_statement
-	: identifier "":"" statement
-	| ""case"" constant_expression "":"" statement
-	| ""default"" "":"" statement
+	: identifier 'label' "":"" statement 'statement' {{}} 
+	| ""case"" constant_expression 'case' "":"" statement 'statement' {{}}
+	| ""default"" 'case' "":"" statement 'statement' {{}}
 	;
 compound_statement
-	: <LEFT_BRACE> <RIGHT_BRACE>
-	| <LEFT_BRACE> statement_list <RIGHT_BRACE>
-	| <LEFT_BRACE> declaration_list <RIGHT_BRACE>
-	| <LEFT_BRACE> declaration_list statement_list <RIGHT_BRACE>
+	: <LEFT_BRACE> <RIGHT_BRACE> {{}}
+	| <LEFT_BRACE> statement_list <RIGHT_BRACE> {{}}
+	| <LEFT_BRACE> declaration_list <RIGHT_BRACE> {{}}
+	| <LEFT_BRACE> declaration_list statement_list <RIGHT_BRACE> {{}}
 	;
 declaration_list
-	: declaration
-	| declaration_list declaration
+	: declaration 'declaration'
+	| declaration_list declaration 'declaration'
 	;
 statement_list
-	: statement
-	| statement_list statement
+	: statement 'statement'
+	| statement_list statement 'statement'
 	;
 expression_statement
-	: "";""
-	| expression "";""
+	: "";"" {{}}
+	| expression 'expression' "";"" {{}}
 	;
 selection_statement
-	: ""if"" ""("" expression "")"" statement
-	| ""if"" ""("" expression "")"" statement ""else"" statement
-	| ""switch"" ""("" expression "")"" statement
+	: ""if"" ""("" expression 'if' "")"" statement 'then' {{}}
+	| ""if"" ""("" expression 'if' "")"" statement 'then' ""else"" statement 'else' {{}}
+	| ""switch"" ""("" expression 'if' "")"" statement 'statement' {{SwitchStatement}}
 	;
 iteration_statement
-	: ""while"" ""("" expression "")"" statement
-	| ""do"" statement ""while"" ""("" expression "")"" "";""
-	| ""for"" ""("" expression_statement expression_statement "")"" statement
-	| ""for"" ""("" expression_statement expression_statement expression "")"" statement
+	: ""while"" ""("" expression 'while' "")"" statement 'statement' {{WhileStatement}}
+	| ""do"" statement 'statement' ""while"" ""("" expression 'while' "")"" "";"" {{DoStatement}}
+	| ""for"" ""("" expression_statement 'init' expression_statement 'until' "")"" statement 'statement' {{ForStatement}} 
+	| ""for"" ""("" expression_statement 'init' expression_statement 'until' expression 'step' "")"" statement 'statement' {{ForStatement}}
 	;
 jump_statement
-	: ""goto"" identifier "";""
-	| ""continue"" "";""
-	| ""break"" "";""
-	| ""return"" "";""
-	| ""return"" expression "";""
+	: ""goto"" identifier 'label' "";"" {{GotoStatement}}
+	| ""continue"" "";"" {{ContinueStatement}}
+	| ""break"" "";"" {{BreakStatement}}
+	| ""return"" "";"" {{ReturnStatement}}
+	| ""return"" expression 'expr' "";"" {{ReturnStatement}}
 	;
 external_declaration
 	: function_definition
 	| declaration
 	;
 function_definition
-	: declaration_specifiers declarator declaration_list compound_statement {{}}
-	| declaration_specifiers declarator compound_statement {{}}
-	| declarator declaration_list compound_statement {{}}
-	| declarator compound_statement {{}}
+	: declaration_specifiers 'specifiers' declarator 'declarator' declaration_list 'arguments' compound_statement 'body' {{}}
+	| declaration_specifiers 'specifiers' declarator 'declarator' compound_statement 'body' {{}}
+	| declarator 'declarator' declaration_list 'arguments' compound_statement 'body' {{}}
+	| declarator 'declarator' compound_statement 'body' {{}}
 	;
-identifier: <IDENTIFIER> {{}};
-typename: <IDENTIFIER> {{}};"
+identifier: <IDENTIFIER> 'symbol' {{}};
+typename: <IDENTIFIER> 'symbol' {{}};"

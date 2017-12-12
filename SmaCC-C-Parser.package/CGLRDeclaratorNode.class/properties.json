@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "CGLRAbstractNode",
+	"category" : "SmaCC-C-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pointers",
+		"qualifiers",
+		"direct"
+	],
+	"name" : "CGLRDeclaratorNode",
+	"type" : "normal"
+}

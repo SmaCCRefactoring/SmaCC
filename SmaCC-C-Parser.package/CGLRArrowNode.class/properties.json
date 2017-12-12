@@ -5,7 +5,11 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"_pointer",
+		"minusGreaterThanToken",
+		"member"
+	],
 	"name" : "CGLRArrowNode",
 	"type" : "normal"
 }

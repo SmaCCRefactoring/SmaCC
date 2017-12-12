@@ -4,18 +4,18 @@ scanForTokenX1
 	self step.
 	currentCharacter == $.
 		ifTrue: [ ^ self scan9 ].
-	currentCharacter isDigit
+	(currentCharacter between: $0 and: $9)
 		ifTrue: [ ^ self scan10 ].
 	('Ee' includes: currentCharacter)
 		ifTrue: [ ^ self scan6 ].
 	('Xx' includes: currentCharacter)
 		ifTrue: [ self step.
-			(currentCharacter isDigit
+			((currentCharacter between: $0 and: $9)
 				or: [ (currentCharacter between: $A and: $F)
 						or: [ currentCharacter between: $a and: $f ] ])
 				ifTrue: [ [ self recordMatch: #(77).
 					self step.
-					currentCharacter isDigit
+					(currentCharacter between: $0 and: $9)
 						or: [ (currentCharacter between: $A and: $F)
 								or: [ currentCharacter between: $a and: $f ] ] ] whileTrue.
 					('LUlu' includes: currentCharacter)

@@ -1,0 +1,3 @@
+generated
+visitAbstractDeclarator: anAbstractDeclarator
+	^ self visitAbstract: anAbstractDeclarator

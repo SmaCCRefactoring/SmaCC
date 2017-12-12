@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "CGLRAbstractNode",
+	"category" : "SmaCC-C-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"prefix",
+		"symbol",
+		"members",
+		"lEFT_BRACEToken",
+		"rIGHT_BRACEToken"
+	],
+	"name" : "CGLRStructOrUnionSpecifierNode",
+	"type" : "normal"
+}

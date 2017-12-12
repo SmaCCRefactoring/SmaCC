@@ -7,8 +7,10 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"condition",
-		"then",
-		"else"
+		"else",
+		"questionMarkToken",
+		"colonToken",
+		"then"
 	],
 	"name" : "CGLRTernaryNode",
 	"type" : "normal"

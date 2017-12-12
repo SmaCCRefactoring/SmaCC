@@ -5,7 +5,11 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"object",
+		"periodToken",
+		"member"
+	],
 	"name" : "CGLRPointNode",
 	"type" : "normal"
 }

@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "CGLRAbstractNode",
+	"category" : "SmaCC-C-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"enumerators",
+		"identifier",
+		"enumToken",
+		"lEFT_BRACEToken",
+		"commaTokens",
+		"rIGHT_BRACEToken"
+	],
+	"name" : "CGLREnumNode",
+	"type" : "normal"
+}

@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "CGLRAbstractNode",
+	"category" : "SmaCC-C-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"statement",
+		"switchToken",
+		"leftParenToken",
+		"rightParenToken",
+		"if"
+	],
+	"name" : "CGLRSwitchStatementNode",
+	"type" : "normal"
+}

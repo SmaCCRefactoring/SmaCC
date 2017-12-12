@@ -5,7 +5,12 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"specifiers",
+		"declarators",
+		"semicolonToken",
+		"commaTokens"
+	],
 	"name" : "CGLRDeclarationNode",
 	"type" : "normal"
 }

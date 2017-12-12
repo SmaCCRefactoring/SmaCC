@@ -1,8 +1,5 @@
 generated
 scanForTokenX19
-	currentCharacter == $L
-		ifTrue:
-			[ ^ self scanForTokenX2 ].
 	currentCharacter == $[
 		ifTrue: [ ^ self recordAndReportMatch: #(79) ].
 	currentCharacter == $]
@@ -14,12 +11,12 @@ scanForTokenX19
 		ifTrue: [ ^ self recordAndReportMatch: #(81) ].
 	currentCharacter == $|
 		ifTrue:
-			[ ^ self scanForTokenX7 ].
+			[ ^ self scanForTokenX8 ].
 	currentCharacter == $}
 		ifTrue: [ ^ self recordAndReportMatch: #(82) ].
 	currentCharacter == $~
 		ifTrue: [ ^ self recordAndReportMatch: #(31) ].
-	currentCharacter isDigit
+	(currentCharacter between: $1 and: $9)
 		ifTrue: [ ^ self scan10 ].
 	(currentCharacter isSeparator
 		or: [ currentCharacter == Character pageUp ])

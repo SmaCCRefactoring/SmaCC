@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "CGLRAbstractNode",
+	"category" : "SmaCC-C-Parser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"then",
+		"else",
+		"ifToken",
+		"leftParenToken",
+		"rightParenToken",
+		"elseToken",
+		"if"
+	],
+	"name" : "CGLRSelectionStatementNode",
+	"type" : "normal"
+}

@@ -5,7 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"sTRING_LITERALToken"
+	],
 	"name" : "CGLRStringLiteralNode",
 	"type" : "normal"
 }

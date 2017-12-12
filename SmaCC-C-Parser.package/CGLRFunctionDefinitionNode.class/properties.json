@@ -5,7 +5,12 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"declarator",
+		"body",
+		"specifierses",
+		"argumentses"
+	],
 	"name" : "CGLRFunctionDefinitionNode",
 	"type" : "normal"
 }
