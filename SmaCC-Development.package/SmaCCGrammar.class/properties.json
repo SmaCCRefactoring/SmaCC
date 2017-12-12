@@ -5,6 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [
+		"IsExpressionMap",
+		"IsExpressionMaxCharacter",
+		"IsExpressions",
 		"MaximumCharacterValue",
 		"TokenNameBlock",
 		"TokenNameMap"

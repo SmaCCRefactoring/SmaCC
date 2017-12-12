@@ -1,16 +1,12 @@
 private
 keywordRegularExpressionFor: aString
 	| regularExpressionString regex |
-	regularExpressionString := (aString copyFrom: 2 to: aString size - 1)
-		copyReplaceAll: '""'
-		with: '"'.
+	regularExpressionString := (aString copyFrom: 2 to: aString size - 1) copyReplaceAll: '""' with: '"'.
 	regex := regularExpressionString
 		inject: nil
-		into:
-			[ :sum :each | 
+		into: [ :sum :each | 
 			sum isNil
-				ifTrue: [ SmaCCCharacterRENode characters: (String with: each) ]
-				ifFalse: [ sum
-						, (SmaCCCharacterRENode characters: (String with: each)) ] ].
+				ifTrue: [ SmaCCCharacterRENode characters: (SmaCCCharacterSet with: each) ]
+				ifFalse: [ sum , (SmaCCCharacterRENode characters: (SmaCCCharacterSet with: each)) ] ].
 	regex addStates: self scannerStates.
 	^ regex

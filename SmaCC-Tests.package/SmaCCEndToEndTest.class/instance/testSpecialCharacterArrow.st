@@ -1,4 +1,4 @@
-tests
+tests-unicode
 testSpecialCharacterArrow
 	| parserCompiler maxValue |
 	[ String with: (Character value: 16rFF00) ]

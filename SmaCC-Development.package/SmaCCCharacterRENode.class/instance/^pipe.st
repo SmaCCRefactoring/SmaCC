@@ -1,9 +1,6 @@
 constructing
 | aSmaCCRegularExpressionNode
-	| newCharacters |
 	(self canMergeWith: aSmaCCRegularExpressionNode)
 		ifFalse: [ ^ super | aSmaCCRegularExpressionNode ].
-	newCharacters := (characters , aSmaCCRegularExpressionNode characters)
-		asSet.
-	self assignCharacters: newCharacters.
+	characters := characters , aSmaCCRegularExpressionNode characters.
 	^ self

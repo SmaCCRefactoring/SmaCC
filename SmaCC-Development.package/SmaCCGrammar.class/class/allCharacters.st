@@ -1,6 +1,3 @@
 accessing
 allCharacters
-	^ String
-		withAll:
-			((0 to: self maximumCharacterValue)
-				collect: [ :each | Character value: each ])
+	^ SmaCCCharacterSet withAllCharactersTo: (Character value: self maximumCharacterValue)

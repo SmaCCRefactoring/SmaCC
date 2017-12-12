@@ -6,10 +6,9 @@ printOn: aStream
 	aStream nextPut: $[.
 	allCharacters := characters.
 	characters size > 128
-		ifTrue:
-			[ aStream nextPut: $^.
-			allCharacters := ((0 to: SmaCCGrammar maximumCharacterValue)
-				collect: [ :each | Character value: each ])
-				reject: [ :each | characters includes: each ] ].
+		ifTrue: [ allCharacters := ((0 to: SmaCCGrammar maximumCharacterValue) collect: [ :each | Character value: each ])
+				reject: [ :each | characters includes: each ].
+			allCharacters size < characters size
+				ifTrue: [ aStream nextPut: $^ ] ].
 	allCharacters do: [ :each | self printCharacter: each on: aStream ].
 	aStream nextPut: $]

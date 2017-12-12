@@ -1,9 +1,9 @@
 private
 do: aBlock over: currentData startingAt: currentStart withRun: currentRun
 	| index offset nextRun |
-	currentData = 0
+	currentData == 0
 		ifTrue: [ ^ self ].
-	currentData = 1
+	currentData == 1
 		ifTrue:
 			[ ^ currentStart to: currentStart + (currentRun * self defaultRunSize) - 1
 			do: [ :i | aBlock value: i ] ].

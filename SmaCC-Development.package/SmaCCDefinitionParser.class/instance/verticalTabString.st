@@ -1,3 +1,3 @@
 private-strings
 verticalTabString
-	^ String with: (Character value: 11)
+	^ SmaCCCharacterSet with: (Character value: 11)

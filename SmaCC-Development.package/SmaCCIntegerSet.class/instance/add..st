@@ -23,4 +23,5 @@ add: anInteger
 		to: data
 		startingAt: start
 		withRun: run.
+	normalized := false.
 	^ anInteger

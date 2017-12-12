@@ -7,7 +7,10 @@ initializeIsExpressions
 	isExpressions := Dictionary new.
 	selectors := IsExpressions
 		ifNil: [ Character selectors
-				select: [ :each | each size > 2 and: [ (each beginsWith: 'is') and: [ each numArgs = 0 and: [ (each at: 3) isUppercase ] ] ] ] ].
+				select: [ :each | 
+					each size > 2
+						and: [ (each beginsWith: 'is')
+								and: [ each numArgs = 0 and: [ (each at: 3) isUppercase ] ] ] ] ].
 	selectors
 		do: [ :sel | 
 			| string |

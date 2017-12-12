@@ -1,3 +1,3 @@
 private-strings
 carriageReturnString
-	^ String with: (Character value: 13)
+	^ SmaCCCharacterSet with: (Character value: 13)

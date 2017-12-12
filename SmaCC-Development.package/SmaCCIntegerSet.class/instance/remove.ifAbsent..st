@@ -7,4 +7,5 @@ remove: anInteger ifAbsent: aBlock
 		from: data
 		startingAt: start
 		withRun: run.
+	normalized := false.
 	^ anInteger

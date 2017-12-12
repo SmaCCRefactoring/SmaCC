@@ -1,5 +1,5 @@
 instance creation
-characters: aString
+characters: aSmaCCCharacterSet
 	^ self new
-		assignCharacters: aString;
+		characters: aSmaCCCharacterSet;
 		yourself

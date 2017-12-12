@@ -1,3 +1,3 @@
 initialize-release
-characters: aString
-	characters := aString
+characters: aSmaCCCharacterSet
+	characters := aSmaCCCharacterSet

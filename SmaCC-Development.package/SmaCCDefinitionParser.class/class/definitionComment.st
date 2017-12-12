@@ -280,7 +280,7 @@ GLR
 	;
 Unicode:
 	<unicode>
-			{SmaCCGrammar maximumCharacterValue: 16rFFFF}
+			{SmaCCGrammar maximumCharacterValue: 16rE01EF}
 	;
 IgnoredVariables
 	: EndDirective <ignorevariables> IgnoredVariableList 'variables'
@@ -335,7 +335,7 @@ Regex
 	;
 RegexTerm
 	: <character> 
-			{SmaCCCharacterRENode characters: '1' value}
+			{SmaCCCharacterRENode characters: (SmaCCCharacterSet withAll: '1' value)}
 	| <anycharacter> 
 			{SmaCCCharacterRENode characters: self allCharacters}
 	| <backslashcharacter> 
@@ -347,7 +347,7 @@ RegexTerm
 	| <tokenname> 
 			{(scannerDefinition tokenNamed: '1' value ifAbsentPut: [self generateImplicitToken: '1']) copy}
 	| <symbolname> 
-			{SmaCCSequenceRENode nodes: ('1' value asOrderedCollection collect: [:each | SmaCCCharacterRENode characters: (String with: each)])}
+			{SmaCCSequenceRENode nodes: ('1' value asOrderedCollection collect: [:each | SmaCCCharacterRENode characters: (SmaCCCharacterSet with: each)])}
 	| RegexTerm ""*""	
 			{'1' repeat}
 	| RegexTerm ""+"" 

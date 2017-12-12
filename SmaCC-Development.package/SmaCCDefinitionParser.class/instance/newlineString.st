@@ -1,3 +1,3 @@
 private-strings
 newlineString
-	^ String with: (Character value: 10)
+	^ SmaCCCharacterSet with: (Character value: 10)

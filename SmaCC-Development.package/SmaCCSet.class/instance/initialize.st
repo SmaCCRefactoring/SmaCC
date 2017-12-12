@@ -1,5 +1,5 @@
 initialize-release
 initialize
 	super initialize.
-	characters := ByteArray new: 16r10000 / 8.
+	characters := SmaCCCharacterSet new.
 	objects := Set new
