@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "SmaCC-Alt",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"debugger"
+	],
+	"name" : "AltSmaCCStepToNextReduce",
+	"type" : "normal"
+}
