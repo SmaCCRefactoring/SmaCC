@@ -1,3 +1,3 @@
 instance creation
 on: anAltDebugger
-	^ self new session: anAltDebugger
+	^ self new debugger: anAltDebugger
