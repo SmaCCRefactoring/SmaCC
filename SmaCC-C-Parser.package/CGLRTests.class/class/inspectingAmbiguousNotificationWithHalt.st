@@ -3,11 +3,11 @@ inspectingAmbiguousNotificationWithHalt
 	<example>
 	[ CGLRParser
 		parse:
-			' void f(int i) {
+			'typedef int i;
+void f() {
 	i * i;
-} ' ]
+}' ]
 		on: SmaCCAmbiguousResultNotification
 		do: [ :ex | 
 			self halt.
-			ex inspect.
 			ex resume: ex tag first ]
