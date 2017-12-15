@@ -1,5 +1,5 @@
 examples
-ambiguityAsAttribute
+ambiguityAsAttribute3
 	<example>
 	| block |
 	block := [ :in :others | 
@@ -7,12 +7,10 @@ ambiguityAsAttribute
 		ifNotNil: [ in isCollection
 				ifTrue: [ 1 to: in size do:
 						[ :i | block value: (in at: i) value: (others collect: [ :e | e at: i ]) ] ]
-				ifFalse: [ others do: [ :i | in ambiguous: i ] ] ] ].
+				ifFalse: [ in attributeNamed: #ambiguous put: others ] ] ].
 	^ [ CGLRParser
 		parse:
-			' void f(int i) {
-	i * i;
-} ' ]
+			' int i; void f() { i * i; }' ]
 		on: SmaCCAmbiguousResultNotification
 		do: [ :ex | 
 			| results |
