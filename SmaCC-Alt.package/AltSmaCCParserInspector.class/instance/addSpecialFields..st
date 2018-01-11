@@ -7,6 +7,7 @@ addSpecialFields: elements
 				label: 'decompiled'
 				description: [ self object printString ]
 				value: self decompiledParser);
+		add: (AltSmaCCStateStackElement host: self object);
 		add:
 			(AltDynamicEyeElement
 				host: self object
