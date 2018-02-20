@@ -8,6 +8,7 @@ addSpecialFields: elements
 				description: [ self object printString ]
 				value: self decompiledParser);
 		add: (AltSmaCCStateStackElement host: self object);
+		add: (AltSmaCCPotentialActionsElement host: self object);
 		add:
 			(AltDynamicEyeElement
 				host: self object

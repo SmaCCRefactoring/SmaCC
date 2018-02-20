@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "AltAbstractEyeElement",
+	"category" : "SmaCC-Alt",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "AltSmaCCPotentialActionsElement",
+	"type" : "normal"
+}
