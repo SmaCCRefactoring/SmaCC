@@ -1,0 +1,1 @@
+I'm an abstract class with no responsabilities nor code

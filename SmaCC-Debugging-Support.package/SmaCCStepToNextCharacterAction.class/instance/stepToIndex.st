@@ -1,3 +1,7 @@
 accessing
 stepToIndex
-	^ self session scanner stream position + 1
+	^ self session scanner stream
+		in: [ :s | 
+			s atEnd
+				ifTrue: [ s position ]
+				ifFalse: [ s position + 1 ] ]

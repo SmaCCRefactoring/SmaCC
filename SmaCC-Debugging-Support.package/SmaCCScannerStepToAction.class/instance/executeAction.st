@@ -6,5 +6,7 @@ executeAction
 	self
 		stepUntil: [ :context | 
 			scanner stream position >= toIndex
-				and:
-					[ (context findContextSuchThat: [ :each | (each receiver isKindOf: SmaCCScanner) and: [ each selector = #step ] ]) isNil ] ]
+				and: [ (context
+						findContextSuchThat:
+							[ :each | (each receiver isKindOf: SmaCCScanner) and: [ each selector = #step ] ])
+						isNil ] ]
