@@ -1,0 +1,1 @@
+This action steps one forward into the scanner input, but tries to never go over the end.

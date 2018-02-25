@@ -4,6 +4,9 @@ executeAction
 	token := self session parser currentToken.
 	self
 		stepUntil: [ :context | 
-			self session parser isEOFToken
+			(context
+				findContextSuchThat:
+					[ :each | (each receiver isKindOf: SmaCCParser) and: [ each selector = #parse ] ])
+				isNil
 				or: [ self session parser currentToken ~~ token
 						and: [ self session parser currentToken notNil ] ] ]
