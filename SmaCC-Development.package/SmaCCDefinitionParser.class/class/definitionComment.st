@@ -404,33 +404,6 @@ Terms
 				add: term; 
 				nameLastItem: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1); 
 				yourself}	
-	| Terms 'rhs' Term 'term' ""?""
-			{rhs
-				add: (grammar makeOptionalSymbolFor: term);
-				yourself}
-	| Terms 'rhs' Term 'term' <variablename> 'variableNameToken' ""?"" 
-			{rhs
-				add: (grammar makeOptionalSymbolFor: term);
-				nameLastItem: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1);
-				yourself}	
-	| Terms 'rhs' Term 'term' ""*""
-			{rhs
-				add: (grammar makeRepeatSymbolFor: term);
-				yourself}
-	| Terms 'rhs' Term 'term' <variablename> 'variableNameToken' ""*"" 
-			{rhs
-				add: (grammar makeRepeatSymbolFor: term);
-				nameLastItem: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1);
-				yourself}		
-	| Terms 'rhs' Term 'term' ""+""
-			{rhs
-				add: (grammar makeRepeatMultipleSymbolFor: term);
-				yourself}
-	| Terms 'rhs' Term 'term' <variablename> 'variableNameToken' ""+"" 
-			{rhs
-				add: (grammar makeRepeatMultipleSymbolFor: term);
-				nameLastItem: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1);
-				yourself}	
 	;
 
 Term
@@ -459,6 +432,18 @@ Term
 			{grammar makeGroupFor: '2'}
 	| ""["" SimpleTerms ""]""
 			{grammar makeOptionalSymbolFor: (grammar makeGroupFor: '2')}
+	| Term ""?""
+			{ grammar makeOptionalSymbolFor: '1' }
+	| Term 'term' <variablename> 'variableNameToken' ""?""
+			{ grammar makeOptionalSymbolFor: term named: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1) }
+	| Term ""*""
+			{ grammar makeRepeatSymbolFor: '1' }
+	| Term 'term' <variablename> 'variableNameToken' ""*""
+		{ grammar makeRepeatSymbolFor: term named: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1) }
+	| Term ""+""
+			{ grammar makeRepeatMultipleSymbolFor: '1' }
+	| Term 'term' <variablename> 'variableNameToken' ""+""
+			{ grammar makeRepeatMultipleSymbolFor: term named: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1) }	
 	;
 
 SimpleTerms
@@ -479,31 +464,4 @@ SimpleTerm
 			add: term;
 			nameLastItem: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1);
 			yourself} 
-	| SimpleTerm 'rhs' Term 'term' ""?""
-		{rhs
-			add: (grammar makeOptionalSymbolFor: term);
-			yourself}
-	| SimpleTerm 'rhs' Term 'term' <variablename> 'variableNameToken' ""?"" 
-		{rhs
-			add: (grammar makeOptionalSymbolFor: term);
-			nameLastItem: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1);
-			yourself}	
-	| SimpleTerm 'rhs' Term 'term' ""*""
-		{rhs
-			add: (grammar makeRepeatSymbolFor: term);
-			yourself}
-	| SimpleTerm 'rhs' Term 'term'  <variablename> 'variableNameToken'  ""*""
-		{rhs
-			add: (grammar makeRepeatSymbolFor: term);
-			nameLastItem: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1);
-			yourself}
-	| SimpleTerm 'rhs' Term 'term' ""+""
-		{rhs
-			add: (grammar makeRepeatMultipleSymbolFor: term);
-			yourself}	
-	| SimpleTerm 'rhs' Term 'term'  <variablename> 'variableNameToken'  ""+""
-		{rhs
-			add: (grammar makeRepeatMultipleSymbolFor: term);
-			nameLastItem: (variableNameToken value copyFrom: 2 to: variableNameToken value size - 1);
-			yourself}	
 	;"

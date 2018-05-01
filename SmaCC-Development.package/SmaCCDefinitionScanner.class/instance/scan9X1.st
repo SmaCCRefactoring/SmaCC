@@ -1,31 +1,32 @@
 generated
 scan9X1
+	self recordMatch: #(29 40).
 	self step.
-	currentCharacter == $c
-		ifTrue: [ self step.
-			(currentCharacter between: $A and: $Z)
-				ifTrue: [ ^ self recordAndReportMatch: #(37) ].
-			^ self reportLastMatch ].
-	currentCharacter == $x
-		ifTrue: [ self step.
-			(currentCharacter isDigit
-				or: [ (currentCharacter between: $A and: $F)
-						or: [ currentCharacter between: $a and: $f ] ])
-				ifTrue: [ self recordMatch: #(37).
-					self step.
-					(currentCharacter isDigit
-						or: [ (currentCharacter between: $A and: $F)
-								or: [ currentCharacter between: $a and: $f ] ])
-						ifTrue: [ self recordMatch: #(37).
-							self step.
-							(currentCharacter isDigit
-								or: [ (currentCharacter between: $A and: $F)
-										or: [ currentCharacter between: $a and: $f ] ])
-								ifTrue: [ self recordMatch: #(37).
-									self step.
-									(currentCharacter isDigit
-										or: [ (currentCharacter between: $A and: $F)
-												or: [ currentCharacter between: $a and: $f ] ])
-										ifTrue: [ ^ self recordAndReportMatch: #(37) ] ] ] ].
-			^ self reportLastMatch ].
-	^ self recordAndReportMatch: #(37)
+	((currentCharacter between: $0 and: $9)
+		or: [ (currentCharacter between: $A and: $Z)
+				or: [ currentCharacter == $_
+						or: [ (currentCharacter between: $a and: $z)
+								or: [ ('ªµº' includes: currentCharacter)
+										or: [ (currentCharacter
+												between: (Character value: 192)
+												and: (Character value: 214))
+												or: [ (currentCharacter
+														between: (Character value: 216)
+														and: (Character value: 246))
+														or: [ currentCharacter >= (Character value: 248) ] ] ] ] ] ] ])
+		ifTrue: [ [ self recordMatch: #(29).
+			self step.
+			(currentCharacter between: $0 and: $9)
+				or: [ (currentCharacter between: $A and: $Z)
+						or: [ currentCharacter == $_
+								or: [ (currentCharacter between: $a and: $z)
+										or: [ ('ªµº' includes: currentCharacter)
+												or: [ (currentCharacter
+														between: (Character value: 192)
+														and: (Character value: 214))
+														or: [ (currentCharacter
+																between: (Character value: 216)
+																and: (Character value: 246))
+																or: [ currentCharacter >= (Character value: 248) ] ] ] ] ] ] ] ]
+				whileTrue ].
+	^ self reportLastMatch

@@ -1,13 +1,17 @@
 generated
 scan9X2
-	self recordMatch: #(31 40).
+	self recordMatch: #(40).
 	self step.
-	(currentCharacter <= Character tab
-		or: [ (currentCharacter between: Character pageUp and: Character newPage)
-				or: [ currentCharacter >= (Character value: 14) ] ])
-		ifTrue: [ [ self recordMatch: #(31).
-			self step.
-			currentCharacter <= Character tab
-				or: [ (currentCharacter between: Character pageUp and: Character newPage)
-						or: [ currentCharacter >= (Character value: 14) ] ] ] whileTrue ].
+	((currentCharacter between: $A and: $Z)
+		or: [ currentCharacter == $_
+				or: [ (currentCharacter between: $a and: $z)
+						or: [ ('ªµº' includes: currentCharacter)
+								or: [ (currentCharacter
+										between: (Character value: 192)
+										and: (Character value: 214))
+										or: [ (currentCharacter
+												between: (Character value: 216)
+												and: (Character value: 246))
+												or: [ currentCharacter >= (Character value: 248) ] ] ] ] ] ])
+		ifTrue: [ ^ self scan4 ].
 	^ self reportLastMatch

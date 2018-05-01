@@ -1,6 +1,7 @@
 generated
 scanForTokenX4
-	[ self recordMatch: #(29).
+	[ self recordMatch: #(27).
 	self step.
-	currentCharacter isAlphaNumeric or: [ currentCharacter == $_ ] ]
-		whileTrue
+	currentCharacter isSeparator
+		or: [ currentCharacter == Character pageUp ] ] whileTrue.
+	^ self reportLastMatch

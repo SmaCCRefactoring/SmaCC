@@ -1,7 +1,11 @@
 generated
 scan9X7
-	self recordMatch: #(40).
+	self recordMatch: #(27 40).
 	self step.
-	(currentCharacter isLetter or: [ currentCharacter == $_ ])
-		ifTrue: [ ^ self scan4 ].
+	(currentCharacter isSeparator
+		or: [ currentCharacter == Character pageUp ])
+		ifTrue: [ [ self recordMatch: #(27).
+			self step.
+			currentCharacter isSeparator
+				or: [ currentCharacter == Character pageUp ] ] whileTrue ].
 	^ self reportLastMatch

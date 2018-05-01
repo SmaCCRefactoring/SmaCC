@@ -1,6 +1,7 @@
 generated
 scanForTokenX1X4
-	[ self recordMatch: #(29).
+	self recordMatch: #(32).
 	self step.
-	currentCharacter isAlphaNumeric or: [ currentCharacter == $_ ] ]
-		whileTrue
+	currentCharacter == ${
+		ifTrue: [ ^ self recordAndReportMatch: #(42) ].
+	^ self reportLastMatch
