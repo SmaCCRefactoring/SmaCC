@@ -1,0 +1,1 @@
+I step either past the end of the current parser #performAction: or to the start of the next #performAction:
