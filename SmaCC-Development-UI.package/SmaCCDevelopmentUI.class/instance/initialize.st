@@ -11,6 +11,7 @@ initialize
 			to: self;
 		when: MCWorkingCopyCreated , MCWorkingCopyDeleted
 			send: #updatePackages
-			to: self.
+			to: self;
+		when: MethodModified send: #updateDefinition: to: self.
 	self createDefinitionPage.
 	self updateTitle
