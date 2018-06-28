@@ -280,7 +280,7 @@ StartingTokens
 	;
 GLR
 	: <glr>
-			{grammar isGLR: true}
+			{grammar parserType: #glr}
 	;
 ParserType:
 	<parser> <symbolname> 'symbol' {grammar parserType: symbol value asSymbol}

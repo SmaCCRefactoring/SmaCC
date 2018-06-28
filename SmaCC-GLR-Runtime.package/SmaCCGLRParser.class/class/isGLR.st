@@ -1,0 +1,3 @@
+testing
+isGLR
+	^ true

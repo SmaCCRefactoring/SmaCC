@@ -23,7 +23,6 @@
 		"prefix",
 		"suffix",
 		"codeGenerator",
-		"isGLR",
 		"ignoreCase",
 		"ignoredVariables",
 		"annotateTokens",

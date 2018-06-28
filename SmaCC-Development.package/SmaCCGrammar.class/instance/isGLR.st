@@ -1,3 +1,3 @@
 testing
 isGLR
-	^ isGLR
+	^ self parserSuperclass isGLR
