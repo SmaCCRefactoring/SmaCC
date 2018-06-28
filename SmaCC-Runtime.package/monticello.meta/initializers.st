@@ -1,0 +1,1 @@
+SmaCCScanner initialize.

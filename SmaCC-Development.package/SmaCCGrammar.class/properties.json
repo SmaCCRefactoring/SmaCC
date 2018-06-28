@@ -13,6 +13,7 @@
 		"TokenNameMap"
 	],
 	"instvars" : [
+		"parserType",
 		"type",
 		"shiftReduceTable",
 		"symbols",
