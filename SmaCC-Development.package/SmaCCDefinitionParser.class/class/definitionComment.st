@@ -5,6 +5,9 @@ definitionComment
 directives <states>
 	: states 
 	;
+directives <parser>
+	: parser
+	;
 directives <excludes> 
 	: excludes 
 	;
@@ -165,6 +168,7 @@ Directive
 	| IgnoreCase
 	| IgnoredVariables
 	| AnnotateTokens
+	| ParserType
 	;
 StartDirective 
 	: 		{self state: #directives}
@@ -277,6 +281,9 @@ StartingTokens
 GLR
 	: <glr>
 			{grammar isGLR: true}
+	;
+ParserType:
+	<parser> <symbolname> 'symbol' {grammar parserType: symbol value asSymbol}
 	;
 Unicode:
 	<unicode>

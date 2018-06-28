@@ -1,6 +1,6 @@
 generated
 scan9X1
-	self recordMatch: #(29 40).
+	self recordMatch: #(30 41).
 	self step.
 	((currentCharacter between: $0 and: $9)
 		or: [ (currentCharacter between: $A and: $Z)
@@ -14,7 +14,7 @@ scan9X1
 														between: (Character value: 216)
 														and: (Character value: 246))
 														or: [ currentCharacter >= (Character value: 248) ] ] ] ] ] ] ])
-		ifTrue: [ [ self recordMatch: #(29).
+		ifTrue: [ [ self recordMatch: #(30).
 			self step.
 			(currentCharacter between: $0 and: $9)
 				or: [ (currentCharacter between: $A and: $Z)

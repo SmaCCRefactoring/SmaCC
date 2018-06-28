@@ -1,11 +1,11 @@
 generated
 scan9X4
-	self recordMatch: #(31 40).
+	self recordMatch: #(32 41).
 	self step.
 	(currentCharacter <= Character tab
 		or: [ (currentCharacter between: Character pageUp and: Character newPage)
 				or: [ currentCharacter >= (Character value: 14) ] ])
-		ifTrue: [ [ self recordMatch: #(31).
+		ifTrue: [ [ self recordMatch: #(32).
 			self step.
 			currentCharacter <= Character tab
 				or: [ (currentCharacter between: Character pageUp and: Character newPage)

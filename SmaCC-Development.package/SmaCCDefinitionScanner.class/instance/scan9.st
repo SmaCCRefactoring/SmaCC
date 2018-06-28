@@ -8,7 +8,7 @@ scan9
 	currentCharacter == $#
 		ifTrue: [ ^ self scan9X4 ].
 	currentCharacter == $%
-		ifTrue: [ ^ self recordAndReportMatch: #(35) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(36) ].
 	currentCharacter == $'
 		ifTrue: [ ^ self scan9X2 ].
 	currentCharacter == $(

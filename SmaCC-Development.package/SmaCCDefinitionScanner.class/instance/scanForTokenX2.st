@@ -1,6 +1,6 @@
 generated
 scanForTokenX2
-	[ self recordMatch: #(29).
+	[ self recordMatch: #(30).
 	self step.
 	(currentCharacter between: $0 and: $9)
 		or: [ (currentCharacter between: $A and: $Z)

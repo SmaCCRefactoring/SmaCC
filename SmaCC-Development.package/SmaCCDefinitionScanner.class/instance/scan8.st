@@ -14,7 +14,7 @@ scan8
 												or: [ currentCharacter >= (Character value: 248) ] ] ] ] ] ])
 		ifTrue: [ [ self step.
 			currentCharacter == $>
-				ifTrue: [ ^ self recordAndReportMatch: #(28) ].
+				ifTrue: [ ^ self recordAndReportMatch: #(29) ].
 			(currentCharacter between: $0 and: $9)
 				or: [ (currentCharacter between: $A and: $Z)
 						or: [ currentCharacter == $_

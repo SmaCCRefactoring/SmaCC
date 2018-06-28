@@ -2,7 +2,7 @@ generated
 scan4
 	[ self step.
 	currentCharacter == $'
-		ifTrue: [ ^ self recordAndReportMatch: #(33) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(34) ].
 	(currentCharacter between: $0 and: $9)
 		or: [ (currentCharacter between: $A and: $Z)
 				or: [ currentCharacter == $_

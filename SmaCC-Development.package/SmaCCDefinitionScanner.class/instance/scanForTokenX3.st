@@ -1,6 +1,6 @@
 generated
 scanForTokenX3
-	[ self recordMatch: #(31).
+	[ self recordMatch: #(32).
 	self step.
 	currentCharacter <= Character tab
 		or: [ (currentCharacter between: Character pageUp and: Character newPage)

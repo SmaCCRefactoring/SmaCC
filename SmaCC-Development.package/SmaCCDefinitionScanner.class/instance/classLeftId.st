@@ -1,3 +1,3 @@
 generated
 classLeftId
-	^ 42
+	^ 43

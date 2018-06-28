@@ -1,6 +1,6 @@
 generated
 scan9X2
-	self recordMatch: #(40).
+	self recordMatch: #(41).
 	self step.
 	((currentCharacter between: $A and: $Z)
 		or: [ currentCharacter == $_

@@ -3,7 +3,7 @@ scan9X11
 	currentCharacter == ${
 		ifTrue: [ ^ self scan9X6 ].
 	currentCharacter == $|
-		ifTrue: [ ^ self recordAndReportMatch: #(5 40) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(5 41) ].
 	(currentCharacter isSeparator
 		or: [ currentCharacter == Character pageUp ])
 		ifTrue: [ ^ self scan9X8 ].
@@ -19,4 +19,4 @@ scan9X11
 												and: (Character value: 246))
 												or: [ currentCharacter >= (Character value: 248) ] ] ] ] ] ])
 		ifTrue: [ ^ self scan9X1 ].
-	^ self recordAndReportMatch: #(40)
+	^ self recordAndReportMatch: #(41)
