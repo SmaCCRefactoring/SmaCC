@@ -26,7 +26,7 @@ Installing a Development version of Pharo for the latest Pharo (with no guarante
 ```smalltalk
 Metacello new
     baseline: 'SmaCC';
-    repository: 'github://ThierryGoubier/SmaCC';
+    repository: 'github://SmaCCRefactoring/SmaCC';
     load
 ```
 
