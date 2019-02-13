@@ -17,4 +17,4 @@ buildStructure
 		parseExpression: source
 		onError: [ :s :p | self error: 'Invalid pattern expression' ].
 	"evaluate..."
-	Compiler evaluate: source for: self logged: false
+	self class compiler evaluate: source for: self logged: false
