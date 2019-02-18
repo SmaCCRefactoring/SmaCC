@@ -1,4 +1,0 @@
-SmaCCNode initialize.
-SmaCCGrammar initialize.
-SmaCCSmalltalkCodeGenerator initialize.
-SmaCCDefaultNodeReduceCode initialize.
