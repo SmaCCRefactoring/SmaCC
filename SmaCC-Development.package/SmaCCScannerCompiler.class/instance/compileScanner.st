@@ -4,4 +4,5 @@ compileScanner
 	regex := self createRegex.
 	self compileTokenIdMethods.
 	self compileMethodsFor: regex.
-	self compileStateMethod
+	self compileStateMethod.
+	self compilePatternMethods
