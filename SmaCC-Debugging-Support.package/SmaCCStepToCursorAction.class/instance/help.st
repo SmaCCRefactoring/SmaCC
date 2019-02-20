@@ -1,3 +1,3 @@
 accessing
 help
-	^ 'step forward until I reach the cursor position in the input'
+	^ 'Run until we get to the cursor position or a parse error is encountered.'

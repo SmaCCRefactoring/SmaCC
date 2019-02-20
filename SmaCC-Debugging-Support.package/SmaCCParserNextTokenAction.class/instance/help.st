@@ -1,3 +1,3 @@
 accessing
 help
-	^ 'Step forward until the scanner has produced a new token'
+	^ 'Run until we get the next token or a parse error is encountered.'

@@ -1,5 +1,16 @@
 building
 tokenIntervalFor: anObject
+	(anObject isKindOf: OrderedCollection)
+		ifTrue: [ | interval |
+			anObject
+				do: [ :each | 
+					| newInterval |
+					newInterval := self tokenIntervalFor: each.
+					interval isNil
+						ifTrue: [ interval := newInterval ]
+						ifFalse: [ newInterval notNil
+								ifTrue: [ interval := (interval first min: newInterval first) to: (interval last max: newInterval last) ] ] ].
+			^ interval ].
 	(anObject isKindOf: SmaCCToken)
 		ifTrue: [ (anObject startPosition notNil and: [ anObject startPosition > 0 ])
 				ifTrue: [ ^ anObject startPosition to: anObject stopPosition ] ].

@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SmaCC-Debugging-Support",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"patternNode",
+		"matchedNodes",
+		"matched",
+		"children",
+		"parent"
+	],
+	"name" : "SmaCCDebugMatchResult",
+	"type" : "normal"
+}

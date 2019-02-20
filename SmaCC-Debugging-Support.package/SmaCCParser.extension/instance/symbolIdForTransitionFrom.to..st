@@ -5,7 +5,6 @@ symbolIdForTransitionFrom: fromState to: toState
 	self
 		allActionsAndSymbolsForState: fromState
 		do: [ :action :symbol | 
-			| row |
 			toValue = action
 				ifTrue: [ ^ symbol ] ].
 	^ 0

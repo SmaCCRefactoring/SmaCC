@@ -1,4 +1,4 @@
-*SmaCC-Debugging-Support
+*smacc-debugging-support
 gtInspectorTreeIn: aComposite
 	<gtInspectorPresentationOrder: 30>
 	aComposite tabulator
@@ -14,14 +14,7 @@ gtInspectorTreeIn: aComposite
 				andShow: [ :composite | 
 					composite table
 						display: [ Array with: (Array with: 'self' with: #node with: self) ];
-						children: [ :each | 
-							(each at: 2) = #node
-								ifTrue: [ each last gtInspectorItems ]
-								ifFalse: [ (each at: 2) = #nodes
-										ifTrue: [ self gtCollectionItems: each last type: #node ]
-										ifFalse: [ (each at: 2) = #tokens
-												ifTrue: [ self gtCollectionItems: each last type: #token ]
-												ifFalse: [ #() ] ] ] ];
+						children: [ :each | self gtChildrenOf: each ];
 						format: [ :each | each first ];
 						column: 'Variable' evaluated: [ :each | each first ];
 						column: 'Type'

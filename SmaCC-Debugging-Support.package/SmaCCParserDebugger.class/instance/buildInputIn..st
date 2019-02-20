@@ -8,10 +8,9 @@ buildInputIn: browser
 			text := composite text.
 			text
 				title: 'Input';
-				display: [ self inputText ].
-			text
-				with:
-					[ :c | self installActionsForRootPragmas: #(#SmaCCDebuggingInputAction) in: c ] ].
+				display: [ self inputText ];
+				withLineNumbers: true.
+			text with: [ :c | self installActionsForRootPragmas: #(#SmaCCDebuggingInputAction) in: c ] ].
 	browser transmit
 		from: #stack port: #selection;
 		to: #input port: #selectionInterval;
@@ -21,5 +20,4 @@ buildInputIn: browser
 		to: #input port: #selectionInterval;
 		transformed: [ :each | 
 			each notNil
-				ifTrue: [ (self tokenIntervalFor: each last)
-						ifNil: [ self inputSelectionInterval ] ] ]
+				ifTrue: [ (self tokenIntervalFor: each last) ifNil: [ self inputSelectionInterval ] ] ]

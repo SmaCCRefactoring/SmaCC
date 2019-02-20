@@ -4,8 +4,7 @@ buildPotentialTokensIn: browser
 		from: #stack port: #selection;
 		to: #potential;
 		transformed: [ :context | self potentialStateActions ];
-		andShow:
-				[ :composite | 
+		andShow: [ :composite | 
 			composite table
 				title: 'Possible Actions';
 				column: 'Symbol' evaluated: [ :each | each first ];

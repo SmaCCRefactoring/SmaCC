@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "SmaCC-Debugging-Support",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"grammar",
+		"nfa",
+		"actionMap"
+	],
+	"name" : "SmaCCRegexSimulator",
+	"type" : "normal"
+}

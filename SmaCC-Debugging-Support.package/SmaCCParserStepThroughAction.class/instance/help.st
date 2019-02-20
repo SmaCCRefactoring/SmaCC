@@ -1,3 +1,3 @@
 accessing
 help
-	^ 'Step until the next parser action'
+	^ 'Run until we perform the next action (shift or reduce) or a parse error is encountered.'
