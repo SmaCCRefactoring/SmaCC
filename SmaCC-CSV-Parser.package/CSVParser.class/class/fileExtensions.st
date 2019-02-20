@@ -1,0 +1,3 @@
+file types
+fileExtensions
+	^ #('.csv')
