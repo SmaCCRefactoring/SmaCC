@@ -4,7 +4,9 @@
 	"category" : "SmaCC-Debugging-Support",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"availableAutomatically"
+	],
 	"instvars" : [
 		"isGLR"
 	],
