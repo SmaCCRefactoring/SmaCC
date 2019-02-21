@@ -45,7 +45,7 @@ Number
 
 This basically says that an expressions is either a number or an expression added to a number. You should now have something that looks like:
 
-We should be able to compile a parser now. First, we need to specify the scanner and parser classes to create. You have to enter a name for the parser class in the Parser entry box, and the tool will extract a scanner class name for the Scanner entry box. Enter CalculatorParser in the Parser entry box and press enter, you will see the tool filling up CalculatorScanner in the Scanner entry box (the arrow allows you to select a pre-existing parser and scanner, but don't overwrite one of the pre-existing ones, unless you know what you are doing!).
+We should be able to compile a parser now. First, we need to specify the scanner and parser classes to create. You have to enter a name for the parser class in the Parser entry box, and the tool will extract a scanner class name for the Scanner entry box. Enter CalculatorParser in the Parser entry box and press enter, you will see the tool filling up CalculatorScanner in the Scanner entry box (the arrow allows you to select a pre-existing parser and scanner, but don''t overwrite one of the pre-existing ones, unless you know what you are doing!).
 
 Once the parser and scanner class names are entered, we are ready to compile the parser. Press Compile LR(1) or Compile LALR(1). This will create new Smalltalk classes for the CalculatorScanner and CalculatorParser and compile several methods in those classes. All methods that SmaCC compiles will go into a "generated-*" method protocol. You should not change those methods or add new methods to the "generated-*" method protocols since they are replaced or deleted each time you compile a parser.
 
