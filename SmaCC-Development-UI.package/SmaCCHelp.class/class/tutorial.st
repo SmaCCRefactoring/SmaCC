@@ -7,6 +7,8 @@ tutorial
 
 This is a walk-through tutorial to demonstrate some features of SmaCC, the Smalltalk Compiler Compiler, as we incrementally develop a simple calculator. If you haven''t already done so, you will first need to load the source. Once you have loaded the code, you need to open the SmaCC Parser Generator. In Pharo, it is in the Tools submenu of the main menu.
 
+We consider that you already know what a parser is, that you understand lexical analysis, syntax analysis and semantic actions, and so on. Many good references on the subject exists, as well as on-line courses materials. SmaCC is a GLR/LR lexer / parser generator, similar to the lex/yacc combination, with a unified grammar (both the lexer and parser are specified in the same text, with two level rules). Compilation generates both a lexer class and a scanner class, that you need to create instances of to parse some text. You can create as many instances of a parser as you like; each instance is independent.
+
 Our first calculator is going to be relatively simple. It is going to take two numbers and add them together. To start things off, we have to tell the scanner how to recognize a number. It starts with one or more digits, possibly followed by an decimal point with zero or more digits after it. The scanner definition for this token is:
 
 <number>        :       [0-9]+ (\. [0-9]*) ? ;
@@ -43,9 +45,11 @@ Number
 
 This basically says that an expressions is either a number or an expression added to a number. You should now have something that looks like:
 
-We should be able to compile a parser now. First, we need to specify the scanner and parser classes to create. These are entered from the ... buttons for Scanner class and Parser class. Enter CalculatorScanner and CalculatorParser respectively. Once the class names are entered, we are ready to compile the parser. Press Compile LR(1) or Compile LALR(1). This will create new Smalltalk classes for the CalculatorScanner and CalculatorParser and compile several methods in those classes. All methods that SmaCC compiles will go into a "generated-*" method protocol. You should not change those methods or add new methods to the "generated-*" method protocols since they are replaced or deleted each time you compile.
+We should be able to compile a parser now. First, we need to specify the scanner and parser classes to create. You have to enter a name for the parser class in the Parser entry box, and the tool will extract a scanner class name for the Scanner entry box. Enter CalculatorParser in the Parser entry box and press enter, you will see the tool filling up CalculatorScanner in the Scanner entry box (the arrow allows you to select a pre-existing parser and scanner, but don't overwrite one of the pre-existing ones, unless you know what you are doing!).
 
-Whenever SmaCC creates new classes, they are compiled in the package (or package tag) named on the Package entry box. You may wish to select a different package by pressing ''...''.
+Once the parser and scanner class names are entered, we are ready to compile the parser. Press Compile LR(1) or Compile LALR(1). This will create new Smalltalk classes for the CalculatorScanner and CalculatorParser and compile several methods in those classes. All methods that SmaCC compiles will go into a "generated-*" method protocol. You should not change those methods or add new methods to the "generated-*" method protocols since they are replaced or deleted each time you compile a parser.
+
+Whenever SmaCC creates new classes, they are compiled in the package (or package tag) named on the Package entry box. You may wish to select a different package from the list of packages in the entry box (the down arrow) or write there a new package name.
 
 Now we are ready to test our parser. Go to the "test" pane, enter "3 + 4", and press "Parse"; you will see that the parser correctly parses it. If you press "Parse and explore"  or "Parse and inspect" you will see an explorer (respectively an inspector) on an OrderedCollection that contains the parsed tokens. This is because we haven''t specified what the parser is supposed to do when it parses. You can also enter incorrect items. For example, try to parse "3 + + 4" or "3 + a". An error message should appear in the text.
 
