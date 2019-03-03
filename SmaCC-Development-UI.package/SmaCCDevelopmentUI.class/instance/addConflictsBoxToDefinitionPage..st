@@ -1,20 +1,14 @@
 initialization
 addConflictsBoxToDefinitionPage: aDefinitionPageTabPalette
-	self
-		conflictTextMorph:
-			((PluggableTextMorph
-				on: self
-				text: #conflicts
-				accept: nil
-				readSelection: nil
-				menu: nil)
-				vResizing: #spaceFill;
-				hResizing: #spaceFill;
-				enabled: false;
-				yourself).
+	| aMorph |
+	aMorph := self conflictsTextModel newScrolledText.
+	aMorph
+		vResizing: #spaceFill;
+		hResizing: #spaceFill;
+		beReadOnly.
 	aDefinitionPageTabPalette
 		addPage:
 			(aDefinitionPageTabPalette newContentMorph
-				addMorph: self conflictTextMorph;
+				addMorph: aMorph;
 				yourself)
 		label: 'Messages'

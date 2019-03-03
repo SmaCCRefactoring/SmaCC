@@ -1,3 +1,3 @@
 actions
 accept
-	definitionCodeHolder contentsMorph accept
+	definitionTextModel acceptEditsInView

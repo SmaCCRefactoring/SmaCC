@@ -1,3 +1,3 @@
 accessing
 definition
-	^ self definitionCodeHolder contents asString
+	^ definitionTextModel text asString

@@ -6,7 +6,8 @@ compile: aSymbol
 		ifTrue: [ ^ UIManager default inform: 'Both classes are not specified' ].
 	messages := OrderedCollection new.
 	Cursor read
-		showWhile: [ self verifyDefinition
+		showWhile: [ self definitionTextModel acceptEdits.
+			self verifyDefinition
 				ifFalse: [ ^ self ] ].
 	Cursor wait
 		showWhile: [ oldCharacterSize := SmaCCGrammar maximumCharacterValue.
@@ -23,7 +24,7 @@ compile: aSymbol
 					self
 						displayError: ex description
 						at: ex tag position
-						notifying: self definitionCodeHolder contentsMorph.
+						in: self definitionTextModel.
 					^ self ].
 			aGrammar := parserCompiler grammar.
 			aGrammar type: aSymbol.
@@ -46,10 +47,10 @@ compile: aSymbol
 						cr;
 						nextPutAll: each;
 						cr ].
-			self conflicts: stream contents.
+			self conflictsTextModel setText: stream contents.
 			grammarCompiler := parserCompiler.
-			self changed: #items.
-			self changed: #symbols.
-			self testText string trimBoth notEmpty
-				ifTrue: [ self testCodeHolder contentsMorph hasUnacceptedEdits: true ] ]
+			self itemsTextModel setText: grammarCompiler itemSetsComment.
+			self symbolsTextModel setText: grammarCompiler symbolsComment.
+			self testTextModel text asString trimBoth notEmpty
+				ifTrue: [ self testTextModel hasUnacceptedEdits: true ] ]
 				ensure: [ SmaCCGrammar maximumCharacterValue: oldCharacterSize ] ]

@@ -1,23 +1,17 @@
 actions
 parseAndEvaluate: aBlock
 	| class |
-	self testCodeHolder contents: self testText.
-	self testCodeHolder changed: #contents.
+	self testTextModel acceptEdits.
 	class := self parserClass.
 	class isNil
-		ifTrue: [ 
-			UIManager default inform: 'No parser defined'.
+		ifTrue: [ UIManager default inform: 'No parser defined'.
 			^ false ]
-		ifFalse: [ 
-			Cursor wait
-				showWhile: [ 
-					aBlock
+		ifFalse: [ Cursor wait
+				showWhile: [ aBlock
 						value:
 							(class
-								parse: self testText asString 
+								parse: self testTextModel text asString
 								onError: [ :aString :position | 
-									self displayError: aString at: position notifying: self testCodeHolder contentsMorph.
-									self testCodeHolder contentsMorph hasUnacceptedEdits: true.
-									self testCodeHolder contentsMorph takeKeyboardFocus.
+									self displayError: aString at: position in: self testTextModel.
 									^ false ]) ] ].
 	^ true

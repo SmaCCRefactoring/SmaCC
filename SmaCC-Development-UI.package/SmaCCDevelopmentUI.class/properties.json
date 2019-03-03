@@ -14,12 +14,12 @@
 		"packageMorph",
 		"conflicts",
 		"mainWindow",
-		"definitionCodeHolder",
-		"testCodeHolder",
-		"conflictTextMorph",
-		"itemsTextMorph",
-		"symbolsTextMorph",
-		"grammarCompiler"
+		"definitionTextModel",
+		"testTextModel",
+		"itemsTextModel",
+		"symbolsTextModel",
+		"grammarCompiler",
+		"conflictsTextModel"
 	],
 	"name" : "SmaCCDevelopmentUI",
 	"type" : "normal"

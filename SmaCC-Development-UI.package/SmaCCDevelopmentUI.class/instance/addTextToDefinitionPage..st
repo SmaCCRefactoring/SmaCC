@@ -1,8 +1,11 @@
 initialization
 addTextToDefinitionPage: aDefinitionPage
-	definitionCodeHolder := SmaCCCodeHolder
-		owner: self
-		ownerAcceptSelector: #acceptDefinition:notifying:.
+	| aMorph |
+	aMorph := self definitionTextModel newScrolledText.
+	aMorph announcer
+		when: RubTextAcceptRequest
+		send: #acceptDefinitionFromTextMorph:
+		to: self.
 	aDefinitionPage
-		addMorph: definitionCodeHolder contentsMorph
+		addMorph: aMorph
 		fullFrame: (LayoutFrame new bottomFraction: 0.7)

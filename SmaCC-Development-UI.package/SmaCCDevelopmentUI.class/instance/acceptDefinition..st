@@ -1,5 +1,5 @@
 actions
-acceptDefinition: aStringOrAText notifying: aRequestor
+acceptDefinition: aStringOrText
 	^ [ self parserClass
 		ifNotNil: [ | parserCompiler |
 			parserCompiler := SmaCCGrammarCompiler new.
@@ -8,14 +8,14 @@ acceptDefinition: aStringOrAText notifying: aRequestor
 				scannerClass: self scannerClassString;
 				parserClass: self parserClassString.
 			parserCompiler codeGenerator
-				compileDefinitionComment: aStringOrAText asString.
+				compileDefinitionComment: aStringOrText asString.
 			parserCompiler codeGenerator compileChanges ].
-	SmaCCGrammarCompiler new buildDefinition: aStringOrAText.
+	SmaCCGrammarCompiler new buildDefinition: aStringOrText.
 	true ]
 		on: SmaCCParserError
 		do: [ :ex | 
 			self
 				displayError: ex description
 				at: ex tag position
-				notifying: aRequestor.
+				in: self definitionTextModel.
 			ex return: false ]

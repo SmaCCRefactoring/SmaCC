@@ -1,20 +1,14 @@
 initialization
 addItemsBoxToDefinitionPage: aDefinitionPageTabPalette
-	self
-		itemsTextMorph:
-			((PluggableTextMorph
-				on: self
-				text: #items
-				accept: nil
-				readSelection: nil
-				menu: nil)
-				vResizing: #spaceFill;
-				hResizing: #spaceFill;
-				enabled: false;
-				yourself).
+	| aMorph |
+	aMorph := self itemsTextModel newScrolledText.
+	aMorph
+		vResizing: #spaceFill;
+		hResizing: #spaceFill;
+		beReadOnly.
 	aDefinitionPageTabPalette
 		addPage:
 			(aDefinitionPageTabPalette newContentMorph
-				addMorph: self itemsTextMorph;
+				addMorph: aMorph;
 				yourself)
 		label: 'Items Sets'

@@ -1,20 +1,14 @@
 initialization
 addSymbolsBoxToDefinitionPage: aDefinitionPageTabPalette
-	self
-		symbolsTextMorph:
-			((PluggableTextMorph
-				on: self
-				text: #symbols
-				accept: nil
-				readSelection: nil
-				menu: nil)
-				vResizing: #spaceFill;
-				hResizing: #spaceFill;
-				enabled: false;
-				yourself).
+	| aMorph |
+	aMorph := self symbolsTextModel newScrolledText.
+	aMorph
+		vResizing: #spaceFill;
+		hResizing: #spaceFill;
+		beReadOnly.
 	aDefinitionPageTabPalette
 		addPage:
 			(aDefinitionPageTabPalette newContentMorph
-				addMorph: self symbolsTextMorph;
+				addMorph: aMorph;
 				yourself)
 		label: 'Symbols'

@@ -1,12 +1,9 @@
 initialization
 addTextToTestPage: aTestPage
-	| aTestText |
-	testCodeHolder := SmaCCCodeHolder
-		owner: self
-		ownerAcceptSelector: #acceptTestCode:notifying:.
-	aTestText := testCodeHolder contentsMorph.
-	aTestText
+	| aTestText aMorph |
+	aMorph := self testTextModel newScrolledText.
+	aMorph
 		hResizing: #spaceFill;
 		vResizing: #spaceFill;
-		color: Color transparent.
-	aTestPage addMorph: aTestText
+		beForPlainText.
+	aTestPage addMorph: aMorph
