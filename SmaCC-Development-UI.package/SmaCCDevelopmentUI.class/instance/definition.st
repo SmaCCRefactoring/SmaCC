@@ -1,3 +1,3 @@
 accessing
 definition
-	^ definitionTextModel text asString
+	^ self definitionTextModel text asString
