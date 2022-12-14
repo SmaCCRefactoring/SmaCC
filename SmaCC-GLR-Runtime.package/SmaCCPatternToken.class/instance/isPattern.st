@@ -1,3 +1,0 @@
-testing
-isPattern
-	^ true

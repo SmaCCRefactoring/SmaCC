@@ -1,3 +1,0 @@
-generated
-visitInterpolatedStringExpression: anInterpolatedStringExpression
-	^ self visitExpression: anInterpolatedStringExpression

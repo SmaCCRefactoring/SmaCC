@@ -1,3 +1,0 @@
-generated
-visitOperatorDeclaration: anOperatorDeclaration
-	^ self visitDeclaration: anOperatorDeclaration

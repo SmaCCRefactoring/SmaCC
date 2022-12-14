@@ -1,3 +1,0 @@
-generated
-startingStateForNamedDefinedType
-	^ 4

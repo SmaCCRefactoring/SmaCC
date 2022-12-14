@@ -1,3 +1,0 @@
-generated-reduction actions
-reduceActionForStartInterpolatedVerbatimString1: nodes
-	^ #interpolatedVerbatimString

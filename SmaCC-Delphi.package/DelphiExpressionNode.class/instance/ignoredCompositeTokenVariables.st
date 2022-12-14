@@ -1,3 +1,0 @@
-generated
-ignoredCompositeTokenVariables
-	^ #(#leftParens #rightParens)

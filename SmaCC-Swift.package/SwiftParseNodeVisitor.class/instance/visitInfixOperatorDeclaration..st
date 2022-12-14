@@ -1,3 +1,0 @@
-generated
-visitInfixOperatorDeclaration: anInfixOperatorDeclaration
-	^ self visitParse: anInfixOperatorDeclaration

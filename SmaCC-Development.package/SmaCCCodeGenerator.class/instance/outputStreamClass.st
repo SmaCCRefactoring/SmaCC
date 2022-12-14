@@ -1,3 +1,0 @@
-compiling
-outputStreamClass
-	self subclassResponsibility

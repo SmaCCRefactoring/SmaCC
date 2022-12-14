@@ -1,3 +1,0 @@
-generated
-floating_point_literalTokens: anOrderedCollection
-	floating_point_literalTokens := anOrderedCollection

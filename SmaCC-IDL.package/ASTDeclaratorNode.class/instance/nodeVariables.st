@@ -1,3 +1,0 @@
-generated
-nodeVariables
-	^ #(#simpleDeclarator #complexDeclarator)

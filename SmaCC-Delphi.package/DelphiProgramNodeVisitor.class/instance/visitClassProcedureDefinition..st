@@ -1,3 +1,0 @@
-generated
-visitClassProcedureDefinition: aClassProcedureDefinition
-	^ self visitProcedureDefinition: aClassProcedureDefinition

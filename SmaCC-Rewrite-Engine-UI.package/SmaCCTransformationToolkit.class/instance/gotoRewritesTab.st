@@ -1,3 +1,0 @@
-private
-gotoRewritesTab
-	self pane lastActivePresentation: self rewritesPresentation

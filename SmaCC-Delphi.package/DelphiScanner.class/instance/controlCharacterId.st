@@ -1,3 +1,0 @@
-generated
-controlCharacterId
-	^ 367

@@ -1,3 +1,0 @@
-compiling-nodes
-compileHashMethod: aSmaCCNodeClassDefinition
-	

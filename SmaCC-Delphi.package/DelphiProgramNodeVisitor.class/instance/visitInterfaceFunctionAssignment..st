@@ -1,3 +1,0 @@
-generated
-visitInterfaceFunctionAssignment: anInterfaceFunctionAssignment
-	^ self visitProgram: anInterfaceFunctionAssignment

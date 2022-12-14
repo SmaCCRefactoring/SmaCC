@@ -1,3 +1,0 @@
-accessing
-emptySymbolTokenId
-	^ scanner emptySymbolTokenId

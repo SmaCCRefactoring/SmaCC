@@ -1,3 +1,0 @@
-generated
-ignoredTokenVariables
-	^ #(#leftBracket #rightBracket)

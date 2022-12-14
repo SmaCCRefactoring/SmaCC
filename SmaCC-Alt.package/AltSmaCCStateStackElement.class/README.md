@@ -1,1 +1,0 @@
-I represent a translated state stack element for a parser

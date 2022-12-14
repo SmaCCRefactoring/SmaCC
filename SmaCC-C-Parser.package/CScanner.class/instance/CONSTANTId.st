@@ -1,3 +1,0 @@
-generated
-CONSTANTId
-	^ 77

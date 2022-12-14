@@ -1,3 +1,0 @@
-generated
-compositeNodeVariables
-	^ #(#expressions #values)

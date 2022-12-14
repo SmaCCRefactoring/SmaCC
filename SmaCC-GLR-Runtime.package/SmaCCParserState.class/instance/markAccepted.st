@@ -1,3 +1,0 @@
-accessing
-markAccepted
-	isAccepted := true

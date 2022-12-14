@@ -1,3 +1,0 @@
-generated
-then
-	^ then

@@ -1,3 +1,0 @@
-generated
-visitExplicitMemberExpression: anExplicitMemberExpression
-	^ self visitParse: anExplicitMemberExpression

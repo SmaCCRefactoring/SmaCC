@@ -1,3 +1,0 @@
-reduction table
-defaultReductionSource
-	^ '#reduceFor:'

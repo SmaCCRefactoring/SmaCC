@@ -1,3 +1,0 @@
-generated
-full_string_literalToken
-	^ full_string_literalToken

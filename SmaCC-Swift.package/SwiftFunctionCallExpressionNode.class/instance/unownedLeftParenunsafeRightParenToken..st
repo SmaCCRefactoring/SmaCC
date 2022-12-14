@@ -1,3 +1,0 @@
-generated
-unownedLeftParenunsafeRightParenToken: aSmaCCToken
-	unownedLeftParenunsafeRightParenToken := aSmaCCToken

@@ -1,3 +1,0 @@
-generated
-visitFunctionDeclaration: aFunctionDeclaration
-	^ self visitAbstract: aFunctionDeclaration

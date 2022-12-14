@@ -1,3 +1,0 @@
-generated
-acceptVisitor: aProgramVisitor
-	^ aProgramVisitor visitNullConditionalElementAccess: self

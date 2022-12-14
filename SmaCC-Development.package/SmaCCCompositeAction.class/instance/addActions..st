@@ -1,3 +1,0 @@
-accessing-actions
-addActions: aSmaCCActionCollection
-	actions addAll: aSmaCCActionCollection

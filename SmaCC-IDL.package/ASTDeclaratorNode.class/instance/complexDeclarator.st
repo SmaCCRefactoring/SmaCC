@@ -1,3 +1,0 @@
-generated
-complexDeclarator
-	^ complexDeclarator

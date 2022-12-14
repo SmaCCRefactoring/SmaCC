@@ -1,3 +1,0 @@
-generated
-components
-	^ components

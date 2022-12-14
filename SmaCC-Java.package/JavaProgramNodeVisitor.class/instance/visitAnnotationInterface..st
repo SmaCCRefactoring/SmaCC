@@ -1,3 +1,0 @@
-generated
-visitAnnotationInterface: anAnnotationInterface
-	^ self visitProgram: anAnnotationInterface

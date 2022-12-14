@@ -1,3 +1,0 @@
-generated
-extractelementTokens: anOrderedCollection
-	extractelementTokens := anOrderedCollection

@@ -1,3 +1,0 @@
-generated
-visitUncheckedStatement: anUncheckedStatement
-	^ self visitStatement: anUncheckedStatement

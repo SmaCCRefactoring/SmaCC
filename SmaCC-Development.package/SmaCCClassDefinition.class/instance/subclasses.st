@@ -1,3 +1,0 @@
-accessing-hierarchy
-subclasses
-	^ subclasses

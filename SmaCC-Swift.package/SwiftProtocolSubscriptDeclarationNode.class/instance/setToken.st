@@ -1,3 +1,0 @@
-generated
-setToken
-	^ setToken

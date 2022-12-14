@@ -1,3 +1,0 @@
-generated
-ssname
-	^ ssname

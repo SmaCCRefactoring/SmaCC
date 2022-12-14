@@ -1,3 +1,0 @@
-generated
-floating_point_literalToken: aSmaCCToken
-	floating_point_literalToken := aSmaCCToken

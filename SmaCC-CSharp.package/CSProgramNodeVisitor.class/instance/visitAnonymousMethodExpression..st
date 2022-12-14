@@ -1,3 +1,0 @@
-generated
-visitAnonymousMethodExpression: anAnonymousMethodExpression
-	^ self visitExpression: anAnonymousMethodExpression

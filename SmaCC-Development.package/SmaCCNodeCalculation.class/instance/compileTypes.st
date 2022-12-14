@@ -1,3 +1,0 @@
-private
-compileTypes
-	self codeGenerator compileSymbolTypes

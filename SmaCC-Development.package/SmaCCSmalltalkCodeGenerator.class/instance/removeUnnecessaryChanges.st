@@ -1,4 +1,0 @@
-compiling
-removeUnnecessaryChanges
-	self removeUnnecessaryMethodChanges.
-	self removeUnnecessaryClassChanges

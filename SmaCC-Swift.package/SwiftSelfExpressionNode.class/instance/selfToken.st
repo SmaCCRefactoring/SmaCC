@@ -1,3 +1,0 @@
-generated
-selfToken
-	^ selfToken

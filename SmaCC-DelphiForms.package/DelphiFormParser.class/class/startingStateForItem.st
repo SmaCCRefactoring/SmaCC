@@ -1,3 +1,0 @@
-generated
-startingStateForItem
-	^ 5

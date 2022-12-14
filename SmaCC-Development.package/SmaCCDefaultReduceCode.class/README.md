@@ -1,1 +1,0 @@
-SmaCCDefaultReduceCode represents a reduce action that returns a collection of all items in the rhs.

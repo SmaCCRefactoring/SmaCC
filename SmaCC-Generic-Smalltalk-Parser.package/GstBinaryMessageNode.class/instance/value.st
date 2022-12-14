@@ -1,3 +1,0 @@
-generated
-value
-	^ value

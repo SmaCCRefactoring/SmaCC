@@ -1,3 +1,0 @@
-generated
-visitConstructorDefinition: aConstructorDefinition
-	^ self visitMethodDefinition: aConstructorDefinition

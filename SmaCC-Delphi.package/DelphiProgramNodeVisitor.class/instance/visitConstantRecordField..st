@@ -1,3 +1,0 @@
-generated
-visitConstantRecordField: aConstantRecordField
-	^ self visitProgram: aConstantRecordField

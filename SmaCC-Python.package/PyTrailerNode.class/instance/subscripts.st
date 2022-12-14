@@ -1,3 +1,0 @@
-generated
-subscripts
-	^ subscripts

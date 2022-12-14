@@ -1,3 +1,0 @@
-generated
-visitImplicitlyUnwrappedOptionalType: anImplicitlyUnwrappedOptionalType
-	^ self visitParse: anImplicitlyUnwrappedOptionalType

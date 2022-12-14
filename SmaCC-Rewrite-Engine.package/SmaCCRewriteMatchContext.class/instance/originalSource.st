@@ -1,3 +1,0 @@
-accessing
-originalSource
-	^ match completeSource

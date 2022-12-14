@@ -1,3 +1,0 @@
-generated
-fallthroughToken
-	^ fallthroughToken

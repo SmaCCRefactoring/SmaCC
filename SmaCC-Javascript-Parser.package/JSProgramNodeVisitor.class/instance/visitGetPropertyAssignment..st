@@ -1,3 +1,0 @@
-generated
-visitGetPropertyAssignment: aGetPropertyAssignment
-	^ self visitProgram: aGetPropertyAssignment

@@ -1,3 +1,0 @@
-generated
-pCTSTRINGCONSTANTTokens: anOrderedCollection
-	pCTSTRINGCONSTANTTokens := anOrderedCollection

@@ -1,3 +1,0 @@
-generated
-nodeVariables
-	^ #(#andExpr #xorExpr)

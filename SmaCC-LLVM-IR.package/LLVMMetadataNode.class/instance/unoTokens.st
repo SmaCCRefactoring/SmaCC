@@ -1,3 +1,0 @@
-generated
-unoTokens
-	^ unoTokens

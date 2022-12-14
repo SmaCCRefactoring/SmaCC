@@ -1,3 +1,0 @@
-tests
-testBackgroundFeature
-	CucumberParser parse: self class backgroundFeature

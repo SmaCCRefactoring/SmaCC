@@ -1,3 +1,0 @@
-generated
-visitUsingAliasDirective: anUsingAliasDirective
-	^ self visitUsingDirective: anUsingAliasDirective

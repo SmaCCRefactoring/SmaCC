@@ -1,3 +1,0 @@
-generated
-iNTEGER_LITERALToken
-	^ iNTEGER_LITERALToken

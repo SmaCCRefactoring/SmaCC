@@ -1,3 +1,0 @@
-generated
-ignoredTokenVariables
-	^ #(#leftBar #rightBar)

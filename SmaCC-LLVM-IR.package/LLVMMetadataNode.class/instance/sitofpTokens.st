@@ -1,3 +1,0 @@
-generated
-sitofpTokens
-	^ sitofpTokens

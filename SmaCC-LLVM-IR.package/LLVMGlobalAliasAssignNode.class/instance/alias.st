@@ -1,3 +1,0 @@
-generated
-alias
-	^ alias

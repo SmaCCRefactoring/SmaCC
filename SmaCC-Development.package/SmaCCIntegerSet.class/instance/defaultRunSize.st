@@ -1,3 +1,0 @@
-private
-defaultRunSize
-	^ 32

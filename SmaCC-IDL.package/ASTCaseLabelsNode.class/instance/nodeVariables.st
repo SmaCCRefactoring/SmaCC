@@ -1,3 +1,0 @@
-generated
-nodeVariables
-	^ #(#caseLabel #caseLabels)

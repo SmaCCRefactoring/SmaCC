@@ -1,3 +1,0 @@
-generated
-visitAnonymousObjectCreationExpression: anAnonymousObjectCreationExpression
-	^ self visitExpression: anAnonymousObjectCreationExpression

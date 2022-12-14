@@ -1,3 +1,0 @@
-generated
-visitIdentifierExpression: anIdentifierExpression
-	^ self visitAbstract: anIdentifierExpression

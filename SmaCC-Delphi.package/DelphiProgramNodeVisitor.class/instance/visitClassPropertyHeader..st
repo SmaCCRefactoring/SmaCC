@@ -1,3 +1,0 @@
-generated
-visitClassPropertyHeader: aClassPropertyHeader
-	^ self visitPropertyHeader: aClassPropertyHeader

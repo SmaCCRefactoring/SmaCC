@@ -1,3 +1,0 @@
-generated
-startingStateForModule
-	^ 1

@@ -1,3 +1,0 @@
-private
-scanStringExpression
-	^ scanner scanStringExpression

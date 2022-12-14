@@ -1,3 +1,0 @@
-generated
-visitDeinitializerDeclaration: aDeinitializerDeclaration
-	^ self visitParse: aDeinitializerDeclaration

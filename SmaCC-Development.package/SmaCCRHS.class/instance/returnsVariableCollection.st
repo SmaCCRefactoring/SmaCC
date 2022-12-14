@@ -1,3 +1,0 @@
-testing
-returnsVariableCollection
-	^ reduceAction returnsVariableCollection

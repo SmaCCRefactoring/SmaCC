@@ -1,3 +1,0 @@
-generated
-visitInitializerDeclaration: anInitializerDeclaration
-	^ self visitParse: anInitializerDeclaration

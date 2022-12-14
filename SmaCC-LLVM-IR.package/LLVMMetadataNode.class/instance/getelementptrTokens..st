@@ -1,3 +1,0 @@
-generated
-getelementptrTokens: anOrderedCollection
-	getelementptrTokens := anOrderedCollection

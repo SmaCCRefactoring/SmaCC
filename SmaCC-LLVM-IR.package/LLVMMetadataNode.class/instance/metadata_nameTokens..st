@@ -1,3 +1,0 @@
-generated
-metadata_nameTokens: anOrderedCollection
-	metadata_nameTokens := anOrderedCollection

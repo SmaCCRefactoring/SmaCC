@@ -1,3 +1,0 @@
-generated
-visitImplementationSection: anImplementationSection
-	^ self visitProgram: anImplementationSection

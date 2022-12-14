@@ -1,3 +1,0 @@
-accessing
-remotePrefix
-	^ remotePrefix ifNil: [ '' ]

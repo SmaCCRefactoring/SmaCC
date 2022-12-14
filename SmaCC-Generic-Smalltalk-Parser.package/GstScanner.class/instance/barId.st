@@ -1,3 +1,0 @@
-generated
-barId
-	^ 17

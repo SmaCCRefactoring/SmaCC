@@ -1,3 +1,0 @@
-compiling
-compileScanner
-	scannerCompiler compileScanner

@@ -1,3 +1,0 @@
-private
-rootClassName
-	^ SmaCCParseNodeVisitor name

@@ -1,3 +1,0 @@
-tests
-testScenarioOutlineFeature
-	CucumberParser parse: self class scenarioOutlineFeature

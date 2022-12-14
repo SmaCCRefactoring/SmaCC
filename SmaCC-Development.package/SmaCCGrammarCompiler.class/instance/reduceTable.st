@@ -1,3 +1,0 @@
-reduction table
-reduceTable
-	^ reduceTable

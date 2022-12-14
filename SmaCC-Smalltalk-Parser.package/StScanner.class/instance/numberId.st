@@ -1,3 +1,0 @@
-generated
-numberId
-	^ 21

@@ -1,3 +1,0 @@
-accessing
-stopPosition
-	^ item stopPosition

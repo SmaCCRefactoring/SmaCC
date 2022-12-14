@@ -1,3 +1,0 @@
-generated
-visitInheritedFunctionCall: anInheritedFunctionCall
-	^ self visitExpression: anInheritedFunctionCall

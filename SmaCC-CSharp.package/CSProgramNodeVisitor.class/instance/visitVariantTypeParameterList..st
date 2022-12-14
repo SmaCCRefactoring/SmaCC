@@ -1,3 +1,0 @@
-generated
-visitVariantTypeParameterList: aVariantTypeParameterList
-	^ self visitTypeParameterList: aVariantTypeParameterList

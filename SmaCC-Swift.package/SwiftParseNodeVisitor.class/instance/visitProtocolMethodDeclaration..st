@@ -1,3 +1,0 @@
-generated
-visitProtocolMethodDeclaration: aProtocolMethodDeclaration
-	^ self visitParse: aProtocolMethodDeclaration

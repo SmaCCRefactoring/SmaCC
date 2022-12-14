@@ -1,3 +1,0 @@
-testing
-isWarning
-	^ type = #warning

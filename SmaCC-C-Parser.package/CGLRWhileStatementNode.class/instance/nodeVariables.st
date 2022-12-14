@@ -1,3 +1,0 @@
-generated
-nodeVariables
-	^ #(#while #statement)

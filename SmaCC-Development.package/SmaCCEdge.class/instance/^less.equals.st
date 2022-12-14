@@ -1,3 +1,0 @@
-comparing
-<= aSmaCCEdge
-	^ true

@@ -1,3 +1,0 @@
-generated
-visitFormattedMethodArgument: aFormattedMethodArgument
-	^ self visitProgram: aFormattedMethodArgument

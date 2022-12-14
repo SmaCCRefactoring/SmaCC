@@ -1,3 +1,0 @@
-generated
-visitQualifiedIdentifier: aQualifiedIdentifier
-	^ self visitProgram: aQualifiedIdentifier

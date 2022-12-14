@@ -1,3 +1,0 @@
-generated
-visitNullConditionalExpression: aNullConditionalExpression
-	^ self visitExpression: aNullConditionalExpression

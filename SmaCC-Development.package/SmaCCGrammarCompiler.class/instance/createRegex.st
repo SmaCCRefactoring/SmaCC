@@ -1,3 +1,0 @@
-accessing
-createRegex
-	^ scannerCompiler createRegex

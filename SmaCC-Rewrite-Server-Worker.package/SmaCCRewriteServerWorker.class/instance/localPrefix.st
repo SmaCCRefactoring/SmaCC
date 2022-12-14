@@ -1,3 +1,0 @@
-accessing
-localPrefix
-	^ localPrefix ifNil: [ '' ]

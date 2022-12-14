@@ -1,3 +1,0 @@
-generated
-vicmpTokens
-	^ vicmpTokens

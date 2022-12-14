@@ -1,3 +1,0 @@
-generated
-visitVariableArgumentParameter: aVariableArgumentParameter
-	^ self visitParameter: aVariableArgumentParameter

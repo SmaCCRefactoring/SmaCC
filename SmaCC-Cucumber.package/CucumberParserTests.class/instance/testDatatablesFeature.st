@@ -1,3 +1,0 @@
-tests
-testDatatablesFeature
-	CucumberParser parse: self class datatablesFeature

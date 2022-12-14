@@ -1,3 +1,0 @@
-generated
-lshrTokens
-	^ lshrTokens

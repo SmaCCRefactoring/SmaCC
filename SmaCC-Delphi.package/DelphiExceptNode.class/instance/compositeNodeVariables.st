@@ -1,3 +1,0 @@
-generated
-compositeNodeVariables
-	^ #(#exceptionCases #statements)

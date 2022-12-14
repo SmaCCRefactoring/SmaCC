@@ -1,3 +1,0 @@
-private
-defaultNodeReductionSource: aReduction
-	self subclassResponsibility

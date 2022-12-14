@@ -1,3 +1,0 @@
-compiling-nodes
-compileEqualMethod: aSmaCCNodeClassDefinition
-	self subclassResponsibility

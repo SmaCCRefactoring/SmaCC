@@ -1,3 +1,0 @@
-private
-assignVariables
-	currentRHS variableDefinitions: newVariables

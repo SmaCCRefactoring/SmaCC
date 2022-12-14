@@ -1,3 +1,0 @@
-generated
-externToken
-	^ externToken

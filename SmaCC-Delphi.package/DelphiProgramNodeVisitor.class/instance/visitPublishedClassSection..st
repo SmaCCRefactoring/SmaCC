@@ -1,3 +1,0 @@
-generated
-visitPublishedClassSection: aPublishedClassSection
-	^ self visitClassSection: aPublishedClassSection

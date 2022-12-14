@@ -1,3 +1,0 @@
-generated
-visitConstructorConstraint: aConstructorConstraint
-	^ self visitProgram: aConstructorConstraint

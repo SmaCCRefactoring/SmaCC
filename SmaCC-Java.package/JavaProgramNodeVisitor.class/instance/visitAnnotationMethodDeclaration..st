@@ -1,3 +1,0 @@
-generated
-visitAnnotationMethodDeclaration: anAnnotationMethodDeclaration
-	^ self visitAbstractMethodDeclaration: anAnnotationMethodDeclaration

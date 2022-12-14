@@ -1,3 +1,0 @@
-tests
-testSeveralExamplesFeature
-	CucumberParser parse: self class severalExamplesFeature

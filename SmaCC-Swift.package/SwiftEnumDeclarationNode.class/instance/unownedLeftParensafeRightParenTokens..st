@@ -1,3 +1,0 @@
-generated
-unownedLeftParensafeRightParenTokens: anOrderedCollection
-	unownedLeftParensafeRightParenTokens := anOrderedCollection
