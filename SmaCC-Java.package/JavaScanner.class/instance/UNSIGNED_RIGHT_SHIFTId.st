@@ -1,3 +1,0 @@
-generated
-UNSIGNED_RIGHT_SHIFTId
-	^ 98

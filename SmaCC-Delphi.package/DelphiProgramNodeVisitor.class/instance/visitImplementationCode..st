@@ -1,3 +1,0 @@
-generated
-visitImplementationCode: anImplementationCode
-	^ self visitCodeSection: anImplementationCode

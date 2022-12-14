@@ -1,3 +1,0 @@
-accessing
-enableDebug
-	^ enableDebug

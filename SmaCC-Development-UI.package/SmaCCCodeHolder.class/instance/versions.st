@@ -1,3 +1,0 @@
-menus
-versions
-	owner grammarVersions

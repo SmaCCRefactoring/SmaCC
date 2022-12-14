@@ -1,3 +1,0 @@
-accessing
-transformedString: aSmaCCAnnotatedString
-	transformedString := aSmaCCAnnotatedString

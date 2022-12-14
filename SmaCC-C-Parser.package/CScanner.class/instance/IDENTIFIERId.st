@@ -1,3 +1,0 @@
-generated
-IDENTIFIERId
-	^ 76

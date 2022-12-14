@@ -1,3 +1,0 @@
-compiling
-compileNodeClasses
-	SmaCCNodeCalculation compileForGrammar: grammar

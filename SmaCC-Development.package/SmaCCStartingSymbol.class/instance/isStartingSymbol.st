@@ -1,3 +1,0 @@
-testing
-isStartingSymbol
-	^ true

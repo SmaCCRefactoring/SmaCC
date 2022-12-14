@@ -1,3 +1,0 @@
-testing
-isEpsilonTransition
-	^ transitionObjects isNil

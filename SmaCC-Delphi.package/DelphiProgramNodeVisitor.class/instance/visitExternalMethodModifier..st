@@ -1,3 +1,0 @@
-generated
-visitExternalMethodModifier: anExternalMethodModifier
-	^ self visitMethodModifier: anExternalMethodModifier

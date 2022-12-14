@@ -1,3 +1,0 @@
-compiling-nodes
-compileChildrenMethod: aSmaCCNodeClassDefinition
-	

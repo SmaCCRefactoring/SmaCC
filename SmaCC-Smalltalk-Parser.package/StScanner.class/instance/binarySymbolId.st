@@ -1,3 +1,0 @@
-generated
-binarySymbolId
-	^ 26

@@ -1,3 +1,0 @@
-generated
-gLOBALVAL_IDTokens: anOrderedCollection
-	gLOBALVAL_IDTokens := anOrderedCollection

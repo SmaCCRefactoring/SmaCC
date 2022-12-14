@@ -1,3 +1,0 @@
-accessing
-parserClassString
-	^ parserClassMorph content

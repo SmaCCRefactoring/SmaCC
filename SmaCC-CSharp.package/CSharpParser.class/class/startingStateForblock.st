@@ -1,3 +1,0 @@
-generated
-startingStateForblock
-	^ 5

@@ -1,3 +1,0 @@
-private
-undefinedItems
-	^ undefinedItems

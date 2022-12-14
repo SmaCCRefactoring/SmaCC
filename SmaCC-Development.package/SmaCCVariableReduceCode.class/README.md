@@ -1,1 +1,0 @@
-SmaCCVariableReduceCode represents a reduce action that returns a collection of objects that represent the variables defined by the rhs. When this is pulled up into a create node, it will use the variable collection to create the node.

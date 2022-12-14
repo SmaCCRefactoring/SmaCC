@@ -1,3 +1,0 @@
-private
-newCollection
-	^ SmaCCCharacterSet new

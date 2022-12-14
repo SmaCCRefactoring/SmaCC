@@ -1,3 +1,0 @@
-accessing
-stepToIndex
-	^ self subclassResponsibility

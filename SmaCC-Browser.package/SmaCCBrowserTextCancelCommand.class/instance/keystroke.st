@@ -1,3 +1,0 @@
-accessing
-keystroke
-	^ $l ctrl

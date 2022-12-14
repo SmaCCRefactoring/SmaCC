@@ -1,3 +1,0 @@
-compiling
-compileEqualMethod
-	self codeGenerator compileEqualMethod: self

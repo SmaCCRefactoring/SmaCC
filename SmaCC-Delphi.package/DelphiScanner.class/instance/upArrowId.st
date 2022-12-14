@@ -1,3 +1,0 @@
-generated
-upArrowId
-	^ 134

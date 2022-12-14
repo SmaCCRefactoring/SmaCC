@@ -1,3 +1,0 @@
-generated
-visitSuperConstructorInvocation: aSuperConstructorInvocation
-	^ self visitProgram: aSuperConstructorInvocation

@@ -1,3 +1,0 @@
-compiling
-compileOptimizedMethodIn: modelClass
-	self subclassResponsibility

@@ -1,3 +1,0 @@
-generated
-insertelementTokens: anOrderedCollection
-	insertelementTokens := anOrderedCollection

@@ -1,3 +1,0 @@
-generated
-rbrackToken
-	^ rbrackToken

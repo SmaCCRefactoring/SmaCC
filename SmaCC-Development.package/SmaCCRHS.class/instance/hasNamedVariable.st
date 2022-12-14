@@ -1,3 +1,0 @@
-testing
-hasNamedVariable
-	^ variableNameMap notEmpty

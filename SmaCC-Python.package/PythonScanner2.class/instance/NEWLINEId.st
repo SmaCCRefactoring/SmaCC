@@ -1,3 +1,0 @@
-generated
-NEWLINEId
-	^ 80

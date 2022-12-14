@@ -1,3 +1,0 @@
-generated
-visitPropertyExpression: aPropertyExpression
-	^ self visitExpression: aPropertyExpression

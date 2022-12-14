@@ -1,3 +1,0 @@
-testing
-canMatch: aClass
-	^ true

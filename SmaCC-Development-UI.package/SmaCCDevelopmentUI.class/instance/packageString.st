@@ -1,3 +1,0 @@
-accessing
-packageString
-	^ packageMorph content

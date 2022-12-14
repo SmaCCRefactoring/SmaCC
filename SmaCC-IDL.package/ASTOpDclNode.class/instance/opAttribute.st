@@ -1,3 +1,0 @@
-generated
-opAttribute
-	^ opAttribute

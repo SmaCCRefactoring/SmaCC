@@ -1,3 +1,0 @@
-generated
-TypeNameId
-	^ 150

@@ -1,1 +1,0 @@
-I allow copy of some code in the text pane of the browser

@@ -1,3 +1,0 @@
-generated
-nonmutatingTokens: anOrderedCollection
-	nonmutatingTokens := anOrderedCollection

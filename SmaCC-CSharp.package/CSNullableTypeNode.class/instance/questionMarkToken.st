@@ -1,3 +1,0 @@
-generated
-questionMarkToken
-	^ questionMarkToken

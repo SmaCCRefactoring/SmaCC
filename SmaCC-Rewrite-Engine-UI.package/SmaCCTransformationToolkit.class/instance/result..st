@@ -1,3 +1,0 @@
-accessing
-result: aSmaCCRewriteResult
-	self previewResultHolder value: aSmaCCRewriteResult

@@ -1,3 +1,0 @@
-generated
-timesTimesEqualToken
-	^ timesTimesEqualToken

@@ -1,3 +1,0 @@
-generated
-visitInterfaceEventDeclaration: anInterfaceEventDeclaration
-	^ self visitDeclaration: anInterfaceEventDeclaration

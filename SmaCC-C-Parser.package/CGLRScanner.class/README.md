@@ -1,1 +1,0 @@
-I am a GLR based C scanner.

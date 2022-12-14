@@ -1,3 +1,0 @@
-generated
-cHARACTER_LITERALToken
-	^ cHARACTER_LITERALToken

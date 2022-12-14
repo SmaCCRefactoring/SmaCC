@@ -1,3 +1,0 @@
-compiling-scanner
-selectorMap: aDictionary
-	self subclassResponsibility

@@ -1,3 +1,0 @@
-generated
-typeArgRight
-	^ typeArgRight

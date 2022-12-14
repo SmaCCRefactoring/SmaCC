@@ -1,3 +1,0 @@
-testing
-isReadable
-	^ sourceStream isReadable

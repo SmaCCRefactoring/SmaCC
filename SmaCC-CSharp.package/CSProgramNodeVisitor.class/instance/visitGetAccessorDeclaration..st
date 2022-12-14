@@ -1,3 +1,0 @@
-generated
-visitGetAccessorDeclaration: aGetAccessorDeclaration
-	^ self visitProgram: aGetAccessorDeclaration

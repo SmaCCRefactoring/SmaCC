@@ -1,3 +1,0 @@
-generated
-visitParameterDeclaration: aParameterDeclaration
-	^ self visitAbstract: aParameterDeclaration

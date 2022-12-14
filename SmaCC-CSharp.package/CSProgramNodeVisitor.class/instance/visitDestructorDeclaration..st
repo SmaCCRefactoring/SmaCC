@@ -1,3 +1,0 @@
-generated
-visitDestructorDeclaration: aDestructorDeclaration
-	^ self visitDeclaration: aDestructorDeclaration

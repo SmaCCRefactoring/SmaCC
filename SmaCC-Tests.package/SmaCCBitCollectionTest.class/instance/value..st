@@ -1,3 +1,0 @@
-private
-value: anInteger
-	^ anInteger

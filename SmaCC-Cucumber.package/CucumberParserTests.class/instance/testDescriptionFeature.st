@@ -1,3 +1,0 @@
-tests
-testDescriptionFeature
-	CucumberParser parse: self class descriptionFeature

@@ -1,3 +1,0 @@
-generated
-visitProtocolPropertyDeclaration: aProtocolPropertyDeclaration
-	^ self visitParse: aProtocolPropertyDeclaration

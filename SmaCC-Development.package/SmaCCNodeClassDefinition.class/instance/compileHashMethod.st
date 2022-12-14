@@ -1,3 +1,0 @@
-compiling
-compileHashMethod
-	self codeGenerator compileHashMethod: self

@@ -1,3 +1,0 @@
-generated
-nameId
-	^ 20

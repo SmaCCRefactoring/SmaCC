@@ -1,3 +1,0 @@
-generated
-visitExpressionStatement: anExpressionStatement
-	^ self visitAbstract: anExpressionStatement

@@ -1,3 +1,0 @@
-compiling-nodes
-compilePostCopyMethod: aSmaCCNodeClassDefinition
-	

@@ -1,3 +1,0 @@
-generated
-visitPrivateClassSection: aPrivateClassSection
-	^ self visitClassSection: aPrivateClassSection

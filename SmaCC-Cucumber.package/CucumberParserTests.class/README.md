@@ -1,1 +1,0 @@
-I record resources to be used to test the Cucumber parser

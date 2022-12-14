@@ -1,3 +1,0 @@
-generated
-visitBreakStatement: aBreakStatement
-	^ self visitControlTransferStatement: aBreakStatement

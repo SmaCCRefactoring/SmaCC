@@ -1,3 +1,0 @@
-generated
-convenienceTokens: anOrderedCollection
-	convenienceTokens := anOrderedCollection

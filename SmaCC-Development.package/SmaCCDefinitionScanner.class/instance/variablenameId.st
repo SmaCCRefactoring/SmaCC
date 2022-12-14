@@ -1,3 +1,0 @@
-generated
-variablenameId
-	^ 34

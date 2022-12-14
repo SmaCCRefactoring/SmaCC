@@ -1,3 +1,0 @@
-generated
-visitAnonymousFunctionType: anAnonymousFunctionType
-	^ self visitAnonymousMethodType: anAnonymousFunctionType

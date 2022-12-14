@@ -1,3 +1,0 @@
-generated
-divideDivideToken
-	^ divideDivideToken

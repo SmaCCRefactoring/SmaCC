@@ -1,3 +1,0 @@
-generated
-startingStateFortranslationUnit
-	^ 1

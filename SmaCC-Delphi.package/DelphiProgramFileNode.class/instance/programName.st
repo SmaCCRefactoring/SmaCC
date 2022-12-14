@@ -1,3 +1,0 @@
-generated
-programName
-	^ programName

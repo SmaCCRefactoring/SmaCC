@@ -1,1 +1,0 @@
-I represent the contents of a parser, with a transition table and a reduce action table

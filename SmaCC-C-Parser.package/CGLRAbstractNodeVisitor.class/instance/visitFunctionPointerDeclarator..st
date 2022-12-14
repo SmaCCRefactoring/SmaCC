@@ -1,3 +1,0 @@
-generated
-visitFunctionPointerDeclarator: aFunctionPointerDeclarator
-	^ self visitAbstract: aFunctionPointerDeclarator

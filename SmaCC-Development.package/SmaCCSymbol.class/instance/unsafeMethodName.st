@@ -1,3 +1,0 @@
-private
-unsafeMethodName
-	^ self printString

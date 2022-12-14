@@ -1,3 +1,0 @@
-accessing
-defaultKeymap
-	^ $i meta

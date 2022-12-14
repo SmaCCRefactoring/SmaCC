@@ -1,3 +1,0 @@
-generated
-visitAbstractMethodDeclaration: anAbstractMethodDeclaration
-	^ self visitProgram: anAbstractMethodDeclaration

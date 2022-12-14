@@ -1,3 +1,0 @@
-generated
-visitStackallocInitializer: aStackallocInitializer
-	^ self visitProgram: aStackallocInitializer

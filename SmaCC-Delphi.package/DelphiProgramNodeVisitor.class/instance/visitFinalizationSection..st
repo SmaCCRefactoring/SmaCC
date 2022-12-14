@@ -1,3 +1,0 @@
-generated
-visitFinalizationSection: aFinalizationSection
-	^ self visitCodeSection: aFinalizationSection

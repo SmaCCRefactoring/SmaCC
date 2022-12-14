@@ -1,1 +1,0 @@
-SmaCCCaseInsensitiveToken represents a case insensitive token (e.g., "IF" and "if" will compare equal).

@@ -1,3 +1,0 @@
-generated
-visitSingleTypeImportDeclaration: aSingleTypeImportDeclaration
-	^ self visitProgram: aSingleTypeImportDeclaration

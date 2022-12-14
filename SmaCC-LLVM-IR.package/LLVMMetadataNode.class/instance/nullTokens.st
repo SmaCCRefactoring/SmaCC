@@ -1,3 +1,0 @@
-generated
-nullTokens
-	^ nullTokens

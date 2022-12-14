@@ -1,3 +1,0 @@
-generated
-classRightId
-	^ 44

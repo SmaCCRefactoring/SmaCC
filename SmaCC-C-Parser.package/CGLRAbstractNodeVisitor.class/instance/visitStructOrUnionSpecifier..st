@@ -1,3 +1,0 @@
-generated
-visitStructOrUnionSpecifier: aStructOrUnionSpecifier
-	^ self visitAbstract: aStructOrUnionSpecifier

@@ -1,3 +1,0 @@
-compiling-scanner
-compilePostCopyMethod: aSmaCCNodeClassDefinition
-	self subclassResponsibility

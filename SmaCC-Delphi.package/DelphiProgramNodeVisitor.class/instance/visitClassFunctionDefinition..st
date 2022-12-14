@@ -1,3 +1,0 @@
-generated
-visitClassFunctionDefinition: aClassFunctionDefinition
-	^ self visitFunctionDefinition: aClassFunctionDefinition

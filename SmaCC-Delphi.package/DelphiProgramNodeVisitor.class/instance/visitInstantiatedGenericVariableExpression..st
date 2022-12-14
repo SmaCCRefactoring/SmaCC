@@ -1,4 +1,0 @@
-generated
-visitInstantiatedGenericVariableExpression: anInstantiatedGenericVariableExpression
-	^ self
-		visitVariableExpression: anInstantiatedGenericVariableExpression

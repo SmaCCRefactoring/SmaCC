@@ -1,3 +1,0 @@
-private
-run
-	^ run

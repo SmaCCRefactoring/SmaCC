@@ -1,3 +1,0 @@
-generated
-nodeVariables
-	^ #(#caseLabels #elementSpec)

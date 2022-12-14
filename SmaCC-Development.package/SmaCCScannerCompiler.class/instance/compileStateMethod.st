@@ -1,3 +1,0 @@
-compiling-scanner
-compileStateMethod
-	codeGenerator compileStateMethodFor: grammar scannerStates

@@ -1,3 +1,0 @@
-generated
-visitDimensionExpression: aDimensionExpression
-	^ self visitProgram: aDimensionExpression

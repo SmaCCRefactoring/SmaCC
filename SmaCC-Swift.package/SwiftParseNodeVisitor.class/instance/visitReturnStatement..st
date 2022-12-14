@@ -1,3 +1,0 @@
-generated
-visitReturnStatement: aReturnStatement
-	^ self visitControlTransferStatement: aReturnStatement

@@ -1,3 +1,0 @@
-generated
-sTRING_LITERALToken
-	^ sTRING_LITERALToken

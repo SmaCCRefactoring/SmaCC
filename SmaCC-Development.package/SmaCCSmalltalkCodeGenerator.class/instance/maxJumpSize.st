@@ -1,3 +1,0 @@
-compiling-scanner
-maxJumpSize
-	^ MaxJumpSize

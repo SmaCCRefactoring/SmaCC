@@ -1,3 +1,0 @@
-generated
-visitExtensionDeclaration: anExtensionDeclaration
-	^ self visitParse: anExtensionDeclaration

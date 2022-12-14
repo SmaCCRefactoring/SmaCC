@@ -1,3 +1,0 @@
-generated
-fLOATING_POINT_LITERALToken
-	^ fLOATING_POINT_LITERALToken

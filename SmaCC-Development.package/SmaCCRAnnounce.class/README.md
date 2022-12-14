@@ -1,1 +1,0 @@
-this announcement contains a parser action and the parser state (stacks)

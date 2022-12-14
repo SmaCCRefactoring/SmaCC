@@ -1,3 +1,0 @@
-accessing
-createCompleteRegex
-	^ scannerCompiler createCompleteRegex

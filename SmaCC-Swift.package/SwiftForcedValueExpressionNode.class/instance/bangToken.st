@@ -1,3 +1,0 @@
-generated
-bangToken
-	^ bangToken

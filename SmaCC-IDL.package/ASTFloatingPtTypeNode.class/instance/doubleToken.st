@@ -1,3 +1,0 @@
-generated
-doubleToken
-	^ doubleToken

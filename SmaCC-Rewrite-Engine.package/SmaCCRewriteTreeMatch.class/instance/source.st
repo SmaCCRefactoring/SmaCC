@@ -1,3 +1,0 @@
-public
-source
-	^ source

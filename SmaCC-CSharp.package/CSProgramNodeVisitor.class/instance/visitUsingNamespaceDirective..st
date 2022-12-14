@@ -1,3 +1,0 @@
-generated
-visitUsingNamespaceDirective: anUsingNamespaceDirective
-	^ self visitUsingDirective: anUsingNamespaceDirective

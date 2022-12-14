@@ -1,3 +1,0 @@
-compiling-nodes
-compileVariablesMethods: aSmaCCNodeClassDefinition
-	

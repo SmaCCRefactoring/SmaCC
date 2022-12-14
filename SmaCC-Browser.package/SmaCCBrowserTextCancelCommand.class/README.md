@@ -1,1 +1,0 @@
-I cancel the text pane.

@@ -1,3 +1,0 @@
-generated
-visitInitializerExpression: anInitializerExpression
-	^ self visitParse: anInitializerExpression

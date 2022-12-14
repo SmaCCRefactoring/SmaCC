@@ -1,3 +1,0 @@
-generated
-genericTypeArguments: anOrderedCollection
-	genericTypeArguments := anOrderedCollection

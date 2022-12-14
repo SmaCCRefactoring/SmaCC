@@ -1,3 +1,0 @@
-accessing
-scannerStates
-	^ scannerDefinition states

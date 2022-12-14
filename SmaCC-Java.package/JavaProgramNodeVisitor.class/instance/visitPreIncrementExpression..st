@@ -1,3 +1,0 @@
-generated
-visitPreIncrementExpression: aPreIncrementExpression
-	^ self visitExpression: aPreIncrementExpression

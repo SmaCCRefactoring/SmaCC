@@ -1,3 +1,0 @@
-private
-methodNameFor: aString
-	^ aString

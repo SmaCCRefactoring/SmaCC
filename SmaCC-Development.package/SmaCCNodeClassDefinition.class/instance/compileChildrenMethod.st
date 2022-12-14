@@ -1,3 +1,0 @@
-compiling
-compileChildrenMethod
-	self codeGenerator compileChildrenMethod: self

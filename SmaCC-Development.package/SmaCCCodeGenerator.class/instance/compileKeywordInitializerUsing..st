@@ -1,3 +1,0 @@
-compiling-scanner
-compileKeywordInitializerUsing: keywordMapDictionary
-	self subclassResponsibility

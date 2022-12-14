@@ -1,3 +1,0 @@
-generated
-tokenVariables
-	^ #(#classToken #whereToken)

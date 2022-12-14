@@ -1,3 +1,0 @@
-accessing
-validationParserClass
-	^ validationParserClass
