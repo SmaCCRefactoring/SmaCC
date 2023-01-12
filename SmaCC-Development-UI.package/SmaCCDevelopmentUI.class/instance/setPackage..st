@@ -1,6 +1,4 @@
 private
 setPackage: aPackageName
-	aPackageName notNil
-		ifTrue: [ 
-			packageMorph
-				content: aPackageName ]
+
+	aPackageName ifNotNil: [ packageMorph content: aPackageName ]

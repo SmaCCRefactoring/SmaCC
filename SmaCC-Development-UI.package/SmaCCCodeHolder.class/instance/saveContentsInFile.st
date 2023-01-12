@@ -1,12 +1,11 @@
 menus
 saveContentsInFile
 	| result |
-	(result := UITheme current
-		fileSaveIn: World
-		title: 'Choose file to open' translated
+	(result := self theme
+		chooseForSaveFileReference: 'Choose file to save'
 		extensions: nil
 		path: FileSystem workingDirectory)
-		ifNotNil: [ result asFileReference exists
+			ifNotNil: [ result asFileReference exists
 				ifTrue: [ ^ UIManager default inform: ' ' , result , ' already exists ' ].
 			result asFileReference
 				writeStreamDo: [ :s | s nextPutAll: contents ].

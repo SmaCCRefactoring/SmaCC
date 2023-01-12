@@ -1,6 +1,6 @@
 initialization
 addTabToDefinitionPage: aDefinitionPage
-	self tabList: (self theme newTabGroupIn: World for: #()).
+	self tabList: (self theme newTabGroupIn: self currentWorld for: #()).
 	aDefinitionPage
 		addMorph: self tabList
 		fullFrame: (LayoutFrame new
