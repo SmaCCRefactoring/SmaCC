@@ -2,7 +2,7 @@ accessing
 contentsMorph
 	contentsMorph isNil
 		ifTrue: [ 
-			contentsMorph := PluggableTextMorph
+			contentsMorph := RubPluggableTextMorph
 				on: self
 				text: #contents
 				accept: #contents:notifying:

@@ -2,7 +2,7 @@ initialization
 addItemsBoxToDefinitionPage: aDefinitionPageTabPalette
 	self
 		itemsTextMorph:
-			((PluggableTextMorph
+			((RubPluggableTextMorph
 				on: self
 				text: #items
 				accept: nil

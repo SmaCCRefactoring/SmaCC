@@ -2,7 +2,7 @@ initialization
 addSymbolsBoxToDefinitionPage: aDefinitionPageTabPalette
 	self
 		symbolsTextMorph:
-			((PluggableTextMorph
+			((RubPluggableTextMorph
 				on: self
 				text: #symbols
 				accept: nil
