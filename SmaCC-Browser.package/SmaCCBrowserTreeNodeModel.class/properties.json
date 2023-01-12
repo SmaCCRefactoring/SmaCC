@@ -1,14 +1,13 @@
 {
-	"category" : "SmaCC-Browser",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		"contents" ],
-	"name" : "SmaCCBrowserTreeNodeModel",
-	"pools" : [
-		 ],
 	"super" : "MorphTreeNodeModel",
-	"type" : "normal" }
+	"category" : "SmaCC-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"contents"
+	],
+	"name" : "SmaCCBrowserTreeNodeModel",
+	"type" : "normal"
+}

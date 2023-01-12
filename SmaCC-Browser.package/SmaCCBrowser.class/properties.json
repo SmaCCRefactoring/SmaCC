@@ -1,10 +1,10 @@
 {
-	"category" : "SmaCC-Browser",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
+	"super" : "MorphTreeModel",
+	"category" : "SmaCC-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"treeMorph",
 		"isSelectionUpdate",
@@ -12,9 +12,8 @@
 		"textMorph",
 		"history",
 		"text",
-		"textSelectionInterval" ],
+		"textSelectionInterval"
+	],
 	"name" : "SmaCCBrowser",
-	"pools" : [
-		 ],
-	"super" : "MorphTreeModel",
-	"type" : "normal" }
+	"type" : "normal"
+}

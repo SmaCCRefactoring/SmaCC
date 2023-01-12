@@ -22,14 +22,40 @@ open
 	treeMorph := self defaultTreeMorph.
 	textMorph := self defaultTextMorph.
 	treeMorph buildContents.
-	treeMorph on: #keyStroke send: #startSearch:for: to: AltKeyboardSearchInTree.
+	"treeMorph on: #keyStroke send: #startSearch:for: to: AltKeyboardSearchInTree."
 	pane addMorph: group.
-	group addMorph: treeMorph fullFrame: (LayoutFrame fractions: (0 @ 0.0 corner: 0.3 @ 1) offsets: (0 @ 1 corner: 0 @ -1)).
-	group addMorph: textMorph fullFrame: (LayoutFrame fractions: (0.3 @ 0.0 corner: 1 @ 1) offsets: (4 @ 0 corner: 0 @ 0)).
+	group addMorph: treeMorph fullFrame: (
+		LayoutFrame new 
+			leftFraction: 0; 
+			topFraction: 0.0; 
+			rightFraction: 0.3;
+			bottomFraction: 1;
+			leftOffset: 0;
+			topOffset: 1;
+			rightOffset: 0;
+			bottomOffset: -1).
+	group addMorph: textMorph fullFrame: (
+		LayoutFrame new 
+			leftFraction: 0.3; 
+			topFraction: 0.0; 
+			rightFraction: 1;
+			bottomFraction: 1;
+			leftOffset: 4;
+			topOffset: 0;
+			rightOffset: 0;
+			bottomOffset: 0).
 	group
 		addMorph:
 			(ProportionalSplitterMorph new
-				layoutFrame: (LayoutFrame fractions: (0.3 @ 0.0 corner: 0.3 @ 1) offsets: (0 @ 0 corner: 4 @ 0));
+				layoutFrame: (LayoutFrame new 
+					leftFraction: 0.3; 
+					topFraction: 0.0; 
+					rightFraction: 0.3;
+					bottomFraction: 1;
+					leftOffset: 0;
+					topOffset: 0;
+					rightOffset: 4;
+					bottomOffset: 0);
 				addLeftOrTop: treeMorph;
 				addRightOrBottom: textMorph).
 	window minimumExtent: 500 @ 500.

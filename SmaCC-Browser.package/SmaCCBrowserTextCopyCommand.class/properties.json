@@ -1,14 +1,11 @@
 {
-	"category" : "SmaCC-Browser",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		 ],
-	"name" : "SmaCCBrowserTextCopyCommand",
-	"pools" : [
-		 ],
 	"super" : "SmaCCBrowserCommand",
-	"type" : "normal" }
+	"category" : "SmaCC-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SmaCCBrowserTextCopyCommand",
+	"type" : "normal"
+}

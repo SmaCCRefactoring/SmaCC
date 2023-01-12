@@ -1,6 +1,6 @@
 view
 defaultTextMorph
-	^ (PluggableTextMorph
+	^ (RubPluggableTextMorph
 		on: self
 		text: #text
 		accept: #text:
