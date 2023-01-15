@@ -1,7 +1,7 @@
 menus
 saveContentsInFile
 	| result |
-	(result := self theme
+	(result := UIManager default
 		chooseForSaveFileReference: 'Choose file to save'
 		extensions: nil
 		path: FileSystem workingDirectory)

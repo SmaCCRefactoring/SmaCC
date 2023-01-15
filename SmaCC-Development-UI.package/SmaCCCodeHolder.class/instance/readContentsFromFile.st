@@ -2,7 +2,7 @@ menus
 readContentsFromFile
 
 	| result |
-	(result := self theme
+	(result := UIManager default
 		   chooseExistingFileReference: 'Choose file to open'
 		   extensions: nil
 		   path: FileSystem workingDirectory
