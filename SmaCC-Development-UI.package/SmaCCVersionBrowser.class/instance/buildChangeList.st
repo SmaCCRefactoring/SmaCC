@@ -1,4 +1,4 @@
-update
+private - factory
 buildChangeList
 	"Do not ask the changeset, but the repository if this is a gitfiletree:// repository."
 
@@ -18,7 +18,7 @@ buildChangeList
 	allFileNames := repository allFileNames.
 	mcMethodDefinition := rgMethod asMCMethodDefinition.
 	^ (OrderedCollection
-		streamContents: [ :stream | 
+		streamContents: [ :stream |
 			stream
 				nextPutAll:
 					(SourceFiles
@@ -29,7 +29,7 @@ buildChangeList
 					([ (((repository
 						gitVersionsForDefinition: mcMethodDefinition
 						in: aMCWorkingCopy packageName)
-						collect: [ :commitID | 
+						collect: [ :commitID |
 							((gitReaderClass
 								on: repository directory
 								fileName: aMCWorkingCopy packageName , repository packageExtension)
@@ -40,7 +40,7 @@ buildChangeList
 						collect: [ :e | e first ] ]
 						on: NotFound
 						do: [ #() ]) ])
-		collectWithIndex: [ :c :i | 
+		collectWithIndex: [ :c :i |
 			| rg |
 			rg := c asRingDefinition.
 			rg annotationNamed: #versionIndex put: i ]

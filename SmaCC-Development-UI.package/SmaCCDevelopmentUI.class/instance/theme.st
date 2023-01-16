@@ -1,3 +1,4 @@
 accessing-ui
 theme
-	^ UITheme current
+
+	^ Smalltalk ui theme

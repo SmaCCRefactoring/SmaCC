@@ -8,5 +8,5 @@ saveContentsInFile
 			ifNotNil: [ result asFileReference exists
 				ifTrue: [ ^ UIManager default inform: ' ' , result , ' already exists ' ].
 			result asFileReference
-				writeStreamDo: [ :s | s nextPutAll: contents ].
+				writeStreamDo: [ :s | s nextPutAll: contents asString ].
 			self changed: #contents ]

@@ -1,5 +1,6 @@
 compiling-parser
 compileScannerClassIntoParser
+
 	| stream |
 	stream := WriteStream with: String new.
 	stream
@@ -8,6 +9,6 @@ compileScannerClassIntoParser
 		tab;
 		nextPutAll: '^';
 		nextPutAll: scannerClass name.
-	parserClass theMetaClass
+	parserClass classSide
 		compile: stream contents
 		classified: #'generated-accessing'
