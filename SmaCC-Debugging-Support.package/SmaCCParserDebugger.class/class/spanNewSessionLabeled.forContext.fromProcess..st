@@ -1,5 +1,5 @@
 accessing
-spanNewSessionLabeled: aString forContext: aContext fromProcess: aProcess 
+spanNewSessionLabeled: aString forContext: aContext fromProcess: aProcess
 
-	^ self sessionClass 
+	^ self sessionClass
 		named: aString on: aProcess startedAt: aContext

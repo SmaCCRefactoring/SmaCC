@@ -1,4 +1,4 @@
 accessing
 parser
-	^ self rootContext notNil
-		ifTrue: [ self rootContext receiver ]
+
+	^ self rootContext ifNotNil: [ self rootContext receiver ]
