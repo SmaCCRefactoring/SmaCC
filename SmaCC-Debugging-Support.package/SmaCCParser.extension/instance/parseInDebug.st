@@ -7,6 +7,8 @@ parseInDebug
 		priority: Processor userBackgroundPriority;
 		yourself.
 	context := process suspendedContext.
+	(self confirm: 'Next lines could open an emergency debygger. Proceed?')
+		ifFalse: [ ^ self ].
 	debugSession := SmaCCParserDebugger
 		spanNewSessionLabeled: 'Parser debugging'
 		forContext: context

@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'SmaCC-Debugging-Support'!
+self packageOrganizer ensurePackage: #'SmaCC-Debugging-Support' withTags: #()!

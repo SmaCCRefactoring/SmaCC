@@ -2,7 +2,7 @@ initialization
 addConflictsBoxToDefinitionPage: aDefinitionPageTabPalette
 	self
 		conflictTextMorph:
-			((PluggableTextMorph
+			((RubPluggableTextMorph
 				on: self
 				text: #conflicts
 				accept: nil

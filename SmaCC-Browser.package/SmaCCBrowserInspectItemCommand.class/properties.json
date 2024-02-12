@@ -1,14 +1,11 @@
 {
-	"category" : "SmaCC-Browser",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		 ],
-	"name" : "SmaCCBrowserInspectItemCommand",
-	"pools" : [
-		 ],
 	"super" : "SmaCCBrowserCommand",
-	"type" : "normal" }
+	"category" : "SmaCC-Browser",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "SmaCCBrowserInspectItemCommand",
+	"type" : "normal"
+}

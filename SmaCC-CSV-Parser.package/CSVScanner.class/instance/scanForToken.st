@@ -1,4 +1,4 @@
-generated
+accessing
 scanForToken
 	self step.
 	currentCharacter == Character lf

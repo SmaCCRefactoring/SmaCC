@@ -1,5 +1,5 @@
 accessing
 conflicts
-	conflicts isNil
-		ifTrue: [ conflicts := String new ].
+
+	conflicts ifNil: [ conflicts := String new ].
 	^ conflicts

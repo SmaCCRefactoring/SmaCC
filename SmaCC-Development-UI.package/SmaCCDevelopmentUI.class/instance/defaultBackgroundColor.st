@@ -1,3 +1,4 @@
 colors
 defaultBackgroundColor
-	^ UITheme current backgroundColor
+
+	^ Smalltalk ui theme backgroundColor

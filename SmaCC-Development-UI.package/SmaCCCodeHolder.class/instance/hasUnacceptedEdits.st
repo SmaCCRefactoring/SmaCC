@@ -1,3 +1,3 @@
-edit flag
+edits
 hasUnacceptedEdits
 	^ self contentsMorph hasUnacceptedEdits

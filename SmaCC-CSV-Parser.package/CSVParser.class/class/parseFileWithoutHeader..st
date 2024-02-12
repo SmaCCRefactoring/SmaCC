@@ -12,9 +12,7 @@ parseFileWithoutHeader: aFilename
 			line := Array new: maxSize.
 			1 to: each values size do: [ :i | line at: i put: (self dataValueFrom: (each values at: i)) ].
 			line ].
-	(file lines size > 0
-		and:
-			[ file lines last commas isEmpty
+	(file lines isEmpty and: [ file lines last commas isEmpty
 				and: [ (self dataValueFrom: file lines last values first) isNil ] ])
 		ifTrue: [ lines removeLast ].
 	^ lines

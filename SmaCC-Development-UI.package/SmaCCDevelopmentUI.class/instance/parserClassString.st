@@ -1,3 +1,5 @@
 accessing
 parserClassString
-	^ parserClassMorph content
+	^ parserClassMorph
+		ifNil: [ String empty ]
+		ifNotNil: [ : pClassMorph | pClassMorph content ]

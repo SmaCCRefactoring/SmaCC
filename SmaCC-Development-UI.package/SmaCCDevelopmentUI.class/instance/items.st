@@ -1,5 +1,5 @@
 accessing
 items
-	grammarCompiler isNil
-		ifTrue: [ ^ '' ].
+
+	grammarCompiler ifNil: [ ^ '' ].
 	^ grammarCompiler itemSetsComment

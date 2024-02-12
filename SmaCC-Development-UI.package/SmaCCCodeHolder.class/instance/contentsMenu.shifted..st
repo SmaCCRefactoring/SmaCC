@@ -19,4 +19,3 @@ contentsMenu: aMenu shifted: shifted
 		('browse versions' versions)
 		('save contents in file...' saveContentsInFile)
 		('read contents from file...' readContentsFromFile) )
-		

@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "GTGenericStackDebugger",
+	"super" : "StDebugger",
 	"category" : "SmaCC-Debugging-Support",
 	"classinstvars" : [ ],
 	"pools" : [ ],

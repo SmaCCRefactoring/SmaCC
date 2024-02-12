@@ -1,1 +1,0 @@
-The help for SmaCC.

@@ -1,5 +1,5 @@
 accessing
 symbols
-	grammarCompiler isNil
-		ifTrue: [ ^ '' ].
+
+	grammarCompiler ifNil: [ ^ '' ].
 	^ grammarCompiler symbolsComment

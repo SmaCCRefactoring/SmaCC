@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'SmaCC-Rewrite-Engine'!
+self packageOrganizer ensurePackage: #'SmaCC-Rewrite-Engine' withTags: #()!

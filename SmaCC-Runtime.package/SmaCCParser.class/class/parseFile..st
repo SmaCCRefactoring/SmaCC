@@ -1,6 +1,6 @@
 accessing
 parseFile: aString
 	| stream |
-	stream := FileStream readOnlyFileNamed: aString.
+	stream := aString asFileReference readStream.
 	^ [ self parseStream: stream startingAt: self defaultStartingState ]
 		ensure: [ stream close ]
