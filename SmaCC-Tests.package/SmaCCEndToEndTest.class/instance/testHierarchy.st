@@ -2,21 +2,30 @@ tests
 testHierarchy
 
 	| parserCompiler |
-	SmaCCScanner
-		subclass: #FooScanner
-		instanceVariableNames: ''
-		classVariableNames: ''
-		category: self class category.
-	(Smalltalk at: #FooScanner)
-		subclass: #TestScanner
-		instanceVariableNames: ''
-		classVariableNames: ''
-		category: self class category.
-	SmaCCParser
-		subclass: #FooParser
-		instanceVariableNames: ''
-		classVariableNames: ''
-		category: self class category.
+	SmaCCScanner classInstaller make: [ :builder |
+		builder
+			superclass: SmaCCScanner;
+			name: #FooScanner;
+			slotsFromString: '';
+			sharedVariablesFromString: '';
+			category: self class category;
+			environment: SmaCCScanner environment ].
+	(Smalltalk at: #FooScanner) classInstaller make: [ :builder |
+		builder
+			superclass: (Smalltalk at: #FooScanner);
+			name: #TestScanner;
+			slotsFromString: '';
+			sharedVariablesFromString: '';
+			category: self class category;
+			environment: (Smalltalk at: #FooScanner) environment ].
+	SmaCCParser classInstaller make: [ :builder |
+		builder
+			superclass: SmaCCParser;
+			name: #FooParser;
+			slotsFromString: '';
+			sharedVariablesFromString: '';
+			category: self class category;
+			environment: SmaCCParser environment ].
 	(Smalltalk at: #FooParser) classInstaller make: [ :builder |
 		builder
 			superclass: (Smalltalk at: #FooParser);

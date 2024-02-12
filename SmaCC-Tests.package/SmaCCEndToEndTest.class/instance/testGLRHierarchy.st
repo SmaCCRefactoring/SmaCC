@@ -2,11 +2,14 @@ tests
 testGLRHierarchy
 
 	| parserCompiler |
-	SmaCCGLRParser
-		subclass: #FooParser
-		instanceVariableNames: ''
-		classVariableNames: ''
-		category: self class category.
+	SmaCCGLRParser classInstaller make: [ :builder |
+		builder
+			superclass: SmaCCGLRParser;
+			name: #FooParser;
+			slotsFromString: '';
+			sharedVariablesFromString: '';
+			category: self class category;
+			environment: SmaCCGLRParser environment ].
 	(Smalltalk at: #FooParser) classInstaller make: [ :builder |
 		builder
 			superclass: (Smalltalk at: #FooParser);
