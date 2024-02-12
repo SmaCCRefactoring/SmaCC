@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'SmaCC-Tests'!
+self packageOrganizer ensurePackage: #'SmaCC-Tests' withTags: #()!

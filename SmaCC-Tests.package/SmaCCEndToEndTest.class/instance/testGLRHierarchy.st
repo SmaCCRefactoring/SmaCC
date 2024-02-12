@@ -1,21 +1,23 @@
 tests
 testGLRHierarchy
+
 	| parserCompiler |
 	SmaCCGLRParser
 		subclass: #FooParser
 		instanceVariableNames: ''
 		classVariableNames: ''
 		category: self class category.
-	(Smalltalk at: #FooParser)
-		subclass: #TestParser
-		instanceVariableNames: ''
-		classVariableNames: ''
-		category: self class category.
+	(Smalltalk at: #FooParser) classInstaller make: [ :builder |
+		builder
+			superclass: (Smalltalk at: #FooParser);
+			name: #TestParser;
+			slotsFromString: '';
+			sharedVariablesFromString: '';
+			category: self class category;
+			environment: (Smalltalk at: #FooParser) environment ].
 	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
 		defaultCategory: self class category.
-	parserCompiler
-		buildDefinition:
-			'%ignorecase; %glr;
+	parserCompiler buildDefinition: '%ignorecase; %glr;
 			<a> : \{ | \< \% ;
 			<all> : .;
 			%id <_all> <a> <all>;  

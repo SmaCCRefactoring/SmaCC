@@ -1,5 +1,6 @@
 tests
 testHierarchy
+
 	| parserCompiler |
 	SmaCCScanner
 		subclass: #FooScanner
@@ -16,16 +17,17 @@ testHierarchy
 		instanceVariableNames: ''
 		classVariableNames: ''
 		category: self class category.
-	(Smalltalk at: #FooParser)
-		subclass: #TestParser
-		instanceVariableNames: ''
-		classVariableNames: ''
-		category: self class category.
+	(Smalltalk at: #FooParser) classInstaller make: [ :builder |
+		builder
+			superclass: (Smalltalk at: #FooParser);
+			name: #TestParser;
+			slotsFromString: '';
+			sharedVariablesFromString: '';
+			category: self class category;
+			environment: (Smalltalk at: #FooParser) environment ].
 	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
 		defaultCategory: self class category.
-	parserCompiler
-		buildDefinition:
-			'%ignorecase;
+	parserCompiler buildDefinition: '%ignorecase;
 			<a> : \{ | \< \% ;
 			<all> : .;
 			%id <_all> <a> <all>;  
@@ -34,6 +36,6 @@ testHierarchy
 			A : <a> ;
 			All: <_all>;'.
 	parserCompiler compileInto: 'TestScanner' andParser: 'TestParser'.
-	self
-		assert: self scannerClass superclass name asString = 'FooScanner'.
+	self assert:
+		self scannerClass superclass name asString = 'FooScanner'.
 	self assert: self parserClass superclass name asString = 'FooParser'

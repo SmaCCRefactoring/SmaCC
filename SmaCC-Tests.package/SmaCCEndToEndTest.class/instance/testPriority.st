@@ -1,18 +1,20 @@
 tests
 testPriority
+
 	| parserCompiler |
-	SmaCCScanner
-		subclass: #TestScanner
-		instanceVariableNames: ''
-		classVariableNames: ''
-		category: self class category.
-	(self lookupType: #TestScanner)
-		compile: 'all ^self recordAndReportMatch: (Array with: self _allId)'.
+	SmaCCScanner classInstaller make: [ :builder |
+		builder
+			superclass: SmaCCScanner;
+			name: #TestScanner;
+			slotsFromString: '';
+			sharedVariablesFromString: '';
+			category: self class category;
+			environment: SmaCCScanner environment ].
+	(self lookupType: #TestScanner) compile:
+		'all ^self recordAndReportMatch: (Array with: self _allId)'.
 	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
 		defaultCategory: self class category.
-	parserCompiler
-		buildDefinition:
-			'%ignorecase;
+	parserCompiler buildDefinition: '%ignorecase;
 			<a> : \{ | \< \% ;
 			<all> : .;
 			%id <_all> <a> <all>;  

@@ -1,21 +1,26 @@
 tests
 testExistingVariables
+
 	| parserCompiler |
-	SmaCCScanner
-		subclass: #TestScanner
-		instanceVariableNames: 'scanner1 scanner2'
-		classVariableNames: ''
-		category: self class category.
-	SmaCCParser
-		subclass: #TestParser
-		instanceVariableNames: 'parser1 parser2'
-		classVariableNames: ''
-		category: self class category.
+	SmaCCScanner classInstaller make: [ :builder |
+		builder
+			superclass: SmaCCScanner;
+			name: #TestScanner;
+			slotsFromString: 'scanner1 scanner2';
+			sharedVariablesFromString: '';
+			category: self class category;
+			environment: SmaCCScanner environment ].
+	SmaCCParser classInstaller make: [ :builder |
+		builder
+			superclass: SmaCCParser;
+			name: #TestParser;
+			slotsFromString: 'parser1 parser2';
+			sharedVariablesFromString: '';
+			category: self class category;
+			environment: SmaCCParser environment ].
 	(parserCompiler := SmaCCGrammarCompiler new) codeGenerator
 		defaultCategory: self class category.
-	parserCompiler
-		buildDefinition:
-			'%ignorecase;
+	parserCompiler buildDefinition: '%ignorecase;
 			<a> : \{ | \< \% ;
 			<all> : .;
 			%id <_all> <a> <all>;  

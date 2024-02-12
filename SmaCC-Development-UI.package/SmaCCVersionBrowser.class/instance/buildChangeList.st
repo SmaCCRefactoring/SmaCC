@@ -10,7 +10,7 @@ buildChangeList
 			gitReaderClass := Smalltalk globals at: #MCFileTreeGitStReader ]
 		ifFalse: [ ^ super buildChangeList ].
 	rpackage := rgMethod method package.
-	aMCWorkingCopy := MCWorkingCopy allManagers
+	aMCWorkingCopy := MCWorkingCopy allWorkingCopies
 		detect: [ :wc | wc package name = rpackage name ].
 	repository := aMCWorkingCopy repositoryGroup repositories
 		detect: [ :repo | repo isKindOf: gitRepoClass ]

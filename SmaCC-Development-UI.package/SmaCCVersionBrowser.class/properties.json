@@ -1,11 +1,12 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "VersionBrowser",
 	"category" : "SmaCC-Development-UI",
-	"classinstvars" : [ ],
-	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "SmaCCVersionBrowser",
-	"type" : "normal"
+	"commentStamp" : "<historical>",
+	"super" : "StVersionBrowserPresenter",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classtraitcomposition" : "{} + TraitedClass"
 }
