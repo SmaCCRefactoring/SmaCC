@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'SmaCC-CSV-Parser'!
+self packageOrganizer ensurePackage: #'SmaCC-CSV-Parser' withTags: #()!

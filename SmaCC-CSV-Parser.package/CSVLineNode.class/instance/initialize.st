@@ -1,4 +1,4 @@
-generated-initialize-release
+initialization
 initialize
 	super initialize.
 	values := OrderedCollection new: 2.

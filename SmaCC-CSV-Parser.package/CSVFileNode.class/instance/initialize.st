@@ -1,4 +1,4 @@
-generated-initialize-release
+initialization
 initialize
 	super initialize.
 	lines := OrderedCollection new: 2.

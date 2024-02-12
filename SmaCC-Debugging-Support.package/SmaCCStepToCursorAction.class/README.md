@@ -1,1 +1,0 @@
-I setp forward until my scanner has reached a certain position in the input stream. The position comes from the GUI.
