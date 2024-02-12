@@ -1,6 +1,7 @@
 accessing
 saveOutput: aString in: aFilename
-	| stream directory |
+	| directory |
+
 	(aFilename isNil or: [ aFilename isEmpty ])
 		ifTrue: [ ^ self ].
 	aString isEmpty
@@ -8,6 +9,5 @@ saveOutput: aString in: aFilename
 	directory := aFilename asFileReference parent pathString.
 	directory asFileReference exists
 		ifFalse: [ directory asFileReference ensureCreateDirectory ].
-	stream := FileStream forceNewFileNamed: aFilename.
-	[ stream nextPutAll: aString ]
-		ensure: [ stream close ]
+	aFilename asFileReference writeStreamDo: [ : stream |
+		stream nextPutAll: aString ]

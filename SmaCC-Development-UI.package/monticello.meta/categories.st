@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'SmaCC-Development-UI'!
+self packageOrganizer ensurePackage: #'SmaCC-Development-UI' withTags: #()!

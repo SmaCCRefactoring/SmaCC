@@ -9,9 +9,6 @@ initialize
 				, ClassModifiedClassDefinition
 			send: #updateClasses
 			to: self;
-		when: MCWorkingCopyCreated , MCWorkingCopyDeleted
-			send: #updatePackages
-			to: self;
 		when: MethodModified send: #updateDefinition: to: self.
 	self createDefinitionPage.
 	self updateTitle
